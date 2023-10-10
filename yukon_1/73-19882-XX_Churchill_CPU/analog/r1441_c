@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512994  Vf8a6                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "SVID_ALERT_L_R_C"
+connect i to "SVID2_ALERT_PMOD_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1441_c" test.

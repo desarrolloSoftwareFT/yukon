@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176643   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:44 2020
+disconnect all
+connect s to "BMFPGA_SERDES_L01_REFRET"
+connect i to "BMFPGA_SERDES_L01_REXT"
+resistor 1.21k, 25, 20, re4, wb, ar1.00

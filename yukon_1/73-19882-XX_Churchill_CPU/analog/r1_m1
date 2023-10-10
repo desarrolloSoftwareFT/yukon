@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600592943   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:32 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_J1_PS_EN_M1"
+!@connect gl to "A3P3V" 
+resistor 112,25,20, re2, wb, ar200m, en, ed 
+

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175962   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:23 2020
+disconnect all
+connect s to "CLK_25M_OSC_CPU_ST_C"
+connect i to "XTAL_LAN_25M_IN_C"
+jumper 10.0k, re4, wb, ar100m, op
+! "r548_c" test.

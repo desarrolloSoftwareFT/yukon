@@ -1,0 +1,14 @@
+!!!!    2    0    1 1600589501  V4dbf                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:58 2020
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "BDX_RTCRST_FET"
+connect i to "GND" ! 950 ! IPG recommended
+diode 990m, 500m, idc20m, co3.0, ar845m
+! "q4_c%qf" test.
+! DUT: nominal 125, plus tol 60.0 %, minus tol 60.0 %
+! DUT: high 200, low 50
+! TEST: high limit 205.35, low limit 53.107
+! Tolerance Multiplier 3.00
+! Remote Sensing is not Allowed

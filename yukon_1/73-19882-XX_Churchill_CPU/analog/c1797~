@@ -1,0 +1,15 @@
+!!!!    2    0    1 1623262821   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:35 2020
+on failure
+   report parallel devices
+   report "r980 1.00k"
+end on failure
+disconnect all
+connect s to "UNNAMED_4199_CAP_I55_B"
+connect i to "UNNAMED_4199_CAP_I55_A"
+!connect g to "GND" 
+!capacitor 2000p, 50, 50, fr1024, re2, ar20.0m, en, comp, wa .3 !P4C -2A 
+capacitor 160p, 50, 50, fr1024, re2, ar20.0m, en, comp, wa .3 !P4C -2A 
+warning "excessive plus tolerance or high limit."
+! "c1797" is a commented test.
+off failure

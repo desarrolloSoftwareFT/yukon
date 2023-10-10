@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175951   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:12 2020
+disconnect all
+connect s to "BMC_MB_SCL_R"
+connect i to "BMC_MB_SCL"
+jumper 10.0k, re4, wb, ar100m, op
+! "r7" test.

@@ -1,0 +1,10 @@
+!!!!    2    0    1 1622484141   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "JTAG_BMC_FPGA_TDO"
+connect i to "JTAG_BMC_FPGA_TDO_R"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+!nueva version MAy 21 JRN
+jumper 20.0,re1,ar200m,ed, op
+! "r351" test.

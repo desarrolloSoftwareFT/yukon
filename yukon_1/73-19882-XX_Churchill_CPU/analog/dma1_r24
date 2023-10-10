@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176213   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:34 2020
+disconnect all
+connect s to "PWR_A1V2_A3V3_INTVCC"
+connect i to "PWR_A1V2_A3V3_FREQ"
+connect g to "GND" 
+resistor 10k, 25, 20, re4, wb, ar100m, wa2.78m

@@ -1,0 +1,23 @@
+!!!!    2    0    1 1687954862   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:40 2020
+on failure
+   report parallel devices
+   report "c450_c 22.0u"
+   report "e_c687 22.0u"
+   report "e_c688 10.0u"
+   report "e_c689 10.0u"
+   report "e_c690 10.0u"
+   report "c392_c 1.00u"
+   report "c397_c 1.00u"
+   report "c448_c 1.00u"
+   report "c453_c 1.00u"
+   report "e_r1012 100"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P0V6_VTT_2"
+!connect g to "ADC0_0V6_DDR4_CH11" 
+capacitor 100u, 30, 30, fr128, re2, ar100m, sm, ed, nocomp, am0.2
+!capacitor 100u, 35, 20, fr128, re1, ar100m, sm, ed, nocomp, am0.2
+! "c394_c" test.
+off failure

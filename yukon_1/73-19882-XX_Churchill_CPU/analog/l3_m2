@@ -1,0 +1,10 @@
+!!!!    2    0    1 1621631933   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:05 2020
+disconnect all
+connect i to "PMOD_PH2_DIDT_M2"
+connect s to "P1V05_COMBINED"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+!Nueva revision 21 May
+jumper 20.0,re1,ar200m,ed
+! "l3_m2" test.

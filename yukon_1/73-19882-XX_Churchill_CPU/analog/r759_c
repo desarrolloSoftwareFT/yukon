@@ -1,0 +1,8 @@
+!!!!    2    0    1 1604685587   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "SPI_FLSH_MOSI"
+connect i to "SPI_FPGA_MOSI"
+!B!jumper  20.0,  re1, ar200m
+jumper 40.0,re1,ar200m,ed
+! "r759_c" test.

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176210   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:31 2020
+disconnect all
+connect s to "BM_FPGA_SPI_STD_WP_L"
+connect i to "UNNAMED_4187_FLSHSKT8P_I729_WP"
+resistor 1k, 25, 20, re3, ar100m

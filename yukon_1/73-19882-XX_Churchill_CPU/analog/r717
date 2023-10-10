@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512936  Vec78                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "SF_JTAG_TMS"
+connect i to "JTAG_BMC_FPGA_TMS"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r717" test.

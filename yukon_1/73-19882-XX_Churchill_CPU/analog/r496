@@ -1,0 +1,6 @@
+!!!!    2    0    1 1645226349   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:22 2020
+disconnect all
+connect s to "GND"
+connect i to "CPU_MB_PRESENT_L"
+resistor 220, 30, 20, re2, ar500m, en

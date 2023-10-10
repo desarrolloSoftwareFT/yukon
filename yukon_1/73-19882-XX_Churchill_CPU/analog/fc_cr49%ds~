@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600566427  Vf03c                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:16 2020
+on failure
+   report parallel devices
+   report "fc_cr49 fc_cr49%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN9_TACH"
+zener 4.3, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+! "fc_cr49%cr" test.
+off failure

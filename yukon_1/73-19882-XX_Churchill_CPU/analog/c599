@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600520986  Vc43b                                         
+!* 10pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:53 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_135_CAP_I319_B"
+capacitor 10p, 8.20, 3.75, fr8192, re5, wb, ar50.0m, comp
+! "c599" test.

@@ -1,0 +1,6114 @@
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:06 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141   43
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   srt_spi_boot_mosi      215141   43
+                r1434.2
+                 u8.U17
+Common Devices:
+                 r1434
+Message is:
+Check r1434
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141   42
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   bm_spi_flsh_mosi       220110   42
+                 r360.2
+                u300.15
+                u301.15
+                x_r215.2
+Common Devices:
+                  r360
+Message is:
+Check r360
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: FAN9_TACH_ZL           205130 Open
+                fc_c42.1
+                fc_l3.2
+               fc_r149.2
+To:   FAN9_TACH_CON           20845
+                fc_l3.1
+                fc_p5.5
+Common Devices:
+                 fc_l3
+Message is:
+Check fc_l3
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144 Open
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+------End, 6 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:16 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534  260
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275  260
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: FAN9_TACH_ZL           205130 Open
+                fc_c42.1
+                fc_l3.2
+               fc_r149.2
+To:   FAN9_TACH_CON           20845
+                fc_l3.1
+                fc_p5.5
+Common Devices:
+                 fc_l3
+Message is:
+Check fc_l3
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   53
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   53
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144  405
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323  405
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+------End, 6 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:25 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: bm_fpga_spi_uboot_cs0   21943  880
+                 u27.G3
+                x_r301.1
+To:   spi_boot_cs1_l_r        21926  880
+                 r359.2
+                x_r300.2
+                x_r301.2
+                x_u17.4
+Common Devices:
+                 x_r301
+Message is:
+Check x_r301
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: FAN9_TACH_ZL           205130 Open
+                fc_c42.1
+                fc_l3.2
+               fc_r149.2
+To:   FAN9_TACH_CON           20845
+                fc_l3.1
+                fc_p5.5
+Common Devices:
+                 fc_l3
+Message is:
+Check fc_l3
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:34 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: FAN9_TACH_ZL           205130 Open
+                fc_c42.1
+                fc_l3.2
+               fc_r149.2
+To:   FAN9_TACH_CON           20845
+                fc_l3.1
+                fc_p5.5
+Common Devices:
+                 fc_l3
+Message is:
+Check fc_l3
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   28
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   28
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:44 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: FAN9_TACH_ZL           205130 Open
+                fc_c42.1
+                fc_l3.2
+               fc_r149.2
+To:   FAN9_TACH_CON           20845
+                fc_l3.1
+                fc_p5.5
+Common Devices:
+                 fc_l3
+Message is:
+Check fc_l3
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   66
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   66
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 2265
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115 2265
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:23:53 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   27
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   27
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:24:02 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143 Open
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:24:12 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:06 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534  185
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275  185
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: pwr_a3v3_a1v2_pgood    210143  288
+               dma1_r31.2
+               dma1_u1.13
+                 r372.1
+To:   PMOD_P1V15_BMC_EN      205115  288
+                a_u22.14
+                 c636.1
+                 r371.2
+                 r372.2
+                r1693.1
+Common Devices:
+                  r372
+Message is:
+Check r372
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:15 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534   55
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275   55
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:25 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534 Open
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   39
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   39
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:34 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534  162
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275  162
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   49
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   49
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:43 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   45
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   45
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:26:52 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534   32
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275   32
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   80
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   80
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:27:01 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   35
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   35
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:27:10 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534   41
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275   41
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   26
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   26
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:29:11 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534   40
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275   40
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM2607047G
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:40:04 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN3_TACH_ZL            10574  287
+               fc_c1164.1
+                fc_l11.2
+               fc_r163.2
+To:   FAN3_TACH_CON          105165  287
+                fc_l11.1
+                fc_p2.5
+Common Devices:
+                 fc_l11
+Message is:
+Check fc_l11
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:40:13 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN3_TACH_ZL            10574   60
+               fc_c1164.1
+                fc_l11.2
+               fc_r163.2
+To:   FAN3_TACH_CON          105165   60
+                fc_l11.1
+                fc_p2.5
+Common Devices:
+                 fc_l11
+Message is:
+Check fc_l11
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:40:30 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   13.376u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   27.167u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:42:02 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   11.208u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   26.552u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:42:09 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   12.677u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   15.389u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:42:16 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   19.871u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   17.036u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:43:48 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:43:57 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126  860
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324  860 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:44:06 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   65
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324   65 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:44:15 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   54
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324   54 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:44:24 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   50
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324   50 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:44:33 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   43
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324   43 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:44:43 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   28
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                     20324   28 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+Common Devices:
+                  r597
+                   u8
+Message is:
+Check r597
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:44:59 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   28.453u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.206u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:46:12 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   29.646u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   34.353u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:46:19 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   33.207u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   26.660u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:46:27 2022
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   24.137u
+Nominal:    70.000u
+High Limit: 96.600u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   21.200u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:48:00 2022
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   25.574u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:49:13 2022
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.737u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:49:20 2022
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.364u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+73-19882-04
+Mon Mar 07 11:49:27 2022
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   29.367u
+Nominal:    60.000u
+High Limit: 81.000u
+Low Limit:  36.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704AL
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:51:43 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531  101
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216  101
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    4
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    4
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    3
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    4
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:51:55 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   29
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   29
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    7 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    3
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    4
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:52:08 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   33
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   33
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    5 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    3
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    4
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:52:20 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   61
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   61
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    5
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:52:32 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   38
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   38
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    4
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:52:44 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   30
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   30
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    4 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    4
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:52:56 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   60
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   60
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    4
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:53:08 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531  144
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216  144
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:55:09 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    4
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:55:21 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    4 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    4
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    3
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:55:33 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    3
+               j2003_c.1
+               r1661_c.2
+        v                    209141    4 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    4
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    4
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:55:45 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    3 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:55:57 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    3
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    4
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 40 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:56:10 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    3
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    3
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:56:22 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    2
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    4 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    4
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    5
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    4
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483
+----------------------------------------
+Shorts Report for "shorts".
+Mon Mar 07 11:56:34 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PMOD_PH1_BOOT_R_M1      10556    1
+              c15_p1_m1.1
+               r1_p1_m1.2
+  &   PMOD_PH1_PH_M1         105156
+               r1_p1_m1.1
+              u1_p1_m1.32
+  &   PMOD_PH2_BOOT_R_M1      10554
+              c15_p2_m1.1
+               r1_p2_m1.2
+  &   PMOD_PH2_PH_M1         105154
+               r1_p2_m1.1
+              u1_p2_m1.32
+  &   PMOD_PH2_BOOT_R_M2     105153
+                c44_m2.1
+                r55_m2.2
+  &   PMOD_PH2_PH_M2          10552
+                r55_m2.1
+                u3_m2.32
+  &   PMOD_DDR4_VTT_OUTS     220149
+                x_r67.1
+                x_u05.6
+  &   DDR4_VTT               217145
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+  &   UNNAMED_4199_CAP_I55_B 203143
+                c1797.1
+                 r979.2
+                 r980.2
+                r1581.2
+  &   vpllav11                20343
+                 c265.1
+                 c270.1
+                 c281.1
+                  l6.2
+                 u8.L5
+                 u8.L6
+To:   ddr_b_dimm0_sa1         10947    2
+                r503_c.1
+                r526_c.2
+             u1b_skt_c.140
+      PMOD_P2V5_VPP_VSENSE_P  10848    2
+                 r5_v.2
+                 r490.1
+      PMOD_P2V5_DIDT          10948    1
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+      p2v5_vpp_2             108150    2
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+No common devices.
+Total of 88 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 22ms      Ohms
+From: PMOD_P2V5_VOSEN        109148    2
+               bma5_c12.1
+               bma5_c17.1
+               bma5_r1.1
+               bma5_r6.1
+               bma5_r7.2
+               bma5_r8.1
+               bma5_tp1.1
+               bma5_u1.1
+  &   p2v5_vpp_2             108150
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   SATA0_CONFIG_2          20436    3
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    3
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    3
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    4
+               j2003_c.1
+               r1661_c.2
+        v                    209141    3 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    3 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    3
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    3
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    3
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    3
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    3
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    3
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    4
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    4
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    4
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    3
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    4
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    3
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    3
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    3
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    4
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    3
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    4
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    3
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    3
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    3
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    3
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    3
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    4 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    4
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    5
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    5
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    4 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    4
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    4
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    5
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_PH2_SNU_RC_M2      20326    5
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      GND                     21126    4
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                bma5_u1
+                bma5_c5
+                bma5_c6
+                bma5_c11
+                bma5_c13
+                bma5_c14
+                bma5_c16
+                 c401_c
+                 c403_c
+                 c406_c
+Too many to print.
+Total of 41 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26070483

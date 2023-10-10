@@ -1,0 +1,9 @@
+!!!!    2    0    1 1671466980   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "CLK_33M_LPC_EXTR_ST_C"
+connect i to "CLK_33M_LPC_BMC"
+connect a to "CLK_33M_LPC_EXTR_ST_C"
+connect b to "CLK_33M_LPC_BMC"
+resistor 22.1, 45, 20, re2, ar500m
+! "r1665_c" test.

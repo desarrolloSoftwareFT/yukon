@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600513046  V671e                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:37 2020
+on failure
+report parallel devices
+report "c539 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_0V6_DDR4_CH11"
+connect g to "P0V6_VTT_2"
+!B!resistor 1k, 25, 20, re3, ar100m, wa46.4m
+resistor 1k,25,20,re3,ar100m,ed
+off failure

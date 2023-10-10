@@ -1,0 +1,35 @@
+!!!!    2    0    1 1600995390  V8db7                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+ ! test "IN"
+ ! test "EN"
+  test "OUT"
+  !test "PG"
+end test
+
+subtest "EN"
+  connect i to pins 7
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.5,3.0
+end subtest
+
+subtest "OUT"
+  connect i to "A2_5V"
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 2.7, 2.3
+end subtest
+
+subtest "PG"
+  connect i to pins 6
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.5,3.0
+end subtest
+
+

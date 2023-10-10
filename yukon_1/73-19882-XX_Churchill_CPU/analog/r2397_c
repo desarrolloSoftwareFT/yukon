@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176210   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:31 2020
+disconnect all
+connect s to "GND"
+connect i to "BUF_SPI_FLSH_SEL_C"
+resistor 1k, 25, 20, re3, ar100m

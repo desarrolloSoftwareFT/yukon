@@ -1,0 +1,1136 @@
+!!!!   24    0    1 1594178952  V5823                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:23 2020
+
+powered shorts "u1_c_u1_ps"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+  node "ADC_SCL" hybrid default "1"
+  node "BM_SPI_GOLD_CS0_L" hybrid default "1"
+  node "BM_SPI_STD_CS0_L" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMC_FAN_I2C_SCL" hybrid default "1"
+  node "CHASSIS_IDPROM_SCL" hybrid default "1"
+  node "DAC0_SCL" hybrid default "1"
+  node "DAC1_SCL" hybrid default "1"
+  node "FPGA_MUX_DATA" hybrid default "1"
+  node "FPGA_MUX_SCLK" hybrid default "T"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "I2C_DDR_EN_C" hybrid default "1"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+  node "UNNAMED_59_PI5A3157_I15_S" hybrid default "1"
+  node "UNNAMED_76_LTC2497_I65_SCL" hybrid default "1"
+  node "UNNAMED_598_PI5A3157_I520_S" hybrid default "0"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "ADC_SCL","BM_SPI_GOLD_CS0_L","BM_SPI_STD_CS0_L"
+  pcf order is nodes "BMC_ENTEST_R","BMC_FAN_I2C_SCL"
+  pcf order is nodes "CHASSIS_IDPROM_SCL","DAC0_SCL","DAC1_SCL"
+  pcf order is nodes "FPGA_MUX_DATA","FPGA_MUX_SCLK","GPIOA0_JTSCAN"
+  pcf order is nodes "GPIOA1_JTSCAN","I2C_DDR_EN_C","LAN_PWRGOOD_C"
+  pcf order is nodes "PWRGOOD_CPU_C","UNNAMED_59_PI5A3157_I15_S"
+  pcf order is nodes "UNNAMED_76_LTC2497_I65_SCL"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I520_S","WP_R"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "1111111110101111100"
+  "1111111111101111100"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   a_u85.3  fc_u4.1  u158.1  u300.8  u301.8  u38.5  u46.3  u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8  u69.1  u69.4  u72.1
+!IPG:   u72.4  u74.3  u78.1  u83_c.2  u83_c.3  u83_c.6  u83_c.7
+
+!IPG: The following pins are disabled by Boundary-Scan:
+!IPG:   u40.AA15  u40.U13  u40.W14  u40.AA11  u40.Y14  u40.J19  u40.K18  u40.G22  u40.K17  u40.E22  u40.V19  u40.F21  u40.T20  u40.J18  u40.F19  u40.L19  u40.U17  u40.Y15  u40.L21  u40.G16  u40.G18  u40.G6  u40.J22
+!IPG:   u40.AB11  u40.F20  u27.R11  u40.H21  u40.AB15  u40.W15  u27.C6  u27.H12  u27.G2  u27.R13  u27.F4  u27.T11  u40.H22  u27.E15  u40.M17  u40.M16  u27.H13  u40.L16  u40.U22  u27.L14  u40.D4  u27.G13  u40.D3
+!IPG:   u40.U21  u40.A9  u40.K22  u40.V18  u27.C11  u27.G16  u27.M8  u27.F2  u27.H3  u27.B12  u27.G1  u27.G5  u27.F3  u40.W19  u40.D5  u27.N10  u40.C4  u40.V16  u27.R9  u27.N8  u40.U16  u40.T4  u40.R2  u40.P1
+!IPG:   u40.R1  u40.P2  u40.P17  u40.AA18  u40.V13  u40.L18  u40.E21  u40.AB18  u40.G5  u40.A2  u40.V14  u40.A7  u40.R16  u40.V17  u40.AB17  u40.F17  u40.M1  u40.T16  u40.B6  u40.D8  u40.C22  u40.E4  u40.B19
+!IPG:   u40.E19  u40.B21  u40.B1  u40.J20  u40.K5  u40.A19  u40.D20  u40.C15  u40.A16  u40.K8  u40.A17  u40.C18  u40.M7  u40.N4  u27.L15  u40.N16  u27.T8  u40.T18  u40.N17  u27.L13  u27.K16  u27.L12  u40.D2  u27.R8
+!IPG:   u40.D1  u40.E2  u40.AB19  u27.T7  u27.L11  u40.C1  u40.M19  u40.R22  u27.P13
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "a_u85" pins 3
+!IPG: with pin 6 on node "UNNAMED_59_PI5A3157_I15_S"
+disabled device "fc_u4" pins 1
+!IPG: with pin 2 on node "BMC_FAN_I2C_SCL"
+disabled device "u158" pins 1
+!IPG: with pin 2 on node "DAC0_SCL"
+disabled device "u27" pins "B12","C11","C6","E15","F2","F3","F4","G1"
+disabled device "u27" pins "G13","G16","G2","G5","H12","H13","H3"
+disabled device "u27" pins "K16","L11","L12","L13","L14","L15","M8"
+disabled device "u27" pins "N10","N8","P13","R11","R13","R8","R9"
+disabled device "u27" pins "T11","T7","T8"
+!IPG: with boundary scan disabling
+disabled device "u300" pins 8
+!IPG: with pin 7 on node "BM_SPI_GOLD_CS0_L"
+disabled device "u301" pins 8
+!IPG: with pin 7 on node "BM_SPI_STD_CS0_L"
+disabled device "u38" pins 5
+!IPG: with pin 6 on node "CHASSIS_IDPROM_SCL"
+disabled device "u40" pins "A16","A17","A19","A2","A7","A9","AA11"
+disabled device "u40" pins "AA15","AA18","AB11","AB15","AB17","AB18"
+disabled device "u40" pins "AB19","B1","B19","B21","B6","C1","C15"
+disabled device "u40" pins "C18","C22","C4","D1","D2","D20","D3","D4"
+disabled device "u40" pins "D5","D8","E19","E2","E21","E22","E4","F17"
+disabled device "u40" pins "F19","F20","F21","G16","G18","G22","G5"
+disabled device "u40" pins "G6","H21","H22","J18","J19","J20","J22"
+disabled device "u40" pins "K17","K18","K22","K5","K8","L16","L18"
+disabled device "u40" pins "L19","L21","M1","M16","M17","M19","M7"
+disabled device "u40" pins "N16","N17","N4","P1","P17","P2","R1","R16"
+disabled device "u40" pins "R2","R22","T16","T18","T20","T4","U13"
+disabled device "u40" pins "U16","U17","U21","U22","V13","V14","V16"
+disabled device "u40" pins "V17","V18","V19","W14","W15","W19","Y14"
+disabled device "u40" pins "Y15"
+!IPG: with boundary scan disabling
+disabled device "u46" pins 3
+!IPG: with pin 2 on node "ADC_SCL"
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+disabled device "u69" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I520_S"
+disabled device "u72" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I509_S"
+disabled device "u74" pins 3
+!IPG: with pin 2 on node "UNNAMED_76_LTC2497_I65_SCL"
+disabled device "u78" pins 1
+!IPG: with pin 2 on node "DAC1_SCL"
+disabled device "u83_c" pins 2,3,6,7
+!IPG: with pin 5 on node "I2C_DDR_EN_C"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+!  fixed unknown "GND" test "u1_c.A53","u8.L20","u1_c.D65"
+!  fixed unknown "GND" test "u1_c.D63","u1_c.D57","u1_c.D52"
+!  fixed unknown "GND" test "u1_c.D50","u1_c.C53","u1_c.B69"
+!  fixed unknown "GND" test "u1_c.B65","u1_c.B63","u1_c.B59"
+!  fixed unknown "GND" test "u1_c.B57","u1_c.B52","u1_c.B50"
+!  fixed unknown "SVID_CLK_C" test "u1_c.AH72"
+!IPG nailed:   silicon node "1GPHY_INTR_2V5" test "u1.H3"
+!IPG nailed:   silicon node "1GPHY_RST_L" test "u1.B12"
+!IPG nailed:   silicon node "10GPHY_INTR_2V5" test "u1.H1"
+!IPG nailed:   silicon node "10GPHY_RST_L" test "u1.B11"
+  silicon node "_d_U1_C8" test "u1.C8"
+  node "PCH_CONSOLE_RXD1" hybrid test "u1.B7" ! (44 mils from u1.C8)
+  node "PCH_CONSOLE_TXD" hybrid test "u1.C7" ! (31 mils from u1.C8)
+!Untestable (TAP TMS): CPLD_JTAG_TMS, u1.B8 (near u1.C8)
+  node "FM_PCH_HOT_N_P3V3" hybrid test "u1.B9" ! (44 mils from u1.C8)
+  node "CPLD_I2C_SDA" hybrid test "u1.C9" ! (31 mils from u1.C8)
+  node "PCH_CONSOLE_RXD" hybrid test "u1.D8" ! (31 mils from u1.C8)
+!IPG: the following node is commented (no 'node' statement to test the node)
+!  silicon node "_d_U1_F7" test "u1.F7"
+  silicon node "_d_U1_F12" test "u1.F12"
+  node "SRT_P2PM_TX" hybrid test "u1.E11" ! (44 mils from u1.F12)
+  node "PWRGD_P1V5_PCH_1V" hybrid test "u1.F13" ! (31 mils from u1.F12)
+  silicon node "_d_U1_M10" test "u1.M10"
+  node "FM_CPU2PCH_THROT_LVT3" hybrid test "u1.L9" ! (44 mils from u1.M10)
+  node "CPU_SEC_BOOT_JTAG_TCK" hybrid test "u1.M9" ! (31 mils from u1.M10)
+  node "CPU_SEC_BOOT_JTAG_TDI" hybrid test "u1.L10" ! (31 mils from u1.M10)
+  node "LJTAG_TMS_HDR_3V3" hybrid test "u1.M11" ! (31 mils from u1.M10)
+  node "LJTAG_TDI_HDR_3V3" hybrid test "u1.N10" ! (31 mils from u1.M10)
+  silicon node "_d_U1_R8" test "u1.R8"
+  node "CLK50M_CPLD" hybrid test "u1.T7" ! (44 mils from u1.R8)
+!@node "LJTAG_TRST_L_HDR_3V3" hybrid test "u1.R9" ! (31 mils from u1.R8)
+  node "CPU_SEC_BOOT_JTAG_TMS" hybrid test "u1.T9" ! (44 mils from u1.R8)
+  silicon node "_d_U8_D18" test "u8.D18"
+  node "BMC_CPU_SPIFLASH_EN_L" hybrid test "u8.E19" ! (44 mils from u8.D18)
+  node "I2C_BUS1_ALERT_R" hybrid test "u8.E17" ! (44 mils from u8.D18)
+  silicon node "_d_U8_L19" test "u8.L19"
+  node "UNNAMED_4188_AST2520_I1_PEREXTRSVD" hybrid test "u8.K20" ! (44 mils from u8.L19)
+  node "CHASSIS_IDPROM_SDA" hybrid test "u8.M19" ! (31 mils from u8.L19)
+  node "BMC_FPD_SEL_R" hybrid test "u8.K19" ! (31 mils from u8.L19)
+  node "BMC_ID_ACCESS_3" hybrid test "u8.L18" ! (31 mils from u8.L19)
+  node "BMC_ID_ACCESS_4" hybrid test "u8.K18" ! (44 mils from u8.L19)
+!IPG: Node "ADR_COMPLETE_3V" is aliased to "ADR_COMPLETE_3V_R"
+!IPG nailed:   silicon node "ADR_COMPLETE_3V_R" test "u1.E10"
+  silicon node "BDWL_FPGA_LPC_DRQ1_L" test "u1_c_pch.AL5"
+!Untestable (Inaccessible): BDWL_FPGA_LPC_DRQ0_L, u1_c.AK4 (near u1_c.AL5)
+  node "PCH_LPC_AD2_ST_C" hybrid test "u1_c.AL3" ! (39 mils from u1_c.AL5)
+  node "GPIO_TACH<1>" hybrid test "u1_c.AM4" ! (27 mils from u1_c.AL5)
+  node "PCH_LPC_AD2_ST_C" hybrid test "u1_c_pch.AL3" ! (0 mils from u1_c_pch.AL5)
+!IPG nailed:   silicon node "BDXDE_CATERR_GTL_N" test "u1.C1"
+!IPG: Node "DRAM_PWR_OK_R" is aliased to "BDXDE_DRAM_PWROK"
+!IPG: Testing through device "r308"
+!IPG TAP Conflict:   silicon node "BDXDE_DRAM_PWROK" test "u1_c_pch.BA9"
+!IPG TAP Conflict:   silicon node "BDXDE_DRAM_PWROK" test "u1.L12"
+!IPG: Node "BIOS_GOLD_ACTIVE" is aliased to "BIOS_GOLD_ACTIVE_R"
+!IPG nailed:   silicon node "BIOS_GOLD_ACTIVE_R" test "u1_c_pch.BW18"
+!IPG: Node "SRT_SPI_BOOT_CLK" is aliased to "BM_FPGA_SPI_FLSH_CLK"
+!IPG nailed:   silicon node "BM_FPGA_SPI_FLSH_CLK" test "u8.AA18"
+!IPG nailed:   silicon node "BMC_ARM_JTAG_CLK_OUT" test "u8.C9"
+!IPG: Node "SRT_BMC_BMCFPGA_SCL" is aliased to "BMC_BMCFPGA_SCL_BMC"
+!IPG nailed:   silicon node "BMC_BMCFPGA_SCL_BMC" test "u8.A9"
+!IPG nailed:   silicon node "BMC_BMCFPGA_SDA" test "u8.B9"
+!IPG: Node "BMC_RXD1_R" is aliased to "BMC_CONSOLE1_RXD"
+!IPG nailed:   silicon node "BMC_CONSOLE1_RXD" test "u8.W1"
+!IPG: Node "BMC_TXD1_R" is aliased to "BMC_CONSOLE1_TXD"
+!IPG nailed:   silicon node "BMC_CONSOLE1_TXD" test "u8.V1"
+!IPG: Node "SRT_BMC_CPU_FPGA_SCL" is aliased to "BMC_CPU_FPGA_SCL"
+!IPG nailed:   silicon node "BMC_CPU_FPGA_SCL" test "u8.L1"
+!IPG nailed:   silicon node "BMC_CPU_FPGA_SDA" test "u8.N2"
+!IPG: Node "BMC_CPU_MEM_WP_L" is aliased to "BMC_CPU_MEM_WP_R"
+!IPG: Testing through device "r891"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "BMC_CPU_MEM_WP_R" test "u8.A18"
+!IPG nailed:   silicon node "BMC_CPU_MEM_WP_R" test "u1.D11"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "BMC_CPU_SPIFLASH_EN_L" test "u8.E19"
+!IPG nailed:   silicon node "BMC_CPU_SPIFLASH_EN_L" test "u1.P12"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "BMC_CPU_SPIFLASH_SEL" test "u8.A19"
+!IPG nailed:   silicon node "BMC_CPU_SPIFLASH_SEL" test "u1.T13"
+!IPG nailed:   silicon node "BMC_CPU_SPIFLASH_SEL_AND" test "u1.R11"
+!IPG not disabled:   silicon node "BMC_EMMC_CMD" test "u8.A12"
+!IPG not disabled:   silicon node "BMC_EMMC_D0" test "u8.B12"
+!IPG not disabled:   silicon node "BMC_EMMC_D1" test "u8.D9"
+!IPG not disabled:   silicon node "BMC_EMMC_D2" test "u8.D10"
+!IPG not disabled:   silicon node "BMC_EMMC_D3" test "u8.E12"
+!IPG not disabled:   silicon node "BMC_EMMC_D4" test "u8.F20"
+!IPG not disabled:   silicon node "BMC_EMMC_D5" test "u8.D20"
+!IPG not disabled:   silicon node "BMC_EMMC_D6" test "u8.D21"
+!IPG not disabled:   silicon node "BMC_EMMC_D7" test "u8.E20"
+!IPG nailed:   silicon node "BMC_EMMC_SD1CD" test "u8.C11"
+!IPG nailed:   silicon node "BMC_EMMC_SD11_WP" test "u8.B11"
+!IPG nailed:   silicon node "BMC_FAN_CARD_RST_R" test "u8.V6"
+!IPG: Node "SRT_BMC_FAN_I2C_SCL" is aliased to "BMC_FAN_I2C_SCL"
+!IPG used for disable:   silicon node "BMC_FAN_I2C_SCL" test "u8.A11"
+!IPG nailed:   silicon node "BMC_FAN_I2C_SDA" test "u8.A10"
+!IPG: Node "BMC_FAN_INTR_R" is aliased to "BMC_FAN_INTR"
+!IPG nailed:   silicon node "BMC_FAN_INTR" test "u8.W6"
+!IPG nailed:   silicon node "BMC_FPD_SEL_R" test "u8.K19"
+!IPG nailed:   silicon node "BMC_FPGA_INTR_BMC" test "u8.B18"
+!IPG: Node "FW_SPI2_R" is aliased to "BMC_FW_SPI_CS2_FPGA"
+!IPG nailed:   silicon node "BMC_FW_SPI_CS2_FPGA" test "u8.T19"
+!IPG nailed:   silicon node "BMC_GPIOS4_STRAP" test "u8.R19"
+!IPG nailed:   silicon node "BMC_GPIOS5_STRAP" test "u8.W20"
+!IPG nailed:   silicon node "BMC_GPIOS6_STRAP" test "u8.U20"
+!IPG nailed:   silicon node "BMC_GPIOS7_STRAP" test "u8.AA20"
+!IPG nailed:   silicon node "BMC_I2C1_SDA" test "u8.P20"
+!IPG nailed:   silicon node "BMC_I2C_RST_L_2V5" test "u1.J4"
+!IPG nailed:   silicon node "BMC_I210_RESET_L_R" test "u8.P22"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_0" test "u8.H20"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_1" test "u8.H22"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_2" test "u8.H21"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_3" test "u8.L18"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_4" test "u8.K18"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_5" test "u8.T20"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_6" test "u8.N18"
+!IPG nailed:   silicon node "BMC_ID_ACCESS_7" test "u8.P19"
+!IPG nailed:   silicon node "BMC_MB_SDA" test "u8.A13"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "BMC_NCSI_CRSDV" test "u8.C5"
+!IPG nailed:   silicon node "BMC_NCSI_CRSDV" test "u1_i2.3"
+!IPG nailed:   silicon node "BMC_NCSI_RCLKO_R" test "u8.B5"
+!IPG nailed:   silicon node "BMC_NCSI_RXD0" test "u8.A3","u1_i2.6"
+!IPG nailed:   silicon node "BMC_NCSI_RXD1" test "u8.D6","u1_i2.5"
+  silicon node "BMC_NCSI_RXER" test "u8.C4"
+  node "BMC_NCSI_CRSDV" hybrid test "u8.C5" ! (31 mils from u8.C4)
+  node "BMC_NCSI_RCLKO_R" hybrid test "u8.B5" ! (44 mils from u8.C4)
+!IPG: Node "BMC_NCSI_TXD0_R" is aliased to "BMC_NCSI_TXD0"
+!IPG: Testing through device "r1076"
+!IPG nailed:   silicon node "BMC_NCSI_TXD0" test "u8.F9","u1_i2.9"
+!IPG: Node "BMC_NCSI_TXD1_R" is aliased to "BMC_NCSI_TXD1"
+!IPG: Testing through device "r1075"
+!IPG nailed:   silicon node "BMC_NCSI_TXD1" test "u8.A5","u1_i2.8"
+!IPG: Node "BMC_NCSI_TXEN_R" is aliased to "BMC_NCSI_TXEN"
+!IPG: Testing through device "r1078"
+!IPG nailed:   silicon node "BMC_NCSI_TXEN" test "u8.E9","u1_i2.7"
+!IPG nailed:   silicon node "BMC_RXD2_R" test "u8.T5"
+!IPG nailed:   silicon node "BMC_RXD3_R" test "u8.B19"
+!IPG nailed:   silicon node "BMC_SEC_BOOT_JTAG_TDO" test "u1.P4"
+!IPG nailed:   silicon node "BMC_SEC_BOOT_JTAG_TMS" test "u1.L7"
+!IPG nailed:   silicon node "BMC_SEC_BOOT_JTAG_TRST_L" test "u1.T5"
+!IPG nailed:   silicon node "BMC_SPARE_IO2" test "u8.U19"
+!IPG nailed:   silicon node "BMC_SPI1_FPGA_CLK_R" test "u8.C15"
+!IPG nailed:   silicon node "BMC_SPI1_FPGA_CS_R" test "u8.B15"
+!IPG not disabled:   silicon node "BMC_SPI1_FPGA_MISO_R" test "u8.A15"
+!IPG nailed:   silicon node "BMC_SPI1_FPGA_MOSI_R" test "u8.A14"
+!IPG: Node "SRT_BMC_SPI2_MUX_CLK" is aliased to "BMC_SPI2_MUX_CLK"
+!IPG not disabled:   silicon node "BMC_SPI2_MUX_CLK" test "u8.Y19"
+!IPG: Node "SRT_BMC_SPI2_MUX_CS" is aliased to "BMC_SPI2_MUX_CS0"
+!IPG nailed:   silicon node "BMC_SPI2_MUX_CS0" test "u8.T17"
+!IPG: Node "SRT_BMC_SPI2_MUX_MOSI" is aliased to "BMC_SPI2_MUX_MOSI"
+!IPG not disabled:   silicon node "BMC_SPI2_MUX_MOSI" test "u8.W19"
+!IPG: Node "SRT_JTAG_BMC_TCK" is aliased to "BMC_TCK"
+!IPG TAP Conflict:   silicon node "BMC_TCK" test "u1.T3"
+!IPG nailed:   silicon node "BMC_TXD2_R" test "u8.R5"
+!IPG nailed:   silicon node "BMC_TXD3_R" test "u8.A20"
+!IPG nailed:   silicon node "BMC_UART4_RX_R" test "u8.H18"
+!IPG nailed:   silicon node "BMC_UART4_TX_R" test "u8.G17"
+!IPG nailed:   silicon node "BMC_WDT1_RST_2V5" test "u8.T22"
+!IPG nailed:   silicon node "BMC_WDT2_RST_2V5" test "u8.R20"
+!IPG TAP Conflict:   silicon node "BMCPHY_INT_M" test "u1.N7"
+!IPG nailed:   silicon node "BMCPHY_INT_M_2V5" test "u1.G1"
+!IPG not disabled:   silicon node "BMCPHY_RESET_L_R" test "u8.R22"
+!IPG: Node "FPGA_BMC_LPC_RST" is aliased to "BUF_PCH_PLTRST_L"
+!IPG: Testing through device "r1011"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "BUF_PCH_PLTRST_L" test "u8.G22"
+!IPG nailed:   silicon node "BUF_PCH_PLTRST_L" test "u1.L5"
+!IPG nailed:   silicon node "BUF_PCH_PLTRST_L" test "u1.P10"
+!IPG nailed:   silicon node "C33_CPU_PWRGD_PCH" test "u1.B3"
+!IPG nailed:   silicon node "C33_PLTRST_PROC_N" test "u1.A3"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "C105_10GPHY_INTR" test "u1_c.N69"
+!IPG nailed:   silicon node "C105_10GPHY_INTR" test "u1.F14"
+!IPG not disabled:   silicon node "C105_PCH_FPGA_MDIO0" test "u1_c.T67"
+!IPG not disabled:   silicon node "C105_PCH_FPGA_MDIO1" test "u1_c.W69"
+!IPG: Node "C105_PHY_RST_SDP0_1_R" is aliased to "C105_PHY_RST_SDP1_0"
+!IPG: Testing through device "r1305"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "C105_PHY_RST_SDP1_0" test "u1_c.F76"
+!IPG nailed:   silicon node "C105_PHY_RST_SDP1_0" test "u1.K13"
+!IPG: Node "C105_SYNC_CPU_TO_FPGA_INTR_L_R" is aliased to "C105_SYNC_CPU_TO_FPGA_INTR_L"
+!IPG: Testing through device "r495"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "C105_SYNC_CPU_TO_FPGA_INTR_L" test "u1_c.C76"
+!IPG nailed:   silicon node "C105_SYNC_CPU_TO_FPGA_INTR_L" test "u1.N14"
+!IPG nailed:   silicon node "CHASSIS_IDPROM_SDA" test "u8.M19"
+!IPG nailed:   silicon node "CLK24M_BMC_USBCKI" test "u8.J20"
+!IPG not disabled:   silicon node "CLK50M_NCSI_BMC" test "u8.B4"
+!IPG not disabled:   silicon node "CLK50M_NCSI_I210" test "u1_i2.2"
+!IPG not disabled:   silicon node "CLK_33M_LPC_BMC" test "u8.C22"
+!IPG not disabled:   silicon node "CLK_50M_SPI_ST_C" test "u1_c_pch.BG13"
+!IPG nailed:   silicon node "CLK_CPU_SUSCLK" test "u1_c_pch.BD11"
+!IPG not disabled:   silicon node "CLK_XGE_BMC_RGMII2" test "u8.C2"
+!IPG nailed:   silicon node "CONSOLE_RXD_DBG_2V5" test "u1.D1"
+!IPG not disabled:   silicon node "CONSOLE_RXD_DBG_3V3" test "u1.E7"
+!IPG nailed:   silicon node "CPLD_DONE" test "u1.C13"
+!IPG nailed:   silicon node "CPLD_HOST_RST_L" test "u1.J1"
+!IPG nailed:   silicon node "CPLD_I2C_SCL" test "u1.A9"
+!IPG nailed:   silicon node "CPLD_I2C_SDA" test "u1.C9"
+!IPG nailed:   silicon node "CPLD_INIT_M" test "u1.A13"
+!IPG nailed:   silicon node "CPLD_JTAG_1V05SB_PCH_TDI" test "u1.F16"
+!IPG nailed:   silicon node "CPLD_P2PM_RX" test "u1.F9"
+!IPG: Node "SRT_P2PM_TX" is aliased to "CPLD_P2PM_TX"
+!IPG nailed:   silicon node "CPLD_P2PM_TX" test "u1.E11"
+!IPG nailed:   silicon node "CPLD_PROG_M" test "u1.B10"
+!IPG nailed:   silicon node "CPLD_SPI_CS_L" test "u1.R12"
+!IPG nailed:   silicon node "CPLD_SPI_MISO" test "u1.T6"
+!IPG nailed:   silicon node "CPLD_SPI_MOSI" test "u1.P13"
+!IPG nailed:   silicon node "CPLD_SPI_SCK" test "u1.P6"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_1588_SYNC" test "u1_c.G74"
+!IPG nailed:   silicon node "CPU_1588_SYNC" test "u1.K11"
+!IPG nailed:   silicon node "CPU_1588_SYNC_MB" test "u1.K3"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_ADR_COMPLETE_1V" test "u1_c.AF66"
+!IPG nailed:   silicon node "CPU_ADR_COMPLETE_1V" test "u1.K15"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_ADR_IN_1V" test "u1_c.AD66"
+!IPG nailed:   silicon node "CPU_ADR_IN_1V" test "u1.M15"
+!IPG nailed:   silicon node "CPU_ADR_IN_3V" test "u1.C12"
+!IPG: Node "CPU_BOOT_SUCCESS" is aliased to "CPU_BOOT_SUCCESS_R"
+!IPG nailed:   silicon node "CPU_BOOT_SUCCESS_R" test "u1_c_pch.BB21"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_ERR0_1V_L" test "u1_c.AC77"
+!IPG nailed:   silicon node "CPU_ERR0_1V_L" test "u1.H14"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_ERR1_1V_L" test "u1_c.AC75"
+!IPG nailed:   silicon node "CPU_ERR1_1V_L" test "u1.K16"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_ERR2_1V_L" test "u1_c.AB76"
+!IPG nailed:   silicon node "CPU_ERR2_1V_L" test "u1.H11"
+!IPG nailed:   silicon node "CPU_FIVR_FAULT_1V" test "u1.R16"
+!IPG nailed:   silicon node "CPU_FPGA_BWDT_EXPIRED" test "u1_c_pch.BB16"
+  silicon node "CPU_GPIO8_OCS" test "u1_c_pch.BJ4"
+  node "USB_OC2_GPIO41" hybrid test "u1_c.BG4" ! (39 mils from u1_c.BJ4)
+  node "RST_PCH_SYSRST_N" hybrid test "u1_c.BL4" ! (39 mils from u1_c.BJ4)
+!Untestable (TAP TMS): JTAG_TMS_PCH_1V05, u1_c_pch.BJ2 (near u1_c_pch.BJ4)
+  silicon node "CPU_GPIO18" test "u1_c_pch.BN4"
+  node "RST_PCH_SYSRST_N" hybrid test "u1_c.BL4" ! (39 mils from u1_c.BN4)
+  node "CPU_SATA4GP_GPIO16" hybrid test "u1_c.BN2" ! (39 mils from u1_c.BN4)
+  node "CPU_GPIO20_SMI_L" hybrid test "u1_c.BR4" ! (39 mils from u1_c.BN4)
+  node "PCH_SYS_PWROK" hybrid test "u1_c.BP5" ! (27 mils from u1_c.BN4)
+  node "CPU_SATA4GP_GPIO16" hybrid test "u1_c_pch.BN2" ! (0 mils from u1_c_pch.BN4)
+!IPG nailed:   silicon node "CPU_GPIO20_SMI_L" test "u1_c_pch.BR4"
+!IPG nailed:   silicon node "CPU_JTAG_CABLE_PRSNT_L" test "u1.T10"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_MEM_HOT_1V_L" test "u1_c.CC56"
+!IPG nailed:   silicon node "CPU_MEM_HOT_1V_L" test "u1.K12"
+!IPG nailed:   silicon node "CPU_MEM_HOT_3V_L" test "u1.A12"
+!IPG nailed:   silicon node "CPU_MFG_MODE_C" test "u1_c_pch.BD22"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_PCH_HOT_1V_L" test "u1_c.AL76"
+!IPG nailed:   silicon node "CPU_PCH_HOT_1V_L" test "u1.P16"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_PMSYNC_PCH_CPU_C" test "u1_c.H77"
+!IPG nailed:   silicon node "CPU_PMSYNC_PCH_CPU_C" test "u1_c_pch.BT9"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "CPU_PROCHOT_1V_L" test "u1_c.AG71"
+!IPG nailed:   silicon node "CPU_PROCHOT_1V_L" test "u1.K14"
+!IPG nailed:   silicon node "CPU_PROCHOT_3V_L" test "u1.B13"
+!IPG nailed:   silicon node "CPU_PROCHOT_DISABLE_C" test "u1_c_pch.BB12"
+!IPG TAP Conflict:   silicon node "CPU_PWRGD_PCH" test "u1_c_pch.BU11"
+!IPG TAP Conflict:   silicon node "CPU_PWRGD_PCH" test "u1.J16"
+!IPG nailed:   silicon node "CPU_SATA0GP_GPIO21" test "u1_c_pch.BR2"
+!IPG: Node "CPU_SATA1GP_GPIO19" is aliased to "CPU_SATA1GP_GPIO19_R"
+!IPG nailed:   silicon node "CPU_SATA1GP_GPIO19_R" test "u1_c_pch.BT3"
+!IPG nailed:   silicon node "CPU_SATA2GP_GPIO36" test "u1_c_pch.BT1"
+!IPG nailed:   silicon node "CPU_SATA3GP_GPIO37" test "u1_c_pch.BL2"
+!IPG nailed:   silicon node "CPU_SATA4GP_GPIO16" test "u1_c_pch.BN2"
+!IPG nailed:   silicon node "CPU_SATA5GP_GPIO49" test "u1_c_pch.BM1"
+!IPG nailed:   silicon node "CPU_SEC_BOOT_JTAG_TDO" test "u1.M8"
+!IPG nailed:   silicon node "CPU_SEC_BOOT_JTAG_TMS" test "u1.T9"
+!IPG nailed:   silicon node "CPU_SEC_BOOT_JTAG_TRST" test "u1.E1"
+!IPG not disabled:   silicon node "CPU_SPI_CS0_L_ST_C" test "u1_c_pch.BN7"
+!IPG nailed:   silicon node "CPU_SPI_CS1_L_ST_C" test "u1_c_pch.BT13"
+!IPG nailed:   silicon node "CPU_THERMTRIP_3V3_L" test "u1.C5"
+!IPG nailed:   silicon node "DP_CPU_DDR3_4_STRAP" test "u1_c.AK69"
+!IPG: Node "DRAM_PWR_OK_FPGA_R" is aliased to "DRAM_PWR_OK_FPGA_R2"
+!IPG nailed:   silicon node "DRAM_PWR_OK_FPGA_R2" test "u1.B6"
+!IPG: Node "FAN_TEMP_SENSOR_ALERT_L" is aliased to "FAN_TEMP_SENSOR_ALERT_L_R"
+!IPG nailed:   silicon node "FAN_TEMP_SENSOR_ALERT_L_R" test "u8.J19"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "FM_BDXDE_CATERR_GTL_N" test "u1_c.Y67"
+!IPG nailed:   silicon node "FM_BDXDE_CATERR_GTL_N" test "u1.P15"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "FM_BDXDE_ERR0_LVT3_N" test "u1_c_pch.BV16"
+!IPG nailed:   silicon node "FM_BDXDE_ERR0_LVT3_N" test "u1.C4"
+!IPG nailed:   silicon node "FM_BDXDE_ERR1_LVT2V5_N" test "u1.F2"
+!IPG nailed:   silicon node "FM_BDXDE_ERR2_LVT2V5_N" test "u1.F4"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1_c.AF72"
+!IPG nailed:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1_c_pch.BJ16"
+!IPG nailed:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1.J13"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "FM_CPU2PCH_THROT" test "u1_c.AL74"
+!IPG nailed:   silicon node "FM_CPU2PCH_THROT" test "u1.M14"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "FM_CPU2PCH_THROT_LVT3" test "u1_c_pch.BL22"
+!IPG nailed:   silicon node "FM_CPU2PCH_THROT_LVT3" test "u1.L9"
+!IPG: Node "FM_NMI_EVENT_N" is aliased to "FM_NMI_EVENT_N_R"
+!IPG nailed:   silicon node "FM_NMI_EVENT_N_R" test "u1_c_pch.BP1"
+!IPG nailed:   silicon node "FM_SLPS3_N" test "u1_c_pch.AY2"
+!IPG nailed:   silicon node "FM_SLPS4_N" test "u1_c_pch.AW1"
+!IPG nailed:   silicon node "FPGA_BMC_LPC_RST_2V5" test "u1.K6"
+!IPG: Node "SRT_FPGA_BMC_UART5_RXD" is aliased to "FPGA_BMC_UART5_RXD"
+!IPG nailed:   silicon node "FPGA_BMC_UART5_RXD" test "u1.J6"
+!IPG nailed:   silicon node "FPGA_BMC_UART5_TX" test "u1.F1"
+!IPG nailed:   silicon node "FPGA_BMC_WDT_2" test "u8.A17"
+!IPG nailed:   silicon node "FPGA_CPU_MEM_WP_L" test "u1_c_pch.BB23"
+!IPG nailed:   silicon node "FPGA_PRIMARY_MUX_WP_L" test "u1.D10"
+!IPG nailed:   silicon node "FPGA_PRIMARY_WP_L" test "u1.F10"
+!IPG nailed:   silicon node "GP3_CPU_ERR1_3V_L" test "u1_c_pch.BN22"
+!IPG nailed:   silicon node "GP5_CPU_CATERR_3V_L" test "u1_c_pch.BW22"
+!IPG nailed:   silicon node "GPIO_TACH<0>" test "u1_c_pch.AN3"
+!IPG nailed:   silicon node "GPIO_TACH<1>" test "u1_c_pch.AM4"
+!IPG nailed:   silicon node "GPIO_TACH<2>" test "u1_c_pch.AV11"
+!IPG nailed:   silicon node "GPIO_TACH<3>" test "u1_c_pch.AG2"
+!IPG nailed:   silicon node "GPIO_TACH<4>" test "u1_c_pch.AV7"
+!IPG nailed:   silicon node "GPIO_TACH<5>" test "u1_c_pch.AU9"
+!IPG nailed:   silicon node "GPIO_TACH<6>" test "u1_c_pch.AU14"
+!IPG nailed:   silicon node "GPIO_TACH<7>" test "u1_c_pch.AM2"
+!IPG nailed:   silicon node "GPIOZ4_VPOG6_NORA4" test "u8.U21"
+!IPG nailed:   silicon node "GPIOZ5_VPOG7_NORA5" test "u8.W22"
+!IPG nailed:   silicon node "GPIOZ6_VPOG8_NORA6" test "u8.V22"
+!IPG nailed:   silicon node "GPIOZ7_VPOG7_NORA7" test "u8.W21"
+!IPG nailed:   silicon node "H_FIVR_FAULT" test "u1.D2"
+!IPG nailed:   silicon node "HEARTBEAT_LED_ACTIVE_LOW" test "u8.Y18"
+!IPG nailed:   silicon node "HEARTBEAT_LED_L" test "u1.R3"
+!IPG nailed:   silicon node "I2C_BUS1_ALERT_R" test "u8.E17"
+!IPG nailed:   silicon node "I2C_BUS2_ALERT_R" test "u8.D16"
+!IPG nailed:   silicon node "I2C_BUS3_ALERT_R" test "u8.D15"
+!IPG nailed:   silicon node "I2C_BUS4_ALERT_R" test "u8.E14"
+!IPG nailed:   silicon node "I2C_BUS5_ALERT_R" test "u8.R18"
+!IPG nailed:   silicon node "I2C_BUS6_ALERT_R" test "u8.P18"
+!IPG nailed:   silicon node "I2C_BUS7_ALERT_R" test "u8.Y21"
+!IPG nailed:   silicon node "I2C_BUS9_ALERT_R" test "u8.Y22"
+!IPG nailed:   silicon node "I2C_BUS10_ALERT_R" test "u8.AA22"
+!IPG nailed:   silicon node "I2C_BUS11_ALERT_R" test "u8.U22"
+!IPG nailed:   silicon node "I2C_DDR_SCL_C" test "u1_c.CD58"
+!IPG nailed:   silicon node "I2C_DDR_SDA_C" test "u1_c.CC60"
+!IPG nailed:   silicon node "I2C_MB_ALERT_R" test "u8.R3"
+!IPG: Node "BMC_I2C_RST_L" is aliased to "I2C_MB_RST_L_R"
+!IPG: Testing through device "r683"
+!IPG nailed:   silicon node "I2C_MB_RST_L_R" test "u8.T3","u1.C11"
+!IPG nailed:   silicon node "I210_INTR_R" test "u8.R21"
+!IPG not disabled:   silicon node "I210_MDC_1G_PHY" test "u1_i2.55"
+!IPG not disabled:   silicon node "I210_MDIO_1G_PHY" test "u1_i2.57"
+!IPG nailed:   silicon node "I210_NVM_CLK_ST" test "u1_i2.13"
+!IPG nailed:   silicon node "I210_NVM_CS_L_ST" test "u1_i2.15"
+!IPG nailed:   silicon node "I210_NVM_SI_ST" test "u1_i2.12"
+!IPG not disabled:   silicon node "I210_NVM_SO" test "u1_i2.14"
+!IPG nailed:   silicon node "I210_SDP0" test "u1_i2.63"
+!IPG nailed:   silicon node "I210_SDP1" test "u1_i2.61"
+!IPG nailed:   silicon node "I210_SDP2" test "u1_i2.62"
+!IPG nailed:   silicon node "I210_SDP3" test "u1_i2.60"
+!IPG nailed:   silicon node "I210_SRDS_SIG_DET" test "u1_i2.54"
+!IPG nailed:   silicon node "IO_TYPE" test "u8.P21"
+!IPG nailed:   silicon node "IRQ_PIRQA_L_C" test "u1_c_pch.BG20"
+!IPG nailed:   silicon node "IRQ_PIRQB_L_C" test "u1_c_pch.BF22"
+!IPG nailed:   silicon node "IRQ_PIRQC_L_C" test "u1_c_pch.AR11"
+!IPG nailed:   silicon node "IRQ_PIRQD_L_C" test "u1_c_pch.BH22"
+!IPG not disabled:   silicon node "JTAG_BMC_TDI_R" test "u1.P5"
+!IPG not disabled:   silicon node "JTAG_BMC_TDO_R" test "u1.M7"
+!IPG TAP Conflict:   silicon node "JTAG_BMC_TMS_R" test "u1.R4"
+!IPG TAP Conflict:   silicon node "JTAG_BMC_TRST_L_R" test "u1.R5"
+!IPG TAP Conflict:   silicon node "JTAG_TCK_3V3_I210" test "u1.R7"
+!IPG not disabled:   silicon node "JTAG_TCK_BDX_1V05" test "u1.G15"
+!IPG TAP Conflict:   silicon node "JTAG_TCK_PCH_1V05" test "u1.G13"
+!IPG not disabled:   silicon node "JTAG_TDI_3V3_I210" test "u1.M6"
+!IPG not disabled:   silicon node "JTAG_TDI_BDX_1V05" test "u1.G14"
+!IPG not disabled:   silicon node "JTAG_TDI_PCH_1V05" test "u1.E16"
+!IPG not disabled:   silicon node "JTAG_TDO_3V3_I210" test "u1.P7"
+!IPG not disabled:   silicon node "JTAG_TDO_PCH_1V05" test "u1.G12"
+!IPG TAP Conflict:   silicon node "JTAG_TMS_3V3_I210" test "u1.L8"
+!IPG not disabled:   silicon node "JTAG_TMS_BDX_1V05" test "u1.G11"
+!IPG TAP Conflict:   silicon node "JTAG_TMS_PCH_1V05" test "u1.F15"
+!IPG not disabled:   silicon node "JTAG_TRST_L_BDX_1V05" test "u1.H12"
+!IPG nailed:   silicon node "LAN0_SEL0_C" test "u1_c.E75"
+!IPG nailed:   silicon node "LAN0_SEL1_C" test "u1_c.N72"
+!IPG nailed:   silicon node "LED_I210_100LINK_GREEN_L" test "u1_i2.31"
+!IPG nailed:   silicon node "LED_I210_1000LINK_GREEN_L" test "u1_i2.33"
+!IPG nailed:   silicon node "LJTAG_TCK_HDR_3V3" test "u1.R10"
+!IPG nailed:   silicon node "LJTAG_TDI_HDR_3V3" test "u1.N10"
+!IPG nailed:   silicon node "LJTAG_TDO_HDR_3V3" test "u1.T4"
+!IPG nailed:   silicon node "LJTAG_TMS_HDR_3V3" test "u1.M11"
+!IPG nailed:   silicon node "LJTAG_TRST_L_HDR_3V3" test "u1.R9"
+!IPG nailed:   silicon node "M_A_ALERT_N" test "u1_c.CK33"
+!IPG nailed:   silicon node "M_A_DQ<0>" test "u1_c.BY2"
+!IPG nailed:   silicon node "M_A_DQ<1>" test "u1_c.BY4"
+!IPG nailed:   silicon node "M_A_DQ<2>" test "u1_c.CD2"
+!IPG nailed:   silicon node "M_A_DQ<3>" test "u1_c.CD4"
+!IPG nailed:   silicon node "M_A_DQ<4>" test "u1_c.BW1"
+!IPG nailed:   silicon node "M_A_DQ<5>" test "u1_c.BW3"
+!IPG nailed:   silicon node "M_A_DQ<6>" test "u1_c.CC1"
+!IPG nailed:   silicon node "M_A_DQ<7>" test "u1_c.CC3"
+!IPG nailed:   silicon node "M_A_DQ<8>" test "u1_c.CC7"
+!IPG nailed:   silicon node "M_A_DQ<9>" test "u1_c.CB9"
+!IPG nailed:   silicon node "M_A_DQ<10>" test "u1_c.CM7"
+!IPG nailed:   silicon node "M_A_DQ<11>" test "u1_c.CL9"
+!IPG nailed:   silicon node "M_A_DQ<12>" test "u1_c.CA7"
+!IPG nailed:   silicon node "M_A_DQ<13>" test "u1_c.BY9"
+!IPG nailed:   silicon node "M_A_DQ<14>" test "u1_c.CK7"
+!IPG nailed:   silicon node "M_A_DQ<15>" test "u1_c.CJ9"
+!IPG nailed:   silicon node "M_A_DQ<16>" test "u1_c.CB13"
+!IPG nailed:   silicon node "M_A_DQ<17>" test "u1_c.CC14"
+!IPG nailed:   silicon node "M_A_DQ<18>" test "u1_c.CL13"
+!IPG nailed:   silicon node "M_A_DQ<19>" test "u1_c.CM14"
+!IPG nailed:   silicon node "M_A_DQ<20>" test "u1_c.BY13"
+!IPG nailed:   silicon node "M_A_DQ<21>" test "u1_c.CA14"
+!IPG nailed:   silicon node "M_A_DQ<22>" test "u1_c.CJ13"
+!IPG nailed:   silicon node "M_A_DQ<23>" test "u1_c.CK14"
+!IPG nailed:   silicon node "M_A_DQ<24>" test "u1_c.CD20"
+!IPG nailed:   silicon node "M_A_DQ<25>" test "u1_c.CB20"
+!IPG nailed:   silicon node "M_A_DQ<26>" test "u1_c.CD28"
+!IPG nailed:   silicon node "M_A_DQ<27>" test "u1_c.CB28"
+!IPG nailed:   silicon node "M_A_DQ<28>" test "u1_c.CF18"
+!IPG nailed:   silicon node "M_A_DQ<29>" test "u1_c.CC18"
+!IPG nailed:   silicon node "M_A_DQ<30>" test "u1_c.CF26"
+!IPG nailed:   silicon node "M_A_DQ<31>" test "u1_c.CC26"
+!IPG nailed:   silicon node "M_A_DQ<32>" test "u1_c.CD66"
+!IPG nailed:   silicon node "M_A_DQ<33>" test "u1_c.CB66"
+!IPG nailed:   silicon node "M_A_DQ<34>" test "u1_c.CD72"
+!IPG nailed:   silicon node "M_A_DQ<35>" test "u1_c.CB72"
+!IPG nailed:   silicon node "M_A_DQ<36>" test "u1_c.CF64"
+!IPG nailed:   silicon node "M_A_DQ<37>" test "u1_c.CC64"
+!IPG nailed:   silicon node "M_A_DQ<38>" test "u1_c.CF71"
+!IPG nailed:   silicon node "M_A_DQ<39>" test "u1_c.CC71"
+!IPG nailed:   silicon node "M_A_DQ<40>" test "u1_c.CL66"
+!IPG nailed:   silicon node "M_A_DQ<41>" test "u1_c.CJ66"
+!IPG nailed:   silicon node "M_A_DQ<42>" test "u1_c.CL72"
+!IPG nailed:   silicon node "M_A_DQ<43>" test "u1_c.CJ72"
+!IPG nailed:   silicon node "M_A_DQ<44>" test "u1_c.CM64"
+!IPG nailed:   silicon node "M_A_DQ<45>" test "u1_c.CK64"
+!IPG nailed:   silicon node "M_A_DQ<46>" test "u1_c.CM71"
+!IPG nailed:   silicon node "M_A_DQ<47>" test "u1_c.CK71"
+!IPG nailed:   silicon node "M_A_DQ<48>" test "u1_c.BT72"
+!IPG nailed:   silicon node "M_A_DQ<49>" test "u1_c.BU71"
+!IPG nailed:   silicon node "M_A_DQ<50>" test "u1_c.BG72"
+!IPG nailed:   silicon node "M_A_DQ<51>" test "u1_c.BH71"
+!IPG nailed:   silicon node "M_A_DQ<52>" test "u1_c.BV72"
+!IPG nailed:   silicon node "M_A_DQ<53>" test "u1_c.BW71"
+!IPG nailed:   silicon node "M_A_DQ<54>" test "u1_c.BJ72"
+!IPG nailed:   silicon node "M_A_DQ<55>" test "u1_c.BL71"
+!IPG nailed:   silicon node "M_A_DQ<56>" test "u1_c.BU67"
+!IPG nailed:   silicon node "M_A_DQ<57>" test "u1_c.BT66"
+!IPG nailed:   silicon node "M_A_DQ<58>" test "u1_c.BH67"
+!IPG nailed:   silicon node "M_A_DQ<59>" test "u1_c.BG66"
+!IPG nailed:   silicon node "M_A_DQ<60>" test "u1_c.BW67"
+!IPG nailed:   silicon node "M_A_DQ<61>" test "u1_c.BV66"
+!IPG nailed:   silicon node "M_A_DQ<62>" test "u1_c.BL67"
+!IPG nailed:   silicon node "M_A_DQ<63>" test "u1_c.BJ66"
+!IPG nailed:   silicon node "M_A_ECC<0>" test "u1_c.CL20"
+!IPG nailed:   silicon node "M_A_ECC<1>" test "u1_c.CJ20"
+!IPG nailed:   silicon node "M_A_ECC<2>" test "u1_c.CL28"
+!IPG nailed:   silicon node "M_A_ECC<3>" test "u1_c.CJ28"
+!IPG nailed:   silicon node "M_A_ECC<4>" test "u1_c.CM18"
+!IPG nailed:   silicon node "M_A_ECC<5>" test "u1_c.CK18"
+!IPG nailed:   silicon node "M_A_ECC<6>" test "u1_c.CM26"
+!IPG nailed:   silicon node "M_A_ECC<7>" test "u1_c.CK26"
+!IPG nailed:   silicon node "M_B_ALERT_N" test "u1_c.CT42"
+!IPG nailed:   silicon node "M_B_DQ<0>" test "u1_c.CG1"
+!IPG nailed:   silicon node "M_B_DQ<1>" test "u1_c.CG3"
+!IPG nailed:   silicon node "M_B_DQ<2>" test "u1_c.CM3"
+!IPG nailed:   silicon node "M_B_DQ<3>" test "u1_c.CN4"
+!IPG nailed:   silicon node "M_B_DQ<4>" test "u1_c.CF2"
+!IPG nailed:   silicon node "M_B_DQ<5>" test "u1_c.CF4"
+!IPG nailed:   silicon node "M_B_DQ<6>" test "u1_c.CL2"
+!IPG nailed:   silicon node "M_B_DQ<7>" test "u1_c.CK4"
+!IPG nailed:   silicon node "M_B_DQ<8>" test "u1_c.CU8"
+!IPG nailed:   silicon node "M_B_DQ<9>" test "u1_c.CR8"
+!IPG nailed:   silicon node "M_B_DQ<10>" test "u1_c.CU13"
+!IPG nailed:   silicon node "M_B_DQ<11>" test "u1_c.CR13"
+!IPG nailed:   silicon node "M_B_DQ<12>" test "u1_c.CU5"
+!IPG nailed:   silicon node "M_B_DQ<13>" test "u1_c.CT7"
+!IPG nailed:   silicon node "M_B_DQ<14>" test "u1_c.CV12"
+!IPG nailed:   silicon node "M_B_DQ<15>" test "u1_c.CT12"
+!IPG nailed:   silicon node "M_B_DQ<16>" test "u1_c.CV16"
+!IPG nailed:   silicon node "M_B_DQ<17>" test "u1_c.CT16"
+!IPG nailed:   silicon node "M_B_DQ<18>" test "u1_c.CV20"
+!IPG nailed:   silicon node "M_B_DQ<19>" test "u1_c.CT20"
+!IPG nailed:   silicon node "M_B_DQ<20>" test "u1_c.CU15"
+!IPG nailed:   silicon node "M_B_DQ<21>" test "u1_c.CR15"
+!IPG nailed:   silicon node "M_B_DQ<22>" test "u1_c.CU19"
+!IPG nailed:   silicon node "M_B_DQ<23>" test "u1_c.CR19"
+!IPG nailed:   silicon node "M_B_DQ<24>" test "u1_c.CU24"
+!IPG nailed:   silicon node "M_B_DQ<25>" test "u1_c.CR24"
+!IPG nailed:   silicon node "M_B_DQ<26>" test "u1_c.CU28"
+!IPG nailed:   silicon node "M_B_DQ<27>" test "u1_c.CR28"
+!IPG nailed:   silicon node "M_B_DQ<28>" test "u1_c.CV23"
+!IPG nailed:   silicon node "M_B_DQ<29>" test "u1_c.CT23"
+!IPG nailed:   silicon node "M_B_DQ<30>" test "u1_c.CV27"
+!IPG nailed:   silicon node "M_B_DQ<31>" test "u1_c.CT27"
+!IPG nailed:   silicon node "M_B_DQ<32>" test "u1_c.CT73"
+!IPG nailed:   silicon node "M_B_DQ<33>" test "u1_c.CU74"
+!IPG nailed:   silicon node "M_B_DQ<34>" test "u1_c.CJ78"
+!IPG nailed:   silicon node "M_B_DQ<35>" test "u1_c.CJ76"
+!IPG nailed:   silicon node "M_B_DQ<36>" test "u1_c.CU71"
+!IPG nailed:   silicon node "M_B_DQ<37>" test "u1_c.CR71"
+!IPG nailed:   silicon node "M_B_DQ<38>" test "u1_c.CL77"
+!IPG nailed:   silicon node "M_B_DQ<39>" test "u1_c.CK75"
+!IPG nailed:   silicon node "M_B_DQ<40>" test "u1_c.CF77"
+!IPG nailed:   silicon node "M_B_DQ<41>" test "u1_c.CF75"
+!IPG nailed:   silicon node "M_B_DQ<42>" test "u1_c.CB77"
+!IPG nailed:   silicon node "M_B_DQ<43>" test "u1_c.CB75"
+!IPG nailed:   silicon node "M_B_DQ<44>" test "u1_c.CG78"
+!IPG nailed:   silicon node "M_B_DQ<45>" test "u1_c.CG76"
+!IPG nailed:   silicon node "M_B_DQ<46>" test "u1_c.CC78"
+!IPG nailed:   silicon node "M_B_DQ<47>" test "u1_c.CC76"
+!IPG nailed:   silicon node "M_B_DQ<48>" test "u1_c.BW78"
+!IPG nailed:   silicon node "M_B_DQ<49>" test "u1_c.BW76"
+!IPG nailed:   silicon node "M_B_DQ<50>" test "u1_c.BP78"
+!IPG nailed:   silicon node "M_B_DQ<51>" test "u1_c.BP76"
+!IPG nailed:   silicon node "M_B_DQ<52>" test "u1_c.BY77"
+!IPG nailed:   silicon node "M_B_DQ<53>" test "u1_c.BY75"
+!IPG nailed:   silicon node "M_B_DQ<54>" test "u1_c.BR77"
+!IPG nailed:   silicon node "M_B_DQ<55>" test "u1_c.BR75"
+!IPG nailed:   silicon node "M_B_DQ<56>" test "u1_c.BL77"
+!IPG nailed:   silicon node "M_B_DQ<57>" test "u1_c.BL75"
+!IPG nailed:   silicon node "M_B_DQ<58>" test "u1_c.BG77"
+!IPG nailed:   silicon node "M_B_DQ<59>" test "u1_c.BG75"
+!IPG nailed:   silicon node "M_B_DQ<60>" test "u1_c.BM78"
+!IPG nailed:   silicon node "M_B_DQ<61>" test "u1_c.BM76"
+!IPG nailed:   silicon node "M_B_DQ<62>" test "u1_c.BH78"
+!IPG nailed:   silicon node "M_B_DQ<63>" test "u1_c.BH76"
+!IPG nailed:   silicon node "M_B_ECC<0>" test "u1_c.CV31"
+!IPG nailed:   silicon node "M_B_ECC<1>" test "u1_c.CT31"
+!IPG nailed:   silicon node "M_B_ECC<2>" test "u1_c.CV36"
+!IPG nailed:   silicon node "M_B_ECC<3>" test "u1_c.CT36"
+!IPG nailed:   silicon node "M_B_ECC<4>" test "u1_c.CU30"
+!IPG nailed:   silicon node "M_B_ECC<5>" test "u1_c.CR30"
+!IPG nailed:   silicon node "M_B_ECC<6>" test "u1_c.CU35"
+!IPG nailed:   silicon node "M_B_ECC<7>" test "u1_c.CR35"
+!IPG nailed:   silicon node "MEM_DDR4_ALERT_N" test "u8.U16"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<0>" test "u8.U10"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<1>" test "u8.W10"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<2>" test "u8.Y10"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<3>" test "u8.AA10"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<4>" test "u8.U9"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<5>" test "u8.Y9"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<6>" test "u8.W9"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<7>" test "u8.V9"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<8>" test "u8.AA8"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<9>" test "u8.Y8"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<10>" test "u8.Y7"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<11>" test "u8.W8"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<12>" test "u8.AA6"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<13>" test "u8.W7"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<14>" test "u8.V7"
+!IPG not disabled:   silicon node "MEM_DDR4_DQ<15>" test "u8.U7"
+!IPG not disabled:   silicon node "MEM_DDR4_DQS_0_DN" test "u8.AB10"
+!IPG not disabled:   silicon node "MEM_DDR4_DQS_0_DP" test "u8.AB9"
+!IPG not disabled:   silicon node "MEM_DDR4_DQS_1_DN" test "u8.AB6"
+!IPG not disabled:   silicon node "MEM_DDR4_DQS_1_DP" test "u8.AB7"
+!IPG: Node "NMI_TO_CPU" is aliased to "NMI_TO_CPU_R"
+!IPG nailed:   silicon node "NMI_TO_CPU_R" test "u1_c_pch.BA23"
+!IPG: Node "P2PM2_BMC_FP1_R" is aliased to "P2PM2_BMC_FPGA_CLK1_R"
+!IPG nailed:   silicon node "P2PM2_BMC_FPGA_CLK1_R" test "u8.H19"
+!IPG nailed:   silicon node "P2PM2_BMC_FPGA_DATA1" test "u8.A21"
+!IPG nailed:   silicon node "PCH_BMFPGA_PERST_L" test "u1.P11"
+!IPG nailed:   silicon node "PCH_CONSOLE_RXD" test "u1.D8"
+!IPG nailed:   silicon node "PCH_CONSOLE_RXD1" test "u1.B7"
+!IPG nailed:   silicon node "PCH_CONSOLE_TXD" test "u1.C7"
+!IPG nailed:   silicon node "PCH_CONSOLE_TXD1" test "u1.R14"
+!IPG nailed:   silicon node "PCH_FPGA_PERST_L" test "u1.H2"
+!IPG nailed:   silicon node "PCH_I210_PERST_L" test "u1.T14"
+!IPG: Node "PCH_LPC_FRAME_L" is aliased to "PCH_IPU_LPC_FRAME_L_ST_C"
+!IPG: Testing through device "r369_c"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_IPU_LPC_FRAME_L_ST_C" test "u1_c_pch.AH1"
+!IPG nailed:   silicon node "PCH_IPU_LPC_FRAME_L_ST_C" test "u8.F21"
+!IPG: Node "SRT_BMC_LPC_LAD<0>" is aliased to "PCH_LPC_AD0_ST_C"
+!IPG: Testing through devices "r38_c", "r788"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_LPC_AD0_ST_C" test "u1_c_pch.AF3"
+!IPG nailed:   silicon node "PCH_LPC_AD0_ST_C" test "u8.G21"
+!IPG: Node "SRT_BMC_LPC_LAD<1>" is aliased to "PCH_LPC_AD1_ST_C"
+!IPG: Testing through devices "r37_c", "r787"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_LPC_AD1_ST_C" test "u1_c_pch.AG4"
+!IPG nailed:   silicon node "PCH_LPC_AD1_ST_C" test "u8.G20"
+!IPG: Node "SRT_BMC_LPC_LAD<2>" is aliased to "PCH_LPC_AD2_ST_C"
+!IPG: Testing through devices "r36_c", "r786"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_LPC_AD2_ST_C" test "u1_c_pch.AL3"
+!IPG nailed:   silicon node "PCH_LPC_AD2_ST_C" test "u8.D22"
+!IPG: Node "SRT_BMC_LPC_LAD<3>" is aliased to "PCH_LPC_AD3_ST_C"
+!IPG: Testing through devices "r35_c", "r785"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_LPC_AD3_ST_C" test "u1_c_pch.AF1"
+!IPG nailed:   silicon node "PCH_LPC_AD3_ST_C" test "u8.E22"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_PLTRST_L" test "u1_c_pch.BE24"
+!IPG nailed:   silicon node "PCH_PLTRST_L" test "u1.T11"
+!IPG nailed:   silicon node "PCH_PLTRST_PROC_L_C" test "u1_c_pch.BU7"
+!IPG: Node "PCH_SERIRQ_ST_C" is aliased to "PCH_SERIRQ"
+!IPG: Testing through device "r1622_c"
+!IPG not disabled:   silicon node "PCH_SERIRQ" test "u1_c_pch.BU14"
+!IPG not disabled:   silicon node "PCH_SERIRQ" test "u8.F22"
+!IPG nailed:   silicon node "PCH_SUS_STAT_L" test "u1_c_pch.BB18"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_UART0_RXD_1V" test "u1_c.AG77"
+!IPG nailed:   silicon node "PCH_UART0_RXD_1V" test "u1.L15"
+!IPG: Node "PCH_UART0_TXD_1V" is aliased to "PCH_UART0_TXD_1V_ST_C"
+!IPG: Testing through device "r1447_c"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_UART0_TXD_1V_ST_C" test "u1_c.AG75"
+!IPG nailed:   silicon node "PCH_UART0_TXD_1V_ST_C" test "u1.L14"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_UART1_RXD_1V" test "u1_c.AH78"
+!IPG nailed:   silicon node "PCH_UART1_RXD_1V" test "u1.L16"
+!IPG: Node "PCH_UART1_TXD_1V" is aliased to "PCH_UART1_TXD_1V_ST_C"
+!IPG: Testing through device "r1446_c"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCH_UART1_TXD_1V_ST_C" test "u1_c.AH76"
+!IPG nailed:   silicon node "PCH_UART1_TXD_1V_ST_C" test "u1.G16"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PCHGP_PMB_FORCE_PWRDN" test "u1_c_pch.BV20"
+!IPG nailed:   silicon node "PCHGP_PMB_FORCE_PWRDN" test "u1.A11"
+!IPG nailed:   silicon node "PCHGP_PMB_FORCE_PWRDN_2V5" test "u1.H5"
+!IPG nailed:   silicon node "PD_CPU_GPIO33_C" test "u1_c_pch.AN11"
+!IPG nailed:   silicon node "PD_CPU_GPIO53_C" test "u1_c_pch.BT20"
+!IPG nailed:   silicon node "PD_GPIO45_C" test "u1_c_pch.BA21"
+!IPG nailed:   silicon node "PD_GPIO46_C" test "u1_c_pch.BA19"
+!IPG nailed:   silicon node "PD_GPIO52_CPUSV_NC" test "u1_c_pch.BP16"
+!IPG nailed:   silicon node "PD_LAN1_MDIO0_LED0_0_C" test "u1_c.L72"
+!IPG nailed:   silicon node "PD_LAN1_MDIO1_LED1_0_C" test "u1_c.AC64"
+!IPG: Node "PECI_PCH_CPU_ST_C" is aliased to "PECI_PCH_CPU"
+!IPG: Testing through device "r893_c"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "PECI_PCH_CPU" test "u1_c.AL78"
+!IPG nailed:   silicon node "PECI_PCH_CPU" test "u1_c_pch.BG16"
+!IPG nailed:   silicon node "PMOD_P1V5_PCH_PG_3V" test "u1.A5"
+!IPG nailed:   silicon node "PU_CPU_BMBUSY_L_C" test "u1_c_pch.BB28"
+!IPG nailed:   silicon node "PU_CPU_GPIO51" test "u1_c_pch.BL18"
+!IPG nailed:   silicon node "PU_CPU_GPIO55_C" test "u1_c_pch.BU22"
+!IPG nailed:   silicon node "PU_CPU_PME_L_C" test "u1_c_pch.BE16"
+!IPG nailed:   silicon node "PU_CPU_WAKE_L_C" test "u1_c_pch.BA1"
+!IPG nailed:   silicon node "PU_GPIO31_C" test "u1_c_pch.BC9"
+!IPG nailed:   silicon node "PU_GPIO32_C" test "u1_c_pch.BB27"
+!IPG nailed:   silicon node "PU_GPIO39_C" test "u1_c_pch.BU18"
+!IPG nailed:   silicon node "PU_GPIO44_NC" test "u1_c_pch.BD18"
+!IPG nailed:   silicon node "PU_GPIO48_C" test "u1_c_pch.BT16"
+!IPG nailed:   silicon node "PU_GPIO57_C" test "u1_c_pch.BP9"
+!IPG nailed:   silicon node "PU_GPIO72_C" test "u1_c_pch.BB4"
+!IPG nailed:   silicon node "PU_LAN0_I2C_SCL0_C" test "u1_c.R72"
+!IPG nailed:   silicon node "PU_LAN0_I2C_SCL1_C" test "u1_c.P71"
+!IPG nailed:   silicon node "PU_LAN0_I2C_SDA0_C" test "u1_c.U72"
+!IPG nailed:   silicon node "PU_LAN0_I2C_SDA1_C" test "u1_c.T71"
+!IPG nailed:   silicon node "PU_PE_HP_SCL_C" test "u1_c.AR67"
+!IPG nailed:   silicon node "PU_PE_HP_SDA_C" test "u1_c.AN67"
+!IPG nailed:   silicon node "PU_SCLOCK_GPIO22_C" test "u1_c_pch.BN14"
+!IPG nailed:   silicon node "PU_SLOAD_GPIO38_C" test "u1_c_pch.BP13"
+!IPG nailed:   silicon node "PU_SPI_IO2_C" test "u1_c_pch.BF18"
+!IPG nailed:   silicon node "PU_SPI_IO3_C" test "u1_c_pch.BE20"
+!IPG nailed:   silicon node "PU_SUSWARN_L_C" test "u1_c_pch.AY11"
+!IPG nailed:   silicon node "PUD_CPU_NO_REBOOT_C" test "u1_c_pch.BP20"
+!IPG nailed:   silicon node "PWRGD_P1V5_PCH_1V" test "u1.F13"
+!IPG: Node "BMC_UART5_TX" is aliased to "R_BMC_UART5_RXD"
+!IPG: Testing through device "r1607"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "R_BMC_UART5_RXD" test "u8.K1"
+!IPG nailed:   silicon node "R_BMC_UART5_RXD" test "u1.A15"
+!IPG: Node "BMC_UART5_RX" is aliased to "R_BMC_UART5_TX"
+!IPG: Testing through device "r1569"
+!IPG nailed:   silicon node "R_BMC_UART5_TX" test "u8.K2","u1.A14"
+!IPG: Node "SPI_PCH_MISO_C" is aliased to "R_SPI_PCH_MISO"
+!IPG not disabled:   silicon node "R_SPI_PCH_MISO" test "u1_c_pch.BJ20"
+!IPG nailed:   silicon node "RGMII1TXD2_GPIOT4" test "u8.E7"
+!IPG nailed:   silicon node "RGMII1TXD3_GPIOT5" test "u8.D7"
+!IPG nailed:   silicon node "SATA_LED_L" test "u1_c_pch.BF14"
+!IPG not disabled:   silicon node "SERIRQ_DATA_1V_ST_C" test "u1_c.AE75"
+!IPG nailed:   silicon node "SMB0_ALERT_L" test "u1_c_pch.BL7"
+!IPG nailed:   silicon node "SMB_10GBE_ALRT_N" test "u1_c.AN71"
+!IPG nailed:   silicon node "SMB_10GBE_CLK" test "u1_c.AM75"
+!IPG nailed:   silicon node "SMB_10GBE_DATA" test "u1_c.AM77"
+!IPG nailed:   silicon node "SMB_CPU_ALERT_L" test "u1_c_pch.BH7"
+!IPG: Node "SMB_HOST_3V3_CLK_R" is aliased to "SMBUS_PCH_SCL"
+!IPG nailed:   silicon node "SMBUS_PCH_SCL" test "u1_c_pch.BN11"
+!IPG: Node "SMB_HOST_3V3_DAT_R" is aliased to "SMBUS_PCH_SDA"
+!IPG nailed:   silicon node "SMBUS_PCH_SDA" test "u1_c_pch.BJ13"
+!IPG: Node "SML0_CLK_BMC_R" is aliased to "SML0CLK_BMC"
+!IPG: Testing through device "r1155"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "SML0CLK_BMC" test "u1_c_pch.BR7"
+!IPG nailed:   silicon node "SML0CLK_BMC" test "u8.P2"
+!IPG: Node "SML0_DATA_BMC_R" is aliased to "SML0DATA_BMC"
+!IPG: Testing through device "r451"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "SML0DATA_BMC" test "u1_c_pch.BN18"
+!IPG nailed:   silicon node "SML0DATA_BMC" test "u8.R1"
+!IPG: Node "FM_PCH_HOT_N_P3V3" is aliased to "SML1ALERT_PCHHOT_C"
+!IPG: Testing through device "r1626_c"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "SML1ALERT_PCHHOT_C" test "u1_c_pch.BF7"
+!IPG nailed:   silicon node "SML1ALERT_PCHHOT_C" test "u1.B9"
+!IPG: Node "SRT_SM1_CLK_BMC" is aliased to "SML1CLK_BMC"
+!IPG: Testing through device "r107"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "SML1CLK_BMC" test "u1_c_pch.BG9"
+!IPG nailed:   silicon node "SML1CLK_BMC" test "u8.N21"
+!IPG: Node "SRT_SML1_DATA_BMC" is aliased to "SML1DATA_BMC"
+!IPG: Testing through device "r106"
+!IPG: The following node statement was segmented into multiple lines.
+!IPG: All lines for this node must be uncommented to fully test this node.
+!IPG nailed:   silicon node "SML1DATA_BMC" test "u1_c_pch.BB11"
+!IPG nailed:   silicon node "SML1DATA_BMC" test "u8.N22"
+!IPG nailed:   silicon node "SPARE0_P1V05" test "u1.E14"
+!IPG nailed:   silicon node "SPARE1_P1V05" test "u1.C16"
+!IPG nailed:   silicon node "SPARE2_P1V05" test "u1.D15"
+!IPG nailed:   silicon node "SPARE3_P1V05" test "u1.D14"
+!IPG nailed:   silicon node "SPARE4_P1V05" test "u1.E15"
+!IPG nailed:   silicon node "SPARE5_P1V05" test "u1.C15"
+!IPG nailed:   silicon node "SPARE6_P1V05" test "u1.B16"
+  silicon node "SPARE_CPU_SLP_SUS_L_C" test "u1_c_pch.AY7"
+  node "GPIO_TACH<4>" hybrid test "u1_c.AV7" ! (39 mils from u1_c.AY7)
+  node "PU_SUSACK_L_C" hybrid test "u1_c_pch.AY4" ! (0 mils from u1_c_pch.AY7)
+  node "PU_SUSWARN_L_C" hybrid test "u1_c_pch.AY11" ! (0 mils from u1_c_pch.AY7)
+  silicon node "SPARE_PCH_IPU_SLP_A_L_C" test "u1_c_pch.BB7"
+  node "PU_GPIO31_C" hybrid test "u1_c.BC9" ! (39 mils from u1_c.BB7)
+  node "PU_GPIO72_C" hybrid test "u1_c_pch.BB4" ! (0 mils from u1_c_pch.BB7)
+  node "SML1DATA_BMC" hybrid test "u1_c_pch.BB11" ! (0 mils from u1_c_pch.BB7)
+!IPG not disabled:   silicon node "SPI1_10GE_FLSH_CLK_1V_ST_C" test "u1_c.AJ67"
+!IPG not disabled:   silicon node "SPI1_10GE_FLSH_CS_L_1V_ST_C" test "u1_c.AG67"
+!IPG not disabled:   silicon node "SPI1_10GE_FLSH_MISO_1V_C" test "u1_c.D71"
+!IPG not disabled:   silicon node "SPI1_10GE_FLSH_MOSI_1V_C" test "u1_c.AN78"
+!IPG not disabled:   silicon node "SPI2_CS1_R" test "u8.V20"
+!IPG nailed:   silicon node "SPI_BOOT_MISO" test "u8.T18"
+!IPG nailed:   silicon node "SPI_CS0_L_R" test "u8.AB19"
+!IPG nailed:   silicon node "SPI_CS1_L_R" test "u8.AA19"
+!IPG not disabled:   silicon node "SPI_FLSH_MOSI_ST_C" test "u1_c_pch.BL11"
+!IPG not disabled:   silicon node "SRT_BMC_BMCPHY_MDIO2" test "u8.B13"
+!IPG used for disable:   silicon node "SRT_BMC_I2C1_SCL" test "u8.M20"
+!IPG nailed:   silicon node "SRT_BMC_MB_SCL" test "u8.C14"
+!IPG: Node "BMC_SEC_BOOT_JTAG_TCK" is aliased to "SRT_BMC_SEC_BOOT_JTAG_TCK"
+!IPG nailed:   silicon node "SRT_BMC_SEC_BOOT_JTAG_TCK" test "u1.N6"
+!IPG: Node "BMC_SEC_BOOT_JTAG_TDI" is aliased to "SRT_BMC_SEC_BOOT_JTAG_TDI"
+!IPG nailed:   silicon node "SRT_BMC_SEC_BOOT_JTAG_TDI" test "u1.N8"
+!IPG not disabled:   silicon node "SRT_BMC_SPI2_MUX_MISO" test "u8.V19"
+!IPG not disabled:   silicon node "SRT_BMC_XGE_RGMII2_CTL" test "u8.B1"
+!IPG not disabled:   silicon node "SRT_BMC_XGE_RGMII2_TXD0" test "u8.A2"
+!IPG not disabled:   silicon node "SRT_BMC_XGE_RGMII2_TXD1" test "u8.B3"
+!IPG not disabled:   silicon node "SRT_BMC_XGE_RGMII2_TXD2" test "u8.D5"
+!IPG not disabled:   silicon node "SRT_BMC_XGE_RGMII2_TXD3" test "u8.D4"
+!IPG not disabled:   silicon node "SRT_BMCPHY_MDC1" test "u8.D8"
+!IPG not disabled:   silicon node "SRT_BMCPHY_MDIO1" test "u8.E10"
+!IPG used for disable:   silicon node "SRT_CHASSIS_IDPROM_SCL" test "u8.M18"
+!IPG: Node "CLK50M_CPLD" is aliased to "SRT_CLK50M_CPLD"
+!IPG nailed:   silicon node "SRT_CLK50M_CPLD" test "u1.T7"
+!IPG not disabled:   silicon node "SRT_CLK_BMC_BMCPHY_MDC2" test "u8.C13"
+!IPG not disabled:   silicon node "SRT_CLK_BMC_XGE_RGMII2" test "u8.B2"
+!IPG: Node "CPU_SEC_BOOT_JTAG_TCK" is aliased to "SRT_CPU_SEC_BOOT_JTAG_TCK"
+!IPG nailed:   silicon node "SRT_CPU_SEC_BOOT_JTAG_TCK" test "u1.M9"
+!IPG: Node "CPU_SEC_BOOT_JTAG_TDI" is aliased to "SRT_CPU_SEC_BOOT_JTAG_TDI"
+!IPG nailed:   silicon node "SRT_CPU_SEC_BOOT_JTAG_TDI" test "u1.L10"
+!IPG nailed:   silicon node "SRT_EMMC_CLK" test "u8.C12"
+!IPG not disabled:   silicon node "SRT_LAN0_MDC0_LED0_1_C" test "u1_c.U69"
+!IPG not disabled:   silicon node "SRT_LAN0_MDC1_LED1_1_C" test "u1_c.V67"
+!IPG nailed:   silicon node "SRT_SPI_BOOT_MOSI" test "u8.U17"
+!IPG nailed:   silicon node "SRT_VR_SMB_CLK" test "u8.N1"
+!IPG nailed:   silicon node "SVID_DATA_C" test "u1_c.AJ71"
+!IPG nailed:   silicon node "SYNC_CPU_TO_FPGA_INTR_L" test "u1.E3"
+!IPG nailed:   silicon node "UNNAMED_30_I210_I39_LED1" test "u1_i2.30"
+!IPG nailed:   silicon node "UNNAMED_90_LCMXO3LF1300_I55_PT20CJTAGENB" test "u1.C10"
+!IPG nailed:   silicon node "UNNAMED_4189_AST2520_I1_GPIOD7SD2WPM" test "u8.C21"
+  silicon node "USB2_D_N<3>" test "u1_c_pch.AG7"
+  node "USB_EXT_DRIVE_DBG_DP" hybrid test "u1_c.AH9" ! (39 mils from u1_c.AG7)
+  node "PCH_LPC_AD1_ST_C" hybrid test "u1_c_pch.AG4" ! (0 mils from u1_c_pch.AG7)
+  silicon node "USB2_D_P<3>" test "u1_c_pch.AJ7"
+  node "USB_EXT_DRIVE_DBG_DP" hybrid test "u1_c.AH9" ! (39 mils from u1_c.AJ7)
+  node "USB_EXT_DRIVE_DBG_DN" hybrid test "u1_c.AK9" ! (39 mils from u1_c.AJ7)
+  node "PCH_UART1_RXD_1V" hybrid test "u1_c_pch.AH78" ! (0 mils from u1_c_pch.AJ7)
+!IPG nailed:   silicon node "USB_BMC_DN" test "u1_c_pch.AD3"
+!IPG nailed:   silicon node "USB_BMC_DP" test "u1_c_pch.AD1"
+!IPG nailed:   silicon node "USB_EXT_DRIVE_DBG_DN" test "u1_c_pch.AK9"
+!IPG nailed:   silicon node "USB_EXT_DRIVE_DBG_DP" test "u1_c_pch.AH9"
+!IPG nailed:   silicon node "USB_EXT_DRIVE_DN" test "u1_c_pch.AE4"
+!IPG nailed:   silicon node "USB_EXT_DRIVE_DP" test "u1_c_pch.AE2"
+!IPG nailed:   silicon node "USB_OC0_GPIO59" test "u1_c_pch.BH1"
+!IPG nailed:   silicon node "USB_OC1_GPIO40" test "u1_c_pch.BE2"
+!IPG nailed:   silicon node "USB_OC2_GPIO41" test "u1_c_pch.BG4"
+!IPG nailed:   silicon node "USB_OC3_GPIO42" test "u1_c_pch.BG2"
+!IPG nailed:   silicon node "USB_OC4_GPIO43" test "u1_c_pch.BE4"
+!IPG nailed:   silicon node "USB_OC5_GPIO9" test "u1_c_pch.BF3"
+!IPG nailed:   silicon node "USB_OC6_GPIO10" test "u1_c_pch.BF1"
+!IPG nailed:   silicon node "USB_OC7_GPIO14" test "u1_c_pch.BD3"
+!IPG nailed:   silicon node "VR_SMB_DAT" test "u8.P1"
+!IPG nailed:   silicon node "VREF_P1V05" test "u1.N16"
+!IPG: Node "SRT_X86_BMCFPGA_SCL" is aliased to "X86_BMCFPGA_SCL"
+!IPG nailed:   silicon node "X86_BMCFPGA_SCL" test "u8.L3"
+!IPG nailed:   silicon node "X86_BMCFPGA_SDA" test "u8.L4"
+!IPG nailed:   silicon node "XDP_CPU_BPM2_L_C" test "u1_c.N78"
+!IPG nailed:   silicon node "XDP_CPU_BPM3_L_C" test "u1_c.M75"
+!IPG nailed:   silicon node "XDP_CPU_BPM4_L_C" test "u1_c.J78"
+!IPG nailed:   silicon node "XDP_CPU_BPM5_L_C" test "u1_c.H75"
+!IPG nailed:   silicon node "XDP_CPU_BPM6_L_C" test "u1_c.K75"
+!IPG nailed:   silicon node "XDP_CPU_BPM7_L_C" test "u1_c.J76"
+!IPG nailed:   silicon node "XDP_CPU_PREQ_L_C" test "u1_c.K77"
+!IPG not disabled:   silicon node "XGE_BMC_RGMII2_CTL" test "u8.C1"
+!IPG not disabled:   silicon node "XGE_BMC_RGMII2_RXD0" test "u8.C3"
+!IPG not disabled:   silicon node "XGE_BMC_RGMII2_RXD1" test "u8.D1"
+!IPG not disabled:   silicon node "XGE_BMC_RGMII2_RXD2" test "u8.D2"
+!IPG not disabled:   silicon node "XGE_BMC_RGMII2_RXD3" test "u8.E6"
+end nodes
+
+!IPG: disable problems
+!IPG: node "BDXDE_DRAM_PWROK"
+!IPG: node "BMC_EMMC_CMD"
+!IPG: node "BMC_EMMC_D0"
+!IPG: node "BMC_EMMC_D1"
+!IPG: node "BMC_EMMC_D2"
+!IPG: node "BMC_EMMC_D3"
+!IPG: node "BMC_EMMC_D4"
+!IPG: node "BMC_EMMC_D5"
+!IPG: node "BMC_EMMC_D6"
+!IPG: node "BMC_EMMC_D7"
+!IPG: node "BMC_SPI1_FPGA_MISO_R"
+!IPG: node "BMC_SPI2_MUX_CLK"
+!IPG: node "BMC_SPI2_MUX_MOSI"
+!IPG: node "BMC_TCK"
+!IPG: node "BMCPHY_INT_M"
+!IPG: node "BMCPHY_RESET_L_R"
+!IPG: node "C105_PCH_FPGA_MDIO0"
+!IPG: node "C105_PCH_FPGA_MDIO1"
+!IPG: node "CLK50M_NCSI_BMC"
+!IPG: node "CLK50M_NCSI_I210"
+!IPG: node "CLK_33M_LPC_BMC"
+!IPG: node "CLK_50M_SPI_ST_C"
+!IPG: node "CLK_XGE_BMC_RGMII2"
+!IPG: node "CONSOLE_RXD_DBG_3V3"
+!IPG: node "CPU_PWRGD_PCH"
+!IPG: node "CPU_SPI_CS0_L_ST_C"
+!IPG: node "I210_MDC_1G_PHY"
+!IPG: node "I210_MDIO_1G_PHY"
+!IPG: node "I210_NVM_SO"
+!IPG: node "JTAG_BMC_TDI_R"
+!IPG: node "JTAG_BMC_TDO_R"
+!IPG: node "JTAG_BMC_TMS_R"
+!IPG: node "JTAG_BMC_TRST_L_R"
+!IPG: node "JTAG_TCK_3V3_I210"
+!IPG: node "JTAG_TCK_BDX_1V05"
+!IPG: node "JTAG_TCK_PCH_1V05"
+!IPG: node "JTAG_TDI_3V3_I210"
+!IPG: node "JTAG_TDI_BDX_1V05"
+!IPG: node "JTAG_TDI_PCH_1V05"
+!IPG: node "JTAG_TDO_3V3_I210"
+!IPG: node "JTAG_TDO_PCH_1V05"
+!IPG: node "JTAG_TMS_3V3_I210"
+!IPG: node "JTAG_TMS_BDX_1V05"
+!IPG: node "JTAG_TMS_PCH_1V05"
+!IPG: node "JTAG_TRST_L_BDX_1V05"
+!IPG: node "MEM_DDR4_DQ<0>"
+!IPG: node "MEM_DDR4_DQ<1>"
+!IPG: node "MEM_DDR4_DQ<2>"
+!IPG: node "MEM_DDR4_DQ<3>"
+!IPG: node "MEM_DDR4_DQ<4>"
+!IPG: node "MEM_DDR4_DQ<5>"
+!IPG: node "MEM_DDR4_DQ<6>"
+!IPG: node "MEM_DDR4_DQ<7>"
+!IPG: node "MEM_DDR4_DQ<8>"
+!IPG: node "MEM_DDR4_DQ<9>"
+!IPG: node "MEM_DDR4_DQ<10>"
+!IPG: node "MEM_DDR4_DQ<11>"
+!IPG: node "MEM_DDR4_DQ<12>"
+!IPG: node "MEM_DDR4_DQ<13>"
+!IPG: node "MEM_DDR4_DQ<14>"
+!IPG: node "MEM_DDR4_DQ<15>"
+!IPG: node "MEM_DDR4_DQS_0_DN"
+!IPG: node "MEM_DDR4_DQS_0_DP"
+!IPG: node "MEM_DDR4_DQS_1_DN"
+!IPG: node "MEM_DDR4_DQS_1_DP"
+!IPG: node "PCH_SERIRQ"
+!IPG: node "R_SPI_PCH_MISO"
+!IPG: node "SERIRQ_DATA_1V_ST_C"
+!IPG: node "SPI1_10GE_FLSH_CLK_1V_ST_C"
+!IPG: node "SPI1_10GE_FLSH_CS_L_1V_ST_C"
+!IPG: node "SPI1_10GE_FLSH_MISO_1V_C"
+!IPG: node "SPI1_10GE_FLSH_MOSI_1V_C"
+!IPG: node "SPI2_CS1_R"
+!IPG: node "SPI_FLSH_MOSI_ST_C"
+!IPG: node "SRT_BMC_BMCPHY_MDIO2"
+!IPG: node "SRT_BMC_SPI2_MUX_MISO"
+!IPG: node "SRT_BMC_XGE_RGMII2_CTL"
+!IPG: node "SRT_BMC_XGE_RGMII2_TXD0"
+!IPG: node "SRT_BMC_XGE_RGMII2_TXD1"
+!IPG: node "SRT_BMC_XGE_RGMII2_TXD2"
+!IPG: node "SRT_BMC_XGE_RGMII2_TXD3"
+!IPG: node "SRT_BMCPHY_MDC1"
+!IPG: node "SRT_BMCPHY_MDIO1"
+!IPG: node "SRT_CLK_BMC_BMCPHY_MDC2"
+!IPG: node "SRT_CLK_BMC_XGE_RGMII2"
+!IPG: node "SRT_LAN0_MDC0_LED0_1_C"
+!IPG: node "SRT_LAN0_MDC1_LED1_1_C"
+!IPG: node "XGE_BMC_RGMII2_CTL"
+!IPG: node "XGE_BMC_RGMII2_RXD0"
+!IPG: node "XGE_BMC_RGMII2_RXD1"
+!IPG: node "XGE_BMC_RGMII2_RXD2"
+!IPG: node "XGE_BMC_RGMII2_RXD3"
+
+!IPG: Family information could not be found for node PCH_CONSOLE_RXD1
+!IPG: Family information could not be found for node PCH_CONSOLE_TXD
+!IPG: Family information could not be found for node FM_PCH_HOT_N_P3V3
+!IPG: Family information could not be found for node CPLD_I2C_SDA
+!IPG: Family information could not be found for node PCH_CONSOLE_RXD
+!IPG: Family information could not be found for node SRT_P2PM_TX
+!IPG: Family information could not be found for node PWRGD_P1V5_PCH_1V
+!IPG: Family information could not be found for node FM_CPU2PCH_THROT_LVT3
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TCK
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TDI
+!IPG: Family information could not be found for node LJTAG_TMS_HDR_3V3
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3
+!IPG: Family information could not be found for node CLK50M_CPLD
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TMS
+!IPG: Family information could not be found for node BMC_CPU_SPIFLASH_EN_L
+!IPG: Family information could not be found for node I2C_BUS1_ALERT_R
+!IPG: Family information could not be found for node UNNAMED_4188_AST2520_I1_PEREXTRSVD
+!IPG: Family information could not be found for node CHASSIS_IDPROM_SDA
+!IPG: Family information could not be found for node BMC_FPD_SEL_R
+!IPG: Family information could not be found for node BMC_ID_ACCESS_3
+!IPG: Family information could not be found for node BMC_ID_ACCESS_4
+!IPG: Family information could not be found for node PCH_LPC_AD2_ST_C
+!IPG: Family information could not be found for node GPIO_TACH<1>
+!IPG: Family information could not be found for node PCH_LPC_AD2_ST_C
+!IPG: Family information could not be found for node BMC_NCSI_CRSDV
+!IPG: Family information could not be found for node BMC_NCSI_RCLKO_R
+!IPG: Family information could not be found for node USB_OC2_GPIO41
+!IPG: Family information could not be found for node RST_PCH_SYSRST_N
+!IPG: Family information could not be found for node RST_PCH_SYSRST_N
+!IPG: Family information could not be found for node CPU_SATA4GP_GPIO16
+!IPG: Family information could not be found for node CPU_GPIO20_SMI_L
+!IPG: Family information could not be found for node PCH_SYS_PWROK
+!IPG: Family information could not be found for node CPU_SATA4GP_GPIO16
+!IPG: Family information could not be found for node GPIO_TACH<4>
+!IPG: Family information could not be found for node PU_SUSACK_L_C
+!IPG: Family information could not be found for node PU_SUSWARN_L_C
+!IPG: Family information could not be found for node PU_GPIO31_C
+!IPG: Family information could not be found for node PU_GPIO72_C
+!IPG: Family information could not be found for node SML1DATA_BMC
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DBG_DP
+!IPG: Family information could not be found for node PCH_LPC_AD1_ST_C
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DBG_DP
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DBG_DN
+!IPG: Family information could not be found for node PCH_UART1_RXD_1V
+end powered shorts
+

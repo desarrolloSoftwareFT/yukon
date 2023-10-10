@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600753681  V6e60                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:20 2020
+on failure
+   report parallel devices
+   report "fc_cr20 fc_cr20%cr5"
+end on failure
+disconnect all
+connect s to "FAN89_BLU_LED_CON"
+connect i to "A3P3V"
+diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+! "fc_cr20%cr3" test.
+off failure

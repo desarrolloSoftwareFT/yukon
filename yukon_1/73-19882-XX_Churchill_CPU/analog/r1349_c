@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176646   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:47 2020
+disconnect all
+connect s to "P3V3"
+connect i to "PU_10GE_FLSH0_HOLD_L_C"
+resistor 4.75k, 25, 20, re4, wb, ar200m

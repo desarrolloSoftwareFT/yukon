@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176179   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:00 2020
+disconnect all
+connect s to "GND"
+connect i to "BMC_ID_ACCESS_2"
+resistor 1k, 25, 20, re3, ar100m

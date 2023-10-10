@@ -1,0 +1,8 @@
+!!!!    2    0    1 1684526200   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "PWRDGD_P0V6_VTT_R"
+connect i to "PMOD_P0V6_VTT_PG"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m
+! "e_r1010" test.

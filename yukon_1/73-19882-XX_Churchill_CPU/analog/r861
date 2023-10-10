@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176633   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:34 2020
+disconnect all
+connect s to "GND"
+connect i to "CLK100M_CLKGEN_PCIE_REFCLK_DN"
+resistor 150, 30, 20, re3, ar1.00

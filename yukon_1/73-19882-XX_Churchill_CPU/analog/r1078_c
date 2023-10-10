@@ -1,0 +1,6 @@
+!!!!    2    0    1 1681777081   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:46 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "SMB_10GBE_DATA"
+resistor 4.75k, 25, 35, re4, wb, ar200m,ed,en,am50m

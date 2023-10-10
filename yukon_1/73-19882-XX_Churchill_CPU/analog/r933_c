@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175972   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:33 2020
+disconnect all
+connect i to "PUD_CPU_NO_REBOOT_C"
+connect s to "GND"
+jumper 1.41k, re4, wb, ar1.00, op
+! "r933_c" test.

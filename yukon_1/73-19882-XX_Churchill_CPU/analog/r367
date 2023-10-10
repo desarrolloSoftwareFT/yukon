@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176143   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:24 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PCH_UART0_RXD_1V"
+resistor 1k, 25, 20, re3, ar100m

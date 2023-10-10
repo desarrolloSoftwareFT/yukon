@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175975   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:36 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PCH_UART1_TXD_1V"
+jumper 1.59k, re4, wb, ar500m, op
+! "r1039_c" test.

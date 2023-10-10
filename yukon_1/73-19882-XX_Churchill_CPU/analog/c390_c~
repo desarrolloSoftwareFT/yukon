@@ -1,0 +1,16 @@
+!!!!    2    0    1 1607034597   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:32 2020
+on failure
+   report parallel devices
+   report "c391_c 10.0n"
+   report "c466_c 10.0n"
+   report "r515_c 1.00k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "M_AB_VREF"
+!connect gl to "P1V2_VDDQ" 
+capacitor 10n, 35, 40, fr1024, re3, ar150.0m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "c390_c" is a commented test.
+off failure

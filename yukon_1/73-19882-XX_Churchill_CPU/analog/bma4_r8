@@ -1,0 +1,13 @@
+!!!!    2    0    1 1604703280   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+on failure
+report parallel devices
+report "bma4_c12 100n"
+end on failure
+disconnect all
+connect i to "PMOD_PVCCSCFUSESUS_VOSEN"
+connect s to "PVCCSCFUSESUS"
+!B!jumper  20.0,  re1, ar200m
+jumper 32.0,re1,ar200m,ed
+! "bma4_r8" test.
+off failure

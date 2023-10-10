@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175981   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:42 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "SRT_BMC_XGE_RGMII2_TXD0"
+jumper 3.17k, re4, wb, ar500m, op
+! "r1275" test.

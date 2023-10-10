@@ -1,0 +1,43 @@
+<!-- Created Thu Jul 23 13:27:47 2020 from ITL Source digital/u27_connect_e -->
+<Test name="u27_connect_e"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BMFPGA_BUF_SPI_FLSH_SEL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="BM_SPI_GOLD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_STD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u27"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="R14"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="N11"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="P16"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P14"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="N13"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="R13"><node name="BMFPGA_SPI_BOOT_CS1_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P13"><node name="CPU_JTAG_CABLE_PRSNT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T12"><node name="FPGA2_SPIFLASH_WP_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R11"><node name="BMC_BMCFPGA_SCL_BMC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T11"><node name="BMC_BMCFPGA_SDA_BMC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R10"><node name="FPGA2_SPIFLASH_HOLD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R9"><node name="BMC_SPI2_MUX_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R8"><node name="PCH_BMFPGA_PERST_L_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T8"><node name="BMC_TDO" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+</Test>

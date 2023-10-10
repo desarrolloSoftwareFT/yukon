@@ -1,0 +1,14 @@
+!!!!   21    2    1 1594044440  V22b0                                         
+
+diode "cr", 800m, 400m, nr
+
+zener "ds",    10,   5,   5, nr
+
+external pins 1
+   device "cr" pins "C"
+   device "ds" pins "A"
+
+
+external pins 2
+   device "cr" pins "A"
+   device "ds" pins "C"

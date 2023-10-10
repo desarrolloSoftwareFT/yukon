@@ -1,0 +1,24 @@
+!!!!    2    0    1 1651702215   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:58 2020
+on failure
+   report parallel devices
+   report "c392_c 1.00u"
+   report "c394_c 22.0u"
+   report "c397_c 1.00u"
+   report "c448_c 1.00u"
+   report "c450_c 22.0u"
+   report "c453_c 1.00u"
+   report "e_c687 22.0u"
+   report "e_c688 10.0u"
+   report "e_c689 10.0u"
+   report "e_c690 10.0u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P0V6_VTT_2"
+connect g to "ADC0_0V6_DDR4_CH11" 
+connect a to "GND"
+connect b to "P0V6_VTT_2"
+resistor 100, 30, 20, re2, ar100m, wa42u, ed, en
+! "e_r1012" test.
+off failure

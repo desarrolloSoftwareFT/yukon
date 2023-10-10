@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176207   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:28 2020
+disconnect all
+connect s to "VFLTP1P05_25M_OSC_C"
+connect i to "CPU_25M_LAN_CLK_EN_C"
+resistor 1k, 25, 20, re3, ar100m

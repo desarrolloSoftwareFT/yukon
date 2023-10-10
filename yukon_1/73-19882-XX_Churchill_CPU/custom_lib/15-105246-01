@@ -1,0 +1,164 @@
+!!!!    6    0    1 1443001128  V2b69                                         
+! Write by Jack Wu
+
+assign VCCA  to pins 1
+assign VCCB  to pins 8
+assign GND   to pins 4
+
+assign DIR   to pins 5
+assign A1    to pins 2
+assign B1    to pins 7
+assign A2    to pins 3
+assign B2    to pins 6
+
+power   VCCA,VCCB,GND
+inputs  DIR
+bidirectional A1,B1,A2,B2
+
+family LVT
+!**************************************
+vector A1_B1_0
+ drive A1
+ receive B1
+ set DIR to "1"
+ set A1  to "0"
+ set B1  to "0"
+end vector
+
+vector A1_B1_1
+ drive A1
+ receive B1
+ set DIR to "1"
+ set A1  to "1"
+ set B1  to "1"
+end vector
+
+vector A1_B1_Disable
+ drive A1
+ receive B1
+ set DIR to "1"
+ set A1  to "0"
+ set B1  to "1"
+end vector
+
+vector B1_A1_0
+ drive B1
+ receive A1
+ set DIR to "0"
+ set B1  to "0"
+ set A1  to "0"
+end vector
+
+vector B1_A1_1
+ drive B1
+ receive A1
+ set DIR to "0"
+ set B1  to "1"
+ set A1  to "1"
+end vector
+
+vector B1_A1_Disable
+ drive B1
+ receive A1
+ set DIR to "0"
+ set B1  to "0"
+ set A1  to "1"
+end vector
+
+vector A2_B2_0
+ drive A2
+ receive B2
+ set DIR to "1"
+ set A2  to "0"
+ set B2  to "0"
+end vector
+
+vector A2_B2_1
+ drive A2
+ receive B2
+ set DIR to "1"
+ set A2  to "1"
+ set B2  to "1"
+end vector
+
+vector A2_B2_Disable
+ drive A2
+ receive B2
+ set DIR to "1"
+ set A2  to "0"
+ set B2  to "1"
+end vector
+
+vector B2_A2_0
+ drive B2
+ receive A2
+ set DIR to "0"
+ set B2  to "0"
+ set A2  to "0"
+end vector
+
+vector B2_A2_1
+ drive B2
+ receive A2
+ set DIR to "0"
+ set B2  to "1"
+ set A2  to "1"
+end vector
+
+vector B2_A2_Disable
+ drive B2
+ receive A2
+ set DIR to "0"
+ set B2  to "0"
+ set A2  to "1"
+end vector
+
+!*****************************************************************************
+
+unit "A1 to B1, Low"
+ execute A1_B1_0
+end unit
+
+unit "A1 to B1, High"
+ execute A1_B1_1
+end unit
+
+unit "A1 to B1, Disable"
+ execute A1_B1_Disable
+end unit
+
+unit "B1 to A1, Low"
+ execute B1_A1_0
+end unit
+
+unit "B1 to A1, High"
+ execute B1_A1_1
+end unit
+
+unit "B1 to A1, Disable"
+ execute B1_A1_Disable
+end unit
+
+unit "A2 to B2, Low"
+ execute A2_B2_0
+end unit
+
+unit "A2 to B2, High"
+ execute A2_B2_1
+end unit
+
+unit "A2 to B2, Disable"
+ execute A2_B2_Disable
+end unit
+
+unit "B2 to A2, Low"
+ execute B2_A2_0
+end unit
+
+unit "B2 to A2, High"
+ execute B2_A2_1
+end unit
+
+unit "B2 to A2, Disable"
+ execute B2_A2_Disable
+end unit

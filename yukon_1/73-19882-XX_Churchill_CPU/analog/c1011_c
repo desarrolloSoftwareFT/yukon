@@ -1,0 +1,7 @@
+!!!!    2    0    1 1596074290   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:55 2020
+disconnect all
+connect s to "GND"
+connect i to "XTAL_LAN_25M_IN_C"
+capacitor 33p+100p, 20.82, 15.00, fr8192, re5, wb, ar50.0m, comp 
+! "c1011_c" test.

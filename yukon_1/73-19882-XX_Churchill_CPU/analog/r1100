@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176382   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:23 2020
+disconnect all
+connect s to "DIMM_THERM_EVENT_2P5_L"
+connect i to "DIMM_THERM_EVENT_L"
+connect a to "DIMM_THERM_EVENT_2P5_L"
+connect b to "DIMM_THERM_EVENT_L"
+resistor 100, 30, 20, re2, ar100m
+! "r1100" test.

@@ -1,0 +1,13 @@
+!!!!    2    0    1 1596074118   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:28 2020
+on failure
+   report parallel devices
+   report "bma4_r9 499k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_1_CAP_I35_B"
+connect g to "PMOD_PVCCSCFUSESUS_VOSEN"
+connect g to "ADC0_PVCCFUSESUS_CH4" 
+resistor 1.645k, 25, 20, re4, wb, ar1.00,en,  ed
+off failure

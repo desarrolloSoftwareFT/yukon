@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175968   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:29 2020
+disconnect all
+connect i to "IDPROM_A1"
+connect s to "A3P3V"
+jumper 883, re3, wb, ar100m, op
+! "r838" test.

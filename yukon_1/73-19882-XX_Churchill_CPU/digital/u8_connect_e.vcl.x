@@ -1,0 +1,32 @@
+! Connect Test Dictionary created Thu Jul 23 13:31:04 2020
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! Chain:  U1_C_U1
+! Source: digital/u8_connect_e
+! Output: digital/u8_connect_e.vcl.x
+!
+U8
+796
+!FrCell DvCell Dev Pin  Node               Signature
+  146 144       U8 F9   BMC_NCSI_TXD0_R  LHXX
+  206 204       U8 E19  BMC_CPU_SPIFLASH_EN_L LHXX
+  227 225       U8 E20  BMC_EMMC_D7      LHXX
+  236 234       U8 F20  BMC_EMMC_D4      LHXX
+  260 258       U8 E22  SRT_BMC_LPC_LAD<3> LHXX
+  263 261       U8 F22  PCH_SERIRQ       LHXX
+  266 264       U8 F21  PCH_LPC_FRAME_L  LHXX
+  269 267       U8 G20  SRT_BMC_LPC_LAD<1> LHXX
+  272 270       U8 G21  SRT_BMC_LPC_LAD<0> LHXX
+  275 273       U8 G22  FPGA_BMC_LPC_RST LHXX
+  278 276       U8 H22  BMC_ID_ACCESS_1  LHXX
+  281 279       U8 H20  BMC_ID_ACCESS_0  LHXX
+  284 282       U8 H21  BMC_ID_ACCESS_2  LHXX
+  287 285       U8 J20  CLK24M_BMC_USBCKI LHXX
+  290 288       U8 K19  BMC_FPD_SEL_R    LHXX
+  415 413       U8 H18  BMC_UART4_RX_R   LHXX
+  418 416       U8 G17  BMC_UART4_TX_R   LHXX
+  421 419       U8 H19  P2PM2_BMC_FP1_R  LHXX
+  427 425       U8 J19  FAN_TEMP_SENSOR_ALERT_L LHXX
+  430 428       U8 K18  BMC_ID_ACCESS_4  LHXX
+  718 716       U8 L1   SRT_BMC_CPU_FPGA_SCL LHXX
+  721 719       U8 K1   BMC_UART5_TX     LHXX
+  766 764       U8 K2   BMC_UART5_RX     LHXX

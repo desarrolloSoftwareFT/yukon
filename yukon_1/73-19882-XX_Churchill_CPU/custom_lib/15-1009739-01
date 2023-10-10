@@ -1,0 +1,116 @@
+!!!!    6    0    1 1571388514  Vc0a6                                         
+! IPG: rev 07.20p  Thu Jul 21 14:11:21 2016
+
+! 74CBTLV3253
+
+sequential
+
+vector cycle 500n
+receive delay 450n
+
+set terminators to on
+assign VCC  to pins 16
+assign GND  to pins 8
+assign OE_N to pins 1,15
+assign S0_1 to pins 14,2
+assign A1   to pins 7
+assign A2   to pins 9
+assign B1_1 to pins 6
+assign B1_2 to pins 5
+assign B1_3 to pins 4
+assign B1_4 to pins 3
+assign B2_1 to pins 10
+assign B2_2 to pins 11
+assign B2_3 to pins 12
+assign B2_4 to pins 13
+
+
+inputs A1,A2,OE_N,S0_1
+outputs B1_1,B1_2,B1_3,B1_4,B2_1,B2_2,B2_3,B2_4
+power VCC,GND
+
+family TTL
+
+vector A_B1_H
+  set OE_N to "00"
+  set S0_1 to "00"
+  set A1   to "1"
+  set A2   to "1"
+  set B1_1 to "1"
+  set B2_1 to "1"
+end vector
+
+vector A_B1_L
+  set OE_N to "00"
+  set S0_1 to "00"
+  set A1   to "0"
+  set A2   to "0"
+  set B1_1 to "0"
+  set B2_1 to "0"
+end vector
+
+vector A_B2_H
+  set OE_N to "00"
+  set S0_1 to "10"
+  set A1   to "1"
+  set A2   to "1"
+  set B1_2 to "1"
+  set B2_2 to "1"
+end vector
+
+vector A_B2_L
+  set OE_N to "00"
+  set S0_1 to "10"
+  set A1   to "0"
+  set A2   to "0"
+  set B1_2 to "0"
+  set B2_2 to "0"
+end vector
+
+vector A_B3_H
+  set OE_N to "00"
+  set S0_1 to "01"
+  set A1   to "1"
+  set A2   to "1"
+  set B1_3 to "1"
+  set B2_3 to "1"
+end vector
+
+vector A_B3_L
+  set OE_N to "00"
+  set S0_1 to "01"
+  set A1   to "0"
+  set A2   to "0"
+  set B1_3 to "0"
+  set B2_3 to "0"
+end vector
+
+vector A_B4_H
+  set OE_N to "00"
+  set S0_1 to "11"
+  set A1   to "1"
+  set A2   to "1"
+  set B1_4 to "1"
+  set B2_4 to "1"
+end vector
+
+vector A_B4_L
+  set OE_N to "00"
+  set S0_1 to "11"
+  set A1   to "0"
+  set A2   to "0"
+  set B1_4 to "0"
+  set B2_4 to "0"
+end vector
+
+unit "test"
+  execute A_B1_H
+  execute A_B1_L
+  execute A_B2_H
+  execute A_B2_L
+  execute A_B3_H
+  execute A_B3_L
+  execute A_B4_H
+  execute A_B4_L
+end unit
+

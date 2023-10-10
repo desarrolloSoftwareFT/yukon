@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600521003  V54c4                                         
+!* 10pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:54 2020
+disconnect all
+connect i to "BMC_SPI1_FPGA_CLK_R"
+connect s to "GND"
+connect gl to "BMC_OBFL_SPI1_CLK"
+capacitor 10p - 45.898p, -53.50, -53.50, fr8192, re5, wb, ar50.0m, sl, comp
+warning "excessive minus tolerance or low limit."
+! "c627" is a commented test.

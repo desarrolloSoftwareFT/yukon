@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175958   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:19 2020
+on failure
+   report parallel devices
+   report "r187 200k"
+end on failure
+disconnect all
+connect s to "UNNAMED_4249_CAP_I45_A"
+connect i to "A3P3V"
+jumper 9.46k, re4, wb, ar100m, op
+! "r184" test.
+off failure

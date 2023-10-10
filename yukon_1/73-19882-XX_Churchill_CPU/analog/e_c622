@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600570907  Va8e9                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:42:00 2020
+disconnect all
+connect s to "GND"
+connect i to "PVCCKRHV_PCH_SS"
+capacitor 560p, 35, 35, fr1024, re5, wb, ar50.0m, comp
+! "e_c622" test.

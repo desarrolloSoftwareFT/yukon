@@ -1,0 +1,389 @@
+=================================================================
+CAD ECO REPORT (VERSION 1.18)
+-----------------------------------------------------------------
+Path        : C:/Agilent_ICT/boards/Churchill/CPU/cad_04_05
+Hpb Old     : board_04n2
+Hpx Old     : board_xy_04n2
+Hpb New     : board_05n1
+Hpx New     : board_xy_05n1
+Reset Value : 3 mil
+By          : kenguyen (Kevin Nguyen)
+Date        : Fri Nov  6 14:47:25 2020
+=================================================================
+
+-----------------------------------------------------------------
+TESTPOINT SUMMARY:
+
+Top Side Testpoint Change     = 11
+   Added                      = 1
+   Removed                    = 0
+   Modified (moved/re-routed) = 10
+Bottom Side Testpoint Change  = 15
+   Added                      = 8
+   Removed                    = 3
+   Modified (moved/re-routed) = 4
+-----------------------------------------------------------------
+ITEM SUMMARY:
+
+1.  COMPONENT ADD                       = 6
+2.  COMPONENT DELETE                    = 4
+3.  NODENAME CHANGE - NEW vs OLD        = 21
+4.  BOARD OUTLINE CHANGE                = No
+5.  BOARD TOOLING CHANGE                = No
+6.  XY-COORD CHANGE                     = 11
+6a. TOP - NEW vs OLD                    = 0
+6b. BOTTOM - NEW vs OLD                 = 11
+7.  NETLIST CHANGE                      = Yes
+7a. NODENAME ADD                        = 27
+7b. NODENAME DELETE                     = 7
+7c. NET CONNECTION CHANGE               = 12
+8.  NET WITH TESTPOINT CHANGE           = 25
+8a. TOP                                 = 11
+8b. BOTTOM                              = 14
+9.  COMPONENT MOVE                      = 15
+9a. TOP COMPONENT MOVE - NEW vs OLD     = 5
+9b. BOTTOM COMPONENT MOVE - NEW vs OLD  = 10
+-----------------------------------------------------------------
+
+DETAILS:
+
+1. COMPONENT ADD (6):
+
+  P6
+  R10
+  R11
+  R12
+  R14
+  R18
+
+2. COMPONENT DELETE (4):
+
+  R35_C
+  R36_C
+  R37_C
+  R38_C
+
+3. NODENAME CHANGE - NEW vs OLD (21):
+
+  DE_NS_STRAP <--> BOARD_ID_SPARE4
+  PMOD_VOA_VSEN_KN_M1 <--> PMOD_VOA_VSENSE_N_M1
+  PMOD_VOA_VSEN_KN_M2 <--> PMOD_VOA_VSENSE_N_M2
+  PMOD_VOA_VSEN_KP_M1 <--> PMOD_VOA_VSENSE_K_M1
+  PMOD_VOA_VSEN_KP_M2 <--> PMOD_VOA_VSENSE_K_M2
+  PMOD_VOB_VSEN_KN_M1 <--> PMOD_VOB_VSENSE_N_M1
+  PMOD_VOB_VSEN_KN_M2 <--> PMOD_VOB_VSENSE_N_M2
+  PMOD_VOB_VSEN_KP_M1 <--> PMOD_VOB_VSENSE_K_M1
+  PMOD_VOB_VSEN_KP_M2 <--> PMOD_VOB_VSENSE_K_M2
+  UNNAMED_1_CAP_I64_B <--> UNNAMED_1_CAP_I17_B
+  UNNAMED_7_CAP_I61_B <--> UNNAMED_7_CAP_I16_B
+  UNNAMED_9_CAP_I61_B <--> UNNAMED_9_CAP_I17_B
+  UNNAMED_13_CAP_I63_B <--> UNNAMED_13_CAP_I17_B
+  UNNAMED_25_RES_I2_A <--> UNNAMED_25_BROADWELLTI536591PLUS1_I32_PMODADDR
+  UNNAMED_88_RES_I106_A <--> UNNAMED_88_RES_I83_A
+  UNNAMED_88_RES_I109_A <--> UNNAMED_88_RES_I85_A
+  UNNAMED_89_RES_I80_A <--> UNNAMED_89_RES_I55_A
+  UNNAMED_89_RES_I81_A <--> UNNAMED_89_RES_I61_A
+  UNNAMED_4246_MT25Q8P_I86_HOLDMDQ3 <--> UNNAMED_4246_RES_I43_B
+  UNNAMED_4253_RES_I80_A <--> UNNAMED_4253_RES_I55_A
+  UNNAMED_4253_RES_I82_A <--> UNNAMED_4253_RES_I61_A
+
+4. BOARD OUTLINE CHANGE:
+
+   Unchanged.
+
+5. BOARD TOOLING CHANGE:
+
+   Unchanged.
+
+6. XY-COORD CHANGE (11):
+
+6a. TOP - NEW vs OLD (0):
+
+
+6b. BOTTOM - NEW vs OLD (11):
+
+  10495,1200 <--> 10500,1195
+  10825,1200 <--> 10800,1195
+  21420,21835 <--> 21450,21835
+  21420,22165 <--> 21450,22165
+  21720,21835 <--> 21750,21835
+  21720,22165 <--> 21750,22165
+  31715,5280 <--> 31690,5270
+  31715,6030 <--> 31690,6020
+  31715,6780 <--> 31690,6770
+  32560,47170 <--> 32560,47200
+  33140,47170 <--> 33140,47200
+
+7. NETLIST CHANGE:
+
+7a. NODENAME ADD (27):
+
+  CPLD_I2C_SCL_R
+  CPLD_I2C_SDA_R
+  CPU_MFG_MODE
+  CPU_MFG_MODE_R
+  NC_U1_P1_NC1_6_M1
+  NC_U1_P1_NC2_31_M1
+  NC_U1_P1_NC3_41_M1
+  NC_U1_P2_NC1_6_M1
+  NC_U1_P2_NC2_31_M1
+  NC_U1_P2_NC3_41_M1
+  NC_U2_NC1_6_M2
+  NC_U2_NC2_31_M2
+  NC_U2_NC3_41_M2
+  NC_U2_P4_NC1_6_M1
+  NC_U2_P4_NC2_31_M1
+  NC_U2_P4_NC3_41_M1
+  NC_U3_NC1_6_M2
+  NC_U3_NC2_31_M2
+  NC_U3_NC3_41_M2
+  NC_U4_NC1_9_M1
+  NC_U4_NC2_35_M1
+  NC_U5_NC1_9_M2
+  NC_U5_NC2_35_M2
+  P3V3_PCH
+  PMB_SPIFLASH_WP_L_R
+  PU_CPU_GPIO55
+  PU_CPU_GPIO55_R
+
+7b. NODENAME DELETE (7):
+
+  CPU_MFG_MODE_C
+  P3V3_PCH_2
+  PCH_LPC_AD0_ST_C
+  PCH_LPC_AD1_ST_C
+  PCH_LPC_AD2_ST_C
+  PCH_LPC_AD3_ST_C
+  PU_CPU_GPIO55_C
+
+7c. NET CONNECTION CHANGE (12):
+
+  "PCH_LPC_LAD<0>"
+    U1_C.AF3  Re-routed from node PCH_LPC_AD0_ST_C
+     R38_C.1  Removed
+
+  "PCH_LPC_LAD<1>"
+    U1_C.AG4  Re-routed from node PCH_LPC_AD1_ST_C
+     R37_C.1  Removed
+
+  "PCH_LPC_LAD<2>"
+    U1_C.AL3  Re-routed from node PCH_LPC_AD2_ST_C
+     R36_C.1  Removed
+
+  "PCH_LPC_LAD<3>"
+    U1_C.AF1  Re-routed from node PCH_LPC_AD3_ST_C
+     R35_C.1  Removed
+
+  A3P3V
+    A_C881.2  Re-routed to node P3V3_PCH
+    A_U149.6  Re-routed to node P3V3_PCH
+     R1165.1  Re-routed to node PMB_SPIFLASH_WP_L_R
+
+  BMC_CONSOLE1_RXD
+      U40.C4  Re-routed to node CPU_MFG_MODE_R
+
+  BMC_CPU_FPGA_SCL
+     U40.U22  Re-routed to node PU_CPU_GPIO55_R
+
+  CPLD_I2C_SCL
+       R18.2 Added
+
+  CPLD_I2C_SDA
+       R14.2 Added
+
+  GND
+     R1165.2  Re-routed from node PMB_SPIFLASH_WP_L
+
+  NC
+  U1_P1_M1.6  Re-routed to node NC_U1_P1_NC1_6_M1
+ U1_P1_M1.31  Re-routed to node NC_U1_P1_NC2_31_M1
+ U1_P1_M1.41  Re-routed to node NC_U1_P1_NC3_41_M1
+  U1_P2_M1.6  Re-routed to node NC_U1_P2_NC1_6_M1
+ U1_P2_M1.31  Re-routed to node NC_U1_P2_NC2_31_M1
+ U1_P2_M1.41  Re-routed to node NC_U1_P2_NC3_41_M1
+     U2_M2.6  Re-routed to node NC_U2_NC1_6_M2
+    U2_M2.31  Re-routed to node NC_U2_NC2_31_M2
+    U2_M2.41  Re-routed to node NC_U2_NC3_41_M2
+  U2_P4_M1.6  Re-routed to node NC_U2_P4_NC1_6_M1
+ U2_P4_M1.31  Re-routed to node NC_U2_P4_NC2_31_M1
+ U2_P4_M1.41  Re-routed to node NC_U2_P4_NC3_41_M1
+     U3_M2.6  Re-routed to node NC_U3_NC1_6_M2
+    U3_M2.31  Re-routed to node NC_U3_NC2_31_M2
+    U3_M2.41  Re-routed to node NC_U3_NC3_41_M2
+     U4_M1.9  Re-routed to node NC_U4_NC1_9_M1
+    U4_M1.35  Re-routed to node NC_U4_NC2_35_M1
+     U5_M2.9  Re-routed to node NC_U5_NC1_9_M2
+    U5_M2.35  Re-routed to node NC_U5_NC2_35_M2
+       U57.1  Re-routed to node CPLD_I2C_SDA_R
+       U57.2  Re-routed to node CPLD_I2C_SCL_R
+
+  PMB_SPIFLASH_WP_L
+        P6.1 Added
+       R10.1 Added
+     R1165.2  Re-routed to node GND
+        U4.3  Re-routed to node PMB_SPIFLASH_WP_L_R
+
+
+8. NET WITH TESTPOINT CHANGE (25):
+
+8a. TOP (11):
+
+  "PCH_LPC_LAD<0>"
+           32600,12290  Re-routed from node/pin PCH_LPC_AD0_ST_C
+
+  "PCH_LPC_LAD<1>"
+           33980,10850  Re-routed from node/pin PCH_LPC_AD1_ST_C
+
+  "PCH_LPC_LAD<2>"
+           33770,11580  Re-routed from node/pin PCH_LPC_AD2_ST_C
+
+  "PCH_LPC_LAD<3>"
+           32220,11090  Re-routed from node/pin PCH_LPC_AD3_ST_C
+
+  BMC_CPU_FPGA_SCL
+            3570,31950 Added
+
+  P3V3_PCH
+            34250,6450  Re-routed from node/pin P3V3_PCH_2
+
+  P3V3_PCH_2
+            34250,6450  Re-routed to node/pin P3V3_PCH
+
+  PCH_LPC_AD0_ST_C
+           32600,12290  Re-routed to node/pin "PCH_LPC_LAD<0>"
+
+  PCH_LPC_AD1_ST_C
+           33980,10850  Re-routed to node/pin "PCH_LPC_LAD<1>"
+
+  PCH_LPC_AD2_ST_C
+           33770,11580  Re-routed to node/pin "PCH_LPC_LAD<2>"
+
+  PCH_LPC_AD3_ST_C
+           32220,11090  Re-routed to node/pin "PCH_LPC_LAD<3>"
+
+
+8b. BOTTOM (14):
+
+  BMC_CONSOLE1_RXD
+             7140,5350 Removed
+
+  BMC_CPU_FPGA_SCL
+           12350,28150 Removed
+
+  CPLD_I2C_SCL
+          -11090,24980 Added
+
+  CPLD_I2C_SCL_R
+          -10400,27570 Added
+
+  CPLD_I2C_SDA_R
+          -10285,26065 Added
+
+  CPU_MFG_MODE
+            38350,8100  Re-routed from node/pin CPU_MFG_MODE_C
+
+  CPU_MFG_MODE_C
+            38350,8100  Re-routed to node/pin CPU_MFG_MODE
+
+  CPU_MFG_MODE_R
+           32220,-2960 Added
+
+  PMB_SPIFLASH_WP_L_R
+           -26810,4100 Added
+
+  PMOD_P3V3_PCH_EN_IN
+            34190,3620 Added
+            33650,4820 Removed
+
+  PU_CPU_GPIO55
+            41150,7450  Re-routed from node/pin PU_CPU_GPIO55_C
+
+  PU_CPU_GPIO55_C
+            41150,7450  Re-routed to node/pin PU_CPU_GPIO55
+
+  PU_CPU_GPIO55_R
+            33930,7080 Added
+
+  VR_SMB_DAT
+           16450,31950 Added
+
+
+9. COMPONENT MOVE (15):
+
+9a. TOP COMPONENT MOVE - NEW vs OLD (5):
+
+  C737
+           -3950,36975 C737.1	           -3950,37015 C737.1
+           -3950,36645 C737.2	           -3950,36685 C737.2
+
+  DMA1_C18
+           -4610,37660 DMA1_C18.1	           -4600,37695 DMA1_C18.1
+           -4610,36460 DMA1_C18.2	           -4600,36495 DMA1_C18.2
+
+  P3
+          -35310,12715 P3.1	          -35054,24726 P3.1
+          -34310,11465 P3.2	          -34054,23476 P3.2
+
+  R943
+            3525,31510 R943.1	            3140,30535 R943.1
+            3855,31510 R943.2	            3140,30865 R943.2
+
+  R1609
+            8915,17060 R1609.1	            8885,17300 R1609.1
+            9245,17060 R1609.2	            9215,17300 R1609.2
+
+
+9b. BOTTOM COMPONENT MOVE - NEW vs OLD (10):
+
+  A_Q28
+            33150,6780 A_Q28.1	            33115,6770 A_Q28.1
+            33150,6280 A_Q28.2	            33115,6270 A_Q28.2
+            33150,5780 A_Q28.3	            33115,5770 A_Q28.3
+            33150,5280 A_Q28.4	            33115,5270 A_Q28.4
+            31690,6020 A_Q28.8	            31690,6020 A_Q28.8
+
+  B_C1350
+           32560,47420 B_C1350.1	           32560,47500 B_C1350.1
+           33140,47420 B_C1350.2	           33140,47500 B_C1350.2
+
+  B_C1356
+           32560,46870 B_C1356.1	           32560,46950 B_C1356.1
+           33140,46870 B_C1356.2	           33140,46950 B_C1356.2
+
+  DMA1_C1
+           -4550,37495 DMA1_C1.1	           -4650,37495 DMA1_C1.1
+           -4550,36295 DMA1_C1.2	           -4650,36295 DMA1_C1.2
+
+  R192
+           21750,21835 R192.1	           21850,21835 R192.1
+           21750,22165 R192.2	           21850,22165 R192.2
+
+  R766
+           -1435,29800 R766.1	           -1235,29800 R766.1
+           -1765,29800 R766.2	           -1565,29800 R766.2
+
+  R1100
+             12155,190 R1100.1	            10900,1195 R1100.1
+             11825,190 R1100.2	             10900,865 R1100.2
+
+  R1107
+             10825,900 R1107.1	            10500,1195 R1107.1
+             10495,900 R1107.2	             10500,865 R1107.2
+
+  R1165
+           -28110,4485 R1165.1	            18700,1385 R1165.1
+           -28110,4815 R1165.2	            18700,1715 R1165.2
+
+  R1372
+           21240,21625 R1372.1	           21450,21835 R1372.1
+           21240,21955 R1372.2	           21450,22165 R1372.2
+
+
+
+END_OF_REPORT
+
+-----------------------------------------------------------
+Cisco ICT Cad ECO Software (Version 1.18) - Copyright
+Run by kenguyen (Kevin Nguyen) at 11/06/2020 14:47:25
+On KENGUYEN-SGL0T
+

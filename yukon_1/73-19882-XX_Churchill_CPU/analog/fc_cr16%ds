@@ -1,0 +1,14 @@
+!!!!    2    0    1 1668541003   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:11 2020
+on failure
+   report parallel devices
+   report "fc_cr16 fc_cr16%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN45_PRSNT_L"
+!zener 4.3, 11.4, 11.4, idc30m, co5.8, ar3.68 ,wa200m
+!zener 4.3, 11.4, 9.23, idc41m, co5.8, ar3.68 ,wa200m
+zener 4.3, 12.5, 25.29, idc39m,  ar1.68,wa300m ,ed, fi5 !!datecode y9
+! "fc_cr16%cr" test.
+off failure

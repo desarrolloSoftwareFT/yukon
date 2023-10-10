@@ -1,0 +1,14 @@
+!!!!    2    0    1 1600513042  V3f27                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:23 2020
+on failure
+report parallel devices
+report "c30 10.0u"
+report "c31 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "VREF_P1V25"
+connect g to "A2_5V"
+!B!resistor 1k, 25, 20, re3, ar100m, wa189m
+resistor 1k,25,20,re3,ar100m,ed
+off failure

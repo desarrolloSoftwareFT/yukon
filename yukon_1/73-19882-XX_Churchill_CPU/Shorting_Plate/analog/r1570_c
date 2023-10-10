@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes LAN_PWRGOOD_1V P-Pin resistance"
+report "check nodes LAN_PWRGOOD_C P-Pin resistance"
+end on failure
+disconnect all
+connect s to "LAN_PWRGOOD_1V"
+connect i to "LAN_PWRGOOD_C"
+resistor 10,20,100, re1, ar100m,ed
+off failure

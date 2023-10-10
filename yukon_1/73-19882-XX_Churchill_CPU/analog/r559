@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176684   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:25 2020
+disconnect all
+connect s to "A2_5V"
+connect i to "ADC0_A2V5_CH7"
+connect g to "GND" 
+resistor 4.64k, 25, 20, re4, wb, ar200m, wa175m

@@ -1,0 +1,15 @@
+!!!!    2    0    1 1651209060   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:58 2020
+on failure
+   report parallel devices
+   report "dma1_r8 2.00k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4238_CAP_I129_A"
+connect gl to "A1_2V" 
+!capacitor 8.2n, 40, 40, fr8192, re4, wb, ar150.0m,  ed, nocomp,sl
+capacitor 8.2n, 40, 40, fr8192, re4, wb, ar150.0m, ed,  nocomp
+warning "excessive minus tolerance or low limit."
+! "dma1_c8" is a commented test.
+off failure

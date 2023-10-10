@@ -1,0 +1,8 @@
+printer is *
+print "Generating report..."
+unlink "tj_missing_adjust.rpt",Err
+execute "awk -f $AGILENT3070_ROOT/util/tj_missing_adjust.awk testjet | tee tj_missing_adjust.rpt";append
+print "Done."
+print "Report is in file 'tj_missing_adjust.rpt'."
+unlink "debug/loaded",Err
+unlink "debug/blank",Err

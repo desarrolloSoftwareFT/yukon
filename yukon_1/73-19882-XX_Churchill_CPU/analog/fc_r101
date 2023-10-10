@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175947   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:08 2020
+disconnect all
+connect i to "IDPROM_FAN_A2"
+connect s to "A3P3V"
+jumper 234, re3, wb, ar500m, op
+! "fc_r101" test.

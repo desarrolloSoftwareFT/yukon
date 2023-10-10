@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175944   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:05 2020
+on failure
+   report parallel devices
+   report "r871_c 10.0k"
+end on failure
+disconnect all
+connect i to "PCH_RSMRST_L"
+connect s to "GND"
+jumper 4.88k, re4, wb, ar200m, op
+! "c1068_c" test.
+off failure

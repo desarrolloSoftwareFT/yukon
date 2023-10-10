@@ -1,0 +1,14 @@
+!!!!    2    0    1 1594176081   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:22 2020
+on failure
+   report parallel devices
+   report "dma1_c13 10.0p"
+   report "dma1_r22 1.65k"
+   report "dma1_r23 2.55k"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "PMOD_A3V3_ISENP_R"
+capacitor 100.01n, 35, 40, fr1024, re2, ar20.0m, nocomp
+! "dma1_c16" test.
+off failure

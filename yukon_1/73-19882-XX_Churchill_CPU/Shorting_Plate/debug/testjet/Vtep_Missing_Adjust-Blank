@@ -1,0 +1,23 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+call Initialize_Board_Constants
+call Initialize_Constants
+report is *
+log level is none
+vtep print level is all
+unpowered
+faon
+printer is "debug/blank"
+call VectorlessTest (Failed_In_VectorlessTest, Mode$ & VectorlessTestMsg$)
+faoff
+printer is *
+vtep print level is none

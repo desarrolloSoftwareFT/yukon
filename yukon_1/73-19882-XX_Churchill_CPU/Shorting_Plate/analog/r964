@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes SRT_CLK100M_I210_PE_DP P-Pin resistance"
+report "check nodes CLK100M_I210_PE_DP P-Pin resistance"
+end on failure
+disconnect all
+connect s to "SRT_CLK100M_I210_PE_DP"
+connect i to "CLK100M_I210_PE_DP"
+resistor 10,20,100, re1, ar100m,ed
+off failure

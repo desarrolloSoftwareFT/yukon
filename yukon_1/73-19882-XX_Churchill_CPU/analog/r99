@@ -1,0 +1,10 @@
+!!!!    2    0    1 1622569712   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_MISO"
+connect i to "SPI_MB_MISO"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+!Nueva verison May 21 
+jumper 5k,re4,ar200m,ed, op
+! "r99" test.

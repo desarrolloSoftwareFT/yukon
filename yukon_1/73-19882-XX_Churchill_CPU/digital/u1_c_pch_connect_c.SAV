@@ -1,0 +1,147 @@
+!!!!   24    0    1 1594176851  V1b23                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:12 2020
+
+connect "u1_c_pch"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm_noidcode", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm_noidcode", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm_noidcode", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "GPIOA0_JTSCAN","GPIOA1_JTSCAN","LAN_PWRGOOD_C"
+  pcf order is nodes "PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "11110110"
+  end pcf
+  end unit
+end disables
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "CPU_GPIO20_SMI_L" hybrid test "u1_c_pch.BR4"
+  node "CPU_PMSYNC_PCH_CPU_C" hybrid test "u1_c_pch.BT9"
+!IPG TAP Conflict:   node "CPU_PWRGD_PCH" hybrid test "u1_c_pch.BU11"
+  node "CPU_SATA0GP_GPIO21" hybrid test "u1_c_pch.BR2"
+  node "CPU_SATA1GP_GPIO19" hybrid test "u1_c_pch.BT3"
+  node "CPU_SATA2GP_GPIO36" hybrid test "u1_c_pch.BT1"
+  node "CPU_SATA3GP_GPIO37" hybrid test "u1_c_pch.BL2"
+  node "CPU_SATA4GP_GPIO16" hybrid test "u1_c_pch.BN2"
+  node "CPU_SATA5GP_GPIO49" hybrid test "u1_c_pch.BM1"
+  node "CPU_SPI_CS1_L_ST_C" hybrid test "u1_c_pch.BT13"
+  node "FM_BDXDE_THERMTRIP_N" hybrid test "u1_c_pch.BJ16"
+  node "FM_CPU2PCH_THROT_LVT3" hybrid test "u1_c_pch.BL22"
+  node "FM_NMI_EVENT_N" hybrid test "u1_c_pch.BP1"
+  node "GP3_CPU_ERR1_3V_L" hybrid test "u1_c_pch.BN22"
+  node "PCH_PLTRST_PROC_L_C" hybrid test "u1_c_pch.BU7"
+  node "PD_CPU_GPIO53_C" hybrid test "u1_c_pch.BT20"
+  node "PD_GPIO52_CPUSV_NC" hybrid test "u1_c_pch.BP16"
+  node "PU_CPU_GPIO51" hybrid test "u1_c_pch.BL18"
+  node "PU_GPIO39_C" hybrid test "u1_c_pch.BU18"
+  node "PU_GPIO48_C" hybrid test "u1_c_pch.BT16"
+  node "PU_GPIO57_C" hybrid test "u1_c_pch.BP9"
+  node "PU_SCLOCK_GPIO22_C" hybrid test "u1_c_pch.BN14"
+  node "PU_SLOAD_GPIO38_C" hybrid test "u1_c_pch.BP13"
+  node "PUD_CPU_NO_REBOOT_C" hybrid test "u1_c_pch.BP20"
+  node "RST_PCH_SYSRST_N" hybrid test "u1_c_pch.BL4"
+  node "SMB0_ALERT_L" hybrid test "u1_c_pch.BL7"
+  node "SMB_HOST_3V3_CLK_R" hybrid test "u1_c_pch.BN11"
+  node "SMB_HOST_3V3_DAT_R" hybrid test "u1_c_pch.BJ13"
+  node "SML0_CLK_BMC_R" hybrid test "u1_c_pch.BR7"
+  node "SML0DATA_BMC" hybrid test "u1_c_pch.BN18"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+  node "CPU_SPI_CS0_L_ST_C" hybrid test "u1_c_pch.BN7" !Not disabled
+  node "PCH_SERIRQ_ST_C" hybrid test "u1_c_pch.BU14" !Not disabled
+  node "SPI_FLSH_MOSI_ST_C" hybrid test "u1_c_pch.BL11" !Not disabled
+  node "SPI_PCH_MISO_C" hybrid test "u1_c_pch.BJ20" !Not disabled
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "CPU_GPIO18"
+
+!IPG: Family information could not be found for node CPU_GPIO20_SMI_L
+!IPG: Family information could not be found for node CPU_PMSYNC_PCH_CPU_C
+!IPG: Family information could not be found for node CPU_PWRGD_PCH
+!IPG: Family information could not be found for node CPU_SATA0GP_GPIO21
+!IPG: Family information could not be found for node CPU_SATA1GP_GPIO19
+!IPG: Family information could not be found for node CPU_SATA2GP_GPIO36
+!IPG: Family information could not be found for node CPU_SATA3GP_GPIO37
+!IPG: Family information could not be found for node CPU_SATA4GP_GPIO16
+!IPG: Family information could not be found for node CPU_SATA5GP_GPIO49
+!IPG: Family information could not be found for node CPU_SPI_CS1_L_ST_C
+!IPG: Family information could not be found for node FM_BDXDE_THERMTRIP_N
+!IPG: Family information could not be found for node FM_CPU2PCH_THROT_LVT3
+!IPG: Family information could not be found for node FM_NMI_EVENT_N
+!IPG: Family information could not be found for node GP3_CPU_ERR1_3V_L
+!IPG: Family information could not be found for node PCH_PLTRST_PROC_L_C
+!IPG: Family information could not be found for node PD_CPU_GPIO53_C
+!IPG: Family information could not be found for node PD_GPIO52_CPUSV_NC
+!IPG: Family information could not be found for node PU_CPU_GPIO51
+!IPG: Family information could not be found for node PU_GPIO39_C
+!IPG: Family information could not be found for node PU_GPIO48_C
+!IPG: Family information could not be found for node PU_GPIO57_C
+!IPG: Family information could not be found for node PU_SCLOCK_GPIO22_C
+!IPG: Family information could not be found for node PU_SLOAD_GPIO38_C
+!IPG: Family information could not be found for node PUD_CPU_NO_REBOOT_C
+!IPG: Family information could not be found for node RST_PCH_SYSRST_N
+!IPG: Family information could not be found for node SMB0_ALERT_L
+!IPG: Family information could not be found for node SMB_HOST_3V3_CLK_R
+!IPG: Family information could not be found for node SMB_HOST_3V3_DAT_R
+!IPG: Family information could not be found for node SML0_CLK_BMC_R
+!IPG: Family information could not be found for node SML0DATA_BMC
+!IPG: Family information could not be found for node CPU_SPI_CS0_L_ST_C
+!IPG: Family information could not be found for node PCH_SERIRQ_ST_C
+!IPG: Family information could not be found for node SPI_FLSH_MOSI_ST_C
+!IPG: Family information could not be found for node SPI_PCH_MISO_C
+end connect
+

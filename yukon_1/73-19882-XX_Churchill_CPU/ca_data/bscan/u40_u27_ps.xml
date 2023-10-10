@@ -1,0 +1,90 @@
+<!-- Created Thu Jul 23 13:29:34 2020 from ITL Source digital/u40_u27_ps -->
+<Test name="u40_u27_ps"><Type>"Boundary-Scan Powered Shorts Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BMC_FAN_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMFPGA_BUF_SPI_FLSH_SEL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="BM_SPI_GOLD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_STD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="JTAG_BDX_TCK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I509_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I520_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_76_LTC2497_I65_SCL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u27"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="R14"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="N11"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="P16"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P14"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="N13"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="R12"><node name="_D_U27_R12" /></Pin>
+<Pin name="R12"><node name="_D_U27_R12" /></Pin>
+<Pin name="C5"><node name="BMC_LED_SB_L<7>" /></Pin>
+<Pin name="C5"><node name="BMC_LED_SB_L<7>" /></Pin>
+<Pin name="D6"><node name="BMC_LED_SB_L<6>" /></Pin>
+<Pin name="D6"><node name="BMC_LED_SB_L<6>" /></Pin>
+<Pin name="B6"><node name="BMC_LED_SB_L<1>" /></Pin>
+<Pin name="B6"><node name="BMC_LED_SB_L<1>" /></Pin>
+<Pin name="G14"><node name="BMC_FPGA_POR_L" /></Pin>
+<Pin name="G14"><node name="BMC_FPGA_POR_L" /></Pin>
+</Device>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="N5"><node name="_D_U40_N5" /></Pin>
+<Pin name="N5"><node name="_D_U40_N5" /></Pin>
+<Pin name="N6"><node name="_D_U40_N6" /></Pin>
+<Pin name="N6"><node name="_D_U40_N6" /></Pin>
+<Pin name="L7"><node name="_D_U40_L7" /></Pin>
+<Pin name="L7"><node name="_D_U40_L7" /></Pin>
+<Pin name="L8"><node name="_D_U40_L8" /></Pin>
+<Pin name="L8"><node name="_D_U40_L8" /></Pin>
+<Pin name="D21"><node name="FPGA_POR_L" /></Pin>
+<Pin name="D21"><node name="FPGA_POR_L" /></Pin>
+</Device>
+<NodePair><Node name="BMC_FPGA_POR_L" /><Node name="BMCFPGA_TP6" /></NodePair>
+<NodePair><Node name="BMC_FPGA_POR_L" /><Node name="X86_BMCFPGA_SDA" /></NodePair>
+<NodePair><Node name="BMC_FPGA_POR_L" /><Node name="BMCFPGA_TP5" /></NodePair>
+<NodePair><Node name="BMC_FPGA_POR_L" /><Node name="P2PM2_BMC_FPGA_CLK1_R" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<1>" /><Node name="BMC_LED_SB_L<0>" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<1>" /><Node name="FPGA_BMC_WDT_2" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<1>" /><Node name="FAN01_PG" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<1>" /><Node name="BMFPGA_TP7" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<6>" /><Node name="FPGA_BMC_WDT_2" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<6>" /><Node name="FAN89_PG" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<7>" /><Node name="BMC_LED_SB_L<0>" /></NodePair>
+<NodePair><Node name="BMC_LED_SB_L<7>" /><Node name="FPGA_BMC_WDT_2" /></NodePair>
+<NodePair><Node name="FPGA_POR_L" /><Node name="PCH_FPGA_PERST_L" /></NodePair>
+<NodePair><Node name="FPGA_POR_L" /><Node name="DRAM_PWR_OK_FPGA_R2" /></NodePair>
+<NodePair><Node name="FPGA_POR_L" /><Node name="FLASH_GOLDEN_N" /></NodePair>
+<NodePair><Node name="_D_U27_R12" /><Node name="BMC_BMCFPGA_SCL_BMC" /></NodePair>
+<NodePair><Node name="_D_U27_R12" /><Node name="BMC_BMCFPGA_SDA_BMC" /></NodePair>
+<NodePair><Node name="_D_U27_R12" /><Node name="FPGA2_SPIFLASH_WP_L" /></NodePair>
+<NodePair><Node name="_D_U27_R12" /><Node name="CPU_JTAG_CABLE_PRSNT_L" /></NodePair>
+<NodePair><Node name="_D_U27_R12" /><Node name="BMFPGA_SPI_BOOT_CS1_L" /></NodePair>
+<NodePair><Node name="_D_U40_L7" /><Node name="FAN2_EEPROM" /></NodePair>
+<NodePair><Node name="_D_U40_L7" /><Node name="CPU_1588_SYNC_MB" /></NodePair>
+<NodePair><Node name="_D_U40_L8" /><Node name="CPLD_HOST_RST_L" /></NodePair>
+<NodePair><Node name="_D_U40_L8" /><Node name="X86_FPGA_MDIO_MUX_SEL1" /></NodePair>
+<NodePair><Node name="_D_U40_N5" /><Node name="FPGA_BMC_LPC_RST_2V5" /></NodePair>
+<NodePair><Node name="_D_U40_N5" /><Node name="FAN67_PWM_CON" /></NodePair>
+<NodePair><Node name="_D_U40_N6" /><Node name="FAN45_PWM_CON" /></NodePair>
+<NodePair><Node name="_D_U40_N6" /><Node name="DIMM_THERM_EVENT_2P5_L" /></NodePair>
+</Test>

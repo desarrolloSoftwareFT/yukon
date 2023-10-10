@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600568016  V93c1                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "CLK_33M_IPU_LPC_ST_C"
+connect i to "CLK_33M_LPC_FPGA"
+connect a to "CLK_33M_IPU_LPC_ST_C"
+connect b to "CLK_33M_LPC_FPGA"
+resistor 22.1, 40, 20, re2, ar500m
+! "r753_c" test.

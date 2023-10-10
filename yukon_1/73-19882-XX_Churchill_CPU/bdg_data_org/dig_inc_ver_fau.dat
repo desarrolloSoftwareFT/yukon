@@ -1,0 +1,1121 @@
+{@BDG_VERIFY_FAULTS|200919204413}
+{@BDG_VERIFY_FAULTS_LOOP|Digital Incircuit Incircuit Verify Faults|1}
+ 5                   6.002               .022 
+ 6                   5.972               .058 
+ 7                   2.42                2.0056 
+ 8                   11.987             -.5259 
+P12V                 11.974  .425 
+P12V_STBY            12.014  .3411 
+
+Verifying faults on pin "a_u139.6" node "XDP_PRESENT_3V3"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "a_u139.7" node "XDP_CPU_TRST_N"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "a_u139.8" node "JTAG_BDX_TRST_N"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "a_u139.9" node "JTAG_TRST_L_BDX_1V05"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "a_u139.14" node "XDP_PRESENT_3V3"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "a_u149.3" node "IRQ_SERIRQ_DATA_R"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 944.8m         :DUT passed :OK
+Setting dl to 104.7m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "a_u149.4" node "SRT_CPU_SERIRQ_DATA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "a_u149.5" node "IRQ_SERIRQ_DIR"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT failed :*** FAIL ***
+
+Verifying faults on pin "fc_u4.1" node "BMC_FAN_I2C_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "fc_u4.2" node "BMC_FAN_I2C_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "fc_u4.3" node "FAN_TEMP_SENSOR_ALERT_L"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "fc_u4.5" node "UNNAMED_133_ADT75_I16_A2"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "fc_u4.6" node "UNNAMED_133_ADT75_I16_A1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "fc_u4.7" node "UNNAMED_133_ADT75_I16_A0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u38.1" node "IDPROM_A0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u38.2" node "IDPROM_A1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u38.3" node "IDPROM_A2"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u38.5" node "CHASSIS_IDPROM_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u38.6" node "CHASSIS_IDPROM_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u38.7" node "CPU_IDPROM_WP"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u43.1" node "JTAG_BMC_FPGA_TDO_R"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u43.3" node "JTAG_CPU_FPGA_TDO"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u43.4" node "SF_JTAG_TDO"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u43.6" node "SEL_FPGA_JTAG"
+Setting driver to "0"        :DUT passed :OK
+Setting driver to "1"        :DUT passed :OK
+Setting driver to "X"        :DUT passed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u49.7" node "CON_TXD_R"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u49.8" node "CON_RXD_R"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 4.501          :DUT passed :OK
+Setting dl to 499.8m         :DUT passed :OK
+
+Verifying faults on pin "u49.9" node "CONSOLE_RXD_DBG_3V3"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u49.10" node "CONSOLE_TXD_DBG_2V5"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 4.501          :DUT passed :OK
+Setting dl to 499.8m         :DUT passed :OK
+
+Verifying faults on pin "u49.13" node "CONSOLE_RXD_DBG_HDR"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 4.501          :DUT passed :OK
+Setting dl to 499.8m         :DUT passed :OK
+
+Verifying faults on pin "u49.14" node "CONSOLE_TXD_DBG_HDR"
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u57.5" node "BMC_I2C1_SDA"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.6" node "BMC_I2C1_SCL"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.7" node "X86_BMCFPGA_SDA"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.8" node "X86_BMCFPGA_SCL"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.10" node "BMC_MB_SDA_R"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.11" node "BMC_MB_SCL_R"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.12" node "BMC_FAN_I2C_SDA_MUX"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.13" node "BMC_FAN_I2C_SCL_MUX"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.14" node "VR_SMB_DAT"
+Setting receiver to "0"      :DUT passed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.15" node "VR_SMB_CLK"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.16" node "CHASSIS_IDPROM_SDA"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.17" node "CHASSIS_IDPROM_SCL"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.18" node "UNNAMED_598_PCA9548A_I494_A2"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u57.19" node "FPGA_MUX_SCLK"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u57.20" node "FPGA_MUX_DATA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u57.22" node "UNNAMED_598_PCA9548A_I494_A0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u57.23" node "UNNAMED_598_PCA9548A_I494_A1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u57.24" node "FPGA_MUX_RST_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.1" node "UNNAMED_59_HDR1X2_I180_A"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.2" node "UNNAMED_59_PI3B3257PG_I152_IA0"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.3" node "LJTAG_TCK_HDR_3V3"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.4" node "LJTAG_TCK_HDR_3V3_MUX"
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u64.5" node "UNNAMED_59_PI3B3257PG_I152_IB0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.6" node "LJTAG_TDI_HDR_3V3"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.7" node "LJTAG_TDI_HDR_3V3_MUX"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u64.9" node "LJTAG_TMS_HDR_3V3_MUX"
+Setting receiver to "0"      :DUT passed :*** FAIL ***
+Setting receiver to "1"      :DUT passed :*** FAIL ***
+Setting receiver to "open"   :DUT passed :*** FAIL ***
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u64.10" node "LJTAG_TMS_HDR_3V3"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.11" node "UNNAMED_59_PI3B3257PG_I152_IC0"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.12" node "LJTAG_TDO_HDR_3V3_MUX"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u64.13" node "LJTAG_TDO_HDR_3V3"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.14" node "UNNAMED_59_PI3B3257PG_I152_ID0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u64.15" node "UNNAMED_59_PI3B3257PG_I152_E"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u66.1" node "UNNAMED_31_IDTQS3VH253_I1_EA"
+Setting driver to "0"        :DUT passed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT passed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u66.2" node "X86_FPGA_MDIO_MUX_SEL1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u66.3" node "X86_FPGA_MDC_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.4" node "BMC_FPGA_MDC_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.5" node "BMCPHY_MDC1"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.6" node "I210_MDC_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.7" node "1G_PHY_MDC"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u66.9" node "1G_PHY_MDIO"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u66.10" node "I210_MDIO_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.11" node "BMCPHY_MDIO1"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.12" node "BMC_FPGA_MDIO_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.13" node "X86_FPGA_MDIO_1G_PHY"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 2.121          :DUT passed :OK
+Setting rl to 680.8m         :DUT passed :OK
+
+Verifying faults on pin "u66.14" node "X86_FPGA_MDIO_MUX_SEL0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u66.15" node "UNNAMED_31_IDTQS3VH253_I1_EB"
+Setting driver to "0"        :DUT passed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT passed :OK
+Setting dh to 2.990          :DUT passed :OK
+Setting dl to 510.4m         :DUT passed :OK
+
+Verifying faults on pin "u69.1" node "BMC_FAN_I2C_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u69.3" node "FC_BMC_FAN_I2C_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u69.4" node "BMC_FAN_I2C_SDA_MUX"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u69.6" node "UNNAMED_598_PI5A3157_I520_S"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u72.1" node "BMC_FAN_I2C_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u72.3" node "FC_BMC_FAN_I2C_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u72.4" node "BMC_FAN_I2C_SCL_MUX"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u72.6" node "UNNAMED_598_PI5A3157_I509_S"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u74.2" node "UNNAMED_76_LTC2497_I65_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT failed :OK
+
+Verifying faults on pin "u74.3" node "UNNAMED_76_LTC2497_I65_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT failed :*** FAIL ***
+Setting dl to 419.1m         :DUT failed :*** FAIL ***
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT failed :*** FAIL ***
+Setting rl to 919.2m         :DUT failed :*** FAIL ***
+
+Verifying faults on pin "u74.36" node "UNNAMED_76_LTC2497_I65_CA0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT failed :OK
+Setting dl to 419.1m         :DUT failed :OK
+
+Verifying faults on pin "u74.37" node "UNNAMED_76_LTC2497_I65_CA1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT failed :OK
+Setting dl to 419.1m         :DUT failed :OK
+
+Verifying faults on pin "u74.38" node "UNNAMED_76_LTC2497_I65_CA2"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT failed :OK
+Setting dl to 419.1m         :DUT failed :OK
+
+Verifying faults on pin "u78.1" node "DAC1_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u78.2" node "DAC1_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u78.9" node "DAC1_A0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u78.11" node "DAC1_A1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u83_c.2" node "I2C_DDR_SCL_ST_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 944.8m         :DUT passed :OK
+Setting dl to 104.7m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u83_c.3" node "I2C_DDR_SDA_ST_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 944.8m         :DUT passed :OK
+Setting dl to 104.7m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u83_c.5" node "I2C_DDR_EN_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.249          :DUT passed :OK
+Setting dl to 249.6m         :DUT passed :OK
+
+Verifying faults on pin "u83_c.6" node "I2C_DDR_2P5V_SDA_ST_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.249          :DUT passed :OK
+Setting dl to 249.6m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.441          :DUT passed :OK
+Setting rl to 959.2m         :DUT passed :OK
+
+Verifying faults on pin "u83_c.7" node "I2C_DDR_2P5V_SCL_ST_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.249          :DUT passed :OK
+Setting dl to 249.6m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.441          :DUT passed :OK
+Setting rl to 959.2m         :DUT passed :OK
+
+Verifying faults on pin "u116.1" node "LED_I210_1000LINK_GREEN_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u116.2" node "LED_I210_100LINK_GREEN_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u116.4" node "LED_I210_LINK_L"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u125_c.1" node "PCH_PLTRST_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u125_c.2" node "FPGA_CPU_SRST_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u125_c.4" node "CPU_RESET_3V_L"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u136_c.1" node "FPGA_CPU_HRST_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u136_c.2" node "C33_CPU_PWRGD_PCH"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u136_c.4" node "PCH_IPU_CPU_PWRGOOD2_3V"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u137_c.1" node "CPU_XDP_PRESENT_L_C"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 944.8m         :DUT passed :OK
+Setting dl to 104.7m         :DUT passed :OK
+
+Verifying faults on pin "u137_c.2" node "PCH_XDP_PRESENT_L"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 944.8m         :DUT passed :OK
+Setting dl to 104.7m         :DUT passed :OK
+
+Verifying faults on pin "u137_c.4" node "XDP_PRESENT_1V"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.049          :DUT passed :OK
+Setting rl to 450.9m         :DUT passed :OK
+
+Verifying faults on pin "u158.1" node "DAC0_SDA"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT failed :*** FAIL ***
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u158.2" node "DAC0_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u158.9" node "DAC0_A0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u158.11" node "DAC0_A1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u46.2" node "ADC_SCL"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u46.3" node "ADC_SDA"
+Setting driver to "0"        :DUT passed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+Setting receiver to "0"      :DUT passed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 1.880          :DUT passed :OK
+Setting rl to 919.2m         :DUT passed :OK
+
+Verifying faults on pin "u46.8" node "UNNAMED_4156_CAP_I169_B"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.9" node "ADC0_1V3_CH0"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.10" node "ADC0_3V3_PCH_CH1"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.11" node "ADC0_3V3_CPU_CH2"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.12" node "ADC0_2V5_VPP_CH3"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.13" node "ADC0_PVCCFUSESUS_CH4"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.15" node "ADC0_A3V3_CH6"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.16" node "ADC0_A2V5_CH7"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.17" node "ADC0_A1V2_CH8"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.18" node "ADC0_P12V_CH9"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.19" node "ADC0_P1V5_CH10"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.20" node "ADC0_0V6_DDR4_CH11"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.21" node "ADC_P5V_CH12"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.22" node "ADC0_0V6_BM_DDR4_CH13"
+Setting driver to "0"        :DUT passed :*** FAIL ***
+Setting driver to "1"        :DUT passed :*** FAIL ***
+Setting driver to "X"        :DUT passed :*** FAIL ***
+Setting dh to 979.8m         :DUT passed :OK
+Setting dl to -779.7m        :DUT passed :OK
+
+Verifying faults on pin "u46.36" node "UNNAMED_4156_LTC2497_I17_CA0"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u46.37" node "UNNAMED_4156_LTC2497_I17_CA1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u46.38" node "UNNAMED_4156_LTC2497_I17_CA2"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u42.3" node "C105_PCH_FPGA_MDIO1"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u42.4" node "C105_PCH_FPGA_MDC1"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u42.5" node "C105_PCH_FPGA_MDIO0"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u42.8" node "C105_PCH_FPGA_MDC0"
+Setting receiver to "0"      :DUT failed :OK
+Setting receiver to "1"      :DUT failed :OK
+Setting receiver to "open"   :DUT failed :OK
+Setting rh to 620.1m         :DUT passed :OK
+Setting rl to 379.2m         :DUT passed :OK
+
+Verifying faults on pin "u42.13" node "SRT_PCH_PHY_10G_MDC"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT passed :OK
+
+Verifying faults on pin "u42.16" node "PCH_PHY_10G_MDIO"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT failed :*** FAIL ***
+
+Verifying faults on pin "u42.17" node "SRT_CPU_1G_MDC"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT failed :*** FAIL ***
+
+Verifying faults on pin "u42.18" node "UNNAMED_4249_LSF0108_I23_B1"
+Setting driver to "0"        :DUT failed :OK
+Setting driver to "1"        :DUT failed :OK
+Setting driver to "X"        :DUT failed :OK
+Setting dh to 2.980          :DUT passed :OK
+Setting dl to 419.1m         :DUT failed :*** FAIL ***
+{@BDG_END}

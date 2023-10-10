@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175991   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:52 2020
+disconnect all
+connect i to "FPGA_STANDBY_TPS_EN"
+connect s to "GND"
+jumper 4.94k, re4, wb, ar200m, op
+! "r1599" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175982   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:43 2020
+disconnect all
+connect s to "FLTR_VP3P3_PCIE_BUF1"
+connect i to "PCIE_BUF_CLKSEL"
+jumper 238, re3, wb, ar500m, op
+! "r1371" test.

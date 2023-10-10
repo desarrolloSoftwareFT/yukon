@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175986   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:47 2020
+disconnect all
+connect i to "JTAG_TCK_PCH_1V05"
+connect s to "GND"
+jumper 1.59k, re4, wb, ar500m, op
+! "r1509_c" test.

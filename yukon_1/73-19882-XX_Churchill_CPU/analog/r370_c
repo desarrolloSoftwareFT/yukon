@@ -1,0 +1,6 @@
+!!!!    2    0    1 1642791154   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:24 2020
+disconnect all
+connect s to "P3V3"
+connect i to "SMB_HOST_3V3_DAT_R"
+resistor 3.8k, 25+5, 20+5, re4, wb, ar200m

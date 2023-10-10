@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175963   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:24 2020
+disconnect all
+connect i to "BMC_GPIOS7_STRAP"
+connect s to "GND"
+jumper 3.16k, re4, wb, ar500m, op
+! "r643" test.

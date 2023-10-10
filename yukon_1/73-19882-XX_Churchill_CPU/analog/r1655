@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175994   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:55 2020
+on failure
+   report parallel devices
+   report "r1658 1.00k"
+end on failure
+disconnect all
+connect i to "UNNAMED_59_PI5A3157_I15_S"
+connect s to "A3P3V"
+jumper 889, re3, wb, ar100m, op
+! "r1655" test.
+off failure

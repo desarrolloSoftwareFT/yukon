@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600592846  V9a46                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:28 2020
+disconnect all
+connect s to "PWR_A3V3_BOOST_R"
+connect i to "PWR_A3V3_A1V2_BST_DR"
+diode 990m, 500m, idc60m, co3.2, ar1.04, ed
+! "dma1_cr2" test.

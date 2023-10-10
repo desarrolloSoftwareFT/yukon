@@ -1,0 +1,944 @@
+!!!!    6    0    1 1600855204  Vca78                                         
+!!!!    6    0    1 1492650027  V3805
+! IPG: rev 08.30p  Sun Feb 12 15:33:26 2017
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:             LTC2497
+! Alias:
+! Part Type:             VLSI
+! Description:           16 Channel 16 Bit ADC, I2C Bus
+! Manufacturer:          Linear Technology
+! Package Style:         39 pin UHF
+! Created:               Oct 26, 2007
+! Programmer:            sama
+! Tester:                HP3070
+! Processor:             VPU
+! Vector Format:         VCL
+! Testjet Testable:      yes
+! JTAG Device:           no
+! Fault coverage:        72%.
+! Pins Not Fully Tested: 35,29,30,25,26,24,27
+! Constraints:           Modify 'sub IC_ADDR' according to logic levels of
+!                        the address pins A2, A1 and A0 (pins 38, 37 and 36
+!                        respectively) during power up.
+!                        Pin 24, MUXOP connects to pins 25, ADCIP.
+!                        Pin 27, MUXON connects to pins 26, ADCIN.
+!                        Pin 29, REFP equals to 1.25V.
+!                        Pin 30, REFN equals to 0.0V (Connects to GND).
+!                        Pin 35, FREQ, connects to GND thru 220 Ohms resistor.
+! Cisco Part #:          15-10559-01
+
+sequential
+
+vector cycle 10u
+receive delay 8u
+
+default device "u74"
+set terminators to on
+assign PAD   to pins *
+assign VDD   to pins *
+assign GND   to pins *,*,*,*,*,*,*
+
+assign NC    to pins *
+assign FREQ  to pins *
+assign REFP  to pins *
+assign REFN  to pins *
+assign ADCIP to pins *
+assign ADCIN to pins *
+assign MUXOP to pins *
+assign MUXON to pins *
+
+assign ADD   to pins 38,37,36  ! A2 = pin 38, A1 = pin 37, A0 = pin 36
+assign SDA   to pins 3
+assign SCL   to pins 2
+assign COM   to pins *
+assign AIN15 to pins *!23
+assign AIN14 to pins 22
+assign AIN13 to pins 21
+assign AIN12 to pins 20
+assign AIN11 to pins 19
+assign AIN10 to pins 18
+assign AIN9  to pins 17
+assign AIN8  to pins 16
+assign AIN7  to pins 15
+assign AIN6  to pins *!14
+assign AIN5  to pins 13
+assign AIN4  to pins 12
+assign AIN3  to pins 11
+assign AIN2  to pins 10
+assign AIN1  to pins 9
+assign AIN0  to pins 8
+
+power   PAD,VDD,GND
+inputs  ADD,COM,SCL
+inputs  AIN15,AIN14,AIN13,AIN12,AIN11
+inputs  AIN10,AIN9,AIN8,AIN7,AIN6
+inputs  AIN5,AIN4,AIN3,AIN2,AIN1
+inputs  AIN0
+bidirectional SDA
+nondigital ADCIP,ADCIN
+nondigital MUXOP,MUXON
+nondigital FREQ,REFN,REFP,NC
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on pins 3  to pull up         ! SDA
+!set ref  on pins 23 to dh 1.2, dl -1.0  ! AIN15  ! Set dh = REF - 0.5V
+set ref  on pins 22 to dh 1.2, dl -1.0  ! AIN14
+set ref  on pins 21 to dh 1.2, dl -1.0  ! AIN13
+set ref  on pins 20 to dh 1.2, dl -1.0  ! AIN12
+set ref  on pins 19 to dh 1.2, dl -1.0  ! AIN11
+set ref  on pins 18 to dh 1.2, dl -1.0  ! AIN10
+set ref  on pins 17 to dh 1.2, dl -1.0  ! AIN9
+set ref  on pins 16 to dh 1.2, dl -1.0  ! AIN8
+set ref  on pins 15 to dh 1.2, dl -1.0  ! AIN7
+!set ref  on pins 14 to dh 1.2, dl -1.0  ! AIN6
+set ref  on pins 13 to dh 1.2, dl -1.0  ! AIN5
+set ref  on pins 12 to dh 1.2, dl -1.0  ! AIN4
+set ref  on pins 11 to dh 1.2, dl -1.0  ! AIN3
+set ref  on pins 10 to dh 1.2, dl -1.0  ! AIN2
+set ref  on pins 9  to dh 1.2, dl -1.0  ! AIN1
+set ref  on pins 8  to dh 1.2, dl -1.0  ! AIN0
+
+
+vector INIT1
+ drive SDA
+ set ADD   to "000"
+ set SDA   to "1"
+ set SCL   to "1"
+ set COM   to "0"
+ set AIN15 to "0"
+ set AIN14 to "0"
+ set AIN13 to "0"
+ set AIN12 to "0"
+ set AIN11 to "0"
+ set AIN10 to "0"
+ set AIN9  to "0"
+ set AIN8  to "0"
+ set AIN7  to "0"
+ set AIN6  to "0"
+ set AIN5  to "0"
+ set AIN4  to "0"
+ set AIN3  to "0"
+ set AIN2  to "0"
+ set AIN1  to "0"
+ set AIN0  to "0"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ADD   to "kkk"
+ set SDA   to "x"
+ set SCL   to "k"
+ set COM   to "k"
+ set AIN15 to "k"
+ set AIN14 to "k"
+ set AIN13 to "k"
+ set AIN12 to "k"
+ set AIN11 to "k"
+ set AIN10 to "k"
+ set AIN9  to "k"
+ set AIN8  to "k"
+ set AIN7  to "k"
+ set AIN6  to "k"
+ set AIN5  to "k"
+ set AIN4  to "k"
+ set AIN3  to "k"
+ set AIN2  to "k"
+ set AIN1  to "k"
+ set AIN0  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ADD   to "kkk"
+ set SDA   to "k"
+ set SCL   to "k"
+ set COM   to "k"
+ set AIN15 to "k"
+ set AIN14 to "k"
+ set AIN13 to "k"
+ set AIN12 to "k"
+ set AIN11 to "k"
+ set AIN10 to "k"
+ set AIN9  to "k"
+ set AIN8  to "k"
+ set AIN7  to "k"
+ set AIN6  to "k"
+ set AIN5  to "k"
+ set AIN4  to "k"
+ set AIN3  to "k"
+ set AIN2  to "k"
+ set AIN1  to "k"
+ set AIN0  to "k"
+end vector
+
+vector ADD_000
+ initialize to KEEP2
+ set ADD  to "000"
+end vector
+
+vector ADD_001
+ initialize to KEEP2
+ set ADD  to "001"
+end vector
+
+vector ADD_010
+ initialize to KEEP2
+ set ADD  to "010"
+end vector
+
+vector ADD_011
+ initialize to KEEP2
+ set ADD  to "011"
+end vector
+
+vector ADD_100
+ initialize to KEEP2
+ set ADD  to "100"
+end vector
+
+vector ADD_101
+ initialize to KEEP2
+ set ADD  to "101"
+end vector
+
+vector ADD_110
+ initialize to KEEP2
+ set ADD  to "110"
+end vector
+
+vector ADD_111
+ initialize to KEEP2
+ set ADD  to "111"
+end vector
+
+vector AIN15_0
+ initialize to KEEP2
+ set AIN15  to "0"
+end vector
+
+vector AIN15_1
+ initialize to KEEP2
+ set AIN15  to "1"
+end vector
+
+vector AIN14_0
+ initialize to KEEP2
+ set AIN14  to "0"
+end vector
+
+vector AIN14_1
+ initialize to KEEP2
+ set AIN14  to "1"
+end vector
+
+vector AIN13_0
+ initialize to KEEP2
+ set AIN13  to "0"
+end vector
+
+vector AIN13_1
+ initialize to KEEP2
+ set AIN13  to "1"
+end vector
+
+vector AIN12_0
+ initialize to KEEP2
+ set AIN12  to "0"
+end vector
+
+vector AIN12_1
+ initialize to KEEP2
+ set AIN12  to "1"
+end vector
+
+vector AIN11_0
+ initialize to KEEP2
+ set AIN11  to "0"
+end vector
+
+vector AIN11_1
+ initialize to KEEP2
+ set AIN11  to "1"
+end vector
+
+vector AIN10_0
+ initialize to KEEP2
+ set AIN10  to "0"
+end vector
+
+vector AIN10_1
+ initialize to KEEP2
+ set AIN10  to "1"
+end vector
+
+vector AIN9_0
+ initialize to KEEP2
+ set AIN9   to "0"
+end vector
+
+vector AIN9_1
+ initialize to KEEP2
+ set AIN9   to "1"
+end vector
+
+vector AIN8_0
+ initialize to KEEP2
+ set AIN8   to "0"
+end vector
+
+vector AIN8_1
+ initialize to KEEP2
+ set AIN8   to "1"
+end vector
+
+vector AIN7_0
+ initialize to KEEP2
+ set AIN7   to "0"
+end vector
+
+vector AIN7_1
+ initialize to KEEP2
+ set AIN7   to "1"
+end vector
+
+vector AIN6_0
+ initialize to KEEP2
+ set AIN6   to "0"
+end vector
+
+vector AIN6_1
+ initialize to KEEP2
+ set AIN6   to "1"
+end vector
+
+vector AIN5_0
+ initialize to KEEP2
+ set AIN5   to "0"
+end vector
+
+vector AIN5_1
+ initialize to KEEP2
+ set AIN5   to "1"
+end vector
+
+vector AIN4_0
+ initialize to KEEP2
+ set AIN4   to "0"
+end vector
+
+vector AIN4_1
+ initialize to KEEP2
+ set AIN4   to "1"
+end vector
+
+vector AIN3_0
+ initialize to KEEP2
+ set AIN3   to "0"
+end vector
+
+vector AIN3_1
+ initialize to KEEP2
+ set AIN3   to "1"
+end vector
+
+vector AIN2_0
+ initialize to KEEP2
+ set AIN2   to "0"
+end vector
+
+vector AIN2_1
+ initialize to KEEP2
+ set AIN2   to "1"
+end vector
+
+vector AIN1_0
+ initialize to KEEP2
+ set AIN1   to "0"
+end vector
+
+vector AIN1_1
+ initialize to KEEP2
+ set AIN1   to "1"
+end vector
+
+vector AIN0_0
+ initialize to KEEP2
+ set AIN0   to "0"
+end vector
+
+vector AIN0_1
+ initialize to KEEP2
+ set AIN0   to "1"
+end vector
+
+! *************************************************************************
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+! *************************************************************************
+
+sub STRT
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+repeat 20 times
+ execute D_1
+ execute D_1
+end repeat
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SK_11
+ execute D7
+ execute SK_10
+ execute SK_11
+ execute D6
+ execute SK_10
+ execute SK_11
+ execute D5
+ execute SK_10
+ execute SK_11
+ execute D4
+ execute SK_10
+ execute SK_11
+ execute D3
+ execute SK_10
+ execute SK_11
+ execute D2
+ execute SK_10
+ execute SK_11
+ execute D1
+ execute SK_10
+ execute SK_11
+ execute D0
+ execute SK_10
+ execute D_0    ! Acknowledge bit
+ execute SK_21
+ execute SK_20
+ execute SK_10
+end sub
+
+sub ADDR(D7,D6,D5,D4,D3,D2,D1)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+end sub
+
+sub IC_ADDR  ! Select only one according to logic levels of address pins
+             ! (A2,A1 and A0) during power up.
+ call STRT
+!call ADDR(D_0,D_0,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 000, 0 = Logic Low
+ call ADDR(D_0,D_0,D_1,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 001, 1 = Logic High
+!call ADDR(D_0,D_0,D_1,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = 00Z, Z = Float
+!call ADDR(D_0,D_1,D_0,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 010
+!call ADDR(D_0,D_1,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 011
+!call ADDR(D_0,D_1,D_0,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = 01Z
+!call ADDR(D_0,D_0,D_1,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = 0Z0
+!call ADDR(D_0,D_1,D_0,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = 0Z1
+!call ADDR(D_0,D_1,D_0,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 0ZZ
+!call ADDR(D_1,D_0,D_1,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 100
+!call ADDR(D_1,D_0,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 101
+!call ADDR(D_1,D_0,D_1,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = 10Z
+!call ADDR(D_1,D_1,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 110
+!call ADDR(D_1,D_1,D_1,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 111
+!call ADDR(D_1,D_1,D_1,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = 11Z
+!call ADDR(D_1,D_1,D_0,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = 1Z0
+!call ADDR(D_1,D_1,D_0,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = 1Z1
+!call ADDR(D_1,D_1,D_0,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 1ZZ
+!call ADDR(D_0,D_1,D_1,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = Z00
+!call ADDR(D_0,D_1,D_1,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = Z01
+!call ADDR(D_0,D_1,D_1,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = Z0Z
+!call ADDR(D_1,D_0,D_0,D_0, D_1,D_1,D_1)  ! A2,A1,A0 = Z10
+!call ADDR(D_1,D_0,D_1,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = Z11
+!call ADDR(D_1,D_0,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = Z1Z
+!call ADDR(D_1,D_0,D_0,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = ZZ0
+!call ADDR(D_1,D_0,D_0,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = ZZ1
+!call ADDR(D_1,D_0,D_0,D_0, D_1,D_0,D_1)  ! A2,A1,A0 = ZZZ
+end sub
+
+sub WR_COMMAND
+ call IC_ADDR
+ execute D_0    ! Write operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub RD_COMMAND
+ call IC_ADDR
+ execute D_1    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+!!@! *************************************************************************
+!!@
+!!@
+!  unit "Pin AIN15 test"
+!   execute INIT1
+!   wait 160m
+!   call WR_COMMAND                            ! Config byte
+!   call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_1,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!   call STOP                                  ! B5=ODD=1, Ch 15
+!   execute AIN15_0
+!   wait 160m
+!   call RD_COMMAND
+!   call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!   call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!   call STOP
+!   execute AIN15_1
+!   wait 160m
+!   call RD_COMMAND
+!   call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!   call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!   call STOP
+!  end unit
+
+!!@unit "Pin AIN14 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_1,D_1,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 14
+!!@ execute AIN14_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN14_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN13 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_1,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 13
+!!@ execute AIN13_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN13_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN12 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_1,D_1,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 12
+!!@ execute AIN12_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN12_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN11 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_0,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 11
+!!@ execute AIN11_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN11_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN10 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_1,D_0,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 10
+!!@ execute AIN10_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN10_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN9 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_0,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 9
+!!@ execute AIN9_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN9_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN8 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_1,D_0,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 8
+!!@ execute AIN8_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN8_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN7 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_0,D_1,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 7
+!!@ execute AIN7_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN7_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN6 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_0,D_1,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 6
+!!@ execute AIN6_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN6_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN5 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_0,D_1,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 5
+!!@ execute AIN5_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN5_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN4 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_0,D_1,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 4
+!!@ execute AIN4_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN4_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN3 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_0,D_0,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 3
+!!@ execute AIN3_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN3_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN2 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_0,D_0,D_1)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 2
+!!@ execute AIN2_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN2_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN1 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_1,D_0,D_0,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 1
+!!@ execute AIN1_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN1_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+!!@
+!!@unit "Pin AIN0 test"
+!!@ execute INIT1
+!!@ wait 160m
+!!@ call WR_COMMAND                            ! Config byte
+!!@ call WR(D_1,D_0,D_1,D_1, D_0,D_0,D_0,D_0)  ! B7-5=101, B6=SGL=1,Single End
+!!@ call STOP                                  ! B5=ODD=1, Ch 0
+!!@ execute AIN0_0
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_1, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@ execute AIN0_1
+!!@ wait 160m
+!!@ call RD_COMMAND
+!!@ call RD(R_X,R_X,R_X,R_0, R_X,R_X,R_X,R_X)
+!!@ call RD(R_X,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!!@ call STOP
+!!@end unit
+
+unit "address000"
+ execute INIT1
+ execute ADD_000
+ wait 160m
+ call STRT
+ call ADDR(D_0,D_0,D_1,D_0, D_1,D_0,D_0)  ! A2,A1,A0 = 000, 0 = Logic Low
+ execute D_0    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+ wait 160m
+ call STOP                                  ! B5=ODD=1, Ch 0
+end unit
+
+unit "address111"
+ execute INIT1
+ execute ADD_111
+ wait 160m
+ call STRT
+ call ADDR(D_1,D_1,D_1,D_0, D_1,D_1,D_0)  ! A2,A1,A0 = 000, 0 = Logic Low
+ execute D_1    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+ call STOP                                  ! B5=ODD=1, Ch 0
+end unit

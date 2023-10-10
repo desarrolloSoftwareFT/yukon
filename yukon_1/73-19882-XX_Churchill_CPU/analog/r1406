@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600997038  V3cea                                         
+!* Removed top probe for JTAG test
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "JTAG_BMC_TCK_R"
+connect i to "BMC_TCK"
+jumper  20.0,  re1, ar200m ,ed
+! "r1406" test.

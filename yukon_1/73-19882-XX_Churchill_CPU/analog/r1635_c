@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175992   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:53 2020
+disconnect all
+connect i to "CLK_100M_CPU_REF_G2_P_C"
+connect s to "GND"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1635_c" test.

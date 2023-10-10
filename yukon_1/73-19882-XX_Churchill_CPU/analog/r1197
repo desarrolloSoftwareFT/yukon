@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175979   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:40 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "UNNAMED_4156_LTC2497_I17_CA2"
+jumper 232, re3, wb, ar500m, op
+! "r1197" test.

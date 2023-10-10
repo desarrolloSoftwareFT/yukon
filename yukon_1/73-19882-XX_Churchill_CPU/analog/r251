@@ -1,0 +1,8 @@
+!!!!    2    0    1 1604685571   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "DRAM_PWR_OK_FPGA_R2"
+connect i to "DRAM_PWR_OK_FPGA"
+!B!jumper  20.0,  re1, ar200m
+jumper 40.0,re1,ar200m,ed
+! "r251" test.

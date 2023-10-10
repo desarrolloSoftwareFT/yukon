@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512903  V3f8c                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "PCH_CONSOLE_TXD1"
+connect i to "PCH_CONSOLE_TXD1_X86FPGA"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r482" test.

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176606   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:07 2020
+disconnect all
+connect s to "GND"
+connect i to "FPGA2_SPIFLASH_CLK"
+resistor 100k, 25, 25, re5, wb, ar100m

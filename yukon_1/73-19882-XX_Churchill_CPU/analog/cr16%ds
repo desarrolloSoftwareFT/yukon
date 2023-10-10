@@ -1,0 +1,12 @@
+!!!!    2    0    1 1611115909   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:04 2020
+on failure
+   report parallel devices
+   report "cr16 cr16%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FC_PWM1011"
+zener 4.3, 11.4, 9.23, idc10m, co5.8, ar3.68 ,wa20m
+! "cr16%cr" test.
+off failure

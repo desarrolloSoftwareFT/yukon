@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175996   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:57 2020
+on failure
+   report parallel devices
+   report "r1672"
+end on failure
+disconnect all
+connect s to "R_BMC_UART5_TX"
+connect i to "BMC_UART5_TX"
+jumper 5.00k, re4, wb, ar200m, op
+! "r1671" test.
+off failure

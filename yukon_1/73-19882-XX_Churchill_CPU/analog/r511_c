@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175961   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:22 2020
+disconnect all
+connect i to "DP_CPU_DDR3_4_STRAP"
+connect s to "GND"
+jumper 3.65k, re4, wb, ar200m, op
+! "r511_c" test.

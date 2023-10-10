@@ -1,0 +1,2288 @@
+------------------------------------------------------------------------------
+AGILENT ICT BOARD PLACEMENT                Thu Jul  9 15:12:59 2020      
+
+C:/Agilent_ICT/boards/FOXCONN/AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+Inserted fixture part number "44200L" into the fixture object file.
+   The fixture part number was selected based on the fixture parameters
+   specified.  If you wish to use an alternative fixture part number, please
+   list the fixture object and replace the fixture part number in the fixture
+   file with one of the other recognized part numbers described in the manual.
+
+Trying to use the placement entered into the board_xy file by the user.
+
+The selected board placement will not be compatible
+   with the automatic board handler.
+ (WARNING BPL44)
+
+The board "A19882-04" was placed at X =  95969, Y = -28627
+  with a rotation of  0.000 degrees.
+
+------------------------------------------------------------------------------
+AGILENT ICT PROBE SELECTION                Thu Jul  9 15:13:03 2020      
+
+C:/Agilent_ICT/boards/FOXCONN/AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+   BOARD A19882-04 PROBE REPORT FOR ALL NODES 
+
+
+   Summary Report 
+
+   Nodes that are inaccessible or need more probes           =  306
+   Maximum probe force density (oz./sq. in.)                 =  348
+   Number of probes exceeding density threshold              = 1238
+   Number of light spring force probes used                  = 2095
+   Number of 50MIL probes used                               = 1067
+   Nodes marked for dual stage probes that could
+      not be assigned dual stage probes                      =    0
+   Number of probes close to the edge of the board
+      for a vacuum fixture                                   =   24
+   Number of probes close to the edge of the board
+      for a mechanical fixture                               =   38
+   Nodes added to the fixture                                = 2085
+   Nodes marked NO_PROBE or NO_ACCESS in board_xy            =    0
+   Alternate probing locations discarded                     =   63
+
+   Pins blocked during this run of Probe Select              =  121
+      Blocked pins actually in the configuration             =  121
+      Blocked pins not in the configuration                  =    0
+------------------------------------------------------------------------------
+AGILENT ICT FIXTURE TOOLING                Thu Jul  9 15:13:43 2020      
+
+C:/Agilent_ICT/boards/FOXCONN/AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+Fixture Tooling has encountered local fixture component files.
+   All subsequent fixture files will be generated based on the values
+   provided. For the values used, refer to the Fixture Tooling section
+   of "fixture/details" file. The physical relationship of these values
+   is NOT judged by the system software.  This is an "override"
+   situation and the user is responsible for the accuracy of all values
+   entered.
+ (WARNING FXT88)
+The scanner interface pin at 116162 is necessary for the board test 
+ but is classified as BLOCKED in the fixture.o file.  The classification is 
+ being changed to OVERRIDE in the fixture.o file to allow this pin to be wired.
+ (WARNING FXT36)
+The scanner interface pin at 114162 is necessary for the board test 
+ but is classified as BLOCKED in the fixture.o file.  The classification is 
+ being changed to OVERRIDE in the fixture.o file to allow this pin to be wired.
+ (WARNING FXT36)
+The scanner interface pin at 21308 is necessary for the board test 
+ but is classified as BLOCKED in the fixture.o file.  The classification is 
+ being changed to OVERRIDE in the fixture.o file to allow this pin to be wired.
+ (WARNING FXT36)
+The scanner interface pin at 21313 is necessary for the board test 
+ but is classified as BLOCKED in the fixture.o file.  The classification is 
+ being changed to OVERRIDE in the fixture.o file to allow this pin to be wired.
+ (WARNING FXT36)
+The node J2001_C_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node J2001_C_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node J2003_C_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node J2003_C_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node J2_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node J2_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node J3_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node J3_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node J8_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node J8_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node MB_SLVR_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node MB_SLVR_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P10_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P10_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P1_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P1_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P2_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P2_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P3_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P3_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P45_50_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P45_50_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P4_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P4_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P5_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P5_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node P9_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node P9_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node SW3_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node SW3_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+The node U36_CA_PRESENCE_SWITCH_PIN_2 appears in the wirelist but not in the fixture description.
+If fixture tooling is run in expert mode the node will be added to the
+fixture.o file with the resource pins but will not have an assigned probe.
+ (WARNING FXT13)
+The node U36_CA_PRESENCE_SWITCH_PIN_2 was added to the fixture description file.
+ (WARNING FXT14)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21312 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21309 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21310 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "External_FAN".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 2 to node "External_FAN". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21306 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21303 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21304 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "P3_3V_CMM".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 1 to node "P3_3V_CMM". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+Fixture Tooling attempted to connect one probe per amp 
+ of current on node "P12V" and failed.  3 more probe(s) would be 
+ required.  If no other warnings are observed, fixture tooling 
+ was able to adequately connect the supply using the available 
+ probes, however, changing probe contact resistance could cause 
+ overdriving digital tests to fail intermittently. (WARNING FXT64)
+Fixture Tooling attempted to connect one probe per amp 
+ of current on node "P12V_STBY" and failed.  2 more probe(s) would be 
+ required.  If no other warnings are observed, fixture tooling 
+ was able to adequately connect the supply using the available 
+ probes, however, changing probe contact resistance could cause 
+ overdriving digital tests to fail intermittently. (WARNING FXT64)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (116162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (114162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+The node '_d_U1_C8' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U1_F7' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U1_F12' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U1_M10' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U1_R8' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U8_D18' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U8_L19' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U27_R12' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U40_L7' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U40_L8' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U40_N5' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node '_d_U40_N6' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BDWL_FPGA_LPC_DRQ0_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BDWL_FPGA_LPC_DRQ1_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BMC_FPGA_POR_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BMC_LED_SB_L<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BMC_LED_SB_L<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BMC_LED_SB_L<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'BMC_NCSI_RXER' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DN<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CLKOUT_PCIE_DP<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_GPIO8_OCS' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_GPIO18' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<8>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<9>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<10>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<11>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<12>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<13>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<14>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_N<15>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<8>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<9>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<10>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<11>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<12>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<13>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<14>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_RX_PCIE_P<15>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<8>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<9>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<10>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<11>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<12>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<13>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<14>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_N<15>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<8>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<9>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<10>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<11>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<12>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<13>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<14>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE1_TX_PCIE_P<15>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_RX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_PE2_TX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_XGE_KR1_N<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_XGE_KR1_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_XGE_KR1_P<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'CPU_XGE_KR1_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CKE2_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CKE3_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CLK1_N_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CLK1_P_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CLK3_N_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CLK3_P_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CS4_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_CS5_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_ODT2_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_A_ODT3_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CKE2_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CKE3_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CLK1_N_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CLK1_P_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CLK3_N_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CLK3_P_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CS4_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_CS5_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_ODT2_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DDR_B_ODT3_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DEDIPROG_PCH_PLTRST_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'DEDIPROG_PRESENT_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'FPGA_POR_L' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_10G_PHY_TX_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_10G_PHY_TX_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_SGMII_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_SGMII_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_SGMII_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_CPU_MRVL_SGMII_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_10G_PHY_AC_RX_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_10G_PHY_AC_RX_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_10G_PHY_RX_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_10G_PHY_RX_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_SGMII_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_SGMII_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_SGMII_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_MRVL_CPU_SGMII_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_BMCFPGA_CPU_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_BMCFPGA_CPU_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_BMCFPGA_CPU_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_BMCFPGA_CPU_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_BMCFPGA_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_BMCFPGA_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_BMCFPGA_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_BMCFPGA_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_IOFPGA_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_IOFPGA_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_IOFPGA_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_IOFPGA_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_FPGA_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_FPGA_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_FPGA_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_FPGA_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_SPARE0_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_SPARE0_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_SPARE0_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_MB_SPARE0_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_NIC_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_NIC_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_NIC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_NIC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN0_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN0_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN0_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN0_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN1_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN1_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN1_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_CPU_PAC_LN1_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_IOFPGA_CPU_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_IOFPGA_CPU_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_IOFPGA_CPU_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_IOFPGA_CPU_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_MB_FPGA_CPU_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_MB_FPGA_CPU_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_MB_SPARE0_CPU_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_MB_SPARE0_CPU_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_NIC_CPU_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_NIC_CPU_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_PAC_CPU_LN0_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_PAC_CPU_LN0_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_PAC_CPU_LN1_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_PCIE_PAC_CPU_LN1_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_RX_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_RX_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_RX_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_RX_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_TX_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_TX_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_TX_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SATA_GEN3_P0_TX_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_CPU_MB_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_CPU_MB_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_CPU_MB_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_CPU_MB_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_MB_CPU_AC_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_MB_CPU_AC_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_MB_CPU_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'HSD_SGMII_MB_CPU_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_BA1' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_CK_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_CK_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DM0' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DM1' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<8>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<9>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<10>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<11>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<12>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<13>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<14>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQ<15>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQS_0_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQS_0_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQS_1_DN' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_DQS_1_DP' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_MA<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_MA<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_MA<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_ODT' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'MEM_DDR4_RESET' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'NC_SPARE_PLTRST_1V_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_RX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_N<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<4>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<5>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<6>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PCH_PORT_TX_PCIE_P<7>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PMOD_A1V2_TRIM' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PMOD_A2V5_TRIM' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PMOD_A3V3_TRIM' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PMOD_P1V2_VDDQ_VSENSE_P' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'PMOD_P1V05_COMBINED_VSENSE_P' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'SPARE_CPU_SLP_SUS_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'SPARE_LVTR_1V_IN_1' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'SPARE_LVTR_3V_OUT_1' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'SPARE_PCH_IPU_SLP_A_L_C' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB2_D_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB2_D_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_N<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_P<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_RX_D_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_N<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_N<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_N<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_P<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_P<2>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'USB3_TX_D_P<3>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'VP3P3_SATA_VSENSE_P' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'XGE_CPU_KR1_N<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'XGE_CPU_KR1_N<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'XGE_CPU_KR1_P<0>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+The node 'XGE_CPU_KR1_P<1>' is being removed from the fixture 
+ since it is inaccessible, has no test resources assigned to it or both.
+ (WARNING FXT40)
+Fixture Type : Agilent SimPlate Express
+Fixture Size : Full
+Fixture Part Number : 44200L
+Top Probes Allowed : Enabled
+Autofile : 3296
+Units : English
+Wiring Method : Automatic
+-----------------------------------------------------------------------------
+Count
+-----
+    2  Probes    Type:  75 mil  Spring Force Max.: 8 oz
+ 1067  Probes    Type:  50 mil  Spring Force Max.: 4 oz
+  450  Probes    Type:  75 mil  Spring Force Max.: 4 oz
+   86  Probes    Type: 100 mil  Spring Force Max.: 8 oz
+  578  Probes    Type: 100 mil  Spring Force Max.: 4 oz
+   89  Extra Probes Type:  50 mil
+  246  Extra Probes Type:  75 mil
+  111  Extra Probes Type: 100 mil
+   63  Probe :  Testjets         Using Keepout Method
+    4  Offset Pins
+ 3128  Pins
+  349  Extra Pins
+    2  TestJet MUX Cards 
+   33  Hybrid Cards
+  207  Transfer Probes
+  207  Transfer Pins
+   68  Extra Transfer Probes
+
+Count  Color  Gauge  Length 
+------|------|-----|---------
+    2  Black   30     6.5 in
+    1  Black   30     7.0 in
+    2  Black   30     7.5 in
+    1  Black   30    10.0 in
+-----------------------------
+    6  Black   30    45.0 in
+
+   74  Black   28     1.0 in
+   29  Black   28     1.5 in
+   20  Black   28     2.0 in
+   24  Black   28     2.5 in
+   15  Black   28     3.0 in
+   26  Black   28     3.5 in
+   31  Black   28     4.0 in
+   40  Black   28     4.5 in
+   23  Black   28     5.0 in
+   17  Black   28     5.5 in
+   14  Black   28     6.0 in
+   14  Black   28     6.5 in
+   19  Black   28     7.0 in
+   26  Black   28     7.5 in
+   18  Black   28     8.0 in
+   16  Black   28     9.0 in
+   15  Black   28    10.0 in
+   15  Black   28    11.0 in
+   13  Black   28    12.0 in
+    2  Black   28    13.0 in
+    1  Black   28    14.0 in
+-----------------------------
+  452  Black   28  2168.0 in
+
+   73   Blue   30     1.0 in
+   23   Blue   30     1.5 in
+   25   Blue   30     2.0 in
+   39   Blue   30     2.5 in
+   43   Blue   30     3.0 in
+   62   Blue   30     3.5 in
+   84   Blue   30     4.0 in
+   88   Blue   30     4.5 in
+   80   Blue   30     5.0 in
+   99   Blue   30     5.5 in
+   77   Blue   30     6.0 in
+   78   Blue   30     6.5 in
+   53   Blue   30     7.0 in
+   54   Blue   30     7.5 in
+   45   Blue   30     8.0 in
+   63   Blue   30     9.0 in
+   43   Blue   30    10.0 in
+   13   Blue   30    11.0 in
+   11   Blue   30    12.0 in
+    7   Blue   30    13.0 in
+    1   Blue   30    14.0 in
+-----------------------------
+ 1061   Blue   30  5759.5 in
+
+   16   Blue   28     0.0 in
+  318   Blue   28     1.0 in
+   94   Blue   28     1.5 in
+  123   Blue   28     2.0 in
+  141   Blue   28     2.5 in
+  117   Blue   28     3.0 in
+  119   Blue   28     3.5 in
+  103   Blue   28     4.0 in
+  106   Blue   28     4.5 in
+   77   Blue   28     5.0 in
+   70   Blue   28     5.5 in
+   63   Blue   28     6.0 in
+   58   Blue   28     6.5 in
+   37   Blue   28     7.0 in
+   59   Blue   28     7.5 in
+   35   Blue   28     8.0 in
+   62   Blue   28     9.0 in
+   74   Blue   28    10.0 in
+   32   Blue   28    11.0 in
+   24   Blue   28    12.0 in
+   15   Blue   28    13.0 in
+   11   Blue   28    14.0 in
+    6   Blue   28    15.0 in
+   10   Blue   28    16.0 in
+    4   Blue   28    17.0 in
+   13   Blue   28    18.0 in
+    6   Blue   28    19.0 in
+-----------------------------
+ 1793   Blue   28  8173.5 in
+
+    5   Red    28     2.0 in
+    5   Red    28     2.5 in
+    1   Red    28     3.0 in
+    1   Red    28     4.5 in
+    1   Red    28     6.5 in
+    2   Red    28     7.5 in
+    7   Red    28     8.0 in
+    1   Red    28     9.0 in
+    7   Red    28    11.0 in
+-----------------------------
+   30   Red    28   193.5 in
+
+=============================
+ 3342              16339.5 in Total
+
+
+see files: wires, inserts, trace, drill, drillsup, drilltop, details
+------------------------------------------------------------------------------
+AGILENT ICT FIXTURE TOOLING                Thu Jul 23 10:54:43 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+Fixture Tooling has encountered local fixture component files.
+   All subsequent fixture files will be generated based on the values
+   provided. For the values used, refer to the Fixture Tooling section
+   of "fixture/details" file. The physical relationship of these values
+   is NOT judged by the system software.  This is an "override"
+   situation and the user is responsible for the accuracy of all values
+   entered.
+ (WARNING FXT88)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21312 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21309 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21310 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "External_FAN".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 2 to node "External_FAN". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21306 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21303 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21304 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "P3_3V_CMM".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 1 to node "P3_3V_CMM". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (116162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (114162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (116162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (114162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Fixture Type : Agilent SimPlate Express
+Fixture Size : Full
+Fixture Part Number : 44200L
+Top Probes Allowed : Enabled
+Autofile : 3296
+Units : English
+Wiring Method : Automatic
+-----------------------------------------------------------------------------
+Count
+-----
+    2  Probes    Type:  75 mil  Spring Force Max.: 8 oz
+ 1067  Probes    Type:  50 mil  Spring Force Max.: 4 oz
+  450  Probes    Type:  75 mil  Spring Force Max.: 4 oz
+   86  Probes    Type: 100 mil  Spring Force Max.: 8 oz
+  578  Probes    Type: 100 mil  Spring Force Max.: 4 oz
+   89  Extra Probes Type:  50 mil
+  246  Extra Probes Type:  75 mil
+  111  Extra Probes Type: 100 mil
+   63  Probe :  Testjets         Using Keepout Method
+    4  Offset Pins
+ 3121  Pins
+  367  Extra Pins
+    2  TestJet MUX Cards 
+   33  Hybrid Cards
+  207  Transfer Probes
+  207  Transfer Pins
+   68  Extra Transfer Probes
+
+Count  Color  Gauge  Length 
+------|------|-----|---------
+    2  Black   30     6.5 in
+    1  Black   30     7.0 in
+    2  Black   30     7.5 in
+    1  Black   30    10.0 in
+-----------------------------
+    6  Black   30    45.0 in
+
+   74  Black   28     1.0 in
+   29  Black   28     1.5 in
+   20  Black   28     2.0 in
+   24  Black   28     2.5 in
+   15  Black   28     3.0 in
+   26  Black   28     3.5 in
+   31  Black   28     4.0 in
+   40  Black   28     4.5 in
+   23  Black   28     5.0 in
+   17  Black   28     5.5 in
+   14  Black   28     6.0 in
+   14  Black   28     6.5 in
+   19  Black   28     7.0 in
+   26  Black   28     7.5 in
+   18  Black   28     8.0 in
+   16  Black   28     9.0 in
+   15  Black   28    10.0 in
+   15  Black   28    11.0 in
+   13  Black   28    12.0 in
+    2  Black   28    13.0 in
+    1  Black   28    14.0 in
+-----------------------------
+  452  Black   28  2168.0 in
+
+   73   Blue   30     1.0 in
+   23   Blue   30     1.5 in
+   25   Blue   30     2.0 in
+   39   Blue   30     2.5 in
+   43   Blue   30     3.0 in
+   62   Blue   30     3.5 in
+   84   Blue   30     4.0 in
+   88   Blue   30     4.5 in
+   80   Blue   30     5.0 in
+   99   Blue   30     5.5 in
+   77   Blue   30     6.0 in
+   78   Blue   30     6.5 in
+   53   Blue   30     7.0 in
+   54   Blue   30     7.5 in
+   45   Blue   30     8.0 in
+   63   Blue   30     9.0 in
+   43   Blue   30    10.0 in
+   13   Blue   30    11.0 in
+   11   Blue   30    12.0 in
+    7   Blue   30    13.0 in
+    1   Blue   30    14.0 in
+-----------------------------
+ 1061   Blue   30  5759.5 in
+
+   16   Blue   28     0.0 in
+  321   Blue   28     1.0 in
+   94   Blue   28     1.5 in
+  123   Blue   28     2.0 in
+  141   Blue   28     2.5 in
+  117   Blue   28     3.0 in
+  119   Blue   28     3.5 in
+  103   Blue   28     4.0 in
+  106   Blue   28     4.5 in
+   77   Blue   28     5.0 in
+   70   Blue   28     5.5 in
+   63   Blue   28     6.0 in
+   58   Blue   28     6.5 in
+   37   Blue   28     7.0 in
+   59   Blue   28     7.5 in
+   35   Blue   28     8.0 in
+   62   Blue   28     9.0 in
+   74   Blue   28    10.0 in
+   32   Blue   28    11.0 in
+   24   Blue   28    12.0 in
+   15   Blue   28    13.0 in
+   11   Blue   28    14.0 in
+    6   Blue   28    15.0 in
+   10   Blue   28    16.0 in
+    4   Blue   28    17.0 in
+   13   Blue   28    18.0 in
+    6   Blue   28    19.0 in
+-----------------------------
+ 1796   Blue   28  8176.5 in
+
+    5   Red    28     2.0 in
+    5   Red    28     2.5 in
+    1   Red    28     3.0 in
+    1   Red    28     4.5 in
+    1   Red    28     6.5 in
+    2   Red    28     7.5 in
+    7   Red    28     8.0 in
+    1   Red    28     9.0 in
+    7   Red    28    11.0 in
+-----------------------------
+   30   Red    28   193.5 in
+
+=============================
+ 3345              16342.5 in Total
+
+
+see files: wires, inserts, trace, drill, drillsup, drilltop, details
+Incremental wiring differences have been noted.
+ See the fixture/details report for specific wires to add and/or delete.
+ (WARNING FXT45)
+------------------------------------------------------------------------------
+AGILENT ICT FIXTURE TOOLING                Thu Jul 23 10:57:39 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+Fixture Tooling has encountered local fixture component files.
+   All subsequent fixture files will be generated based on the values
+   provided. For the values used, refer to the Fixture Tooling section
+   of "fixture/details" file. The physical relationship of these values
+   is NOT judged by the system software.  This is an "override"
+   situation and the user is responsible for the accuracy of all values
+   entered.
+ (WARNING FXT88)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21312 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21309 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21310 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "External_FAN".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 2 to node "External_FAN". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21306 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21303 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21304 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "P3_3V_CMM".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 1 to node "P3_3V_CMM". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (116162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (114162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Fixture Type : Agilent SimPlate Express
+Fixture Size : Full
+Fixture Part Number : 44200L
+Top Probes Allowed : Enabled
+Autofile : 3296
+Units : English
+Wiring Method : Automatic
+-----------------------------------------------------------------------------
+Count
+-----
+    2  Probes    Type:  75 mil  Spring Force Max.: 8 oz
+ 1067  Probes    Type:  50 mil  Spring Force Max.: 4 oz
+  450  Probes    Type:  75 mil  Spring Force Max.: 4 oz
+   86  Probes    Type: 100 mil  Spring Force Max.: 8 oz
+  578  Probes    Type: 100 mil  Spring Force Max.: 4 oz
+   89  Extra Probes Type:  50 mil
+  246  Extra Probes Type:  75 mil
+  111  Extra Probes Type: 100 mil
+   63  Probe :  Testjets         Using Keepout Method
+    4  Offset Pins
+ 3121  Pins
+  367  Extra Pins
+    2  TestJet MUX Cards 
+   33  Hybrid Cards
+  207  Transfer Probes
+  207  Transfer Pins
+   68  Extra Transfer Probes
+
+Count  Color  Gauge  Length 
+------|------|-----|---------
+    2  Black   30     6.5 in
+    1  Black   30     7.0 in
+    2  Black   30     7.5 in
+    1  Black   30    10.0 in
+-----------------------------
+    6  Black   30    45.0 in
+
+   74  Black   28     1.0 in
+   29  Black   28     1.5 in
+   20  Black   28     2.0 in
+   24  Black   28     2.5 in
+   15  Black   28     3.0 in
+   26  Black   28     3.5 in
+   31  Black   28     4.0 in
+   40  Black   28     4.5 in
+   23  Black   28     5.0 in
+   17  Black   28     5.5 in
+   14  Black   28     6.0 in
+   14  Black   28     6.5 in
+   19  Black   28     7.0 in
+   26  Black   28     7.5 in
+   18  Black   28     8.0 in
+   16  Black   28     9.0 in
+   15  Black   28    10.0 in
+   15  Black   28    11.0 in
+   13  Black   28    12.0 in
+    2  Black   28    13.0 in
+    1  Black   28    14.0 in
+-----------------------------
+  452  Black   28  2168.0 in
+
+   73   Blue   30     1.0 in
+   23   Blue   30     1.5 in
+   25   Blue   30     2.0 in
+   39   Blue   30     2.5 in
+   43   Blue   30     3.0 in
+   62   Blue   30     3.5 in
+   84   Blue   30     4.0 in
+   88   Blue   30     4.5 in
+   80   Blue   30     5.0 in
+   99   Blue   30     5.5 in
+   77   Blue   30     6.0 in
+   78   Blue   30     6.5 in
+   53   Blue   30     7.0 in
+   54   Blue   30     7.5 in
+   45   Blue   30     8.0 in
+   63   Blue   30     9.0 in
+   43   Blue   30    10.0 in
+   13   Blue   30    11.0 in
+   11   Blue   30    12.0 in
+    7   Blue   30    13.0 in
+    1   Blue   30    14.0 in
+-----------------------------
+ 1061   Blue   30  5759.5 in
+
+   16   Blue   28     0.0 in
+  321   Blue   28     1.0 in
+   94   Blue   28     1.5 in
+  123   Blue   28     2.0 in
+  141   Blue   28     2.5 in
+  117   Blue   28     3.0 in
+  119   Blue   28     3.5 in
+  103   Blue   28     4.0 in
+  106   Blue   28     4.5 in
+   77   Blue   28     5.0 in
+   70   Blue   28     5.5 in
+   63   Blue   28     6.0 in
+   60   Blue   28     6.5 in
+   37   Blue   28     7.0 in
+   59   Blue   28     7.5 in
+   35   Blue   28     8.0 in
+   62   Blue   28     9.0 in
+   74   Blue   28    10.0 in
+   32   Blue   28    11.0 in
+   24   Blue   28    12.0 in
+   15   Blue   28    13.0 in
+   11   Blue   28    14.0 in
+    6   Blue   28    15.0 in
+   10   Blue   28    16.0 in
+    4   Blue   28    17.0 in
+   13   Blue   28    18.0 in
+    6   Blue   28    19.0 in
+-----------------------------
+ 1798   Blue   28  8189.5 in
+
+    5   Red    28     2.0 in
+    5   Red    28     2.5 in
+    1   Red    28     3.0 in
+    1   Red    28     4.5 in
+    1   Red    28     6.5 in
+    2   Red    28     7.5 in
+    7   Red    28     8.0 in
+    1   Red    28     9.0 in
+    7   Red    28    11.0 in
+-----------------------------
+   30   Red    28   193.5 in
+
+=============================
+ 3347              16355.5 in Total
+
+
+see files: wires, inserts, trace, drill, drillsup, drilltop, details
+Incremental wiring differences have been noted.
+ See the fixture/details report for specific wires to add and/or delete.
+ (WARNING FXT45)
+------------------------------------------------------------------------------
+AGILENT ICT FIXTURE TOOLING                Thu Jul 23 10:58:25 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+Fixture Tooling has encountered local fixture component files.
+   All subsequent fixture files will be generated based on the values
+   provided. For the values used, refer to the Fixture Tooling section
+   of "fixture/details" file. The physical relationship of these values
+   is NOT judged by the system software.  This is an "override"
+   situation and the user is responsible for the accuracy of all values
+   entered.
+ (WARNING FXT88)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21312 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21309 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21310 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "External_FAN".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 2 to node "External_FAN". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21306 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21303 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21304 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "P3_3V_CMM".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 1 to node "P3_3V_CMM". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (116162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Automatic generation of the location for the downward facing pin to support 
+ an offset pin assignment for brc (114162) was not successful.
+ The offset pin's downward facing portion will have to be manually located.
+ (WARNING FXT46)
+Fixture Type : Agilent SimPlate Express
+Fixture Size : Full
+Fixture Part Number : 44200L
+Top Probes Allowed : Enabled
+Autofile : 3296
+Units : English
+Wiring Method : Automatic
+-----------------------------------------------------------------------------
+Count
+-----
+    2  Probes    Type:  75 mil  Spring Force Max.: 8 oz
+ 1067  Probes    Type:  50 mil  Spring Force Max.: 4 oz
+  450  Probes    Type:  75 mil  Spring Force Max.: 4 oz
+   86  Probes    Type: 100 mil  Spring Force Max.: 8 oz
+  578  Probes    Type: 100 mil  Spring Force Max.: 4 oz
+   89  Extra Probes Type:  50 mil
+  246  Extra Probes Type:  75 mil
+  111  Extra Probes Type: 100 mil
+   63  Probe :  Testjets         Using Keepout Method
+    4  Offset Pins
+ 3121  Pins
+  367  Extra Pins
+    2  TestJet MUX Cards 
+   33  Hybrid Cards
+  207  Transfer Probes
+  207  Transfer Pins
+   68  Extra Transfer Probes
+
+Count  Color  Gauge  Length 
+------|------|-----|---------
+    2  Black   30     6.5 in
+    1  Black   30     7.0 in
+    2  Black   30     7.5 in
+    1  Black   30    10.0 in
+-----------------------------
+    6  Black   30    45.0 in
+
+   74  Black   28     1.0 in
+   29  Black   28     1.5 in
+   20  Black   28     2.0 in
+   24  Black   28     2.5 in
+   15  Black   28     3.0 in
+   26  Black   28     3.5 in
+   31  Black   28     4.0 in
+   40  Black   28     4.5 in
+   23  Black   28     5.0 in
+   17  Black   28     5.5 in
+   14  Black   28     6.0 in
+   14  Black   28     6.5 in
+   19  Black   28     7.0 in
+   26  Black   28     7.5 in
+   18  Black   28     8.0 in
+   16  Black   28     9.0 in
+   15  Black   28    10.0 in
+   15  Black   28    11.0 in
+   13  Black   28    12.0 in
+    2  Black   28    13.0 in
+    1  Black   28    14.0 in
+-----------------------------
+  452  Black   28  2168.0 in
+
+   73   Blue   30     1.0 in
+   23   Blue   30     1.5 in
+   25   Blue   30     2.0 in
+   39   Blue   30     2.5 in
+   43   Blue   30     3.0 in
+   62   Blue   30     3.5 in
+   84   Blue   30     4.0 in
+   88   Blue   30     4.5 in
+   80   Blue   30     5.0 in
+   99   Blue   30     5.5 in
+   77   Blue   30     6.0 in
+   78   Blue   30     6.5 in
+   53   Blue   30     7.0 in
+   54   Blue   30     7.5 in
+   45   Blue   30     8.0 in
+   63   Blue   30     9.0 in
+   43   Blue   30    10.0 in
+   13   Blue   30    11.0 in
+   11   Blue   30    12.0 in
+    7   Blue   30    13.0 in
+    1   Blue   30    14.0 in
+-----------------------------
+ 1061   Blue   30  5759.5 in
+
+   16   Blue   28     0.0 in
+  321   Blue   28     1.0 in
+   94   Blue   28     1.5 in
+  123   Blue   28     2.0 in
+  141   Blue   28     2.5 in
+  117   Blue   28     3.0 in
+  119   Blue   28     3.5 in
+  103   Blue   28     4.0 in
+  106   Blue   28     4.5 in
+   77   Blue   28     5.0 in
+   70   Blue   28     5.5 in
+   63   Blue   28     6.0 in
+   60   Blue   28     6.5 in
+   37   Blue   28     7.0 in
+   59   Blue   28     7.5 in
+   35   Blue   28     8.0 in
+   62   Blue   28     9.0 in
+   74   Blue   28    10.0 in
+   32   Blue   28    11.0 in
+   24   Blue   28    12.0 in
+   15   Blue   28    13.0 in
+   11   Blue   28    14.0 in
+    6   Blue   28    15.0 in
+   10   Blue   28    16.0 in
+    4   Blue   28    17.0 in
+   13   Blue   28    18.0 in
+    6   Blue   28    19.0 in
+-----------------------------
+ 1798   Blue   28  8189.5 in
+
+    5   Red    28     2.0 in
+    5   Red    28     2.5 in
+    1   Red    28     3.0 in
+    1   Red    28     4.5 in
+    1   Red    28     6.5 in
+    2   Red    28     7.5 in
+    7   Red    28     8.0 in
+    1   Red    28     9.0 in
+    7   Red    28    11.0 in
+-----------------------------
+   30   Red    28   193.5 in
+
+=============================
+ 3347              16355.5 in Total
+
+
+see files: wires, inserts, trace, drill, drillsup, drilltop, details
+------------------------------------------------------------------------------
+AGILENT ICT MODULE PIN ASSIGNMENT          Fri Aug 14 18:13:36 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+     Module Pin Assignment was run at the expert experience level.
+ 
+     The assignment was restricted to drilled personality pin locations.
+ 
+Remote sense measurement for Node FAN01_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN01_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN1011_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN1011_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN23_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN23_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN45_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN45_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN67_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN67_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN89_EN on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node FAN89_PWM_PWR on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node PMOD_P3V3_PCH_EN_R on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Remote sense measurement for Node UNNAMED_46_NMOSFET_I92_D_C on Board A19882-04 
+would be improved with a second probe.  Only one probe for this 
+node was found in the fixture. Two probes are required to separate 
+signal from sense. (WARNING MPA425)
+
+Node External_FAN on board A19882-04 is in the fixture file 
+fixture/fixture.o.  However, it is not in any requirements file, and it 
+is not in the old wirelist.  No wires are being generated for this node. 
+Check the fixture file, the old wirelist, and the test sources to make sure 
+that the node names are correct.  Make sure that the appropriate .r files 
+exist. (WARNING MPA404)
+
+Node P3_3V_CMM on board A19882-04 is in the fixture file 
+fixture/fixture.o.  However, it is not in any requirements file, and it 
+is not in the old wirelist.  No wires are being generated for this node. 
+Check the fixture file, the old wirelist, and the test sources to make sure 
+that the node names are correct.  Make sure that the appropriate .r files 
+exist. (WARNING MPA404)
+
+------------------------------------------------------------------------------
+AGILENT ICT MODULE PIN ASSIGNMENT          Fri Aug 14 18:13:36 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+                      ASSIGNMENT REPORT FOR ALL BOARDS
+ 
+     SUMMARY STATISTICS
+ 
+        For precision nodes:
+ 
+            The average BRC to probe distance is 3.418.
+            The standard deviation is 2.252.
+ 
+            * precision nodes include critical nodes, digital 
+              nodes, and analog nodes using external 
+              instrumentation or the time interval counter
+ 
+        For all nodes:
+ 
+            The assignment used 2677 interface pins for 2103 nodes.
+            The efficiency is 0.786.
+------------------------------------------------------------------------------
+AGILENT ICT FIXTURE TOOLING                Fri Aug 14 18:13:43 2020      
+
+F:/Boards/Foxconn/SO-57131_AF015/A19882-04/fixture/summary
+------------------------------------------------------------------------------
+
+
+Fixture Tooling has encountered local fixture component files.
+   All subsequent fixture files will be generated based on the values
+   provided. For the values used, refer to the Fixture Tooling section
+   of "fixture/details" file. The physical relationship of these values
+   is NOT judged by the system software.  This is an "override"
+   situation and the user is responsible for the accuracy of all values
+   entered.
+ (WARNING FXT88)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21312 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21309 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "External_FAN".  The pin at 21310 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "External_FAN".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 2 to node "External_FAN". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21306 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21303 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+
+ ******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ There are not enough probes on the power node "P3_3V_CMM".  The pin at 21304 
+ needs to be connected  but could not be.
+ Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G  (WARNING FXT11)
+Insufficient probing access has been provided for power node "P3_3V_CMM".
+ A Minimum of  3 more probe(s) are needed.
+ Optimally each power node should be provided with 7 probes per power supply.
+ (WARNING FXT49)
+
+******* W A R N I N G ****** W A R N I N G ****** W A R N I N G ****** 
+ This program was unable to connect power supply 1 to node "P3_3V_CMM". 
+ Action must be taken to correct this condition or the power supply will 
+ not be connected to the board. 
+Action must be taken to correct this condition manually.
+ ******* W A R N I N G ****** W A R N I N G ****** (WARNING FXT61)
+Fixture Type : Agilent SimPlate Express
+Fixture Size : Full
+Fixture Part Number : 44200L
+Top Probes Allowed : Enabled
+Autofile : 3296
+Units : English
+Wiring Method : Automatic
+-----------------------------------------------------------------------------
+Count
+-----
+    2  Probes    Type:  75 mil  Spring Force Max.: 8 oz
+ 1067  Probes    Type:  50 mil  Spring Force Max.: 4 oz
+  450  Probes    Type:  75 mil  Spring Force Max.: 4 oz
+   86  Probes    Type: 100 mil  Spring Force Max.: 8 oz
+  578  Probes    Type: 100 mil  Spring Force Max.: 4 oz
+   89  Extra Probes Type:  50 mil
+  246  Extra Probes Type:  75 mil
+  111  Extra Probes Type: 100 mil
+   63  Probe :  Testjets         Using Keepout Method
+    4  Offset Pins
+ 3135  Pins
+  351  Extra Pins
+    2  TestJet MUX Cards 
+   33  Hybrid Cards
+  207  Transfer Probes
+  207  Transfer Pins
+   68  Extra Transfer Probes
+
+Count  Color  Gauge  Length 
+------|------|-----|---------
+    2  Black   30     6.5 in
+    1  Black   30     7.0 in
+    2  Black   30     7.5 in
+    1  Black   30    10.0 in
+-----------------------------
+    6  Black   30    45.0 in
+
+   74  Black   28     1.0 in
+   29  Black   28     1.5 in
+   20  Black   28     2.0 in
+   24  Black   28     2.5 in
+   15  Black   28     3.0 in
+   26  Black   28     3.5 in
+   31  Black   28     4.0 in
+   40  Black   28     4.5 in
+   23  Black   28     5.0 in
+   17  Black   28     5.5 in
+   14  Black   28     6.0 in
+   14  Black   28     6.5 in
+   19  Black   28     7.0 in
+   26  Black   28     7.5 in
+   18  Black   28     8.0 in
+   16  Black   28     9.0 in
+   15  Black   28    10.0 in
+   15  Black   28    11.0 in
+   13  Black   28    12.0 in
+    2  Black   28    13.0 in
+    1  Black   28    14.0 in
+-----------------------------
+  452  Black   28  2168.0 in
+
+   73   Blue   30     1.0 in
+   23   Blue   30     1.5 in
+   25   Blue   30     2.0 in
+   39   Blue   30     2.5 in
+   43   Blue   30     3.0 in
+   62   Blue   30     3.5 in
+   84   Blue   30     4.0 in
+   88   Blue   30     4.5 in
+   80   Blue   30     5.0 in
+   99   Blue   30     5.5 in
+   77   Blue   30     6.0 in
+   78   Blue   30     6.5 in
+   53   Blue   30     7.0 in
+   54   Blue   30     7.5 in
+   45   Blue   30     8.0 in
+   63   Blue   30     9.0 in
+   43   Blue   30    10.0 in
+   13   Blue   30    11.0 in
+   11   Blue   30    12.0 in
+    7   Blue   30    13.0 in
+    1   Blue   30    14.0 in
+-----------------------------
+ 1061   Blue   30  5759.5 in
+
+   16   Blue   28     0.0 in
+  320   Blue   28     1.0 in
+   94   Blue   28     1.5 in
+  123   Blue   28     2.0 in
+  142   Blue   28     2.5 in
+  117   Blue   28     3.0 in
+  119   Blue   28     3.5 in
+  105   Blue   28     4.0 in
+  107   Blue   28     4.5 in
+   78   Blue   28     5.0 in
+   72   Blue   28     5.5 in
+   64   Blue   28     6.0 in
+   60   Blue   28     6.5 in
+   37   Blue   28     7.0 in
+   61   Blue   28     7.5 in
+   36   Blue   28     8.0 in
+   62   Blue   28     9.0 in
+   74   Blue   28    10.0 in
+   33   Blue   28    11.0 in
+   24   Blue   28    12.0 in
+   15   Blue   28    13.0 in
+   11   Blue   28    14.0 in
+    7   Blue   28    15.0 in
+   10   Blue   28    16.0 in
+    4   Blue   28    17.0 in
+   13   Blue   28    18.0 in
+    6   Blue   28    19.0 in
+-----------------------------
+ 1810   Blue   28  8274.5 in
+
+    5   Red    28     2.0 in
+    5   Red    28     2.5 in
+    1   Red    28     3.0 in
+    1   Red    28     4.5 in
+    1   Red    28     6.5 in
+    2   Red    28     7.5 in
+    7   Red    28     8.0 in
+    1   Red    28     9.0 in
+    7   Red    28    11.0 in
+-----------------------------
+   30   Red    28   193.5 in
+
+=============================
+ 3359              16440.5 in Total
+
+
+see files: wires, inserts, trace, drill, drillsup, drilltop, details
+Incremental wiring differences have been noted.
+ See the fixture/details report for specific wires to add and/or delete.
+ (WARNING FXT45)
+------------------------------------------------------------------------------
+KEYSIGHT ICT FIXTURE TOOLING                Wed Feb 17 18:51:10 2021      
+
+M:/Cisco/SPITFIRE/CHURCHILL/churchill_CPU-05/73-19882-05/fixture/summary
+------------------------------------------------------------------------------
+
+Program could not get the correct path to the board config.o file 
+ for board A19882-04.  The board directory name may not match the 
+ board name in the fixture.o file or if this is a multiple board fixture 
+ the multiple board symbolic link file structure may be corrupt or incomplete.
+ (ERROR FXT43)
+------------------------------------------------------------------------------
+KEYSIGHT ICT FIXTURE TOOLING                Wed Feb 17 18:51:46 2021      
+
+M:/Cisco/SPITFIRE/CHURCHILL/churchill_CPU-05/73-19882-05/fixture/summary
+------------------------------------------------------------------------------
+
+Program could not get the correct path to the board config.o file 
+ for board A19882-04.  The board directory name may not match the 
+ board name in the fixture.o file or if this is a multiple board fixture 
+ the multiple board symbolic link file structure may be corrupt or incomplete.
+ (ERROR FXT43)

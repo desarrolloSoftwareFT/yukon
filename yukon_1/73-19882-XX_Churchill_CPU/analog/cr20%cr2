@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600753438  Vd2c0                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:17 2020
+on failure
+   report parallel devices
+   report "cr20 cr20%cr4"
+end on failure
+disconnect all
+connect s to "FAN1011_GRN_LED_CON"
+connect i to "A3P3V"
+diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed,wa20m
+! "cr20%cr2" test.
+off failure

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1637165760   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:38 2020
+on failure
+   report parallel devices
+   report "fc_c6_hs0 10.0u"
+end on failure
+disconnect all
+connect s to "FAN01_P12V_PWR_F"
+connect i to "GND"
+connect g to "FAN01_PWM_PWR"
+resistor 2.2k, 25, 65, re4, wb, ar500m, wa53.3m  !rev06
+!resistor 1.0k,36,25,re1,wb,ar500m,ed,wa10m, en
+off failure
+

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1622478901   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:35 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_A2V5_5VBIAS"
+capacitor 1u, 35, 40, fr1024, re3, ar100m, nocomp
+! "bma1_cbias" test.

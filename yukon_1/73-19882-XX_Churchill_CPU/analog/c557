@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596691197   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:05 2020
+on failure
+   report parallel devices
+   report "r491 2.61k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_2V5_VPP_CH3"
+!@connect gl to "P2V5_VPP_2" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "c557" is a commented test.
+off failure

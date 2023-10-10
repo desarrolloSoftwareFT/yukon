@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176047   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:48 2020
+on failure
+   report parallel devices
+   report "c1491 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FLTR_EMMC_VDDI"
+capacitor 1.1u, 35, 40, fr1024, re2, ar100m, nocomp
+! "c1493" test.
+off failure

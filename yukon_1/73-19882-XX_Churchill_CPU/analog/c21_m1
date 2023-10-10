@@ -1,0 +1,27 @@
+!!!!    2    0    1 1594176084   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:25 2020
+on failure
+   report parallel devices
+   report "c40_p4_m1 470u"
+   report "c41_p4_m1 470u"
+   report "c35_p4_m1 100u"
+   report "c36_p4_m1 100u"
+   report "c37_p4_m1 100u"
+   report "c38_p4_m1 100u"
+   report "c39_p4_m1 100u"
+   report "c167_c 47.0u"
+   report "c1270_c 47.0u"
+   report "c1271_c 47.0u"
+   report "c1272_c 47.0u"
+   report "c1273_c 47.0u"
+   report "c163_c 22.0u"
+   report "c165_c 22.0u"
+   report "c159_c 2.20u"
+   report "c33_p4_m1 1.00n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P1V05_VCCSUS"
+capacitor 2.191m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+! "c21_m1" test.
+off failure

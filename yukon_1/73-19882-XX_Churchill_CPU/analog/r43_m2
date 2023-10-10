@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600512829  V7051                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+on failure
+report parallel devices
+report "r48_m2 100"
+end on failure
+disconnect all
+connect s to "P1V2_VDDQ"
+connect i to "PMOD_VOA_VSENSE_K_M2"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r43_m2" test.
+off failure

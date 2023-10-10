@@ -1,0 +1,21 @@
+!!!!    2    0    1 1660374340   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:29 2020
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+on failure
+   report parallel devices
+end on failure
+disconnect all
+connect i to "UNNAMED_1508_CAP_I26_B"
+connect s to "GND"
+!zener 5, 20, 20, idc25m, co7.5, ar5.30, ed, wa200m
+zener 3.5, 20, 20, idc39m, ar3.68, ed, wa200m,fi5!Changed from BOM
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "cr22%ds1" test.
+! DUT: nominal 5, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 5.25, low 4.75
+! TEST: high limit 5.299, low limit 4.778
+! Tolerance Multiplier 3.00
+! Remote Sensing is not Allowed
+! Bias Current is 10m
+off failure

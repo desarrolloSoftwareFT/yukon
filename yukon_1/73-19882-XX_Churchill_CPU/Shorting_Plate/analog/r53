@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes A3P3V P-Pin resistance"
+report "check nodes JTAG_TDI_3V3_I210 P-Pin resistance"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "JTAG_TDI_3V3_I210"
+resistor 10,20,100, re1, ar100m,ed
+off failure

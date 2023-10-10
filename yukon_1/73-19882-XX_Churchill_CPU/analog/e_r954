@@ -1,0 +1,21 @@
+!!!!    2    0    1 1600592895   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:56 2020
+on failure
+   report parallel devices
+   report "c295_c 22.0u"
+   report "c890_c 100n"
+   report "c891_c 10.0n"
+   report "e_c623 100n"
+   report "e_c624 1.00u"
+   report "e_c625 1.00u"
+   report "e_c626 22.0u"
+   report "e_c627 22.0u"
+end on failure
+disconnect all
+connect i to "PVCCKRHV"
+connect s to "GND"
+!connect g to "PVCCKRHV_FB" 
+!connect g to "ADC0_1V3_CH0" 
+resistor 300, 25,20, re3, ar200m, wa50m,en,ed
+off failure
+

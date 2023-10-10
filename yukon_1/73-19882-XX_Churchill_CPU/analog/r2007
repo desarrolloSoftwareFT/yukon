@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513030  V9846                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "BMC_I2C1_SCL"
+connect i to "DAC0_SCL"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r2007" test.

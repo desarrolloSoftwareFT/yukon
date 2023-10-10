@@ -1,0 +1,10 @@
+!!!!    2    0    1 1668080791   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:35 2020
+disconnect all
+connect i to "GND"
+connect s to "NMI_TO_CPU"
+!connect g to "CPU_FPGA_BWDT_EXPIRED"
+!connect g to "A3P3V"
+!resistor 10k, 25, 20, re3, wb, ar470m,en, ed  !AO !@Without 3.3V battery(B1)
+resistor 768, 25, 20, re2, wb, ar470m,en, ed   !C0 !@With 3.3V battery(B1)
+

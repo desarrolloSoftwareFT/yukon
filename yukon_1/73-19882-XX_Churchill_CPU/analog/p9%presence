@@ -1,0 +1,9 @@
+!!!!    2    0    1 1596685702   0000                                         
+on failure
+   report "Check for P9 presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "P9_PRESENCE_SWITCH_PIN_2"
+jumper  1k,  re3, ar200m, op
+off failure

@@ -1,0 +1,10 @@
+!!!!    2    0    1 1621632462   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:36 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PWR_A3V3_A1V2_PGOOD"
+!connect gl to "GND"
+resistor 150, 30, 30, re3, wb, ar200m, en, ed, wa8m
+!Nueva revision 21 May
+!resistor 11k, 30, 30, re3, wb, ar200m, en, ed, wa8m
+

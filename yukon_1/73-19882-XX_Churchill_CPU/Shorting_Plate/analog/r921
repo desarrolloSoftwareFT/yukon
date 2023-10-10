@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes SF_JTAG_TMS P-Pin resistance"
+report "check nodes JTAG_CPU_FPGA_TMS P-Pin resistance"
+end on failure
+disconnect all
+connect s to "SF_JTAG_TMS"
+connect i to "JTAG_CPU_FPGA_TMS"
+resistor 10,20,100, re1, ar100m,ed
+off failure

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1600566901  Vce0c                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+on failure
+   report parallel devices
+   report "e_r350 634k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PMOD_P1V5_PCH_FB"
+connect g to "P1V5_PCH_2"
+resistor 2.86k,25,20, re3, ar200m, wb, en, ed
+! "e_r350" test.
+off failure
+

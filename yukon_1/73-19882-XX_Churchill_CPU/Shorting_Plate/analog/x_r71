@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes PMOD_DDR4_VTT_REFOUT P-Pin resistance"
+report "check nodes DDR4_VREF P-Pin resistance"
+end on failure
+disconnect all
+connect s to "PMOD_DDR4_VTT_REFOUT"
+connect i to "DDR4_VREF"
+resistor 10,20,100, re1, ar100m,ed
+off failure

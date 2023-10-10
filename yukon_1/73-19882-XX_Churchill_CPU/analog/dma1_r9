@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594175945   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:06 2020
+on failure
+   report parallel devices
+   report "dma1_c8 8.20n"
+   report "dma1_r8 2.00k"
+end on failure
+disconnect all
+connect i to "UNNAMED_4238_CAP_I129_A"
+connect s to "GND"
+jumper 639, re3, wb, ar100m, op
+! "dma1_r9" test.
+off failure

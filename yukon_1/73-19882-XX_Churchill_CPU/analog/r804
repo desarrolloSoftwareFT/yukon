@@ -1,0 +1,8 @@
+!!!!    2    0    1 1597391968   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "CPU_SATA1GP_GPIO19_R"
+connect i to "CPU_SATA1GP_GPIO19"
+connect g to "GND"
+jumper  20.0,  re1, ar200m, ed
+! "r804" test.

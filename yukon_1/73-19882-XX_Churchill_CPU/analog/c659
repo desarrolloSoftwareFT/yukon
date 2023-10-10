@@ -1,0 +1,10 @@
+!!!!    2    0    1 1597477359   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:13 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_76_CAP_I40_B"
+!connect gl to "A3P3V" 
+!connect g to "UNNAMED_76_LM4041ADJ_I27_FB" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "c659" is a commented test.

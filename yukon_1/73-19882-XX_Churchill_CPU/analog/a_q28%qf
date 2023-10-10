@@ -1,0 +1,26 @@
+!!!!    2    0    1 1594176767   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:48 2020
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "P3V3_PCH_2"
+connect i to "P3V3"
+connect g to "GND" ! 479 ! IPG recommended
+connect g to "PMOD_P3V3_PCH_EN_IN" !3429 ! IPG recommended
+!gg! connect g to "BMC_SEC_BOOT_JTAG_TCK" ! 2000000000
+!gg! connect g to "CLK_BMCPHY_25M_XTAL1" ! 2000000000
+!gg! connect g to "CLK_BMCPHY_25M_XTAL2" ! 2000000000
+!gg! connect g to "MGMT_PHY_XTAL_IN1_R" ! 2000000000
+!gg! connect g to "MGMT_PHY_XTAL_IN2_R" ! 2000000000
+!gg! connect g to "SRT_BMC_SEC_BOOT_JTAG_TCK" ! 2000000000
+!gg! connect g to "UNNAMED_135_CAP_I319_B" ! 2000000000
+!gg! connect g to "XTAL_CLKBUF_25M_IN" ! 2000000000
+!gg! connect g to "XTAL_CPU_RTC_32K_IN" ! 2000000000
+!gg! connect g to "XTAL_CPU_RTC_32K_OUT" ! 2000000000
+nfetr 208, 50.7, re2, ar200m, wa2.26m
+! "a_q28%qf" test.
+! DUT: nominal 125, plus tol 60.0 %, minus tol 60.0 %
+! DUT: high 200, low 50
+! TEST: high limit 208.04, low limit 50.674
+! Tolerance Multiplier 3.00
+! Remote Sensing is not Allowed

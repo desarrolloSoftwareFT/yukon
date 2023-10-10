@@ -1,0 +1,7 @@
+!!!!    2    0    1 1686189672   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:03 2020
+disconnect all
+connect s to "LED_SB_L<0>"
+connect i to "UNNAMED_256_LED_I183_A"
+diode 2.55, 1.53, idc10m, co4.7, ar2.55
+! "cr44" test.

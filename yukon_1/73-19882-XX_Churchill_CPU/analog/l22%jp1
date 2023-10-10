@@ -1,0 +1,8 @@
+!!!!    2    0    1 1632331809   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:06 2020
+disconnect all
+connect i to "USB_EXT_DRIVE_DBG_DP"
+connect s to "USB_EXT_DRIVE_DBG_FLT_DP"
+jumper  20.0,  re1, ar200m, op  !rev 06
+!jumper 900k,re1,ar10m,ed, en !p4c a2
+! "l22%jp1" test.

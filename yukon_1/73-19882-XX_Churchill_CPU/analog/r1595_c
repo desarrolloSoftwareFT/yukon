@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176204   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:25 2020
+disconnect all
+connect s to "GND"
+connect i to "LAN_PWRGOOD_C"
+resistor 1k, 25, 20, re3, ar100m

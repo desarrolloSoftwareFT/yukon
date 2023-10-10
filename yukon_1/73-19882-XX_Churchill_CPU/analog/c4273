@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596099068   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:20 2020
+on failure
+   report parallel devices
+   report "r1828 200"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "COMP_REF_IN_P0_6V"
+!connect g to "P12V_STBY" 
+capacitor 100n, 35, 40, fr1024, re2, ar50.0m, nocomp
+warning "excessive minus tolerance or low limit."
+! "c4273" is a commented test.
+off failure

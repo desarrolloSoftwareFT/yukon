@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600512711  V2db8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect i to "PMOD_P3V3_DIDT"
+connect s to "P3V3"
+connect g to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma3_l1" test.

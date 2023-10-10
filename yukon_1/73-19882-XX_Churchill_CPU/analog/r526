@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "SRT_BM_FPGA_SPI_FLSH_MISO"
+connect i to "BM_FPGA_SPI_FLSH_MISO"
+connect a to "SRT_BM_FPGA_SPI_FLSH_MISO"
+connect b to "BM_FPGA_SPI_FLSH_MISO"
+resistor 22, 40, 20, re2, ar500m
+! "r526" test.

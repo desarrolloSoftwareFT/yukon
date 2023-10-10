@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176305   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:06 2020
+disconnect all
+connect s to "PMOD_A2V5_VOSEN"
+connect i to "UNNAMED_3_CAP_I35_B"
+connect g to "GND" 
+connect g to "UNNAMED_3_CAP_I34_A" 
+resistor 4.99k, 25, 20, re4, wb, ar200m, wa174m

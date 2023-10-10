@@ -1,0 +1,39 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+call Set_Custom_Options
+call Verify_Autofile
+call Initialize_Constants
+report level is report
+report is "debug/report"
+buffered reporting on
+log level is failures
+call Get_Version_deb
+question "Presiona Yes para probar en modo debug"
+call Counter | faon
+dim DB_Status$[16]
+dim Psgroup(1:16)
+option bit 32
+powered 
+call Setup_Power_Supplies (Failed_In_Power_Supplies, PowerMsg$)
+for DB_Supply = 1 to 16
+  if Pslimit = 0 then
+     rps  DB_Supply, DB_Volts, DB_Amps, DB_Err
+     if DB_Err = 0 then
+        ! report Voltage and Current for this supply
+     report using "3a, dd, 2a, dd.dd, 3a, sd.3d, 3a"; "PS ", DB_Supply, ":", DB_Volts, " V", DB_Amps, " A"
+     end if
+  end if
+next DB_Supply
+log out "debug/log"
+log clear
+report out
+report is *

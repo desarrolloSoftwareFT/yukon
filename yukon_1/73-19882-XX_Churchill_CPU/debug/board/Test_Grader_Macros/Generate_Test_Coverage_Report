@@ -1,0 +1,19 @@
+print using "@"
+verify device coverage ; testplan
+report is "debug/report"
+testhead is 1
+fixture lock
+unlink "testcoverage_fail.dat", Err
+get "testplan.cov"
+run
+report is *
+softkeys clear
+verify device coverage ; report
+unlink "testplan.cov", Err
+unlink "testcoverage_fail.dat", Err
+report is "debug/report"
+report " Test Coverage analysis is complete."
+report
+report " Please review the file ""testcoverage.rpt"""
+report " for test coverage results."
+report is *

@@ -1,0 +1,16 @@
+!!!!    2    0    1 1605716006   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:07 2020
+on failure
+   report parallel devices
+   report "fc_cr1_hs0 fc_cr1_hs0%ds"
+   report "fc_c6_hs0 10.0u"
+   report "fc_r6_hs0 2.20k"
+end on failure
+disconnect all
+connect s to "FAN01_P12V_PWR_F"
+connect i to "GND"
+!diode 990m, 490m, idc98m, co10, ar10.63, ed, wa120m
+diode 990m, 445m, idc98m, co10, ar10.63, ed, wa120m
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "fc_cr1_hs0%cr" test.
+off failure

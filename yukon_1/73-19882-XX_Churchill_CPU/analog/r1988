@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176000   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:01 2020
+disconnect all
+connect i to "DAC0_A0"
+connect s to "A3P3V"
+jumper 237, re3, wb, ar500m, op
+! "r1988" test.

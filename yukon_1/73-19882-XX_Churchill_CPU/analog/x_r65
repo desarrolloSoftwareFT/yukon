@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600513058  V7f42                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:38 2020
+on failure
+report parallel devices
+report "x_c80 10.0n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PMOD_DDR4_VTT_REFIN"
+connect g to "A1_2V"
+!B!resistor 10k, 25, 20, re4, wb, ar100m, wa1.03
+resistor 10k,25,20,re4,wb,ar100m,ed
+off failure

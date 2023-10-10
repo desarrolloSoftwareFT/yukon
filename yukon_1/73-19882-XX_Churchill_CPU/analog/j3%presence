@@ -1,0 +1,9 @@
+!!!!    2    0    1 1613609288  Ve815                                         
+on failure
+   report "Check for J3 presence."
+end on failure
+disconnect all
+connect s to  ground
+connect i to "J3_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m
+off failure

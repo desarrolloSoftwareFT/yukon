@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600521055  V0361                                         
+!* 22pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:56 2020
+disconnect all
+connect s to "GND"
+connect i to "SRT_BMC_SEC_BOOT_JTAG_TCK"
+capacitor 22p, 137.73, 15.00, fr8192, re5, wb, ar50.0m, comp
+! "c643" test.

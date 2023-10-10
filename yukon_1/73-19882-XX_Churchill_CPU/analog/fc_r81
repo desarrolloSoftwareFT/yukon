@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176406   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:47 2020
+disconnect all
+connect s to "FAN67_P12V_PWR_F"
+connect i to "FAN67_PWM_PWR"
+connect g to "GND" 
+resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m

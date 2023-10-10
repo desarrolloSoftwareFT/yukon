@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175957   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:18 2020
+disconnect all
+connect i to "FAB_REV1"
+connect s to "GND"
+jumper 3.35k, re4, wb, ar200m, op
+! "r95" test.

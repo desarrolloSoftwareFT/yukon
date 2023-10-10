@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175958   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:19 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "BMC_TRST_L"
+jumper 4.92k, re4, wb, ar200m, op
+! "r96" test.

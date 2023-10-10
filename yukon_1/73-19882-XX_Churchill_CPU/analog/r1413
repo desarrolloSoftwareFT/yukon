@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175984   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:45 2020
+disconnect all
+connect s to "JTAG_BMC_TDI_R"
+connect i to "JTAG_BMC_TDO_R"
+jumper 6.61k, re4, wb, ar100m, op
+! "r1413" test.

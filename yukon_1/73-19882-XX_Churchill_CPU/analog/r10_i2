@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176217   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:38 2020
+disconnect all
+connect s to "A2_5V"
+connect i to "BMC_I210_INTR_L"
+resistor 10k, 25, 20, re4, wb, ar100m

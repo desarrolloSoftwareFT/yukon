@@ -1,0 +1,89 @@
+<!-- Created Thu Jul 23 13:29:10 2020 from ITL Source digital/u40_connect_c -->
+<Test name="u40_connect_c"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BMC_FAN_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BUF_SPI_FLSH_SEL_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="JTAG_BDX_TCK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I509_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I520_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_76_LTC2497_I65_SCL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u27"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="R14"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="N11"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="P16"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P14"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="N13"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="K1"><node name="FAN23_PWM_CON" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K2"><node name="FAN01_PWM_CON" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J1"><node name="FAN3_EEPROM" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J2"><node name="FAN4_EEPROM" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J3"><node name="FAN5_EEPROM" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J4"><node name="FAN10_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H1"><node name="FAN9_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G1"><node name="FAN8_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H3"><node name="FAN7_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G3"><node name="FAN6_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G2"><node name="FAN5_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H4"><node name="FAN3_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H5"><node name="FAN2_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H6"><node name="FAN1_TACH" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J6"><node name="SPI_X86_OBFL_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H7"><node name="SPI_X86_OBFL_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G7"><node name="SPI_X86_OBFL_CS1_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F3"><node name="SPI_X86_OBFL_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F4"><node name="SATA_0_RESET_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F5"><node name="SRT_P2PM_CPU_MB<1>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F6"><node name="CPU_APWROK_BUF" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G5"><node name="10GPHY_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G6"><node name="CPU_SATA1GP_GPIO19_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F8"><node name="CPU_FPGA_BMFPGA_SPARE0_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F10"><node name="LED_SB_L<3>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F12"><node name="PMOD_P0V6_VTT_DIMM_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G12"><node name="PMOD_P2V5_VPP_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G13"><node name="PMOD_P5V_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F14"><node name="BOARD_ID_SPARE0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G14"><node name="BOARD_ID_SPARE1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F15"><node name="SPARE_2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F17"><node name="CONSOLE_RXD_DBG_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G16"><node name="SMBUS_PCH_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G17"><node name="SPI_FPGA_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F18"><node name="PWRGD_FPGA_BDXDE_LAN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F19"><node name="SMBUS_PCH_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F20"><node name="BIOS_GOLD_ACTIVE_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F21"><node name="PCH_SUS_STAT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G18"><node name="FM_NMI_EVENT_N_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G19"><node name="SPI_FPGA_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H19"><node name="PMB_SPIFLASH_IO3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H20"><node name="CLK50M_IOFPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G21"><node name="PMB_SPIFLASH_WP_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G22"><node name="PCH_PWRBTN_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J19"><node name="SYNC_FPGA_TO_CPU_INTR_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J20"><node name="FPGA_PRIMARY_WP_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H21"><node name="BMC_BMCFPGA_SCL_X86FPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H22"><node name="BMC_BMCFPGA_SDA_X86FPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J18"><node name="FM_PCH_HOT_N_P3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J22"><node name="SPI_PCH_CS1_L" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

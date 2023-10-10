@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176573   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:34 2020
+on failure
+   report parallel devices
+   report "r613 46.4k"
+end on failure
+disconnect all
+connect i to "UNNAMED_4199_CAP_I55_A"
+connect s to "GND"
+connect g to "P1V15_BMC" 
+resistor 2.309k, 25, 20, re4, wb, ar500m, wa92.6m
+off failure

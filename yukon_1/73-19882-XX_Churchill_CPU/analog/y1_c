@@ -1,0 +1,75 @@
+!!!!    2    0    1 1600996559  V0289                                         
+!* Changed short probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:54:05 2020
+!IPG : Node XTAL_CPU_25M_IN_C is not accessible.
+!IPG : Node XTAL_CPU_25M_OUT_C is not accessible.
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         All 2 Pin Oscilator Crystal
+! Alias:             various
+! Part Type:         Power On Analog
+! Description:       All 2 Pin Oscilator Crystal
+! Manufacturer:      various
+! Package Style:     2 pin
+! Created:           Jan 15, 2008
+! Programmer:
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  no
+! JTAG Device:       no
+! Fault coverage:    This model is for all 2 pin 1 Hz to 50 MHz crystals.
+!                    Modify measurement value for different output frequencies.
+! Constraints:
+! Cisco Part#:       19-1614-01,19-2472-01
+
+! *******************************************************************************
+
+test powered analog
+power pins 2,4
+
+   test "Pin1_offset"
+   test "Pin1"
+   test "Pin3_offset"
+   test "Pin3"
+
+end test
+
+subtest "Pin1_offset"
+   global Offset
+   connect i to pins 1
+   connect l to ground
+   detector dcv, expect 2.5
+   measure 0,0,Offset
+end subtest
+
+subtest "Pin1"
+   global Offset
+   connect rcva to pins 1                ! Manually overide wirelist
+!  connect s to ground                   ! Load Buffer Amp output
+!  source dcv , am 0, terminated 50, on
+   detector frequency, threshold Offset, expect 25.00M
+   measure 26.25M, 23M
+end subtest
+
+subtest "Pin3_offset"
+   global Offset
+   connect i to pins 3
+   connect l to ground
+   detector dcv, expect 2.5
+   measure 0,0,Offset
+end subtest
+
+subtest "Pin3"
+   global Offset
+   connect rcva to pins 3                ! Manually overide wirelist
+!  connect s to ground                   ! Load Buffer Amp output
+!  source dcv , am 0, terminated 50, on
+   detector frequency, threshold Offset, expect 25.00M
+   measure 26.25M, 23M
+end subtest
+

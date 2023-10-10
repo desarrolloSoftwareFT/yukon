@@ -1,0 +1,9 @@
+!!!!    2    0    1 1609266540   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:53 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_MOSI"
+connect i to "SRT_BMC_SPI2_MUX_MOSI"
+connect a to "BMC_SPI2_MUX_MOSI"
+connect b to "SRT_BMC_SPI2_MUX_MOSI"
+resistor 22+2, 40, 20, re1, wa50m,  ar500m
+! "r468" test.

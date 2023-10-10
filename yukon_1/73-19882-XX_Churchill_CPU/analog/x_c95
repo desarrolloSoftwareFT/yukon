@@ -1,0 +1,17 @@
+!!!!    2    0    1 1597477549   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:46 2020
+on failure
+   report parallel devices
+   report "x_c97 100u"
+   report "c623 1.00u"
+   report "c624 1.00u"
+   report "c625 1.00u"
+   report "c626 1.00u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "DDR4_VTT"
+!@connect g to "ADC0_0V6_BM_DDR4_CH13" 
+capacitor 204u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp, am0.2
+! "x_c95" is a limited test.
+off failure

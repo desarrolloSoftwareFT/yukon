@@ -1,0 +1,19 @@
+!!!!    2    0    1 1596766899   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:58 2020
+test powered analog
+   power pins   5,6,2
+   nonanalog pins  3,4
+   test "Output_reset"
+end test
+   
+subtest "Output_reset"
+   connect i to pins  1               ! Output 
+   connect l to ground                ! GND
+
+   detector dcv, expect 3.3
+   measure 3.3*1.05, 3.3*0.95
+end subtest
+
+!
+!    End of Test
+!

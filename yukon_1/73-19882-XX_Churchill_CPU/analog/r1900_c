@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175999   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:00 2020
+disconnect all
+connect s to "P3V3_PCH_2"
+connect i to "PD_GPIO52_CPUSV_NC"
+jumper 3.57k, re4, wb, ar200m, op
+! "r1900_c" test.

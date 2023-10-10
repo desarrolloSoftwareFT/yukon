@@ -1,0 +1,13 @@
+!!!!    2    0    1 1604703009   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:27 2020
+on failure
+   report parallel devices
+   report "r462 2.20k"
+end on failure
+disconnect all
+connect s to "FAN23_P12V_PWR_F"
+connect i to "GND"
+connect g to "FAN23_PWM_PWR" 
+capacitor 10u-1u, 35, 40, fr1024, re1, ar200m, nocomp
+! "fc_c6_hs1" test.
+off failure

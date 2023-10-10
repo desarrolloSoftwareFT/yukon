@@ -1,0 +1,15 @@
+!!!!    2    0    1 1615415415   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:59 2020
+on failure
+   report parallel devices
+   report "dma1_r12 232k"
+   report "dma1_r13 1.37k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4238_CAP_I124_A"
+!@connect gl to "A3P3V" 
+capacitor 6.8n, 35, 40, fr128, re3, wb, ar100m, ed, nocomp, wa50m
+warning "excessive minus tolerance or low limit."
+! "dma1_c10" is a commented test.
+off failure

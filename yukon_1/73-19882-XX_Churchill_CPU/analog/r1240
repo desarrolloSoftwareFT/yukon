@@ -1,0 +1,8 @@
+!!!!    2    0    1 1665262919   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:11 2020
+disconnect all
+connect s to "CLK100M_BMCFPGA_PE_AC_DN"
+connect i to "A2_5V"
+connect gl to "GND" 
+connect g to "CLK100M_BMCFPGA_PE_AC_DP" 
+resistor 10k, 25, 20, re4, wb, ar100m, ed, wa15m, sl

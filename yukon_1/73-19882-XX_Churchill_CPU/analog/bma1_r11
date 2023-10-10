@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512705  V3ed3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:02 2020
+disconnect all
+connect s to "PMOD_A2V5_ENABLE"
+connect i to "UNNAMED_3_RES_I2_B"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma1_r11" test.

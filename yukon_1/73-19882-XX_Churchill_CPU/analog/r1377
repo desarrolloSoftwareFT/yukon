@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175983   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:44 2020
+disconnect all
+connect s to "UNNAMED_4164_HDR2X3_I84_P2"
+connect i to "SML1CLK_BMC"
+jumper 4.76k, re4, wb, ar200m, op
+! "r1377" test.

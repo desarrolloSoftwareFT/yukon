@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175988   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:49 2020
+disconnect all
+connect s to "GND"
+connect i to "CPU_IDPROM_WP"
+jumper 3.12k, re4, wb, ar500m, op
+! "r1577" test.

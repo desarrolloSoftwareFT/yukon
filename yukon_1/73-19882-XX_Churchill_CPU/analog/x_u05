@@ -1,0 +1,19 @@
+!!!!    2    0    1 1600571696  V6a1c                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+  test "OUT"
+end test
+
+
+
+subtest "OUT"
+  connect i to "DDR4_VTT"
+  connect l to ground
+
+  detector dcv, expect 0.6
+  measure   0.66,0.54
+end subtest
+
+
+

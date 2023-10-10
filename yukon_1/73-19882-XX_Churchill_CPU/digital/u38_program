@@ -1,0 +1,894 @@
+!!!!    6    0    1 1516668507  V9fd3                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         24C512_PGM
+! Alias:
+! Part Type:         VLSI
+! Description:       512K Bit (64K X 8) Serial EEPROM
+! Manufacturer:
+! Package Style:     8 pin SOC
+! Created:           May 08, 2007
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    On board programming 2K Bits Data
+! Constraints:       Test developed with pins 2 and 1 (A1,A0) = 00.
+!                    Modify 'sub IC_ADDR' if these 2 pins are not logic low.
+! Cisco Part #:      16-3134-01,16-2975-01
+
+
+test digital; EE_Data(*)  ! 2048 Bits of data
+
+sequential
+
+vector cycle 10u
+receive delay 9u
+
+default device "u38"
+set terminators to on
+assign VCC  to pins *
+assign GND  to pins *
+
+assign ABUS to pins 3,2,1
+assign SCL  to pins 6
+assign SDA  to pins 5
+assign WP   to pins 7 default "0"
+
+power  VCC, GND
+inputs ABUS,SCL,WP
+bidirectional SDA
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector INIT1
+ drive SDA
+ set ABUS to "000"
+ set WP   to "0"
+ set SCL  to "1"
+ set SDA  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS to "kkk"
+ set WP   to "k"
+ set SCL  to "k"
+ set SDA  to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS to "kkk"
+ set WP   to "k"
+ set SCL  to "k"
+ set SDA  to "k"
+end vector
+
+vector WP_0
+ initialize to KEEP2
+ set WP     to "0"
+end vector
+
+vector WP_1
+ initialize to KEEP2
+ set WP     to "1"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+! *************************************************************************
+
+data Write_Data1 to groups SDA
+  values EE_Data(0:1023)
+end data
+
+data Write_Data2 to groups SDA
+  values EE_Data(1024:2047)
+end data
+
+data Write_Data3 to groups SDA
+  values EE_Data(2048:3071)
+end data
+
+data Write_Data4 to groups SDA
+  values EE_Data(3072:4095)
+end data
+
+!data Write_Data5 to groups SDA
+!  values EE_Data(4096:5119)
+!end data
+!
+!data Write_Data6 to groups SDA
+!  values EE_Data(5120:6143)
+!end data
+
+
+data Read_Data1 to groups SDA
+  values EE_Data(0:1023)
+end data
+
+data Read_Data2 to groups SDA
+  values EE_Data(1024:2047)
+end data
+
+! *************************************************************************
+
+sub STRT
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ execute D_1
+ execute D_1
+end sub
+
+sub IC_ADDR
+ call STRT
+ execute D_1
+ execute SK_21
+ execute SK_20
+ execute D_0
+ execute SK_21
+ execute SK_20
+ execute D_1
+ execute SK_21
+ execute SK_20
+ execute D_0
+ execute SK_21
+ execute SK_20
+ execute D_0    ! Address bit A2, Change to match pin 2, A2 if tied
+ execute SK_21
+ execute SK_20
+ execute D_0    ! Address bit A1, Change to match pin 2, A1 if tied
+ execute SK_21
+ execute SK_20
+ execute D_0    ! Address bit P0, Change to match pin 1, P0 if tied
+ execute SK_21
+ execute SK_20
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute SK_11
+ execute R_0    ! Acknowledge bit
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write cycle, ignor Ack bit
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute SK_11
+ execute KEEP1  ! Acknowledge bit, ignored
+ execute SK_10
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_11
+ execute SK_10
+ execute D6
+ execute SK_11
+ execute SK_10
+ execute D5
+ execute SK_11
+ execute SK_10
+ execute D4
+ execute SK_11
+ execute SK_10
+ execute D3
+ execute SK_11
+ execute SK_10
+ execute D2
+ execute SK_11
+ execute SK_10
+ execute D1
+ execute SK_11
+ execute SK_10
+ execute D0
+ execute SK_11
+ execute SK_10
+ execute D_0    ! Acknowledge bit
+ execute SK_21
+ execute SK_10
+end sub
+
+sub WR_COMMAND
+ call IC_ADDR
+ execute D_0    ! Write operation
+ execute SK_21
+ execute SK_10
+ execute SK_11
+ execute R_0    ! Acknowledge bit
+ execute SK_10
+end sub
+
+sub RD_COMMAND
+ call IC_ADDR
+ execute D_1    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute SK_11
+ execute R_0    ! Acknowledge bit
+ execute SK_10
+end sub
+
+sub SYNC1
+ repeat 8 times
+  call STRT
+  wait 20m
+  call STOP
+  wait 20m
+ end repeat
+end sub
+
+! *************************************************************************
+! **************************** Write EEPROM *******************************
+! *************************************************************************
+
+unit "Page Write Address $0000-$001F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr high byte
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data1
+   execute SK_21
+   execute SK_20
+   next Write_Data1
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0020-$003F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr high byte
+ call WR(D_0,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data1
+   execute SK_21
+   execute SK_20
+   next Write_Data1
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+
+unit "Page Write Address $0040-$005F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data1
+   execute SK_21
+   execute SK_20
+   next Write_Data1
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0060-$007F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data1
+   execute SK_21
+   execute SK_20
+   next Write_Data1
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0080-$009F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr high byte
+ call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data2
+   execute SK_21
+   execute SK_20
+   next Write_Data2
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $00A0-$00BF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr high byte
+ call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data2
+   execute SK_21
+   execute SK_20
+   next Write_Data2
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $00C0-$00DF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_1,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data2
+   execute SK_21
+   execute SK_20
+   next Write_Data2
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $00E0-$00FF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data2
+   execute SK_21
+   execute SK_20
+   next Write_Data2
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0100-$011F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  ! Addr high byte
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data3
+   execute SK_21
+   execute SK_20
+   next Write_Data3
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0120-$013F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  ! Addr high byte
+ call WR(D_0,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data3
+   execute SK_21
+   execute SK_20
+   next Write_Data3
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0140-$015F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)
+ call WR(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data3
+   execute SK_21
+   execute SK_20
+   next Write_Data3
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $0160-$017F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)
+ call WR(D_0,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data3
+   execute SK_21
+   execute SK_20
+   next Write_Data3
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+
+unit "Page Write Address $0180-$019F"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  ! Addr high byte
+ call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data4
+   execute SK_21
+   execute SK_20
+   next Write_Data4
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $01A0-$01BF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND                            ! Write Command
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  ! Addr high byte
+ call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+ repeat 32 times  !!64
+  repeat 8 times
+   execute SK_20 drive data Write_Data4
+   execute SK_21
+   execute SK_20
+   next Write_Data4
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+
+unit "Page Write Address $01C0-$01DF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)
+ call WR(D_1,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data4
+   execute SK_21
+   execute SK_20
+   next Write_Data4
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+unit "Page Write Address $01E0-$01FF"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call SYNC1
+ call WR_COMMAND
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 8 times
+   execute SK_20 drive data Write_Data4
+   execute SK_21
+   execute SK_20
+   next Write_Data4
+  end repeat
+  execute SK_10
+  execute SK_11
+  execute R_0    ! Acknowledge bit
+  execute SK_10
+ end repeat
+ call STOP
+end unit
+
+
+
+
+!!unit "Page Write Address $0200-$023F"
+!! repeat 40 times
+!!  execute INIT1
+!! end repeat
+!! call SYNC1
+!! call WR_COMMAND                            ! Write Command
+!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)  ! Addr high byte
+!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+!! repeat 64 times  !!64
+!!  repeat 8 times
+!!   execute SK_20 drive data Write_Data5
+!!   execute SK_21
+!!   execute SK_20
+!!   next Write_Data5
+!!  end repeat
+!!  execute SK_10
+!!  execute SK_11
+!!  execute R_0    ! Acknowledge bit
+!!  execute SK_10
+!! end repeat
+!! call STOP
+!!end unit
+!!
+!!unit "Page Write Address $0240-$027F"
+!! repeat 40 times
+!!  execute INIT1
+!! end repeat
+!! call SYNC1
+!! call WR_COMMAND
+!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)
+!! call WR(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+!! repeat 64 times
+!!  repeat 8 times
+!!   execute SK_20 drive data Write_Data5
+!!   execute SK_21
+!!   execute SK_20
+!!   next Write_Data5
+!!  end repeat
+!!  execute SK_10
+!!  execute SK_11
+!!  execute R_0    ! Acknowledge bit
+!!  execute SK_10
+!! end repeat
+!! call STOP
+!!end unit
+!!
+!!unit "Page Write Address $0280-$02BF"
+!! repeat 40 times
+!!  execute INIT1
+!! end repeat
+!! call SYNC1
+!! call WR_COMMAND                            ! Write Command
+!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)  ! Addr high byte
+!! call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Addr low byte
+!! repeat 64 times  !!64
+!!  repeat 8 times
+!!   execute SK_20 drive data Write_Data6
+!!   execute SK_21
+!!   execute SK_20
+!!   next Write_Data6
+!!  end repeat
+!!  execute SK_10
+!!  execute SK_11
+!!  execute R_0    ! Acknowledge bit
+!!  execute SK_10
+!! end repeat
+!! call STOP
+!!end unit
+!!
+!!unit "Page Write Address $02C0-$02FF"
+!! repeat 40 times
+!!  execute INIT1
+!! end repeat
+!! call SYNC1
+!! call WR_COMMAND
+!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)
+!! call WR(D_1,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+!! repeat 64 times
+!!  repeat 8 times
+!!   execute SK_20 drive data Write_Data6
+!!   execute SK_21
+!!   execute SK_20
+!!   next Write_Data6
+!!  end repeat
+!!  execute SK_10
+!!  execute SK_11
+!!  execute R_0    ! Acknowledge bit
+!!  execute SK_10
+!! end repeat
+!! call STOP
+!!end unit
+!!
+!!
+!!!! *************************************************************************
+!!!! **************************** Read  EEPROM *******************************
+!!!! *************************************************************************
+!!!
+!unit "Sequential Read From $0000 to $003F"
+! repeat 40 times
+!  execute INIT1
+! end repeat
+! call SYNC1
+! call WR_COMMAND
+! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+! call STOP
+! call RD_COMMAND
+! repeat 64 times
+!  repeat 8 times
+!   execute SK_10 receive data Read_Data1
+!   execute SK_11
+!   next Read_Data1
+!  end repeat
+!  execute SK_10
+!  execute D_0    ! Acknowledge bit
+!  execute SK_21
+!  execute SK_10
+! end repeat
+! call STOP
+!end unit
+
+!!!unit "Sequential Read From $0040 to $007F"
+!!! repeat 40 times
+!!!  execute INIT1
+!!! end repeat
+!!! call SYNC1
+!!! call WR_COMMAND
+!!! call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+!!! call WR(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+!!! call STOP
+!!! call RD_COMMAND
+!!! repeat 64 times
+!!!  repeat 8 times
+!!!   execute SK_10 receive data Read_Data1
+!!!   execute SK_11
+!!!   next Read_Data1
+!!!  end repeat
+!!!  execute SK_10
+!!!  execute D_0    ! Acknowledge bit
+!!!  execute SK_21
+!!!  execute SK_10
+!!! end repeat
+!!! call STOP
+!!!end unit
+!!
+!!!@#! *************************************************************************
+!!!@#
+!!!@#unit "Sequential Read From $0080 to $00BF"
+!!!@# call WR_COMMAND
+!!!@# call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+!!!@# call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+!!!@# call STOP
+!!!@# call RD_COMMAND
+!!!@# repeat 64 times
+!!!@#  repeat 8 times
+!!!@#   execute SK_10 receive data Read_Data2
+!!!@#   execute SK_11
+!!!@#   next Read_Data2
+!!!@#  end repeat
+!!!@#  execute SK_10
+!!!@#  execute D_0    ! Acknowledge bit
+!!!@#  execute SK_21
+!!!@#  execute SK_10
+!!!@# end repeat
+!!!@# call STOP
+!!!@#end unit
+!!!@#
+!!!@#unit "Sequential Read From $00C0 to $00FF"
+!!!@# call WR_COMMAND
+!!!@# call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+!!!@# call WR(D_1,D_1,D_0,D_0, D_0,D_0,D_0,D_0)
+!!!@# call STOP
+!!!@# call RD_COMMAND
+!!!@# repeat 64 times
+!!!@#  repeat 8 times
+!!!@#   execute SK_10 receive data Read_Data2
+!!!@#   execute SK_11
+!!!@#   next Read_Data2
+!!!@#  end repeat
+!!!@#  execute SK_10
+!!!@#  execute D_0    ! Acknowledge bit
+!!!@#  execute SK_21
+!!!@#  execute SK_10
+!!!@# end repeat
+!!!@# call STOP
+!!!@#end unit
+

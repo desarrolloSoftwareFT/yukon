@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513634   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:54 2020
+disconnect all
+connect s to "GND"
+connect i to "DC_VCCRTC_C"
+!connect g to "DC_VCCSST_C"
+capacitor 100n, 35, 40, fr8192, re2, wb, ar200m, ed, nocomp
+! "c94_c" test.

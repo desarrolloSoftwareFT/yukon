@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513017  V2f00                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "R_BDX_SRTCRST"
+connect i to "BDX_SRTCRST_FET"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1644" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1596106164   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:58 2020
+disconnect all
+connect i to "FET_SATA_0_RESET_L"
+connect s to "P12V"
+connect gl to "GND" 
+connect g to "UNNAMED_38_NMOSFET_I45_D" 
+resistor 150k, 30, 30, re6, wb, ar1.00, en, ed, sl

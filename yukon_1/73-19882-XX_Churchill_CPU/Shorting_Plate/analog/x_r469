@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes A3P3V P-Pin resistance"
+report "check nodes SPI_BOOT_CLK P-Pin resistance"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "SPI_BOOT_CLK"
+resistor 10,20,100, re1, ar100m,ed
+off failure

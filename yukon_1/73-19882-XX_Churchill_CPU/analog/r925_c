@@ -1,0 +1,8 @@
+!!!!    2    0    1 1596696204   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:56 2020
+disconnect all
+connect s to "GND"
+connect i to "PECI_ID0_C"
+connect g to "P1V05_COMBINED"
+!@resistor 5.1k, 25, 20, re4, wb, ar200m,en, ed
+jumper 20k, re4, ar200m, wb, op

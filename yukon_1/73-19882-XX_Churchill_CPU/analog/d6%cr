@@ -1,0 +1,14 @@
+!!!!    2    0    1 1600563653  V6c5b                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:06 2020
+on failure
+   report parallel devices
+   report "d6 d6%ds"
+   report "c668 1.00u"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "P3V3_STBY_ON"
+diode 990m, 500m, idc10m, co3.0, ar845m
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "d6%cr" test.
+off failure

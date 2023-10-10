@@ -1,0 +1,323 @@
+----------------------------------------
+Shorts Report for "shorts".
+Tue Feb 15 21:24:20 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From:   v                     12070 Open
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                 u51_c
+Message is:
+rework-05122021 on U51_C.13 to U51_C.14
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: srt_bmc_spi2_mux_clk   119172 Open
+                 c639.2
+                 r469.2
+                 u8.Y19
+To:   srt_bmc_spi2_mux_mosi  214108
+                 r468.2
+                 u8.W19
+Common Devices:
+                   u8
+Message is:
+rework-05122021 on U8.Y19 & U8.W1
+------End, 2 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM260704DN
+----------------------------------------
+73-19882-04
+Tue Feb 15 21:50:40 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   775.03
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1810_c HAS FAILED
+12-1011215-01 RES,TKF,240 Ohm,.063 W,1%,
+Measured:   379.88
+Nominal:    270.00
+High Limit: 351.00
+Low Limit:  216.00
+Resistance in OHMS
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DP
+----------------------------------------
+73-19882-04
+Tue Feb 15 21:50:51 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   777.80
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DP
+----------------------------------------
+73-19882-04
+Tue Feb 15 21:50:58 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   778.33
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DP
+----------------------------------------
+73-19882-04
+Tue Feb 15 21:51:05 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   777.80
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DP
+----------------------------------------
+Shorts Report for "shorts".
+Tue Feb 15 22:05:59 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   19
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   22
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   21
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   24
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM260704DP
+----------------------------------------
+Shorts Report for "shorts".
+Tue Feb 15 22:13:18 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   20
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   23
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   22
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   28
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM260704DN
+----------------------------------------
+Shorts Report for "shorts".
+Tue Feb 15 22:20:22 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   21
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   24
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   23
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   28
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM260704DM
+----------------------------------------
+TestJet Report for "testjet".
+Tue Feb 15 22:27:11 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 5  Node jtag_tms_bdx_1v05
+  Measured -0.7             (BRC 11478)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Open #1  Device u1
+  Pin M8  Node cpu_sec_boot_jtag_tdo
+  Measured -0.4             (BRC 11375)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin T18  Node cpu_sec_boot_jtag_tdo
+  Measured -0.6             (BRC 11375)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 0.8              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DQ
+----------------------------------------
+TestJet Report for "testjet".
+Tue Feb 15 22:27:20 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 5  Node jtag_tms_bdx_1v05
+  Measured -0.7             (BRC 11478)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Open #1  Device u1
+  Pin M8  Node cpu_sec_boot_jtag_tdo
+  Measured 1.1              (BRC 11375)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin T18  Node cpu_sec_boot_jtag_tdo
+  Measured 1.0              (BRC 11375)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DQ
+----------------------------------------
+TestJet Report for "testjet".
+Tue Feb 15 22:27:28 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 5  Node jtag_tms_bdx_1v05
+  Measured 1.0              (BRC 11478)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DQ
+----------------------------------------
+TestJet Report for "testjet".
+Tue Feb 15 22:27:37 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 5  Node jtag_tms_bdx_1v05
+  Measured -0.2             (BRC 11478)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DQ
+----------------------------------------
+TestJet Report for "testjet".
+Tue Feb 15 22:27:46 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 5  Node jtag_tms_bdx_1v05
+  Measured -0.5             (BRC 11478)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM260704DQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Feb 15 22:35:46 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   23
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   29
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   28
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   37
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM260704DQ

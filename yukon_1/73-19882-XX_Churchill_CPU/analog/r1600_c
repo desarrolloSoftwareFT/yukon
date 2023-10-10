@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513010  Vd244                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "R_CPU_XDP_PRSNT_L_C"
+connect i to "CPU_XDP_PRESENT_L_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1600_c" test.

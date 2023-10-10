@@ -1,0 +1,219 @@
+# Board Information
+Data_Dir = bdg_data
+CycleVacuum = False
+Board_Serial_Number = Board1
+Board_Path = ./
+Testplan = testplan
+Testhead = th1
+Branch_Parse = False
+Boards_On_Panel = 0
+Test_Board_Number = 0
+# Dual Well Options
+Dual_Well_Enable(1) = True
+Dual_Well_Enable(2) = False
+Dual_Well_Enable(3) = False
+Dual_Well_Enable(4) = False
+
+# Testplan Information
+Sub_Characterize = Characterize
+Fn_Pins = fnPinsfailed
+Sub_Pre_Shorts = Pre_Shorts
+Sub_Shorts = Shorts
+Sub_Analog_Incircuit = Analog_Tests
+Sub_Pre_Powered = Analog_Prepowered_Tests
+Sub_Setup_Power_Supplies = Setup_Power_Supplies
+Sub_Setup_Fixture_Power_Supplies = Setup_FXT_Power_Supplies
+Sub_Setup_CET_Fixture_Power_Supplies = Setup_CET_FXT_Power_Supplies
+Sub_Report_Power_Supply_Limit = Report_Power_Supply_Limit
+Sub_Digital_Incircuit = Digital_Tests
+Sub_Digital_Functional = Functional_Tests
+Sub_Analog_Functional = Analog_Functional_Tests
+Sub_BScan_Interconnect_Tests = BScan_Interconnect_Tests
+Sub_BScan_Incircuit_Tests = BScan_Incircuit_Tests
+Sub_BScan_Powered_Shorts_Tests = BScan_Powered_Shorts_Tests
+Sub_BScan_Silicon_Nails_Tests = BScan_Silicon_Nails_Tests
+Sub_Cover_Extend_Tests = Cover_Extend_Tests
+
+# Pins Tests Options
+Pins_Test = True
+Pins_Executions = 10
+
+# Pre-Shorts Test Options
+Pre_Shorts_Test = True
+Pre_Shorts_Executions = 10
+Pre_Shorts_Report_CPK < 10.00
+Pre_Shorts_Report_Mean_Not_Centered = 66.67%
+Pre_Shorts_Report_Closed_Margin = 2.00
+Pre_Shorts_Report_Open_Margin = 100.00
+
+# Shorts Test Options
+Shorts_Test = True
+Shorts_Executions = 10
+Shorts_Positive_Threshold_Variation = 10.00%
+Shorts_Negative_Threshold_Variation = 10.00%
+Shorts_Positive_Settling_Delay_Variation = 10.00%
+Shorts_Negative_Settling_Delay_Variation = 10.00%
+
+# Analog Incircuit  Test Options
+Analog_Incircuit_Vacuum_Off_Test = True
+Analog_Incircuit_Quality_Test = True
+Analog_Incircuit_Quality_Executions = 10
+Analog_Incircuit_Quality_Report_CPK < 10.00
+Analog_Incircuit_Quality_Report_Mean_Not_Centered = 66.67%
+
+# Analog Pre-Powered Test Options
+Pre_Powered_Vacuum_Off_Test = False
+Pre_Powered_Quality_Test = False
+Pre_Powered_Quality_Executions = 10
+Pre_Powered_Quality_Report_CPK < 10.00
+Pre_Powered_Quality_Report_Mean_Not_Centered = 66.67%
+
+# Digital Incircuit  Test Options
+Digital_Incircuit_Vacuum_Off_Test = True
+Digital_Incircuit_Quality_Test = True
+Digital_Incircuit_Quality_Executions = 10
+Digital_Incircuit_Quality_Report_CPK < 10.00
+Digital_Incircuit_Quality_Report_Mean_Not_Centered = 66.67%
+Digital_Incircuit_Power_Supply_Sensitivity_Test = False
+Digital_Incircuit_Power_Supply_Sensitivity_Executions = 1
+Digital_Incircuit_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+Digital_Incircuit_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+Digital_Incircuit_Speed_Sensitivity_Test = False
+Digital_Incircuit_Speed_Sensitivity_Executions = 1
+Digital_Incircuit_Speed_Sensitivity_Positive_Variation = 10.00%
+Digital_Incircuit_Speed_Sensitivity_Negative_Variation = 10.00%
+Digital_Incircuit_Logic_Level_Sensitivity_Test = False
+Digital_Incircuit_Logic_Level_Sensitivity_Executions = 1
+Digital_Incircuit_Fault_Coverage_Test = True
+Digital_Incircuit_Fault_Coverage_Executions = 1
+
+# Mode Options for verify faults: Driver_only, Receiver_only, Bidir.
+Ver_Fau_Mode = Bidir
+
+# Digital Functional Test Options
+Digital_Functional_Vacuum_Off_Test = False
+Digital_Functional_Quality_Test = False
+Digital_Functional_Quality_Executions = 10
+Digital_Functional_Quality_Report_CPK < 10.00
+Digital_Functional_Quality_Report_Mean_Not_Centered = 66.67%
+Digital_Functional_Power_Supply_Sensitivity_Test = False
+Digital_Functional_Power_Supply_Sensitivity_Executions = 1
+Digital_Functional_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+Digital_Functional_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+Digital_Functional_Speed_Sensitivity_Test = False
+Digital_Functional_Speed_Sensitivity_Executions = 1
+Digital_Functional_Speed_Sensitivity_Positive_Variation = 10.00%
+Digital_Functional_Speed_Sensitivity_Negative_Variation = 10.00%
+Digital_Functional_Logic_Level_Sensitivity_Test = False
+Digital_Functional_Logic_Level_Sensitivity_Executions = 1
+Digital_Functional_Fault_Coverage_Test = False
+Digital_Functional_Fault_Coverage_Executions = 1
+
+# Analog Functional Test Options
+Analog_Functional_Vacuum_Off_Test = True
+Analog_Functional_Quality_Test = True
+Analog_Functional_Quality_Executions = 10
+Analog_Functional_Quality_Report_CPK < 10.00
+Analog_Functional_Quality_Report_Mean_Not_Centered = 66.67%
+Analog_Functional_Power_Supply_Sensitivity_Test = False
+Analog_Functional_Power_Supply_Sensitivity_Executions = 1
+Analog_Functional_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+Analog_Functional_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+Analog_Functional_Speed_Sensitivity_Test = False
+Analog_Functional_Speed_Sensitivity_Executions = 1
+Analog_Functional_Speed_Sensitivity_Positive_Variation = 10.00%
+Analog_Functional_Speed_Sensitivity_Negative_Variation = 10.00%
+Analog_Functional_Logic_Level_Sensitivity_Test = False
+Analog_Functional_Logic_Level_Sensitivity_Executions = 1
+Analog_Functional_Fault_Coverage_Test = False
+Analog_Functional_Fault_Coverage_Executions = 1
+
+# BScan Interconnect Test Options
+BScan_Interconnect_Vacuum_Off_Test = True
+BScan_Interconnect_Quality_Test = True
+BScan_Interconnect_Quality_Executions = 10
+BScan_Interconnect_Quality_Report_CPK < 10.00
+BScan_Interconnect_Quality_Report_Mean_Not_Centered = 66.67%
+BScan_Interconnect_Power_Supply_Sensitivity_Test = False
+BScan_Interconnect_Power_Supply_Sensitivity_Executions = 1
+BScan_Interconnect_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+BScan_Interconnect_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+BScan_Interconnect_Speed_Sensitivity_Test = False
+BScan_Interconnect_Speed_Sensitivity_Executions = 1
+BScan_Interconnect_Speed_Sensitivity_Positive_Variation = 10.00%
+BScan_Interconnect_Speed_Sensitivity_Negative_Variation = 10.00%
+BScan_Interconnect_Logic_Level_Sensitivity_Test = False
+BScan_Interconnect_Logic_Level_Sensitivity_Executions = 1
+BScan_Interconnect_Fault_Coverage_Test = True
+BScan_Interconnect_Fault_Coverage_Executions = 1
+
+# BScan Incircuit Test Options
+BScan_Incircuit_Vacuum_Off_Test = True
+BScan_Incircuit_Quality_Test = True
+BScan_Incircuit_Quality_Executions = 10
+BScan_Incircuit_Quality_Report_CPK < 10.00
+BScan_Incircuit_Quality_Report_Mean_Not_Centered = 66.67%
+BScan_Incircuit_Power_Supply_Sensitivity_Test = False
+BScan_Incircuit_Power_Supply_Sensitivity_Executions = 1
+BScan_Incircuit_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+BScan_Incircuit_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+BScan_Incircuit_Speed_Sensitivity_Test = False
+BScan_Incircuit_Speed_Sensitivity_Executions = 1
+BScan_Incircuit_Speed_Sensitivity_Positive_Variation = 10.00%
+BScan_Incircuit_Speed_Sensitivity_Negative_Variation = 10.00%
+BScan_Incircuit_Logic_Level_Sensitivity_Test = False
+BScan_Incircuit_Logic_Level_Sensitivity_Executions = 1
+BScan_Incircuit_Fault_Coverage_Test = True
+BScan_Incircuit_Fault_Coverage_Executions = 1
+
+# BScan Powered Shorts Test Options
+BScan_Powered_Shorts_Vacuum_Off_Test = True
+BScan_Powered_Shorts_Quality_Test = True
+BScan_Powered_Shorts_Quality_Executions = 10
+BScan_Powered_Shorts_Quality_Report_CPK < 10.00
+BScan_Powered_Shorts_Quality_Report_Mean_Not_Centered = 66.67%
+BScan_Powered_Shorts_Power_Supply_Sensitivity_Test = False
+BScan_Powered_Shorts_Power_Supply_Sensitivity_Executions = 1
+BScan_Powered_Shorts_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+BScan_Powered_Shorts_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+BScan_Powered_Shorts_Speed_Sensitivity_Test = False
+BScan_Powered_Shorts_Speed_Sensitivity_Executions = 1
+BScan_Powered_Shorts_Speed_Sensitivity_Positive_Variation = 10.00%
+BScan_Powered_Shorts_Speed_Sensitivity_Negative_Variation = 10.00%
+
+# BScan Silicon Nails Test Options
+BScan_Silicon_Nails_Vacuum_Off_Test = True
+BScan_Silicon_Nails_Quality_Test = True
+BScan_Silicon_Nails_Quality_Executions = 10
+BScan_Silicon_Nails_Quality_Report_CPK < 10.00
+BScan_Silicon_Nails_Quality_Report_Mean_Not_Centered = 66.67%
+BScan_Silicon_Nails_Power_Supply_Sensitivity_Test = False
+BScan_Silicon_Nails_Power_Supply_Sensitivity_Executions = 1
+BScan_Silicon_Nails_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+BScan_Silicon_Nails_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+BScan_Silicon_Nails_Speed_Sensitivity_Test = False
+BScan_Silicon_Nails_Speed_Sensitivity_Executions = 1
+BScan_Silicon_Nails_Speed_Sensitivity_Positive_Variation = 10.00%
+BScan_Silicon_Nails_Speed_Sensitivity_Negative_Variation = 10.00%
+BScan_Silicon_Nails_Logic_Level_Sensitivity_Test = False
+BScan_Silicon_Nails_Logic_Level_Sensitivity_Executions = 1
+BScan_Silicon_Nails_Fault_Coverage_Test = True
+BScan_Silicon_Nails_Fault_Coverage_Executions = 1
+
+# Cover-Extend Test Options
+Cover_Extend_Quality_Test = False
+Cover_Extend_Quality_Executions = 10
+Cover_Extend_Quality_Report_CPK < 10.00
+Cover_Extend_Quality_Report_Mean_Not_Centered = 66.67%
+Cover_Extend_Power_Supply_Sensitivity_Test = False
+Cover_Extend_Power_Supply_Sensitivity_Executions = 1
+Cover_Extend_Power_Supply_Sensitivity_Positive_Variation = 5.00%
+Cover_Extend_Power_Supply_Sensitivity_Negative_Variation = 5.00%
+Cover_Extend_Speed_Sensitivity_Test = False
+Cover_Extend_Speed_Sensitivity_Executions = 1
+Cover_Extend_Speed_Sensitivity_Positive_Variation = 10.00%
+Cover_Extend_Speed_Sensitivity_Negative_Variation = 10.00%
+Cover_Extend_Logic_Level_Sensitivity_Test = False
+Cover_Extend_Logic_Level_Sensitivity_Executions = 1
+Cover_Extend_Fault_Coverage_Test = False
+Cover_Extend_Fault_Coverage_Executions = 1

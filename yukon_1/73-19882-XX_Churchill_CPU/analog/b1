@@ -1,0 +1,16 @@
+!!!!    2    0    1 1644984060   0000                                         
+! IPG: rev 07.20p  Thu Apr 23 19:36:18 2020
+test powered analog
+  disconnect all
+  nonanalog pins 2,3
+  test "PIN1"
+end test
+
+subtest "PIN1"
+  connect i to "P3V3_VBAT"  !pins 1
+  connect l to ground
+
+  detector dcv, expect 3.0
+ ! measure 3.199, 2.68
+  measure 3.25, 2.68
+end subtest

@@ -1,0 +1,709 @@
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 08 05:37:50 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: BDXDE_DRAM_PWROK       119177 Open
+                 r308.1
+                r512_c.2
+                u1_c.BA9
+               u1_c.CV55
+              u1_c_pch.BA9
+             u1_c_pch.CV55
+To:   dram_pwr_ok_r           12034
+                 r308.2
+                 u1.L12
+Common Devices:
+                  r308
+Message is:
+Check r308
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C7N
+----------------------------------------
+73-19882-04
+Thu Apr 08 05:45:28 2021
+----------------------------------------
+fc_cr1_hs5%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs5
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   464.48m
+High Limit: 990.00m
+Low Limit:  465.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs5 fc_cr1_hs5%ds
+fc_c6_hs5 10.0u
+fc_r6_hs5 2.20k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C7M
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 08 05:56:09 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN0_TACH_ZL           204109   31
+               fc_c355.1
+                fc_l8.2
+               fc_r160.2
+To:   FAN0_TACH_CON           20215   31
+                fc_l8.1
+                fc_p1.1
+Common Devices:
+                 fc_l8
+Message is:
+Check fc_l8
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C7H
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 08 05:56:17 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: DDR4_VTT               217145  414
+                 c623.1
+                 c624.1
+                 c625.1
+                 c626.1
+                 c784.1
+                 r212.2
+                 r214.2
+                 r215.2
+                 r216.2
+                 r217.2
+Too many to print.
+To:   PMOD_DDR4_VTT_OUTS     220149  414
+                x_r67.1
+                x_u05.6
+Common Devices:
+                 x_r67
+                 x_u05
+Message is:
+Check x_r67
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 05:57:13 2021
+----------------------------------------
+fc_r132 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   -68.538M
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+fc_cr22%cr3 HAS FAILED
+
+REPLACE DEVICE: fc_cr22
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 3.6000
+Low Limit:  2.8000
+Forward VOLTAGE drop
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr22 fc_cr22%cr5
+----------------------------------------
+fc_cr22%cr5 HAS FAILED
+
+REPLACE DEVICE: fc_cr22
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr22 fc_cr22%cr3
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 05:57:51 2021
+----------------------------------------
+fc_r132 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   -4.3684M
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 12:39:52 2021
+----------------------------------------
+c679 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   109.50u
+Nominal:    80.000u
+High Limit: 108.00u
+Low Limit:  48.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c676 100n
+----------------------------------------
+c681 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   129.26u
+Nominal:    65.000u
+High Limit: 87.750u
+Low Limit:  39.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c677 100n
+----------------------------------------
+c728 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   126.37u
+Nominal:    70.000u
+High Limit: 94.500u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c727 100n
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.6199k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+r819 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   -6.4086k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r976 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   13.401k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1239 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   13.550k
+Nominal:    10.150k
+High Limit: 13.195k
+Low Limit:  8.1200k
+Resistance in OHMS
+----------------------------------------
+r1242 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   13.729k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1243 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   13.967k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1862_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   7.8463k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r558 HAS FAILED
+12-6157-01 RES,TNF,13.7 k ohm,0.063W,0.1
+Measured:   7.4776k
+Nominal:    13.700k
+High Limit: 17.125k
+Low Limit:  10.275k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c572 100n
+----------------------------------------
+r828 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   61.302
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r863 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   62.113
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r3490 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   65.129
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r868 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   90.252
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3489 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   82.616
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3491 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   84.522
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080c7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 12:40:04 2021
+----------------------------------------
+c681 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   128.44u
+Nominal:    65.000u
+High Limit: 87.750u
+Low Limit:  39.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c677 100n
+----------------------------------------
+c728 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   121.18u
+Nominal:    70.000u
+High Limit: 94.500u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c727 100n
+----------------------------------------
+r819 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   -3.2102k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r976 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   14.011k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1242 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   23.978k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1243 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   15.305k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1862_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   7.2379k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r558 HAS FAILED
+12-6157-01 RES,TNF,13.7 k ohm,0.063W,0.1
+Measured:   8.2245k
+Nominal:    13.700k
+High Limit: 17.125k
+Low Limit:  10.275k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c572 100n
+----------------------------------------
+r828 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   62.658
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r863 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   62.710
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r3490 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   65.622
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r868 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   89.044
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3489 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   85.304
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3491 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   82.348
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080c7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 12:40:14 2021
+----------------------------------------
+c681 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   129.54u
+Nominal:    65.000u
+High Limit: 87.750u
+Low Limit:  39.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c677 100n
+----------------------------------------
+c728 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   119.93u
+Nominal:    70.000u
+High Limit: 94.500u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c727 100n
+----------------------------------------
+r819 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   -3.1885k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r976 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   18.298k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1242 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   23.824k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1243 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   15.406k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1862_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   7.4779k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r558 HAS FAILED
+12-6157-01 RES,TNF,13.7 k ohm,0.063W,0.1
+Measured:   8.7423k
+Nominal:    13.700k
+High Limit: 17.125k
+Low Limit:  10.275k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c572 100n
+----------------------------------------
+r828 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   63.180
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r863 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   64.138
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r3490 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   65.515
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r868 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   89.440
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3489 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   86.531
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3491 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   82.598
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080c7H
+----------------------------------------
+73-19882-04
+Thu Apr 08 12:40:25 2021
+----------------------------------------
+c681 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   129.72u
+Nominal:    65.000u
+High Limit: 87.750u
+Low Limit:  39.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c677 100n
+----------------------------------------
+c728 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   120.43u
+Nominal:    70.000u
+High Limit: 94.500u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c727 100n
+----------------------------------------
+r819 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   -3.7366k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r976 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   15.012k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1242 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   22.198k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1243 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   16.424k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1862_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   7.5291k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r558 HAS FAILED
+12-6157-01 RES,TNF,13.7 k ohm,0.063W,0.1
+Measured:   7.8056k
+Nominal:    13.700k
+High Limit: 17.125k
+Low Limit:  10.275k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c572 100n
+----------------------------------------
+r828 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   62.896
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r863 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   64.251
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r3490 HAS FAILED
+12-2609-01 RES,TKF,82.5 ohm,0.063W,1%,SM
+Measured:   65.502
+Nominal:    82.500
+High Limit: 107.25
+Low Limit:  66.000
+Resistance in OHMS
+----------------------------------------
+r868 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   90.210
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3489 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   82.802
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+r3491 HAS FAILED
+12-3698-02 RES,TKF,127 ohm,0.063W,1%,SM,
+Measured:   85.342
+Nominal:    127.00
+High Limit: 165.10
+Low Limit:  101.60
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080c7H

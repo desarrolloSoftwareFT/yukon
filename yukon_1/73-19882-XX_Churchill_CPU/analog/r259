@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176622   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:23 2020
+disconnect all
+connect s to "DDR4_VTT"
+connect i to "MEM_DDR4_ACT_N"
+connect a to "DDR4_VTT"
+connect b to "MEM_DDR4_ACT_N"
+resistor 60.4, 30, 20, re2, ar200m
+! "r259" test.

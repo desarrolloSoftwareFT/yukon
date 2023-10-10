@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513018  V9299                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "BMC_FAN_INTR"
+connect i to "BMC_FAN_INTR_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1646" test.

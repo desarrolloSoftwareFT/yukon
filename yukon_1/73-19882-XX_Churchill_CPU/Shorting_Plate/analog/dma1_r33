@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes PMOD_A1V2_ENABLE P-Pin resistance"
+report "check nodes UNNAMED_4238_LTC3850UH_I22_RUN1 P-Pin resistance"
+end on failure
+disconnect all
+connect s to "PMOD_A1V2_ENABLE"
+connect i to "UNNAMED_4238_LTC3850UH_I22_RUN1"
+resistor 10,20,100, re1, ar100m,ed
+off failure

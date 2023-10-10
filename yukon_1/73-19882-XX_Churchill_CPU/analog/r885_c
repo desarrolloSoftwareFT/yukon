@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175970   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:31 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PUD_CPU_TXT_AGENT_C"
+jumper 3.70k, re4, wb, ar200m, op
+! "r885_c" test.

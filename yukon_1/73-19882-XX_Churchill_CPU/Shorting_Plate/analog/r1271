@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BMCPHY_LINK_LED_L P-Pin resistance"
+report "check nodes BMCPHY_LINK_LED_L_R P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BMCPHY_LINK_LED_L"
+connect i to "BMCPHY_LINK_LED_L_R"
+resistor 10,20,100, re1, ar100m,ed
+off failure

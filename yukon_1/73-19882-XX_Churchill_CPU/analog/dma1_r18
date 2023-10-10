@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512734  Vc4de                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect i to "PMOD_A3V3_ISENP"
+connect s to "PMOD_A3V3_ISENP_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_r18" test.

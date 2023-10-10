@@ -1,0 +1,8 @@
+!!!!    2    0    1 1603146549   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:36 2020
+disconnect all
+connect i to "PMOD_P0V6_VTT_DIMM_VSENSE_P"
+connect s to "ADC0_0V6_DDR4_CH11"
+connect g to "GND"
+!B!resistor 1k, 25, 20, re3, ar100m, ed,en
+resistor 1k,25,20,re3,ar100m,ed, en

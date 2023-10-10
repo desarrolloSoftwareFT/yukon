@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600513075  V6f32                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:50 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PSEQ_VMON_P12V"
+connect g to "UNNAMED_4221_LM339_I29_IP"
+connect g to "P12V"
+!B!resistor 4.7k, 25, 20, re4, wb, ar200m, wa705m
+resistor 4.7k,25,20,re4,wb,ar200m,wa15m

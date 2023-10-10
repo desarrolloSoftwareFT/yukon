@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600997895  V0ada                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:11 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_VOB_VSENSE_N_M1"
+connect a to "GND"
+connect b to "PMOD_VOB_VSENSE_N_M1"
+!@resistor 100, 30, 20, re2, ar100m
+jumper 20, re1, ar200m, wb,ed
+! "r9_m1" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176059   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:00 2020
+on failure
+   report parallel devices
+   report "r615 1.10k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_3V3_VBAT_CH14"
+capacitor 100n, 35, 40, fr1024, re2, ar20.0m, nocomp
+! "c536" test.
+off failure

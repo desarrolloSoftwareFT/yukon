@@ -1,0 +1,8 @@
+!!!!    2    0    1 1605051292   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "FAN1_TACH_CON"
+connect i to "FAN1_TACH_ZL"
+!B!jumper  20.0,  re1, ar200m
+jumper 35.0,re1,ar200m,ed
+! "fc_l9" test.

@@ -1,0 +1,43 @@
+!!!!   24    0    1 1594176863  V9c00                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:24 2020
+
+disable "u40_u27"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u40.Y22
+!IPG:    u27.N13
+!IPG:
+
+chain "u40_u27"
+  tdi "SF_JTAG_TDI"
+  tdo "SF_JTAG_TDO"
+  tms "SF_JTAG_TMS"
+  tck "SF_JTAG_TCK"
+  trst "SF_JTAG_TRST"
+  devices
+    "u40", "custom_lib/16-101031-01.bsm", "fg484", no
+    "u27", "custom_lib/m2s025ts-vf256.bsd", "vf256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node SF_JTAG_TDI
+!IPG: Family information could not be found for node SF_JTAG_TMS
+!IPG: Family information could not be found for node SF_JTAG_TCK
+!IPG: Family information could not be found for node SF_JTAG_TRST
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+end nodes
+
+end disable
+

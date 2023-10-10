@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176522   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:43 2020
+on failure
+   report "check fc_r86"
+   report "check_fc_r144"
+end on failure
+disconnect all
+connect s to "UNNAMED_142_NMOSFET_I35_G"
+!connect i to "FAN67_PWM_CON"  !Cisco-RU-Removed, Damaged Pin
+connect i to "GND"
+!connect g to "GND"            !Cisco-RU-Damaged Pin
+resistor 4.92k, 30, 20, re3, ar500m, wa1.11m
+off failure

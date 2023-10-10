@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175930   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:51 2020
+on failure
+   report parallel devices
+   report "dma1_r31 10.0k"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "PWR_A2V5_PGOOD"
+jumper 4.86k, re4, wb, ar200m, op
+! "bma1_rpg" test.
+off failure

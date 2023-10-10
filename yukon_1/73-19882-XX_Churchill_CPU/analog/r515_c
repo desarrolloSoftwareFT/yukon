@@ -1,0 +1,15 @@
+!!!!    2    0    1 1596687682   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:32 2020
+on failure
+   report parallel devices
+   report "c391_c 10.0n"
+   report "c466_c 10.0n"
+   report "c390_c 10.0n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "M_AB_VREF_R"
+connect g to "P1V2_VDDQ"
+connect g to "P1V2_VDDQ_VREF_IN" 
+resistor 1k, 25, 20, re3, ar200m, en, ed
+off failure

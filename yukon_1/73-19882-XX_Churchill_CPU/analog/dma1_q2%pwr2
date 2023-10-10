@@ -1,0 +1,53 @@
+!!!!    2    0    1 1600569556  V03f4                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:53:41 2020
+
+test powered analog
+   disconnect all
+   test "NFET_OFF"
+   test "NFET_ON"
+end test
+
+!*****************************************!
+
+subtest "NFET_ON"
+   disconnect all
+
+   connect s to pins "D"
+   connect a to pins "G"
+
+   connect i to pins "D"
+   connect l to pins "S"
+
+!   connect g to pins "S"
+!   connect g to ground
+
+  source dcv, amplitude 3, ico1, terminated 50, on
+  auxiliary dcv, amplitude 2.5, ico1, on
+
+  detector dcv, expect 0.5
+  wait 50m
+  measure 0.1, -0.1
+end subtest
+
+subtest "NFET_OFF"
+   disconnect all
+
+   connect s to pins "D"
+   connect a to pins "G"
+
+   connect i to pins "D"
+   connect l to pins "S"
+
+!   connect g to pins "S"
+!   connect g to ground
+
+  source dcv, amplitude 3, ico1, terminated 50, on
+  auxiliary dcv, amplitude 0.0, ico1, on
+
+  detector dcv, expect 3
+  wait 20m
+  measure 3.5, 0.3
+end subtest
+
+!*****************************************!

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1614725494   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:15 2020
+disconnect all
+connect s to "GND"
+connect i to "PD_DDR_TEST1_C"
+connect a to "GND"
+connect b to "PD_DDR_TEST1_C"
+resistor 49.9+4, 30, 20, re2, ar200m,en,ed,wb
+! "r507_c" test.

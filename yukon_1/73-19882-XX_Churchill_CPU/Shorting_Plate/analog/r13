@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes A2_5V P-Pin resistance"
+report "check nodes MB_CPU_PRESENT_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "A2_5V"
+connect i to "MB_CPU_PRESENT_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600569442  Va2cb                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:44:38 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "BM_SPI_GOLD_CS0_L"
+resistor 10k, 25, 20, re4, wb, ar100m

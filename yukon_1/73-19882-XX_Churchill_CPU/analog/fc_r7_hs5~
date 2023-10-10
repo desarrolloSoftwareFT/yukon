@@ -1,0 +1,6 @@
+!!!!    2    0    1 1600521344  V2ee5                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:30 2020
+disconnect all
+connect s to "GND"
+connect i to "FAN1011_ISENSE"
+resistor 634, 25, 20, re3, ar200m

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1604770498   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:38 2020
+disconnect all
+connect s to "GND"
+connect i to "FAN1011_PWM_CON_ZL"
+!connect gl to "FAN1011_PWM_CON"
+!connect g to "FAN1011_P12V_PWR_F"
+capacitor 1n,35, 35, fr8192, re2, wb, ar150.0m, ed, comp, en
+warning "excessive plus tolerance or high limit."
+! "c207" is a commented test.
+

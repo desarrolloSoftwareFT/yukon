@@ -1,0 +1,2231 @@
+  223    0    1 1594188498   0000                                         
+-- *********************************************************************************************************************************
+-- FAMILY:	SmartFusion2
+-- DEVICE:	M2S025TS
+-- PACKAGE:	256 VF
+-- DESIGNER VERSION: 11.4.0.112
+--         Include all package pins in the BSDL files including:
+--         (SARno37877)
+--                - For ProAsic and ProAsicPlus
+--                  VPP, VPN, AVDD, AGND and NC (No connects)
+--                - For ProAsic3/E
+--                  NC (No connects)
+
+
+-- This BSDL file reflects the pre-programming JTAG
+-- behavior. To reflect the post-programming JTAG
+-- behavior, edit this file as described below:
+
+-- If the I/O is unused or configured as an output,
+-- the input boundary scan cell becomes internal only.
+-- The input buffer is turned off, and you can not
+-- transfer data from the I/O pad into the input scan
+-- cell. For example:
+-- IO(1) is an output, the BSDL entry would be modified
+-- from:
+-- " 0 (BC_1, IO(1), input,    X),           "&
+-- " 1 (BC_1, IO(1), output3,  X,  2, 0, Z), "&
+-- " 2 (BC_1, *,     control,  0),           "&
+-- to:
+-- " 0 (BC_1, *,     internal, X),           "&
+-- " 1 (BC_1, IO(1), output3,  X,  2, 0, Z), "&
+-- " 2 (BC_1, *,     control,  0),           "&
+-- No modification is necessary when the I/O is
+-- configured as an input.
+
+
+entity M2S025TSvf256 is
+    generic (PHYSICAL_PIN_MAP : string := "vf256");
+    port(
+        DEVRST_N    :linkage bit;
+        IO_A2       :inout bit;
+        IO_A3       :inout bit;
+        IO_A4       :inout bit;
+        IO_A5       :inout bit;
+        IO_A7       :inout bit;
+        IO_A8       :inout bit;
+        IO_A9       :inout bit;
+        IO_B1       :inout bit;
+        IO_B2       :inout bit;
+        IO_B3       :inout bit;
+        IO_B5       :inout bit;
+        IO_B6       :inout bit;
+        IO_B7       :inout bit;
+        IO_B8       :inout bit;
+        IO_C1       :inout bit;
+        IO_C3       :inout bit;
+        IO_C4       :inout bit;
+        IO_C5       :inout bit;
+        IO_C6       :inout bit;
+        IO_C8       :inout bit;
+        IO_C9       :inout bit;
+        IO_D1       :inout bit;
+        IO_D2       :inout bit;
+        IO_D3       :inout bit;
+        IO_D4       :inout bit;
+        IO_D6       :inout bit;
+        IO_D7       :inout bit;
+        IO_D8       :inout bit;
+        IO_D9       :inout bit;
+        IO_E2       :inout bit;
+        IO_E4       :inout bit;
+        IO_E8       :inout bit;
+        IO_F2       :inout bit;
+        IO_F3       :inout bit;
+        IO_F4       :inout bit;
+        IO_F5       :inout bit;
+        IO_G1       :inout bit;
+        IO_G2       :inout bit;
+        IO_G3       :inout bit;
+        IO_G5       :inout bit;
+        IO_H1       :inout bit;
+        IO_H3       :inout bit;
+        IO_H4       :inout bit;
+        IO_H5       :inout bit;
+        IO_J1       :inout bit;
+        IO_J2       :inout bit;
+        IO_J3       :inout bit;
+        IO_J5       :inout bit;
+        IO_K1       :inout bit;
+        IO_L1       :inout bit;
+        IO_M7       :inout bit;
+        IO_M8       :inout bit;
+        IO_M9       :inout bit;
+        IO_N7       :inout bit;
+        IO_N8       :inout bit;
+        IO_P6       :inout bit;
+        IO_P7       :inout bit;
+        IO_P8       :inout bit;
+        IO_P9       :inout bit;
+        IO_R6       :inout bit;
+        IO_R8       :inout bit;
+        IO_R9       :inout bit;
+        IO_T6       :inout bit;
+        IO_T7       :inout bit;
+        IO_T8       :inout bit;
+        IO_T9       :inout bit;
+        IO_A10      :inout bit;
+        IO_A12      :inout bit;
+        IO_A13      :inout bit;
+        IO_A14      :inout bit;
+        IO_A15      :inout bit;
+        IO_B10      :inout bit;
+        IO_B11      :inout bit;
+        IO_B12      :inout bit;
+        IO_B13      :inout bit;
+        IO_B15      :inout bit;
+        IO_B16      :inout bit;
+        IO_C10      :inout bit;
+        IO_C11      :inout bit;
+        IO_C12      :inout bit;
+        IO_C14      :inout bit;
+        IO_C15      :inout bit;
+        IO_C16      :inout bit;
+        IO_D11      :inout bit;
+        IO_D12      :inout bit;
+        IO_D13      :inout bit;
+        IO_D14      :inout bit;
+        IO_D16      :inout bit;
+        IO_E10      :inout bit;
+        IO_E11      :inout bit;
+        IO_E12      :inout bit;
+        IO_E14      :inout bit;
+        IO_E15      :inout bit;
+        IO_E16      :inout bit;
+        IO_F13      :inout bit;
+        IO_F14      :inout bit;
+        IO_F15      :inout bit;
+        IO_F16      :inout bit;
+        IO_G12      :inout bit;
+        IO_G13      :inout bit;
+        IO_G14      :inout bit;
+        IO_G16      :inout bit;
+        IO_H11      :in bit;
+        IO_H12      :inout bit;
+        IO_H13      :inout bit;
+        IO_H14      :inout bit;
+        IO_H15      :inout bit;
+        IO_H16      :inout bit;
+        IO_J12      :inout bit;
+        IO_J13      :inout bit;
+        IO_J14      :inout bit;
+        IO_J16      :inout bit;
+        IO_K12      :inout bit;
+        IO_K14      :inout bit;
+        IO_K15      :inout bit;
+        IO_K16      :inout bit;
+        IO_L11      :inout bit;
+        IO_L12      :inout bit;
+        IO_L13      :inout bit;
+        IO_L14      :inout bit;
+        IO_L15      :inout bit;
+        IO_M10      :inout bit;
+        IO_M13      :inout bit;
+        IO_M15      :inout bit;
+        IO_M16      :inout bit;
+        IO_N10      :inout bit;
+        IO_N14      :inout bit;
+        IO_N15      :inout bit;
+        IO_N16      :inout bit;
+        IO_P10      :inout bit;
+        IO_P12      :inout bit;
+        IO_P13      :inout bit;
+        IO_R10      :inout bit;
+        IO_R11      :inout bit;
+        IO_R12      :inout bit;
+        IO_R13      :inout bit;
+        IO_T11      :inout bit;
+        IO_T12      :inout bit;
+        IO_T13      :inout bit;
+        JTAGSEL     :linkage bit;
+        MDDR_IMP_CALIB:linkage bit;
+        SERDES_0_RXD0_N:linkage bit;
+        SERDES_0_RXD0_P:linkage bit;
+        SERDES_0_RXD2_N:linkage bit;
+        SERDES_0_RXD2_P:linkage bit;
+        SERDES_0_TXD0_N:linkage bit;
+        SERDES_0_TXD0_P:linkage bit;
+        SERDES_0_TXD2_N:linkage bit;
+        SERDES_0_TXD2_P:linkage bit;
+        SERDES_0_L01_REXT:linkage bit;
+        SERDES_0_L23_REXT:linkage bit;
+        SERDES_0_L01_REFRET:linkage bit;
+        SERDES_0_L23_REFRET:linkage bit;
+        TCK         :in bit;
+        TDI         :in bit;
+        TDO         :out bit;
+        TMS         :in bit;
+        TRST        :in bit;
+        VDD         :linkage bit_vector (0 to 8   );
+        VDDA0       :linkage bit_vector (0 to 7   );
+        VDDI0       :linkage bit_vector (0 to 9   );
+        VDDI1       :linkage bit;
+        VDDI2       :linkage bit_vector (0 to 2   );
+        VDDI3       :linkage bit;
+        VDDI4       :linkage bit_vector (0 to 1   );
+        VDDI5       :linkage bit;
+        VDDI6       :linkage bit;
+        VDDI7       :linkage bit_vector (0 to 1   );
+        VPP         :linkage bit_vector (0 to 1   );
+        VPPNVM      :linkage bit;
+        VREF0       :linkage bit_vector (0 to 1   );
+        VSS         :linkage bit_vector (0 to 44  );
+        VSSA0       :linkage bit_vector (0 to 3   );
+        VSSNVM      :linkage bit;
+        XTLOSC_AUX_XTAL:linkage bit;
+        XTLOSC_AUX_EXTAL:linkage bit;
+        XTLOSC_MAIN_XTAL:linkage bit;
+        XTLOSC_MAIN_EXTAL:linkage bit
+    );
+
+    use STD_1149_1_1994.all;
+
+    attribute COMPONENT_CONFORMANCE of M2S025TSvf256: entity is
+        "STD_1149_1_1993";
+
+    attribute PIN_MAP of M2S025TSvf256 : entity is PHYSICAL_PIN_MAP;
+    constant vf256 : PIN_MAP_STRING:=
+        "DEVRST_N  :M11,   "&
+        "IO_A2     :A2,    "&
+        "IO_A3     :A3,    "&
+        "IO_A4     :A4,    "&
+        "IO_A5     :A5,    "&
+        "IO_A7     :A7,    "&
+        "IO_A8     :A8,    "&
+        "IO_A9     :A9,    "&
+        "IO_B1     :B1,    "&
+        "IO_B2     :B2,    "&
+        "IO_B3     :B3,    "&
+        "IO_B5     :B5,    "&
+        "IO_B6     :B6,    "&
+        "IO_B7     :B7,    "&
+        "IO_B8     :B8,    "&
+        "IO_C1     :C1,    "&
+        "IO_C3     :C3,    "&
+        "IO_C4     :C4,    "&
+        "IO_C5     :C5,    "&
+        "IO_C6     :C6,    "&
+        "IO_C8     :C8,    "&
+        "IO_C9     :C9,    "&
+        "IO_D1     :D1,    "&
+        "IO_D2     :D2,    "&
+        "IO_D3     :D3,    "&
+        "IO_D4     :D4,    "&
+        "IO_D6     :D6,    "&
+        "IO_D7     :D7,    "&
+        "IO_D8     :D8,    "&
+        "IO_D9     :D9,    "&
+        "IO_E2     :E2,    "&
+        "IO_E4     :E4,    "&
+        "IO_E8     :E8,    "&
+        "IO_F2     :F2,    "&
+        "IO_F3     :F3,    "&
+        "IO_F4     :F4,    "&
+        "IO_F5     :F5,    "&
+        "IO_G1     :G1,    "&
+        "IO_G2     :G2,    "&
+        "IO_G3     :G3,    "&
+        "IO_G5     :G5,    "&
+        "IO_H1     :H1,    "&
+        "IO_H3     :H3,    "&
+        "IO_H4     :H4,    "&
+        "IO_H5     :H5,    "&
+        "IO_J1     :J1,    "&
+        "IO_J2     :J2,    "&
+        "IO_J3     :J3,    "&
+        "IO_J5     :J5,    "&
+        "IO_K1     :K1,    "&
+        "IO_L1     :L1,    "&
+        "IO_M7     :M7,    "&
+        "IO_M8     :M8,    "&
+        "IO_M9     :M9,    "&
+        "IO_N7     :N7,    "&
+        "IO_N8     :N8,    "&
+        "IO_P6     :P6,    "&
+        "IO_P7     :P7,    "&
+        "IO_P8     :P8,    "&
+        "IO_P9     :P9,    "&
+        "IO_R6     :R6,    "&
+        "IO_R8     :R8,    "&
+        "IO_R9     :R9,    "&
+        "IO_T6     :T6,    "&
+        "IO_T7     :T7,    "&
+        "IO_T8     :T8,    "&
+        "IO_T9     :T9,    "&
+        "IO_A10    :A10,   "&
+        "IO_A12    :A12,   "&
+        "IO_A13    :A13,   "&
+        "IO_A14    :A14,   "&
+        "IO_A15    :A15,   "&
+        "IO_B10    :B10,   "&
+        "IO_B11    :B11,   "&
+        "IO_B12    :B12,   "&
+        "IO_B13    :B13,   "&
+        "IO_B15    :B15,   "&
+        "IO_B16    :B16,   "&
+        "IO_C10    :C10,   "&
+        "IO_C11    :C11,   "&
+        "IO_C12    :C12,   "&
+        "IO_C14    :C14,   "&
+        "IO_C15    :C15,   "&
+        "IO_C16    :C16,   "&
+        "IO_D11    :D11,   "&
+        "IO_D12    :D12,   "&
+        "IO_D13    :D13,   "&
+        "IO_D14    :D14,   "&
+        "IO_D16    :D16,   "&
+        "IO_E10    :E10,   "&
+        "IO_E11    :E11,   "&
+        "IO_E12    :E12,   "&
+        "IO_E14    :E14,   "&
+        "IO_E15    :E15,   "&
+        "IO_E16    :E16,   "&
+        "IO_F13    :F13,   "&
+        "IO_F14    :F14,   "&
+        "IO_F15    :F15,   "&
+        "IO_F16    :F16,   "&
+        "IO_G12    :G12,   "&
+        "IO_G13    :G13,   "&
+        "IO_G14    :G14,   "&
+        "IO_G16    :G16,   "&
+        "IO_H11    :H11,   "&
+        "IO_H12    :H12,   "&
+        "IO_H13    :H13,   "&
+        "IO_H14    :H14,   "&
+        "IO_H15    :H15,   "&
+        "IO_H16    :H16,   "&
+        "IO_J12    :J12,   "&
+        "IO_J13    :J13,   "&
+        "IO_J14    :J14,   "&
+        "IO_J16    :J16,   "&
+        "IO_K12    :K12,   "&
+        "IO_K14    :K14,   "&
+        "IO_K15    :K15,   "&
+        "IO_K16    :K16,   "&
+        "IO_L11    :L11,   "&
+        "IO_L12    :L12,   "&
+        "IO_L13    :L13,   "&
+        "IO_L14    :L14,   "&
+        "IO_L15    :L15,   "&
+        "IO_M10    :M10,   "&
+        "IO_M13    :M13,   "&
+        "IO_M15    :M15,   "&
+        "IO_M16    :M16,   "&
+        "IO_N10    :N10,   "&
+        "IO_N14    :N14,   "&
+        "IO_N15    :N15,   "&
+        "IO_N16    :N16,   "&
+        "IO_P10    :P10,   "&
+        "IO_P12    :P12,   "&
+        "IO_P13    :P13,   "&
+        "IO_R10    :R10,   "&
+        "IO_R11    :R11,   "&
+        "IO_R12    :R12,   "&
+        "IO_R13    :R13,   "&
+        "IO_T11    :T11,   "&
+        "IO_T12    :T12,   "&
+        "IO_T13    :T13,   "&
+        "JTAGSEL   :M12,   "&
+        "MDDR_IMP_CALIB:E1,    "&
+        "SERDES_0_RXD0_N:P1,    "&
+        "SERDES_0_RXD0_P:N1,    "&
+        "SERDES_0_RXD2_N:N3,    "&
+        "SERDES_0_RXD2_P:P3,    "&
+        "SERDES_0_TXD0_N:R2,    "&
+        "SERDES_0_TXD0_P:T2,    "&
+        "SERDES_0_TXD2_N:R4,    "&
+        "SERDES_0_TXD2_P:T4,    "&
+        "SERDES_0_L01_REXT:L2,    "&
+        "SERDES_0_L23_REXT:K3,    "&
+        "SERDES_0_L01_REFRET:L4,    "&
+        "SERDES_0_L23_REFRET:L6,    "&
+        "TCK       :R14,   "&
+        "TDI       :P16,   "&
+        "TDO       :P14,   "&
+        "TMS       :N11,   "&
+        "TRST      :N13,   "&
+        "VDD       :(J7,   H8,    G9,    G7,    J9,    K8,    K10,   "&
+                   "L7,    M4),   "&
+        "VDDA0     :(N5,   K5,    L5,    M5,    L3,    M6,    F11,   "&
+                   "E6),   "&
+        "VDDI0     :(A11,  E13,   F8,    F10,   A1,    B4,    B14,   "&
+                   "C7,    D10,   E3),   "&
+        "VDDI1     :G11,   "&
+        "VDDI2     :(J11,  M14,   J15),  "&
+        "VDDI3     :N12,   "&
+        "VDDI4     :(R7,   P11),  "&
+        "VDDI5     :K2,    "&
+        "VDDI6     :H6,    "&
+        "VDDI7     :(F6,   H2),   "&
+        "VPP       :(H10,  L9),   "&
+        "VPPNVM    :K11,   "&
+        "VREF0     :(E7,   E9),   "&
+        "VSS       :(T5,   T10,   T14,   A6,    A16,   B9,    C2,    "&
+                   "C13,   D5,    D15,   F1,    F7,    F9,    G4,    "&
+                   "G6,    G8,    G10,   G15,   H7,    H9,    J4,    "&
+                   "J6,    J8,    J10,   K7,    K9,    K13,   L8,    "&
+                   "L16,   M1,    M2,    M3,    N2,    N4,    N6,    "&
+                   "N9,    P2,    P4,    P5,    P15,   R1,    R3,    "&
+                   "R5,    T1,    T3),   "&
+        "VSSA0     :(K4,   F12,   K6,    E5),   "&
+        "VSSNVM    :L10,   "&
+        "XTLOSC_AUX_XTAL:T15,   "&
+        "XTLOSC_AUX_EXTAL:T16,   "&
+        "XTLOSC_MAIN_XTAL:R16,   "&
+        "XTLOSC_MAIN_EXTAL:R15    ";
+
+    attribute TAP_SCAN_IN of TDI              : signal is true;
+    attribute TAP_SCAN_MODE of TMS            : signal is true;
+    attribute TAP_SCAN_OUT of TDO             : signal is true;
+    attribute TAP_SCAN_RESET of TRST          : signal is true;
+    attribute TAP_SCAN_CLOCK of TCK           : signal is ( 2.00e+007, BOTH);
+
+    attribute INSTRUCTION_LENGTH of M2S025TSvf256 : entity is    8;
+    attribute INSTRUCTION_OPCODE of M2S025TSvf256 : entity is
+                    "BYPASS (11111111), "&
+                    "IDCODE (00001111), "&
+                    "EXTEST (00000000), "&
+                    "SAMPLE (00000001), "&
+                    "HIGHZ (00000111), "&
+                    "CLAMP (00000101), "&
+                    "INTEST (00000110), "&
+                    "USERCODE (00001110) ";
+    attribute INSTRUCTION_CAPTURE of M2S025TSvf256 : entity is "XXXXXX01";
+
+
+    attribute IDCODE_REGISTER of M2S025TSvf256 : entity is  -- noidcode
+--                     "XXXX1111100000000100000111001111";
+  "XXXXxxxxxxxxxxxxxxxxxxxxxxxxxxx1";
+    attribute USERCODE_REGISTER of M2S025TSvf256 : entity is
+                    "00000000000000000000000000000000";
+
+    attribute REGISTER_ACCESS of M2S025TSvf256 : entity is
+                    "BOUNDARY(EXTEST, SAMPLE, INTEST), "&
+                    "BYPASS(BYPASS, HIGHZ, CLAMP), "&
+                    "DEVICE_ID(IDCODE)";
+    attribute BOUNDARY_LENGTH of M2S025TSvf256 : entity is  882;
+    attribute BOUNDARY_REGISTER of M2S025TSvf256 : entity is
+
+-- num   cell      port       function   safe   [ccell disval rslt]
+
+--BSR Pad not Bonded. Scan Cell     0
+"     0	(BC_1, *,internal,   X), "&
+"     1	(BC_1, *,internal,   X), "&
+"     2	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell     1
+"     3	(BC_1, *,internal,   X), "&
+"     4	(BC_1, *,internal,   X), "&
+"     5	(BC_1, *,internal,   X), "&
+
+--BSR  R13    IO_R13. Scan Cell     2
+"     6	(BC_1, IO_R13,	output3,   X,     7, 0, Z), "&
+"     7	(BC_1, *,	control, 0), "&
+"     8	(BC_1, IO_R13,	input,   X), "&
+
+--BSR  T13    IO_T13. Scan Cell     3
+"     9	(BC_1, IO_T13,	output3,   X,    10, 0, Z), "&
+"    10	(BC_1, *,	control, 0), "&
+"    11	(BC_1, IO_T13,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell     4
+"    12	(BC_1, *,internal,   X), "&
+"    13	(BC_1, *,internal,   X), "&
+"    14	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell     5
+"    15	(BC_1, *,internal,   X), "&
+"    16	(BC_1, *,internal,   X), "&
+"    17	(BC_1, *,internal,   X), "&
+
+--BSR  P13    IO_P13. Scan Cell     6
+"    18	(BC_1, IO_P13,	output3,   X,    19, 0, Z), "&
+"    19	(BC_1, *,	control, 0), "&
+"    20	(BC_1, IO_P13,	input,   X), "&
+
+--BSR  P12    IO_P12. Scan Cell     7
+"    21	(BC_1, IO_P12,	output3,   X,    22, 0, Z), "&
+"    22	(BC_1, *,	control, 0), "&
+"    23	(BC_1, IO_P12,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell     8
+"    24	(BC_1, *,internal,   X), "&
+"    25	(BC_1, *,internal,   X), "&
+"    26	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell     9
+"    27	(BC_1, *,internal,   X), "&
+"    28	(BC_1, *,internal,   X), "&
+"    29	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    10
+"    30	(BC_1, *,internal,   X), "&
+"    31	(BC_1, *,internal,   X), "&
+"    32	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    11
+"    33	(BC_1, *,internal,   X), "&
+"    34	(BC_1, *,internal,   X), "&
+"    35	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    12
+"    36	(BC_1, *,internal,   X), "&
+"    37	(BC_1, *,internal,   X), "&
+"    38	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    13
+"    39	(BC_1, *,internal,   X), "&
+"    40	(BC_1, *,internal,   X), "&
+"    41	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    14
+"    42	(BC_1, *,internal,   X), "&
+"    43	(BC_1, *,internal,   X), "&
+"    44	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    15
+"    45	(BC_1, *,internal,   X), "&
+"    46	(BC_1, *,internal,   X), "&
+"    47	(BC_1, *,internal,   X), "&
+
+--BSR  R12    IO_R12. Scan Cell    16
+"    48	(BC_1, IO_R12,	output3,   X,    49, 0, Z), "&
+"    49	(BC_1, *,	control, 0), "&
+"    50	(BC_1, IO_R12,	input,   X), "&
+
+--BSR  T12    IO_T12. Scan Cell    17
+"    51	(BC_1, IO_T12,	output3,   X,    52, 0, Z), "&
+"    52	(BC_1, *,	control, 0), "&
+"    53	(BC_1, IO_T12,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    18
+"    54	(BC_1, *,internal,   X), "&
+"    55	(BC_1, *,internal,   X), "&
+"    56	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    19
+"    57	(BC_1, *,internal,   X), "&
+"    58	(BC_1, *,internal,   X), "&
+"    59	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    20
+"    60	(BC_1, *,internal,   X), "&
+"    61	(BC_1, *,internal,   X), "&
+"    62	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    21
+"    63	(BC_1, *,internal,   X), "&
+"    64	(BC_1, *,internal,   X), "&
+"    65	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    22
+"    66	(BC_1, *,internal,   X), "&
+"    67	(BC_1, *,internal,   X), "&
+"    68	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    23
+"    69	(BC_1, *,internal,   X), "&
+"    70	(BC_1, *,internal,   X), "&
+"    71	(BC_1, *,internal,   X), "&
+
+--BSR  R11    IO_R11. Scan Cell    24
+"    72	(BC_1, IO_R11,	output3,   X,    73, 0, Z), "&
+"    73	(BC_1, *,	control, 0), "&
+"    74	(BC_1, IO_R11,	input,   X), "&
+
+--BSR  T11    IO_T11. Scan Cell    25
+"    75	(BC_1, IO_T11,	output3,   X,    76, 0, Z), "&
+"    76	(BC_1, *,	control, 0), "&
+"    77	(BC_1, IO_T11,	input,   X), "&
+
+--BSR  N10    IO_N10. Scan Cell    26
+"    78	(BC_1, IO_N10,	output3,   X,    79, 0, Z), "&
+"    79	(BC_1, *,	control, 0), "&
+"    80	(BC_1, IO_N10,	input,   X), "&
+
+--BSR  P10    IO_P10. Scan Cell    27
+"    81	(BC_1, IO_P10,	output3,   X,    82, 0, Z), "&
+"    82	(BC_1, *,	control, 0), "&
+"    83	(BC_1, IO_P10,	input,   X), "&
+
+--BSR  M10    IO_M10. Scan Cell    28
+"    84	(BC_1, IO_M10,	output3,   X,    85, 0, Z), "&
+"    85	(BC_1, *,	control, 0), "&
+"    86	(BC_1, IO_M10,	input,   X), "&
+
+--BSR  M9    IO_M9. Scan Cell    29
+"    87	(BC_1, IO_M9,	output3,   X,    88, 0, Z), "&
+"    88	(BC_1, *,	control, 0), "&
+"    89	(BC_1, IO_M9,	input,   X), "&
+
+--BSR  R10    IO_R10. Scan Cell    30
+"    90	(BC_1, IO_R10,	output3,   X,    91, 0, Z), "&
+"    91	(BC_1, *,	control, 0), "&
+"    92	(BC_1, IO_R10,	input,   X), "&
+
+--BSR  P9    IO_P9. Scan Cell    31
+"    93	(BC_1, IO_P9,	output3,   X,    94, 0, Z), "&
+"    94	(BC_1, *,	control, 0), "&
+"    95	(BC_1, IO_P9,	input,   X), "&
+
+--BSR  R9    IO_R9. Scan Cell    32
+"    96	(BC_1, IO_R9,	output3,   X,    97, 0, Z), "&
+"    97	(BC_1, *,	control, 0), "&
+"    98	(BC_1, IO_R9,	input,   X), "&
+
+--BSR  T9    IO_T9. Scan Cell    33
+"    99	(BC_1, IO_T9,	output3,   X,   100, 0, Z), "&
+"   100	(BC_1, *,	control, 0), "&
+"   101	(BC_1, IO_T9,	input,   X), "&
+
+--BSR  M8    IO_M8. Scan Cell    34
+"   102	(BC_1, IO_M8,	output3,   X,   103, 0, Z), "&
+"   103	(BC_1, *,	control, 0), "&
+"   104	(BC_1, IO_M8,	input,   X), "&
+
+--BSR  N8    IO_N8. Scan Cell    35
+"   105	(BC_1, IO_N8,	output3,   X,   106, 0, Z), "&
+"   106	(BC_1, *,	control, 0), "&
+"   107	(BC_1, IO_N8,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    36
+"   108	(BC_1, *,internal,   X), "&
+"   109	(BC_1, *,internal,   X), "&
+"   110	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    37
+"   111	(BC_1, *,internal,   X), "&
+"   112	(BC_1, *,internal,   X), "&
+"   113	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    38
+"   114	(BC_1, *,internal,   X), "&
+"   115	(BC_1, *,internal,   X), "&
+"   116	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    39
+"   117	(BC_1, *,internal,   X), "&
+"   118	(BC_1, *,internal,   X), "&
+"   119	(BC_1, *,internal,   X), "&
+
+--BSR  P8    IO_P8. Scan Cell    40
+"   120	(BC_1, IO_P8,	output3,   X,   121, 0, Z), "&
+"   121	(BC_1, *,	control, 0), "&
+"   122	(BC_1, IO_P8,	input,   X), "&
+
+--BSR  R8    IO_R8. Scan Cell    41
+"   123	(BC_1, IO_R8,	output3,   X,   124, 0, Z), "&
+"   124	(BC_1, *,	control, 0), "&
+"   125	(BC_1, IO_R8,	input,   X), "&
+
+--BSR  N7    IO_N7. Scan Cell    42
+"   126	(BC_1, IO_N7,	output3,   X,   127, 0, Z), "&
+"   127	(BC_1, *,	control, 0), "&
+"   128	(BC_1, IO_N7,	input,   X), "&
+
+--BSR  M7    IO_M7. Scan Cell    43
+"   129	(BC_1, IO_M7,	output3,   X,   130, 0, Z), "&
+"   130	(BC_1, *,	control, 0), "&
+"   131	(BC_1, IO_M7,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    44
+"   132	(BC_1, *,internal,   X), "&
+"   133	(BC_1, *,internal,   X), "&
+"   134	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    45
+"   135	(BC_1, *,internal,   X), "&
+"   136	(BC_1, *,internal,   X), "&
+"   137	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    46
+"   138	(BC_1, *,internal,   X), "&
+"   139	(BC_1, *,internal,   X), "&
+"   140	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    47
+"   141	(BC_1, *,internal,   X), "&
+"   142	(BC_1, *,internal,   X), "&
+"   143	(BC_1, *,internal,   X), "&
+
+--BSR  T8    IO_T8. Scan Cell    48
+"   144	(BC_1, IO_T8,	output3,   X,   145, 0, Z), "&
+"   145	(BC_1, *,	control, 0), "&
+"   146	(BC_1, IO_T8,	input,   X), "&
+
+--BSR  T7    IO_T7. Scan Cell    49
+"   147	(BC_1, IO_T7,	output3,   X,   148, 0, Z), "&
+"   148	(BC_1, *,	control, 0), "&
+"   149	(BC_1, IO_T7,	input,   X), "&
+
+--BSR  P7    IO_P7. Scan Cell    50
+"   150	(BC_1, IO_P7,	output3,   X,   151, 0, Z), "&
+"   151	(BC_1, *,	control, 0), "&
+"   152	(BC_1, IO_P7,	input,   X), "&
+
+--BSR  P6    IO_P6. Scan Cell    51
+"   153	(BC_1, IO_P6,	output3,   X,   154, 0, Z), "&
+"   154	(BC_1, *,	control, 0), "&
+"   155	(BC_1, IO_P6,	input,   X), "&
+
+--BSR  T6    IO_T6. Scan Cell    52
+"   156	(BC_1, IO_T6,	output3,   X,   157, 0, Z), "&
+"   157	(BC_1, *,	control, 0), "&
+"   158	(BC_1, IO_T6,	input,   X), "&
+
+--BSR  R6    IO_R6. Scan Cell    53
+"   159	(BC_1, IO_R6,	output3,   X,   160, 0, Z), "&
+"   160	(BC_1, *,	control, 0), "&
+"   161	(BC_1, IO_R6,	input,   X), "&
+
+--BSR  L1    IO_L1. Scan Cell    54
+"   162	(BC_1, IO_L1,	output3,   X,   163, 0, Z), "&
+"   163	(BC_1, *,	control, 0), "&
+"   164	(BC_1, IO_L1,	input,   X), "&
+
+--BSR  K1    IO_K1. Scan Cell    55
+"   165	(BC_1, IO_K1,	output3,   X,   166, 0, Z), "&
+"   166	(BC_1, *,	control, 0), "&
+"   167	(BC_1, IO_K1,	input,   X), "&
+
+--BSR  J1    IO_J1. Scan Cell    56
+"   168	(BC_1, IO_J1,	output3,   X,   169, 0, Z), "&
+"   169	(BC_1, *,	control, 0), "&
+"   170	(BC_1, IO_J1,	input,   X), "&
+
+--BSR  J2    IO_J2. Scan Cell    57
+"   171	(BC_1, IO_J2,	output3,   X,   172, 0, Z), "&
+"   172	(BC_1, *,	control, 0), "&
+"   173	(BC_1, IO_J2,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    58
+"   174	(BC_1, *,internal,   X), "&
+"   175	(BC_1, *,internal,   X), "&
+"   176	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    59
+"   177	(BC_1, *,internal,   X), "&
+"   178	(BC_1, *,internal,   X), "&
+"   179	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    60
+"   180	(BC_1, *,internal,   X), "&
+"   181	(BC_1, *,internal,   X), "&
+"   182	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    61
+"   183	(BC_1, *,internal,   X), "&
+"   184	(BC_1, *,internal,   X), "&
+"   185	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    62
+"   186	(BC_1, *,internal,   X), "&
+"   187	(BC_1, *,internal,   X), "&
+"   188	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    63
+"   189	(BC_1, *,internal,   X), "&
+"   190	(BC_1, *,internal,   X), "&
+"   191	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    64
+"   192	(BC_1, *,internal,   X), "&
+"   193	(BC_1, *,internal,   X), "&
+"   194	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    65
+"   195	(BC_1, *,internal,   X), "&
+"   196	(BC_1, *,internal,   X), "&
+"   197	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    66
+"   198	(BC_1, *,internal,   X), "&
+"   199	(BC_1, *,internal,   X), "&
+"   200	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    67
+"   201	(BC_1, *,internal,   X), "&
+"   202	(BC_1, *,internal,   X), "&
+"   203	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    68
+"   204	(BC_1, *,internal,   X), "&
+"   205	(BC_1, *,internal,   X), "&
+"   206	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    69
+"   207	(BC_1, *,internal,   X), "&
+"   208	(BC_1, *,internal,   X), "&
+"   209	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    70
+"   210	(BC_1, *,internal,   X), "&
+"   211	(BC_1, *,internal,   X), "&
+"   212	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    71
+"   213	(BC_1, *,internal,   X), "&
+"   214	(BC_1, *,internal,   X), "&
+"   215	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    72
+"   216	(BC_1, *,internal,   X), "&
+"   217	(BC_1, *,internal,   X), "&
+"   218	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    73
+"   219	(BC_1, *,internal,   X), "&
+"   220	(BC_1, *,internal,   X), "&
+"   221	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    74
+"   222	(BC_1, *,internal,   X), "&
+"   223	(BC_1, *,internal,   X), "&
+"   224	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    75
+"   225	(BC_1, *,internal,   X), "&
+"   226	(BC_1, *,internal,   X), "&
+"   227	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    76
+"   228	(BC_1, *,internal,   X), "&
+"   229	(BC_1, *,internal,   X), "&
+"   230	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    77
+"   231	(BC_1, *,internal,   X), "&
+"   232	(BC_1, *,internal,   X), "&
+"   233	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    78
+"   234	(BC_1, *,internal,   X), "&
+"   235	(BC_1, *,internal,   X), "&
+"   236	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    79
+"   237	(BC_1, *,internal,   X), "&
+"   238	(BC_1, *,internal,   X), "&
+"   239	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    80
+"   240	(BC_1, *,internal,   X), "&
+"   241	(BC_1, *,internal,   X), "&
+"   242	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    81
+"   243	(BC_1, *,internal,   X), "&
+"   244	(BC_1, *,internal,   X), "&
+"   245	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    82
+"   246	(BC_1, *,internal,   X), "&
+"   247	(BC_1, *,internal,   X), "&
+"   248	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    83
+"   249	(BC_1, *,internal,   X), "&
+"   250	(BC_1, *,internal,   X), "&
+"   251	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    84
+"   252	(BC_1, *,internal,   X), "&
+"   253	(BC_1, *,internal,   X), "&
+"   254	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    85
+"   255	(BC_1, *,internal,   X), "&
+"   256	(BC_1, *,internal,   X), "&
+"   257	(BC_1, *,internal,   X), "&
+
+--BSR  H1    IO_H1. Scan Cell    86
+"   258	(BC_1, IO_H1,	output3,   X,   259, 0, Z), "&
+"   259	(BC_1, *,	control, 0), "&
+"   260	(BC_1, IO_H1,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    87
+"   261	(BC_1, *,internal,   X), "&
+"   262	(BC_1, *,internal,   X), "&
+"   263	(BC_1, *,internal,   X), "&
+
+--BSR  J3    IO_J3. Scan Cell    88
+"   264	(BC_1, IO_J3,	output3,   X,   265, 0, Z), "&
+"   265	(BC_1, *,	control, 0), "&
+"   266	(BC_1, IO_J3,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    89
+"   267	(BC_1, *,internal,   X), "&
+"   268	(BC_1, *,internal,   X), "&
+"   269	(BC_1, *,internal,   X), "&
+
+--BSR  J5    IO_J5. Scan Cell    90
+"   270	(BC_1, IO_J5,	output3,   X,   271, 0, Z), "&
+"   271	(BC_1, *,	control, 0), "&
+"   272	(BC_1, IO_J5,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    91
+"   273	(BC_1, *,internal,   X), "&
+"   274	(BC_1, *,internal,   X), "&
+"   275	(BC_1, *,internal,   X), "&
+
+--BSR  H5    IO_H5. Scan Cell    92
+"   276	(BC_1, IO_H5,	output3,   X,   277, 0, Z), "&
+"   277	(BC_1, *,	control, 0), "&
+"   278	(BC_1, IO_H5,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell    93
+"   279	(BC_1, *,internal,   X), "&
+"   280	(BC_1, *,internal,   X), "&
+"   281	(BC_1, *,internal,   X), "&
+
+--BSR  H3    IO_H3. Scan Cell    94
+"   282	(BC_1, IO_H3,	output3,   X,   283, 0, Z), "&
+"   283	(BC_1, *,	control, 0), "&
+"   284	(BC_1, IO_H3,	input,   X), "&
+
+--BSR  H4    IO_H4. Scan Cell    95
+"   285	(BC_1, IO_H4,	output3,   X,   286, 0, Z), "&
+"   286	(BC_1, *,	control, 0), "&
+"   287	(BC_1, IO_H4,	input,   X), "&
+
+--BSR  G3    IO_G3. Scan Cell    96
+"   288	(BC_1, IO_G3,	output3,   X,   289, 0, Z), "&
+"   289	(BC_1, *,	control, 0), "&
+"   290	(BC_1, IO_G3,	input,   X), "&
+
+--BSR  G2    IO_G2. Scan Cell    97
+"   291	(BC_1, IO_G2,	output3,   X,   292, 0, Z), "&
+"   292	(BC_1, *,	control, 0), "&
+"   293	(BC_1, IO_G2,	input,   X), "&
+
+--BSR  G1    IO_G1. Scan Cell    98
+"   294	(BC_1, IO_G1,	output3,   X,   295, 0, Z), "&
+"   295	(BC_1, *,	control, 0), "&
+"   296	(BC_1, IO_G1,	input,   X), "&
+
+--BSR  F2    IO_F2. Scan Cell    99
+"   297	(BC_1, IO_F2,	output3,   X,   298, 0, Z), "&
+"   298	(BC_1, *,	control, 0), "&
+"   299	(BC_1, IO_F2,	input,   X), "&
+
+--BSR  F4    IO_F4. Scan Cell   100
+"   300	(BC_1, IO_F4,	output3,   X,   301, 0, Z), "&
+"   301	(BC_1, *,	control, 0), "&
+"   302	(BC_1, IO_F4,	input,   X), "&
+
+--BSR  F3    IO_F3. Scan Cell   101
+"   303	(BC_1, IO_F3,	output3,   X,   304, 0, Z), "&
+"   304	(BC_1, *,	control, 0), "&
+"   305	(BC_1, IO_F3,	input,   X), "&
+
+--BSR  G5    IO_G5. Scan Cell   102
+"   306	(BC_1, IO_G5,	output3,   X,   307, 0, Z), "&
+"   307	(BC_1, *,	control, 0), "&
+"   308	(BC_1, IO_G5,	input,   X), "&
+
+--BSR  F5    IO_F5. Scan Cell   103
+"   309	(BC_1, IO_F5,	output3,   X,   310, 0, Z), "&
+"   310	(BC_1, *,	control, 0), "&
+"   311	(BC_1, IO_F5,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   104
+"   312	(BC_1, *,internal,   X), "&
+"   313	(BC_1, *,internal,   X), "&
+"   314	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   105
+"   315	(BC_1, *,internal,   X), "&
+"   316	(BC_1, *,internal,   X), "&
+"   317	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   106
+"   318	(BC_1, *,internal,   X), "&
+"   319	(BC_1, *,internal,   X), "&
+"   320	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   107
+"   321	(BC_1, *,internal,   X), "&
+"   322	(BC_1, *,internal,   X), "&
+"   323	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   108
+"   324	(BC_1, *,internal,   X), "&
+"   325	(BC_1, *,internal,   X), "&
+"   326	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   109
+"   327	(BC_1, *,internal,   X), "&
+"   328	(BC_1, *,internal,   X), "&
+"   329	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   110
+"   330	(BC_1, *,internal,   X), "&
+"   331	(BC_1, *,internal,   X), "&
+"   332	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   111
+"   333	(BC_1, *,internal,   X), "&
+"   334	(BC_1, *,internal,   X), "&
+"   335	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   112
+"   336	(BC_1, *,internal,   X), "&
+"   337	(BC_1, *,internal,   X), "&
+"   338	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   113
+"   339	(BC_1, *,internal,   X), "&
+"   340	(BC_1, *,internal,   X), "&
+"   341	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   114
+"   342	(BC_1, *,internal,   X), "&
+"   343	(BC_1, *,internal,   X), "&
+"   344	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   115
+"   345	(BC_1, *,internal,   X), "&
+"   346	(BC_1, *,internal,   X), "&
+"   347	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   116
+"   348	(BC_1, *,internal,   X), "&
+"   349	(BC_1, *,internal,   X), "&
+"   350	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   117
+"   351	(BC_1, *,internal,   X), "&
+"   352	(BC_1, *,internal,   X), "&
+"   353	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   118
+"   354	(BC_1, *,internal,   X), "&
+"   355	(BC_1, *,internal,   X), "&
+"   356	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   119
+"   357	(BC_1, *,internal,   X), "&
+"   358	(BC_1, *,internal,   X), "&
+"   359	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   120
+"   360	(BC_1, *,internal,   X), "&
+"   361	(BC_1, *,internal,   X), "&
+"   362	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   121
+"   363	(BC_1, *,internal,   X), "&
+"   364	(BC_1, *,internal,   X), "&
+"   365	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   122
+"   366	(BC_1, *,internal,   X), "&
+"   367	(BC_1, *,internal,   X), "&
+"   368	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   123
+"   369	(BC_1, *,internal,   X), "&
+"   370	(BC_1, *,internal,   X), "&
+"   371	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   124
+"   372	(BC_1, *,internal,   X), "&
+"   373	(BC_1, *,internal,   X), "&
+"   374	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   125
+"   375	(BC_1, *,internal,   X), "&
+"   376	(BC_1, *,internal,   X), "&
+"   377	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   126
+"   378	(BC_1, *,internal,   X), "&
+"   379	(BC_1, *,internal,   X), "&
+"   380	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   127
+"   381	(BC_1, *,internal,   X), "&
+"   382	(BC_1, *,internal,   X), "&
+"   383	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   128
+"   384	(BC_1, *,internal,   X), "&
+"   385	(BC_1, *,internal,   X), "&
+"   386	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   129
+"   387	(BC_1, *,internal,   X), "&
+"   388	(BC_1, *,internal,   X), "&
+"   389	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   130
+"   390	(BC_1, *,internal,   X), "&
+"   391	(BC_1, *,internal,   X), "&
+"   392	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   131
+"   393	(BC_1, *,internal,   X), "&
+"   394	(BC_1, *,internal,   X), "&
+"   395	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   132
+"   396	(BC_1, *,internal,   X), "&
+"   397	(BC_1, *,internal,   X), "&
+"   398	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   133
+"   399	(BC_1, *,internal,   X), "&
+"   400	(BC_1, *,internal,   X), "&
+"   401	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   134
+"   402	(BC_1, *,internal,   X), "&
+"   403	(BC_1, *,internal,   X), "&
+"   404	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   135
+"   405	(BC_1, *,internal,   X), "&
+"   406	(BC_1, *,internal,   X), "&
+"   407	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   136
+"   408	(BC_1, *,internal,   X), "&
+"   409	(BC_1, *,internal,   X), "&
+"   410	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   137
+"   411	(BC_1, *,internal,   X), "&
+"   412	(BC_1, *,internal,   X), "&
+"   413	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   138
+"   414	(BC_1, *,internal,   X), "&
+"   415	(BC_1, *,internal,   X), "&
+"   416	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   139
+"   417	(BC_1, *,internal,   X), "&
+"   418	(BC_1, *,internal,   X), "&
+"   419	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   140
+"   420	(BC_1, *,internal,   X), "&
+"   421	(BC_1, *,internal,   X), "&
+"   422	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   141
+"   423	(BC_1, *,internal,   X), "&
+"   424	(BC_1, *,internal,   X), "&
+"   425	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   142
+"   426	(BC_1, *,internal,   X), "&
+"   427	(BC_1, *,internal,   X), "&
+"   428	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   143
+"   429	(BC_1, *,internal,   X), "&
+"   430	(BC_1, *,internal,   X), "&
+"   431	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   144
+"   432	(BC_1, *,internal,   X), "&
+"   433	(BC_1, *,internal,   X), "&
+"   434	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   145
+"   435	(BC_1, *,internal,   X), "&
+"   436	(BC_1, *,internal,   X), "&
+"   437	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   146
+"   438	(BC_1, *,internal,   X), "&
+"   439	(BC_1, *,internal,   X), "&
+"   440	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   147
+"   441	(BC_1, *,internal,   X), "&
+"   442	(BC_1, *,internal,   X), "&
+"   443	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   148
+"   444	(BC_1, *,internal,   X), "&
+"   445	(BC_1, *,internal,   X), "&
+"   446	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   149
+"   447	(BC_1, *,internal,   X), "&
+"   448	(BC_1, *,internal,   X), "&
+"   449	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   150
+"   450	(BC_1, *,internal,   X), "&
+"   451	(BC_1, *,internal,   X), "&
+"   452	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   151
+"   453	(BC_1, *,internal,   X), "&
+"   454	(BC_1, *,internal,   X), "&
+"   455	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   152
+"   456	(BC_1, *,internal,   X), "&
+"   457	(BC_1, *,internal,   X), "&
+"   458	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   153
+"   459	(BC_1, *,internal,   X), "&
+"   460	(BC_1, *,internal,   X), "&
+"   461	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   154
+"   462	(BC_1, *,internal,   X), "&
+"   463	(BC_1, *,internal,   X), "&
+"   464	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   155
+"   465	(BC_1, *,internal,   X), "&
+"   466	(BC_1, *,internal,   X), "&
+"   467	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   156
+"   468	(BC_1, *,internal,   X), "&
+"   469	(BC_1, *,internal,   X), "&
+"   470	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   157
+"   471	(BC_1, *,internal,   X), "&
+"   472	(BC_1, *,internal,   X), "&
+"   473	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   158
+"   474	(BC_1, *,internal,   X), "&
+"   475	(BC_1, *,internal,   X), "&
+"   476	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   159
+"   477	(BC_1, *,internal,   X), "&
+"   478	(BC_1, *,internal,   X), "&
+"   479	(BC_1, *,internal,   X), "&
+
+--BSR  D3    IO_D3. Scan Cell   160
+"   480	(BC_1, IO_D3,	output3,   X,   481, 0, Z), "&
+"   481	(BC_1, *,	control, 0), "&
+"   482	(BC_1, IO_D3,	input,   X), "&
+
+--BSR  E2    IO_E2. Scan Cell   161
+"   483	(BC_1, IO_E2,	output3,   X,   484, 0, Z), "&
+"   484	(BC_1, *,	control, 0), "&
+"   485	(BC_1, IO_E2,	input,   X), "&
+
+--BSR  D4    IO_D4. Scan Cell   162
+"   486	(BC_1, IO_D4,	output3,   X,   487, 0, Z), "&
+"   487	(BC_1, *,	control, 0), "&
+"   488	(BC_1, IO_D4,	input,   X), "&
+
+--BSR  E4    IO_E4. Scan Cell   163
+"   489	(BC_1, IO_E4,	output3,   X,   490, 0, Z), "&
+"   490	(BC_1, *,	control, 0), "&
+"   491	(BC_1, IO_E4,	input,   X), "&
+
+--BSR  C1    IO_C1. Scan Cell   164
+"   492	(BC_1, IO_C1,	output3,   X,   493, 0, Z), "&
+"   493	(BC_1, *,	control, 0), "&
+"   494	(BC_1, IO_C1,	input,   X), "&
+
+--BSR  B1    IO_B1. Scan Cell   165
+"   495	(BC_1, IO_B1,	output3,   X,   496, 0, Z), "&
+"   496	(BC_1, *,	control, 0), "&
+"   497	(BC_1, IO_B1,	input,   X), "&
+
+--BSR  C4    IO_C4. Scan Cell   166
+"   498	(BC_1, IO_C4,	output3,   X,   499, 0, Z), "&
+"   499	(BC_1, *,	control, 0), "&
+"   500	(BC_1, IO_C4,	input,   X), "&
+
+--BSR  C3    IO_C3. Scan Cell   167
+"   501	(BC_1, IO_C3,	output3,   X,   502, 0, Z), "&
+"   502	(BC_1, *,	control, 0), "&
+"   503	(BC_1, IO_C3,	input,   X), "&
+
+--BSR  C5    IO_C5. Scan Cell   168
+"   504	(BC_1, IO_C5,	output3,   X,   505, 0, Z), "&
+"   505	(BC_1, *,	control, 0), "&
+"   506	(BC_1, IO_C5,	input,   X), "&
+
+--BSR  D6    IO_D6. Scan Cell   169
+"   507	(BC_1, IO_D6,	output3,   X,   508, 0, Z), "&
+"   508	(BC_1, *,	control, 0), "&
+"   509	(BC_1, IO_D6,	input,   X), "&
+
+--BSR  D1    IO_D1. Scan Cell   170
+"   510	(BC_1, IO_D1,	output3,   X,   511, 0, Z), "&
+"   511	(BC_1, *,	control, 0), "&
+"   512	(BC_1, IO_D1,	input,   X), "&
+
+--BSR  D2    IO_D2. Scan Cell   171
+"   513	(BC_1, IO_D2,	output3,   X,   514, 0, Z), "&
+"   514	(BC_1, *,	control, 0), "&
+"   515	(BC_1, IO_D2,	input,   X), "&
+
+--BSR  B2    IO_B2. Scan Cell   172
+"   516	(BC_1, IO_B2,	output3,   X,   517, 0, Z), "&
+"   517	(BC_1, *,	control, 0), "&
+"   518	(BC_1, IO_B2,	input,   X), "&
+
+--BSR  A2    IO_A2. Scan Cell   173
+"   519	(BC_1, IO_A2,	output3,   X,   520, 0, Z), "&
+"   520	(BC_1, *,	control, 0), "&
+"   521	(BC_1, IO_A2,	input,   X), "&
+
+--BSR  B6    IO_B6. Scan Cell   174
+"   522	(BC_1, IO_B6,	output3,   X,   523, 0, Z), "&
+"   523	(BC_1, *,	control, 0), "&
+"   524	(BC_1, IO_B6,	input,   X), "&
+
+--BSR  B5    IO_B5. Scan Cell   175
+"   525	(BC_1, IO_B5,	output3,   X,   526, 0, Z), "&
+"   526	(BC_1, *,	control, 0), "&
+"   527	(BC_1, IO_B5,	input,   X), "&
+
+--BSR  A5    IO_A5. Scan Cell   176
+"   528	(BC_1, IO_A5,	output3,   X,   529, 0, Z), "&
+"   529	(BC_1, *,	control, 0), "&
+"   530	(BC_1, IO_A5,	input,   X), "&
+
+--BSR  A4    IO_A4. Scan Cell   177
+"   531	(BC_1, IO_A4,	output3,   X,   532, 0, Z), "&
+"   532	(BC_1, *,	control, 0), "&
+"   533	(BC_1, IO_A4,	input,   X), "&
+
+--BSR  A3    IO_A3. Scan Cell   178
+"   534	(BC_1, IO_A3,	output3,   X,   535, 0, Z), "&
+"   535	(BC_1, *,	control, 0), "&
+"   536	(BC_1, IO_A3,	input,   X), "&
+
+--BSR  B3    IO_B3. Scan Cell   179
+"   537	(BC_1, IO_B3,	output3,   X,   538, 0, Z), "&
+"   538	(BC_1, *,	control, 0), "&
+"   539	(BC_1, IO_B3,	input,   X), "&
+
+--BSR  B7    IO_B7. Scan Cell   180
+"   540	(BC_1, IO_B7,	output3,   X,   541, 0, Z), "&
+"   541	(BC_1, *,	control, 0), "&
+"   542	(BC_1, IO_B7,	input,   X), "&
+
+--BSR  C6    IO_C6. Scan Cell   181
+"   543	(BC_1, IO_C6,	output3,   X,   544, 0, Z), "&
+"   544	(BC_1, *,	control, 0), "&
+"   545	(BC_1, IO_C6,	input,   X), "&
+
+--BSR  A7    IO_A7. Scan Cell   182
+"   546	(BC_1, IO_A7,	output3,   X,   547, 0, Z), "&
+"   547	(BC_1, *,	control, 0), "&
+"   548	(BC_1, IO_A7,	input,   X), "&
+
+--BSR  A8    IO_A8. Scan Cell   183
+"   549	(BC_1, IO_A8,	output3,   X,   550, 0, Z), "&
+"   550	(BC_1, *,	control, 0), "&
+"   551	(BC_1, IO_A8,	input,   X), "&
+
+--BSR  C8    IO_C8. Scan Cell   184
+"   552	(BC_1, IO_C8,	output3,   X,   553, 0, Z), "&
+"   553	(BC_1, *,	control, 0), "&
+"   554	(BC_1, IO_C8,	input,   X), "&
+
+--BSR  C9    IO_C9. Scan Cell   185
+"   555	(BC_1, IO_C9,	output3,   X,   556, 0, Z), "&
+"   556	(BC_1, *,	control, 0), "&
+"   557	(BC_1, IO_C9,	input,   X), "&
+
+--BSR  D7    IO_D7. Scan Cell   186
+"   558	(BC_1, IO_D7,	output3,   X,   559, 0, Z), "&
+"   559	(BC_1, *,	control, 0), "&
+"   560	(BC_1, IO_D7,	input,   X), "&
+
+--BSR  D8    IO_D8. Scan Cell   187
+"   561	(BC_1, IO_D8,	output3,   X,   562, 0, Z), "&
+"   562	(BC_1, *,	control, 0), "&
+"   563	(BC_1, IO_D8,	input,   X), "&
+
+--BSR  A9    IO_A9. Scan Cell   188
+"   564	(BC_1, IO_A9,	output3,   X,   565, 0, Z), "&
+"   565	(BC_1, *,	control, 0), "&
+"   566	(BC_1, IO_A9,	input,   X), "&
+
+--BSR  A10    IO_A10. Scan Cell   189
+"   567	(BC_1, IO_A10,	output3,   X,   568, 0, Z), "&
+"   568	(BC_1, *,	control, 0), "&
+"   569	(BC_1, IO_A10,	input,   X), "&
+
+--BSR  B8    IO_B8. Scan Cell   190
+"   570	(BC_1, IO_B8,	output3,   X,   571, 0, Z), "&
+"   571	(BC_1, *,	control, 0), "&
+"   572	(BC_1, IO_B8,	input,   X), "&
+
+--BSR  C10    IO_C10. Scan Cell   191
+"   573	(BC_1, IO_C10,	output3,   X,   574, 0, Z), "&
+"   574	(BC_1, *,	control, 0), "&
+"   575	(BC_1, IO_C10,	input,   X), "&
+
+--BSR  B11    IO_B11. Scan Cell   192
+"   576	(BC_1, IO_B11,	output3,   X,   577, 0, Z), "&
+"   577	(BC_1, *,	control, 0), "&
+"   578	(BC_1, IO_B11,	input,   X), "&
+
+--BSR  B10    IO_B10. Scan Cell   193
+"   579	(BC_1, IO_B10,	output3,   X,   580, 0, Z), "&
+"   580	(BC_1, *,	control, 0), "&
+"   581	(BC_1, IO_B10,	input,   X), "&
+
+--BSR  D9    IO_D9. Scan Cell   194
+"   582	(BC_1, IO_D9,	output3,   X,   583, 0, Z), "&
+"   583	(BC_1, *,	control, 0), "&
+"   584	(BC_1, IO_D9,	input,   X), "&
+
+--BSR  E8    IO_E8. Scan Cell   195
+"   585	(BC_1, IO_E8,	output3,   X,   586, 0, Z), "&
+"   586	(BC_1, *,	control, 0), "&
+"   587	(BC_1, IO_E8,	input,   X), "&
+
+--BSR  B12    IO_B12. Scan Cell   196
+"   588	(BC_1, IO_B12,	output3,   X,   589, 0, Z), "&
+"   589	(BC_1, *,	control, 0), "&
+"   590	(BC_1, IO_B12,	input,   X), "&
+
+--BSR  C11    IO_C11. Scan Cell   197
+"   591	(BC_1, IO_C11,	output3,   X,   592, 0, Z), "&
+"   592	(BC_1, *,	control, 0), "&
+"   593	(BC_1, IO_C11,	input,   X), "&
+
+--BSR  E10    IO_E10. Scan Cell   198
+"   594	(BC_1, IO_E10,	output3,   X,   595, 0, Z), "&
+"   595	(BC_1, *,	control, 0), "&
+"   596	(BC_1, IO_E10,	input,   X), "&
+
+--BSR  D11    IO_D11. Scan Cell   199
+"   597	(BC_1, IO_D11,	output3,   X,   598, 0, Z), "&
+"   598	(BC_1, *,	control, 0), "&
+"   599	(BC_1, IO_D11,	input,   X), "&
+
+--BSR  A13    IO_A13. Scan Cell   200
+"   600	(BC_1, IO_A13,	output3,   X,   601, 0, Z), "&
+"   601	(BC_1, *,	control, 0), "&
+"   602	(BC_1, IO_A13,	input,   X), "&
+
+--BSR  A12    IO_A12. Scan Cell   201
+"   603	(BC_1, IO_A12,	output3,   X,   604, 0, Z), "&
+"   604	(BC_1, *,	control, 0), "&
+"   605	(BC_1, IO_A12,	input,   X), "&
+
+--BSR  A14    IO_A14. Scan Cell   202
+"   606	(BC_1, IO_A14,	output3,   X,   607, 0, Z), "&
+"   607	(BC_1, *,	control, 0), "&
+"   608	(BC_1, IO_A14,	input,   X), "&
+
+--BSR  A15    IO_A15. Scan Cell   203
+"   609	(BC_1, IO_A15,	output3,   X,   610, 0, Z), "&
+"   610	(BC_1, *,	control, 0), "&
+"   611	(BC_1, IO_A15,	input,   X), "&
+
+--BSR  C12    IO_C12. Scan Cell   204
+"   612	(BC_1, IO_C12,	output3,   X,   613, 0, Z), "&
+"   613	(BC_1, *,	control, 0), "&
+"   614	(BC_1, IO_C12,	input,   X), "&
+
+--BSR  D12    IO_D12. Scan Cell   205
+"   615	(BC_1, IO_D12,	output3,   X,   616, 0, Z), "&
+"   616	(BC_1, *,	control, 0), "&
+"   617	(BC_1, IO_D12,	input,   X), "&
+
+--BSR  B13    IO_B13. Scan Cell   206
+"   618	(BC_1, IO_B13,	output3,   X,   619, 0, Z), "&
+"   619	(BC_1, *,	control, 0), "&
+"   620	(BC_1, IO_B13,	input,   X), "&
+
+--BSR  C14    IO_C14. Scan Cell   207
+"   621	(BC_1, IO_C14,	output3,   X,   622, 0, Z), "&
+"   622	(BC_1, *,	control, 0), "&
+"   623	(BC_1, IO_C14,	input,   X), "&
+
+--BSR  E11    IO_E11. Scan Cell   208
+"   624	(BC_1, IO_E11,	output3,   X,   625, 0, Z), "&
+"   625	(BC_1, *,	control, 0), "&
+"   626	(BC_1, IO_E11,	input,   X), "&
+
+--BSR  E12    IO_E12. Scan Cell   209
+"   627	(BC_1, IO_E12,	output3,   X,   628, 0, Z), "&
+"   628	(BC_1, *,	control, 0), "&
+"   629	(BC_1, IO_E12,	input,   X), "&
+
+--BSR  B16    IO_B16. Scan Cell   210
+"   630	(BC_1, IO_B16,	output3,   X,   631, 0, Z), "&
+"   631	(BC_1, *,	control, 0), "&
+"   632	(BC_1, IO_B16,	input,   X), "&
+
+--BSR  C16    IO_C16. Scan Cell   211
+"   633	(BC_1, IO_C16,	output3,   X,   634, 0, Z), "&
+"   634	(BC_1, *,	control, 0), "&
+"   635	(BC_1, IO_C16,	input,   X), "&
+
+--BSR  D16    IO_D16. Scan Cell   212
+"   636	(BC_1, IO_D16,	output3,   X,   637, 0, Z), "&
+"   637	(BC_1, *,	control, 0), "&
+"   638	(BC_1, IO_D16,	input,   X), "&
+
+--BSR  E16    IO_E16. Scan Cell   213
+"   639	(BC_1, IO_E16,	output3,   X,   640, 0, Z), "&
+"   640	(BC_1, *,	control, 0), "&
+"   641	(BC_1, IO_E16,	input,   X), "&
+
+--BSR  F16    IO_F16. Scan Cell   214
+"   642	(BC_1, IO_F16,	output3,   X,   643, 0, Z), "&
+"   643	(BC_1, *,	control, 0), "&
+"   644	(BC_1, IO_F16,	input,   X), "&
+
+--BSR  F15    IO_F15. Scan Cell   215
+"   645	(BC_1, IO_F15,	output3,   X,   646, 0, Z), "&
+"   646	(BC_1, *,	control, 0), "&
+"   647	(BC_1, IO_F15,	input,   X), "&
+
+--BSR  F14    IO_F14. Scan Cell   216
+"   648	(BC_1, IO_F14,	output3,   X,   649, 0, Z), "&
+"   649	(BC_1, *,	control, 0), "&
+"   650	(BC_1, IO_F14,	input,   X), "&
+
+--BSR  E15    IO_E15. Scan Cell   217
+"   651	(BC_1, IO_E15,	output3,   X,   652, 0, Z), "&
+"   652	(BC_1, *,	control, 0), "&
+"   653	(BC_1, IO_E15,	input,   X), "&
+
+--BSR  E14    IO_E14. Scan Cell   218
+"   654	(BC_1, IO_E14,	output3,   X,   655, 0, Z), "&
+"   655	(BC_1, *,	control, 0), "&
+"   656	(BC_1, IO_E14,	input,   X), "&
+
+--BSR  F13    IO_F13. Scan Cell   219
+"   657	(BC_1, IO_F13,	output3,   X,   658, 0, Z), "&
+"   658	(BC_1, *,	control, 0), "&
+"   659	(BC_1, IO_F13,	input,   X), "&
+
+--BSR  D14    IO_D14. Scan Cell   220
+"   660	(BC_1, IO_D14,	output3,   X,   661, 0, Z), "&
+"   661	(BC_1, *,	control, 0), "&
+"   662	(BC_1, IO_D14,	input,   X), "&
+
+--BSR  D13    IO_D13. Scan Cell   221
+"   663	(BC_1, IO_D13,	output3,   X,   664, 0, Z), "&
+"   664	(BC_1, *,	control, 0), "&
+"   665	(BC_1, IO_D13,	input,   X), "&
+
+--BSR  C15    IO_C15. Scan Cell   222
+"   666	(BC_1, IO_C15,	output3,   X,   667, 0, Z), "&
+"   667	(BC_1, *,	control, 0), "&
+"   668	(BC_1, IO_C15,	input,   X), "&
+
+--BSR  B15    IO_B15. Scan Cell   223
+"   669	(BC_1, IO_B15,	output3,   X,   670, 0, Z), "&
+"   670	(BC_1, *,	control, 0), "&
+"   671	(BC_1, IO_B15,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   224
+"   672	(BC_1, *,internal,   X), "&
+"   673	(BC_1, *,internal,   X), "&
+"   674	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   225
+"   675	(BC_1, *,internal,   X), "&
+"   676	(BC_1, *,internal,   X), "&
+"   677	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   226
+"   678	(BC_1, *,internal,   X), "&
+"   679	(BC_1, *,internal,   X), "&
+"   680	(BC_1, *,internal,   X), "&
+
+--BSR  G13    IO_G13. Scan Cell   227
+"   681	(BC_1, IO_G13,	output3,   X,   682, 0, Z), "&
+"   682	(BC_1, *,	control, 0), "&
+"   683	(BC_1, IO_G13,	input,   X), "&
+
+--BSR  G12    IO_G12. Scan Cell   228
+"   684	(BC_1, IO_G12,	output3,   X,   685, 0, Z), "&
+"   685	(BC_1, *,	control, 0), "&
+"   686	(BC_1, IO_G12,	input,   X), "&
+
+--BSR  H11    IO_H11. Scan Cell   229
+"   687	(BC_1, *,internal,   0), "&
+"   688	(BC_1, *,internal,   0), "&
+"   689	(BC_1, IO_H11,	input,   0), "&
+
+--BSR Pad not Bonded. Scan Cell   230
+"   690	(BC_1, *,internal,   X), "&
+"   691	(BC_1, *,internal,   X), "&
+"   692	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   231
+"   693	(BC_1, *,internal,   X), "&
+"   694	(BC_1, *,internal,   X), "&
+"   695	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   232
+"   696	(BC_1, *,internal,   X), "&
+"   697	(BC_1, *,internal,   X), "&
+"   698	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   233
+"   699	(BC_1, *,internal,   X), "&
+"   700	(BC_1, *,internal,   X), "&
+"   701	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   234
+"   702	(BC_1, *,internal,   X), "&
+"   703	(BC_1, *,internal,   X), "&
+"   704	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   235
+"   705	(BC_1, *,internal,   X), "&
+"   706	(BC_1, *,internal,   X), "&
+"   707	(BC_1, *,internal,   X), "&
+
+--BSR  H13    IO_H13. Scan Cell   236
+"   708	(BC_1, IO_H13,	output3,   X,   709, 0, Z), "&
+"   709	(BC_1, *,	control, 0), "&
+"   710	(BC_1, IO_H13,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   237
+"   711	(BC_1, *,internal,   X), "&
+"   712	(BC_1, *,internal,   X), "&
+"   713	(BC_1, *,internal,   X), "&
+
+--BSR  H12    IO_H12. Scan Cell   238
+"   714	(BC_1, IO_H12,	output3,   X,   715, 0, Z), "&
+"   715	(BC_1, *,	control, 0), "&
+"   716	(BC_1, IO_H12,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   239
+"   717	(BC_1, *,internal,   X), "&
+"   718	(BC_1, *,internal,   X), "&
+"   719	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   240
+"   720	(BC_1, *,internal,   X), "&
+"   721	(BC_1, *,internal,   X), "&
+"   722	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   241
+"   723	(BC_1, *,internal,   X), "&
+"   724	(BC_1, *,internal,   X), "&
+"   725	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   242
+"   726	(BC_1, *,internal,   X), "&
+"   727	(BC_1, *,internal,   X), "&
+"   728	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   243
+"   729	(BC_1, *,internal,   X), "&
+"   730	(BC_1, *,internal,   X), "&
+"   731	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   244
+"   732	(BC_1, *,internal,   X), "&
+"   733	(BC_1, *,internal,   X), "&
+"   734	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   245
+"   735	(BC_1, *,internal,   X), "&
+"   736	(BC_1, *,internal,   X), "&
+"   737	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   246
+"   738	(BC_1, *,internal,   X), "&
+"   739	(BC_1, *,internal,   X), "&
+"   740	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   247
+"   741	(BC_1, *,internal,   X), "&
+"   742	(BC_1, *,internal,   X), "&
+"   743	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   248
+"   744	(BC_1, *,internal,   X), "&
+"   745	(BC_1, *,internal,   X), "&
+"   746	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   249
+"   747	(BC_1, *,internal,   X), "&
+"   748	(BC_1, *,internal,   X), "&
+"   749	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   250
+"   750	(BC_1, *,internal,   X), "&
+"   751	(BC_1, *,internal,   X), "&
+"   752	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   251
+"   753	(BC_1, *,internal,   X), "&
+"   754	(BC_1, *,internal,   X), "&
+"   755	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   252
+"   756	(BC_1, *,internal,   X), "&
+"   757	(BC_1, *,internal,   X), "&
+"   758	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   253
+"   759	(BC_1, *,internal,   X), "&
+"   760	(BC_1, *,internal,   X), "&
+"   761	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   254
+"   762	(BC_1, *,internal,   X), "&
+"   763	(BC_1, *,internal,   X), "&
+"   764	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   255
+"   765	(BC_1, *,internal,   X), "&
+"   766	(BC_1, *,internal,   X), "&
+"   767	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   256
+"   768	(BC_1, *,internal,   X), "&
+"   769	(BC_1, *,internal,   X), "&
+"   770	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   257
+"   771	(BC_1, *,internal,   X), "&
+"   772	(BC_1, *,internal,   X), "&
+"   773	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   258
+"   774	(BC_1, *,internal,   X), "&
+"   775	(BC_1, *,internal,   X), "&
+"   776	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   259
+"   777	(BC_1, *,internal,   X), "&
+"   778	(BC_1, *,internal,   X), "&
+"   779	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   260
+"   780	(BC_1, *,internal,   X), "&
+"   781	(BC_1, *,internal,   X), "&
+"   782	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   261
+"   783	(BC_1, *,internal,   X), "&
+"   784	(BC_1, *,internal,   X), "&
+"   785	(BC_1, *,internal,   X), "&
+
+--BSR  G14    IO_G14. Scan Cell   262
+"   786	(BC_1, IO_G14,	output3,   X,   787, 0, Z), "&
+"   787	(BC_1, *,	control, 0), "&
+"   788	(BC_1, IO_G14,	input,   X), "&
+
+--BSR  H14    IO_H14. Scan Cell   263
+"   789	(BC_1, IO_H14,	output3,   X,   790, 0, Z), "&
+"   790	(BC_1, *,	control, 0), "&
+"   791	(BC_1, IO_H14,	input,   X), "&
+
+--BSR  G16    IO_G16. Scan Cell   264
+"   792	(BC_1, IO_G16,	output3,   X,   793, 0, Z), "&
+"   793	(BC_1, *,	control, 0), "&
+"   794	(BC_1, IO_G16,	input,   X), "&
+
+--BSR  H15    IO_H15. Scan Cell   265
+"   795	(BC_1, IO_H15,	output3,   X,   796, 0, Z), "&
+"   796	(BC_1, *,	control, 0), "&
+"   797	(BC_1, IO_H15,	input,   X), "&
+
+--BSR  J12    IO_J12. Scan Cell   266
+"   798	(BC_1, IO_J12,	output3,   X,   799, 0, Z), "&
+"   799	(BC_1, *,	control, 0), "&
+"   800	(BC_1, IO_J12,	input,   X), "&
+
+--BSR  K12    IO_K12. Scan Cell   267
+"   801	(BC_1, IO_K12,	output3,   X,   802, 0, Z), "&
+"   802	(BC_1, *,	control, 0), "&
+"   803	(BC_1, IO_K12,	input,   X), "&
+
+--BSR  J13    IO_J13. Scan Cell   268
+"   804	(BC_1, IO_J13,	output3,   X,   805, 0, Z), "&
+"   805	(BC_1, *,	control, 0), "&
+"   806	(BC_1, IO_J13,	input,   X), "&
+
+--BSR  J14    IO_J14. Scan Cell   269
+"   807	(BC_1, IO_J14,	output3,   X,   808, 0, Z), "&
+"   808	(BC_1, *,	control, 0), "&
+"   809	(BC_1, IO_J14,	input,   X), "&
+
+--BSR  H16    IO_H16. Scan Cell   270
+"   810	(BC_1, IO_H16,	output3,   X,   811, 0, Z), "&
+"   811	(BC_1, *,	control, 0), "&
+"   812	(BC_1, IO_H16,	input,   X), "&
+
+--BSR  J16    IO_J16. Scan Cell   271
+"   813	(BC_1, IO_J16,	output3,   X,   814, 0, Z), "&
+"   814	(BC_1, *,	control, 0), "&
+"   815	(BC_1, IO_J16,	input,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   272
+"   816	(BC_1, *,internal,   X), "&
+"   817	(BC_1, *,internal,   X), "&
+"   818	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   273
+"   819	(BC_1, *,internal,   X), "&
+"   820	(BC_1, *,internal,   X), "&
+"   821	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   274
+"   822	(BC_1, *,internal,   X), "&
+"   823	(BC_1, *,internal,   X), "&
+"   824	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   275
+"   825	(BC_1, *,internal,   X), "&
+"   826	(BC_1, *,internal,   X), "&
+"   827	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   276
+"   828	(BC_1, *,internal,   X), "&
+"   829	(BC_1, *,internal,   X), "&
+"   830	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   277
+"   831	(BC_1, *,internal,   X), "&
+"   832	(BC_1, *,internal,   X), "&
+"   833	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   278
+"   834	(BC_1, *,internal,   X), "&
+"   835	(BC_1, *,internal,   X), "&
+"   836	(BC_1, *,internal,   X), "&
+
+--BSR Pad not Bonded. Scan Cell   279
+"   837	(BC_1, *,internal,   X), "&
+"   838	(BC_1, *,internal,   X), "&
+"   839	(BC_1, *,internal,   X), "&
+
+--BSR  K15    IO_K15. Scan Cell   280
+"   840	(BC_1, IO_K15,	output3,   X,   841, 0, Z), "&
+"   841	(BC_1, *,	control, 0), "&
+"   842	(BC_1, IO_K15,	input,   X), "&
+
+--BSR  K14    IO_K14. Scan Cell   281
+"   843	(BC_1, IO_K14,	output3,   X,   844, 0, Z), "&
+"   844	(BC_1, *,	control, 0), "&
+"   845	(BC_1, IO_K14,	input,   X), "&
+
+--BSR  L13    IO_L13. Scan Cell   282
+"   846	(BC_1, IO_L13,	output3,   X,   847, 0, Z), "&
+"   847	(BC_1, *,	control, 0), "&
+"   848	(BC_1, IO_L13,	input,   X), "&
+
+--BSR  L14    IO_L14. Scan Cell   283
+"   849	(BC_1, IO_L14,	output3,   X,   850, 0, Z), "&
+"   850	(BC_1, *,	control, 0), "&
+"   851	(BC_1, IO_L14,	input,   X), "&
+
+--BSR  L15    IO_L15. Scan Cell   284
+"   852	(BC_1, IO_L15,	output3,   X,   853, 0, Z), "&
+"   853	(BC_1, *,	control, 0), "&
+"   854	(BC_1, IO_L15,	input,   X), "&
+
+--BSR  K16    IO_K16. Scan Cell   285
+"   855	(BC_1, IO_K16,	output3,   X,   856, 0, Z), "&
+"   856	(BC_1, *,	control, 0), "&
+"   857	(BC_1, IO_K16,	input,   X), "&
+
+--BSR  L12    IO_L12. Scan Cell   286
+"   858	(BC_1, IO_L12,	output3,   X,   859, 0, Z), "&
+"   859	(BC_1, *,	control, 0), "&
+"   860	(BC_1, IO_L12,	input,   X), "&
+
+--BSR  L11    IO_L11. Scan Cell   287
+"   861	(BC_1, IO_L11,	output3,   X,   862, 0, Z), "&
+"   862	(BC_1, *,	control, 0), "&
+"   863	(BC_1, IO_L11,	input,   X), "&
+
+--BSR  M13    IO_M13. Scan Cell   288
+"   864	(BC_1, IO_M13,	output3,   X,   865, 0, Z), "&
+"   865	(BC_1, *,	control, 0), "&
+"   866	(BC_1, IO_M13,	input,   X), "&
+
+--BSR  N14    IO_N14. Scan Cell   289
+"   867	(BC_1, IO_N14,	output3,   X,   868, 0, Z), "&
+"   868	(BC_1, *,	control, 0), "&
+"   869	(BC_1, IO_N14,	input,   X), "&
+
+--BSR  M16    IO_M16. Scan Cell   290
+"   870	(BC_1, IO_M16,	output3,   X,   871, 0, Z), "&
+"   871	(BC_1, *,	control, 0), "&
+"   872	(BC_1, IO_M16,	input,   X), "&
+
+--BSR  N16    IO_N16. Scan Cell   291
+"   873	(BC_1, IO_N16,	output3,   X,   874, 0, Z), "&
+"   874	(BC_1, *,	control, 0), "&
+"   875	(BC_1, IO_N16,	input,   X), "&
+
+--BSR  N15    IO_N15. Scan Cell   292
+"   876	(BC_1, IO_N15,	output3,   X,   877, 0, Z), "&
+"   877	(BC_1, *,	control, 0), "&
+"   878	(BC_1, IO_N15,	input,   X), "&
+
+--BSR  M15    IO_M15. Scan Cell   293
+"   879	(BC_1, IO_M15,	output3,   X,   880, 0, Z), "&
+"   880	(BC_1, *,	control, 0), "&
+"   881	(BC_1, IO_M15,	input,   X) ";
+
+end M2S025TSvf256;
+
+--#IC_NAME=M2S025TS-VF256
+--#PIN_NUMBER=256
+--#BGA=1
+
+--#VCC_NUM=3
+--VDDI4(0) 3.3 R7
+--VDD(8)   1.2 M4
+--VDDI0(2) 2.5 F8
+
+--#GND_NUM=1
+--VSS(0) 0 T5
+
+--[VoltageLevel]
+--Level A
+--VIH   3.3
+--VIL   0.1
+--VTERM 3.0
+--VOH   2.0
+--VOL   0.8
+--VIHH  3.6
+--VIHL  3.0
+--VILH  0.3
+--VILL  -0.3
+--SAFETIME 99999
+--COOLINGTIME 100
+
+--Level B
+--VIH   2.5
+--VIL   0.2
+--VTERM 2.2
+--VOH   1.9
+--VOL   0.6
+--VIHH  2.8
+--VIHL  2.2
+--VILH  0.3
+--VILL  -0.3
+--SAFETIME 99999
+--COOLINGTIME 100
+
+--Level C
+--VIH   1.2
+--VIL   0.2
+--VTERM 0.9
+--VOH   0.9
+--VOL   0.3
+--VIHH  1.3
+--VIHL  1.1
+--VILH  0.3
+--VILL  -0.3
+--SAFETIME 99999
+--COOLINGTIME 100
+
+--[PinAttribute]
+--  1      1      1     A1    X    A     VDDI0(4)
+--  2      2      2     A2    A    IO    IO_A2
+--  3      3      3     A3    A    IO    IO_A3
+--  4      4      4     A4    A    IO    IO_A4
+--  5      5      5     A5    A    IO    IO_A5
+--  6      6      6     A6    X    A     VSS(3)
+--  7      7      7     A7    A    IO    IO_A7
+--  8      8      8     A8    A    IO    IO_A8
+--  9      9      9     A9    A    IO    IO_A9
+-- 10     10     10    A10    A    IO    IO_A10
+-- 11     11     11    A11    X    A     VDDI0(0)
+-- 12     12     12    A12    A    IO    IO_A12
+-- 13     13     13    A13    A    IO    IO_A13
+-- 14     14     14    A14    A    IO    IO_A14
+-- 15     15     15    A15    A    IO    IO_A15
+-- 16     16     16    A16    X    A     VSS(4)
+-- 17     17     17     B1    A    IO    IO_B1
+-- 18     18     18     B2    A    IO    IO_B2
+-- 19     19     19     B3    A    IO    IO_B3
+-- 20     20     20     B4    X    A     VDDI0(5)
+-- 21     21     21     B5    A    IO    IO_B5
+-- 22     22     22     B6    A    IO    IO_B6
+-- 23     23     23     B7    A    IO    IO_B7
+-- 24     24     24     B8    A    IO    IO_B8
+-- 25     25     25     B9    X    A     VSS(5)
+-- 26     26     26    B10    A    IO    IO_B10
+-- 27     27     27    B11    A    IO    IO_B11
+-- 28     28     28    B12    A    IO    IO_B12
+-- 29     29     29    B13    A    IO    IO_B13
+-- 30     30     30    B14    X    A     VDDI0(6)
+-- 31     31     31    B15    A    IO    IO_B15
+-- 32     32     32    B16    A    IO    IO_B16
+-- 33     33     33     C1    A    IO    IO_C1
+-- 34     34     34     C2    X    A     VSS(6)
+-- 35     35     35     C3    A    IO    IO_C3
+-- 36     36     36     C4    A    IO    IO_C4
+-- 37     37     37     C5    A    IO    IO_C5
+-- 38     38     38     C6    A    IO    IO_C6
+-- 39     39     39     C7    X    A     VDDI0(7)
+-- 40     40     40     C8    A    IO    IO_C8
+-- 41     41     41     C9    A    IO    IO_C9
+-- 42     42     42    C10    A    IO    IO_C10
+-- 43     43     43    C11    A    IO    IO_C11
+-- 44     44     44    C12    A    IO    IO_C12
+-- 45     45     45    C13    X    A     VSS(7)
+-- 46     46     46    C14    A    IO    IO_C14
+-- 47     47     47    C15    A    IO    IO_C15
+-- 48     48     48    C16    A    IO    IO_C16
+-- 49     49     49     D1    A    IO    IO_D1
+-- 50     50     50     D2    A    IO    IO_D2
+-- 51     51     51     D3    A    IO    IO_D3
+-- 52     52     52     D4    A    IO    IO_D4
+-- 53     53     53     D5    X    A     VSS(8)
+-- 54     54     54     D6    A    IO    IO_D6
+-- 55     55     55     D7    A    IO    IO_D7
+-- 56     56     56     D8    A    IO    IO_D8
+-- 57     57     57     D9    A    IO    IO_D9
+-- 58     58     58    D10    X    A     VDDI0(8)
+-- 59     59     59    D11    A    IO    IO_D11
+-- 60     60     60    D12    A    IO    IO_D12
+-- 61     61     61    D13    A    IO    IO_D13
+-- 62     62     62    D14    A    IO    IO_D14
+-- 63     63     63    D15    X    A     VSS(9)
+-- 64     64     64    D16    A    IO    IO_D16
+-- 65     65     65     E1    X    A     MDDR_IMP_CALIB
+-- 66     66     66     E2    A    IO    IO_E2
+-- 67     67     67     E3    X    A     VDDI0(9)
+-- 68     68     68     E4    A    IO    IO_E4
+-- 69     69     69     E5    X    A     VSSA0(3)
+-- 70     70     70     E6    X    A     VDDA0(7)
+-- 71     71     71     E7    X    A     VREF0(0)
+-- 72     72     72     E8    A    IO    IO_E8
+-- 73     73     73     E9    X    A     VREF0(1)
+-- 74     74     74    E10    A    IO    IO_E10
+-- 75     75     75    E11    A    IO    IO_E11
+-- 76     76     76    E12    A    IO    IO_E12
+-- 77     77     77    E13    X    A     VDDI0(1)
+-- 78     78     78    E14    A    IO    IO_E14
+-- 79     79     79    E15    A    IO    IO_E15
+-- 80     80     80    E16    A    IO    IO_E16
+-- 81     81     81     F1    X    A     VSS(10)
+-- 82     82     82     F2    A    IO    IO_F2
+-- 83     83     83     F3    A    IO    IO_F3
+-- 84     84     84     F4    A    IO    IO_F4
+-- 85     85     85     F5    A    IO    IO_F5
+-- 86     86     86     F6    X    A     VDDI7(0)
+-- 87     87     87     F7    X    A     VSS(11)
+-- 88     88     88     F8    X    P     VDDI0(2)
+-- 89     89     89     F9    X    A     VSS(12)
+-- 90     90     90    F10    X    A     VDDI0(3)
+-- 91     91     91    F11    X    A     VDDA0(6)
+-- 92     92     92    F12    X    A     VSSA0(1)
+-- 93     93     93    F13    A    IO    IO_F13
+-- 94     94     94    F14    A    IO    IO_F14
+-- 95     95     95    F15    A    IO    IO_F15
+-- 96     96     96    F16    A    IO    IO_F16
+-- 97     97     97     G1    A    IO    IO_G1
+-- 98     98     98     G2    A    IO    IO_G2
+-- 99     99     99     G3    A    IO    IO_G3
+--100    100    100     G4    X    A     VSS(13)
+--101    101    101     G5    A    IO    IO_G5
+--102    102    102     G6    X    A     VSS(14)
+--103    103    103     G7    X    A     VDD(3)
+--104    104    104     G8    X    A     VSS(15)
+--105    105    105     G9    X    A     VDD(2)
+--106    106    106    G10    X    A     VSS(16)
+--107    107    107    G11    X    A     VDDI1
+--108    108    108    G12    A    IO    IO_G12
+--109    109    109    G13    A    IO    IO_G13
+--110    110    110    G14    A    IO    IO_G14
+--111    111    111    G15    X    A     VSS(17)
+--112    112    112    G16    A    IO    IO_G16
+--113    113    113     H1    A    IO    IO_H1
+--114    114    114     H2    X    A     VDDI7(1)
+--115    115    115     H3    A    IO    IO_H3
+--116    116    116     H4    A    IO    IO_H4
+--117    117    117     H5    A    IO    IO_H5
+--118    118    118     H6    X    A     VDDI6
+--119    119    119     H7    X    A     VSS(18)
+--120    120    120     H8    X    A     VDD(1)
+--121    121    121     H9    X    A     VSS(19)
+--122    122    122    H10    X    A     VPP(0)
+--123    123    123    H11    A    I     IO_H11
+--124    124    124    H12    A    IO    IO_H12
+--125    125    125    H13    A    IO    IO_H13
+--126    126    126    H14    A    IO    IO_H14
+--127    127    127    H15    A    IO    IO_H15
+--128    128    128    H16    A    IO    IO_H16
+--129    129    129     J1    A    IO    IO_J1
+--130    130    130     J2    A    IO    IO_J2
+--131    131    131     J3    A    IO    IO_J3
+--132    132    132     J4    X    A     VSS(20)
+--133    133    133     J5    A    IO    IO_J5
+--134    134    134     J6    X    A     VSS(21)
+--135    135    135     J7    X    A     VDD(0)
+--136    136    136     J8    X    A     VSS(22)
+--137    137    137     J9    X    A     VDD(4)
+--138    138    138    J10    X    A     VSS(23)
+--139    139    139    J11    X    A     VDDI2(0)
+--140    140    140    J12    A    IO    IO_J12
+--141    141    141    J13    A    IO    IO_J13
+--142    142    142    J14    A    IO    IO_J14
+--143    143    143    J15    X    A     VDDI2(2)
+--144    144    144    J16    A    IO    IO_J16
+--145    145    145     K1    A    IO    IO_K1
+--146    146    146     K2    X    A     VDDI5
+--147    147    147     K3    X    A     SERDES_0_L23_REXT
+--148    148    148     K4    X    A     VSSA0(0)
+--149    149    149     K5    X    A     VDDA0(1)
+--150    150    150     K6    X    A     VSSA0(2)
+--151    151    151     K7    X    A     VSS(24)
+--152    152    152     K8    X    A     VDD(5)
+--153    153    153     K9    X    A     VSS(25)
+--154    154    154    K10    X    A     VDD(6)
+--155    155    155    K11    X    A     VPPNVM
+--156    156    156    K12    A    IO    IO_K12
+--157    157    157    K13    X    A     VSS(26)
+--158    158    158    K14    A    IO    IO_K14
+--159    159    159    K15    A    IO    IO_K15
+--160    160    160    K16    A    IO    IO_K16
+--161    161    161     L1    A    IO    IO_L1
+--162    162    162     L2    X    A     SERDES_0_L01_REXT
+--163    163    163     L3    X    A     VDDA0(4)
+--164    164    164     L4    X    A     SERDES_0_L01_REFRET
+--165    165    165     L5    X    A     VDDA0(2)
+--166    166    166     L6    X    A     SERDES_0_L23_REFRET
+--167    167    167     L7    X    A     VDD(7)
+--168    168    168     L8    X    A     VSS(27)
+--169    169    169     L9    X    A     VPP(1)
+--170    170    170    L10    X    A     VSSNVM
+--171    171    171    L11    A    IO    IO_L11
+--172    172    172    L12    A    IO    IO_L12
+--173    173    173    L13    A    IO    IO_L13
+--174    174    174    L14    A    IO    IO_L14
+--175    175    175    L15    A    IO    IO_L15
+--176    176    176    L16    X    A     VSS(28)
+--177    177    177     M1    X    A     VSS(29)
+--178    178    178     M2    X    A     VSS(30)
+--179    179    179     M3    X    A     VSS(31)
+--180    180    180     M4    X    P     VDD(8)
+--181    181    181     M5    X    A     VDDA0(3)
+--182    182    182     M6    X    A     VDDA0(5)
+--183    183    183     M7    A    IO    IO_M7
+--184    184    184     M8    A    IO    IO_M8
+--185    185    185     M9    A    IO    IO_M9
+--186    186    186    M10    A    IO    IO_M10
+--187    187    187    M11    X    A     DEVRST_N
+--188    188    188    M12    X    A     JTAGSEL
+--189    189    189    M13    A    IO    IO_M13
+--190    190    190    M14    X    A     VDDI2(1)
+--191    191    191    M15    A    IO    IO_M15
+--192    192    192    M16    A    IO    IO_M16
+--193    193    193     N1    X    A     SERDES_0_RXD0_P
+--194    194    194     N2    X    A     VSS(32)
+--195    195    195     N3    X    A     SERDES_0_RXD2_N
+--196    196    196     N4    X    A     VSS(33)
+--197    197    197     N5    X    A     VDDA0(0)
+--198    198    198     N6    X    A     VSS(34)
+--199    199    199     N7    A    IO    IO_N7
+--200    200    200     N8    A    IO    IO_N8
+--201    201    201     N9    X    A     VSS(35)
+--202    202    202    N10    A    IO    IO_N10
+--203    203    203    N11    A    I     TMS
+--204    204    204    N12    X    A     VDDI3
+--205    205    205    N13    A    I     TRST
+--206    206    206    N14    A    IO    IO_N14
+--207    207    207    N15    A    IO    IO_N15
+--208    208    208    N16    A    IO    IO_N16
+--209    209    209     P1    X    A     SERDES_0_RXD0_N
+--210    210    210     P2    X    A     VSS(36)
+--211    211    211     P3    X    A     SERDES_0_RXD2_P
+--212    212    212     P4    X    A     VSS(37)
+--213    213    213     P5    X    A     VSS(38)
+--214    214    214     P6    A    IO    IO_P6
+--215    215    215     P7    A    IO    IO_P7
+--216    216    216     P8    A    IO    IO_P8
+--217    217    217     P9    A    IO    IO_P9
+--218    218    218    P10    A    IO    IO_P10
+--219    219    219    P11    X    A     VDDI4(1)
+--220    220    220    P12    A    IO    IO_P12
+--221    221    221    P13    A    IO    IO_P13
+--222    222    222    P14    A    O     TDO
+--223    223    223    P15    X    A     VSS(39)
+--224    224    224    P16    A    I     TDI
+--225    225    225     R1    X    A     VSS(40)
+--226    226    226     R2    X    A     SERDES_0_TXD0_N
+--227    227    227     R3    X    A     VSS(41)
+--228    228    228     R4    X    A     SERDES_0_TXD2_N
+--229    229    229     R5    X    A     VSS(42)
+--230    230    230     R6    A    IO    IO_R6
+--231    231    231     R7    X    P     VDDI4(0)
+--232    232    232     R8    A    IO    IO_R8
+--233    233    233     R9    A    IO    IO_R9
+--234    234    234    R10    A    IO    IO_R10
+--235    235    235    R11    A    IO    IO_R11
+--236    236    236    R12    A    IO    IO_R12
+--237    237    237    R13    A    IO    IO_R13
+--238    238    238    R14    A    I     TCK
+--239    239    239    R15    X    A     XTLOSC_MAIN_EXTAL
+--240    240    240    R16    X    A     XTLOSC_MAIN_XTAL
+--241    241    241     T1    X    A     VSS(43)
+--242    242    242     T2    X    A     SERDES_0_TXD0_P
+--243    243    243     T3    X    A     VSS(44)
+--244    244    244     T4    X    A     SERDES_0_TXD2_P
+--245    245    245     T5    X    G     VSS(0)
+--246    246    246     T6    A    IO    IO_T6
+--247    247    247     T7    A    IO    IO_T7
+--248    248    248     T8    A    IO    IO_T8
+--249    249    249     T9    A    IO    IO_T9
+--250    250    250    T10    X    A     VSS(1)
+--251    251    251    T11    A    IO    IO_T11
+--252    252    252    T12    A    IO    IO_T12
+--253    253    253    T13    A    IO    IO_T13
+--254    254    254    T14    X    A     VSS(2)
+--255    255    255    T15    X    A     XTLOSC_AUX_XTAL
+--256    256    256    T16    X    A     XTLOSC_AUX_EXTAL

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600521130  V755a                                         
+!* Removed top probe for JTAG test
+! IPG: rev 09.20p  Wed Jul 08 10:42:05 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "JTAG_1V05SB_CPU_TDO"
+resistor 1k, 25, 20, re3, ar100m

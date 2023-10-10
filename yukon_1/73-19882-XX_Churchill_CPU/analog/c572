@@ -1,0 +1,14 @@
+!!!!    2    0    1 1597476877   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:08 2020
+on failure
+   report parallel devices
+   report "r558 13.7k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_A1V2_CH8"
+!connect gl to "A1_2V" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, nocomp
+warning "excessive minus tolerance or low limit."
+! "c572" is a commented test.
+off failure

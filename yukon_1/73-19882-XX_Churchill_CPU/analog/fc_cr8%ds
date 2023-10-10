@@ -1,0 +1,12 @@
+!!!!    2    0    1 1683933711   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:09 2020
+on failure
+   report parallel devices
+   report "fc_cr8 fc_cr8%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN6_TACH"
+zener 4.3, 15.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+! "fc_cr8%cr" test.
+off failure

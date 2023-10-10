@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes PMOD_A2V5_ENABLE P-Pin resistance"
+report "check nodes UNNAMED_3_RES_I2_B P-Pin resistance"
+end on failure
+disconnect all
+connect s to "PMOD_A2V5_ENABLE"
+connect i to "UNNAMED_3_RES_I2_B"
+resistor 10,20,100, re1, ar100m,ed
+off failure

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176222   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:43 2020
+disconnect all
+connect s to "PMOD_VDD_P3P_M2"
+connect i to "PMOD_A_CPS4_M2"
+resistor 10k, 25, 20, re4, wb, ar100m

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176281   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:42 2020
+disconnect all
+connect s to "PCH_LPC_LAD<1>"
+connect i to "SRT_BMC_LPC_LAD<1>"
+connect a to "PCH_LPC_LAD<1>"
+connect b to "SRT_BMC_LPC_LAD<1>"
+resistor 33, 40, 20, re2, ar200m
+! "r787" test.

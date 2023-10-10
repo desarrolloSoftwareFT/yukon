@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512897  V64eb                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect i to "UNNAMED_1508_CAP_I26_B"
+connect s to "P5V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r461" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175942   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:03 2020
+on failure
+   report parallel devices
+   report "r50_m2 100"
+end on failure
+disconnect all
+connect i to "PMOD_VOB_VSENSE_K_M2"
+connect s to "P1V05_COMBINED"
+jumper 99.3, re2, ar100m, op
+! "c70_m2" test.
+off failure

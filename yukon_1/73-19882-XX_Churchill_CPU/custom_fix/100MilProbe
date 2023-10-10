@@ -1,0 +1,24 @@
+! 100-Mil Probe Attributes
+! Revision 05.30
+!
+! WARNING: Consult with the documentation and your fixture vendor before
+! making any changes to the parameters outlined below.  Failure to do so
+! could result in fixtures that cannot be populated with probes or may 
+! add significant cost to building the fixture.
+!
+! The "Usage" field is used during probe selection to determine how this
+! probe type should be selected. Usage field meaning:
+!   preferred   - use this probe type if at all possible
+!   acceptable  - use this probe type only as needed
+!   minimize    - don't use this probe type unless absolutely necessary
+!   unavailable - do not use this probe type at all
+!
+Name: 100 mil
+Usage: acceptable
+DiameterMils: 68
+WireWrapCount: 3
+CollisionDiameterMils: 86
+ProbePlateDrill: 1.75mm,Long,Flute
+SupportPlateDrill: 2.30mm,Long,Flute
+GroundPlateDrill: 0.0625in,Std.,Flute
+GroundPlateClearance: 0.080in,Std.,Flute

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175978   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:39 2020
+disconnect all
+connect i to "BMC_ID_ACCESS_0"
+connect s to "A3P3V"
+jumper 883, re3, wb, ar100m, op
+! "r1101" test.

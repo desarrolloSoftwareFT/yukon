@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176255   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:16 2020
+disconnect all
+connect s to "P3V3"
+connect i to "PCH_PWRBTN_N"
+resistor 10k, 25, 20, re4, wb, ar100m, wa6.47m

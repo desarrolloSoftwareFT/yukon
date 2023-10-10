@@ -1,0 +1,227 @@
+!!!!   24    0    1 1594176860  Vf35a                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:21 2020
+
+buswire "u1_c_u1_bus"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BMC_ENTEST_R","GPIOA0_JTSCAN","GPIOA1_JTSCAN"
+  pcf order is nodes "LAN_PWRGOOD_C","PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "110110"
+  end pcf
+  end unit
+end disables
+
+!IPG: The following pins are disabled by Boundary-Scan:
+!IPG:   u40.AA15  u40.U13  u40.W14  u40.AA11  u40.Y14  u40.J19  u40.K18  u40.G22  u40.K17  u40.E22  u40.V19  u40.F21  u40.T20  u40.J18  u40.F19  u40.L19  u40.U17  u40.Y15  u40.L21  u40.G16  u40.G18  u40.G6  u40.J22
+!IPG:   u40.AB11  u40.F20  u27.R11  u40.H21  u40.AB15  u40.W15  u27.C6  u27.H12  u27.G2  u27.R13  u27.F4  u27.T11  u40.H22  u27.E15  u40.M17  u40.M16  u27.H13  u40.L16  u40.U22  u27.L14  u40.D4  u27.G13  u40.D3
+!IPG:   u40.U21  u40.A9  u40.K22  u40.V18  u27.C11  u27.G16  u27.M8  u27.F2  u27.H3  u27.B12  u27.G1  u27.G5  u27.F3  u40.W19  u40.D5  u27.N10  u40.C4  u40.V16  u27.R9  u27.N8  u40.U16  u40.T4  u40.R2  u40.P1
+!IPG:   u40.R1  u40.P2  u40.P17  u40.AA18  u40.V13  u40.L18  u40.E21  u40.AB18  u40.G5  u40.A2  u40.V14  u40.A7  u40.R16  u40.V17  u40.AB17  u40.F17  u40.M1  u40.T16  u40.B6  u40.D8  u40.C22  u40.E4  u40.B19
+!IPG:   u40.E19  u40.B21  u40.B1  u40.J20  u40.K5  u40.A19  u40.D20  u40.C15  u40.A16  u40.K8  u40.A17  u40.C18  u40.M7  u40.N4  u27.L15  u40.N16  u27.T8  u40.T18  u40.N17  u27.L13  u27.K16  u27.L12  u40.D2  u27.R8
+!IPG:   u40.D1  u40.E2  u40.AB19  u27.T7  u27.L11  u40.C1  u40.M19  u40.R22  u27.P13
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u27" pins "B12","C11","C6","E15","F2","F3","F4","G1"
+disabled device "u27" pins "G13","G16","G2","G5","H12","H13","H3"
+disabled device "u27" pins "K16","L11","L12","L13","L14","L15","M8"
+disabled device "u27" pins "N10","N8","P13","R11","R13","R8","R9"
+disabled device "u27" pins "T11","T7","T8"
+!IPG: with boundary scan disabling
+disabled device "u40" pins "A16","A17","A19","A2","A7","A9","AA11"
+disabled device "u40" pins "AA15","AA18","AB11","AB15","AB17","AB18"
+disabled device "u40" pins "AB19","B1","B19","B21","B6","C1","C15"
+disabled device "u40" pins "C18","C22","C4","D1","D2","D20","D3","D4"
+disabled device "u40" pins "D5","D8","E19","E2","E21","E22","E4","F17"
+disabled device "u40" pins "F19","F20","F21","G16","G18","G22","G5"
+disabled device "u40" pins "G6","H21","H22","J18","J19","J20","J22"
+disabled device "u40" pins "K17","K18","K22","K5","K8","L16","L18"
+disabled device "u40" pins "L19","L21","M1","M16","M17","M19","M7"
+disabled device "u40" pins "N16","N17","N4","P1","P17","P2","R1","R16"
+disabled device "u40" pins "R2","R22","T16","T18","T20","T4","U13"
+disabled device "u40" pins "U16","U17","U21","U22","V13","V14","V16"
+disabled device "u40" pins "V17","V18","V19","W14","W15","W19","Y14"
+disabled device "u40" pins "Y15"
+!IPG: with boundary scan disabling
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+!IPG: Node "DRAM_PWR_OK_R" is aliased to "BDXDE_DRAM_PWROK"
+!IPG: Testing through device "r308"
+!IPG TAP Conflict:   silicon node "BDXDE_DRAM_PWROK" test "u1_c_pch.BA9"
+!IPG TAP Conflict:   silicon node "BDXDE_DRAM_PWROK" test "u1.L12"
+!IPG: Node "BMC_CPU_MEM_WP_L" is aliased to "BMC_CPU_MEM_WP_R"
+!IPG connect tested:   silicon node "BMC_CPU_MEM_WP_R" test "u8.A18"
+!IPG connect tested:   silicon node "BMC_CPU_MEM_WP_R" test "u1.D11"
+!IPG connect tested:   silicon node "BMC_CPU_SPIFLASH_EN_L" test "u8.E19"
+!IPG connect tested:   silicon node "BMC_CPU_SPIFLASH_EN_L" test "u1.P12"
+!IPG connect tested:   silicon node "BMC_CPU_SPIFLASH_SEL" test "u8.A19"
+!IPG connect tested:   silicon node "BMC_CPU_SPIFLASH_SEL" test "u1.T13"
+!IPG connect tested:   silicon node "BMC_NCSI_CRSDV" test "u8.C5"
+!IPG connect tested:   silicon node "BMC_NCSI_CRSDV" test "u1_i2.3"
+!IPG connect tested:   silicon node "BMC_NCSI_RXD0" test "u8.A3"
+!IPG connect tested:   silicon node "BMC_NCSI_RXD0" test "u1_i2.6"
+!IPG connect tested:   silicon node "BMC_NCSI_RXD1" test "u8.D6"
+!IPG connect tested:   silicon node "BMC_NCSI_RXD1" test "u1_i2.5"
+!IPG: Node "BMC_NCSI_TXD0_R" is aliased to "BMC_NCSI_TXD0"
+!IPG connect tested:   silicon node "BMC_NCSI_TXD0" test "u8.F9"
+!IPG connect tested:   silicon node "BMC_NCSI_TXD0" test "u1_i2.9"
+!IPG: Node "BMC_NCSI_TXD1_R" is aliased to "BMC_NCSI_TXD1"
+!IPG connect tested:   silicon node "BMC_NCSI_TXD1" test "u8.A5"
+!IPG connect tested:   silicon node "BMC_NCSI_TXD1" test "u1_i2.8"
+!IPG: Node "BMC_NCSI_TXEN_R" is aliased to "BMC_NCSI_TXEN"
+!IPG connect tested:   silicon node "BMC_NCSI_TXEN" test "u8.E9"
+!IPG connect tested:   silicon node "BMC_NCSI_TXEN" test "u1_i2.7"
+!IPG: Node "FPGA_BMC_LPC_RST" is aliased to "BUF_PCH_PLTRST_L"
+!IPG connect tested:   silicon node "BUF_PCH_PLTRST_L" test "u8.G22"
+!IPG connect tested:   silicon node "BUF_PCH_PLTRST_L" test "u1.L5"
+!IPG connect tested:   silicon node "BUF_PCH_PLTRST_L" test "u1.P10"
+!IPG connect tested:   silicon node "C105_10GPHY_INTR" test "u1_c.N69"
+!IPG connect tested:   silicon node "C105_10GPHY_INTR" test "u1.F14"
+!IPG: Node "C105_PHY_RST_SDP0_1_R" is aliased to "C105_PHY_RST_SDP1_0"
+!IPG connect tested:   silicon node "C105_PHY_RST_SDP1_0" test "u1_c.F76"
+!IPG connect tested:   silicon node "C105_PHY_RST_SDP1_0" test "u1.K13"
+!IPG: Node "C105_SYNC_CPU_TO_FPGA_INTR_L_R" is aliased to "C105_SYNC_CPU_TO_FPGA_INTR_L"
+!IPG connect tested:   silicon node "C105_SYNC_CPU_TO_FPGA_INTR_L" test "u1_c.C76"
+!IPG connect tested:   silicon node "C105_SYNC_CPU_TO_FPGA_INTR_L" test "u1.N14"
+!IPG connect tested:   silicon node "CPU_1588_SYNC" test "u1_c.G74"
+!IPG connect tested:   silicon node "CPU_1588_SYNC" test "u1.K11"
+!IPG connect tested:   silicon node "CPU_ADR_COMPLETE_1V" test "u1_c.AF66"
+!IPG connect tested:   silicon node "CPU_ADR_COMPLETE_1V" test "u1.K15"
+!IPG connect tested:   silicon node "CPU_ERR0_1V_L" test "u1_c.AC77"
+!IPG connect tested:   silicon node "CPU_ERR0_1V_L" test "u1.H14"
+!IPG connect tested:   silicon node "CPU_ERR1_1V_L" test "u1_c.AC75"
+!IPG connect tested:   silicon node "CPU_ERR1_1V_L" test "u1.K16"
+!IPG connect tested:   silicon node "CPU_ERR2_1V_L" test "u1_c.AB76"
+!IPG connect tested:   silicon node "CPU_ERR2_1V_L" test "u1.H11"
+!IPG connect tested:   silicon node "CPU_MEM_HOT_1V_L" test "u1_c.CC56"
+!IPG connect tested:   silicon node "CPU_MEM_HOT_1V_L" test "u1.K12"
+!IPG connect tested:   silicon node "CPU_PROCHOT_1V_L" test "u1_c.AG71"
+!IPG connect tested:   silicon node "CPU_PROCHOT_1V_L" test "u1.K14"
+!IPG TAP Conflict:   silicon node "CPU_PWRGD_PCH" test "u1_c_pch.BU11"
+!IPG TAP Conflict:   silicon node "CPU_PWRGD_PCH" test "u1.J16"
+!IPG connect tested:   silicon node "FM_BDXDE_CATERR_GTL_N" test "u1_c.Y67"
+!IPG connect tested:   silicon node "FM_BDXDE_CATERR_GTL_N" test "u1.P15"
+!IPG connect tested:   silicon node "FM_BDXDE_ERR0_LVT3_N" test "u1_c_pch.BV16"
+!IPG connect tested:   silicon node "FM_BDXDE_ERR0_LVT3_N" test "u1.C4"
+!IPG connect tested:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1_c.AF72"
+!IPG connect tested:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1_c_pch.BJ16"
+!IPG connect tested:   silicon node "FM_BDXDE_THERMTRIP_N" test "u1.J13"
+!IPG connect tested:   silicon node "FM_CPU2PCH_THROT" test "u1_c.AL74"
+!IPG connect tested:   silicon node "FM_CPU2PCH_THROT" test "u1.M14"
+!IPG connect tested:   silicon node "FM_CPU2PCH_THROT_LVT3" test "u1_c_pch.BL22"
+!IPG connect tested:   silicon node "FM_CPU2PCH_THROT_LVT3" test "u1.L9"
+!IPG: Node "BMC_I2C_RST_L" is aliased to "I2C_MB_RST_L_R"
+!IPG connect tested:   silicon node "I2C_MB_RST_L_R" test "u8.T3"
+!IPG connect tested:   silicon node "I2C_MB_RST_L_R" test "u1.C11"
+!IPG: Node "PCH_LPC_FRAME_L" is aliased to "PCH_IPU_LPC_FRAME_L_ST_C"
+!IPG connect tested:   silicon node "PCH_IPU_LPC_FRAME_L_ST_C" test "u1_c_pch.AH1"
+!IPG connect tested:   silicon node "PCH_IPU_LPC_FRAME_L_ST_C" test "u8.F21"
+!IPG: Node "SRT_BMC_LPC_LAD<0>" is aliased to "PCH_LPC_AD0_ST_C"
+!IPG connect tested:   silicon node "PCH_LPC_AD0_ST_C" test "u1_c_pch.AF3"
+!IPG connect tested:   silicon node "PCH_LPC_AD0_ST_C" test "u8.G21"
+!IPG: Node "SRT_BMC_LPC_LAD<1>" is aliased to "PCH_LPC_AD1_ST_C"
+!IPG connect tested:   silicon node "PCH_LPC_AD1_ST_C" test "u1_c_pch.AG4"
+!IPG connect tested:   silicon node "PCH_LPC_AD1_ST_C" test "u8.G20"
+!IPG: Node "SRT_BMC_LPC_LAD<2>" is aliased to "PCH_LPC_AD2_ST_C"
+!IPG connect tested:   silicon node "PCH_LPC_AD2_ST_C" test "u1_c_pch.AL3"
+!IPG connect tested:   silicon node "PCH_LPC_AD2_ST_C" test "u8.D22"
+!IPG: Node "SRT_BMC_LPC_LAD<3>" is aliased to "PCH_LPC_AD3_ST_C"
+!IPG connect tested:   silicon node "PCH_LPC_AD3_ST_C" test "u1_c_pch.AF1"
+!IPG connect tested:   silicon node "PCH_LPC_AD3_ST_C" test "u8.E22"
+!IPG connect tested:   silicon node "PCH_PLTRST_L" test "u1_c_pch.BE24"
+!IPG connect tested:   silicon node "PCH_PLTRST_L" test "u1.T11"
+!IPG: Node "PCH_SERIRQ_ST_C" is aliased to "PCH_SERIRQ"
+!IPG connect tested: !IPG not disabled:   silicon node "PCH_SERIRQ" test "u1_c_pch.BU14"
+!IPG connect tested: !IPG not disabled:   silicon node "PCH_SERIRQ" test "u8.F22"
+!IPG: Node "PCH_UART0_TXD_1V" is aliased to "PCH_UART0_TXD_1V_ST_C"
+!IPG connect tested:   silicon node "PCH_UART0_TXD_1V_ST_C" test "u1_c.AG75"
+!IPG connect tested:   silicon node "PCH_UART0_TXD_1V_ST_C" test "u1.L14"
+!IPG: Node "PCH_UART1_TXD_1V" is aliased to "PCH_UART1_TXD_1V_ST_C"
+!IPG connect tested:   silicon node "PCH_UART1_TXD_1V_ST_C" test "u1_c.AH76"
+!IPG connect tested:   silicon node "PCH_UART1_TXD_1V_ST_C" test "u1.G16"
+!IPG connect tested:   silicon node "PCHGP_PMB_FORCE_PWRDN" test "u1_c_pch.BV20"
+!IPG connect tested:   silicon node "PCHGP_PMB_FORCE_PWRDN" test "u1.A11"
+!IPG: Node "PECI_PCH_CPU_ST_C" is aliased to "PECI_PCH_CPU"
+!IPG connect tested:   silicon node "PECI_PCH_CPU" test "u1_c.AL78"
+!IPG connect tested:   silicon node "PECI_PCH_CPU" test "u1_c_pch.BG16"
+!IPG: Node "BMC_UART5_TX" is aliased to "R_BMC_UART5_RXD"
+!IPG connect tested:   silicon node "R_BMC_UART5_RXD" test "u8.K1"
+!IPG connect tested:   silicon node "R_BMC_UART5_RXD" test "u1.A15"
+!IPG: Node "BMC_UART5_RX" is aliased to "R_BMC_UART5_TX"
+!IPG connect tested:   silicon node "R_BMC_UART5_TX" test "u8.K2"
+!IPG connect tested:   silicon node "R_BMC_UART5_TX" test "u1.A14"
+!IPG: Node "SML0_CLK_BMC_R" is aliased to "SML0CLK_BMC"
+!IPG connect tested:   silicon node "SML0CLK_BMC" test "u1_c_pch.BR7"
+!IPG connect tested:   silicon node "SML0CLK_BMC" test "u8.P2"
+!IPG: Node "SML0_DATA_BMC_R" is aliased to "SML0DATA_BMC"
+!IPG connect tested:   silicon node "SML0DATA_BMC" test "u1_c_pch.BN18"
+!IPG connect tested:   silicon node "SML0DATA_BMC" test "u8.R1"
+!IPG: Node "FM_PCH_HOT_N_P3V3" is aliased to "SML1ALERT_PCHHOT_C"
+!IPG connect tested:   silicon node "SML1ALERT_PCHHOT_C" test "u1_c_pch.BF7"
+!IPG connect tested:   silicon node "SML1ALERT_PCHHOT_C" test "u1.B9"
+!IPG: Node "SRT_SM1_CLK_BMC" is aliased to "SML1CLK_BMC"
+!IPG connect tested:   silicon node "SML1CLK_BMC" test "u1_c_pch.BG9"
+!IPG connect tested:   silicon node "SML1CLK_BMC" test "u8.N21"
+!IPG: Node "SRT_SML1_DATA_BMC" is aliased to "SML1DATA_BMC"
+!IPG connect tested:   silicon node "SML1DATA_BMC" test "u1_c_pch.BB11"
+!IPG connect tested:   silicon node "SML1DATA_BMC" test "u8.N22"
+end nodes
+
+!IPG: disable problems
+!IPG: node "BDXDE_DRAM_PWROK"
+!IPG: node "CPU_PWRGD_PCH"
+!IPG: node "PCH_SERIRQ"
+
+end buswire
+

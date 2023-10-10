@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175928   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:49 2020
+disconnect all
+connect s to "JTAG_1V05SB_CPU_TDO"
+connect i to "JTAG_TDI_BDX_1V05"
+jumper 1.64k, re4, wb, ar500m, op
+! "a_r1490" test.

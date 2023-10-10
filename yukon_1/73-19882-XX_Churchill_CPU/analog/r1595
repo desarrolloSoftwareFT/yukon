@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513076  Vf4e7                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:34 2020
+disconnect all
+connect s to "P12V_STBY"
+connect i to "P3V3_STBY_ON"
+connect g to "GND"
+!B!resistor 240, 30, 20, re3, ar500m, wa288m
+resistor 240,30,20,re3,ar500m,wa28m

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1600587415   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:06 2020
+on failure
+   report parallel devices
+   report "d6 d6%ds"
+   report "c668 1.00u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P3V3_STBY_ON"
+zener 3.5, 11.4, 9.23, idc35m, co6.8, ar3.68 ,wa500m
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "d6%cr" test.
+off failure

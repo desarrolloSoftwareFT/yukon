@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176676   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:17 2020
+disconnect all
+connect s to "P12V_STBY"
+connect i to "REF_IN_P1_2V"
+connect gl to "GND" 
+resistor 1.62k, 25, 20, re4, wb, ar1.00, wa288u, sl

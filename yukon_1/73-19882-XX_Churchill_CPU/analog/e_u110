@@ -1,0 +1,35 @@
+!!!!    2    0    1 1578843892   0000                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+ ! test "IN"
+ ! test "EN"
+  test "OUT"
+!  test "PG"
+end test
+ 
+subtest "EN"
+  connect i to pins 7
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 2.5*1.05, 2.0
+end subtest
+
+subtest "OUT"
+  connect i to "P0V6_VTT_2"
+  connect l to ground
+
+  detector dcv, expect 1.15
+  measure 0.6*1.05, 0.6*0.95
+end subtest
+
+subtest "PG"
+  connect i to pins 9
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 2.8, 2.0
+end subtest
+
+

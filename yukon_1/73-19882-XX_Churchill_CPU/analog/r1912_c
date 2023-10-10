@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175999   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:00 2020
+disconnect all
+connect s to "BDX_RTCRST_FET"
+connect i to "RST_RTCRST_L"
+jumper 82.9, re2, ar100m, op
+! "r1912_c" test.

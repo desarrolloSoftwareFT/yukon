@@ -1,0 +1,9 @@
+!!!!    2    0    1 1604772392   0000                                         
+!* node "UNNAMED_1_CAP_I17_B" short to "GND"
+! IPG: rev 09.20p  Wed Jul 08 10:41:34 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_1_CAP_I17_B"
+!capacitor 3.9n, 35, 40, fr1024, re4, wb, ar20.0m, nocomp
+capacitor .0127u, 35, 40, fr1024, re4, wb, ar20.0m, nocomp  !rev 09
+! "bma4_css" test.

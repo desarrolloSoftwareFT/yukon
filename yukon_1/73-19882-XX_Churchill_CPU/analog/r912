@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176380   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:21 2020
+disconnect all
+connect s to "FAN23_ISENSE"
+connect i to "ADC1_FAN23_ISENSE_CH1"
+connect g to "GND" 
+connect a to "FAN23_ISENSE"
+connect b to "ADC1_FAN23_ISENSE_CH1"
+resistor 100, 30, 20, re2, ar100m
+! "r912" test.

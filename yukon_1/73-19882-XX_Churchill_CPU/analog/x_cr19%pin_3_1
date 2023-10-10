@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600587907   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:28 2020
+disconnect all
+connect s to "P3V3_VBAT"
+connect i to "A3P3V"
+diode 990m, 500m, idc60m, co3.0, ar845m
+! "x_cr19%pin_3_1" test.

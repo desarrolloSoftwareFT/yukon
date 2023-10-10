@@ -1,0 +1,9 @@
+!!!!    2    0    1 1605730732   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:37 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "SVID_CLK_R_C"
+connect a to "P1V05_COMBINED"
+connect b to "SVID_CLK_R_C"
+resistor 40.2, 30, 20, re1, ar200m,ed,en
+! "r1603_c" test.

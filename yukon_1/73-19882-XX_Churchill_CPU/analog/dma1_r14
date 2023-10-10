@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176347   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:48 2020
+disconnect all
+connect s to "PWR_A3V3_ITH"
+connect i to "PWR_A3V3_ITH_RC"
+resistor 13.7k, 25, 25, re5, wb, ar1.00

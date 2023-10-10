@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512909  V7ca3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "FPGA2_SPIFLASH_HOLD"
+connect i to "UNNAMED_4210_N25QXX_I72_HOLDMDQ3"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r502" test.

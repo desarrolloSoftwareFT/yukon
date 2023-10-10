@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175950   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:11 2020
+on failure
+   report parallel devices
+   report "r5_p1_m1"
+end on failure
+disconnect all
+connect i to "PMOD_PH1_SNU_RC_M1"
+connect s to "GND"
+jumper 5.00k, re4, wb, ar200m, op
+! "r3_p1_m1" test.
+off failure

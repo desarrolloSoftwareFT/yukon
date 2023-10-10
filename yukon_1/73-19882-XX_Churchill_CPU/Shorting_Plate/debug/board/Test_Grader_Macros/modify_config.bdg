@@ -1,0 +1,26 @@
+#**********************************************************************
+# perl script used to modify config.bdg 
+# If it is a single board, skip modification
+# If it is a panelized board, set Boards_On_Panel and Test_Board_Number
+#**********************************************************************
+open ( BOARDNUM, ".BoardNum");
+@Boardnum = (<BOARDNUM>);
+close ( BOARDNUM);
+$Tbdnum = $Boardnum[0];
+$Bdnum = $Boardnum[1];
+chomp ($Tbdnum);
+chomp ($Bdnum);
+if ($Tbdnum >1) {
+   open ( CONFIGBDG, "config.bdg") or die "unable to find config.bdg.\n";
+   @Config = (<CONFIGBDG>);
+   close ( CONFIGBDG);
+   $Cnt = scalar (@Config);
+   open ( CONFIGBDG, ">config.bdg");
+   for ($I = 0; $I < $Cnt; $I++) {
+       $Config[$I] =~ s/Boards_On_Panel \= 0/Boards_On_Panel \= $Tbdnum/;
+       $Config[$I] =~ s/Test_Board_Number \= 0/Test_Board_Number \=$Bdnum/;
+       print CONFIGBDG "$Config[$I]";
+   }
+   close ( CONFIGBDG);
+}
+

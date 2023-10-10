@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "PCH_PHY_10G_MDC"
+connect i to "SRT_PCH_PHY_10G_MDC"
+connect a to "PCH_PHY_10G_MDC"
+connect b to "SRT_PCH_PHY_10G_MDC"
+resistor 22, 40, 20, re2, ar500m
+! "r1272" test.

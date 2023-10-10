@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512805  V51e4                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+disconnect all
+connect s to "P2V5_VPP_2"
+connect i to "PMOD_P2V5_VPP_VSENSE_P"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r5_v" test.

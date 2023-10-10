@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600513065  V059b                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:36 2020
+on failure
+report parallel devices
+report "dma1_c8 8.20n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4238_CAP_I129_A"
+connect g to "A1_2V"
+!B!resistor 2k, 25, 20, re4, wb, ar500m, wa1.03
+resistor 2k,25,20,re4,wb,ar500m,ed
+off failure

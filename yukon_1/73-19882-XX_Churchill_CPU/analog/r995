@@ -1,0 +1,11 @@
+!!!!    2    0    1 1594176173   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:54 2020
+on failure
+   report parallel devices
+   report "r1007 4.70k"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "JTAG_CPU_FPGA_TDO"
+resistor 824.56, 25, 20, re3, ar100m
+off failure

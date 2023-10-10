@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_142_NMOSFET_I7_G P-Pin resistance"
+report "check nodes FAN23_PWM_CON P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_142_NMOSFET_I7_G"
+connect i to "FAN23_PWM_CON"
+resistor 10,20,100, re1, ar100m,ed
+off failure

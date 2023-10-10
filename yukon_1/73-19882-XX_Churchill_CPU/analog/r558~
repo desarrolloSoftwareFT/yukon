@@ -1,0 +1,12 @@
+!!!!    2    0    1 1597473694   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:49 2020
+on failure
+   report parallel devices
+   report "c572 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_A1V2_CH8"
+connect gl to "A1_2V" 
+resistor 13.7k, 25, 25, re5, wb, ar1.00, ed, sl, en
+off failure

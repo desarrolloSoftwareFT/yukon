@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175945   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:06 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_A3V3_ISENP"
+jumper 914, re3, wb, ar100m, op
+! "dma1_r19" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512960  V6516                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "SRT_CLK100M_I210_PE_DP"
+connect i to "CLK100M_I210_PE_DP"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r964" test.

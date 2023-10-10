@@ -1,0 +1,9 @@
+!!!!    2    0    1 1603315065   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect s to "SPI1_10GE_FLSH_MISO_3V_ST_C"
+connect i to "SPI1_10GE_FLSH_MISO_3V_C"
+connect a to "SPI1_10GE_FLSH_MISO_3V_ST_C"
+connect b to "SPI1_10GE_FLSH_MISO_3V_C"
+resistor 33.2+12, 40, 20, re3, ar200m, ed, en
+! "r1780_c" test.

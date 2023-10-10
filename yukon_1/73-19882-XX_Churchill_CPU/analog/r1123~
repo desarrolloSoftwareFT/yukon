@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "P2PM2_BMC_FPGA_CLK1"
+connect i to "P2PM2_BMC_FP1_R"
+connect a to "P2PM2_BMC_FPGA_CLK1"
+connect b to "P2PM2_BMC_FP1_R"
+resistor 22, 40, 20, re2, ar500m
+! "r1123" test.

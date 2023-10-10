@@ -1,0 +1,18 @@
+report is "debug/report"
+report " Creating ""config.bdg"" file"
+report
+grade tests ; config
+execute "perl debug/board/Test_Grader_Macros/modify_config.bdg",Error
+if Error then
+  report 
+  report errm$ (Error)
+else
+  get "config.bdg"
+  report  
+  report "Please review the ""config.bdg"" in your" 
+  report "BT-BASIC workspace.  Make any changes" 
+  report "necessary and 're-save' the file."
+  report 
+  report "You are now ready for the next macro."
+end if
+report is *

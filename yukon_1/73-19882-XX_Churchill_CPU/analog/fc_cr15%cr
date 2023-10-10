@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600565654  Vb94e                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:11 2020
+on failure
+   report parallel devices
+   report "fc_cr15 fc_cr15%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FC_PWM23"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr15%cr" test.
+off failure

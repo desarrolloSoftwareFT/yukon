@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175935   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:56 2020
+on failure
+   report parallel devices
+   report "bma4_r6 2.00k"
+end on failure
+disconnect all
+connect s to "UNNAMED_1_CAP_I35_B"
+connect i to "PMOD_PVCCSCFUSESUS_VOSEN"
+jumper 1.34k, re4, wb, ar1.00, op
+! "bma4_r7" test.
+off failure

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1610069331   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:06 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PU_LAN0_I2C_SDA0_C"
+!connect g to "GND"
+resistor 10k, 25, 20, re2, wb, ar100m, ed

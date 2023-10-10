@@ -1,0 +1,2280 @@
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 19:01:15 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   88
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   88
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a1_2v                   21646   29
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+To:     v                    223144   29 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+Common Devices:
+                  l19
+                  u27
+Message is:
+Check l19
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 19:01:24 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 500, Delay 50us      Ohms
+From: PVCCIN                  21129 Open
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 b_c841
+                 b_c842
+                 b_c843
+                 b_c844
+                 b_c851
+                 b_c852
+                 b_c853
+                 b_c887
+                 b_c888
+                 b_c889
+Too many to print.
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: p0v6_vtt_2              20510 Open
+                c392_c.1
+                c394_c.1
+                c397_c.1
+                c448_c.1
+                c450_c.1
+                c453_c.1
+                e_c687.1
+                e_c688.1
+                e_c689.1
+                e_c690.1
+Too many to print.
+To:     v                    223142
+PMOD_P0V6_VTT_DIMM_VSENSE_P             
+                 r8_v.2
+                 r621.1
+Common Devices:
+                  r8_v
+Message is:
+Check r8_v
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: PVCCIN                  21129 Open
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+To:   PMOD_PH2_DIDT_M1        20204
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+Common Devices:
+                l1_p2_m1
+                u1_p2_m1
+Message is:
+Check l1_p2_m1
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: PVCCIN                  21129 Open
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+To:   PMOD_PH1_DIDT_M1       202103
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+Common Devices:
+                l1_p1_m1
+                u1_p1_m1
+Message is:
+Check l1_p1_m1
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   85
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   85
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:01:40 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 42.1             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 44.6             (BRC 11752)
+Open #3  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 43.2             (BRC 11761)
+Open #4  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.7             (BRC 115168)
+Open #5  Device u1a_skt_c
+  Pin 249  Node m_a_dq<35>
+  Measured 51.1             (BRC 10966)
+Open #6  Device u1a_skt_c
+  Pin 256  Node m_a_dqs_dp<5>
+  Measured 53.6             (BRC 10972)
+Open #7  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 51.1             (BRC 110170)
+Open #8  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 51.4             (BRC 108144)
+Open #9  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 51.4             (BRC 109164)
+Open #10  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 50.6             (BRC 110171)
+Open #11  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 52.3             (BRC 10562)
+Open #12  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 54.8             (BRC 107162)
+Open #13  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 51.1             (BRC 11071)
+Open #14  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 51.4             (BRC 10973)
+Open #15  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 53.7             (BRC 10965)
+Open #16  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 52.5             (BRC 10857)
+Open #17  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 56.2             (BRC 109138)
+Open #18  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 54.2             (BRC 10962)
+Open #19  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 54.8             (BRC 10963)
+Open #20  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.9             (BRC 10838)
+Open #21  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 52.6             (BRC 108162)
+Open #22  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 58.8             (BRC 107138)
+Open #23  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 53.0             (BRC 109162)
+Open #24  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.7             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:01:49 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 43.0             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 45.4             (BRC 11752)
+Open #3  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 43.1             (BRC 11761)
+Open #4  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.8             (BRC 115168)
+Open #5  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 44.5             (BRC 11349)
+Open #6  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 50.5             (BRC 110170)
+Open #7  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 51.9             (BRC 108144)
+Open #8  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 52.2             (BRC 109164)
+Open #9  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 54.1             (BRC 108145)
+Open #10  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 51.8             (BRC 110171)
+Open #11  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 51.6             (BRC 10562)
+Open #12  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 55.2             (BRC 107162)
+Open #13  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 49.4             (BRC 11071)
+Open #14  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 51.2             (BRC 10973)
+Open #15  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 53.6             (BRC 10965)
+Open #16  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 55.3             (BRC 10857)
+Open #17  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 57.0             (BRC 109138)
+Open #18  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.8             (BRC 10962)
+Open #19  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 54.7             (BRC 10963)
+Open #20  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 52.7             (BRC 10838)
+Open #21  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 57.5             (BRC 108161)
+Open #22  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 53.4             (BRC 108162)
+Open #23  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 58.2             (BRC 107138)
+Open #24  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 53.7             (BRC 109162)
+Open #25  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.8             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:01:58 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 42.9             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 45.2             (BRC 11752)
+Open #3  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 41.2             (BRC 11761)
+Open #4  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 44.2             (BRC 115168)
+Open #5  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 45.0             (BRC 11349)
+Open #6  Device u1a_skt_c
+  Pin 168  Node m_a_dq<11>
+  Measured 45.6             (BRC 114169)
+Open #7  Device u1a_skt_c
+  Pin 249  Node m_a_dq<35>
+  Measured 50.8             (BRC 10966)
+Open #8  Device u1a_skt_c
+  Pin 256  Node m_a_dqs_dp<5>
+  Measured 52.2             (BRC 10972)
+Open #9  Device u1a_skt_c
+  Pin 258  Node m_a_dq<47>
+  Measured 52.5             (BRC 11069)
+Open #10  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 50.5             (BRC 110170)
+Open #11  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 52.7             (BRC 108144)
+Open #12  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 51.9             (BRC 109164)
+Open #13  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 53.2             (BRC 108145)
+Open #14  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 52.1             (BRC 110171)
+Open #15  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 52.0             (BRC 10562)
+Open #16  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 53.5             (BRC 107162)
+Open #17  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 51.2             (BRC 11071)
+Open #18  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 52.7             (BRC 10973)
+Open #19  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 54.2             (BRC 10965)
+Open #20  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 54.1             (BRC 10857)
+Open #21  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 56.0             (BRC 109138)
+Open #22  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.1             (BRC 10962)
+Open #23  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 54.9             (BRC 10963)
+Open #24  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.8             (BRC 10838)
+Open #25  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 56.9             (BRC 108161)
+Open #26  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 54.3             (BRC 108162)
+Open #27  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 57.7             (BRC 107138)
+Open #28  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 56.1             (BRC 109162)
+Open #29  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 58.4             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:02:07 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 194  Node m_a_ecc<1>
+  Measured 41.3             (BRC 11467)
+Open #2  Device u1a_skt_c
+  Pin 155  Node m_a_dq<7>
+  Measured 44.4             (BRC 116164)
+Open #3  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 41.6             (BRC 11761)
+Open #4  Device u1a_skt_c
+  Pin 164  Node m_a_dqs_dp<1>
+  Measured 44.2             (BRC 117165)
+Open #5  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 44.1             (BRC 115168)
+Open #6  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 44.9             (BRC 11349)
+Open #7  Device u1a_skt_c
+  Pin 168  Node m_a_dq<11>
+  Measured 43.6             (BRC 114169)
+Open #8  Device u1a_skt_c
+  Pin 256  Node m_a_dqs_dp<5>
+  Measured 53.1             (BRC 10972)
+Open #9  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 49.9             (BRC 110170)
+Open #10  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 52.2             (BRC 108144)
+Open #11  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 52.0             (BRC 109164)
+Open #12  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 54.9             (BRC 108145)
+Open #13  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 52.4             (BRC 110171)
+Open #14  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 51.6             (BRC 10562)
+Open #15  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 55.3             (BRC 107162)
+Open #16  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 51.1             (BRC 11071)
+Open #17  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 52.5             (BRC 10973)
+Open #18  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 54.5             (BRC 10965)
+Open #19  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 55.0             (BRC 10857)
+Open #20  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 56.8             (BRC 109138)
+Open #21  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.0             (BRC 10962)
+Open #22  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 57.2             (BRC 10963)
+Open #23  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 52.0             (BRC 10838)
+Open #24  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 56.5             (BRC 108161)
+Open #25  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 53.7             (BRC 108162)
+Open #26  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 58.1             (BRC 107138)
+Open #27  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 55.1             (BRC 109162)
+Open #28  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.8             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:02:16 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 194  Node m_a_ecc<1>
+  Measured 42.3             (BRC 11467)
+Open #2  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 44.0             (BRC 11752)
+Open #3  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 41.9             (BRC 11761)
+Open #4  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.0             (BRC 115168)
+Open #5  Device u1a_skt_c
+  Pin 249  Node m_a_dq<35>
+  Measured 48.7             (BRC 10966)
+Open #6  Device u1a_skt_c
+  Pin 258  Node m_a_dq<47>
+  Measured 53.8             (BRC 11069)
+Open #7  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 51.8             (BRC 110170)
+Open #8  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 52.2             (BRC 108144)
+Open #9  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 52.6             (BRC 109164)
+Open #10  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 54.9             (BRC 108145)
+Open #11  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 52.8             (BRC 110171)
+Open #12  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 51.3             (BRC 10562)
+Open #13  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 54.2             (BRC 107162)
+Open #14  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 51.4             (BRC 11071)
+Open #15  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 52.1             (BRC 10973)
+Open #16  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 54.0             (BRC 10965)
+Open #17  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 53.7             (BRC 10857)
+Open #18  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 57.3             (BRC 109138)
+Open #19  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.5             (BRC 10962)
+Open #20  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 56.6             (BRC 10963)
+Open #21  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 54.2             (BRC 10838)
+Open #22  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 57.6             (BRC 108161)
+Open #23  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 52.4             (BRC 108162)
+Open #24  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 57.6             (BRC 107138)
+Open #25  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 54.0             (BRC 109162)
+Open #26  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.0             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:19:25 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin N16  Node vref_p1v05
+  Measured 4.8              (BRC 119150)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:19:34 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin N16  Node vref_p1v05
+  Measured 4.3              (BRC 119150)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:21:11 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6830k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+e_r956 HAS FAILED
+12-2634-01 RES,TKF,499 ohm,0.063W,1%,SM,
+Measured:   231.32
+Nominal:    320.00
+High Limit: 416.00
+Low Limit:  256.00
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+e_r923 2.49k
+c653 2.20n
+c296_c 22.0u
+e_c633 100n
+e_c634 1.00u
+e_c635 1.00u
+e_c636 22.0u
+e_c637 22.0u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:21:21 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6814k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+e_r956 HAS FAILED
+12-2634-01 RES,TKF,499 ohm,0.063W,1%,SM,
+Measured:   230.74
+Nominal:    320.00
+High Limit: 416.00
+Low Limit:  256.00
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+e_r923 2.49k
+c653 2.20n
+c296_c 22.0u
+e_c633 100n
+e_c634 1.00u
+e_c635 1.00u
+e_c636 22.0u
+e_c637 22.0u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:21:28 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6825k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+e_r956 HAS FAILED
+12-2634-01 RES,TKF,499 ohm,0.063W,1%,SM,
+Measured:   231.32
+Nominal:    320.00
+High Limit: 416.00
+Low Limit:  256.00
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+e_r923 2.49k
+c653 2.20n
+c296_c 22.0u
+e_c633 100n
+e_c634 1.00u
+e_c635 1.00u
+e_c636 22.0u
+e_c637 22.0u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:21:35 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.4813k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+e_r956 HAS FAILED
+12-2634-01 RES,TKF,499 ohm,0.063W,1%,SM,
+Measured:   230.74
+Nominal:    320.00
+High Limit: 416.00
+Low Limit:  256.00
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+e_r923 2.49k
+c653 2.20n
+c296_c 22.0u
+e_c633 100n
+e_c634 1.00u
+e_c635 1.00u
+e_c636 22.0u
+e_c637 22.0u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704A1
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:34:57 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 41.5             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 43.6             (BRC 11761)
+Open #3  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.8             (BRC 115168)
+Open #4  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 51.5             (BRC 110170)
+Open #5  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 52.0             (BRC 108144)
+Open #6  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 53.4             (BRC 109164)
+Open #7  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 55.0             (BRC 108145)
+Open #8  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 50.9             (BRC 110171)
+Open #9  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 53.6             (BRC 10562)
+Open #10  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 55.3             (BRC 107162)
+Open #11  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 50.6             (BRC 11071)
+Open #12  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 52.4             (BRC 10973)
+Open #13  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 55.4             (BRC 10965)
+Open #14  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 54.4             (BRC 10857)
+Open #15  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 56.5             (BRC 109138)
+Open #16  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.4             (BRC 10962)
+Open #17  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 55.0             (BRC 10963)
+Open #18  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.0             (BRC 10838)
+Open #19  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 58.0             (BRC 108161)
+Open #20  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 52.3             (BRC 108162)
+Open #21  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 57.4             (BRC 107138)
+Open #22  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 54.4             (BRC 109162)
+Open #23  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.4             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:35:06 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 44.0             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 44.3             (BRC 11761)
+Open #3  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.7             (BRC 115168)
+Open #4  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 44.2             (BRC 11349)
+Open #5  Device u1a_skt_c
+  Pin 249  Node m_a_dq<35>
+  Measured 50.7             (BRC 10966)
+Open #6  Device u1a_skt_c
+  Pin 258  Node m_a_dq<47>
+  Measured 53.6             (BRC 11069)
+Open #7  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 49.7             (BRC 110170)
+Open #8  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 55.0             (BRC 108144)
+Open #9  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 52.5             (BRC 109164)
+Open #10  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 52.8             (BRC 110171)
+Open #11  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 52.8             (BRC 10562)
+Open #12  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 54.4             (BRC 107162)
+Open #13  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 50.0             (BRC 11071)
+Open #14  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 53.0             (BRC 10973)
+Open #15  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 55.2             (BRC 10965)
+Open #16  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 54.3             (BRC 10857)
+Open #17  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 56.4             (BRC 109138)
+Open #18  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 57.3             (BRC 10962)
+Open #19  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 56.6             (BRC 10963)
+Open #20  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 52.8             (BRC 10838)
+Open #21  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 57.1             (BRC 108161)
+Open #22  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 52.6             (BRC 108162)
+Open #23  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 58.9             (BRC 107138)
+Open #24  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 55.8             (BRC 109162)
+Open #25  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 60.0             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:35:15 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 194  Node m_a_ecc<1>
+  Measured 42.0             (BRC 11467)
+Open #2  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 41.9             (BRC 11762)
+Open #3  Device u1a_skt_c
+  Pin 155  Node m_a_dq<7>
+  Measured 42.1             (BRC 116164)
+Open #4  Device u1a_skt_c
+  Pin 186  Node m_a_dqs_dp<3>
+  Measured 44.4             (BRC 113171)
+Open #5  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 41.7             (BRC 11761)
+Open #6  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 43.9             (BRC 115168)
+Open #7  Device u1a_skt_c
+  Pin 168  Node m_a_dq<11>
+  Measured 46.4             (BRC 114169)
+Open #8  Device u1a_skt_c
+  Pin 249  Node m_a_dq<35>
+  Measured 49.8             (BRC 10966)
+Open #9  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 51.3             (BRC 110170)
+Open #10  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 50.8             (BRC 109164)
+Open #11  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 53.7             (BRC 110171)
+Open #12  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 53.9             (BRC 10562)
+Open #13  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 50.7             (BRC 11071)
+Open #14  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 50.5             (BRC 10973)
+Open #15  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 53.8             (BRC 10965)
+Open #16  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 55.1             (BRC 10857)
+Open #17  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 57.4             (BRC 109138)
+Open #18  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 54.6             (BRC 10962)
+Open #19  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 56.1             (BRC 10963)
+Open #20  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.2             (BRC 10838)
+Open #21  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 57.0             (BRC 108161)
+Open #22  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 53.7             (BRC 108162)
+Open #23  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 53.0             (BRC 109162)
+Open #24  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 59.9             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:35:23 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 150  Node m_a_dq<1>
+  Measured 42.9             (BRC 11762)
+Open #2  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 43.5             (BRC 11761)
+Open #3  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 44.2             (BRC 115168)
+Open #4  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 46.4             (BRC 11349)
+Open #5  Device u1a_skt_c
+  Pin 168  Node m_a_dq<11>
+  Measured 44.5             (BRC 114169)
+Open #6  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 51.8             (BRC 109164)
+Open #7  Device u1a_skt_c
+  Pin 235  Node spare_i_dimm_a0_c2
+  Measured 54.2             (BRC 108145)
+Open #8  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 50.9             (BRC 110171)
+Open #9  Device u1a_skt_c
+  Pin 266  Node m_a_dqs_dn<6>
+  Measured 53.2             (BRC 10562)
+Open #10  Device u1a_skt_c
+  Pin 264  Node m_a_dq<49>
+  Measured 56.1             (BRC 107162)
+Open #11  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 50.6             (BRC 11071)
+Open #12  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 51.4             (BRC 10973)
+Open #13  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 54.2             (BRC 10965)
+Open #14  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 55.0             (BRC 10857)
+Open #15  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 58.3             (BRC 109138)
+Open #16  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.8             (BRC 10962)
+Open #17  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 56.2             (BRC 10963)
+Open #18  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.8             (BRC 10838)
+Open #19  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 58.2             (BRC 108161)
+Open #20  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 53.3             (BRC 108162)
+Open #21  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 58.9             (BRC 107138)
+Open #22  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 55.7             (BRC 109162)
+Open #23  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 60.1             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+TestJet Report for "testjet".
+Thu Apr 28 19:35:32 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 155  Node m_a_dq<7>
+  Measured 44.5             (BRC 116164)
+Open #2  Device u1a_skt_c
+  Pin 159  Node m_a_dq<13>
+  Measured 43.2             (BRC 11761)
+Open #3  Device u1a_skt_c
+  Pin 164  Node m_a_dqs_dp<1>
+  Measured 44.6             (BRC 117165)
+Open #4  Device u1a_skt_c
+  Pin 166  Node m_a_dq<15>
+  Measured 42.7             (BRC 115168)
+Open #5  Device u1a_skt_c
+  Pin 196  Node m_a_dqs_dn<8>
+  Measured 45.4             (BRC 11349)
+Open #6  Device u1a_skt_c
+  Pin 168  Node m_a_dq<11>
+  Measured 43.0             (BRC 114169)
+Open #7  Device u1a_skt_c
+  Pin 240  Node m_a_dq<37>
+  Measured 49.6             (BRC 11072)
+Open #8  Device u1a_skt_c
+  Pin 251  Node m_a_dq<45>
+  Measured 52.1             (BRC 110170)
+Open #9  Device u1a_skt_c
+  Pin 237  Node nc_dimm_a0_s3
+  Measured 51.8             (BRC 108144)
+Open #10  Device u1a_skt_c
+  Pin 262  Node m_a_dq<53>
+  Measured 52.0             (BRC 109164)
+Open #11  Device u1a_skt_c
+  Pin 247  Node m_a_dq<39>
+  Measured 50.7             (BRC 110171)
+Open #12  Device u1a_skt_c
+  Pin 253  Node m_a_dq<41>
+  Measured 50.8             (BRC 11071)
+Open #13  Device u1a_skt_c
+  Pin 255  Node m_a_dqs_dn<5>
+  Measured 52.7             (BRC 10973)
+Open #14  Device u1a_skt_c
+  Pin 260  Node m_a_dq<43>
+  Measured 53.1             (BRC 10965)
+Open #15  Device u1a_skt_c
+  Pin 271  Node m_a_dq<51>
+  Measured 54.3             (BRC 10857)
+Open #16  Device u1a_skt_c
+  Pin 278  Node m_a_dqs_dp<7>
+  Measured 57.9             (BRC 109138)
+Open #17  Device u1a_skt_c
+  Pin 280  Node m_a_dq<63>
+  Measured 55.3             (BRC 10962)
+Open #18  Device u1a_skt_c
+  Pin 282  Node m_a_dq<59>
+  Measured 56.3             (BRC 10963)
+Open #19  Device u1a_skt_c
+  Pin 267  Node m_a_dqs_dp<6>
+  Measured 53.4             (BRC 10838)
+Open #20  Device u1a_skt_c
+  Pin 275  Node m_a_dq<57>
+  Measured 56.2             (BRC 108161)
+Open #21  Device u1a_skt_c
+  Pin 269  Node m_a_dq<55>
+  Measured 52.7             (BRC 108162)
+Open #22  Device u1a_skt_c
+  Pin 277  Node m_a_dqs_dn<7>
+  Measured 59.2             (BRC 107138)
+Open #23  Device u1a_skt_c
+  Pin 273  Node m_a_dq<61>
+  Measured 53.6             (BRC 109162)
+Open #24  Device u1a_skt_c
+  Pin 285  Node i2c_ddr_2p5v_sda
+  Measured 58.9             (BRC 107147)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704DH
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:37:14 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.012355u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:37:50 2022
+----------------------------------------
+r787 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   250.24
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r791 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   252.93
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:38:24 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.011700u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:38:31 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.012610u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:38:37 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.013840u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:41:02 2022
+----------------------------------------
+fc_c6_hs1 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   3.9810u
+Nominal:    9.0000u
+High Limit: 12.150u
+Low Limit:  5.4000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+r462 2.20k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:41:38 2022
+----------------------------------------
+r787 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   253.72
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r791 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   256.07
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:44:21 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.012779u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:44:54 2022
+----------------------------------------
+r787 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   109.09
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r791 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   110.58
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+fc_r1_hs5 HAS FAILED
+12-2607-02 RES,TKF,100 ohm,0.063W,1%,SM,
+Measured:   336.12
+Nominal:    100.00
+High Limit: 130.00
+Low Limit:  80.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:45:28 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.014163u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+fc_r1_hs5 HAS FAILED
+12-2607-02 RES,TKF,100 ohm,0.063W,1%,SM,
+Measured:   456.81k
+Nominal:    100.00
+High Limit: 130.00
+Low Limit:  80.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:45:35 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.014598u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+fc_r1_hs5 HAS FAILED
+12-2607-02 RES,TKF,100 ohm,0.063W,1%,SM,
+Measured:   171.37
+Nominal:    100.00
+High Limit: 130.00
+Low Limit:  80.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+73-19882-04
+Thu Apr 28 19:45:42 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.015071u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+fc_r1_hs5 HAS FAILED
+12-2607-02 RES,TKF,100 ohm,0.063W,1%,SM,
+Measured:   191.53
+Nominal:    100.00
+High Limit: 130.00
+Low Limit:  80.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:00:13 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   25
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   31
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   31
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   40
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704D7
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:09:35 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209  102
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136  102
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   srt_spi_boot_mosi      215141
+                r1434.2
+                 u8.U17
+Common Devices:
+                 r1434
+Message is:
+Check r1434
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   bm_spi_flsh_mosi       220110
+                 r360.2
+                u300.15
+                u301.15
+                x_r215.2
+Common Devices:
+                  r360
+Message is:
+Check r360
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:09:44 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   srt_spi_boot_mosi      215141
+                r1434.2
+                 u8.U17
+Common Devices:
+                 r1434
+Message is:
+Check r1434
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   bm_spi_flsh_mosi       220110
+                 r360.2
+                u300.15
+                u301.15
+                x_r215.2
+Common Devices:
+                  r360
+Message is:
+Check r360
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:09:53 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209  234
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136  234
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   srt_spi_boot_mosi      215141
+                r1434.2
+                 u8.U17
+Common Devices:
+                 r1434
+Message is:
+Check r1434
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   bm_spi_flsh_mosi       220110
+                 r360.2
+                u300.15
+                u301.15
+                x_r215.2
+Common Devices:
+                  r360
+Message is:
+Check r360
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:10:02 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   52
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027   52
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:10:11 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:10:21 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:10:30 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:10:39 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:13:34 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209   78
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136   78
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:13:43 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 1031
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027 1031
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:13:52 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:14:01 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209 Open
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:14:11 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:14:20 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:14:29 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209   26
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136   26
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG
+----------------------------------------
+Shorts Report for "shorts".
+Thu Apr 28 20:14:38 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: NMI_TO_CPU              22209  402
+                 r250.2
+               r1861_c.2
+               u1_c.BA23
+             u1_c_pch.BA23
+To:   nmi_to_cpu_r            22136  402
+                 r250.1
+                u40.E22
+Common Devices:
+                  r250
+Message is:
+Check r250
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704CG

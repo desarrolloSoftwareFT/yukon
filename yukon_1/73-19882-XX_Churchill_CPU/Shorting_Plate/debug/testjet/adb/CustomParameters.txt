@@ -1,0 +1,69 @@
+
+!=========================================================================
+!
+! This file allows the user to customize certain parameters used while
+! calculating limits during the AutoDebug process. The limits calculation
+! is done in two parts. First a limit is calculated using these parameters.
+! This is known as the user limit. Then an internal limit is calculated
+! using performance parameters of the Vectorless EP hardware/software, the
+! standard deviation, and the MinCpk. The more conservative of these two
+! limits will be chosen. This method is used for both low and high limits.
+! Additionally, the low limit can not be lower than the LowestLowLimit.
+!
+! An Excel spreadsheet is available that allows the user to see the effect
+! of changes to these parameters on limits generation.
+!        contrib/doc/VectorlessEP_ADB.xls
+!
+! Generally speaking, the user parameters control the limits for higher
+! valued pins, and the internal limits control the very low values.
+!
+!   HighUserLimit = mean + max(HiMinOffset, HiPercent*mean)
+!   LowUserLimit  = mean - max(LowMinOffset, LowPercent*mean)
+!
+! This file is created by AutoDebug if it does not already exist. If this
+! file is moved or deleted, a new one will be written with default values 
+! the next time AutoDebug is run.
+!
+!=========================================================================
+
+!---------------------------------------------------------------
+! No limit will be set lower than this value.
+!---------------------------------------------------------------
+LowestLowLimit 2.0
+
+!---------------------------------------------------------------
+! After limits are calculated, the cpk for each pin is also
+! calculated. Any pin whose cpk is less than this value is
+! commented out.
+!---------------------------------------------------------------
+MinCpk 2.5
+
+!---------------------------------------------------------------
+! This value is multiplied times the mean to get the high side
+! offset. This is compared to the HiMinOffset and the larger
+! is added to the mean to get the high limit. This is expressed
+! as Percent/100. Examples: 100% is 1.00,  33% is 0.33
+!---------------------------------------------------------------
+HiPercent 2.0
+
+!---------------------------------------------------------------
+! The offset added to the mean for the high limit is required
+! to be at least this large.
+!---------------------------------------------------------------
+HiMinOffset 20.0
+
+!---------------------------------------------------------------
+! This value is multiplied times the mean to get the low side
+! offset. This is compared to the LowMinOffset and the larger
+! is subtracted from the mean to get the low limit. This is
+! expressed as Percent/100. Example: 50% is 0.50
+!---------------------------------------------------------------
+LowPercent 0.50
+
+!---------------------------------------------------------------
+! The offset subtracted from the mean for the low limit is
+! required to be at least this large.
+!---------------------------------------------------------------
+LowMinOffset 10.0
+
+

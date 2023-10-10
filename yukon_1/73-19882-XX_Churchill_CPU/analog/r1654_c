@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513019  Vb12e                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "SATA0_ACT_L"
+connect i to "SATA0_LED_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1654_c" test.

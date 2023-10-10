@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512831  Vaf52                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PMOD_VDD_P3P_M2"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r45_m2" test.

@@ -1,0 +1,56 @@
+!!!!    2    0    1 1600995712  V3fa4                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+
+  !test "EN1"
+  !test "EN2"
+
+  test "OUT1"
+  test "OUT2"
+
+  !test "PG"
+end test
+
+
+subtest "EN1"
+  connect i to pins 27
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.9,3.0
+end subtest
+
+subtest "EN2"
+  connect i to pins 10
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.9,3.0
+end subtest
+
+subtest "OUT1"
+  connect i to "A1_2V"
+  connect l to ground
+
+  detector dcv, expect 1.2
+  measure 1.32, 1.08
+end subtest
+
+subtest "OUT2"
+  connect i to "A3P3V"
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.56, 3.04
+end subtest
+
+subtest "PG"
+  connect i to pins 13
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.5,3
+end subtest
+
+

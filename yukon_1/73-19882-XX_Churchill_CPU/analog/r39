@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176435   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:16 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "BMC_EMMC_RST_L"
+resistor 4.7k, 25, 20, re4, wb, ar200m

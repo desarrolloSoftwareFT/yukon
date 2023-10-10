@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600996989  V0524                                         
+on failure
+   report "Check for P45_50 presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "P45_50_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m,ed
+off failure

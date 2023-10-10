@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175928   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:49 2020
+disconnect all
+connect i to "LAN_PWRGOOD_1V"
+connect s to "P1V05_COMBINED"
+jumper 1.57k, re4, wb, ar500m, op
+! "a_r1306" test.

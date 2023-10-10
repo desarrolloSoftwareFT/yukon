@@ -1,0 +1,29 @@
+! Connect Test Dictionary created Thu Jul 23 13:31:00 2020
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! Chain:  U1_C_U1
+! Source: digital/u8_connect_d
+! Output: digital/u8_connect_d.vcl.x
+!
+U8
+796
+!FrCell DvCell Dev Pin  Node               Signature
+   85  83       U8 E17  I2C_BUS1_ALERT_R LHXX
+   89  87       U8 E6   XGE_BMC_RGMII2_RXD3 LHXX
+   92  90       U8 D2   XGE_BMC_RGMII2_RXD2 LHXX
+  131 129       U8 D5   SRT_BMC_XGE_RGMII2_TXD2 LHXX
+  134 132       U8 D4   SRT_BMC_XGE_RGMII2_TXD3 LHXX
+  137 135       U8 D6   BMC_NCSI_RXD1    LHXX
+  155 153       U8 D7   RGMII1TXD3_GPIOT5 LHXX
+  158 156       U8 E10  SRT_BMCPHY_MDIO1 LHXX
+  161 159       U8 D8   SRT_BMCPHY_MDC1  LHXX
+  164 162       U8 E12  BMC_EMMC_D3      LHXX
+  167 165       U8 D10  BMC_EMMC_D2      LHXX
+  170 168       U8 D9   BMC_EMMC_D1      LHXX
+  185 183       U8 E14  I2C_BUS4_ALERT_R LHXX
+  188 186       U8 D15  I2C_BUS3_ALERT_R LHXX
+  191 189       U8 D16  I2C_BUS2_ALERT_R LHXX
+  230 228       U8 D21  BMC_EMMC_D6      LHXX
+  233 231       U8 D20  BMC_EMMC_D5      LHXX
+  254 252       U8 D22  SRT_BMC_LPC_LAD<2> LHXX
+  790 788       U8 E9   BMC_NCSI_TXEN_R  LHXX
+  793 791       U8 E7   RGMII1TXD2_GPIOT4 LHXX

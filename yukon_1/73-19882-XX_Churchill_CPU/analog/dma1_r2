@@ -1,0 +1,6 @@
+!!!!    2    0    1 1601053603  Vb2bf                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:11 2020
+disconnect all
+connect i to "PWR_A1V2_DIDT"
+connect s to "PMOD_A1V2_ISENP"
+resistor 555,0,0, re3, ar200m, wb,en,ed

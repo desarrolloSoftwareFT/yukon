@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513011  V75be                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "R_BMC_UART5_RXD"
+connect i to "BMC_UART5_TX"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1607" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175966   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:27 2020
+disconnect all
+connect s to "BMC_NCSI_RCLKO"
+connect i to "CLK50M_NCSI_I210"
+jumper 10.0k, re4, wb, ar100m, op
+! "r777" test.

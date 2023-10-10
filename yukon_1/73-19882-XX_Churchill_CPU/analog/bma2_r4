@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512707  Vf0cf                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect i to "PMOD_5V0_SW_SN"
+connect s to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma2_r4" test.

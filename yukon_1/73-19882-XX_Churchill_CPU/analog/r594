@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176453   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:34 2020
+disconnect all
+connect s to "A1_2V"
+connect i to "MEM_DDR4_ALERT_N"
+resistor 4.7k, 25, 20, re4, wb, ar200m

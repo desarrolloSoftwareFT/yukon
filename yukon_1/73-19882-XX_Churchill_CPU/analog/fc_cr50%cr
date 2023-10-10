@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600566459  V68f1                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:16 2020
+on failure
+   report parallel devices
+   report "fc_cr50 fc_cr50%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN89_PRSNT_L"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr50%cr" test.
+off failure

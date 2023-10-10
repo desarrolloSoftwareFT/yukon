@@ -1,0 +1,142 @@
+!!!!    6    0    1 1594176833  V5f9a                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:54 2020
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         MAX232
+! Alias:             MAX3232,ICL232,LTC1386,ADM3202,SP232,SP3232
+! Part Type:         VLSI
+! Description:       TTL to RS232 to TTL Converter
+! Manufacturer:      Maxim,Intesil,Linear Technologies,Analog Devices,Sipex
+! Package Style:     16 pin SOP
+! Created:           Sep 14, 1998
+! Updated:           Apr 04, 2002. Added alias and Cisco part number.
+! Updated:           Jul 07, 2004. Added Cisco part number 15-3033-01.
+! Updated:           Aug 24, 2006. Added alias and Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-2563-01,15-1549-01,15-3529-01,15-3664-01,15-3033-01
+! Cisco Part #:      15-8127-01
+
+sequential
+
+vector cycle 10u
+receive delay 8u
+
+default device "u49"
+set terminators to on
+assign T1IN    to pins *
+assign T1OUT   to pins 14
+assign T2IN    to pins 10
+assign T2OUT   to pins 7
+assign R1IN    to pins 13
+assign R1OUT   to pins *
+assign R2IN    to pins 8
+assign R2OUT   to pins 9
+
+assign CAP     to pins *,*,*,*,*,*
+
+assign VCC     to pins *
+assign GND     to pins *
+
+power   VCC,GND
+inputs  T1IN,T2IN,R1IN,R2IN
+outputs T1OUT,T2OUT,R1OUT,R2OUT
+nondigital CAP
+
+family TTL
+
+set ref on pins 10,* to dh 5.0, dl 0.0  ! T1IN, T2IN
+set ref on pins 13,8  to dh 5.0, dl 0.0  ! R1IN, R2IN
+
+!IPG: Add defaults or loads to floating inputs and bidirs.
+assign Floating__Inputs to pins 10 default "0"
+inputs Floating__Inputs
+
+vector T1_0
+ set T1IN  to "0"
+ set T1OUT to "1"
+end vector
+
+vector T1_1
+ set T1IN  to "1"
+ set T1OUT to "0"
+end vector
+
+vector T2_0
+ set T2IN  to "0"
+ set T2OUT to "1"
+end vector
+
+vector T2_1
+ set T2IN  to "1"
+ set T2OUT to "0"
+end vector
+
+vector R1_0
+ set R1IN  to "0"
+ set R1OUT to "1"
+end vector
+
+vector R1_1
+ set R1IN  to "1"
+ set R1OUT to "0"
+end vector
+
+vector R2_0
+ set R2IN  to "0"
+ set R2OUT to "1"
+end vector
+
+vector R2_1
+ set R2IN  to "1"
+ set R2OUT to "0"
+end vector
+
+! **********************************************
+
+!IPG: Unit removed due to conflict in vector T1_0
+!IPG: Pin 11 conflicts with an unconnected pin.
+!*IPG*unit "T1 Low"
+!*IPG* execute T1_0
+!*IPG*end unit
+
+!IPG: Unit removed due to conflict in vector T1_1
+!IPG: Pin 11 conflicts with an unconnected pin.
+!*IPG*unit "T1 High"
+!*IPG* execute T1_1
+!*IPG*end unit
+
+unit "T2 Low"
+ execute T2_0
+end unit
+
+unit "T2 High"
+ execute T2_1
+end unit
+
+unit "R1 Low"
+ execute R1_0
+end unit
+
+unit "R1 High"
+ execute R1_1
+end unit
+
+unit "R2 Low"
+ execute R2_0
+end unit
+
+unit "R2 High"
+ execute R2_1
+end unit
+

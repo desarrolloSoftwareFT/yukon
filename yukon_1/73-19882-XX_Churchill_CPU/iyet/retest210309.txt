@@ -1,0 +1,672 @@
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 18:29:15 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11934 Open
+PCH_IPU_CPU_PWRGOOD2_1V                 
+                 r607.1
+               r1565_c.1
+To:     v                     11537
+pch_ipu_cpu_pwrgood2_1v_r2              
+                 r607.2
+                 u42.10
+Common Devices:
+                  r607
+Message is:
+Check r607
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: PVCCKRHV_FB             20529 Open
+                 c654.2
+                e_r917.2
+                e_r921.1
+                e_u107.8
+                 r356.2
+                 r357.2
+To:   pmod_pvcckrhv_trim      20211
+                 r357.1
+                 u78.14
+Common Devices:
+                  r357
+Message is:
+Check r357
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103  329
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138  329
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   28
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_A2V5_SW_SN        207125   28
+               bma1_c7.2
+               bma1_r4.1
+Common Devices:
+                bma1_r4
+Message is:
+Check bma1_r4
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 18:29:24 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11934 Open
+PCH_IPU_CPU_PWRGOOD2_1V                 
+                 r607.1
+               r1565_c.1
+To:     v                     11537
+pch_ipu_cpu_pwrgood2_1v_r2              
+                 r607.2
+                 u42.10
+Common Devices:
+                  r607
+Message is:
+Check r607
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: FAN23_PWM_PWR          202109 Open
+                fc_l14.1
+                fc_q56.3
+              fc_q56%pwr.S
+              fc_q56%qf.S
+                fc_r78.2
+To:   FAN23_PWM_CON_ZL       204103
+               fc_c1159.1
+                fc_l14.2
+               fc_r170.2
+Common Devices:
+                 fc_l14
+Message is:
+Check fc_l14
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_6_CAP_I7_B      22308 Open
+                e_c630.1
+               e_r1190.1
+                e_u108.5
+                 r364.2
+To:   pmod_p1v5_pch_en       222106
+                 r364.1
+                u40.C16
+Common Devices:
+                  r364
+Message is:
+Check r364
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 18:31:12 2021
+----------------------------------------
+c636 HAS FAILED
+11-100088-01 CAP,CE,10nF,25V,X7R,10%,SM,
+Measured:   4509.9p
+Nominal:    8000.0p
+High Limit: 0.010800u
+Low Limit:  4800.0p
+Capacitance in FARADS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   10.010k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+r353 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   228.03k
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r949 HAS FAILED
+12-2905-02 RES,TKF,4.7 k ohm,.063W,5%,SM
+Measured:   12.115M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+rn1%pin3_6 HAS FAILED
+
+REPLACE DEVICE: rn1
+14-0931-04 RNW,ISO, 4.7K, 5%, 4R,63mW,CR
+Measured:   6.9057M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 18:31:26 2021
+----------------------------------------
+r353 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   228.03k
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r949 HAS FAILED
+12-2905-02 RES,TKF,4.7 k ohm,.063W,5%,SM
+Measured:   12.115M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+rn1%pin3_6 HAS FAILED
+
+REPLACE DEVICE: rn1
+14-0931-04 RNW,ISO, 4.7K, 5%, 4R,63mW,CR
+Measured:   6.0061M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 18:31:32 2021
+----------------------------------------
+r353 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   78.448
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+rn1%pin3_6 HAS FAILED
+
+REPLACE DEVICE: rn1
+14-0931-04 RNW,ISO, 4.7K, 5%, 4R,63mW,CR
+Measured:   6.4245M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 18:31:38 2021
+----------------------------------------
+r353 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   133.93
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+rn1%pin3_6 HAS FAILED
+
+REPLACE DEVICE: rn1
+14-0931-04 RNW,ISO, 4.7K, 5%, 4R,63mW,CR
+Measured:   6.4245M
+Nominal:    4.7000k
+High Limit: 5.8750k
+Low Limit:  3.7600k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:18:37 2021
+----------------------------------------
+c636 HAS FAILED
+11-100088-01 CAP,CE,10nF,25V,X7R,10%,SM,
+Measured:   4330.6p
+Nominal:    8000.0p
+High Limit: 0.010800u
+Low Limit:  4800.0p
+Capacitance in FARADS
+----------------------------------------
+c479 HAS FAILED
+11-100081-01 CAP, CE, 100pF, 25V ,NP0,5%
+Measured:   177.79p
+Nominal:    100.00p
+High Limit: 135.00p
+Low Limit:  65.000p
+Capacitance in FARADS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.8794k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+r132 HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   7.1224k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:21:05 2021
+----------------------------------------
+r1606_c HAS FAILED
+12-5661-01 RES,TKF,22.1 ohm,0.063W,1%,SM
+Measured:   34.390
+Nominal:    22.100
+High Limit: 30.940
+Low Limit:  17.680
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:21:44 2021
+----------------------------------------
+r1606_c HAS FAILED
+12-5661-01 RES,TKF,22.1 ohm,0.063W,1%,SM
+Measured:   40.509
+Nominal:    22.100
+High Limit: 30.940
+Low Limit:  17.680
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:21:50 2021
+----------------------------------------
+r1606_c HAS FAILED
+12-5661-01 RES,TKF,22.1 ohm,0.063W,1%,SM
+Measured:   32.535
+Nominal:    22.100
+High Limit: 30.940
+Low Limit:  17.680
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:21:56 2021
+----------------------------------------
+r1606_c HAS FAILED
+12-5661-01 RES,TKF,22.1 ohm,0.063W,1%,SM
+Measured:   31.984
+Nominal:    22.100
+High Limit: 30.940
+Low Limit:  17.680
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:29:50 2021
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   223.68
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6R
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 20:48:34 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103 Open
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209141
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+Common Devices:
+                  r605
+Message is:
+Check r605
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6T
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 20:48:43 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103 Open
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: FAN4_TACH_ZL           105175   42
+               fc_c1162.1
+                fc_l16.2
+               fc_r164.2
+To:   FAN4_TACH_CON           10565   42
+                fc_l16.1
+                fc_p3.1
+Common Devices:
+                 fc_l16
+Message is:
+Check fc_l16
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209141
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+Common Devices:
+                  r605
+Message is:
+Check r605
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6T
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 20:48:53 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103 Open
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6T
+----------------------------------------
+Shorts Report for "shorts".
+Tue Mar 09 20:49:03 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103 Open
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209141
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+Common Devices:
+                  r605
+Message is:
+Check r605
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C6T
+----------------------------------------
+73-19882-04
+Tue Mar 09 20:53:58 2021
+----------------------------------------
+c636 HAS FAILED
+11-100088-01 CAP,CE,10nF,25V,X7R,10%,SM,
+Measured:   4334.9p
+Nominal:    8000.0p
+High Limit: 0.010800u
+Low Limit:  4800.0p
+Capacitance in FARADS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.7534k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6T

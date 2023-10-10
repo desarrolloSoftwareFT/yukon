@@ -1,0 +1,9 @@
+!!!!    2    0    1 1621614457   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:52 2020
+disconnect all
+connect s to "PMOD_P2V5_DIDT"
+connect i to "PMOD_P2V5_BST"
+!capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, nocomp
+!Aprender tarjeta nueva version 21 May
+jumper 20, re2, ar100m, ed, op
+! "bma5_c8" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175977   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:38 2020
+disconnect all
+connect s to "GND"
+connect i to "PD_CPU_RSVD_C55_C"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1046_c" test.

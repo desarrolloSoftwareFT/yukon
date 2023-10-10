@@ -1,0 +1,88 @@
+!!!!    6    0    1  846554888  V0417                                         
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         NC7ST08
+! Alias:             NC7SZ08,74LVC1G08,TC7SZ08
+! Part Type:         VLSI
+! Description:       TinyLogic UHS 2-Input AND Gate
+! Manufacturer:      Fairchild, TI, Toshiba
+! Package Style:     5 pin SOT23
+! Created:           Sep 23, 2001
+! Updated:           Sep 21, 2006. Updated aliases and Cisco part number.
+! Updated:           Jun 25, 2007. Updated Cisco part number.
+! Updated:           Jan 15, 2008. Updated Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-4272-01,15-8497-01,15-6728-01,15-6632-01
+
+sequential
+
+vector cycle  500n
+receive delay 400n
+
+assign VDD   to pins 5
+assign GND   to pins 3
+
+power VDD,GND
+
+assign AIN  to pins 1
+assign BIN  to pins 2
+assign YOUT to pins 4
+
+inputs  AIN,BIN
+outputs YOUT
+
+family LVT
+
+vector A0B0
+ set AIN  to "0"
+ set BIN  to "0"
+ set YOUT to "0"
+end vector
+
+vector A1B0
+ set AIN  to "1"
+ set BIN  to "0"
+ set YOUT to "0"
+end vector
+
+vector A0B1
+ set AIN  to "0"
+ set BIN  to "1"
+ set YOUT to "0"
+end vector
+
+vector A1B1
+ set AIN  to "1"
+ set BIN  to "1"
+ set YOUT to "1"
+end vector
+
+! ************************************************
+
+unit "AIN = 0, BIN = 0"
+ execute A0B0
+end unit
+
+unit "AIN = 1, BIN = 0"
+ execute A1B0
+end unit
+
+unit "AIN = 0, BIN = 1"
+ execute A0B1
+end unit
+
+unit "AIN = 1, BIN = 1"
+ execute A1B1
+end unit
+

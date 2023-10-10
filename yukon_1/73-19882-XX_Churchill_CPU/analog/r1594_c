@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176303   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:04 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "CPU_PCH_HOT_1V_L"
+resistor 2.21k, 25, 20, re4, wb, ar500m

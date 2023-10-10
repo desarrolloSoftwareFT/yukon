@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600754025  Vc32a                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:24 2020
+on failure
+   report parallel devices
+   report "fc_cr22 fc_cr22%cr5"
+end on failure
+disconnect all
+connect s to "FAN01_BLU_LED_CON"
+connect i to "A3P3V"
+diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+! "fc_cr22%cr3" test.
+off failure

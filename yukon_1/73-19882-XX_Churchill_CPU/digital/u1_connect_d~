@@ -1,0 +1,101 @@
+!!!!   24    0    1 1613401232  Ve5a2                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:07 2020
+
+connect "u1"
+test inputs only
+ground bounce suppression   on
+family "LVT"
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+!@tdi "CPLD_JTAG_TDI"
+!@tdo "CPLD_JTAG_TDO"
+!@tms "CPLD_JTAG_TMS"
+!@tck "CPLD_JTAG_TCK"
+  devices
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+
+nodes
+!@node "BMC_CPU_SPIFLASH_EN_L" hybrid test "u1.P12"
+!@node "BMC_CPU_SPIFLASH_SEL_AND" hybrid test "u1.R11"
+  node "BMC_SEC_BOOT_JTAG_TCK" hybrid test "u1.N6"
+  node "BMC_SEC_BOOT_JTAG_TDI" hybrid test "u1.N8"
+  node "BMC_SEC_BOOT_JTAG_TDO" hybrid test "u1.P4"
+!@node "BMC_SEC_BOOT_JTAG_TRST_L" hybrid test "u1.T5"
+!@node "C105_SYNC_CPU_TO_FPGA_INTR_L_R" hybrid test "u1.N14"
+! node "CLK50M_CPLD" hybrid test "u1.T7"    !JRN Feb 15 2021 cpld 11
+!@node "CPLD_SPI_CS_L" hybrid test "u1.R12"
+!@node "CPLD_SPI_MISO" hybrid test "u1.T6"
+!@node "CPLD_SPI_MOSI" hybrid test "u1.P13"
+!@node "CPLD_SPI_SCK" hybrid test "u1.P6"
+!@node "CPU_FIVR_FAULT_1V" hybrid test "u1.R16"
+!@node "CPU_JTAG_CABLE_PRSNT_L" hybrid test "u1.T10"
+  node "CPU_PCH_HOT_1V_L" hybrid test "u1.P16"
+  node "CPU_SEC_BOOT_JTAG_TMS" hybrid test "u1.T9"
+!@node "FM_BDXDE_CATERR_GTL_N" hybrid test "u1.P15"
+!@node "HEARTBEAT_LED_L" hybrid test "u1.R3"
+  node "JTAG_BMC_TDI_R" hybrid test "u1.P5"
+!IPG TAP Conflict:   node "JTAG_BMC_TMS_R" hybrid test "u1.R4"
+!IPG TAP Conflict:   node "JTAG_BMC_TRST_L_R" hybrid test "u1.R5"
+!IPG TAP Conflict:   node "JTAG_TCK_3V3_I210" hybrid test "u1.R7"
+  node "JTAG_TDO_3V3_I210" hybrid test "u1.P7"
+  node "LJTAG_TCK_HDR_3V3" hybrid test "u1.R10"
+  node "LJTAG_TDI_HDR_3V3" hybrid test "u1.N10"
+  node "LJTAG_TDO_HDR_3V3" hybrid test "u1.T4"
+!@node "LJTAG_TRST_L_HDR_3V3" hybrid test "u1.R9"
+!@node "PCH_BMFPGA_PERST_L" hybrid test "u1.P11"
+!@node "PCH_CONSOLE_TXD1" hybrid test "u1.R14"
+!@node "PCH_PLTRST_L" hybrid test "u1.T11"
+!IPG TAP Conflict:   node "SRT_JTAG_BMC_TCK" hybrid test "u1.T3"
+!@node "VREF_P1V05" hybrid test "u1.N16"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+!IPG TAP Conflict:   node "BMCPHY_INT_M" hybrid test "u1.N7" !Not disabled
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "_d_U1_R8"
+
+!IPG: Family information could not be found for node BMC_CPU_SPIFLASH_EN_L
+!IPG: Family information could not be found for node BMC_CPU_SPIFLASH_SEL_AND
+!IPG: Family information could not be found for node BMC_SEC_BOOT_JTAG_TCK
+!IPG: Family information could not be found for node BMC_SEC_BOOT_JTAG_TDI
+!IPG: Family information could not be found for node BMC_SEC_BOOT_JTAG_TDO
+!IPG: Family information could not be found for node BMC_SEC_BOOT_JTAG_TRST_L
+!IPG: Family information could not be found for node C105_SYNC_CPU_TO_FPGA_INTR_L_R
+!IPG: Family information could not be found for node CLK50M_CPLD
+!IPG: Family information could not be found for node CPLD_SPI_CS_L
+!IPG: Family information could not be found for node CPLD_SPI_MISO
+!IPG: Family information could not be found for node CPLD_SPI_MOSI
+!IPG: Family information could not be found for node CPLD_SPI_SCK
+!IPG: Family information could not be found for node CPU_FIVR_FAULT_1V
+!IPG: Family information could not be found for node CPU_JTAG_CABLE_PRSNT_L
+!IPG: Family information could not be found for node CPU_PCH_HOT_1V_L
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TMS
+!IPG: Family information could not be found for node FM_BDXDE_CATERR_GTL_N
+!IPG: Family information could not be found for node HEARTBEAT_LED_L
+!IPG: Family information could not be found for node JTAG_BMC_TDI_R
+!IPG: Family information could not be found for node JTAG_BMC_TMS_R
+!IPG: Family information could not be found for node JTAG_BMC_TRST_L_R
+!IPG: Family information could not be found for node JTAG_TCK_3V3_I210
+!IPG: Family information could not be found for node JTAG_TDO_3V3_I210
+!IPG: Family information could not be found for node LJTAG_TCK_HDR_3V3
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+!IPG: Family information could not be found for node PCH_BMFPGA_PERST_L
+!IPG: Family information could not be found for node PCH_CONSOLE_TXD1
+!IPG: Family information could not be found for node PCH_PLTRST_L
+!IPG: Family information could not be found for node SRT_JTAG_BMC_TCK
+!IPG: Family information could not be found for node VREF_P1V05
+!IPG: Family information could not be found for node BMCPHY_INT_M
+end connect
+

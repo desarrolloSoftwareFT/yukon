@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512858  V242f                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "CPU_FPGA_BMFPGA_SPARE0"
+connect i to "CPU_FPGA_BMFPGA_SPARE0_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r233" test.

@@ -1,0 +1,13 @@
+!!!!    2    0    1 1597477392   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:15 2020
+on failure
+   report parallel devices
+   report "r1650 2.80k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4156_CAP_I169_B"
+!connect g to "P12V_STBY" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+! "c669" test.
+off failure

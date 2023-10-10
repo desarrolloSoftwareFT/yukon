@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175967   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:28 2020
+disconnect all
+connect s to "XTAL_CLKBUF_25M_IN"
+connect i to "XTAL_CLKBUF_25M_OUT"
+jumper 10.0k, re4, wb, ar100m, op
+! "r826" test.

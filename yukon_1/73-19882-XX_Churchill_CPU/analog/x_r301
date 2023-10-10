@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513040  V5c94                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:16 2020
+disconnect all
+connect s to "BM_FPGA_SPI_UBOOT_CS0"
+connect i to "SPI_BOOT_CS1_L_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "x_r301" test.

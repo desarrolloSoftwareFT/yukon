@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512919  Vde7a                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect i to "DDR_B_DIMM0_SA0"
+connect s to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r527_c" test.

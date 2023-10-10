@@ -1,0 +1,14 @@
+!!!!    2    0    1 1594176588   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:49 2020
+on failure
+   report parallel devices
+   report "r1602_c 120"
+end on failure
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "SVID_DATA_R_C"
+connect a to "P1V05_COMBINED"
+connect b to "SVID_DATA_R_C"
+resistor 60, 30, 20, re2, ar200m
+! "r859_c" test.
+off failure

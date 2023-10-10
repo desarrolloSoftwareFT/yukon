@@ -1,0 +1,13 @@
+!!!!    2    0    1 1623425489   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:44 2020
+on failure
+   report parallel devices
+   report "c573 100n"
+end on failure
+disconnect all
+connect i to "ADC0_PVCCFUSESUS_CH4"
+connect s to "GND"
+connect g to "PMOD_PVCCSCFUSESUS_VOSEN" 
+resistor 3.83k, 25, 20, re4, wb, ar200m, wa167m  !P4c a2
+!jumper 5k, re2, ar200m, ed, op
+off failure

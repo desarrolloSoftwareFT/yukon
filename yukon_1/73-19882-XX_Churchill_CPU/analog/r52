@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175954   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:15 2020
+disconnect all
+connect i to "BMC_I210_RESET_L"
+connect s to "A3P3V"
+jumper 3.12k, re4, wb, ar500m, op
+! "r52" test.

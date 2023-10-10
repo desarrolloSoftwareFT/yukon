@@ -1,0 +1,116 @@
+!!!!   24    0    1 1594176855  V1e8a                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:16 2020
+
+connect "u27"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+!IPG  family "???"
+!IPG: Family information could not be found for any node; TTL will be assumed
+
+!IPG: Connect test generated with CONNECTMAX value of 30
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u40.Y22
+!IPG:    u27.N13
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u40_u27"
+  tdi "SF_JTAG_TDI"
+  tdo "SF_JTAG_TDO"
+  tms "SF_JTAG_TMS"
+  tck "SF_JTAG_TCK"
+  trst "SF_JTAG_TRST"
+  devices
+    "u40", "custom_lib/16-101031-01.bsm_noidcode", "fg484", no
+    "u27", "custom_lib/m2s025ts-vf256.bsd_noidcode", "vf256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node SF_JTAG_TDI
+!IPG: Family information could not be found for node SF_JTAG_TDO
+!IPG: Family information could not be found for node SF_JTAG_TMS
+!IPG: Family information could not be found for node SF_JTAG_TCK
+!IPG: Family information could not be found for node SF_JTAG_TRST
+
+disables "disable vector"
+  node "BM_SPI_GOLD_CS0_L" family "LVT" hybrid default "1"
+  node "BM_SPI_STD_CS0_L" family "LVT" hybrid default "1"
+  node "BMFPGA_BUF_SPI_FLSH_SEL" family "LVT" hybrid default "0"
+  node "FPGA_MUX_DATA" family "LVT" hybrid default "1"
+  node "FPGA_MUX_SCLK" family "LVT" hybrid default "T"
+
+  pcf order is nodes "BM_SPI_GOLD_CS0_L","BM_SPI_STD_CS0_L"
+  pcf order is nodes "BMFPGA_BUF_SPI_FLSH_SEL","FPGA_MUX_DATA"
+  pcf order is nodes "FPGA_MUX_SCLK"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "11010"
+  "11011"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   u300.8  u301.8  u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8  x_u17.1  x_u17.4
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u300" pins 8
+!IPG: with pin 7 on node "BM_SPI_GOLD_CS0_L"
+disabled device "u301" pins 8
+!IPG: with pin 7 on node "BM_SPI_STD_CS0_L"
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+disabled device "x_u17" pins 1,4
+!IPG: with pin 6 on node "BMFPGA_BUF_SPI_FLSH_SEL"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+set slew rate on nodes "SF_JTAG_TDI" to 250
+set slew rate on nodes "SF_JTAG_TMS" to 250
+set slew rate on nodes "SF_JTAG_TCK" to 250
+
+nodes
+  node "BMC_FPGA_HEARTBEAT_LED" hybrid test "u27.B15"
+  node "BMC_LED_SB_L<0>" hybrid test "u27.B5"
+  node "BMC_LED_SB_L<2>" hybrid test "u27.A2"
+  node "BMC_LED_SB_L<3>" hybrid test "u27.B2"
+  node "BMC_WDT1_RST_2V5" hybrid test "u27.B12"
+  node "BMFPGA_TP7" hybrid test "u27.B7"
+  node "BMFPGA_TP10" hybrid test "u27.B10"
+  node "CPU_FPGA_BMFPGA_SPARE0" hybrid test "u27.A15"
+  node "FAN01_PG" hybrid test "u27.A7"
+  node "FAN23_PG" hybrid test "u27.A8"
+  node "FPGA_BMC_WDT_2" hybrid test "u27.C6"
+  node "P2PM_CPU_FPGA_BMC_FPGA1" hybrid test "u27.B3"
+  node "SRT_P2PM_BMC_FPGA_CPU_FPGA1" hybrid test "u27.A4"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "BMC_LED_SB_L<1>"
+!IPG: node "BMC_LED_SB_L<7>"
+
+!IPG: Family information could not be found for node BMC_FPGA_HEARTBEAT_LED
+!IPG: Family information could not be found for node BMC_LED_SB_L<0>
+!IPG: Family information could not be found for node BMC_LED_SB_L<2>
+!IPG: Family information could not be found for node BMC_LED_SB_L<3>
+!IPG: Family information could not be found for node BMC_WDT1_RST_2V5
+!IPG: Family information could not be found for node BMFPGA_TP7
+!IPG: Family information could not be found for node BMFPGA_TP10
+!IPG: Family information could not be found for node CPU_FPGA_BMFPGA_SPARE0
+!IPG: Family information could not be found for node FAN01_PG
+!IPG: Family information could not be found for node FAN23_PG
+!IPG: Family information could not be found for node FPGA_BMC_WDT_2
+!IPG: Family information could not be found for node P2PM_CPU_FPGA_BMC_FPGA1
+!IPG: Family information could not be found for node SRT_P2PM_BMC_FPGA_CPU_FPGA1
+end connect
+

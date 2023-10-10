@@ -1,0 +1,9 @@
+!!!!    2    0    1 1615422211   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:41 2020
+disconnect all
+connect s to "P2PM_CPU_MB<0>"
+connect i to "SRT_P2PM_CPU_MB<0>"
+connect a to "P2PM_CPU_MB<0>"
+connect b to "SRT_P2PM_CPU_MB<0>"
+resistor 33+5 , 40, 20, re1, ar200m,en, ed
+! "r353" test.

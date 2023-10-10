@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176672   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:13 2020
+disconnect all
+connect s to "A2_5V"
+connect i to "CPU_1588_SYNC_MB"
+resistor 1.5k, 25, 20, re4, wb, ar1.00

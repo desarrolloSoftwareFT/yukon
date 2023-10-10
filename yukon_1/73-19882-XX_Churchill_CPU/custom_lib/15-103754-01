@@ -1,0 +1,660 @@
+!!!!    6    0    1 1443001128  V2b69                                         
+
+assign VCCA  to pins 1
+assign VCCB  to pins 23,24
+assign GND   to pins 11,12,13
+
+assign OE   to pins 22
+assign DIR  to pins 2
+assign A0   to pins 3
+assign B0   to pins 21
+assign A1   to pins 4
+assign B1   to pins 20
+assign A2   to pins 5
+assign B2   to pins 19
+assign A3   to pins 6
+assign B3   to pins 18
+assign A4   to pins 7
+assign B4   to pins 17
+assign A5   to pins 8
+assign B5   to pins 16
+assign A6   to pins 9
+assign B6   to pins 15
+assign A7   to pins 10
+assign B7   to pins 14
+
+power  VCCA,VCCB,GND
+inputs OE
+inputs  DIR
+bidirectional A0,B0,A1,B1,A2,B2,A3,B3,A4,B4,A5,B5,A6,B6,A7,B7
+
+family LVT
+
+!*****************************************************************
+vector A0_B0_0
+ drive A0
+ receive B0
+ set OE  to "0"
+ set DIR to "1"
+ set A0  to "0"
+ set B0  to "0"
+end vector
+
+vector A0_B0_1
+ drive A0
+ receive B0
+ set OE  to "0"
+ set DIR to "1"
+ set A0  to "1"
+ set B0  to "1"
+end vector
+
+vector A0_B0_Disable
+ drive A0
+ receive B0
+ set OE  to "1"
+ set DIR to "1"
+ set A0  to "0"
+ set B0  to "1"
+end vector
+
+vector B0_A0_0
+ drive B0
+ receive A0
+ set OE  to "0"
+ set DIR to "0"
+ set B0  to "0"
+ set A0  to "0"
+end vector
+
+vector B0_A0_1
+ drive B0
+ receive A0
+ set OE  to "0"
+ set DIR to "0"
+ set B0  to "1"
+ set A0  to "1"
+end vector
+
+vector B0_A0_Disable
+ drive B0
+ receive A0
+ set OE  to "1"
+ set DIR to "0"
+ set B0  to "0"
+ set A0  to "1"
+end vector
+
+vector A1_B1_0
+ drive A1
+ receive B1
+ set OE  to "0"
+ set DIR to "1"
+ set A1  to "0"
+ set B1  to "0"
+end vector
+
+vector A1_B1_1
+ drive A1
+ receive B1
+ set OE  to "0"
+ set DIR to "1"
+ set A1  to "1"
+ set B1  to "1"
+end vector
+
+vector A1_B1_Disable
+ drive A1
+ receive B1
+ set OE  to "1"
+ set DIR to "1"
+ set A1  to "0"
+ set B1  to "1"
+end vector
+
+vector B1_A1_0
+ drive B1
+ receive A1
+ set OE  to "0"
+ set DIR to "0"
+ set B1  to "0"
+ set A1  to "0"
+end vector
+
+vector B1_A1_1
+ drive B1
+ receive A1
+ set OE  to "0"
+ set DIR to "0"
+ set B1  to "1"
+ set A1  to "1"
+end vector
+
+vector B1_A1_Disable
+ drive B1
+ receive A1
+ set OE  to "1"
+ set DIR to "0"
+ set B1  to "0"
+ set A1  to "1"
+end vector
+
+vector A2_B2_0
+ drive A2
+ receive B2
+ set OE  to "0"
+ set DIR to "1"
+ set A2  to "0"
+ set B2  to "0"
+end vector
+
+vector A2_B2_1
+ drive A2
+ receive B2
+ set OE  to "0"
+ set DIR to "1"
+ set A2  to "1"
+ set B2  to "1"
+end vector
+
+vector A2_B2_Disable
+ drive A2
+ receive B2
+ set OE  to "1"
+ set DIR to "1"
+ set A2  to "0"
+ set B2  to "1"
+end vector
+
+vector B2_A2_0
+ drive B2
+ receive A2
+ set OE  to "0"
+ set DIR to "0"
+ set B2  to "0"
+ set A2  to "0"
+end vector
+
+vector B2_A2_1
+ drive B2
+ receive A2
+ set OE  to "0"
+ set DIR to "0"
+ set B2  to "1"
+ set A2  to "1"
+end vector
+
+vector B2_A2_Disable
+ drive B2
+ receive A2
+ set OE  to "1"
+ set DIR to "0"
+ set B2  to "0"
+ set A2  to "1"
+end vector
+
+vector A3_B3_0
+ drive A3
+ receive B3
+ set OE  to "0"
+ set DIR to "1"
+ set A3  to "0"
+ set B3  to "0"
+end vector
+
+vector A3_B3_1
+ drive A3
+ receive B3
+ set OE  to "0"
+ set DIR to "1"
+ set A3  to "1"
+ set B3  to "1"
+end vector
+
+vector A3_B3_Disable
+ drive A3
+ receive B3
+ set OE  to "1"
+ set DIR to "1"
+ set A3  to "0"
+ set B3  to "1"
+end vector
+
+vector B3_A3_0
+ drive B3
+ receive A3
+ set OE  to "0"
+ set DIR to "0"
+ set B3  to "0"
+ set A3  to "0"
+end vector
+
+vector B3_A3_1
+ drive B3
+ receive A3
+ set OE  to "0"
+ set DIR to "0"
+ set B3  to "1"
+ set A3  to "1"
+end vector
+
+vector B3_A3_Disable
+ drive B3
+ receive A3
+ set OE  to "1"
+ set DIR to "0"
+ set B3  to "0"
+ set A3  to "1"
+end vector
+
+vector A4_B4_0
+ drive A4
+ receive B4
+ set OE  to "0"
+ set DIR to "1"
+ set A4  to "0"
+ set B4  to "0"
+end vector
+
+vector A4_B4_1
+ drive A4
+ receive B4
+ set OE  to "0"
+ set DIR to "1"
+ set A4  to "1"
+ set B4  to "1"
+end vector
+
+vector A4_B4_Disable
+ drive A4
+ receive B4
+ set OE  to "1"
+ set DIR to "1"
+ set A4  to "0"
+ set B4  to "1"
+end vector
+
+vector B4_A4_0
+ drive B4
+ receive A4
+ set OE  to "0"
+ set DIR to "0"
+ set B4  to "0"
+ set A4  to "0"
+end vector
+
+vector B4_A4_1
+ drive B4
+ receive A4
+ set OE  to "0"
+ set DIR to "0"
+ set B4  to "1"
+ set A4  to "1"
+end vector
+
+vector B4_A4_Disable
+ drive B4
+ receive A4
+ set OE  to "1"
+ set DIR to "0"
+ set B4  to "0"
+ set A4  to "1"
+end vector
+
+vector A5_B5_0
+ drive A5
+ receive B5
+ set OE  to "0"
+ set DIR to "1"
+ set A5  to "0"
+ set B5  to "0"
+end vector
+
+vector A5_B5_1
+ drive A5
+ receive B5
+ set OE  to "0"
+ set DIR to "1"
+ set A5  to "1"
+ set B5  to "1"
+end vector
+
+vector A5_B5_Disable
+ drive A5
+ receive B5
+ set OE  to "1"
+ set DIR to "1"
+ set A5  to "0"
+ set B5  to "1"
+end vector
+
+vector B5_A5_0
+ drive B5
+ receive A5
+ set OE  to "0"
+ set DIR to "0"
+ set B5  to "0"
+ set A5  to "0"
+end vector
+
+vector B5_A5_1
+ drive B5
+ receive A5
+ set OE  to "0"
+ set DIR to "0"
+ set B5  to "1"
+ set A5  to "1"
+end vector
+
+vector B5_A5_Disable
+ drive B5
+ receive A5
+ set OE  to "1"
+ set DIR to "0"
+ set B5  to "0"
+ set A5  to "1"
+end vector
+
+vector A6_B6_0
+ drive A6
+ receive B6
+ set OE  to "0"
+ set DIR to "1"
+ set A6  to "0"
+ set B6  to "0"
+end vector
+
+vector A6_B6_1
+ drive A6
+ receive B6
+ set OE  to "0"
+ set DIR to "1"
+ set A6  to "1"
+ set B6  to "1"
+end vector
+
+vector A6_B6_Disable
+ drive A6
+ receive B6
+ set OE  to "1"
+ set DIR to "1"
+ set A6  to "0"
+ set B6  to "1"
+end vector
+
+vector B6_A6_0
+ drive B6
+ receive A6
+ set OE  to "0"
+ set DIR to "0"
+ set B6  to "0"
+ set A6  to "0"
+end vector
+
+vector B6_A6_1
+ drive B6
+ receive A6
+ set OE  to "0"
+ set DIR to "0"
+ set B6  to "1"
+ set A6  to "1"
+end vector
+
+vector B6_A6_Disable
+ drive B6
+ receive A6
+ set OE  to "1"
+ set DIR to "0"
+ set B6  to "0"
+ set A6  to "1"
+end vector
+
+vector A7_B7_0
+ drive A7
+ receive B7
+ set OE  to "0"
+ set DIR to "1"
+ set A7  to "0"
+ set B7  to "0"
+end vector
+
+vector A7_B7_1
+ drive A7
+ receive B7
+ set OE  to "0"
+ set DIR to "1"
+ set A7  to "1"
+ set B7  to "1"
+end vector
+
+vector A7_B7_Disable
+ drive A7
+ receive B7
+ set OE  to "1"
+ set DIR to "1"
+ set A7  to "0"
+ set B7  to "1"
+end vector
+
+vector B7_A7_0
+ drive B7
+ receive A7
+ set OE  to "0"
+ set DIR to "0"
+ set B7  to "0"
+ set A7  to "0"
+end vector
+
+vector B7_A7_1
+ drive B7
+ receive A7
+ set OE  to "0"
+ set DIR to "0"
+ set B7  to "1"
+ set A7  to "1"
+end vector
+
+vector B7_A7_Disable
+ drive B7
+ receive A7
+ set OE  to "1"
+ set DIR to "0"
+ set B7  to "0"
+ set A7  to "1"
+end vector
+
+
+!*****************************************************************************
+
+
+unit "A0 to B0, Low"
+ execute A0_B0_0
+end unit
+
+unit "A0 to B0, High"
+ execute A0_B0_1
+end unit
+
+unit "A0 to B0, Disable"
+ execute A0_B0_Disable
+end unit
+
+unit "B0 to A0, Low"
+ execute B0_A0_0
+end unit
+
+unit "B0 to A0, High"
+ execute B0_A0_1
+end unit
+
+unit "B0 to A0, Disable"
+ execute B0_A0_Disable
+end unit
+
+unit "A1 to B1, Low"
+ execute A1_B1_0
+end unit
+
+unit "A1 to B1, High"
+ execute A1_B1_1
+end unit
+
+unit "A1 to B1, Disable"
+ execute A1_B1_Disable
+end unit
+
+unit "B1 to A1, Low"
+ execute B1_A1_0
+end unit
+
+unit "B1 to A1, High"
+ execute B1_A1_1
+end unit
+
+unit "B1 to A1, Disable"
+ execute B1_A1_Disable
+end unit
+
+unit "A2 to B2, Low"
+ execute A2_B2_0
+end unit
+
+unit "A2 to B2, High"
+ execute A2_B2_1
+end unit
+
+unit "A2 to B2, Disable"
+ execute A2_B2_Disable
+end unit
+
+unit "B2 to A2, Low"
+ execute B2_A2_0
+end unit
+
+unit "B2 to A2, High"
+ execute B2_A2_1
+end unit
+
+unit "B2 to A2, Disable"
+ execute B2_A2_Disable
+end unit
+
+unit "A3 to B3, Low"
+ execute A3_B3_0
+end unit
+
+unit "A3 to B3, High"
+ execute A3_B3_1
+end unit
+
+unit "A3 to B3, Disable"
+ execute A3_B3_Disable
+end unit
+
+unit "B3 to A3, Low"
+ execute B3_A3_0
+end unit
+
+unit "B3 to A3, High"
+ execute B3_A3_1
+end unit
+
+unit "B3 to A3, Disable"
+ execute B3_A3_Disable
+end unit
+
+unit "A4 to B4, Low"
+ execute A4_B4_0
+end unit
+
+unit "A4 to B4, High"
+ execute A4_B4_1
+end unit
+
+unit "A4 to B4, Disable"
+ execute A4_B4_Disable
+end unit
+
+unit "B4 to A4, Low"
+ execute B4_A4_0
+end unit
+
+unit "B4 to A4, High"
+ execute B4_A4_1
+end unit
+
+unit "B4 to A4, Disable"
+ execute B4_A4_Disable
+end unit
+
+unit "A5 to B5, Low"
+ execute A5_B5_0
+end unit
+
+unit "A5 to B5, High"
+ execute A5_B5_1
+end unit
+
+unit "A5 to B5, Disable"
+ execute A5_B5_Disable
+end unit
+
+unit "B5 to A5, Low"
+ execute B5_A5_0
+end unit
+
+unit "B5 to A5, High"
+ execute B5_A5_1
+end unit
+
+unit "B5 to A5, Disable"
+ execute B5_A5_Disable
+end unit
+
+unit "A6 to B6, Low"
+ execute A6_B6_0
+end unit
+
+unit "A6 to B6, High"
+ execute A6_B6_1
+end unit
+
+unit "A6 to B6, Disable"
+ execute A6_B6_Disable
+end unit
+
+unit "B6 to A6, Low"
+ execute B6_A6_0
+end unit
+
+unit "B6 to A6, High"
+ execute B6_A6_1
+end unit
+
+unit "B6 to A6, Disable"
+ execute B6_A6_Disable
+end unit
+
+unit "A7 to B7, Low"
+ execute A7_B7_0
+end unit
+
+unit "A7 to B7, High"
+ execute A1_B1_1
+end unit
+
+unit "A7 to B7, Disable"
+ execute A7_B7_Disable
+end unit
+
+unit "B7 to A7, Low"
+ execute B7_A7_0
+end unit
+
+unit "B7 to A7, High"
+ execute B7_A7_1
+end unit
+
+unit "B7 to A7, Disable"
+ execute B7_A7_Disable
+end unit

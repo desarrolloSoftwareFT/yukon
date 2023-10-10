@@ -1,0 +1,22 @@
+!!!!    2    0    1 1622478936   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:34 2020
+on failure
+   report parallel devices
+   report "bma4_c11 47.0u"
+   report "bma4_c13 47.0u"
+   report "bma4_c14 47.0u"
+   report "e_c618 47.0u"
+   report "c297_c 22.0u"
+   report "bma4_c6 10.0u"
+   report "bma4_c19 1.00u"
+   report "e_c619 10.0n"
+   report "bma4_c7 100p"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PVCCSCFUSESUS"
+connect g to "UNNAMED_1_CAP_I35_B" 
+connect g to "ADC0_PVCCFUSESUS_CH4" 
+capacitor 268.01u, 35, 40, fr128, re2, ar200m, ed, sm, nocomp
+! "bma4_c5" test.
+off failure

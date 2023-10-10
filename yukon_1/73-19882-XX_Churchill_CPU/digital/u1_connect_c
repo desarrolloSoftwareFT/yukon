@@ -1,0 +1,89 @@
+!!!!   24    0    1 1600601315  V4bbf                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:07 2020
+
+connect "u1"
+test inputs only
+ground bounce suppression   on
+family "LVT"
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+!@tdi "CPLD_JTAG_TDI"
+!@tdo "CPLD_JTAG_TDO"
+!@tms "CPLD_JTAG_TMS"
+!@tck "CPLD_JTAG_TCK"
+  devices
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+
+nodes
+  node "BMC_I2C_RST_L_2V5" hybrid test "u1.J4"
+  node "BMC_SEC_BOOT_JTAG_TMS" hybrid test "u1.L7"
+!@node "C105_PHY_RST_SDP0_1_R" hybrid test "u1.K13"
+  node "CPU_1588_SYNC" hybrid test "u1.K11"
+  node "CPU_1588_SYNC_MB" hybrid test "u1.K3"
+!@node "CPU_ADR_COMPLETE_1V" hybrid test "u1.K15"
+!@node "CPU_ADR_IN_1V" family "LVT_2V5" hybrid test "u1.M15"
+!@node "CPU_ERR1_1V_L" family "LVT_2V5" hybrid test "u1.K16"
+!@node "CPU_MEM_HOT_1V_L" hybrid test "u1.K12"
+!@node "CPU_PROCHOT_1V_L" hybrid test "u1.K14"
+!IPG TAP Conflict:   node "CPU_PWRGD_PCH" hybrid test "u1.J16"
+  node "CPU_SEC_BOOT_JTAG_TCK" hybrid test "u1.M9"
+  node "CPU_SEC_BOOT_JTAG_TDI" hybrid test "u1.L10"
+!@node "CPU_SEC_BOOT_JTAG_TDO" hybrid test "u1.M8"
+!IPG TAP Conflict:   node "DRAM_PWR_OK_R" hybrid test "u1.L12"
+!@node "FM_BDXDE_THERMTRIP_N" hybrid test "u1.J13"
+  node "FM_CPU2PCH_THROT" hybrid test "u1.M14"
+!@node "FM_CPU2PCH_THROT_LVT3" hybrid test "u1.L9"
+!@node "FPGA_BMC_LPC_RST" hybrid test "u1.L5"
+  node "FPGA_BMC_LPC_RST_2V5" hybrid test "u1.K6"
+  node "JTAG_BMC_TDO_R" hybrid test "u1.M7"
+  node "JTAG_TDI_3V3_I210" hybrid test "u1.M6"
+!IPG TAP Conflict:   node "JTAG_TMS_3V3_I210" hybrid test "u1.L8"
+  node "LJTAG_TMS_HDR_3V3" hybrid test "u1.M11"
+!@node "PCH_UART0_RXD_1V" family "LVT_1V05" hybrid test "u1.L15"
+!@node "PCH_UART0_TXD_1V" family "LVT_1V05" hybrid test "u1.L14"
+!@node "PCH_UART1_RXD_1V" family "LVT_1V05" hybrid test "u1.L16"
+  node "SRT_FPGA_BMC_UART5_RXD" hybrid test "u1.J6"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "_d_U1_M10"
+
+!IPG: Family information could not be found for node BMC_I2C_RST_L_2V5
+!IPG: Family information could not be found for node BMC_SEC_BOOT_JTAG_TMS
+!IPG: Family information could not be found for node C105_PHY_RST_SDP0_1_R
+!IPG: Family information could not be found for node CPU_1588_SYNC
+!IPG: Family information could not be found for node CPU_1588_SYNC_MB
+!IPG: Family information could not be found for node CPU_ADR_COMPLETE_1V
+!IPG: Family information could not be found for node CPU_ADR_IN_1V
+!IPG: Family information could not be found for node CPU_ERR1_1V_L
+!IPG: Family information could not be found for node CPU_MEM_HOT_1V_L
+!IPG: Family information could not be found for node CPU_PROCHOT_1V_L
+!IPG: Family information could not be found for node CPU_PWRGD_PCH
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TCK
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TDI
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TDO
+!IPG: Family information could not be found for node DRAM_PWR_OK_R
+!IPG: Family information could not be found for node FM_BDXDE_THERMTRIP_N
+!IPG: Family information could not be found for node FM_CPU2PCH_THROT
+!IPG: Family information could not be found for node FM_CPU2PCH_THROT_LVT3
+!IPG: Family information could not be found for node FPGA_BMC_LPC_RST
+!IPG: Family information could not be found for node FPGA_BMC_LPC_RST_2V5
+!IPG: Family information could not be found for node JTAG_BMC_TDO_R
+!IPG: Family information could not be found for node JTAG_TDI_3V3_I210
+!IPG: Family information could not be found for node JTAG_TMS_3V3_I210
+!IPG: Family information could not be found for node LJTAG_TMS_HDR_3V3
+!IPG: Family information could not be found for node PCH_UART0_RXD_1V
+!IPG: Family information could not be found for node PCH_UART0_TXD_1V
+!IPG: Family information could not be found for node PCH_UART1_RXD_1V
+!IPG: Family information could not be found for node SRT_FPGA_BMC_UART5_RXD
+end connect
+

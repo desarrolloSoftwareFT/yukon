@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176281   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:42 2020
+disconnect all
+connect s to "SMB_HOST_3V3_CLK_R"
+connect i to "SMBUS_PCH_SCL"
+connect a to "SMB_HOST_3V3_CLK_R"
+connect b to "SMBUS_PCH_SCL"
+resistor 33, 40, 20, re2, ar200m
+! "r370" test.

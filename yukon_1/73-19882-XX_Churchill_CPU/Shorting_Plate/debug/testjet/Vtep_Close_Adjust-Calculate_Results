@@ -1,0 +1,18 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+print "Generating report..."
+unlink "vtep_close_adjust.rpt",Err
+execute "awk -f $AGILENT3070_ROOT/util/tj_close_adjust.awk vtep | tee vtep_close_adjust.rpt";append
+print "Done."
+print "Report is in file 'vtep_close_adjust.rpt'."
+unlink "debug/with",Err
+unlink "debug/without",Err

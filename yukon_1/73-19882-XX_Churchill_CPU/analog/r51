@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600997729  V05f2                                         
+!* Removed top probe for powered up
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+disconnect all
+connect s to "MGMT_PHY_XTAL_IN2_R"
+connect i to "MGMT_PHY_XTAL_IN2"
+jumper  20.0,  re1, ar200m,ed
+! "r51" test.

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600997922  V1cfe                                         
+on failure
+   report "Check for SW3 presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "SW3_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m,ed
+off failure

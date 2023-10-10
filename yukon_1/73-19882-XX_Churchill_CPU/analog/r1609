@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175992   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:53 2020
+disconnect all
+connect s to "BMC_I210_RESET_L_R"
+connect i to "BMC_I210_RESET_L"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1609" test.

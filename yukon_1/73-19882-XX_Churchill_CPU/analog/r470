@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176293   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:54 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_CS0"
+connect i to "SRT_BMC_SPI2_MUX_CS"
+connect a to "BMC_SPI2_MUX_CS0"
+connect b to "SRT_BMC_SPI2_MUX_CS"
+resistor 22, 40, 20, re2, ar500m
+! "r470" test.

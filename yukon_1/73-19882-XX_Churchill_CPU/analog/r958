@@ -1,0 +1,12 @@
+!!!!    2    0    1 1605137854   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:09 2020
+on failure
+   report parallel devices
+   report "c667 1.00u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_108_CAP_I56_B"
+connect g to "P3V3_STBY_ON" 
+resistor 100k-20k, 25, 25, re5, wb, ar150m, wa14.5m
+off failure

@@ -1,0 +1,947 @@
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 15:23:10 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured -1.6             (BRC 215124)
+Open #2  Device u57
+  Pin 14  Node vr_smb_dat
+  Measured 0.7              (BRC 210107)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 15:31:59 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R7  Node mem_ddr4_ma<9>
+  Measured 46.2             (BRC 21630)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 15:32:07 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R7  Node mem_ddr4_ma<9>
+  Measured 44.5             (BRC 21630)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 15:32:16 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R7  Node mem_ddr4_ma<9>
+  Measured 47.2             (BRC 21630)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+73-19882-04
+Tue Apr 19 15:37:25 2022
+----------------------------------------
+fc_c6_hs4 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -0.024677u
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs4 2.20k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Apr 19 15:38:40 2022
+----------------------------------------
+r787 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   46.282
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r791 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   47.837
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+73-19882-04
+Tue Apr 19 15:38:50 2022
+----------------------------------------
+fc_c6_hs4 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -0.023728u
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+73-19882-04
+Tue Apr 19 15:38:57 2022
+----------------------------------------
+fc_c6_hs4 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -0.025626u
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+73-19882-04
+Tue Apr 19 15:39:03 2022
+----------------------------------------
+fc_c6_hs4 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -0.024677u
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26070490
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 15:51:38 2022
+73-19882-04
+----------------------------------------
+Open #1  Device a_u139
+  Pin 4  Node jtag_bdx_tms
+  Measured -0.2             (BRC 11477)
+15-101996-01 IC-LIN,ANALOG SW, 1.65-4.3V
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 16:03:16 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: FAN4_TACH_ZL           105175   69
+               fc_c1162.1
+                fc_l16.2
+               fc_r164.2
+To:   FAN4_TACH_CON           10565   69
+                fc_l16.1
+                fc_p3.1
+Common Devices:
+                 fc_l16
+Message is:
+Check fc_l16
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:03:35 2022
+----------------------------------------
+c600 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   0.0000
+Nominal:    22.100u
+High Limit: 29.835u
+Low Limit:  13.260u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c597 100n
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:04:27 2022
+----------------------------------------
+r1810_c HAS FAILED
+12-1011215-01 RES,TKF,240 Ohm,.063 W,1%,
+Measured:   1.5134M
+Nominal:    270.00
+High Limit: 351.00
+Low Limit:  216.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:07:06 2022
+----------------------------------------
+c600 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   2.8383u
+Nominal:    22.100u
+High Limit: 29.835u
+Low Limit:  13.260u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c597 100n
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:07:42 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.4812k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+r1810_c HAS FAILED
+12-1011215-01 RES,TKF,240 Ohm,.063 W,1%,
+Measured:   283.77k
+Nominal:    270.00
+High Limit: 351.00
+Low Limit:  216.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:08:19 2022
+----------------------------------------
+c600 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   3.3931u
+Nominal:    22.100u
+High Limit: 29.835u
+Low Limit:  13.260u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c597 100n
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6845k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+r1810_c HAS FAILED
+12-1011215-01 RES,TKF,240 Ohm,.063 W,1%,
+Measured:   9.1898k
+Nominal:    270.00
+High Limit: 351.00
+Low Limit:  216.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:08:26 2022
+----------------------------------------
+c600 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   7.8600u
+Nominal:    22.100u
+High Limit: 29.835u
+Low Limit:  13.260u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c597 100n
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6834k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+r1810_c HAS FAILED
+12-1011215-01 RES,TKF,240 Ohm,.063 W,1%,
+Measured:   119.47k
+Nominal:    270.00
+High Limit: 351.00
+Low Limit:  216.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 16:23:46 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 51.0             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 16:23:55 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 50.9             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 16:25:03 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 49.1             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 16:44:23 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 48.4             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 16:44:32 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 50.8             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704D8
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:52:01 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3813.2p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:52:42 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.4812k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:53:23 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3852.4p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   10.113k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+73-19882-04
+Tue Apr 19 16:53:30 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3878.2p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   9.6824k
+Nominal:    768.00
+High Limit: 960.00
+Low Limit:  614.40
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 17:12:06 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111   59
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303   59
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:   PMOD_5V0_SW_SN          21027
+               bma2_c7.2
+               bma2_r4.1
+Common Devices:
+                bma2_r4
+Message is:
+Check bma2_r4
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 17:12:15 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127   52
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123   52
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 17:12:24 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P5V                    205103 Open
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_DIDT          211138
+               bma2_c7.1
+               bma2_c8.1
+               bma2_l1.1
+               bma2_r10.1
+               bma2_u1.10
+               bma2_u1.11
+Common Devices:
+                bma2_l1
+Message is:
+Check bma2_l1
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+73-19882-04
+Tue Apr 19 17:19:49 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3859.1p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Apr 19 17:20:29 2022
+----------------------------------------
+r508_c HAS FAILED
+12-2214-02 RES,TKF,121 ohm,0.063W,1%,SM,
+Measured:   2.0069k
+Nominal:    121.00
+High Limit: 157.30
+Low Limit:  96.800
+Resistance in OHMS
+----------------------------------------
+cr44 HAS FAILED
+25-100298-01 LED,1.6mm D,ST,SING,G,water
+Measured:   3.5167
+High Limit: 2.5500
+Low Limit:  1.5300
+Forward VOLTAGE drop
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+73-19882-04
+Tue Apr 19 17:20:58 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3837.2p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+cr44 HAS FAILED
+25-100298-01 LED,1.6mm D,ST,SING,G,water
+Measured:   3.2962
+High Limit: 2.5500
+Low Limit:  1.5300
+Forward VOLTAGE drop
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+73-19882-04
+Tue Apr 19 17:21:04 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3877.8p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+cr44 HAS FAILED
+25-100298-01 LED,1.6mm D,ST,SING,G,water
+Measured:   3.2962
+High Limit: 2.5500
+Low Limit:  1.5300
+Forward VOLTAGE drop
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+73-19882-04
+Tue Apr 19 20:00:25 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3978.4p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+73-19882-04
+Tue Apr 19 20:01:50 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3967.5p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+73-19882-04
+Tue Apr 19 20:01:56 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3988.6p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+73-19882-04
+Tue Apr 19 20:02:03 2022
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   3979.8p
+Nominal:    8200.0p
+High Limit: 0.011234u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:07:09 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 48.0             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:07:18 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 46.8             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:07:27 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 46.5             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:07:35 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T8  Node mem_ddr4_ma<13>
+  Measured 47.5             (BRC 217132)
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 20:17:21 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   40
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   63
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704BB
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:45:44 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R2  Node mem_ddr4_ma<8>
+  Measured 240.7            (BRC 21730)
+Open #2  Device bmc_ddr4
+  Pin T2  Node mem_ddr4_ma<11>
+  Measured 11.3             (BRC 214133)
+Open #3  Device bmc_ddr4
+  Pin R3  Node mem_ddr4_ma<2>
+  Measured 13.7             (BRC 21532)
+Open #4  Device bmc_ddr4
+  Pin P3  Node mem_ddr4_ma<0>
+  Measured 353.0            (BRC 219129)
+Open #5  Device bmc_ddr4
+  Pin L7  Node mem_ddr4_cs
+  Measured 403.3            (BRC 215133)
+Open #6  Device bmc_ddr4
+  Pin L8  Node mem_ddr4_ras
+  Measured 307.4            (BRC 215130)
+The part may be missing.
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:45:53 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R2  Node mem_ddr4_ma<8>
+  Measured 226.5            (BRC 21730)
+Open #2  Device bmc_ddr4
+  Pin T2  Node mem_ddr4_ma<11>
+  Measured 12.2             (BRC 214133)
+Open #3  Device bmc_ddr4
+  Pin R3  Node mem_ddr4_ma<2>
+  Measured 14.5             (BRC 21532)
+Open #4  Device bmc_ddr4
+  Pin P3  Node mem_ddr4_ma<0>
+  Measured 321.0            (BRC 219129)
+Open #5  Device bmc_ddr4
+  Pin L7  Node mem_ddr4_cs
+  Measured 326.3            (BRC 215133)
+The part may be missing.
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:46:02 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T2  Node mem_ddr4_ma<11>
+  Measured 12.6             (BRC 214133)
+Open #2  Device bmc_ddr4
+  Pin R3  Node mem_ddr4_ma<2>
+  Measured 14.2             (BRC 21532)
+Open #3  Device bmc_ddr4
+  Pin P3  Node mem_ddr4_ma<0>
+  Measured 401.5            (BRC 219129)
+Open #4  Device bmc_ddr4
+  Pin L7  Node mem_ddr4_cs
+  Measured 294.1            (BRC 215133)
+The part may be missing.
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:46:11 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin T2  Node mem_ddr4_ma<11>
+  Measured 29.9             (BRC 214133)
+Open #2  Device bmc_ddr4
+  Pin R3  Node mem_ddr4_ma<2>
+  Measured 13.4             (BRC 21532)
+Open #3  Device bmc_ddr4
+  Pin P3  Node mem_ddr4_ma<0>
+  Measured 479.6            (BRC 219129)
+Open #4  Device bmc_ddr4
+  Pin L7  Node mem_ddr4_cs
+  Measured 281.8            (BRC 215133)
+The part may be missing.
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+TestJet Report for "testjet".
+Tue Apr 19 20:46:19 2022
+73-19882-04
+----------------------------------------
+Open #1  Device bmc_ddr4
+  Pin R3  Node mem_ddr4_ma<2>
+  Measured 14.7             (BRC 21532)
+Open #2  Device bmc_ddr4
+  Pin P3  Node mem_ddr4_ma<0>
+  Measured 473.8            (BRC 219129)
+Open #3  Device bmc_ddr4
+  Pin L7  Node mem_ddr4_cs
+  Measured 287.1            (BRC 215133)
+The part may be missing.
+IC-DRAM-D DDR4 8Gb(512MX16) 1200MHz(2400
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM260704BE
+----------------------------------------
+Shorts Report for "shorts".
+Tue Apr 19 21:03:48 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   35
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   50
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM260704BE

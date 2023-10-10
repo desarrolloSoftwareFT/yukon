@@ -1,0 +1,24 @@
+!!!!    2    0    1 1381332853  Vddf6                                         
+
+test powered analog
+ !  power pins 1
+   nonanalog pins 1
+
+   test "output"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "output"
+   connect i to pins 2           ! Output
+   connect l to pins 3                      ! Ground
+
+   detector dcv, expect  1.25
+   measure   1.25*1.05,   1.25*0.95
+end subtest
+
+!
+!  End test
+!

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600566149  V5c4a                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:15 2020
+on failure
+   report parallel devices
+   report "fc_cr45 fc_cr45%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN2_TACH"
+zener 4.3, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+! "fc_cr45%cr" test.
+off failure

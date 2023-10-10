@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512790  V30c8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:06 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "VFLTP1P05_25M_OSC_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "l23_c" test.

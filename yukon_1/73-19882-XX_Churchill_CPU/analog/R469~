@@ -1,0 +1,12 @@
+!!!!    2    0    1 1632330736   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:54 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_CLK"
+connect i to "SRT_BMC_SPI2_MUX_CLK"
+connect g to "GND" 
+connect a to "BMC_SPI2_MUX_CLK"
+connect b to "SRT_BMC_SPI2_MUX_CLK"
+resistor 22, 40, 20, re2, ar500m,ed
+!!Nueva version 21 May Revisar
+!jumper 5k, re4, ar200m,ed, op
+! "r469" test.

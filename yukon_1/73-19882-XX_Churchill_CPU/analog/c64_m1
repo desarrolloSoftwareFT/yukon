@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175940   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:01 2020
+on failure
+   report parallel devices
+   report "r9_m1 100"
+end on failure
+disconnect all
+connect i to "PMOD_VOB_VSENSE_N_M1"
+connect s to "GND"
+jumper 99.3, re2, ar100m, op
+! "c64_m1" test.
+off failure

@@ -1,0 +1,260 @@
+!!!!    6    0    1 1043781513  Vb8c9                                         
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         PCA9517
+! Alias:             
+! Part Type:         VLSI
+! Description:       I2C Bus Repeater
+! Manufacturer:      Philips Semiconductor
+! Package Style:     8 pin SOP
+! Created:           Jan 23, 2008
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       yes
+! Fault coverage:    100%
+! Constraints:       
+! Cisco Part #:      15-10409-01
+
+vector cycle 10u
+receive delay 9u
+
+assign VCC  to pins 1,8
+assign GND  to pins 4
+
+assign SDAI to pins 3
+assign SDAO to pins 6
+assign SCLI to pins 2
+assign SCLO to pins 7
+assign EN   to pins 5
+
+power   VCC,GND
+inputs  EN
+!outputs RDY
+bidirectional SDAI,SDAO,SCLI,SCLO
+
+disable SDAI with EN to "1"
+disable SDAO with EN to "1"
+disable SCLI with EN to "1"
+disable SCLO with EN to "1"
+
+family LVT
+
+set load on pins 3 to pull up  ! SDAI
+set load on pins 6 to pull up  ! SDAO
+set load on pins 2 to pull up  ! SCLI
+set load on pins 7 to pull up  ! SCLO
+
+vector INIT1
+ set EN   to "1"
+ set SDAI to "x"
+ set SDAO to "x"
+ set SCLI to "x"
+ set SCLO to "x"
+end vector
+
+vector KEEP1
+ set EN   to "k"
+ set SDAI to "x"
+ set SDAO to "x"
+ set SCLI to "x"
+ set SCLO to "x"
+end vector
+
+vector EN_0
+ initialize to KEEP1
+ set EN     to "0"
+end vector
+
+vector EN_1
+ initialize to KEEP1
+ set EN     to "1"
+end vector
+
+! ********************** Drive SDAI, Receive SDAO **********************
+
+vector SDAI_D0
+ initialize to KEEP1
+ drive SDAI
+ receive SDAO
+ set SDAI   to "0"
+end vector
+
+vector SDAI_D1
+ initialize to KEEP1
+ drive SDAI
+ receive SDAO
+ set SDAI   to "1"
+end vector
+
+vector SDAO_R0
+ initialize to KEEP1
+ drive SDAI
+ receive SDAO
+ set SDAI   to "k"
+ set SDAO   to "0"
+end vector
+
+vector SDAO_R1
+ initialize to KEEP1
+ drive SDAI
+ receive SDAO
+ set SDAI   to "k"
+ set SDAO   to "1"
+end vector
+
+! ********************** Drive SCLI, Receive SCLO **********************
+
+vector SCLI_D0
+ initialize to KEEP1
+ drive SCLI
+ receive SCLO
+ set SCLI   to "0"
+end vector
+
+vector SCLI_D1
+ initialize to KEEP1
+ drive SCLI
+ receive SCLO
+ set SCLI   to "1"
+end vector
+
+vector SCLO_R0
+ initialize to KEEP1
+ drive SCLI
+ receive SCLO
+ set SCLI   to "k"
+ set SCLO   to "0"
+end vector
+
+vector SCLO_R1
+ initialize to KEEP1
+ drive SCLI
+ receive SCLO
+ set SCLI   to "k"
+ set SCLO   to "1"
+end vector
+
+! ********************** Drive SDAO, Receive SDAI **********************
+
+vector SDAO_D0
+ initialize to KEEP1
+ drive SDAO
+ receive SDAI
+ set SDAO   to "0"
+end vector
+
+vector SDAO_D1
+ initialize to KEEP1
+ drive SDAO
+ receive SDAI
+ set SDAO   to "1"
+end vector
+
+vector SDAI_R0
+ initialize to KEEP1
+ drive SDAO
+ receive SDAI
+ set SDAO   to "k"
+ set SDAI   to "0"
+end vector
+
+vector SDAI_R1
+ initialize to KEEP1
+ drive SDAO
+ receive SDAI
+ set SDAO   to "k"
+ set SDAI   to "1"
+end vector
+
+! ********************** Drive SCLO, Receive SCLI **********************
+
+vector SCLO_D0
+ initialize to KEEP1
+ drive SCLO
+ receive SCLI
+ set SCLO   to "0"
+end vector
+
+vector SCLO_D1
+ initialize to KEEP1
+ drive SCLO
+ receive SCLI
+ set SCLO   to "1"
+end vector
+
+vector SCLI_R0
+ initialize to KEEP1
+ drive SCLO
+ receive SCLI
+ set SCLO   to "k"
+ set SCLI   to "0"
+end vector
+
+vector SCLI_R1
+ initialize to KEEP1
+ drive SCLO
+ receive SCLI
+ set SCLO   to "k"
+ set SCLI   to "1"
+end vector
+
+! **********************************************************************
+
+unit  "SDAI to SDAO test"
+ execute INIT1
+ repeat 20 times
+  execute KEEP1
+ end repeat
+ repeat 4 times
+  execute SDAI_D0
+  execute SDAI_D1
+ end repeat
+ execute SDAI_D1
+ execute SDAO_R1
+ execute SDAI_D0
+ execute SDAO_R0
+ execute EN_0
+ execute SDAI_D0
+ execute SDAO_R1
+end unit
+
+unit  "SCLI to SCLO test"
+ execute INIT1
+ execute SCLI_D1
+ execute SCLO_R1
+ execute SCLI_D0
+ execute SCLO_R0
+ execute EN_0
+ execute SCLI_D0
+ execute SCLO_R1
+end unit
+
+unit  "SDAO to SDAI test"
+ execute INIT1
+ execute SDAO_D1
+ execute SDAI_R1
+ execute SDAO_D0
+ execute SDAI_R0
+ execute EN_0
+ execute SDAO_D0
+ execute SDAI_R1
+end unit
+
+unit  "SCLO to SCLI test"
+ execute INIT1
+ execute SCLO_D1
+ execute SCLI_R1
+ execute SCLO_D0
+ execute SCLI_R0
+ execute EN_0
+ execute SCLO_D0
+ execute SCLI_R1
+end unit
+

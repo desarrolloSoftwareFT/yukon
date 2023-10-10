@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes CLK100M_BMCFPGA_PE_AC_DN P-Pin resistance"
+report "check nodes A2_5V P-Pin resistance"
+end on failure
+disconnect all
+connect s to "CLK100M_BMCFPGA_PE_AC_DN"
+connect i to "A2_5V"
+resistor 10,20,100, re1, ar100m,ed
+off failure

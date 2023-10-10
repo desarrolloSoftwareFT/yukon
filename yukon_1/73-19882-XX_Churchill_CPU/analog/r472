@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176293   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:54 2020
+disconnect all
+connect s to "BMC_OBFL_SPI1_MOSI"
+connect i to "BMC_SPI1_FPGA_MOSI_R"
+connect a to "BMC_OBFL_SPI1_MOSI"
+connect b to "BMC_SPI1_FPGA_MOSI_R"
+resistor 22, 40, 20, re2, ar500m
+! "r472" test.

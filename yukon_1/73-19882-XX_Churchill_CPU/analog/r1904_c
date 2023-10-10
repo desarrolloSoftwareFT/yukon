@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176593   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:54 2020
+disconnect all
+connect s to "SRT_LAN0_MDC0_LED0_1_C"
+connect i to "C105_PCH_FPGA_MDC1"
+connect a to "SRT_LAN0_MDC0_LED0_1_C"
+connect b to "C105_PCH_FPGA_MDC1"
+resistor 33.2, 40, 20, re2, ar200m
+! "r1904_c" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176056   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:57 2020
+disconnect all
+connect s to "CLK100M_CLKGEN_PCIE_REFCLK_AC_DP"
+connect i to "CLK100M_CLKGEN_PCIE_REFCLK_DP"
+connect gl to "GND" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, sl, nocomp
+! "c400" test.

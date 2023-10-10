@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175943   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:04 2020
+on failure
+   report parallel devices
+   report "r595 8.20k"
+end on failure
+disconnect all
+connect i to "UNNAMED_4188_AST2520_I1_USB2AVRES"
+connect s to "GND"
+jumper 4.43k, re4, wb, ar200m, op
+! "c672" test.
+off failure

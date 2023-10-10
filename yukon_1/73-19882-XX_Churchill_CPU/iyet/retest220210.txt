@@ -1,0 +1,292 @@
+----------------------------------------
+Shorts Report for "shorts".
+Thu Feb 10 14:32:24 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pwr_a1v2_a3v3_intvcc    21134 3603
+               dma1_c21.1
+               dma1_r6.1
+               dma1_r24.2
+               dma1_r27.2
+               dma1_u1.19
+To:   pwr_a1v2_a3v3_ilim      21145 3603
+               dma1_r27.1
+               dma1_u1.11
+Common Devices:
+                dma1_r27
+                dma1_u1
+Message is:
+Check dma1_r27
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: FAN8_TACH_ZL            20531   66
+                fc_c43.1
+                fc_l2.2
+               fc_r148.2
+To:   FAN8_TACH_CON           20216   66
+                fc_l2.1
+                fc_p5.1
+Common Devices:
+                 fc_l2
+Message is:
+Check fc_l2
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    2
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    2
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 4 Problems Reported----------
+Board #: 1 
+Version:
+S/N:FLM253106T0
+----------------------------------------
+Shorts Report for "shorts".
+Thu Feb 10 14:32:35 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pwr_a1v2_a3v3_intvcc    21134 Open
+               dma1_c21.1
+               dma1_r6.1
+               dma1_r24.2
+               dma1_r27.2
+               dma1_u1.19
+To:   pwr_a1v2_a3v3_ilim      21145
+               dma1_r27.1
+               dma1_u1.11
+Common Devices:
+                dma1_r27
+                dma1_u1
+Message is:
+Check dma1_r27
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   27
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                     20337   27 
+PMOD_PVCCSCFUSESUS_VOSEN                
+               bma4_c12.1
+               bma4_c17.1
+               bma4_r1.1
+               bma4_r6.1
+               bma4_r7.2
+               bma4_r8.1
+               bma4_tp1.1
+               bma4_u1.1
+Common Devices:
+                bma4_c12
+                bma4_r1
+                bma4_r8
+Message is:
+Check bma4_r8
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    3
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    0
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    2
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 4 Problems Reported----------
+Board #: 1 
+Version:
+S/N:FLM253106T0
+----------------------------------------
+Shorts Report for "shorts".
+Thu Feb 10 14:32:45 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pwr_a1v2_a3v3_intvcc    21134 Open
+               dma1_c21.1
+               dma1_r6.1
+               dma1_r24.2
+               dma1_r27.2
+               dma1_u1.19
+To:   pwr_a1v2_a3v3_ilim      21145
+               dma1_r27.1
+               dma1_u1.11
+Common Devices:
+                dma1_r27
+                dma1_u1
+Message is:
+Check dma1_r27
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   39
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203137   39 
+PMOD_PVCCSCFUSESUS_VSENSE_P             
+                 r9_v.2
+                r2087.1
+Common Devices:
+                  r9_v
+Message is:
+Check r9_v
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   40
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203136   40 
+PMOD_PVCCSCFUSESUS_DIDT                 
+               bma4_c7.1
+               bma4_c8.1
+               bma4_l1.1
+               bma4_r10.1
+               bma4_u1.10
+               bma4_u1.11
+Common Devices:
+                bma4_l1
+Message is:
+Check bma4_l1
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   50
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                     20337   50 
+PMOD_PVCCSCFUSESUS_VOSEN                
+               bma4_c12.1
+               bma4_c17.1
+               bma4_r1.1
+               bma4_r6.1
+               bma4_r7.2
+               bma4_r8.1
+               bma4_tp1.1
+               bma4_u1.1
+Common Devices:
+                bma4_c12
+                bma4_r1
+                bma4_r8
+Message is:
+Check bma4_r8
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 6 Problems Reported----------
+Board #: 1 
+Version:
+S/N:FLM253106T0

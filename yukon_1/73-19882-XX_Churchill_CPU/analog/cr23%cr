@@ -1,0 +1,16 @@
+!!!!    2    0    1 1623268774   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:06 2020
+on failure
+   report parallel devices
+   report "cr23 cr23%ds"
+   report "fc_c6_hs1 10.0u"
+   report "r462 2.20k"
+end on failure
+disconnect all
+connect s to "FAN23_P12V_PWR_F"
+connect i to "GND"
+!diode 990m, 500m, idc99m, co10, ar10.63, ed
+diode 970m, 440m, idc99m, co10, ar10.63, ed
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "cr23%cr" test.
+off failure

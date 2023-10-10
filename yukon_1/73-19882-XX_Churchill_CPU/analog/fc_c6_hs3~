@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176087   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:28 2020
+on failure
+   report parallel devices
+   report "fc_r6_hs3 2.20k"
+end on failure
+disconnect all
+connect s to "FAN67_P12V_PWR_F"
+connect i to "GND"
+connect g to "FAN67_PWM_PWR" 
+capacitor 10u, 35, 40, fr1024, re1, ar100m, nocomp
+! "fc_c6_hs3" test.
+off failure

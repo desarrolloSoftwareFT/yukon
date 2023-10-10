@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176709   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:50 2020
+on failure
+   report parallel devices
+   report "c549 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_P1V15_CH5"
+connect g to "P1V15_BMC" 
+resistor 16.9k, 25, 25, re5, wb, ar500m, wa65.7m
+off failure

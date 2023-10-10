@@ -1,0 +1,52 @@
+<!-- Created Thu Jul 23 13:27:43 2020 from ITL Source digital/u27_connect_d -->
+<Test name="u27_connect_d"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BMFPGA_BUF_SPI_FLSH_SEL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="BM_SPI_GOLD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_STD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u27"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="R14"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="N11"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="P16"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P14"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="N13"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="N10"><node name="BMC_SPI2_BMFPGA_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M8"><node name="BMC_SPI2_MUX_CS0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N8"><node name="BMC_SPI2_MUX_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J12"><node name="FPGA2_SPIFLASH_CS0_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K12"><node name="FPGA2_SPI_MOSI_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J13"><node name="FPGA2_SPIFLASH_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J14"><node name="SRT_FPGA2_SPI_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J16"><node name="BMC_FPGA_CLK_50MHZ" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K14"><node name="BMFPGA_SPI_GOLD_SEL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L13"><node name="SRT_BMC_SEC_BOOT_JTAG_TCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L14"><node name="X86_BMCFPGA_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L15"><node name="BMC_SEC_BOOT_JTAG_TMS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K16"><node name="SRT_BMC_SEC_BOOT_JTAG_TDI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L12"><node name="BMC_SEC_BOOT_JTAG_TDO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L11"><node name="BMC_SEC_BOOT_JTAG_TRST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M13"><node name="BMC_FPGA_MDC_1G_PHY" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N14"><node name="BMC_FPGA_MDIO_1G_PHY" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M15"><node name="R_CPU_IDPROM_WP" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+</Test>

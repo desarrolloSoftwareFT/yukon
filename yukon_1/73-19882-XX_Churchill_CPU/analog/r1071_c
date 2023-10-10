@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176486   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:07 2020
+disconnect all
+connect s to "P3V3"
+connect i to "SML0_CLK_BMC_R"
+resistor 4.7k, 25, 20, re4, wb, ar200m

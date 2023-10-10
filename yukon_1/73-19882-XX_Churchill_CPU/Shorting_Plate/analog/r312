@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes LJTAG_CABLE_PRSNT_L P-Pin resistance"
+report "check nodes CPU_JTAG_CABLE_PRSNT_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "LJTAG_CABLE_PRSNT_L"
+connect i to "CPU_JTAG_CABLE_PRSNT_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

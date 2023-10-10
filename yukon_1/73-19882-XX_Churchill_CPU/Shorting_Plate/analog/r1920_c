@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_46_NMOSFET_I92_D_C P-Pin resistance"
+report "check nodes RST_RTCRST_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_46_NMOSFET_I92_D_C"
+connect i to "RST_RTCRST_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

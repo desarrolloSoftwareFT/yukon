@@ -1,0 +1,13 @@
+!!!!    2    0    1 1691393850   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:40 2020
+on failure
+   report parallel devices
+   report "fc_c6_hs3 10.0u"
+end on failure
+disconnect all
+connect s to "FAN67_P12V_PWR_F"
+connect i to "GND"
+connect g to "FAN67_PWM_PWR"
+!resistor 2.2k, 25, 55, re2, wb, ar500m, en,ed
+resistor 1.2k , 55, 40, re2, wb, ar500m !!!Diodo np 13-100578-01 NEXPERIA and ON
+off failure

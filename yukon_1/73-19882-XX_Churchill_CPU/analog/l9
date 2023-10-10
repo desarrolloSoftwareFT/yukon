@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512778  Va1c8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:06 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "DACAVD33"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "l9" test.

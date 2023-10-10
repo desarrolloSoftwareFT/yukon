@@ -1,0 +1,1642 @@
+!!!!   22    0    1 1578387469  Vf16e                                         
+-- *********************************************************************************************************************************
+
+--   BSDL file for design AST25x0 (AST2500/AST2510/AST2520/AST2530)
+
+--   Package type : TFBGA-456
+
+--   Company:  ASPEED Technology Inc.
+
+--   Release Version: 1.2
+--   Release Date   : 2016.04.13
+
+--   Revision hostory:
+--   V1.0 2015.03.25 : First release
+--   V1.1 2015.09.03 : Update pin number list to actual chip pin number notation
+--   V1.2 2016.04.13 : Fix R2VDD mistake and remove RGMII1TXH*/RGMII2TXH* dummy pins
+
+-- *********************************************************************************************************************************
+
+
+ entity AST2500 is
+
+-- This section identifies the default device package selected.
+
+   generic (PHYSICAL_PIN_MAP: string:= "ITFBGA456_2");
+
+-- This section declares all the ports in the design.
+
+   port (
+          CLKIN        : in       bit;
+          EXTRSTN      : in       bit;
+          PERSTN       : in       bit;
+          RGMIICK      : in       bit;
+          SRSTN        : in       bit;
+          TCK          : in       bit;
+          TDI          : in       bit;
+          TMS          : in       bit;
+          TRST         : in       bit;
+          ALERTN       : inout    bit;
+          DQ0          : inout    bit;
+          DQ1          : inout    bit;
+          DQ10         : inout    bit;
+          DQ11         : inout    bit;
+          DQ12         : inout    bit;
+          DQ13         : inout    bit;
+          DQ14         : inout    bit;
+          DQ15         : inout    bit;
+          DQ2          : inout    bit;
+          DQ3          : inout    bit;
+          DQ4          : inout    bit;
+          DQ5          : inout    bit;
+          DQ6          : inout    bit;
+          DQ7          : inout    bit;
+          DQ8          : inout    bit;
+          DQ9          : inout    bit;
+          DQS0         : inout    bit;
+          DQS1         : inout    bit;
+          DQSN0        : inout    bit;
+          DQSN1        : inout    bit;
+          GPIOA4       : inout    bit;
+          GPIOA5       : inout    bit;
+          GPIOA6       : inout    bit;
+          GPIOA7       : inout    bit;
+          GPIOAA0      : inout    bit;
+          GPIOAA1      : inout    bit;
+          GPIOAA2      : inout    bit;
+          GPIOAA3      : inout    bit;
+          GPIOAA4      : inout    bit;
+          GPIOAA5      : inout    bit;
+          GPIOAA6      : inout    bit;
+          GPIOAA7      : inout    bit;
+          GPIOAB0      : inout    bit;
+          GPIOAB1      : inout    bit;
+          GPIOAB2      : inout    bit;
+          GPIOAB3      : inout    bit;
+          GPIOB0       : inout    bit;
+          GPIOB1       : inout    bit;
+          GPIOB2       : inout    bit;
+          GPIOB3       : inout    bit;
+          GPIOB4       : inout    bit;
+          GPIOB5       : inout    bit;
+          GPIOB6       : inout    bit;
+          GPIOB7       : inout    bit;
+          GPIOC0       : inout    bit;
+          GPIOC1       : inout    bit;
+          GPIOC2       : inout    bit;
+          GPIOC3       : inout    bit;
+          GPIOC4       : inout    bit;
+          GPIOC5       : inout    bit;
+          GPIOC6       : inout    bit;
+          GPIOC7       : inout    bit;
+          GPIOD0       : inout    bit;
+          GPIOD1       : inout    bit;
+          GPIOD2       : inout    bit;
+          GPIOD3       : inout    bit;
+          GPIOD4       : inout    bit;
+          GPIOD5       : inout    bit;
+          GPIOD6       : inout    bit;
+          GPIOD7       : inout    bit;
+          GPIOE0       : inout    bit;
+          GPIOE1       : inout    bit;
+          GPIOE2       : inout    bit;
+          GPIOE3       : inout    bit;
+          GPIOE4       : inout    bit;
+          GPIOE5       : inout    bit;
+          GPIOE6       : inout    bit;
+          GPIOE7       : inout    bit;
+          GPIOF0       : inout    bit;
+          GPIOF1       : inout    bit;
+          GPIOF2       : inout    bit;
+          GPIOF3       : inout    bit;
+          GPIOF4       : inout    bit;
+          GPIOF5       : inout    bit;
+          GPIOF6       : inout    bit;
+          GPIOF7       : inout    bit;
+          GPIOG0       : inout    bit;
+          GPIOG1       : inout    bit;
+          GPIOG2       : inout    bit;
+          GPIOG3       : inout    bit;
+          GPIOG4       : inout    bit;
+          GPIOG5       : inout    bit;
+          GPIOG6       : inout    bit;
+          GPIOG7       : inout    bit;
+          GPIOH0       : inout    bit;
+          GPIOH1       : inout    bit;
+          GPIOH2       : inout    bit;
+          GPIOH3       : inout    bit;
+          GPIOH4       : inout    bit;
+          GPIOH5       : inout    bit;
+          GPIOH6       : inout    bit;
+          GPIOH7       : inout    bit;
+          GPIOI0       : inout    bit;
+          GPIOI1       : inout    bit;
+          GPIOI2       : inout    bit;
+          GPIOI3       : inout    bit;
+          GPIOI4       : inout    bit;
+          GPIOI5       : inout    bit;
+          GPIOI6       : inout    bit;
+          GPIOI7       : inout    bit;
+          GPIOJ0       : inout    bit;
+          GPIOJ1       : inout    bit;
+          GPIOJ2       : inout    bit;
+          GPIOJ3       : inout    bit;
+          GPIOJ4       : inout    bit;
+          GPIOJ5       : inout    bit;
+          GPIOJ6       : inout    bit;
+          GPIOJ7       : inout    bit;
+          GPIOK0       : inout    bit;
+          GPIOK1       : inout    bit;
+          GPIOK2       : inout    bit;
+          GPIOK3       : inout    bit;
+          GPIOK4       : inout    bit;
+          GPIOK5       : inout    bit;
+          GPIOK6       : inout    bit;
+          GPIOK7       : inout    bit;
+          GPIOL0       : inout    bit;
+          GPIOL1       : inout    bit;
+          GPIOL2       : inout    bit;
+          GPIOL3       : inout    bit;
+          GPIOL4       : inout    bit;
+          GPIOL5       : inout    bit;
+          GPIOL6       : inout    bit;
+          GPIOL7       : inout    bit;
+          GPIOM0       : inout    bit;
+          GPIOM1       : inout    bit;
+          GPIOM2       : inout    bit;
+          GPIOM3       : inout    bit;
+          GPIOM4       : inout    bit;
+          GPIOM5       : inout    bit;
+          GPIOM6       : inout    bit;
+          GPIOM7       : inout    bit;
+          GPION0       : inout    bit;
+          GPION1       : inout    bit;
+          GPION2       : inout    bit;
+          GPION3       : inout    bit;
+          GPION4       : inout    bit;
+          GPION5       : inout    bit;
+          GPION6       : inout    bit;
+          GPION7       : inout    bit;
+          GPIOO0       : inout    bit;
+          GPIOO1       : inout    bit;
+          GPIOO2       : inout    bit;
+          GPIOO3       : inout    bit;
+          GPIOO4       : inout    bit;
+          GPIOO5       : inout    bit;
+          GPIOO6       : inout    bit;
+          GPIOO7       : inout    bit;
+          GPIOP0       : inout    bit;
+          GPIOP1       : inout    bit;
+          GPIOP2       : inout    bit;
+          GPIOP3       : inout    bit;
+          GPIOP4       : inout    bit;
+          GPIOP5       : inout    bit;
+          GPIOP6       : inout    bit;
+          GPIOP7       : inout    bit;
+          GPIOQ0       : inout    bit;
+          GPIOQ1       : inout    bit;
+          GPIOQ2       : inout    bit;
+          GPIOQ3       : inout    bit;
+          GPIOQ4       : inout    bit;
+          GPIOQ5       : inout    bit;
+          GPIOQ6       : inout    bit;
+          GPIOQ7       : inout    bit;
+          GPIOR0       : inout    bit;
+          GPIOR1       : inout    bit;
+          GPIOR2       : inout    bit;
+          GPIOR3       : inout    bit;
+          GPIOR4       : inout    bit;
+          GPIOR5       : inout    bit;
+          GPIOR6       : inout    bit;
+          GPIOR7       : inout    bit;
+          GPIOS0       : inout    bit;
+          GPIOS1       : inout    bit;
+          GPIOS2       : inout    bit;
+          GPIOS3       : inout    bit;
+          GPIOS4       : inout    bit;
+          GPIOS5       : inout    bit;
+          GPIOS6       : inout    bit;
+          GPIOS7       : inout    bit;
+          GPIOY0       : inout    bit;
+          GPIOY1       : inout    bit;
+          GPIOY2       : inout    bit;
+          GPIOY3       : inout    bit;
+          GPIOY4       : inout    bit;
+          GPIOY5       : inout    bit;
+          GPIOY6       : inout    bit;
+          GPIOY7       : inout    bit;
+          GPIOZ0       : inout    bit;
+          GPIOZ1       : inout    bit;
+          GPIOZ2       : inout    bit;
+          GPIOZ3       : inout    bit;
+          GPIOZ4       : inout    bit;
+          GPIOZ5       : inout    bit;
+          GPIOZ6       : inout    bit;
+          GPIOZ7       : inout    bit;
+          LAD0         : inout    bit;
+          LAD1         : inout    bit;
+          LAD2         : inout    bit;
+          LAD3         : inout    bit;
+          LFRAMEN      : inout    bit;
+          LPCCLK       : inout    bit;
+          LRSTN        : inout    bit;
+          LSIRQ        : inout    bit;
+          RGMII1RXCK   : inout    bit;
+          RGMII1RXCTL  : inout    bit;
+          RGMII1RXD0   : inout    bit;
+          RGMII1RXD1   : inout    bit;
+          RGMII1RXD2   : inout    bit;
+          RGMII1RXD3   : inout    bit;
+          RGMII1TXCK   : inout    bit;
+          RGMII1TXCTL  : inout    bit;
+          RGMII1TXD0   : inout    bit;
+          RGMII1TXD1   : inout    bit;
+          RGMII1TXD2   : inout    bit;
+          RGMII1TXD3   : inout    bit;
+          RGMII2RXCK   : inout    bit;
+          RGMII2RXCTL  : inout    bit;
+          RGMII2RXD0   : inout    bit;
+          RGMII2RXD1   : inout    bit;
+          RGMII2RXD2   : inout    bit;
+          RGMII2RXD3   : inout    bit;
+          RGMII2TXCK   : inout    bit;
+          RGMII2TXCTL  : inout    bit;
+          RGMII2TXD0   : inout    bit;
+          RGMII2TXD1   : inout    bit;
+          RGMII2TXD2   : inout    bit;
+          RGMII2TXD3   : inout    bit;
+          HBLED        : inout    bit;
+          RTCK         : inout    bit;
+          RXD5         : inout    bit;
+          SPICK        : inout    bit;
+          SPICS        : inout    bit;
+          SPIMISO      : inout    bit;
+          SPIMOSI      : inout    bit;
+          TXD5         : inout    bit;
+          BA0          : out      bit;
+          BA1          : out      bit;
+          BA2          : out      bit;
+          CASN         : out      bit;
+          CK           : out      bit;
+          CKE          : out      bit;
+          CKN          : out      bit;
+          CSN          : out      bit;
+          DM0          : out      bit;
+          DM1          : out      bit;
+          MA0          : out      bit;
+          MA1          : out      bit;
+          MA10         : out      bit;
+          MA11         : out      bit;
+          MA12         : out      bit;
+          MA13         : out      bit;
+          MA14         : out      bit;
+          MA15         : out      bit;
+          MA2          : out      bit;
+          MA3          : out      bit;
+          MA4          : out      bit;
+          MA5          : out      bit;
+          MA6          : out      bit;
+          MA7          : out      bit;
+          MA8          : out      bit;
+          MA9          : out      bit;
+          ODT          : out      bit;
+          RASN         : out      bit;
+          RSTN         : out      bit;
+          TDO          : out      bit;
+          WEN          : out      bit;
+          DACB         : linkage  bit;
+          DACG         : linkage  bit;
+          DACR         : linkage  bit;
+          DACRSET      : linkage  bit;
+          ENTEST       : in       bit;
+          GPIOA0       : in       bit;
+          GPIOA1       : in       bit;
+          GPIOA2       : in       bit;
+          GPIOA3       : in       bit;
+          PECI         : linkage  bit;
+          PEREFCLKN    : linkage  bit;
+          PEREFCLKP    : linkage  bit;
+          PEREXT       : linkage  bit;
+          PERXN        : linkage  bit;
+          PERXP        : linkage  bit;
+          PETXN        : linkage  bit;
+          PETXP        : linkage  bit;
+          ADCREXT      : linkage  bit;
+--        RGMII1TXHCK  : linkage  bit;  -- NC(No Connect) Port
+--        RGMII1TXHCTL : linkage  bit;  -- NC Port
+--        RGMII1TXHD0  : linkage  bit;  -- NC Port
+--        RGMII1TXHD1  : linkage  bit;  -- NC Port
+--        RGMII2TXHCK  : linkage  bit;  -- NC Port
+--        RGMII2TXHCTL : linkage  bit;  -- NC Port
+--        RGMII2TXHD0  : linkage  bit;  -- NC Port
+--        RGMII2TXHD1  : linkage  bit;  -- NC Port
+          USB2AVRES    : linkage  bit;
+          USB2A_DM     : linkage  bit;
+          USB2A_DP     : linkage  bit;
+          USB2BVRES    : linkage  bit;
+          USB2B_DM     : linkage  bit;
+          USB2B_DP     : linkage  bit;
+          VIN0         : linkage  bit;
+          VIN1         : linkage  bit;
+          VIN10        : linkage  bit;
+          VIN11        : linkage  bit;
+          VIN12        : linkage  bit;
+          VIN13        : linkage  bit;
+          VIN14        : linkage  bit;
+          VIN15        : linkage  bit;
+          VIN2         : linkage  bit;
+          VIN3         : linkage  bit;
+          VIN4         : linkage  bit;
+          VIN5         : linkage  bit;
+          VIN6         : linkage  bit;
+          VIN7         : linkage  bit;
+          VIN8         : linkage  bit;
+          VIN9         : linkage  bit;
+          ADCVREFN     : linkage  bit;
+          ADCVREFP     : linkage  bit;
+          ZQ           : linkage  bit;
+          GND          : linkage  bit_vector(68 downto 0);
+          IV11D        : linkage  bit_vector(24 downto 0);
+          R1VDD        : linkage  bit_vector(1 downto 0);
+          R2VDD        : linkage  bit_vector(1 downto 0);
+          LPVDD        : linkage  bit_vector(1 downto 0);
+          MVDD         : linkage  bit_vector(4 downto 0);
+          PLLAV33      : linkage  bit_vector(1 downto 0);
+          PLLDV11      : linkage  bit;
+          VPLLAV33     : linkage  bit_vector(1 downto 0);
+          VPLLAV11     : linkage  bit_vector(1 downto 0);
+          BATVDD       : linkage  bit;
+          ADCAV33      : linkage  bit;
+          DACDV33      : linkage  bit;
+          DACAV33      : linkage  bit;
+          PECIVDD      : linkage  bit;
+          USB2AV33     : linkage  bit;
+          PEAV11       : linkage  bit;
+          PEAV33       : linkage  bit;
+          MVREF        : linkage  bit;
+          PV33D        : linkage  bit_vector(14 downto 0)
+   );
+
+   use STD_1149_1_2001.all;
+
+   attribute COMPONENT_CONFORMANCE of AST2500: entity is "STD_1149_1_2001";
+
+   attribute PIN_MAP of AST2500: entity is PHYSICAL_PIN_MAP;
+
+-- This section specifies the pin map for each port. This information is extracted from the port-to-pin map file that was read in
+-- using the "read_pin_map" command.
+
+     constant ITFBGA456_2: PIN_MAP_STRING :=
+        "CLKIN        : W18," &
+        "EXTRSTN      : V18," &
+        "PERSTN       : L20," &
+        "RGMIICK      : D3," &
+        "SRSTN        : U18," &
+        "TCK          : C10," &
+        "TDI          : D12," &
+        "TMS          : C8," &
+        "TRST         : E11," &
+        "ALERTN       : U16," &
+        "DQ0          : U10," &
+        "DQ1          : W10," &
+        "DQ10         : Y7," &
+        "DQ11         : W8," &
+        "DQ12         : AA6," &
+        "DQ13         : W7," &
+        "DQ14         : V7," &
+        "DQ15         : U7," &
+        "DQ2          : Y10," &
+        "DQ3          : AA10," &
+        "DQ4          : U9," &
+        "DQ5          : Y9," &
+        "DQ6          : W9," &
+        "DQ7          : V9," &
+        "DQ8          : AA8," &
+        "DQ9          : Y8," &
+        "DQS0         : AB9," &
+        "DQS1         : AB7," &
+        "DQSN0        : AB10," &
+        "DQSN1        : AB6," &
+        "GPIOA4       : C14," &
+        "GPIOA5       : A13," &
+        "GPIOA6       : C13," &
+        "GPIOA7       : B13," &
+        "GPIOAA0      : Y21," &
+        "GPIOAA1      : V21," &
+        "GPIOAA2      : Y22," &
+        "GPIOAA3      : AA22," &
+        "GPIOAA4      : U22," &
+        "GPIOAA5      : T20," &
+        "GPIOAA6      : N18," &
+        "GPIOAA7      : P19," &
+        "GPIOAB0      : N19," &
+        "GPIOAB1      : T21," &
+        "GPIOAB2      : T22," &
+        "GPIOAB3      : R20," &
+        "GPIOB0       : K19," &
+        "GPIOB1       : L19," &
+        "GPIOB2       : L18," &
+        "GPIOB3       : K18," &
+        "GPIOB4       : J20," &
+        "GPIOB5       : H21," &
+        "GPIOB6       : H22," &
+        "GPIOB7       : H20," &
+        "GPIOC0       : C12," &
+        "GPIOC1       : A12," &
+        "GPIOC2       : B12," &
+        "GPIOC3       : D9," &
+        "GPIOC4       : D10," &
+        "GPIOC5       : E12," &
+        "GPIOC6       : C11," &
+        "GPIOC7       : B11," &
+        "GPIOD0       : F19," &
+        "GPIOD1       : E21," &
+        "GPIOD2       : F20," &
+        "GPIOD3       : D20," &
+        "GPIOD4       : D21," &
+        "GPIOD5       : E20," &
+        "GPIOD6       : G18," &
+        "GPIOD7       : C21," &
+        "GPIOE0       : B20," &
+        "GPIOE1       : C20," &
+        "GPIOE2       : F18," &
+        "GPIOE3       : F17," &
+        "GPIOE4       : E18," &
+        "GPIOE5       : D19," &
+        "GPIOE6       : A20," &
+        "GPIOE7       : B19," &
+        "GPIOF0       : J19," &
+        "GPIOF1       : J18," &
+        "GPIOF2       : B22," &
+        "GPIOF3       : B21," &
+        "GPIOF4       : A21," &
+        "GPIOF5       : H19," &
+        "GPIOF6       : G17," &
+        "GPIOF7       : H18," &
+        "GPIOG0       : A19," &
+        "GPIOG1       : E19," &
+        "GPIOG2       : C19," &
+        "GPIOG3       : E16," &
+        "GPIOG4       : E17," &
+        "GPIOG5       : D16," &
+        "GPIOG6       : D15," &
+        "GPIOG7       : E14," &
+        "GPIOH0       : A18," &
+        "GPIOH1       : B18," &
+        "GPIOH2       : D17," &
+        "GPIOH3       : C17," &
+        "GPIOH4       : A17," &
+        "GPIOH5       : B17," &
+        "GPIOH6       : A16," &
+        "GPIOH7       : D18," &
+        "GPIOI0       : C18," &
+        "GPIOI1       : E15," &
+        "GPIOI2       : B16," &
+        "GPIOI3       : C16," &
+        "GPIOI4       : B15," &
+        "GPIOI5       : C15," &
+        "GPIOI6       : A14," &
+        "GPIOI7       : A15," &
+        "GPIOJ0       : R2," &
+        "GPIOJ1       : L2," &
+        "GPIOJ2       : N3," &
+        "GPIOJ3       : N4," &
+        "GPIOJ4       : N5," &
+        "GPIOJ5       : R4," &
+        "GPIOJ6       : R3," &
+        "GPIOJ7       : T3," &
+        "GPIOK0       : L3," &
+        "GPIOK1       : L4," &
+        "GPIOK2       : L1," &
+        "GPIOK3       : N2," &
+        "GPIOK4       : N1," &
+        "GPIOK5       : P1," &
+        "GPIOK6       : P2," &
+        "GPIOK7       : R1," &
+        "GPIOL0       : T2," &
+        "GPIOL1       : T1," &
+        "GPIOL2       : U1," &
+        "GPIOL3       : U2," &
+        "GPIOL4       : P4," &
+        "GPIOL5       : P3," &
+        "GPIOL6       : V1," &
+        "GPIOL7       : W1," &
+        "GPIOM0       : Y1," &
+        "GPIOM1       : AB2," &
+        "GPIOM2       : AA1," &
+        "GPIOM3       : Y2," &
+        "GPIOM4       : AA2," &
+        "GPIOM5       : P5," &
+        "GPIOM6       : R5," &
+        "GPIOM7       : T5," &
+        "GPION0       : V2," &
+        "GPION1       : W2," &
+        "GPION2       : V3," &
+        "GPION3       : U3," &
+        "GPION4       : W3," &
+        "GPION5       : AA3," &
+        "GPION6       : Y3," &
+        "GPION7       : T4," &
+        "GPIOO0       : U5," &
+        "GPIOO1       : U4," &
+        "GPIOO2       : V5," &
+        "GPIOO3       : AB4," &
+        "GPIOO4       : AB3," &
+        "GPIOO5       : Y4," &
+        "GPIOO6       : AA4," &
+        "GPIOO7       : W4," &
+        "GPIOP0       : V4," &
+        "GPIOP1       : W5," &
+        "GPIOP2       : AA5," &
+        "GPIOP3       : AB5," &
+        "GPIOP4       : Y6," &
+        "GPIOP5       : Y5," &
+        "GPIOP6       : W6," &
+        "GPIOP7       : V6," &
+        "GPIOQ0       : A11," &
+        "GPIOQ1       : A10," &
+        "GPIOQ2       : A9," &
+        "GPIOQ3       : B9," &
+        "GPIOQ4       : N21," &
+        "GPIOQ5       : N22," &
+        "GPIOQ6       : B10," &
+        "GPIOQ7       : N20," &
+        "GPIOR0       : AA19," &
+        "GPIOR1       : T19," &
+        "GPIOR2       : T17," &
+        "GPIOR3       : Y19," &
+        "GPIOR4       : W19," &
+        "GPIOR5       : V19," &
+        "GPIOR6       : D8," &
+        "GPIOR7       : E10," &
+        "GPIOS0       : V20," &
+        "GPIOS1       : U19," &
+        "GPIOS2       : R18," &
+        "GPIOS3       : P18," &
+        "GPIOS4       : R19," &
+        "GPIOS5       : W20," &
+        "GPIOS6       : U20," &
+        "GPIOS7       : AA20," &
+        "GPIOY0       : R22," &
+        "GPIOY1       : R21," &
+        "GPIOY2       : P22," &
+        "GPIOY3       : P21," &
+        "GPIOY4       : M18," &
+        "GPIOY5       : M19," &
+        "GPIOY6       : M20," &
+        "GPIOY7       : P20," &
+        "GPIOZ0       : Y20," &
+        "GPIOZ1       : AB20," &
+        "GPIOZ2       : AB21," &
+        "GPIOZ3       : AA21," &
+        "GPIOZ4       : U21," &
+        "GPIOZ5       : W22," &
+        "GPIOZ6       : V22," &
+        "GPIOZ7       : W21," &
+        "LAD0         : G21," &
+        "LAD1         : G20," &
+        "LAD2         : D22," &
+        "LAD3         : E22," &
+        "LFRAMEN      : F21," &
+        "LPCCLK       : C22," &
+        "LRSTN        : G22," &
+        "LSIRQ        : F22," &
+        "RGMII1RXCK   : B4," &
+        "RGMII1RXCTL  : A4," &
+        "RGMII1RXD0   : A3," &
+        "RGMII1RXD1   : D6," &
+        "RGMII1RXD2   : C5," &
+        "RGMII1RXD3   : C4," &
+        "RGMII1TXCK   : B5," &
+        "RGMII1TXCTL  : E9," &
+        "RGMII1TXD0   : F9," &
+        "RGMII1TXD1   : A5," &
+        "RGMII1TXD2   : E7," &
+        "RGMII1TXD3   : D7," &
+        "RGMII2RXCK   : C2," &
+        "RGMII2RXCTL  : C1," &
+        "RGMII2RXD0   : C3," &
+        "RGMII2RXD1   : D1," &
+        "RGMII2RXD2   : D2," &
+        "RGMII2RXD3   : E6," &
+        "RGMII2TXCK   : B2," &
+        "RGMII2TXCTL  : B1," &
+        "RGMII2TXD0   : A2," &
+        "RGMII2TXD1   : B3," &
+        "RGMII2TXD2   : D5," &
+        "RGMII2TXD3   : D4," &
+        "HBLED        : Y18," &
+        "RTCK         : C9," &
+        "RXD5         : K2," &
+        "SPICK        : AA18," &
+        "SPICS        : AB19," &
+        "SPIMISO      : T18," &
+        "SPIMOSI      : U17," &
+        "TXD5         : K1," &
+        "BA0          : U12," &
+        "BA1          : Y13," &
+        "BA2          : W13," &
+        "CASN         : AB13," &
+        "CK           : AB11," &
+        "CKE          : Y11," &
+        "CKN          : AB12," &
+        "CSN          : AA12," &
+        "DM0          : U8," &
+        "DM1          : AB8," &
+        "MA0          : V13," &
+        "MA1          : AB14," &
+        "MA10         : U13," &
+        "MA11         : AA14," &
+        "MA12         : Y14," &
+        "MA13         : AB15," &
+        "MA14         : Y15," &
+        "MA15         : U15," &
+        "MA2          : W14," &
+        "MA3          : U14," &
+        "MA4          : W15," &
+        "MA5          : V15," &
+        "MA6          : AB16," &
+        "MA7          : AA16," &
+        "MA8          : W16," &
+        "MA9          : Y16," &
+        "ODT          : V11," &
+        "RASN         : W12," &
+        "RSTN         : AB17," &
+        "TDO          : D11," &
+        "WEN          : Y12," &
+        "DACB         : J2," &
+        "DACG         : J3," &
+        "DACR         : J4," &
+        "DACRSET      : K4," &
+        "ENTEST       : K3," &
+        "GPIOA0       : B14," &
+        "GPIOA1       : D14," &
+        "GPIOA2       : D13," &
+        "GPIOA3       : E13," &
+        "PECI         : AB18," &
+        "PEREFCLKN    : K22," &
+        "PEREFCLKP    : K21," &
+        "PEREXT       : K20," &
+        "PERXN        : M22," &
+        "PERXP        : M21," &
+        "PETXN        : L22," &
+        "PETXP        : L21," &
+        "ADCREXT      : J1," &
+        "USB2AVRES    : B8," &
+        "USB2A_DM     : A8," &
+        "USB2A_DP     : A7," &
+        "USB2BVRES    : B7," &
+        "USB2B_DM     : A6," &
+        "USB2B_DP     : B6," &
+        "VIN0         : F4," &
+        "VIN1         : F5," &
+        "VIN10        : G2," &
+        "VIN11        : F1," &
+        "VIN12        : H5," &
+        "VIN13        : G1," &
+        "VIN14        : H3," &
+        "VIN15        : H4," &
+        "VIN2         : E2," &
+        "VIN3         : E1," &
+        "VIN4         : F3," &
+        "VIN5         : E3," &
+        "VIN6         : G5," &
+        "VIN7         : G4," &
+        "VIN8         : F2," &
+        "VIN9         : G3," &
+        "ADCVREFN     : H1," &
+        "ADCVREFP     : H2," &
+        "ZQ           : W11," &
+        "GND          : (A1, A22, AA11, AA13, " &
+        "                AA15, AA7, AA9, AB1, " &
+        "                AB22, C6, E8, F16,   " &
+        "                G19, G6, H6, J10,    " &
+        "                J11, J12, J13, J14,  " &
+        "                J21, J22, J5, J9,    " &
+        "                K10, K11, K12, K13,  " &
+        "                K14, K16, K9, L10,   " &
+        "                L11, L12, L13, L14,  " &
+        "                L9, M1, M10, M11,    " &
+        "                M12, M13, M14, M16,  " &
+        "                M17, M2, M3, M4,     " &
+        "                M5, M6, M7, M9,      " &
+        "                N10, N11, N12, N13,  " &
+        "                N14, N9, T16, T6,    " &
+        "                T7, U11, U6, V10,    " &
+        "                V12, V14, V16, V8,   " &
+        "                E5),                 " &
+        "IV11D        : (F6, G10, G11, G12,   " &
+        "                G13, G14, G15, G7,   " &
+        "                G8, G9, H16, J16,    " &
+        "                L7, N16, N7, P10,    " &
+        "                P11, P12, P13, P14,  " &
+        "                P16, P7, P9, R16,    " &
+        "                R7),                 " &
+        "R1VDD        : (F10, F11)," &
+        "R2VDD        : (F7, F8)," &
+        "LPVDD        : (J17, K17)," &
+        "MVDD         : (T10, T12, T13, T14, T8)," &
+        "PLLAV33      : (W17, Y17)," &
+        "PLLDV11      : V17," &
+        "VPLLAV33     : (J7, H7)," &
+        "VPLLAV11     : (L5, L6)," &
+        "BATVDD       : E4," &
+        "ADCAV33      : J6," &
+        "DACDV33      : K5," &
+        "DACAV33      : K6," &
+        "PECIVDD      : AA17," &
+        "USB2AV33     : C7," &
+        "PEAV11       : L17," &
+        "PEAV33       : L16," &
+        "MVREF        : T9," &
+        "PV33D        : (F12, F13, F14, F15,  " &
+        "                G16, H17, K7, N17,   " &
+        "                N6, P17, P6, R17,    " &
+        "                R6, T11, T15)        ";
+
+-- This section specifies the differential IO port groupings.
+
+   attribute PORT_GROUPING of AST2500: entity is
+      "Differential_Voltage ( " &
+          "(CK,CKN)," &
+          "(DQS0,DQSN0)," &
+          "(DQS1,DQSN1))";
+
+-- This section specifies the TAP ports. For the TAP TCK port, the parameters in the brackets are:
+--        First Field : Maximum  TCK frequency.
+--        Second Field: Allowable states TCK may be stopped in.
+
+   attribute TAP_SCAN_CLOCK of TCK : signal is (10.0e6, BOTH);
+   attribute TAP_SCAN_IN    of TDI : signal is true;
+   attribute TAP_SCAN_MODE  of TMS : signal is true;
+   attribute TAP_SCAN_OUT   of TDO : signal is true;
+   attribute TAP_SCAN_RESET of TRST: signal is true;
+
+-- Specifies the compliance enable patterns for the design. It lists a set of design ports and the values that they should be set
+-- to, in order to enable compliance to IEEE Std 1149.1
+
+   attribute COMPLIANCE_PATTERNS of AST2500: entity is
+        "(ENTEST, GPIOA0, GPIOA1, GPIOA2, GPIOA3) (11010)";
+
+-- Specifies the number of bits in the instruction register.
+
+   attribute INSTRUCTION_LENGTH of AST2500: entity is 4;
+
+-- Specifies the boundary-scan instructions implemented in the design and their opcodes.
+
+   attribute INSTRUCTION_OPCODE of AST2500: entity is
+     "BYPASS  (1111)," &
+     "EXTEST  (0001)," &
+     "SAMPLE  (0010)," &
+     "PRELOAD (0010)," &
+     "IDCODE  (0011)," &
+     "DCSETUP (1100)";
+
+-- Specifies the bit pattern that is loaded into the instruction register when the TAP controller passes through the Capture-IR
+-- state. The standard mandates that the two LSBs must be "01". The remaining bits are design specific.
+
+   attribute INSTRUCTION_CAPTURE of AST2500: entity is "0001";
+
+-- Specifies the private instructions implemented in the design
+
+   attribute INSTRUCTION_PRIVATE of AST2500: entity is
+     "DCSETUP";
+
+-- Specifies the bit pattern that is loaded into the DEVICE_ID register during the IDCODE instruction when the TAP controller passes
+-- through the Capture-DR state.
+
+   attribute IDCODE_REGISTER of AST2500: entity is
+--   "0001" &
+     "XXXX" &
+ -- 4-bit version number
+--   "1010000000110010" &
+     "XXXXXXXXXXXXXXXX" &
+ -- 16-bit part number
+--   "00110000000" &
+     "XXXXXXXXXXX" &
+ -- 11-bit identity of the manufacturer
+     "1";
+ -- Required by IEEE Std 1149.1
+
+-- This section specifies the test data register placed between TDI and TDO for each implemented instruction.
+
+   attribute REGISTER_ACCESS of AST2500: entity is
+        "BYPASS (BYPASS)," &
+        "BOUNDARY (EXTEST, SAMPLE, PRELOAD)," &
+        "DEVICE_ID (IDCODE)";
+
+-- Specifies the length of the boundary scan register.
+
+   attribute BOUNDARY_LENGTH of AST2500: entity is 792;
+
+-- The following list specifies the characteristics of each cell in the boundary scan register from TDI to TDO. The following is a
+-- description of the label fields:
+--      num     : Is the cell number.
+--      cell    : Is the cell type as defined by the standard.
+--      port    : Is the design port name. Control cells do not have a port name.
+--      function: Is the function of the cell as defined by the standard. Is one of input, output2, output3, bidir, control or
+--                controlr.
+--      safe    : Specifies the value that the BSR cell should be loaded with for safe operation when the software might otherwise
+--                choose a random value.
+--      ccell   : The control cell number. Specifies the control cell that drives the output enable for this port.
+--      disval  : Specifies the value that is loaded into the control cell to disable the output enable for the corresponding port.
+--      rslt    : Resulting state. Shows the state of the driver when it is disabled.
+
+   attribute BOUNDARY_REGISTER of AST2500: entity is
+--
+--    num   cell   port         function      safe  [ccell  disval  rslt]
+--
+     "791  (BC_4,  RGMII1TXD2,  observe_only, X),                        " &
+     "790  (BC_2,  *,           control,      1),                        " &
+     "789  (BC_1,  RGMII1TXD2,  output3,      X,    790,    1,      Z),  " &
+     "788  (BC_4,  RGMII1TXCTL, observe_only, X),                        " &
+     "787  (BC_2,  *,           control,      1),                        " &
+     "786  (BC_1,  RGMII1TXCTL, output3,      X,    787,    1,      Z),  " &
+     "785  (BC_4,  RGMII1TXCK,  observe_only, X),                        " &
+     "784  (BC_2,  *,           control,      1),                        " &
+     "783  (BC_1,  RGMII1TXCK,  output3,      X,    784,    1,      Z),  " &
+     "782  (BC_0,  *,           internal,     X),                        " &
+     "781  (BC_0,  *,           internal,     X),                        " &
+     "780  (BC_0,  *,           internal,     X),                        " &
+     "779  (BC_4,  RGMII1RXCK,  observe_only, X),                        " &
+     "778  (BC_2,  *,           control,      1),                        " &
+     "777  (BC_1,  RGMII1RXCK,  output3,      X,    778,    1,      Z),  " &
+     "776  (BC_4,  RGMII1RXCTL, observe_only, X),                        " &
+     "775  (BC_2,  *,           control,      1),                        " &
+     "774  (BC_1,  RGMII1RXCTL, output3,      X,    775,    1,      Z),  " &
+     "773  (BC_4,  RGMII1RXD0,  observe_only, X),                        " &
+     "772  (BC_2,  *,           control,      1),                        " &
+     "771  (BC_1,  RGMII1RXD0,  output3,      X,    772,    1,      Z),  " &
+     "770  (BC_4,  RGMII1RXD2,  observe_only, X),                        " &
+     "769  (BC_2,  *,           control,      1),                        " &
+     "768  (BC_1,  RGMII1RXD2,  output3,      X,    769,    1,      Z),  " &
+     "767  (BC_4,  RGMII1RXD3,  observe_only, X),                        " &
+     "766  (BC_2,  *,           control,      1),                        " &
+     "765  (BC_1,  RGMII1RXD3,  output3,      X,    766,    1,      Z),  " &
+     "764  (BC_4,  RXD5,        observe_only, X),                        " &
+     "763  (BC_2,  *,           control,      1),                        " &
+     "762  (BC_1,  RXD5,        output3,      X,    763,    1,      Z),  " &
+     "761  (BC_4,  GPIOK0,      observe_only, X),                        " &
+     "760  (BC_2,  *,           control,      1),                        " &
+     "759  (BC_1,  GPIOK0,      output3,      X,    760,    1,      Z),  " &
+     "758  (BC_4,  GPIOK1,      observe_only, X),                        " &
+     "757  (BC_2,  *,           control,      1),                        " &
+     "756  (BC_1,  GPIOK1,      output3,      X,    757,    1,      Z),  " &
+     "755  (BC_4,  GPIOJ1,      observe_only, X),                        " &
+     "754  (BC_2,  *,           control,      1),                        " &
+     "753  (BC_1,  GPIOJ1,      output3,      X,    754,    1,      Z),  " &
+     "752  (BC_4,  GPIOJ2,      observe_only, X),                        " &
+     "751  (BC_2,  *,           control,      1),                        " &
+     "750  (BC_1,  GPIOJ2,      output3,      X,    751,    1,      Z),  " &
+     "749  (BC_4,  GPIOJ3,      observe_only, X),                        " &
+     "748  (BC_2,  *,           control,      1),                        " &
+     "747  (BC_1,  GPIOJ3,      output3,      X,    748,    1,      Z),  " &
+     "746  (BC_4,  GPIOJ4,      observe_only, X),                        " &
+     "745  (BC_2,  *,           control,      1),                        " &
+     "744  (BC_1,  GPIOJ4,      output3,      X,    745,    1,      Z),  " &
+     "743  (BC_4,  GPIOL4,      observe_only, X),                        " &
+     "742  (BC_2,  *,           control,      1),                        " &
+     "741  (BC_1,  GPIOL4,      output3,      X,    742,    1,      Z),  " &
+     "740  (BC_4,  GPIOL5,      observe_only, X),                        " &
+     "739  (BC_2,  *,           control,      1),                        " &
+     "738  (BC_1,  GPIOL5,      output3,      X,    739,    1,      Z),  " &
+     "737  (BC_4,  GPIOM5,      observe_only, X),                        " &
+     "736  (BC_2,  *,           control,      1),                        " &
+     "735  (BC_1,  GPIOM5,      output3,      X,    736,    1,      Z),  " &
+     "734  (BC_4,  GPIOM6,      observe_only, X),                        " &
+     "733  (BC_2,  *,           control,      1),                        " &
+     "732  (BC_1,  GPIOM6,      output3,      X,    733,    1,      Z),  " &
+     "731  (BC_4,  GPIOM7,      observe_only, X),                        " &
+     "730  (BC_2,  *,           control,      1),                        " &
+     "729  (BC_1,  GPIOM7,      output3,      X,    730,    1,      Z),  " &
+     "728  (BC_4,  GPION7,      observe_only, X),                        " &
+     "727  (BC_2,  *,           control,      1),                        " &
+     "726  (BC_1,  GPION7,      output3,      X,    727,    1,      Z),  " &
+     "725  (BC_4,  GPIOP3,      observe_only, X),                        " &
+     "724  (BC_2,  *,           control,      1),                        " &
+     "723  (BC_1,  GPIOP3,      output3,      X,    724,    1,      Z),  " &
+     "722  (BC_4,  GPIOP4,      observe_only, X),                        " &
+     "721  (BC_2,  *,           control,      1),                        " &
+     "720  (BC_1,  GPIOP4,      output3,      X,    721,    1,      Z),  " &
+     "719  (BC_4,  TXD5,        observe_only, X),                        " &
+     "718  (BC_2,  *,           control,      1),                        " &
+     "717  (BC_1,  TXD5,        output3,      X,    718,    1,      Z),  " &
+     "716  (BC_4,  GPIOK2,      observe_only, X),                        " &
+     "715  (BC_2,  *,           control,      1),                        " &
+     "714  (BC_1,  GPIOK2,      output3,      X,    715,    1,      Z),  " &
+     "713  (BC_4,  GPIOK3,      observe_only, X),                        " &
+     "712  (BC_2,  *,           control,      1),                        " &
+     "711  (BC_1,  GPIOK3,      output3,      X,    712,    1,      Z),  " &
+     "710  (BC_4,  GPIOK4,      observe_only, X),                        " &
+     "709  (BC_2,  *,           control,      1),                        " &
+     "708  (BC_1,  GPIOK4,      output3,      X,    709,    1,      Z),  " &
+     "707  (BC_4,  GPIOK5,      observe_only, X),                        " &
+     "706  (BC_2,  *,           control,      1),                        " &
+     "705  (BC_1,  GPIOK5,      output3,      X,    706,    1,      Z),  " &
+     "704  (BC_4,  GPIOK6,      observe_only, X),                        " &
+     "703  (BC_2,  *,           control,      1),                        " &
+     "702  (BC_1,  GPIOK6,      output3,      X,    703,    1,      Z),  " &
+     "701  (BC_4,  GPIOK7,      observe_only, X),                        " &
+     "700  (BC_2,  *,           control,      1),                        " &
+     "699  (BC_1,  GPIOK7,      output3,      X,    700,    1,      Z),  " &
+     "698  (BC_4,  GPIOJ0,      observe_only, X),                        " &
+     "697  (BC_2,  *,           control,      1),                        " &
+     "696  (BC_1,  GPIOJ0,      output3,      X,    697,    1,      Z),  " &
+     "695  (BC_4,  GPIOJ5,      observe_only, X),                        " &
+     "694  (BC_2,  *,           control,      1),                        " &
+     "693  (BC_1,  GPIOJ5,      output3,      X,    694,    1,      Z),  " &
+     "692  (BC_4,  GPIOJ6,      observe_only, X),                        " &
+     "691  (BC_2,  *,           control,      1),                        " &
+     "690  (BC_1,  GPIOJ6,      output3,      X,    691,    1,      Z),  " &
+     "689  (BC_4,  GPIOJ7,      observe_only, X),                        " &
+     "688  (BC_2,  *,           control,      1),                        " &
+     "687  (BC_1,  GPIOJ7,      output3,      X,    688,    1,      Z),  " &
+     "686  (BC_4,  GPIOL0,      observe_only, X),                        " &
+     "685  (BC_2,  *,           control,      1),                        " &
+     "684  (BC_1,  GPIOL0,      output3,      X,    685,    1,      Z),  " &
+     "683  (BC_4,  GPIOL1,      observe_only, X),                        " &
+     "682  (BC_2,  *,           control,      1),                        " &
+     "681  (BC_1,  GPIOL1,      output3,      X,    682,    1,      Z),  " &
+     "680  (BC_4,  GPIOL2,      observe_only, X),                        " &
+     "679  (BC_2,  *,           control,      1),                        " &
+     "678  (BC_1,  GPIOL2,      output3,      X,    679,    1,      Z),  " &
+     "677  (BC_4,  GPIOL3,      observe_only, X),                        " &
+     "676  (BC_2,  *,           control,      1),                        " &
+     "675  (BC_1,  GPIOL3,      output3,      X,    676,    1,      Z),  " &
+     "674  (BC_4,  GPIOL6,      observe_only, X),                        " &
+     "673  (BC_2,  *,           control,      1),                        " &
+     "672  (BC_1,  GPIOL6,      output3,      X,    673,    1,      Z),  " &
+     "671  (BC_4,  GPIOL7,      observe_only, X),                        " &
+     "670  (BC_2,  *,           control,      1),                        " &
+     "669  (BC_1,  GPIOL7,      output3,      X,    670,    1,      Z),  " &
+     "668  (BC_4,  GPIOM0,      observe_only, X),                        " &
+     "667  (BC_2,  *,           control,      1),                        " &
+     "666  (BC_1,  GPIOM0,      output3,      X,    667,    1,      Z),  " &
+     "665  (BC_4,  GPIOM1,      observe_only, X),                        " &
+     "664  (BC_2,  *,           control,      1),                        " &
+     "663  (BC_1,  GPIOM1,      output3,      X,    664,    1,      Z),  " &
+     "662  (BC_4,  GPIOM2,      observe_only, X),                        " &
+     "661  (BC_2,  *,           control,      1),                        " &
+     "660  (BC_1,  GPIOM2,      output3,      X,    661,    1,      Z),  " &
+     "659  (BC_4,  GPIOM3,      observe_only, X),                        " &
+     "658  (BC_2,  *,           control,      1),                        " &
+     "657  (BC_1,  GPIOM3,      output3,      X,    658,    1,      Z),  " &
+     "656  (BC_4,  GPIOM4,      observe_only, X),                        " &
+     "655  (BC_2,  *,           control,      1),                        " &
+     "654  (BC_1,  GPIOM4,      output3,      X,    655,    1,      Z),  " &
+     "653  (BC_4,  GPION0,      observe_only, X),                        " &
+     "652  (BC_2,  *,           control,      1),                        " &
+     "651  (BC_1,  GPION0,      output3,      X,    652,    1,      Z),  " &
+     "650  (BC_4,  GPION1,      observe_only, X),                        " &
+     "649  (BC_2,  *,           control,      1),                        " &
+     "648  (BC_1,  GPION1,      output3,      X,    649,    1,      Z),  " &
+     "647  (BC_4,  GPION2,      observe_only, X),                        " &
+     "646  (BC_2,  *,           control,      1),                        " &
+     "645  (BC_1,  GPION2,      output3,      X,    646,    1,      Z),  " &
+     "644  (BC_4,  GPION3,      observe_only, X),                        " &
+     "643  (BC_2,  *,           control,      1),                        " &
+     "642  (BC_1,  GPION3,      output3,      X,    643,    1,      Z),  " &
+     "641  (BC_4,  GPION4,      observe_only, X),                        " &
+     "640  (BC_2,  *,           control,      1),                        " &
+     "639  (BC_1,  GPION4,      output3,      X,    640,    1,      Z),  " &
+     "638  (BC_4,  GPION5,      observe_only, X),                        " &
+     "637  (BC_2,  *,           control,      1),                        " &
+     "636  (BC_1,  GPION5,      output3,      X,    637,    1,      Z),  " &
+     "635  (BC_4,  GPION6,      observe_only, X),                        " &
+     "634  (BC_2,  *,           control,      1),                        " &
+     "633  (BC_1,  GPION6,      output3,      X,    634,    1,      Z),  " &
+     "632  (BC_4,  GPIOO3,      observe_only, X),                        " &
+     "631  (BC_2,  *,           control,      1),                        " &
+     "630  (BC_1,  GPIOO3,      output3,      X,    631,    1,      Z),  " &
+     "629  (BC_4,  GPIOO4,      observe_only, X),                        " &
+     "628  (BC_2,  *,           control,      1),                        " &
+     "627  (BC_1,  GPIOO4,      output3,      X,    628,    1,      Z),  " &
+     "626  (BC_4,  GPIOO5,      observe_only, X),                        " &
+     "625  (BC_2,  *,           control,      1),                        " &
+     "624  (BC_1,  GPIOO5,      output3,      X,    625,    1,      Z),  " &
+     "623  (BC_4,  GPIOO6,      observe_only, X),                        " &
+     "622  (BC_2,  *,           control,      1),                        " &
+     "621  (BC_1,  GPIOO6,      output3,      X,    622,    1,      Z),  " &
+     "620  (BC_4,  GPIOO7,      observe_only, X),                        " &
+     "619  (BC_2,  *,           control,      1),                        " &
+     "618  (BC_1,  GPIOO7,      output3,      X,    619,    1,      Z),  " &
+     "617  (BC_4,  GPIOP0,      observe_only, X),                        " &
+     "616  (BC_2,  *,           control,      1),                        " &
+     "615  (BC_1,  GPIOP0,      output3,      X,    616,    1,      Z),  " &
+     "614  (BC_4,  GPIOO0,      observe_only, X),                        " &
+     "613  (BC_2,  *,           control,      1),                        " &
+     "612  (BC_1,  GPIOO0,      output3,      X,    613,    1,      Z),  " &
+     "611  (BC_4,  GPIOO1,      observe_only, X),                        " &
+     "610  (BC_2,  *,           control,      1),                        " &
+     "609  (BC_1,  GPIOO1,      output3,      X,    610,    1,      Z),  " &
+     "608  (BC_4,  GPIOP5,      observe_only, X),                        " &
+     "607  (BC_2,  *,           control,      1),                        " &
+     "606  (BC_1,  GPIOP5,      output3,      X,    607,    1,      Z),  " &
+     "605  (BC_4,  GPIOO2,      observe_only, X),                        " &
+     "604  (BC_2,  *,           control,      1),                        " &
+     "603  (BC_1,  GPIOO2,      output3,      X,    604,    1,      Z),  " &
+     "602  (BC_4,  GPIOP2,      observe_only, X),                        " &
+     "601  (BC_2,  *,           control,      1),                        " &
+     "600  (BC_1,  GPIOP2,      output3,      X,    601,    1,      Z),  " &
+     "599  (BC_4,  GPIOP1,      observe_only, X),                        " &
+     "598  (BC_2,  *,           control,      1),                        " &
+     "597  (BC_1,  GPIOP1,      output3,      X,    598,    1,      Z),  " &
+     "596  (BC_4,  GPIOP6,      observe_only, X),                        " &
+     "595  (BC_2,  *,           control,      1),                        " &
+     "594  (BC_1,  GPIOP6,      output3,      X,    595,    1,      Z),  " &
+     "593  (BC_4,  GPIOP7,      observe_only, X),                        " &
+     "592  (BC_2,  *,           control,      1),                        " &
+     "591  (BC_1,  GPIOP7,      output3,      X,    592,    1,      Z),  " &
+     "590  (BC_4,  DQ15,        observe_only, X),                        " &
+     "589  (BC_2,  *,           control,      1),                        " &
+     "588  (BC_1,  DQ15,        output3,      X,    589,    1,      Z),  " &
+     "587  (BC_4,  DQ13,        observe_only, X),                        " &
+     "586  (BC_2,  *,           control,      1),                        " &
+     "585  (BC_1,  DQ13,        output3,      X,    586,    1,      Z),  " &
+     "584  (BC_4,  DQ14,        observe_only, X),                        " &
+     "583  (BC_2,  *,           control,      1),                        " &
+     "582  (BC_1,  DQ14,        output3,      X,    583,    1,      Z),  " &
+     "581  (BC_4,  DQ12,        observe_only, X),                        " &
+     "580  (BC_2,  *,           control,      1),                        " &
+     "579  (BC_1,  DQ12,        output3,      X,    580,    1,      Z),  " &
+     "578  (BC_4,  DQS1,        observe_only, X),                        " &
+     "577  (BC_2,  *,           control,      1),                        " &
+     "576  (BC_1,  DQS1,        output3,      X,    577,    1,      Z),  " &
+     "575  (BC_4,  DQ11,        observe_only, X),                        " &
+     "574  (BC_2,  *,           control,      1),                        " &
+     "573  (BC_1,  DQ11,        output3,      X,    574,    1,      Z),  " &
+     "572  (BC_4,  DQ10,        observe_only, X),                        " &
+     "571  (BC_2,  *,           control,      1),                        " &
+     "570  (BC_1,  DQ10,        output3,      X,    571,    1,      Z),  " &
+     "569  (BC_4,  DQ9,         observe_only, X),                        " &
+     "568  (BC_2,  *,           control,      1),                        " &
+     "567  (BC_1,  DQ9,         output3,      X,    568,    1,      Z),  " &
+     "566  (BC_4,  DQ8,         observe_only, X),                        " &
+     "565  (BC_2,  *,           control,      1),                        " &
+     "564  (BC_1,  DQ8,         output3,      X,    565,    1,      Z),  " &
+     "563  (BC_2,  *,           control,      1),                        " &
+     "562  (BC_1,  DM1,         output3,      X,    563,    1,      Z),  " &
+     "561  (BC_2,  *,           control,      1),                        " &
+     "560  (BC_1,  DM0,         output3,      X,    561,    1,      Z),  " &
+     "559  (BC_4,  DQ7,         observe_only, X),                        " &
+     "558  (BC_2,  *,           control,      1),                        " &
+     "557  (BC_1,  DQ7,         output3,      X,    558,    1,      Z),  " &
+     "556  (BC_4,  DQ6,         observe_only, X),                        " &
+     "555  (BC_2,  *,           control,      1),                        " &
+     "554  (BC_1,  DQ6,         output3,      X,    555,    1,      Z),  " &
+     "553  (BC_4,  DQ5,         observe_only, X),                        " &
+     "552  (BC_2,  *,           control,      1),                        " &
+     "551  (BC_1,  DQ5,         output3,      X,    552,    1,      Z),  " &
+     "550  (BC_4,  DQ4,         observe_only, X),                        " &
+     "549  (BC_2,  *,           control,      1),                        " &
+     "548  (BC_1,  DQ4,         output3,      X,    549,    1,      Z),  " &
+     "547  (BC_4,  DQS0,        observe_only, X),                        " &
+     "546  (BC_2,  *,           control,      1),                        " &
+     "545  (BC_1,  DQS0,        output3,      X,    546,    1,      Z),  " &
+     "544  (BC_4,  DQ3,         observe_only, X),                        " &
+     "543  (BC_2,  *,           control,      1),                        " &
+     "542  (BC_1,  DQ3,         output3,      X,    543,    1,      Z),  " &
+     "541  (BC_4,  DQ2,         observe_only, X),                        " &
+     "540  (BC_2,  *,           control,      1),                        " &
+     "539  (BC_1,  DQ2,         output3,      X,    540,    1,      Z),  " &
+     "538  (BC_4,  DQ1,         observe_only, X),                        " &
+     "537  (BC_2,  *,           control,      1),                        " &
+     "536  (BC_1,  DQ1,         output3,      X,    537,    1,      Z),  " &
+     "535  (BC_4,  DQ0,         observe_only, X),                        " &
+     "534  (BC_2,  *,           control,      1),                        " &
+     "533  (BC_1,  DQ0,         output3,      X,    534,    1,      Z),  " &
+     "532  (BC_2,  *,           control,      1),                        " &
+     "531  (BC_1,  ODT,         output3,      X,    532,    1,      Z),  " &
+     "530  (BC_2,  *,           control,      1),                        " &
+     "529  (BC_1,  CKE,         output3,      X,    530,    1,      Z),  " &
+     "528  (BC_2,  *,           control,      1),                        " &
+     "527  (BC_1,  CK,          output3,      X,    528,    1,      Z),  " &
+     "526  (BC_2,  *,           control,      1),                        " &
+     "525  (BC_1,  CSN,         output3,      X,    526,    1,      Z),  " &
+     "524  (BC_2,  *,           control,      1),                        " &
+     "523  (BC_1,  WEN,         output3,      X,    524,    1,      Z),  " &
+     "522  (BC_2,  *,           control,      1),                        " &
+     "521  (BC_1,  RASN,        output3,      X,    522,    1,      Z),  " &
+     "520  (BC_2,  *,           control,      1),                        " &
+     "519  (BC_1,  CASN,        output3,      X,    520,    1,      Z),  " &
+     "518  (BC_2,  *,           control,      1),                        " &
+     "517  (BC_1,  BA0,         output3,      X,    518,    1,      Z),  " &
+     "516  (BC_2,  *,           control,      1),                        " &
+     "515  (BC_1,  BA1,         output3,      X,    516,    1,      Z),  " &
+     "514  (BC_2,  *,           control,      1),                        " &
+     "513  (BC_1,  BA2,         output3,      X,    514,    1,      Z),  " &
+     "512  (BC_2,  *,           control,      1),                        " &
+     "511  (BC_1,  MA0,         output3,      X,    512,    1,      Z),  " &
+     "510  (BC_2,  *,           control,      1),                        " &
+     "509  (BC_1,  MA10,        output3,      X,    510,    1,      Z),  " &
+     "508  (BC_2,  *,           control,      1),                        " &
+     "507  (BC_1,  MA1,         output3,      X,    508,    1,      Z),  " &
+     "506  (BC_2,  *,           control,      1),                        " &
+     "505  (BC_1,  MA11,        output3,      X,    506,    1,      Z),  " &
+     "504  (BC_2,  *,           control,      1),                        " &
+     "503  (BC_1,  MA2,         output3,      X,    504,    1,      Z),  " &
+     "502  (BC_2,  *,           control,      1),                        " &
+     "501  (BC_1,  MA12,        output3,      X,    502,    1,      Z),  " &
+     "500  (BC_2,  *,           control,      1),                        " &
+     "499  (BC_1,  MA3,         output3,      X,    500,    1,      Z),  " &
+     "498  (BC_2,  *,           control,      1),                        " &
+     "497  (BC_1,  MA13,        output3,      X,    498,    1,      Z),  " &
+     "496  (BC_2,  *,           control,      1),                        " &
+     "495  (BC_1,  MA4,         output3,      X,    496,    1,      Z),  " &
+     "494  (BC_2,  *,           control,      1),                        " &
+     "493  (BC_1,  MA14,        output3,      X,    494,    1,      Z),  " &
+     "492  (BC_2,  *,           control,      1),                        " &
+     "491  (BC_1,  MA5,         output3,      X,    492,    1,      Z),  " &
+     "490  (BC_2,  *,           control,      1),                        " &
+     "489  (BC_1,  MA15,        output3,      X,    490,    1,      Z),  " &
+     "488  (BC_2,  *,           control,      1),                        " &
+     "487  (BC_1,  MA6,         output3,      X,    488,    1,      Z),  " &
+     "486  (BC_2,  *,           control,      1),                        " &
+     "485  (BC_1,  MA7,         output3,      X,    486,    1,      Z),  " &
+     "484  (BC_2,  *,           control,      1),                        " &
+     "483  (BC_1,  MA8,         output3,      X,    484,    1,      Z),  " &
+     "482  (BC_2,  *,           control,      1),                        " &
+     "481  (BC_1,  MA9,         output3,      X,    482,    1,      Z),  " &
+     "480  (BC_2,  *,           control,      1),                        " &
+     "479  (BC_1,  RSTN,        output3,      X,    480,    1,      Z),  " &
+     "478  (BC_4,  ALERTN,      observe_only, X),                        " &
+     "477  (BC_2,  *,           control,      1),                        " &
+     "476  (BC_1,  ALERTN,      output3,      X,    477,    1,      Z),  " &
+     "475  (BC_4,  CLKIN,       observe_only, X),                        " &
+     "474  (BC_4,  EXTRSTN,     observe_only, X),                        " &
+     "473  (BC_4,  SPIMOSI,     observe_only, X),                        " &
+     "472  (BC_2,  *,           control,      1),                        " &
+     "471  (BC_1,  SPIMOSI,     output3,      X,    472,    1,      Z),  " &
+     "470  (BC_4,  SPIMISO,     observe_only, X),                        " &
+     "469  (BC_2,  *,           control,      1),                        " &
+     "468  (BC_1,  SPIMISO,     output3,      X,    469,    1,      Z),  " &
+     "467  (BC_4,  GPIOR1,      observe_only, X),                        " &
+     "466  (BC_2,  *,           control,      1),                        " &
+     "465  (BC_1,  GPIOR1,      output3,      X,    466,    1,      Z),  " &
+     "464  (BC_4,  GPIOR2,      observe_only, X),                        " &
+     "463  (BC_2,  *,           control,      1),                        " &
+     "462  (BC_1,  GPIOR2,      output3,      X,    463,    1,      Z),  " &
+     "461  (BC_4,  GPIOS2,      observe_only, X),                        " &
+     "460  (BC_2,  *,           control,      1),                        " &
+     "459  (BC_1,  GPIOS2,      output3,      X,    460,    1,      Z),  " &
+     "458  (BC_4,  GPIOS3,      observe_only, X),                        " &
+     "457  (BC_2,  *,           control,      1),                        " &
+     "456  (BC_1,  GPIOS3,      output3,      X,    457,    1,      Z),  " &
+     "455  (BC_4,  GPIOS4,      observe_only, X),                        " &
+     "454  (BC_2,  *,           control,      1),                        " &
+     "453  (BC_1,  GPIOS4,      output3,      X,    454,    1,      Z),  " &
+     "452  (BC_4,  GPIOAA6,     observe_only, X),                        " &
+     "451  (BC_2,  *,           control,      1),                        " &
+     "450  (BC_1,  GPIOAA6,     output3,      X,    451,    1,      Z),  " &
+     "449  (BC_4,  GPIOAA7,     observe_only, X),                        " &
+     "448  (BC_2,  *,           control,      1),                        " &
+     "447  (BC_1,  GPIOAA7,     output3,      X,    448,    1,      Z),  " &
+     "446  (BC_4,  GPIOAB0,     observe_only, X),                        " &
+     "445  (BC_2,  *,           control,      1),                        " &
+     "444  (BC_1,  GPIOAB0,     output3,      X,    445,    1,      Z),  " &
+     "443  (BC_4,  GPIOY4,      observe_only, X),                        " &
+     "442  (BC_2,  *,           control,      1),                        " &
+     "441  (BC_1,  GPIOY4,      output3,      X,    442,    1,      Z),  " &
+     "440  (BC_4,  GPIOY5,      observe_only, X),                        " &
+     "439  (BC_2,  *,           control,      1),                        " &
+     "438  (BC_1,  GPIOY5,      output3,      X,    439,    1,      Z),  " &
+     "437  (BC_4,  GPIOY6,      observe_only, X),                        " &
+     "436  (BC_2,  *,           control,      1),                        " &
+     "435  (BC_1,  GPIOY6,      output3,      X,    436,    1,      Z),  " &
+     "434  (BC_4,  GPIOB1,      observe_only, X),                        " &
+     "433  (BC_2,  *,           control,      1),                        " &
+     "432  (BC_1,  GPIOB1,      output3,      X,    433,    1,      Z),  " &
+     "431  (BC_4,  GPIOB2,      observe_only, X),                        " &
+     "430  (BC_2,  *,           control,      1),                        " &
+     "429  (BC_1,  GPIOB2,      output3,      X,    430,    1,      Z),  " &
+     "428  (BC_4,  GPIOB3,      observe_only, X),                        " &
+     "427  (BC_2,  *,           control,      1),                        " &
+     "426  (BC_1,  GPIOB3,      output3,      X,    427,    1,      Z),  " &
+     "425  (BC_4,  GPIOF0,      observe_only, X),                        " &
+     "424  (BC_2,  *,           control,      1),                        " &
+     "423  (BC_1,  GPIOF0,      output3,      X,    424,    1,      Z),  " &
+     "422  (BC_4,  GPIOF1,      observe_only, X),                        " &
+     "421  (BC_2,  *,           control,      1),                        " &
+     "420  (BC_1,  GPIOF1,      output3,      X,    421,    1,      Z),  " &
+     "419  (BC_4,  GPIOF5,      observe_only, X),                        " &
+     "418  (BC_2,  *,           control,      1),                        " &
+     "417  (BC_1,  GPIOF5,      output3,      X,    418,    1,      Z),  " &
+     "416  (BC_4,  GPIOF6,      observe_only, X),                        " &
+     "415  (BC_2,  *,           control,      1),                        " &
+     "414  (BC_1,  GPIOF6,      output3,      X,    415,    1,      Z),  " &
+     "413  (BC_4,  GPIOF7,      observe_only, X),                        " &
+     "412  (BC_2,  *,           control,      1),                        " &
+     "411  (BC_1,  GPIOF7,      output3,      X,    412,    1,      Z),  " &
+     "410  (BC_4,  GPIOD6,      observe_only, X),                        " &
+     "409  (BC_2,  *,           control,      1),                        " &
+     "408  (BC_1,  GPIOD6,      output3,      X,    409,    1,      Z),  " &
+     "407  (BC_4,  GPIOE2,      observe_only, X),                        " &
+     "406  (BC_2,  *,           control,      1),                        " &
+     "405  (BC_1,  GPIOE2,      output3,      X,    406,    1,      Z),  " &
+     "404  (BC_4,  GPIOE3,      observe_only, X),                        " &
+     "403  (BC_2,  *,           control,      1),                        " &
+     "402  (BC_1,  GPIOE3,      output3,      X,    403,    1,      Z),  " &
+     "401  (BC_4,  SRSTN,       observe_only, X),                        " &
+     "400  (BC_4,  SPICK,       observe_only, X),                        " &
+     "399  (BC_2,  *,           control,      1),                        " &
+     "398  (BC_1,  SPICK,       output3,      X,    399,    1,      Z),  " &
+     "397  (BC_4,  HBLED,       observe_only, X),                        " &
+     "396  (BC_2,  *,           control,      1),                        " &
+     "395  (BC_1,  HBLED,       output3,      X,    396,    1,      Z),  " &
+     "394  (BC_4,  SPICS,       observe_only, X),                        " &
+     "393  (BC_2,  *,           control,      1),                        " &
+     "392  (BC_1,  SPICS,       output3,      X,    393,    1,      Z),  " &
+     "391  (BC_4,  GPIOR0,      observe_only, X),                        " &
+     "390  (BC_2,  *,           control,      1),                        " &
+     "389  (BC_1,  GPIOR0,      output3,      X,    390,    1,      Z),  " &
+     "388  (BC_4,  GPIOR3,      observe_only, X),                        " &
+     "387  (BC_2,  *,           control,      1),                        " &
+     "386  (BC_1,  GPIOR3,      output3,      X,    387,    1,      Z),  " &
+     "385  (BC_4,  GPIOR4,      observe_only, X),                        " &
+     "384  (BC_2,  *,           control,      1),                        " &
+     "383  (BC_1,  GPIOR4,      output3,      X,    384,    1,      Z),  " &
+     "382  (BC_4,  GPIOR5,      observe_only, X),                        " &
+     "381  (BC_2,  *,           control,      1),                        " &
+     "380  (BC_1,  GPIOR5,      output3,      X,    381,    1,      Z),  " &
+     "379  (BC_4,  GPIOS0,      observe_only, X),                        " &
+     "378  (BC_2,  *,           control,      1),                        " &
+     "377  (BC_1,  GPIOS0,      output3,      X,    378,    1,      Z),  " &
+     "376  (BC_4,  GPIOS1,      observe_only, X),                        " &
+     "375  (BC_2,  *,           control,      1),                        " &
+     "374  (BC_1,  GPIOS1,      output3,      X,    375,    1,      Z),  " &
+     "373  (BC_4,  GPIOS5,      observe_only, X),                        " &
+     "372  (BC_2,  *,           control,      1),                        " &
+     "371  (BC_1,  GPIOS5,      output3,      X,    372,    1,      Z),  " &
+     "370  (BC_4,  GPIOS6,      observe_only, X),                        " &
+     "369  (BC_2,  *,           control,      1),                        " &
+     "368  (BC_1,  GPIOS6,      output3,      X,    369,    1,      Z),  " &
+     "367  (BC_4,  GPIOS7,      observe_only, X),                        " &
+     "366  (BC_2,  *,           control,      1),                        " &
+     "365  (BC_1,  GPIOS7,      output3,      X,    366,    1,      Z),  " &
+     "364  (BC_4,  GPIOZ0,      observe_only, X),                        " &
+     "363  (BC_2,  *,           control,      1),                        " &
+     "362  (BC_1,  GPIOZ0,      output3,      X,    363,    1,      Z),  " &
+     "361  (BC_4,  GPIOZ1,      observe_only, X),                        " &
+     "360  (BC_2,  *,           control,      1),                        " &
+     "359  (BC_1,  GPIOZ1,      output3,      X,    360,    1,      Z),  " &
+     "358  (BC_4,  GPIOZ2,      observe_only, X),                        " &
+     "357  (BC_2,  *,           control,      1),                        " &
+     "356  (BC_1,  GPIOZ2,      output3,      X,    357,    1,      Z),  " &
+     "355  (BC_4,  GPIOZ3,      observe_only, X),                        " &
+     "354  (BC_2,  *,           control,      1),                        " &
+     "353  (BC_1,  GPIOZ3,      output3,      X,    354,    1,      Z),  " &
+     "352  (BC_4,  GPIOZ7,      observe_only, X),                        " &
+     "351  (BC_2,  *,           control,      1),                        " &
+     "350  (BC_1,  GPIOZ7,      output3,      X,    351,    1,      Z),  " &
+     "349  (BC_4,  GPIOAA0,     observe_only, X),                        " &
+     "348  (BC_2,  *,           control,      1),                        " &
+     "347  (BC_1,  GPIOAA0,     output3,      X,    348,    1,      Z),  " &
+     "346  (BC_4,  GPIOAA1,     observe_only, X),                        " &
+     "345  (BC_2,  *,           control,      1),                        " &
+     "344  (BC_1,  GPIOAA1,     output3,      X,    345,    1,      Z),  " &
+     "343  (BC_4,  GPIOZ4,      observe_only, X),                        " &
+     "342  (BC_2,  *,           control,      1),                        " &
+     "341  (BC_1,  GPIOZ4,      output3,      X,    342,    1,      Z),  " &
+     "340  (BC_4,  GPIOZ5,      observe_only, X),                        " &
+     "339  (BC_2,  *,           control,      1),                        " &
+     "338  (BC_1,  GPIOZ5,      output3,      X,    339,    1,      Z),  " &
+     "337  (BC_4,  GPIOZ6,      observe_only, X),                        " &
+     "336  (BC_2,  *,           control,      1),                        " &
+     "335  (BC_1,  GPIOZ6,      output3,      X,    336,    1,      Z),  " &
+     "334  (BC_4,  GPIOAA2,     observe_only, X),                        " &
+     "333  (BC_2,  *,           control,      1),                        " &
+     "332  (BC_1,  GPIOAA2,     output3,      X,    333,    1,      Z),  " &
+     "331  (BC_4,  GPIOAA3,     observe_only, X),                        " &
+     "330  (BC_2,  *,           control,      1),                        " &
+     "329  (BC_1,  GPIOAA3,     output3,      X,    330,    1,      Z),  " &
+     "328  (BC_4,  GPIOAA4,     observe_only, X),                        " &
+     "327  (BC_2,  *,           control,      1),                        " &
+     "326  (BC_1,  GPIOAA4,     output3,      X,    327,    1,      Z),  " &
+     "325  (BC_4,  GPIOAA5,     observe_only, X),                        " &
+     "324  (BC_2,  *,           control,      1),                        " &
+     "323  (BC_1,  GPIOAA5,     output3,      X,    324,    1,      Z),  " &
+     "322  (BC_4,  GPIOAB1,     observe_only, X),                        " &
+     "321  (BC_2,  *,           control,      1),                        " &
+     "320  (BC_1,  GPIOAB1,     output3,      X,    321,    1,      Z),  " &
+     "319  (BC_4,  GPIOAB2,     observe_only, X),                        " &
+     "318  (BC_2,  *,           control,      1),                        " &
+     "317  (BC_1,  GPIOAB2,     output3,      X,    318,    1,      Z),  " &
+     "316  (BC_4,  GPIOAB3,     observe_only, X),                        " &
+     "315  (BC_2,  *,           control,      1),                        " &
+     "314  (BC_1,  GPIOAB3,     output3,      X,    315,    1,      Z),  " &
+     "313  (BC_4,  GPIOY0,      observe_only, X),                        " &
+     "312  (BC_2,  *,           control,      1),                        " &
+     "311  (BC_1,  GPIOY0,      output3,      X,    312,    1,      Z),  " &
+     "310  (BC_4,  GPIOY1,      observe_only, X),                        " &
+     "309  (BC_2,  *,           control,      1),                        " &
+     "308  (BC_1,  GPIOY1,      output3,      X,    309,    1,      Z),  " &
+     "307  (BC_4,  GPIOY2,      observe_only, X),                        " &
+     "306  (BC_2,  *,           control,      1),                        " &
+     "305  (BC_1,  GPIOY2,      output3,      X,    306,    1,      Z),  " &
+     "304  (BC_4,  GPIOY3,      observe_only, X),                        " &
+     "303  (BC_2,  *,           control,      1),                        " &
+     "302  (BC_1,  GPIOY3,      output3,      X,    303,    1,      Z),  " &
+     "301  (BC_4,  GPIOY7,      observe_only, X),                        " &
+     "300  (BC_2,  *,           control,      1),                        " &
+     "299  (BC_1,  GPIOY7,      output3,      X,    300,    1,      Z),  " &
+     "298  (BC_4,  GPIOQ5,      observe_only, X),                        " &
+     "297  (BC_2,  *,           control,      1),                        " &
+     "296  (BC_1,  GPIOQ5,      output3,      X,    297,    1,      Z),  " &
+     "295  (BC_4,  GPIOQ4,      observe_only, X),                        " &
+     "294  (BC_2,  *,           control,      1),                        " &
+     "293  (BC_1,  GPIOQ4,      output3,      X,    294,    1,      Z),  " &
+     "292  (BC_4,  GPIOQ7,      observe_only, X),                        " &
+     "291  (BC_2,  *,           control,      1),                        " &
+     "290  (BC_1,  GPIOQ7,      output3,      X,    291,    1,      Z),  " &
+     "289  (BC_4,  PERSTN,      observe_only, X),                        " &
+     "288  (BC_4,  GPIOB0,      observe_only, X),                        " &
+     "287  (BC_2,  *,           control,      1),                        " &
+     "286  (BC_1,  GPIOB0,      output3,      X,    287,    1,      Z),  " &
+     "285  (BC_4,  GPIOB4,      observe_only, X),                        " &
+     "284  (BC_2,  *,           control,      1),                        " &
+     "283  (BC_1,  GPIOB4,      output3,      X,    284,    1,      Z),  " &
+     "282  (BC_4,  GPIOB5,      observe_only, X),                        " &
+     "281  (BC_2,  *,           control,      1),                        " &
+     "280  (BC_1,  GPIOB5,      output3,      X,    281,    1,      Z),  " &
+     "279  (BC_4,  GPIOB7,      observe_only, X),                        " &
+     "278  (BC_2,  *,           control,      1),                        " &
+     "277  (BC_1,  GPIOB7,      output3,      X,    278,    1,      Z),  " &
+     "276  (BC_4,  GPIOB6,      observe_only, X),                        " &
+     "275  (BC_2,  *,           control,      1),                        " &
+     "274  (BC_1,  GPIOB6,      output3,      X,    275,    1,      Z),  " &
+     "273  (BC_4,  LRSTN,       observe_only, X),                        " &
+     "272  (BC_2,  *,           control,      1),                        " &
+     "271  (BC_1,  LRSTN,       output3,      X,    272,    1,      Z),  " &
+     "270  (BC_4,  LAD0,        observe_only, X),                        " &
+     "269  (BC_2,  *,           control,      1),                        " &
+     "268  (BC_1,  LAD0,        output3,      X,    269,    1,      Z),  " &
+     "267  (BC_4,  LAD1,        observe_only, X),                        " &
+     "266  (BC_2,  *,           control,      1),                        " &
+     "265  (BC_1,  LAD1,        output3,      X,    266,    1,      Z),  " &
+     "264  (BC_4,  LFRAMEN,     observe_only, X),                        " &
+     "263  (BC_2,  *,           control,      1),                        " &
+     "262  (BC_1,  LFRAMEN,     output3,      X,    263,    1,      Z),  " &
+     "261  (BC_4,  LSIRQ,       observe_only, X),                        " &
+     "260  (BC_2,  *,           control,      1),                        " &
+     "259  (BC_1,  LSIRQ,       output3,      X,    260,    1,      Z),  " &
+     "258  (BC_4,  LAD3,        observe_only, X),                        " &
+     "257  (BC_2,  *,           control,      1),                        " &
+     "256  (BC_1,  LAD3,        output3,      X,    257,    1,      Z),  " &
+     "255  (BC_4,  LPCCLK,      observe_only, X),                        " &
+     "254  (BC_2,  *,           control,      1),                        " &
+     "253  (BC_1,  LPCCLK,      output3,      X,    254,    1,      Z),  " &
+     "252  (BC_4,  LAD2,        observe_only, X),                        " &
+     "251  (BC_2,  *,           control,      1),                        " &
+     "250  (BC_1,  LAD2,        output3,      X,    251,    1,      Z),  " &
+     "249  (BC_4,  GPIOF2,      observe_only, X),                        " &
+     "248  (BC_2,  *,           control,      1),                        " &
+     "247  (BC_1,  GPIOF2,      output3,      X,    248,    1,      Z),  " &
+     "246  (BC_4,  GPIOF3,      observe_only, X),                        " &
+     "245  (BC_2,  *,           control,      1),                        " &
+     "244  (BC_1,  GPIOF3,      output3,      X,    245,    1,      Z),  " &
+     "243  (BC_4,  GPIOF4,      observe_only, X),                        " &
+     "242  (BC_2,  *,           control,      1),                        " &
+     "241  (BC_1,  GPIOF4,      output3,      X,    242,    1,      Z),  " &
+     "240  (BC_4,  GPIOD0,      observe_only, X),                        " &
+     "239  (BC_2,  *,           control,      1),                        " &
+     "238  (BC_1,  GPIOD0,      output3,      X,    239,    1,      Z),  " &
+     "237  (BC_4,  GPIOD1,      observe_only, X),                        " &
+     "236  (BC_2,  *,           control,      1),                        " &
+     "235  (BC_1,  GPIOD1,      output3,      X,    236,    1,      Z),  " &
+     "234  (BC_4,  GPIOD2,      observe_only, X),                        " &
+     "233  (BC_2,  *,           control,      1),                        " &
+     "232  (BC_1,  GPIOD2,      output3,      X,    233,    1,      Z),  " &
+     "231  (BC_4,  GPIOD3,      observe_only, X),                        " &
+     "230  (BC_2,  *,           control,      1),                        " &
+     "229  (BC_1,  GPIOD3,      output3,      X,    230,    1,      Z),  " &
+     "228  (BC_4,  GPIOD4,      observe_only, X),                        " &
+     "227  (BC_2,  *,           control,      1),                        " &
+     "226  (BC_1,  GPIOD4,      output3,      X,    227,    1,      Z),  " &
+     "225  (BC_4,  GPIOD5,      observe_only, X),                        " &
+     "224  (BC_2,  *,           control,      1),                        " &
+     "223  (BC_1,  GPIOD5,      output3,      X,    224,    1,      Z),  " &
+     "222  (BC_4,  GPIOD7,      observe_only, X),                        " &
+     "221  (BC_2,  *,           control,      1),                        " &
+     "220  (BC_1,  GPIOD7,      output3,      X,    221,    1,      Z),  " &
+     "219  (BC_4,  GPIOE1,      observe_only, X),                        " &
+     "218  (BC_2,  *,           control,      1),                        " &
+     "217  (BC_1,  GPIOE1,      output3,      X,    218,    1,      Z),  " &
+     "216  (BC_4,  GPIOE0,      observe_only, X),                        " &
+     "215  (BC_2,  *,           control,      1),                        " &
+     "214  (BC_1,  GPIOE0,      output3,      X,    215,    1,      Z),  " &
+     "213  (BC_4,  GPIOE6,      observe_only, X),                        " &
+     "212  (BC_2,  *,           control,      1),                        " &
+     "211  (BC_1,  GPIOE6,      output3,      X,    212,    1,      Z),  " &
+     "210  (BC_4,  GPIOE7,      observe_only, X),                        " &
+     "209  (BC_2,  *,           control,      1),                        " &
+     "208  (BC_1,  GPIOE7,      output3,      X,    209,    1,      Z),  " &
+     "207  (BC_4,  GPIOG0,      observe_only, X),                        " &
+     "206  (BC_2,  *,           control,      1),                        " &
+     "205  (BC_1,  GPIOG0,      output3,      X,    206,    1,      Z),  " &
+     "204  (BC_4,  GPIOG1,      observe_only, X),                        " &
+     "203  (BC_2,  *,           control,      1),                        " &
+     "202  (BC_1,  GPIOG1,      output3,      X,    203,    1,      Z),  " &
+     "201  (BC_4,  GPIOG2,      observe_only, X),                        " &
+     "200  (BC_2,  *,           control,      1),                        " &
+     "199  (BC_1,  GPIOG2,      output3,      X,    200,    1,      Z),  " &
+     "198  (BC_4,  GPIOE4,      observe_only, X),                        " &
+     "197  (BC_2,  *,           control,      1),                        " &
+     "196  (BC_1,  GPIOE4,      output3,      X,    197,    1,      Z),  " &
+     "195  (BC_4,  GPIOE5,      observe_only, X),                        " &
+     "194  (BC_2,  *,           control,      1),                        " &
+     "193  (BC_1,  GPIOE5,      output3,      X,    194,    1,      Z),  " &
+     "192  (BC_4,  GPIOG3,      observe_only, X),                        " &
+     "191  (BC_2,  *,           control,      1),                        " &
+     "190  (BC_1,  GPIOG3,      output3,      X,    191,    1,      Z),  " &
+     "189  (BC_4,  GPIOG5,      observe_only, X),                        " &
+     "188  (BC_2,  *,           control,      1),                        " &
+     "187  (BC_1,  GPIOG5,      output3,      X,    188,    1,      Z),  " &
+     "186  (BC_4,  GPIOG6,      observe_only, X),                        " &
+     "185  (BC_2,  *,           control,      1),                        " &
+     "184  (BC_1,  GPIOG6,      output3,      X,    185,    1,      Z),  " &
+     "183  (BC_4,  GPIOG7,      observe_only, X),                        " &
+     "182  (BC_2,  *,           control,      1),                        " &
+     "181  (BC_1,  GPIOG7,      output3,      X,    182,    1,      Z),  " &
+     "180  (BC_4,  GPIOH7,      observe_only, X),                        " &
+     "179  (BC_2,  *,           control,      1),                        " &
+     "178  (BC_1,  GPIOH7,      output3,      X,    179,    1,      Z),  " &
+     "177  (BC_4,  GPIOI0,      observe_only, X),                        " &
+     "176  (BC_2,  *,           control,      1),                        " &
+     "175  (BC_1,  GPIOI0,      output3,      X,    176,    1,      Z),  " &
+     "174  (BC_4,  GPIOI1,      observe_only, X),                        " &
+     "173  (BC_2,  *,           control,      1),                        " &
+     "172  (BC_1,  GPIOI1,      output3,      X,    173,    1,      Z),  " &
+     "171  (BC_4,  GPIOC2,      observe_only, X),                        " &
+     "170  (BC_2,  *,           control,      1),                        " &
+     "169  (BC_1,  GPIOC2,      output3,      X,    170,    1,      Z),  " &
+     "168  (BC_4,  GPIOC3,      observe_only, X),                        " &
+     "167  (BC_2,  *,           control,      1),                        " &
+     "166  (BC_1,  GPIOC3,      output3,      X,    167,    1,      Z),  " &
+     "165  (BC_4,  GPIOC4,      observe_only, X),                        " &
+     "164  (BC_2,  *,           control,      1),                        " &
+     "163  (BC_1,  GPIOC4,      output3,      X,    164,    1,      Z),  " &
+     "162  (BC_4,  GPIOC5,      observe_only, X),                        " &
+     "161  (BC_2,  *,           control,      1),                        " &
+     "160  (BC_1,  GPIOC5,      output3,      X,    161,    1,      Z),  " &
+     "159  (BC_4,  GPIOR6,      observe_only, X),                        " &
+     "158  (BC_2,  *,           control,      1),                        " &
+     "157  (BC_1,  GPIOR6,      output3,      X,    158,    1,      Z),  " &
+     "156  (BC_4,  GPIOR7,      observe_only, X),                        " &
+     "155  (BC_2,  *,           control,      1),                        " &
+     "154  (BC_1,  GPIOR7,      output3,      X,    155,    1,      Z),  " &
+     "153  (BC_4,  RGMII1TXD3,  observe_only, X),                        " &
+     "152  (BC_2,  *,           control,      1),                        " &
+     "151  (BC_1,  RGMII1TXD3,  output3,      X,    152,    1,      Z),  " &
+     "150  (BC_0,  *,           internal,     X),                        " &
+     "149  (BC_0,  *,           internal,     X),                        " &
+     "148  (BC_0,  *,           internal,     X),                        " &
+     "147  (BC_4,  RGMII1TXD1,  observe_only, X),                        " &
+     "146  (BC_2,  *,           control,      1),                        " &
+     "145  (BC_1,  RGMII1TXD1,  output3,      X,    146,    1,      Z),  " &
+     "144  (BC_4,  RGMII1TXD0,  observe_only, X),                        " &
+     "143  (BC_2,  *,           control,      1),                        " &
+     "142  (BC_1,  RGMII1TXD0,  output3,      X,    143,    1,      Z),  " &
+     "141  (BC_0,  *,           internal,     X),                        " &
+     "140  (BC_0,  *,           internal,     X),                        " &
+     "139  (BC_0,  *,           internal,     X),                        " &
+     "138  (BC_0,  *,           internal,     X),                        " &
+     "137  (BC_0,  *,           internal,     X),                        " &
+     "136  (BC_0,  *,           internal,     X),                        " &
+     "135  (BC_4,  RGMII1RXD1,  observe_only, X),                        " &
+     "134  (BC_2,  *,           control,      1),                        " &
+     "133  (BC_1,  RGMII1RXD1,  output3,      X,    134,    1,      Z),  " &
+     "132  (BC_4,  RGMII2TXD3,  observe_only, X),                        " &
+     "131  (BC_2,  *,           control,      1),                        " &
+     "130  (BC_1,  RGMII2TXD3,  output3,      X,    131,    1,      Z),  " &
+     "129  (BC_4,  RGMII2TXD2,  observe_only, X),                        " &
+     "128  (BC_2,  *,           control,      1),                        " &
+     "127  (BC_1,  RGMII2TXD2,  output3,      X,    128,    1,      Z),  " &
+     "126  (BC_4,  RGMII2TXD1,  observe_only, X),                        " &
+     "125  (BC_2,  *,           control,      1),                        " &
+     "124  (BC_1,  RGMII2TXD1,  output3,      X,    125,    1,      Z),  " &
+     "123  (BC_0,  *,           internal,     X),                        " &
+     "122  (BC_0,  *,           internal,     X),                        " &
+     "121  (BC_0,  *,           internal,     X),                        " &
+     "120  (BC_4,  RGMII2TXD0,  observe_only, X),                        " &
+     "119  (BC_2,  *,           control,      1),                        " &
+     "118  (BC_1,  RGMII2TXD0,  output3,      X,    119,    1,      Z),  " &
+     "117  (BC_0,  *,           internal,     X),                        " &
+     "116  (BC_0,  *,           internal,     X),                        " &
+     "115  (BC_0,  *,           internal,     X),                        " &
+     "114  (BC_4,  RGMII2TXCTL, observe_only, X),                        " &
+     "113  (BC_2,  *,           control,      1),                        " &
+     "112  (BC_1,  RGMII2TXCTL, output3,      X,    113,    1,      Z),  " &
+     "111  (BC_0,  *,           internal,     X),                        " &
+     "110  (BC_0,  *,           internal,     X),                        " &
+     "109  (BC_0,  *,           internal,     X),                        " &
+     "108  (BC_0,  *,           internal,     X),                        " &
+     "107  (BC_0,  *,           internal,     X),                        " &
+     "106  (BC_0,  *,           internal,     X),                        " &
+     "105  (BC_4,  RGMII2TXCK,  observe_only, X),                        " &
+     "104  (BC_2,  *,           control,      1),                        " &
+     "103  (BC_1,  RGMII2TXCK,  output3,      X,    104,    1,      Z),  " &
+     "102  (BC_4,  RGMII2RXCK,  observe_only, X),                        " &
+     "101  (BC_2,  *,           control,      1),                        " &
+     "100  (BC_1,  RGMII2RXCK,  output3,      X,    101,    1,      Z),  " &
+     "99   (BC_4,  RGMII2RXCTL, observe_only, X),                        " &
+     "98   (BC_2,  *,           control,      1),                        " &
+     "97   (BC_1,  RGMII2RXCTL, output3,      X,    98,     1,      Z),  " &
+     "96   (BC_4,  RGMII2RXD0,  observe_only, X),                        " &
+     "95   (BC_2,  *,           control,      1),                        " &
+     "94   (BC_1,  RGMII2RXD0,  output3,      X,    95,     1,      Z),  " &
+     "93   (BC_4,  RGMII2RXD1,  observe_only, X),                        " &
+     "92   (BC_2,  *,           control,      1),                        " &
+     "91   (BC_1,  RGMII2RXD1,  output3,      X,    92,     1,      Z),  " &
+     "90   (BC_4,  RGMII2RXD2,  observe_only, X),                        " &
+     "89   (BC_2,  *,           control,      1),                        " &
+     "88   (BC_1,  RGMII2RXD2,  output3,      X,    89,     1,      Z),  " &
+     "87   (BC_4,  RGMII2RXD3,  observe_only, X),                        " &
+     "86   (BC_2,  *,           control,      1),                        " &
+     "85   (BC_1,  RGMII2RXD3,  output3,      X,    86,     1,      Z),  " &
+     "84   (BC_4,  RGMIICK,     observe_only, X),                        " &
+     "83   (BC_4,  GPIOG4,      observe_only, X),                        " &
+     "82   (BC_2,  *,           control,      1),                        " &
+     "81   (BC_1,  GPIOG4,      output3,      X,    82,     1,      Z),  " &
+     "80   (BC_4,  GPIOH0,      observe_only, X),                        " &
+     "79   (BC_2,  *,           control,      1),                        " &
+     "78   (BC_1,  GPIOH0,      output3,      X,    79,     1,      Z),  " &
+     "77   (BC_4,  GPIOH1,      observe_only, X),                        " &
+     "76   (BC_2,  *,           control,      1),                        " &
+     "75   (BC_1,  GPIOH1,      output3,      X,    76,     1,      Z),  " &
+     "74   (BC_4,  GPIOH2,      observe_only, X),                        " &
+     "73   (BC_2,  *,           control,      1),                        " &
+     "72   (BC_1,  GPIOH2,      output3,      X,    73,     1,      Z),  " &
+     "71   (BC_4,  GPIOH3,      observe_only, X),                        " &
+     "70   (BC_2,  *,           control,      1),                        " &
+     "69   (BC_1,  GPIOH3,      output3,      X,    70,     1,      Z),  " &
+     "68   (BC_4,  GPIOH4,      observe_only, X),                        " &
+     "67   (BC_2,  *,           control,      1),                        " &
+     "66   (BC_1,  GPIOH4,      output3,      X,    67,     1,      Z),  " &
+     "65   (BC_4,  GPIOH5,      observe_only, X),                        " &
+     "64   (BC_2,  *,           control,      1),                        " &
+     "63   (BC_1,  GPIOH5,      output3,      X,    64,     1,      Z),  " &
+     "62   (BC_4,  GPIOH6,      observe_only, X),                        " &
+     "61   (BC_2,  *,           control,      1),                        " &
+     "60   (BC_1,  GPIOH6,      output3,      X,    61,     1,      Z),  " &
+     "59   (BC_4,  GPIOI2,      observe_only, X),                        " &
+     "58   (BC_2,  *,           control,      1),                        " &
+     "57   (BC_1,  GPIOI2,      output3,      X,    58,     1,      Z),  " &
+     "56   (BC_4,  GPIOI3,      observe_only, X),                        " &
+     "55   (BC_2,  *,           control,      1),                        " &
+     "54   (BC_1,  GPIOI3,      output3,      X,    55,     1,      Z),  " &
+     "53   (BC_4,  GPIOI4,      observe_only, X),                        " &
+     "52   (BC_2,  *,           control,      1),                        " &
+     "51   (BC_1,  GPIOI4,      output3,      X,    52,     1,      Z),  " &
+     "50   (BC_4,  GPIOI5,      observe_only, X),                        " &
+     "49   (BC_2,  *,           control,      1),                        " &
+     "48   (BC_1,  GPIOI5,      output3,      X,    49,     1,      Z),  " &
+     "47   (BC_4,  GPIOI6,      observe_only, X),                        " &
+     "46   (BC_2,  *,           control,      1),                        " &
+     "45   (BC_1,  GPIOI6,      output3,      X,    46,     1,      Z),  " &
+     "44   (BC_4,  GPIOI7,      observe_only, X),                        " &
+     "43   (BC_2,  *,           control,      1),                        " &
+     "42   (BC_1,  GPIOI7,      output3,      X,    43,     1,      Z),  " &
+     "41   (BC_4,  GPIOA4,      observe_only, X),                        " &
+     "40   (BC_2,  *,           control,      1),                        " &
+     "39   (BC_1,  GPIOA4,      output3,      X,    40,     1,      Z),  " &
+     "38   (BC_4,  GPIOA5,      observe_only, X),                        " &
+     "37   (BC_2,  *,           control,      1),                        " &
+     "36   (BC_1,  GPIOA5,      output3,      X,    37,     1,      Z),  " &
+     "35   (BC_4,  GPIOA6,      observe_only, X),                        " &
+     "34   (BC_2,  *,           control,      1),                        " &
+     "33   (BC_1,  GPIOA6,      output3,      X,    34,     1,      Z),  " &
+     "32   (BC_4,  GPIOA7,      observe_only, X),                        " &
+     "31   (BC_2,  *,           control,      1),                        " &
+     "30   (BC_1,  GPIOA7,      output3,      X,    31,     1,      Z),  " &
+     "29   (BC_4,  GPIOC0,      observe_only, X),                        " &
+     "28   (BC_2,  *,           control,      1),                        " &
+     "27   (BC_1,  GPIOC0,      output3,      X,    28,     1,      Z),  " &
+     "26   (BC_4,  GPIOC1,      observe_only, X),                        " &
+     "25   (BC_2,  *,           control,      1),                        " &
+     "24   (BC_1,  GPIOC1,      output3,      X,    25,     1,      Z),  " &
+     "23   (BC_4,  GPIOC6,      observe_only, X),                        " &
+     "22   (BC_2,  *,           control,      1),                        " &
+     "21   (BC_1,  GPIOC6,      output3,      X,    22,     1,      Z),  " &
+     "20   (BC_4,  GPIOC7,      observe_only, X),                        " &
+     "19   (BC_2,  *,           control,      1),                        " &
+     "18   (BC_1,  GPIOC7,      output3,      X,    19,     1,      Z),  " &
+     "17   (BC_4,  GPIOQ0,      observe_only, X),                        " &
+     "16   (BC_2,  *,           control,      1),                        " &
+     "15   (BC_1,  GPIOQ0,      output3,      X,    16,     1,      Z),  " &
+     "14   (BC_4,  GPIOQ1,      observe_only, X),                        " &
+     "13   (BC_2,  *,           control,      1),                        " &
+     "12   (BC_1,  GPIOQ1,      output3,      X,    13,     1,      Z),  " &
+     "11   (BC_4,  GPIOQ2,      observe_only, X),                        " &
+     "10   (BC_2,  *,           control,      1),                        " &
+     "9    (BC_1,  GPIOQ2,      output3,      X,    10,     1,      Z),  " &
+     "8    (BC_4,  GPIOQ3,      observe_only, X),                        " &
+     "7    (BC_2,  *,           control,      1),                        " &
+     "6    (BC_1,  GPIOQ3,      output3,      X,    7,      1,      Z),  " &
+     "5    (BC_4,  GPIOQ6,      observe_only, X),                        " &
+     "4    (BC_2,  *,           control,      1),                        " &
+     "3    (BC_1,  GPIOQ6,      output3,      X,    4,      1,      Z),  " &
+     "2    (BC_4,  RTCK,        observe_only, X),                        " &
+     "1    (BC_2,  *,           control,      1),                        " &
+     "0    (BC_1,  RTCK,        output3,      X,    1,      1,      Z)   ";
+
+ end AST2500;

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513008  Va2ee                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "BMC_I2C1_SDA"
+connect i to "DAC1_SDA"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1588" test.

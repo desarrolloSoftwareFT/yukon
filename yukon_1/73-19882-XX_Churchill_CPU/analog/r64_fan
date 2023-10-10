@@ -1,0 +1,9 @@
+!!!!    2    0    1 1613607850   0000                                         
+on failure
+   report "Check for J2 presence."
+end on failure
+disconnect all
+connect s to "cpld_p2pm_tx"
+connect i to "FAN1_TACH"
+jumper  20.0,  re1, ar200m,ed
+off failure

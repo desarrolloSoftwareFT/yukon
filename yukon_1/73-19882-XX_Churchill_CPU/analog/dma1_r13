@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176342   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:43 2020
+on failure
+   report parallel devices
+   report "dma1_r12 232k"
+   report "dma1_c10 6.80n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4238_CAP_I124_A"
+connect g to "A3P3V" 
+resistor 1.362k, 25, 20, re4, wb, ar1.00, wa505m
+off failure

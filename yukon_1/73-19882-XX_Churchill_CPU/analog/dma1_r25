@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176349   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:50 2020
+on failure
+   report parallel devices
+   report "dma1_c4 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PWR_A1V2_A3V3_FREQ"
+connect g to "PWR_A1V2_A3V3_INTVCC" 
+resistor 2.94k, 25, 20, re4, wb, ar500m, wa6.19m
+off failure

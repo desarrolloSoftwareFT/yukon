@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513012  Ve101                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "BMC_I210_RESET_L"
+connect i to "X86_BMC_I210_RESET_L_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1610" test.

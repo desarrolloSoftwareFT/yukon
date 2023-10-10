@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176055   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:56 2020
+disconnect all
+connect s to "ADCVREFN"
+connect i to "ADCVREFP"
+connect g to "GND" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, nocomp
+! "c316" test.

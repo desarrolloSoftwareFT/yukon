@@ -1,0 +1,16 @@
+!!!!   21    2    1 1571240505   0000                                         
+
+jumper "jp1", closed, nr, pn"24-3011-01"
+jumper "jp2", closed, nr, pn"24-3011-01"
+
+external pins 1
+   device "jp1" pins 1
+
+external pins 2
+   device "jp1" pins 2
+
+external pins 3
+   device "jp2" pins 1
+
+external pins 4
+   device "jp2" pins 2

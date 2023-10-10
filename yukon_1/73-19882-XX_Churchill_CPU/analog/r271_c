@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176626   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "CLK_33M_PCICLKIN_C"
+connect i to "CLK_33M_PCICLKIN_ST_C"
+connect a to "CLK_33M_PCICLKIN_C"
+connect b to "CLK_33M_PCICLKIN_ST_C"
+resistor 22.1, 40, 20, re2, ar500m
+! "r271_c" test.

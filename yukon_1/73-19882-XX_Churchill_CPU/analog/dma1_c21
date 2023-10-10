@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176085   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:26 2020
+disconnect all
+connect s to "GND"
+connect i to "PWR_A1V2_A3V3_INTVCC"
+connect g to "PWR_A1V2_A3V3_FREQ" 
+capacitor 4.7u, 35, 40, fr1024, re1, ar50.0m, nocomp
+! "dma1_c21" test.

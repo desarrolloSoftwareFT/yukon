@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176058   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:59 2020
+on failure
+   report parallel devices
+   report "c1009_i2 10.0u"
+   report "c449 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "VDD1P5_I210_OUT"
+capacitor 20.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+! "c415" test.
+off failure

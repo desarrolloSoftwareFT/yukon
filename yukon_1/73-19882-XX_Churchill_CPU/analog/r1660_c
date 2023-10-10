@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175994   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:55 2020
+disconnect all
+connect s to "SATA_LED_L"
+connect i to "SATA0_LED_L"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1660_c" test.

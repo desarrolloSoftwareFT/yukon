@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600512837  V7708                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+on failure
+report parallel devices
+report "r69_m2"
+end on failure
+disconnect all
+connect i to "PMOD_PH2_SNU_RC_M2"
+connect s to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r64_m2" test.
+off failure

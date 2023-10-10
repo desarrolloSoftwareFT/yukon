@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176592   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect s to "PCH_UART1_TXD_1V"
+connect i to "PCH_UART1_TXD_1V_ST_C"
+connect a to "PCH_UART1_TXD_1V"
+connect b to "PCH_UART1_TXD_1V_ST_C"
+resistor 33.2, 40, 20, re2, ar200m
+! "r1446_c" test.

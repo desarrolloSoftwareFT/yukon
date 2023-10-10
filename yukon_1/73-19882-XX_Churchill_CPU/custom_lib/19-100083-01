@@ -1,0 +1,44 @@
+!!!!    2    0    1  988309095  Vd9e0                                         
+
+test powered analog
+   test "Pin1_offset"
+   test "Pin1"
+   test "Pin3_offset"
+   test "Pin3"
+
+end test
+
+subtest "Pin1_offset"
+   global Offset
+   connect i to pins 1
+   connect l to ground
+   detector dcv, expect 2.5
+   measure 0,0,Offset
+end subtest
+
+subtest "Pin1"
+   global Offset
+   connect  rcva to pins 1                ! Manually overide wirelist
+!  connect s to ground                   ! Load Buffer Amp output
+!  source dcv , am 0, terminated 50, on
+   detector frequency, threshold Offset, expect 30.00M
+   measure 30.00M * 1.05, 30.00M * 0.95
+end subtest
+
+subtest "Pin3_offset"
+   global Offset
+   connect i to pins 2
+   connect l to ground
+   detector dcv, expect 2.5
+   measure 0,0,Offset
+end subtest
+
+subtest "Pin3"
+   global Offset
+   connect  rcva to pins 2                ! Manually overide wirelist
+!  connect s to ground                   ! Load Buffer Amp output
+!  source dcv , am 0, terminated 50, on
+   detector frequency, threshold Offset, expect 30.00M
+   measure 30.00M * 1.05, 30.00M * 0.95
+end subtest
+

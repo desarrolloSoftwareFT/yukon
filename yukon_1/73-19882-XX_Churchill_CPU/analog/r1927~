@@ -1,0 +1,9 @@
+!!!!    2    0    1 1623262901   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "UNNAMED_4199_CAP_I55_A"
+connect i to "PMOD_P1V15_BMC_TRIM"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+jumper 10,re2,ar200m,ed, op  !P4c A2
+! "r1927" test.

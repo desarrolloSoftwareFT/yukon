@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513051  V20c4                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:02 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "ADC_VREF_2P06V"
+connect g to "GND"
+!B!resistor 1k, 25, 20, re3, ar100m, wa505m
+resistor 1k,25,20,re3,ar100m,ed

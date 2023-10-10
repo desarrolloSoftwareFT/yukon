@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175989   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:50 2020
+disconnect all
+connect s to "GND"
+connect i to "GPIOA1_JTSCAN"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1578" test.

@@ -1,0 +1,14 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+call Verify_Autofile
+call Counter | faon
+unpowered

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1633526130   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "M_AB_VREF"
+connect i to "M_AB_VREF_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed, en, wb
+! "r513_c" test.

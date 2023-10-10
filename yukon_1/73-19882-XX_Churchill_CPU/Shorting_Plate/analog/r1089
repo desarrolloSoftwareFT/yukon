@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes CLK_BMCPHY_BMC_RGMII_ST P-Pin resistance"
+report "check nodes CLK_XGE_BMC_RGMII2 P-Pin resistance"
+end on failure
+disconnect all
+connect s to "CLK_BMCPHY_BMC_RGMII_ST"
+connect i to "CLK_XGE_BMC_RGMII2"
+resistor 10,20,100, re1, ar100m,ed
+off failure

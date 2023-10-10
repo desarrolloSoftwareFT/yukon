@@ -1,0 +1,66 @@
+<!-- Created Sat Jun 17 20:21:39 2023 from ITL Source digital/u1_c_connect_e -->
+<Test name="u1_c_connect_e"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BDXDE_DRAM_PWROK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="LAN_PWRGOOD_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="PWRGOOD_CPU_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u1_i2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="19"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="18"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="29"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="4"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_c_pch"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="BM3"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BJ2"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BM5"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="BK3"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_c"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="T76"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R75"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="V78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="T78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="U75"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="CV55"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="AE77"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="V76"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="CC26"><node name="M_A_DQ&lt;31&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF26"><node name="M_A_DQ&lt;30&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC18"><node name="M_A_DQ&lt;29&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF18"><node name="M_A_DQ&lt;28&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD28"><node name="M_A_DQ&lt;26&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD20"><node name="M_A_DQ&lt;24&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC14"><node name="M_A_DQ&lt;17&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC7"><node name="M_A_DQ&lt;8&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC3"><node name="M_A_DQ&lt;7&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC1"><node name="M_A_DQ&lt;6&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD4"><node name="M_A_DQ&lt;3&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD2"><node name="M_A_DQ&lt;2&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF4"><node name="M_B_DQ&lt;5&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF2"><node name="M_B_DQ&lt;4&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC76"><node name="M_B_DQ&lt;47&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC78"><node name="M_B_DQ&lt;46&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC56"><node name="CPU_MEM_HOT_1V_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC60"><node name="I2C_DDR_SDA_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD58"><node name="I2C_DDR_SCL_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC71"><node name="M_A_DQ&lt;39&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF71"><node name="M_A_DQ&lt;38&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CC64"><node name="M_A_DQ&lt;37&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CF64"><node name="M_A_DQ&lt;36&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD72"><node name="M_A_DQ&lt;34&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="CD66"><node name="M_A_DQ&lt;32&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

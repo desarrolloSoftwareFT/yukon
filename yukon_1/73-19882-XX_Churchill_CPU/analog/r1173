@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176247   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:08 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "FLASH_GOLDEN_N"
+resistor 10k, 25, 20, re4, wb, ar100m

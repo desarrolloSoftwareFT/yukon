@@ -1,0 +1,14 @@
+!!!!    2    0    1 1594176043   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:44 2020
+on failure
+   report parallel devices
+   report "c516 1.00u"
+   report "c517 1.00u"
+   report "c488 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "VP1P0_BMCPHY_DVDD"
+capacitor 12.1u, 35, 40, fr1024, re1, ar100m, nocomp
+! "c515" test.
+off failure

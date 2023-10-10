@@ -1,0 +1,171 @@
+!!!!    6    0    1 1387524277  V9c22                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Type:         VLSI
+! Description:       IC-TIMING,NZDB,3.3V,VFQFN28,LVPECL O/P Fanout BUFF
+! Manufacturer:      IDT
+! Package Style:     28 pin SOP
+! Created:           Dec 18, 2013
+! Programmer:        KJ
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:
+! Constraints:
+! Cisco Part #:      15-14593-01
+
+sequential
+
+vector cycle 200n
+receive delay 160n
+
+assign VCC  to pins 5
+assign VEE  to pins 1 
+assign VREF to pins 8
+
+assign SEL  to pins 2
+assign IN0 to pins 6,7
+assign IN1 to pins 3,4
+assign OUT0   to pins 9,10
+assign OUT1   to pins 11,12
+assign OUT2   to pins 13,14
+assign OUT3   to pins 15,16
+
+power   VCC,VEE,VREF
+inputs  SEL,IN0,IN1
+outputs OUT0,OUT1,OUT2,OUT3
+
+
+family LVT
+
+vector INIT1
+ set SEL  to "x"
+ set IN0  to "01"
+ set IN1  to "01"
+ set OUT3   to "xx"
+ set OUT2   to "xx"
+ set OUT1   to "xx"
+ set OUT0   to "xx"
+end vector
+
+vector KEEP1
+ set SEL  to "k"
+ set IN0  to "kk"
+ set IN1 to "kk"
+ set OUT3   to "xx"
+ set OUT2   to "xx"
+ set OUT1   to "xx"
+ set OUT0   to "xx"
+end vector
+
+vector SEL_0
+ initialize to KEEP1
+ set SEL    to "0"
+end vector
+
+vector SEL_1
+ initialize to KEEP1
+ set SEL    to "1"
+end vector
+
+vector  IN0_00
+ initialize to KEEP1
+ set  IN0    to "00"
+end vector
+
+vector  IN0_01
+ initialize to KEEP1
+ set  IN0    to "01"
+end vector
+
+vector  IN0_10
+ initialize to KEEP1
+ set  IN0    to "10"
+end vector
+
+vector  IN0_11
+ initialize to KEEP1
+ set  IN0    to "11"
+end vector
+
+vector IN1_00
+ initialize to KEEP1
+ set IN1   to "00"
+end vector
+
+vector IN1_01
+ initialize to KEEP1
+ set IN1   to "01"
+end vector
+
+vector IN1_10
+ initialize to KEEP1
+ set IN1   to "10"
+end vector
+
+vector IN1_11
+ initialize to KEEP1
+ set IN1   to "11"
+end vector
+
+vector Q_01
+ initialize to KEEP1
+ set OUT3     to "01"
+ set OUT2     to "01"
+ set OUT1     to "01"
+ set OUT0     to "01"
+end vector
+
+vector Q_10
+ initialize to KEEP1
+ set OUT3     to "10"
+ set OUT2     to "10"
+ set OUT1     to "10"
+ set OUT0     to "10"
+end vector
+
+! *******************************************************************************
+
+unit "Q vs IN0 , Active"
+ execute INIT1
+ execute SEL_0
+ repeat 4 times
+  execute  IN0_01
+  execute  IN0_10
+ end repeat
+ repeat 2 times
+  execute  IN0_00
+  execute Q_10
+  execute  IN0_01
+  execute Q_01
+  execute  IN0_10
+  execute Q_10
+  execute  IN0_11
+  execute Q_10
+ end repeat
+end unit
+
+unit "Q vs IN1, Active"
+ execute INIT1
+ execute SEL_1
+ repeat 4 times
+  execute IN1_01
+  execute IN1_10
+ end repeat
+ repeat 2 times
+  execute IN1_00
+  execute Q_10
+  execute IN1_01
+  execute Q_01
+  execute IN1_10
+  execute Q_10
+  execute IN1_11
+  execute Q_10
+ end repeat
+end unit

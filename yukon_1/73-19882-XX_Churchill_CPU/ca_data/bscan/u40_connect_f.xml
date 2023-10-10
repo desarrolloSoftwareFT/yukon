@@ -1,0 +1,59 @@
+<!-- Created Thu Jul 23 13:29:22 2020 from ITL Source digital/u40_connect_f -->
+<Test name="u40_connect_f"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BMC_FAN_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BUF_SPI_FLSH_SEL_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="JTAG_BDX_TCK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I509_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I520_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_76_LTC2497_I65_SCL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u27"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="R14"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="N11"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="P16"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P14"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="N13"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="W19"><node name="X86_FPGA_INTR_BMC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y19"><node name="FAN12_TACH_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y18"><node name="FAN11_TACH_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W17"><node name="SPI_FPGA_CS0_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y17"><node name="PCH_SYS_PWROK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W16"><node name="IDPROM_WP" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y15"><node name="PU_CPU_GPIO51_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W14"><node name="SRT_FPGA_LPC_LAD<1>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y14"><node name="SRT_FPGA_LPC_LAD<2>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y13"><node name="FAN45_GRN_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y12"><node name="FAN01_BLU_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W12"><node name="FAN01_AMB_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W11"><node name="FAN1011_GRN_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y10"><node name="FAN67_BLU_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W10"><node name="FAN89_GRN_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y9"><node name="FAN67_GRN_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W9"><node name="FAN67_AMB_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V21"><node name="SRT_P2PM_CPU_MB<0>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V22"><node name="P2PM_MB_CPU_R<0>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V19"><node name="CPU_FPGA_BWDT_EXPIRED" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

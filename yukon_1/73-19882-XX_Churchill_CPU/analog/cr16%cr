@@ -1,0 +1,12 @@
+!!!!    2    0    1 1601053208  V8742                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:04 2020
+on failure
+   report parallel devices
+   report "cr16 cr16%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FC_PWM1011"
+diode 990m, 500m, idc10m, co10, ar10.62
+! "cr16%cr" test.
+off failure

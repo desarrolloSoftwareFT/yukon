@@ -1,0 +1,799 @@
+!!!!    6    0    1 1469350359  V5d11                                         
+
+!!********************************************************
+!! cisco pn: 15-103396-01
+!! Micron pn: MT40A512M16
+!! Package: 96-Ball x16 Ball Assignments
+!! Connectivity Test Mode: Logic Equations for a x16 Device
+!!********************************************************
+
+assign MT0 to pins "P7","P2","T3"    !(A1, A6, PAR)
+assign MT1 to pins "R2","P9","R7"    !(A8, ALERT_n, A9)
+assign MT2 to pins "R3","P8","T8"    !(A2, A5, A13)
+assign MT3 to pins "P3","R8","T2"    !(A0, A7, A11)
+assign MT4 to pins "K8","K3","M8"    !(CK_c, ODT, CAS_n/A15)
+assign MT5 to pins "K2","L8","M3"    !(CKE, RAS_n/A16, A10/AP)
+assign MT6 to pins "L3","N3","N8"    !(ACT_n, A4, BA1)
+assign MT7 to pins "E2","E7","K7"    !(DMU_n/DBIU_n , DML_n/DBIL_n, CK_t)
+assign MT8 to pins "L2","M7","N2"    !(WE_n/A14, A12/BC, BA0)
+assign MT9 to pins "M2","N7","P1","N9" !(BG0, A3, RESET_n, TEN)
+assign CS_L to pins "L7"
+assign DQ0_DQ7 to pins "G2","F7","H3","H7","H2","H8","J3","J7"
+assign DQ8_DQ15 to pins "A3","B8","C3","C7","C2","C8","D3","D7"
+assign LDQS_T_LDQS_C to pins "G3","F3"
+assign UDQS_T_UDQS_C to pins "B7","A7"
+assign ZQ to pins "F9","T7"
+assign VDD to pins "B3", "B9", "D1", "G7", "J1", "J9", "L1", "L9", "R1", "T9"
+assign VDDQ to pins "A1", "A9", "C1", "D9", "F2", "F8", "G1", "G9", "J2", "J8"
+assign VPP to pins "B1", "R9"
+assign VREFCA to pins "M1"
+assign VSS to pins "B2", "E1", "E9", "G8", "K1", "K9", "M9", "N1", "T1"
+assign VSSQ to pins "A2", "A8", "C9", "D2", "D8", "E3", "E8", "F1", "H1", "H9"
+
+
+inputs MT0
+inputs MT1
+inputs MT2
+inputs MT3
+inputs MT4
+inputs MT5
+inputs MT6
+inputs MT7
+inputs MT8
+inputs MT9
+inputs CS_L
+outputs DQ0_DQ7
+outputs DQ8_DQ15
+outputs LDQS_T_LDQS_C
+outputs UDQS_T_UDQS_C
+nondigital ZQ
+power VDD
+power VDDQ
+power VPP
+power VREFCA
+power VSS
+power VSSQ
+
+family LVT_1V0
+
+!####################################################
+!DQ0 = MT0 = XOR (A1, A6, PAR)
+!DQ1 = MT1 = XOR (A8, ALERT_n, A9)
+!DQ2 = MT2 = XOR (A2, A5, A13)
+!DQ3 = MT3 = XOR (A0, A7, A11)
+!DQ4 = MT4 = XOR (CK_c, ODT, CAS_n/A15)
+!DQ5 = MT5 = XOR (CKE, RAS_n/A16, A10/AP)
+!DQ6 = MT6 = XOR (ACT_n, A4, BA1)
+!DQ7 = MT7 = XOR (DMU_n/DBIU_n , DML_n/DBIL_n, CK_t)
+!DQ8 = INV DQ0
+!DQ9 = INV DQ1
+!DQ10 = INV DQ2
+!DQ11 = INV DQ3
+!DQ12 = INV DQ4
+!DQ13 = INV DQ5
+!DQ14 = INV DQ6
+!DQ15 = INV DQ7
+!LDQS_t = MT8 = XOR (WE_n/A14, A12 / BC, BA0)
+!LDQS_c = MT9 = XOR (BG0, A3, RESET_n and TEN)
+!UDQS_t = INV LDQS_t
+!UDQS_c = INV LDQS_c
+!Init0: CKE 0; RESET_L 0; TEN 0;CS_N 1 (wait 200us)
+!Init1: CKE 0; RESET_L 1; TEN 0;CS_N 1 (wait 500us)
+!Init2: CKE 1; RESET_L 1; TEN 0;CS_N 1
+!Init3: CKE input; RESET_L 1; TEN 1;CS_N 0
+!####################################################
+
+vector Init0
+  set MT0 to "ZZZ"
+  set MT1 to "ZZZ"
+  set MT2 to "ZZZ"
+  set MT3 to "ZZZ"
+  set MT4 to "XZZ"
+  set MT5 to "0ZZ"
+  set MT6 to "ZZZ"
+  set MT7 to "ZZZ"
+  set MT8 to "ZZZ"
+  set MT9 to "ZZ00"
+  set CS_L to "1"
+  set DQ0_DQ7 to "XXXXXXXX"
+  set DQ8_DQ15 to "XXXXXXXX"
+  set LDQS_T_LDQS_C to "XX"
+  set UDQS_T_UDQS_C to "XX"
+end vector
+
+vector Init1
+  set MT0 to "ZZZ"
+  set MT1 to "ZZZ"
+  set MT2 to "ZZZ"
+  set MT3 to "ZZZ"
+  set MT4 to "XZZ"
+  set MT5 to "0ZZ"
+  set MT6 to "ZZZ"
+  set MT7 to "ZZZ"
+  set MT8 to "ZZZ"
+  set MT9 to "ZZ10"
+  set CS_L to "1"
+  set DQ0_DQ7 to "XXXXXXXX"
+  set DQ8_DQ15 to "XXXXXXXX"
+  set LDQS_T_LDQS_C to "XX"
+  set UDQS_T_UDQS_C to "XX"
+end vector
+
+vector Init2
+  set MT0 to "ZZZ"
+  set MT1 to "ZZZ"
+  set MT2 to "ZZZ"
+  set MT3 to "ZZZ"
+  set MT4 to "XZZ"
+  set MT5 to "1ZZ"
+  set MT6 to "ZZZ"
+  set MT7 to "ZZZ"
+  set MT8 to "ZZZ"
+  set MT9 to "ZZ10"
+  set CS_L to "1"
+  set DQ0_DQ7 to "XXXXXXXX"
+  set DQ8_DQ15 to "XXXXXXXX"
+  set LDQS_T_LDQS_C to "XX"
+  set UDQS_T_UDQS_C to "XX"
+end vector
+
+vector Init3
+  set MT0 to "ZZZ"
+  set MT1 to "ZZZ"
+  set MT2 to "ZZZ"
+  set MT3 to "ZZZ"
+  set MT4 to "XZZ"
+  set MT5 to "1ZZ"
+  set MT6 to "ZZZ"
+  set MT7 to "ZZZ"
+  set MT8 to "ZZZ"
+  set MT9 to "ZZ11"
+  set CS_L to "1"
+  set DQ0_DQ7 to "XXXXXXXX"
+  set DQ8_DQ15 to "XXXXXXXX"
+  set LDQS_T_LDQS_C to "XX"
+  set UDQS_T_UDQS_C to "XX"
+end vector
+
+vector Init4
+  set MT0 to "ZZZ"
+  set MT1 to "ZZZ"
+  set MT2 to "ZZZ"
+  set MT3 to "ZZZ"
+  set MT4 to "XZZ"
+  set MT5 to "ZZZ"
+  set MT6 to "ZZZ"
+  set MT7 to "ZZZ"
+  set MT8 to "ZZZ"
+  set MT9 to "ZZ11"
+  set CS_L to "0"
+  set DQ0_DQ7 to "XXXXXXXX"
+  set DQ8_DQ15 to "XXXXXXXX"
+  set LDQS_T_LDQS_C to "XX"
+  set UDQS_T_UDQS_C to "XX"
+end vector
+
+vector All_0
+  set MT0 to "000"
+  set MT1 to "000"
+  set MT2 to "000"
+  set MT3 to "000"
+  set MT4 to "X00"
+  set MT5 to "000"
+  set MT6 to "000"
+  set MT7 to "000"
+  set MT8 to "000"
+  set MT9 to "0011"
+  set CS_L to "0"
+  set DQ0_DQ7 to "00000000"
+  set DQ8_DQ15 to "11111111"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_0_with_A1_high
+  initialize to All_0
+  set MT0 to "100"
+  set DQ0_DQ7 to "10000000"
+  set DQ8_DQ15 to "01111111"
+end vector
+
+vector All_0_with_A6_high
+  initialize to All_0
+  set MT0 to "010"
+  set DQ0_DQ7 to "10000000"
+  set DQ8_DQ15 to "01111111"
+end vector
+
+vector All_0_with_PAR_high
+  initialize to All_0
+  set MT0 to "001"
+  set DQ0_DQ7 to "10000000"
+  set DQ8_DQ15 to "01111111"
+end vector
+
+vector All_0_with_A8_high
+  initialize to All_0
+  set MT1 to "100"
+  set DQ0_DQ7 to "01000000"
+  set DQ8_DQ15 to "10111111"
+end vector
+
+vector All_0_with_ALERT_N_high
+  initialize to All_0
+  set MT1 to "010"
+  set DQ0_DQ7 to "01000000"
+  set DQ8_DQ15 to "10111111"
+end vector
+
+vector All_0_with_A9_high
+  initialize to All_0
+  set MT1 to "001"
+  set DQ0_DQ7 to "01000000"
+  set DQ8_DQ15 to "10111111"
+end vector
+
+vector All_0_with_A2_high
+  initialize to All_0
+  set MT2 to "100"
+  set DQ0_DQ7 to "00100000"
+  set DQ8_DQ15 to "11011111"
+end vector
+
+vector All_0_with_A5_high
+  initialize to All_0
+  set MT2 to "010"
+  set DQ0_DQ7 to "00100000"
+  set DQ8_DQ15 to "11011111"
+end vector
+
+vector All_0_with_A13_high
+  initialize to All_0
+  set MT2 to "001"
+  set DQ0_DQ7 to "00100000"
+  set DQ8_DQ15 to "11011111"
+end vector
+
+vector All_0_with_A0_high
+  initialize to All_0
+  set MT3 to "100"
+  set DQ0_DQ7 to "00010000"
+  set DQ8_DQ15 to "11101111"
+end vector
+
+vector All_0_with_A7_high
+  initialize to All_0
+  set MT3 to "010"
+  set DQ0_DQ7 to "00010000"
+  set DQ8_DQ15 to "11101111"
+end vector
+
+vector All_0_with_A11_high
+  initialize to All_0
+  set MT3 to "001"
+  set DQ0_DQ7 to "00010000"
+  set DQ8_DQ15 to "11101111"
+end vector
+
+vector All_0_with_CK_C_high
+  initialize to All_0
+  set MT4 to "X00"
+  set DQ0_DQ7 to "00001000"
+  set DQ8_DQ15 to "11110111"
+end vector
+
+vector All_0_with_ODT_high
+  initialize to All_0
+  set MT4 to "X10"
+  set DQ0_DQ7 to "00001000"
+  set DQ8_DQ15 to "11110111"
+end vector
+
+vector All_0_with_CAS_N_high
+  initialize to All_0
+  set MT4 to "X01"
+  set DQ0_DQ7 to "00001000"
+  set DQ8_DQ15 to "11110111"
+end vector
+
+vector All_0_with_CKE_high
+  initialize to All_0
+  set MT5 to "100"
+  set DQ0_DQ7 to "00000100"
+  set DQ8_DQ15 to "11111011"
+end vector
+
+vector All_0_with_RAS_N_high
+  initialize to All_0
+  set MT5 to "010"
+  set DQ0_DQ7 to "00000100"
+  set DQ8_DQ15 to "11111011"
+end vector
+
+vector All_0_with_A10_high
+  initialize to All_0
+  set MT5 to "001"
+  set DQ0_DQ7 to "00000100"
+  set DQ8_DQ15 to "11111011"
+end vector
+
+vector All_0_with_ACT_N_high
+  initialize to All_0
+  set MT6 to "100"
+  set DQ0_DQ7 to "00000010"
+  set DQ8_DQ15 to "11111101"
+end vector
+
+vector All_0_with_A4_high
+  initialize to All_0
+  set MT6 to "010"
+  set DQ0_DQ7 to "00000010"
+  set DQ8_DQ15 to "11111101"
+end vector
+
+vector All_0_with_BA1_high
+  initialize to All_0
+  set MT6 to "001"
+  set DQ0_DQ7 to "00000010"
+  set DQ8_DQ15 to "11111101"
+end vector
+
+vector All_0_with_DMU_N_high
+  initialize to All_0
+  set MT7 to "100"
+  set DQ0_DQ7 to "00000001"
+  set DQ8_DQ15 to "11111110"
+end vector
+
+vector All_0_with_DML_N_high
+  initialize to All_0
+  set MT7 to "010"
+  set DQ0_DQ7 to "00000001"
+  set DQ8_DQ15 to "11111110"
+end vector
+
+vector All_0_with_CK_T_high
+  initialize to All_0
+  set MT7 to "001"
+  set DQ0_DQ7 to "00000001"
+  set DQ8_DQ15 to "11111110"
+end vector
+
+vector All_0_with_WE_N_high
+  initialize to All_0
+  set MT8 to "100"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector All_0_with_A12_high
+  initialize to All_0
+  set MT8 to "010"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector All_0_with_BA0_high
+  initialize to All_0
+  set MT8 to "001"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector All_0_with_BG0_high
+  initialize to All_0
+  set MT9 to "1011"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_0_with_A3_high
+  initialize to All_0
+  set MT9 to "0111"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_1
+  set MT0 to "111"
+  set MT1 to "111"
+  set MT2 to "111"
+  set MT3 to "111"
+  set MT4 to "X11"
+  set MT5 to "111"
+  set MT6 to "111"
+  set MT7 to "111"
+  set MT8 to "111"
+  set MT9 to "1111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "11111111"
+  set DQ8_DQ15 to "00000000"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector All_1_with_A1_low
+  initialize to All_1
+  set MT0 to "011"
+  set DQ0_DQ7 to "01111111"
+  set DQ8_DQ15 to "10000000"
+end vector
+
+vector All_1_with_A6_low
+  initialize to All_1
+  set MT0 to "101"
+  set DQ0_DQ7 to "01111111"
+  set DQ8_DQ15 to "10000000"
+end vector
+
+vector All_1_with_PAR_low
+  initialize to All_1
+  set MT0 to "110"
+  set DQ0_DQ7 to "01111111"
+  set DQ8_DQ15 to "10000000"
+end vector
+
+vector All_1_with_A8_low
+  initialize to All_1
+  set MT1 to "011"
+  set DQ0_DQ7 to "10111111"
+  set DQ8_DQ15 to "01000000"
+end vector
+
+vector All_1_with_ALERT_N_low
+  initialize to All_1
+  set MT1 to "101"
+  set DQ0_DQ7 to "10111111"
+  set DQ8_DQ15 to "01000000"
+end vector
+
+vector All_1_with_A9_low
+  initialize to All_1
+  set MT1 to "101"
+  set DQ0_DQ7 to "10111111"
+  set DQ8_DQ15 to "01000000"
+end vector
+
+vector All_1_with_A2_low
+  initialize to All_1
+  set MT2 to "011"
+  set DQ0_DQ7 to "11011111"
+  set DQ8_DQ15 to "00100000"
+end vector
+
+vector All_1_with_A5_low
+  initialize to All_1
+  set MT2 to "101"
+  set DQ0_DQ7 to "11011111"
+  set DQ8_DQ15 to "00100000"
+end vector
+
+vector All_1_with_A13_low
+  initialize to All_1
+  set MT2 to "110"
+  set DQ0_DQ7 to "11011111"
+  set DQ8_DQ15 to "00100000"
+end vector
+
+vector All_1_with_A0_low
+  initialize to All_1
+  set MT3 to "011"
+  set DQ0_DQ7 to "11101111"
+  set DQ8_DQ15 to "00010000"
+end vector
+
+vector All_1_with_A7_low
+  initialize to All_1
+  set MT3 to "101"
+  set DQ0_DQ7 to "11101111"
+  set DQ8_DQ15 to "00010000"
+end vector
+
+vector All_1_with_A11_low
+  initialize to All_1
+  set MT3 to "110"
+  set DQ0_DQ7 to "11101111"
+  set DQ8_DQ15 to "00010000"
+end vector
+
+vector All_1_with_CK_C_low
+  initialize to All_1
+  set MT4 to "x11"
+  set DQ0_DQ7 to "11110111"
+  set DQ8_DQ15 to "00001000"
+end vector
+
+vector All_1_with_ODT_low
+  initialize to All_1
+  set MT4 to "X01"
+  set DQ0_DQ7 to "11110111"
+  set DQ8_DQ15 to "00001000"
+end vector
+
+vector All_1_with_CAS_N_low
+  initialize to All_1
+  set MT4 to "X10"
+  set DQ0_DQ7 to "11110111"
+  set DQ8_DQ15 to "00001000"
+end vector
+
+vector All_1_with_CKE_low
+  initialize to All_1
+  set MT5 to "011"
+  set DQ0_DQ7 to "11111011"
+  set DQ8_DQ15 to "00000100"
+end vector
+
+vector All_1_with_RAS_N_low
+  initialize to All_1
+  set MT5 to "101"
+  set DQ0_DQ7 to "11111011"
+  set DQ8_DQ15 to "00000100"
+end vector
+
+vector All_1_with_A10_low
+  initialize to All_1
+  set MT5 to "110"
+  set DQ0_DQ7 to "11111011"
+  set DQ8_DQ15 to "00000100"
+end vector
+
+vector All_1_with_ACT_N_low
+  initialize to All_1
+  set MT6 to "011"
+  set DQ0_DQ7 to "11111101"
+  set DQ8_DQ15 to "00000010"
+end vector
+
+vector All_1_with_A4_low
+  initialize to All_1
+  set MT6 to "101"
+  set DQ0_DQ7 to "11111101"
+  set DQ8_DQ15 to "00000010"
+end vector
+
+vector All_1_with_BA1_low
+  initialize to All_1
+  set MT6 to "110"
+  set DQ0_DQ7 to "11111101"
+  set DQ8_DQ15 to "00000010"
+end vector
+
+vector All_1_with_DMU_N_low
+  initialize to All_1
+  set MT7 to "011"
+  set DQ0_DQ7 to "11111110"
+  set DQ8_DQ15 to "00000001"
+end vector
+
+vector All_1_with_DML_N_low
+  initialize to All_1
+  set MT7 to "101"
+  set DQ0_DQ7 to "11111110"
+  set DQ8_DQ15 to "00000001"
+end vector
+
+vector All_1_with_CK_T_low
+  initialize to All_1
+  set MT7 to "110"
+  set DQ0_DQ7 to "11111110"
+  set DQ8_DQ15 to "00000001"
+end vector
+
+vector All_1_with_WE_N_low
+  initialize to All_1
+  set MT8 to "011"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_1_with_A12_low
+  initialize to All_1
+  set MT8 to "101"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_1_with_BA0_low
+  initialize to All_1
+  set MT8 to "110"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector All_1_with_BG0_low
+  initialize to All_1
+  set MT9 to "0111"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector All_1_with_A3_low
+  initialize to All_1
+  set MT9 to "1011"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector DQ0_DQ7_high1
+  set MT0 to "100"
+  set MT1 to "100"
+  set MT2 to "100"
+  set MT3 to "100"
+  set MT4 to "X00"
+  set MT5 to "100"
+  set MT6 to "100"
+  set MT7 to "100"
+  set MT8 to "100"
+  set MT9 to "1011"
+  set CS_L to "0"
+  set DQ0_DQ7 to "11111111"
+  set DQ8_DQ15 to "00000000"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector DQ0_DQ7_high2
+  set MT0 to "010"
+  set MT1 to "010"
+  set MT2 to "010"
+  set MT3 to "010"
+  set MT4 to "X10"
+  set MT5 to "010"
+  set MT6 to "010"
+  set MT7 to "010"
+  set MT9 to "0111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "11111111"
+  set DQ8_DQ15 to "00000000"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector DQ0_DQ7_high3
+  set MT0 to "001"
+  set MT1 to "001"
+  set MT2 to "001"
+  set MT3 to "001"
+  set MT4 to "X01"
+  set MT5 to "001"
+  set MT6 to "001"
+  set MT7 to "001"
+  set MT8 to "001"
+  set MT9 to "0111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "11111111"
+  set DQ8_DQ15 to "00000000"
+  set LDQS_T_LDQS_C to "1X"
+  set UDQS_T_UDQS_C to "0X"
+end vector
+
+vector DQ0_DQ7_low1
+  set MT0 to "110"
+  set MT1 to "110"
+  set MT2 to "110"
+  set MT3 to "110"
+  set MT4 to "X10"
+  set MT5 to "110"
+  set MT6 to "110"
+  set MT7 to "110"
+  set MT8 to "110"
+  set MT9 to "1111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "00000000"
+  set DQ8_DQ15 to "11111111"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector DQ0_DQ7_low2
+  set MT0 to "011"
+  set MT1 to "011"
+  set MT2 to "011"
+  set MT3 to "011"
+  set MT4 to "X11"
+  set MT5 to "011"
+  set MT6 to "011"
+  set MT7 to "011"
+  set MT8 to "011"
+  set MT9 to "1111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "00000000"
+  set DQ8_DQ15 to "11111111"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+vector DQ0_DQ7_low3
+  set MT0 to "101"
+  set MT1 to "101"
+  set MT2 to "101"
+  set MT3 to "101"
+  set MT4 to "X01"
+  set MT5 to "101"
+  set MT6 to "101"
+  set MT7 to "101"
+  set MT8 to "101"
+  set MT9 to "1111"
+  set CS_L to "0"
+  set DQ0_DQ7 to "00000000"
+  set DQ8_DQ15 to "11111111"
+  set LDQS_T_LDQS_C to "0X"
+  set UDQS_T_UDQS_C to "1X"
+end vector
+
+unit "DDR4_Test"
+ execute Init0
+ wait 200u
+ execute Init1
+ wait 500u
+ execute Init2
+ execute Init3
+ execute Init4
+ execute All_0_with_A1_high
+ execute All_0_with_A6_high
+ execute All_0_with_PAR_high
+ execute All_0_with_A8_high
+ execute All_0_with_ALERT_N_high
+ execute All_0_with_A9_high
+ execute All_0_with_A2_high
+ execute All_0_with_A5_high
+ execute All_0_with_A13_high
+ execute All_0_with_A0_high
+ execute All_0_with_A7_high
+ execute All_0_with_A11_high
+ execute All_0_with_CK_C_high
+ execute All_0_with_ODT_high
+ execute All_0_with_CAS_N_high
+ execute All_0_with_CKE_high
+ execute All_0_with_RAS_N_high
+ execute All_0_with_A10_high
+ execute All_0_with_ACT_N_high
+ execute All_0_with_A4_high
+ execute All_0_with_BA1_high
+ execute All_0_with_DMU_N_high
+ execute All_0_with_DML_N_high
+ execute All_0_with_CK_T_high
+ execute All_0_with_WE_N_high
+ execute All_0_with_A12_high
+ execute All_0_with_BA0_high
+ execute All_0_with_BG0_high
+ execute All_0_with_A3_high
+ execute All_1_with_A1_low
+ execute All_1_with_A6_low
+ execute All_1_with_PAR_low
+ execute All_1_with_A8_low
+ execute All_1_with_ALERT_N_low
+ execute All_1_with_A9_low
+ execute All_1_with_A2_low
+ execute All_1_with_A5_low
+ execute All_1_with_A13_low
+ execute All_1_with_A0_low
+ execute All_1_with_A7_low
+ execute All_1_with_A11_low
+ execute All_1_with_CK_C_low
+ execute All_1_with_ODT_low
+ execute All_1_with_CAS_N_low
+ execute All_1_with_CKE_low
+ execute All_1_with_RAS_N_low
+ execute All_1_with_A10_low
+ execute All_1_with_ACT_N_low
+ execute All_1_with_A4_low
+ execute All_1_with_BA1_low
+ execute All_1_with_DMU_N_low
+ execute All_1_with_DML_N_low
+ execute All_1_with_CK_T_low
+ execute All_1_with_WE_N_low
+ execute All_1_with_A12_low
+ execute All_1_with_BA0_low
+ execute All_1_with_BG0_low
+ execute All_1_with_A3_low
+ !execute All_0
+ !execute All_1
+ !execute DQ0_DQ7_high1
+ !execute DQ0_DQ7_high2
+ !execute DQ0_DQ7_high3
+ !execute DQ0_DQ7_low1
+ !execute DQ0_DQ7_low2
+ !execute DQ0_DQ7_low3
+end unit

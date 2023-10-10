@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176376   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:17 2020
+disconnect all
+connect s to "FAN89_ISENSE"
+connect i to "ADC1_FAN89_ISENSE_CH4"
+connect g to "GND" 
+connect a to "FAN89_ISENSE"
+connect b to "ADC1_FAN89_ISENSE_CH4"
+resistor 100, 30, 20, re2, ar100m
+! "r888" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512814  V9c07                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+disconnect all
+connect s to "VP1P8_VCCIN_SNS_CPU_KP"
+connect i to "PMOD_VOA_VSENSE_K_M1"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r11_m1" test.

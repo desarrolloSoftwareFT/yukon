@@ -1,0 +1,10 @@
+!!!!    2    0    1 1656425206   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:30 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_90_CAP_I173_B"
+connect g to "A2_5V"
+!connect gl to "A3P3V"
+capacitor 100p+10p,60,35, fr8192, re3, wb, ar150m, nocomp,ed,  wa 10m, en
+! "c479" test.
+

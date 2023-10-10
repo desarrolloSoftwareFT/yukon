@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600568252  V3590                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:50:10 2020
+disconnect all
+connect s to "GND"
+connect i to "SPI0_10GE_FLSH_CLK_3V_C"
+resistor 100k, 25, 25, re5, wb, ar100m

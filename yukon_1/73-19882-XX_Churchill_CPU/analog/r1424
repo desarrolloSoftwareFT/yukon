@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176296   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:57 2020
+disconnect all
+connect s to "SRT_BMC_SEC_BOOT_JTAG_TDI"
+connect i to "BMC_SEC_BOOT_JTAG_TDI"
+connect a to "SRT_BMC_SEC_BOOT_JTAG_TDI"
+connect b to "BMC_SEC_BOOT_JTAG_TDI"
+resistor 22, 40, 20, re2, ar500m
+! "r1424" test.

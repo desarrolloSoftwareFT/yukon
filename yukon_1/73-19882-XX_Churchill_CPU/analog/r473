@@ -1,0 +1,10 @@
+!!!!    2    0    1 1605052371   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "BMC_OBFL_SPI1_CLK"
+connect i to "BMC_SPI1_FPGA_CLK_R"
+!connect g to "GND" 
+!connect a to "BMC_OBFL_SPI1_CLK"
+!connect b to "BMC_SPI1_FPGA_CLK_R"
+resistor 22, 40, 20, re3, ar500m
+! "r473" test.

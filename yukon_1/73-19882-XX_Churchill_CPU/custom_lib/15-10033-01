@@ -1,0 +1,24 @@
+!!!!    2    0    1 1334764831  V5526                                         
+
+
+test powered analog
+   power pins   5,6,2
+   nonanalog pins  3,4
+   test "Output_reset"
+end test
+   
+subtest "Output_reset"
+
+
+   connect i to pins  1                 ! Output 
+   connect l to ground                ! GND
+
+
+
+   detector dcv, expect 1.5
+   measure 1.5*1.05, 1.5*0.95
+end subtest
+
+!
+!    End of Test
+!

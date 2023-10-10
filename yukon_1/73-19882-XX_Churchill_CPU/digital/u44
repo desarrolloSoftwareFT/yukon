@@ -1,0 +1,92 @@
+!!!!    6    0    1 1594176832  Va4e3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:53 2020
+!    Function:
+!    Revision:
+!    Author:
+
+warning "This is a SETUP-ONLY Test."
+
+sequential
+
+default device "u44"
+set terminators to on
+assign  GND to pins *
+
+assign  ALL_BIDIRS to pins *, *, *, *, *, *, 7, 8, *, 10, *, 12, *, 14, 15
+assign  ALL_BIDIRS to pins 16, *, *, *, *, *, *, *, *, *, *, *, *
+assign  ALL_BIDIRS to pins *, 30, 31, 32, 33, 34, *, *, 37, *, *, *, 41
+assign  ALL_BIDIRS to pins *, 43, 44, 45, 46, 47, 48, *, 50, 51, *, 53, 54
+assign  ALL_BIDIRS to pins 55, 56
+assign  SGMII_BP_88E1512_C_P to pins *
+assign  SGMII_BP_88E1512_C_N to pins *
+assign  X88E1512_AVDDC18 to pins *, *, *, *, *, *
+assign  SGMII_88E1512_BP_P to pins *
+assign  SGMII_88E1512_BP_N to pins *
+assign  X88E1512_DVDD to pins *, *, *
+assign  IBMC_MAC_MDC to pins 7
+assign  IBMC_MAC_MDIO to pins 8
+assign  X88E1512_CLK125_R to pins *
+assign  X88E1512_VDDO_SEL to pins 10
+assign  X88E1512_VDDO to pins *, *, *
+assign  NC_88E1512_LED2 to pins 12
+assign  NC_88E1512_LED1 to pins *
+assign  NC_88E1512_LED0 to pins 14
+assign  X88E1512_CONFIG to pins 15
+assign  X88E1512_PHY_RST_R_N to pins 16
+assign  NC_MDI3_N to pins *
+assign  NC_MDI3_P to pins *
+assign  X88E1512_AVDD33 to pins *, *
+assign  NC_MDI2_N to pins *
+assign  NC_MDI2_P to pins *
+assign  NC_MDI1_N to pins *
+assign  NC_MDI1_P to pins *
+assign  NC_MDI0_N to pins *
+assign  NC_MDI0_P to pins *
+assign  NC_88E1512_TSTPT to pins *
+assign  X88E1512_RSET to pins 30
+assign  X88E1512_HSDAC_N to pins 31
+assign  X88E1512_HSDAC_P to pins 32
+assign  X88E1512_XTAL_OUT to pins 33
+assign  X88E1512_XTAL_IN to pins 34
+assign  X88E1512_REGIN to pins *
+assign  X88E1512_CAP1 to pins 37
+assign  X88E1512_CAP2 to pins 41
+assign  X88E1512_RX_DV to pins 43
+assign  X88E1512_RXD_0_ to pins 44
+assign  X88E1512_RXD_1_ to pins 45
+assign  X88E1512_RXC to pins 46
+assign  X88E1512_RXD_2_ to pins 47
+assign  X88E1512_RXD_3_ to pins 48
+assign  RGMII_IBMC_PHY_TXD_0_ to pins 50
+assign  RGMII_IBMC_PHY_TXD_1_ to pins 51
+assign  RGMII_IBMC_PHY_TX_CLK to pins 53
+assign  RGMII_IBMC_PHY_TXD_2_ to pins 54
+assign  RGMII_IBMC_PHY_TXD_3_ to pins 55
+assign  RGMII_IBMC_PHY_TX_EN to pins 56
+
+family TTL
+
+
+power GND
+
+bidirectional ALL_BIDIRS, SGMII_BP_88E1512_C_P, SGMII_BP_88E1512_C_N
+bidirectional X88E1512_AVDDC18, SGMII_88E1512_BP_P, SGMII_88E1512_BP_N
+bidirectional X88E1512_DVDD, IBMC_MAC_MDC, IBMC_MAC_MDIO, X88E1512_CLK125_R
+bidirectional X88E1512_VDDO_SEL, X88E1512_VDDO, NC_88E1512_LED2
+bidirectional NC_88E1512_LED1, NC_88E1512_LED0, X88E1512_CONFIG
+bidirectional X88E1512_PHY_RST_R_N, NC_MDI3_N, NC_MDI3_P, X88E1512_AVDD33
+bidirectional NC_MDI2_N, NC_MDI2_P, NC_MDI1_N, NC_MDI1_P, NC_MDI0_N
+bidirectional NC_MDI0_P, NC_88E1512_TSTPT, X88E1512_RSET, X88E1512_HSDAC_N
+bidirectional X88E1512_HSDAC_P, X88E1512_XTAL_OUT, X88E1512_XTAL_IN
+bidirectional X88E1512_REGIN, X88E1512_CAP1, X88E1512_CAP2, X88E1512_RX_DV
+bidirectional X88E1512_RXD_0_, X88E1512_RXD_1_, X88E1512_RXC, X88E1512_RXD_2_
+bidirectional X88E1512_RXD_3_, RGMII_IBMC_PHY_TXD_0_, RGMII_IBMC_PHY_TXD_1_
+bidirectional RGMII_IBMC_PHY_TX_CLK, RGMII_IBMC_PHY_TXD_2_
+bidirectional RGMII_IBMC_PHY_TXD_3_, RGMII_IBMC_PHY_TX_EN
+
+!IPG: Add defaults or loads to floating inputs and bidirs.
+set load on pins 31,32,43,44,45,46,47,48,53 to pull up
+
+!
+!    End of Test
+!

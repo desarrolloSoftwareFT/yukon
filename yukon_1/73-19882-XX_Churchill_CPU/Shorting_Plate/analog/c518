@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes REGCAP1_BMCPHY P-Pin resistance"
+report "check nodes REGCAP2_BMCPHY P-Pin resistance"
+end on failure
+disconnect all
+connect s to "REGCAP1_BMCPHY"
+connect i to "REGCAP2_BMCPHY"
+resistor 10,20,100, re1, ar100m,ed
+off failure

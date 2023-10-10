@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512728  Ve781                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "A1_2V"
+connect i to "PMOD_A1V2_VSENSE"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_r4" test.

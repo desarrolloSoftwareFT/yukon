@@ -1,0 +1,19 @@
+!!!!    2    0    1 1600570681  V4afa                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+  test "OUT"
+end test
+
+
+
+subtest "OUT"
+  connect i to "P1V05_COMBINED"
+  connect l to ground
+
+  detector dcv, expect 1.05
+  measure  1.155, 0.945
+end subtest
+
+
+

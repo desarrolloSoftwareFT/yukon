@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176718   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:59 2020
+on failure
+   report parallel devices
+   report "c541 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_P12V_CH9"
+connect g to "P12V" 
+resistor 2.8k, 25, 20, re4, wb, ar500m, wa860m
+off failure

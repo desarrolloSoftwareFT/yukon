@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512979  V716c                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "C105_PHY_RST_SDP1_0"
+connect i to "C105_PHY_RST_SDP0_1_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1305" test.

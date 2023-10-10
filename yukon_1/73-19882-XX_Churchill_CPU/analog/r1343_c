@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176183   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:04 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PCH_XDP_PRESENT_L"
+resistor 1k, 25, 20, re3, ar100m

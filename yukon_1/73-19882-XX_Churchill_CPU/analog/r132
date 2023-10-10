@@ -1,0 +1,8 @@
+!!!!    2    0    1 1615393859   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:47 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "VREF_P1V05"
+connect g to "GND"
+!B!resistor 10k, 25, 20, re4, wb, ar100m, wa1.24
+resistor 10k,25,25,re4,wb,ar100m,en,ed 

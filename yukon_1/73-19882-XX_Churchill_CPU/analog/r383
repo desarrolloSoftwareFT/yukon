@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175960   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:21 2020
+disconnect all
+connect s to "CONSOLE_TXD_BB"
+connect i to "PCH_CONSOLE_TXD"
+jumper 10.0k, re4, wb, ar100m, op
+! "r383" test.

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1672254025   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:05 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_P3V3_PCH_EN"
+connect g to "P12V"
+connect g to "PMOD_P3V3_PCH_EN_IN"
+!B!resistor 1k, 25, 20, re3, ar100m, wa855m
+resistor 1k,25,20,re3,ar250m,ed 

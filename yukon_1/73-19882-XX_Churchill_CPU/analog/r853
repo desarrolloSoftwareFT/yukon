@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176237   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:58 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "SRT_CLK25M_BMC_CLKIN"
+resistor 10k, 25, 20, re4, wb, ar100m

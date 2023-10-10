@@ -1,0 +1,1003 @@
+                              QuickReport Details
+               /F=/01_Programs/SPITFIRE/73-19882-XX_Churchill_CPU
+                                  73-19882-04
+                          Wed Apr 05, 2023 09:51:19 AM
+
+
+     By making suggested changes, tests could be made unstable.
+     Check test operation to verify testability after changes
+     are applied. Also backup files before you try the changes.
+
+
+POSSIBLE PRE-FIXTURE IMPROVEMENTS
+	Use Dual Well
+	Use Throughput Multiplier
+	Test panels where possible
+
+SHORTS
+	Check for phantom shorts during shorts testing.
+
+
+TESTPLAN
+
+     Fixture Vacuum                   
+         Vacuum defaults to 1.5s. The following statements meet
+         or exceed this time:
+
+		 540: wait 2|faoff|wait 2|call Counter|call Counter |  faon|wait 2|faoff|wait 2|call Counter|call Counter |  faon
+		 612: call Counter |  faon 2
+		 613: call Counter | call Counter |  faon
+		2257: call Counter |  faon IYET_Vacuum_On_Delay
+		5160:    cps|dps|unpowered|call Counter |  faon|auxdisconnect 5|unpowered
+
+         You can improve test times by reducing these times to
+         as little as no delays.
+	       example: faon 0.0
+
+     Object Checking                  
+         The default setting for object checking is on.
+
+		1555:   object checking on
+
+         Adding the "object checking off" statement in the
+         Initialize_Constants subroutine will increase production throughput.
+         Object checking can be useful during test development.
+
+     Interrupted Test Flow            
+         The following line numbers break up a test block
+         section, forcing the controller to leave the test mode.
+         This increases your test time.
+
+			2390, 3093, 5404-5407, 5413-5416, 5423, 5429-5431, 5437, 5800-5803, 10116-10123, 15749, 15753, 15757, 15761, 15765, 15769, 15773, 15777, 15781, 15787, 15794
+
+         Removing or moving the statements to the beginning
+         or end of the test block will improve test time.
+
+     gpconnect/disconnect             
+         The following lines in the testplan have
+         gpconnect or disconnect statements.
+
+		4869:    gpconnect 10616 to 10617     !P3V3_VBAT            !ok
+		4870:    gpconnect 10618 to 10619     !VBATT_P3V3_2         !ok
+		4871:    gpconnect 10620 to 10621     !VBATT_P3V3_VSENSE_P  !ok
+		4872:    gpconnect 10622 to 10623     !UNNAMED_5_RES_I6_A   !ok
+		4873:    gpconnect 10624 to 10625     !DC_VCCRTC_C          !ok
+		4874:    gpconnect 10626 to 10627     !RST_SRTCRST_L_C      !ok
+		4875:    gpconnect 10628 to 10629     !RST_RTCRST_L         !ok
+		4892:    gpdisconnect 10616 from 10617     !P3V3_VBAT
+		4893:    gpdisconnect 10618 from 10619     !VBATT_P3V3_2
+		4894:    gpdisconnect 10620 from 10621     !VBATT_P3V3_VSENSE_P
+		4895:    gpdisconnect 10622 from 10623     !UNNAMED_5_RES_I6_A
+		4896:    gpdisconnect 10624 from 10625     !DC_VCCRTC_C
+		4897:    gpdisconnect 10626 from 10627     !RST_SRTCRST_L_C
+		4898:    gpdisconnect 10628 from 10629     !RST_RTCRST_L
+		4945:    gpconnect 10616 to 10617     !P3V3_VBAT            !ok
+		4946:    gpconnect 10618 to 10619     !VBATT_P3V3_2         !ok
+		4947:    gpconnect 10620 to 10621     !VBATT_P3V3_VSENSE_P  !ok
+		4948:    gpconnect 10622 to 10623     !UNNAMED_5_RES_I6_A   !ok
+		4949:    gpconnect 10624 to 10625     !DC_VCCRTC_C          !ok
+		4950:    gpconnect 10626 to 10627     !RST_SRTCRST_L_C      !ok
+		4951:    gpconnect 10628 to 10629     !RST_RTCRST_L         !ok
+		4955:   gpdisconnect 10616 from 10617     !P3V3_VBAT
+		4956:    gpdisconnect 10618 from 10619     !VBATT_P3V3_2
+		4957:    gpdisconnect 10620 from 10621     !VBATT_P3V3_VSENSE_P
+		4958:    gpdisconnect 10622 from 10623     !UNNAMED_5_RES_I6_A
+		4959:    gpdisconnect 10624 from 10625     !DC_VCCRTC_C
+		4960:    gpdisconnect 10626 from 10627     !RST_SRTCRST_L_C
+		4961:    gpdisconnect 10628 from 10629     !RST_RTCRST_L
+		4993:    gpdisconnect 10616 from 10617     !P3V3_VBAT
+		5066:    gpconnect "LJTAG_CABLE_PRSNT_L" to "GND"   !enable BSCAN
+		5151:    gpconnect "LJTAG_CABLE_PRSNT_L" to "GND"   !enable BSCAN
+		5212:    gpconnect "UNNAMED_59_HDR1X2_I180_A" to "GND"  !For U1 JTAG test
+		5221:    gpdisconnect "UNNAMED_59_HDR1X2_I180_A" from "GND"  !For U1 JTAG test
+
+         Moving these statements into individual device tests will
+         improve test time.
+
+     Waits                            
+         Check that the following "wait" statements in the
+         testplan are of the necessary length.
+
+		 416:    wait 2
+		 540: wait 2|faoff|wait 2|call Counter|call Counter |  faon|wait 2|faoff|wait 2|call Counter|call Counter |  faon
+		 554: wait 2
+		 602:     wait 2
+		 615: wait1
+		 754: wait 2
+		 797: wait 2
+		1017: wait50m !tiempo para que no falle
+		1357:       wait 50m
+		4876:    wait 0.2
+		4952:    wait 0.2
+		5012:     wait 30
+		5087:    wait 0.2
+		5095:     wait 20
+		5176:    wait 2
+		5190:    wait 5
+		5193:    wait 2
+		5197:    wait 2
+		5202:    wait 2
+		5213:    wait 200m
+		5285:    wait 5                 !Add wait for stabiling U42
+		10177:   wait 100m
+		10179:   wait 100m
+		10536:     wait 2
+		10541:          wait 1
+		11113:     wait 1.5
+		11116:    wait 1.5
+		11159: wait .5
+		11167: wait .5
+		15523:     wait 15m
+		15570:         wait 2
+		15636: wait 180m
+		15648: wait 1800m
+		15715:   wait 1
+		15807: wait 10
+		15841: wait 2
+
+
+BOARD CONFIG
+
+     Control XT/XTP                   
+
+         You are using the fastest control card available
+         today.
+
+     ASRU N Revision                  
+         The following modules/cards are not using
+         asru n revision.
+
+		module 0/ card 1
+		module 1/ card 1
+		module 2/ card 1
+		module 3/ card 1
+
+         Using asru n revision will improve test time.
+         (All ASRU cards must be the same revision to have improvement.)
+
+
+
+ANALOG
+
+    NOTE: Only the uncommented tests in the testorder file were evaluated.
+
+     Test Options                     
+         The following tests contain en, ed, fi options
+         or are without the ar option:
+
+analog/r64_fan:8 jumper  20.0,  re1, ar200m,ed
+analog/a_r1492:7 jumper  20.0,  re1, ar200m  ,ed
+analog/b_imar19:7 jumper 20.0,re1,ar200m,ed
+analog/bma1_l1:7 jumper 20.0,re1,ar200m,ed
+analog/bma1_r4:7 jumper 20.0,re1,ar200m,ed
+analog/bma1_r8:11 jumper 20.0,re1,ar200m,ed, wa20m, en, wb
+analog/bma1_r11:7 jumper 20.0,re1,ar200m,ed
+analog/bma2_l1:7 jumper 20.0,re1,ar200m,ed
+analog/bma2_r4:7 jumper 20.0,re1,ar200m,ed
+analog/bma2_r8:11 jumper 20.0,re1,ar200m,ed
+analog/bma2_r11:7 jumper 2.0,re1,ar200m,ed,en, op
+analog/bma2_r12:7 jumper 20.0,re1,ar200m,ed
+analog/bma3_l1:8 jumper 20.0,re1,ar200m,ed
+analog/bma3_r4:7 jumper 20.0,re2,ar200m,ed,en, wa 20m
+analog/bma3_r11:7 jumper 20.0,re1,ar200m,ed
+analog/bma3_r12:7 jumper 20.0,re1,ar200m,ed
+analog/bma4_l1:7 jumper 20.0,re1,ar200m,ed
+analog/bma4_r4:7 jumper 20.0,re1,ar200m,ed
+analog/bma4_r8:11 jumper 32.0,re1,ar200m,ed
+analog/bma4_r12:7 jumper 20.0,re1,ar200m,ed
+analog/bma5_l1:9 jumper 38.0,re1,ar200m,ed, en
+analog/bma5_r4:7 jumper 20.0,re1,ar200m,ed
+analog/bma5_r8:11 jumper 20.0,re1,ar200m,ed
+analog/bma5_r11:7 jumper 20.0,re1,ar200m,ed
+analog/bma5_r12:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_l1:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_l2:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r3:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r4:7 jumper 21.0,re1,ar200m,ed,en
+analog/dma1_r5:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r6:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r15:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r16:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r17:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r18:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r21:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r27:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r29:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r32:7 jumper 20.0,re1,ar200m,ed
+analog/dma1_r33:7 jumper 20.0,re1,ar200m,ed
+analog/e_r953:7 jumper 20.0,re1,ar200m,ed
+analog/e_r955:7 jumper 20.0,re1,ar200m,ed
+analog/e_r1009:7 jumper 20.0,re1,ar200m,ed
+analog/e_r1010:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l1:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l2:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l3:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l7:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l8:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l9:7 jumper 35.0,re1,ar200m,ed
+analog/fc_l10:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l11:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l12:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l13:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l14:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l15:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l16:7 jumper 20.0,re1,ar200m,ed, en
+analog/fc_l17:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l18:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l19:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l26:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l27:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l28:7 jumper 20.0,re1,ar200m,ed
+analog/fc_l29:7 jumper 20.0,re1,ar200m,ed
+analog/fc_r8_hs0:7 jumper 20.0,re1,ar200m,ed
+analog/fc_r8_hs2:7 jumper 20.0,re1,ar200m,ed
+analog/fc_r8_hs3:7 jumper 20.0,re1,ar200m,ed
+analog/fc_r8_hs4:7 jumper 20.0,re1,ar200m,ed
+analog/fc_r8_hs5:7 jumper 20.0,re1,ar200m,ed
+analog/l1_m2:7 jumper 20.0,re1,ar200m,ed
+analog/l1_p1_m1:7 jumper 20.0,re1,ar200m,ed
+analog/l1_p2_m1:7 jumper 20.0,re1,ar200m,ed
+analog/l2_p4_m1:7 jumper 20.0,re1,ar200m,ed
+analog/l3_m2:9 jumper 20.0,re1,ar200m,ed
+analog/l4:7 jumper 20.0,re1,ar200m,ed
+analog/l6:7 jumper 20.0,re1,ar200m,ed
+analog/l7:7 jumper 30.0,re2,ar500m,ed, en
+analog/l9:7 jumper 20.0,re1,ar200m,ed
+analog/l13_c:7 jumper 20.0,re1,ar200m,ed
+analog/l14_c:7 jumper 45.0,re2,ar200m,ed, en
+analog/l15_c:7 jumper 20.0,re1,ar200m,ed
+analog/l16:7 jumper 20.0,re1,ar200m,ed
+analog/l17:7 jumper 20.0,re1,ar200m,ed
+analog/l18:7 jumper 20.0,re1,ar200m,ed
+analog/l19:7 jumper 20.0,re1,ar200m,ed
+analog/l20:7 jumper 20.0,re1,ar200m,ed
+analog/l21:7 jumper 20.0,re1,ar200m,ed
+analog/l23_c:7 jumper 40.0,re1,ar200m,ed
+analog/l24:7 jumper 20.0,re1,ar200m,ed
+analog/l29:7 jumper 20.0,re1,ar200m,ed
+analog/l33:7 jumper 20.0,re1,ar200m,ed
+analog/l43:7 jumper 20.0,re1,ar200m,ed
+analog/l94:7 jumper 20.0,re1,ar200m,ed
+analog/l230:7 jumper 20.0,re1,ar200m,ed
+analog/r1_p1_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r1_p2_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r2_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r3_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r3_v:6 jumper  20.0,  re1, ar200m,ed
+analog/r4_p1_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r4_p2_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r4_v:7 jumper 20.0,re1,ar200m,ed
+analog/r5_v:7 jumper 20.0,re1,ar200m,ed
+analog/r6_v:7 jumper  20.0,  re1, ar200m,ed
+analog/r7_p4_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r7_v:7 jumper 20.0,re1,ar200m,ed
+analog/r8_p4_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r8_v:7 jumper 24.0,re1,ar200m,ed
+analog/r9_p4_m1:11 jumper 20.0,re1,ar200m,ed
+analog/r9_v:7 jumper 20.0,re1,ar200m,ed
+analog/r10_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r10_v:7 jumper 20.0,re1,ar200m,ed
+analog/r11_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r11_v:7 jumper 20.0,re1,ar200m,ed
+analog/r14_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r16:7 jumper 40.0,re1,ar200m,ed
+analog/r19_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r20_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r22_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r27_m1:7 jumper 20.0,re1,ar200m,ed
+analog/r35:7 jumper  20.0,  re1, ar200m,ed
+analog/r35_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r36:7 jumper 20.0,re1,ar200m,ed
+analog/r36_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r37:7 jumper 20.0,re1,ar200m,ed
+analog/r37_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r38:7 jumper 20.0,re1,ar200m,ed
+analog/r42_m2:7 jumper 20.0,re1,ar200m,ed, en
+analog/r43_m2:11 jumper 20.0,re1,ar200m,ed
+analog/r44_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r45_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r46_m2:11 jumper 20.0,re1,ar200m,ed
+analog/r47_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r50:7 jumper  20.0,  re1, ar200m ,ed
+analog/r51:7 jumper  20.0,  re1, ar200m,ed
+analog/r54_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r55_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r63_m2:11 jumper 20.0,re1,ar200m,ed
+analog/r64_m2:11 jumper 20.0,re1,ar200m,ed
+analog/r66_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r67_m2:7 jumper 20.0,re1,ar200m,ed
+analog/r81_c:7 jumper 20.0,re1,ar200m,ed
+analog/r87:7 jumper 20.0,re1,ar200m,ed
+analog/r99:9 jumper 5k,re4,ar200m,ed, op
+analog/r100:9 jumper 5k,re4,ar200m,ed, op
+analog/r101:9 jumper 5k,re4,ar200m,ed, op
+analog/r104:7 jumper 20.0,re1,ar200m,ed
+analog/r106:7 jumper 20.0,re1,ar200m,ed
+analog/r107:7 jumper 20.0,re1,ar200m,ed
+analog/r116:7 jumper 20.0,re1,ar200m,ed
+analog/r117:7 jumper 20.0,re1,ar200m,ed
+analog/r125:7 jumper 20.0,re1,ar200m,ed
+analog/r126:7 jumper 20.0,re1,ar200m,ed
+analog/r160:7 jumper 30.0,re1,ar200m,ed
+analog/r169:7 jumper 20.0,re1,ar200m,ed
+analog/r170:7 jumper 20.0,re1,ar200m,ed
+analog/r171:7 jumper 20.0,re1,ar200m,ed
+analog/r182:7 jumper 20.0,re1,ar200m,ed
+analog/r188:7 jumper 20.0,re1,ar200m,ed
+analog/r231:7 jumper 20.0,re1,ar200m,ed
+analog/r233:7 jumper 20.0,re1,ar200m,ed
+analog/r234:7 jumper 20.0,re1,ar200m,ed
+analog/r236:7 jumper 20.0,re1,ar200m,ed
+analog/r240:7 jumper 20.0,re1,ar200m,ed
+analog/r241:7 jumper 20.0,re1,ar200m,ed
+analog/r242:7 jumper 20.0,re1,ar200m,ed
+analog/r243:7 jumper 20.0,re1,ar200m,ed
+analog/r246:7 jumper 20.0,re1,ar200m,ed
+analog/r247:7 jumper 20.0,re1,ar200m,ed
+analog/r250:7 jumper 20.0,re1,ar200m,ed
+analog/r251:7 jumper 40.0,re1,ar200m,ed
+analog/r255:7 jumper 20.0,re1,ar200m,ed
+analog/r261:7 jumper 20.0,re1,ar200m,ed
+analog/r265:7 jumper 25.0,re1,ar200m,ed
+analog/r289:7 jumper 26.0,re1,ar200m,ed, wa .3
+analog/r290:6 jumper  20.0,  re1, ar200m,ed
+analog/r308:7 jumper 20.0,re1,ar200m,ed
+analog/r309:7 jumper 20.0,re1,ar200m,ed
+analog/r312:9 jumper 20.0,re1,ar200m,ed, en
+analog/r330_c:7 jumper 20.0,re1,ar200m,ed
+analog/r335_c:7 jumper 20.0,re1,ar200m,ed
+analog/r336_c:7 jumper 20.0,re1,ar200m,ed
+analog/r337_c:7 jumper 20.0,re1,ar200m,ed
+analog/r351:9 jumper 5k,re4,ar200m,ed, op
+analog/r354:7 jumper 20.0,re1,ar200m,ed
+analog/r357:7 jumper 20.0,re1,ar200m,ed
+analog/r360:7 jumper 20.0,re1,ar200m,ed
+analog/r361:7 jumper 20.0,re1,ar200m,ed
+analog/r362:7 jumper 20.0,re1,ar200m,ed
+analog/r364:7 jumper 20.0,re1,ar200m,ed
+analog/r368:7 jumper 20.0,re1,ar200m,ed
+analog/r371:7 jumper 20.0,re1,ar200m,ed
+analog/r372:7 jumper 20.0,re1,ar200m,ed
+analog/r379:7 jumper 20.0,re1,ar200m,ed
+analog/r386:7 jumper 20.0,re1,ar200m,ed
+analog/r387:7 jumper 20.0,re1,ar200m,ed
+analog/r413:7 jumper 20.0,re1,ar200m,ed
+analog/r446:7 jumper 20.0,re1,ar200m,ed
+analog/r451:7 jumper 20.0,re1,ar200m,ed
+analog/r456:7 jumper 20.0,re1,ar200m,ed
+analog/r461:7 jumper 20.0,re1,ar200m,ed
+analog/r467:7 jumper 20.0,re1,ar200m,ed
+analog/r471:7 jumper 20.0,re1,ar200m,ed
+analog/r478:7 jumper 20.0,re1,ar200m,ed
+analog/r479:7 jumper 20.0,re1,ar200m,ed
+analog/r480:7 jumper 20.0,re1,ar200m,ed
+analog/r482:7 jumper 20.0,re1,ar200m,ed
+analog/r487:7 jumper 20.0,re1,ar200m,ed
+analog/r488:7 jumper 20.0,re1,ar200m,ed
+analog/r494:7 jumper 26.0,re1,ar200m,ed
+analog/r495:7 jumper 20.0,re1,ar200m,ed
+analog/r495_c:7 jumper 20.0,re1,ar200m,ed
+analog/r498:7 jumper 20.0,re1,ar200m,ed
+analog/r501:7 jumper  20.0,  re1, ar200m,ed
+analog/r502:7 jumper 20.0,re1,ar200m,ed
+analog/r503:7 jumper 20.0,re1,ar200m,ed
+analog/r504:7 jumper 20.0,re1,ar200m,ed
+analog/r505:7 jumper 20.0,re1,ar200m,ed
+analog/r511:7 jumper 25.0,re1,ar200m,ed, en
+analog/r513_c:7 jumper 20.0,re1,ar200m,ed, en, wb
+analog/r516_c:7 jumper 20.0,re1,ar200m,ed
+analog/r517_c:7 jumper 20.0,re1,ar200m,ed
+analog/r525_c:7 jumper 20.0,re1,ar200m,ed
+analog/r526_c:7 jumper 20.0,re1,ar200m,ed
+analog/r527_c:7 jumper 20.0,re1,ar200m,ed
+analog/r554:7 jumper 20.0,re1,ar200m,ed
+analog/r555:7 jumper 29.0,re1,ar200m,ed
+analog/r568:7 jumper 20.0,re1,ar200m,ed
+analog/r569:7 jumper 20.0,re1,ar200m,ed
+analog/r570:7 jumper 20.0,re1,ar200m,ed
+analog/r572:7 jumper 20.0,re1,ar200m,ed
+analog/r573:7 jumper 20.0,re1,ar200m,ed
+analog/r574:7 jumper 20.0,re1,ar200m,ed
+analog/r577:7 jumper 20.0,re1,ar200m,ed
+analog/r597:7 jumper 32.0,re1,ar200m,ed
+analog/r600:7 jumper 20.0,re1,ar200m,ed
+analog/r605:7 jumper 20.0,re1,ar200m,ed
+analog/r607:7 jumper 20.0,re1,ar200m,ed
+analog/r683:7 jumper 20.0,re1,ar200m,ed
+analog/r684:7 jumper 20.0,re1,ar200m,ed
+analog/r709:7 jumper 20.0,re1,ar200m,ed
+analog/r717:7 jumper 20.0,re1,ar200m,ed
+analog/r718:7 jumper 20.0,re1,ar200m,ed
+analog/r719:7 jumper 20.0,re1,ar200m,ed
+analog/r722:7 jumper 23.0,re1,ar200m,ed
+analog/r725:7 jumper 20.0,re1,ar200m,ed
+analog/r739_c:7 jumper 20.0,re1,ar200m,ed
+analog/r742_c:7 jumper 20.0,re1,ar200m,ed
+analog/r743:7 jumper 20.0,re1,ar200m,ed
+analog/r758_c:7 jumper 20.0,re1,ar200m,ed
+analog/r759_c:7 jumper 40.0,re1,ar200m,ed
+analog/r781:7 jumper 20.0,re1,ar200m,ed
+analog/r803:7 jumper 20.0,re1,ar200m,ed
+analog/r804:7 jumper  20.0,  re1, ar200m, ed
+analog/r810_c:7 jumper  20.0,  re1, ar200m,ed
+analog/r834:7 jumper 20.0,re1,ar200m,ed
+analog/r835:7 jumper 20.0,re1,ar200m,ed
+analog/r849:7 jumper 20.0,re1,ar200m,ed
+analog/r861_c:7 jumper 20.0,re1,ar200m,ed
+analog/r862_c:7 jumper 20.0,re1,ar200m,ed
+analog/r883:7 jumper 20.0,re1,ar200m,ed
+analog/r887:9 jumper 5k,re4,ar200m,ed, op
+analog/r891:7 jumper 20.0,re1,ar200m,ed
+analog/r915:7 jumper 20.0,re1,ar200m,ed
+analog/r916:7 jumper 20.0,re1,ar200m,ed
+analog/r917:7 jumper 20.0,re1,ar200m,ed
+analog/r921:7 jumper 20.0,re1,ar200m,ed
+analog/r964:7 jumper 20.0,re1,ar200m,ed
+analog/r965:7 jumper 20.0,re1,ar200m,ed
+analog/r967_c:7 jumper 20.0,re1,ar200m,ed
+analog/r968_c:7 jumper 20.0,re1,ar200m,ed
+analog/r979:7 jumper 20.0,re1,ar200m,ed
+analog/r996:7 jumper 44.0,re1,ar200m,ed
+analog/r997:7 jumper 20.0,re1,ar200m,ed
+analog/r1113:7 jumper 20.0,re1,ar200m,ed
+analog/r1117:7 jumper 35.0,re1,ar200m,ed
+analog/r1124:7 jumper 20.0,re1,ar200m,ed
+analog/r1162:7 jumper 20.0,re1,ar200m,ed
+analog/r1202:7 jumper 20.0,re1,ar200m,ed
+analog/r1203:7 jumper 20.0,re1,ar200m,ed
+analog/r1269:7 jumper 16.0,re1,ar200m,ed, en, am200m
+analog/r1280:7 jumper 20.0,re1,ar200m,ed
+analog/r1294:6 jumper  12+7 ,  re1, ar200m,en,ed
+analog/r1297:7 jumper 20.0,re2,ar200m,ed
+analog/r1300:7 jumper 20.0,re1,ar200m,ed
+analog/r1302:7 jumper 20.0,re1,ar200m,ed
+analog/r1305:7 jumper 20.0,re1,ar200m,ed
+analog/r1328:7 jumper 20.0,re1,ar200m,ed
+analog/r1329:7 jumper 20.0,re1,ar200m,ed
+analog/r1330:7 jumper 20.0,re1,ar200m,ed
+analog/r1351:7 jumper 20.0,re1,ar200m,ed
+analog/r1404:7 jumper 20.0,re1,ar200m,ed
+analog/r1404_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1405:7 jumper  20.0,  re1, ar200m,ed
+analog/r1406:7 jumper  20.0,  re1, ar200m ,ed
+analog/r1409:7 jumper 20.0,re1,ar200m,ed
+analog/r1411:7 jumper 20.0,re1,ar200m,ed
+analog/r1432:7 jumper 20.0,re1,ar200m,ed
+analog/r1434:7 jumper 20.0,re1,ar200m,ed
+analog/r1436_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1437_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1438_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1440_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1441_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1473:7 jumper 20.0,re1,ar200m,ed
+analog/r1477:7 jumper 20.0,re1,ar200m,ed
+analog/r1478:7 jumper 20.0,re1,ar200m,ed
+analog/r1480:7 jumper  20.0,  re1, ar200m ,ed
+analog/r1499:7 jumper 20.0,re1,ar200m,ed
+analog/r1506:7 jumper 26.0,re1,ar200m,ed
+analog/r1507:7 jumper 20.0,re1,ar200m,ed
+analog/r1508:7 jumper 26.0,re1,ar200m,ed
+analog/r1509:7 jumper 20.0,re1,ar200m,ed
+analog/r1511_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1557_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1569:7 jumper 20.0,re1,ar200m,ed
+analog/r1570_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1585_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1588:7 jumper 20.0,re1,ar200m,ed
+analog/r1589:7 jumper 20.0,re1,ar200m,ed
+analog/r1590:7 jumper  20.0,  re1, ar200m ,ed
+analog/r1600_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1607:7 jumper 20.0,re1,ar200m,ed
+analog/r1610:7 jumper 20.0,re1,ar200m,ed
+analog/r1616:7 jumper 20.0,re1,ar200m,ed
+analog/r1617:7 jumper 20.0,re1,ar200m,ed
+analog/r1621:7 jumper 20.0,re1,ar200m,ed
+analog/r1626_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1638_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1644:7 jumper 20.0,re1,ar200m,ed
+analog/r1646:7 jumper 20.0,re1,ar200m,ed
+analog/r1654_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1656:6 jumper  20.0,  re1, ar200m ,ed
+analog/r1659:7 jumper 20.0,re1,ar200m,ed
+analog/r1661_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1662_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1663_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1664_c:7 jumper 20.0,re1,ar200m,ed
+analog/r1668:7 jumper 20.0,re1,ar200m,ed
+analog/r1839:7 jumper 20.0,re1,ar200m,ed
+analog/r1914_c:8 jumper 5k,re4,ar200m, ed, op
+analog/r2006:7 jumper 20.0,re1,ar200m,ed
+analog/r2007:7 jumper 20.0,re1,ar200m,ed
+analog/r2098:7 jumper 20.0,re1,ar200m,ed
+analog/r2261:7 jumper 20.0,re1,ar200m,ed
+analog/x_r67:7 jumper 20.0,re1,ar200m,ed
+analog/x_r71:7 jumper 20.0,re1,ar200m,ed
+analog/x_r214:7 jumper 20.0,re1,ar200m,ed
+analog/x_r215:7 jumper 20.0,re1,ar200m,ed
+analog/x_r216:7 jumper 20.0,re1,ar200m,ed
+analog/x_r217:7 jumper 20.0,re1,ar200m,ed
+analog/x_r218:7 jumper 20.0,re1,ar200m,ed
+analog/x_r301:7 jumper 20.0,re1,ar200m,ed
+analog/c499:205 capacitor 974.96u, 35, 40, fr128, re1, ar400m, ed, sm, nocomp, am0.3
+analog/bma3_c17:7 capacitor 10n, 35, 40, fr1024, re4, wb, ar100m, nocomp, en
+analog/x_c81:9 capacitor 2m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/c55:79 capacitor 415.33u, 45, 40, fr128, re1, ar100m, ed, sm, nocomp, am0.1
+analog/c40_m2:79 capacitor 2.713m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/a_c833:24 capacitor 49.41u, 35, 40, fr128, re1, ar50.0m, ed, sm, nocomp, am0.2
+analog/c390_c:13 capacitor 10n +5n, 35, 40, fr1024, re3, ar150.0m, nocomp, ed
+analog/c636:7 capacitor 10n, 35, 40, fr8192, re3, wb, ar100m, en, ed, nocomp, pm, am10m
+analog/c295_c:19 capacitor 60.21u, 35, 40, fr128, re2, ar100m, ed, nocomp
+analog/bma4_c5:20 capacitor 268.01u, 35, 40, fr128, re2, ar200m, ed, sm, nocomp
+analog/x_c80:11 capacitor 10n, 35, 40, fr1024, re3, wb, ar50.0m, ed, nocomp
+analog/bma5_cbias:6 capacitor 1u, 35, 40, fr1024, re1, ar100m, nocomp,en,ed
+analog/c87_m1:106 capacitor 1.870m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/bma3_c5:30 capacitor 222.7u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp, am0.2
+analog/c200:7 capacitor 1u, 35, 40, fr1024, re2, ed, ar100m, nocomp
+analog/c220:25 capacitor 121.1u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp
+analog/c394_c:20 capacitor 100u, 35, 20, fr128, re1, ar100m, sm, ed, nocomp, am0.2
+analog/c39_m2:64 capacitor 3.052m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/bma5_c5:25 capacitor 436.1u -50u, 35, 40, fr128, re2, ar400m, ed, sm, nocomp
+analog/c507:16 capacitor 115.1u, 35, 40, fr128, re1, sm, ar100m, ed, nocomp
+analog/x_c95:15 capacitor 204u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp, am0.2
+analog/c668:8 capacitor 1u-.18u, 35, 40, fr1024, re2, ar100m, ed, nocomp
+analog/c168_c:13 capacitor 14u, 45,40, fr128, re2, ar20.0m, ed, nocomp 
+analog/bma2_c5:31 capacitor 222.2u, 35, 40, fr1024, re2, ar200m, nocomp, ed, en, sm
+analog/c296_c:18 capacitor 68.102u-9.6u, 35, 40, fr128, re1, ar100m, ed, en, nocomp, wa .2
+analog/c633:25 capacitor 71.9u, 35, 40, fr128, re1, ar100m, ed, sm, nocomp
+analog/c649:10 capacitor 22.1u-2u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c30:12 capacitor 10.1u, 35, 40, fr1024, re1, ed, ar100m, nocomp
+analog/c34:11 capacitor 70u, 38, 40, fr128, re2, ar220.0m, ed, nocomp, en , wa .05
+analog/c35:10 capacitor 70u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c94_c:7 capacitor 100n, 35, 40, fr8192, re2, wb, ar200m, ed, nocomp
+analog/c170:11 capacitor 60u, 35, 50, fr128, re1, ar120.0m, ed, nocomp, wa60m,en
+analog/c415:11 capacitor 20.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c537:11 capacitor 100n, 35, 40, fr8192, re2, ar50.0m, ed, en, nocomp
+analog/c538:11 capacitor 100n, 35, 40, fr1024, re2, ar50.0m, ed, nocomp
+analog/c539:11 capacitor 100n, 35, 40, fr1024, re2, ar50.0m, ed, en, nocomp
+analog/c540:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, en, nocomp
+analog/c542:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, en, nocomp
+analog/c548:11 capacitor 100n, 35, 40, fr1024, re2, ar50.0m, ed, nocomp
+analog/c549:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c557:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c558:8 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c569:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c570:11 capacitor 100n, 35, 40, fr1024, re2, ar20.0m, ed, nocomp
+analog/c571:11 capacitor 100n, 35, 40, fr1024, re2, ar20.0m, ed, nocomp
+analog/c573:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c598:10 capacitor 22.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c600:10 capacitor 22.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c607:10 capacitor 22.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c651:10 capacitor 22.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c659:8 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c669:11 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c671:7 capacitor 220n, 35, 40, fr1024, re1, wb, ar100m, nocomp, en, ed
+analog/c679:11 capacitor 65u, 45, 50, fr128, re2, ar20.0m, ed, nocomp, en
+analog/c681:11 capacitor 65u, 35, 40, fr128, re1, ar20.0m, ed, nocomp, en, wb
+analog/c682:10 capacitor 22.1u -3u,  35, 40, fr128, re2, ar20.0m, ed, nocomp
+analog/c686:10 capacitor 22.1u, 35, 40, fr128, re1, ar20.0m, ed, nocomp
+analog/c728:11 capacitor 70u, 35, 60, fr128, re1, ar100.0m, ed, nocomp, en, wb
+analog/c371:11 capacitor 20.1u, 35, 45, fr128, re1, ar20.0m, ed, nocomp
+analog/c1074_c:7 capacitor 100n, 35, 40, fr1024, re3, wb, ar200m, ed, nocomp
+analog/c1356_c:7 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+analog/c1357_c:7 capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, sl, en, nocomp
+analog/c4457:11 capacitor 100n, 35, 40, fr1024, re2, ed, ar50.0m, nocomp
+analog/c13_p1_m1:50 capacitor 4.542m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/c21_m1:25 capacitor 2.191m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/c77_c:15 capacitor 353.5u, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+analog/fc_c6_hs0:11 capacitor 10u, 35, 40, fr1024, ed, re1, ar200m, nocomp 
+analog/fc_c6_hs2:11 capacitor 10u, 35, 40, fr1024, re1, ar100m, nocomp,en,ed
+analog/fc_c6_hs5:11 capacitor 10u, 35, 45, fr1024, re3, ar50m, nocomp, en, ed, wb, wa 100m
+analog/c479:8 capacitor 100p+10p,60,35, fr8192, re3, wb, ar150m, nocomp,ed,  wa 10m, en
+analog/c531:10 capacitor 100p,50,50, fr8192, re3, wb, ar150m, ed, nocomp, am150m, en
+analog/bma4_c10:7 capacitor 470p, 35, 35, fr8192, re4, wb, ar50.0m, comp, fi1
+analog/c1797:11 capacitor 2000p, 50, 50, fr1024, re2, ar20.0m, en, comp, wa .3 !P4C -2A 
+analog/dma1_c23:12 capacitor 2.2n, 35, 40, fr1024, re3, wb, ar20.0m, sl, en, comp
+analog/c780_c:8 capacitor 2.2u, 35, 40, fr1024, re1, ar20.0m, ed, en, nocomp
+analog/c1346_c:8 capacitor 2.2u, 35, 40, fr1024, re1, ar20.0m, sl, en, nocomp
+analog/c207:8 capacitor 1n,35, 35, fr8192, re2, wb, ar150.0m, ed, comp, en
+analog/c208:7 capacitor 1n, 35, 35, fr8192, re3, wb, ar200m, ed, comp
+analog/c209:7 capacitor 1n, 35, 35, fr8192, re3, wb, ed, ar100m, sl, comp
+analog/c210:7 capacitor 1n, 35, 35, fr8192, re3, wb, ar100m, ed, comp
+analog/e_c681:11 capacitor 1n, 35, 35, fr1024, re3, wb, ar50.0m, ed, comp
+analog/fc_c40:8 capacitor 1.4n, 35,40, fr1024, re4, wb, ar50.0m, ed, nocomp ! CACG
+analog/fc_c42:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c43:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c44:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c354:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp, wa20m, en
+analog/fc_c355:7 capacitor 1n, 35, 35, fr8192, re3, wb, en, ed, ar100m, comp
+analog/fc_c1156:7 capacitor 1n, 35, 35, fr8192, re3, wb, ar200m, ed, comp
+analog/fc_c1157:8 capacitor 1n, 35, 35, fr8192, re2, wb, ar50.0m, en, ed, comp
+analog/fc_c1158:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1159:9 capacitor 1.4n, 35,40, fr1024, re4, wb, ar50.0m, ed, nocomp !@ CACG 
+analog/fc_c1160:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1161:8 capacitor 1.4n, 35,40, fr1024, re4, wb, ar50.0m, ed, nocomp
+analog/fc_c1162:7 capacitor 1n, 35, 35, fr8192, re3, en, ed, wb, ar200m, comp
+analog/fc_c1163:8 capacitor 1n, 35, 35, fr8192, re2, wb, ar50.0m, en, ed, comp
+analog/fc_c1164:7 capacitor 1n, 35, 35, fr1024, re3, wb, ar100m, ed, comp
+analog/fc_c1165:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1166:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1167:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1168:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp
+analog/fc_c1169:7 capacitor 1n, 35, 35, fr8192, re3, en, ed, wb, ar100m, comp
+analog/c654:11 capacitor 3.3n, 35, 40, fr1024, re2, ar20.0m, ed, en, comp
+analog/dma1_c8:12 capacitor 8.2n, 40, 40, fr8192, re4, wb, ar150.0m, ed,  nocomp
+analog/dma1_c10:12 capacitor 6.8n, 45, 40, fr128, re3, wb, ar100m, ed, nocomp, wa50m
+analog/dma1_c22:12 capacitor 15n, 50, 50, fr1024, re1, ar20.0m, ed, nocomp
+analog/dma1_r26:13 resistor 991.38,25,20,re4,ar100m, ed, wa .3
+analog/r276:13 resistor 1k,25,20,re3,ar100m,ed
+analog/r477:6 resistor 1k, 25, 20, re3, ar100m, ed, en
+analog/r514_c:8 resistor 1k, 25, 20, re3, ar100m, en, ed
+analog/r515_c:14 resistor 1k, 25, 20, re3, ar200m, en, ed
+analog/r616:8 resistor 1k,25,20,re3,ar100m,ed
+analog/r617:12 resistor 1k,25,20,re3,ar100m,ed
+analog/r621:8 resistor 1k,25,20,re3,ar100m,ed, en
+analog/r622:12 resistor 1k,25,20,re3,ar100m,ed
+analog/r689:8 resistor 1k,25,20,re3,ar100m,ed
+analog/r690:13 resistor 1k,25,20,re3,ar100m,ed
+analog/r914:8 resistor 1k,25,20,re3,ar100m,ed
+analog/r936_c:7 resistor 1k, 25, 20, re3, ar100m, en, ed
+analog/r980:12 resistor 1k,25,20,re3,ar100m,ed
+analog/r1201:8 resistor 1k,25,20,re3,ar100m,ed
+analog/r1396:9 resistor 1k,25,20,re3,ar250m,ed 
+analog/r1577_c:7 resistor 1k, 25, 20, re3, ar100m, ed, wa102m
+analog/r1681:7 resistor 1k, 25, 20, re1, ar200m, en, ed, wa20m
+analog/bma2_r6:8 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa83.4m
+analog/dma1_r31:7 resistor 150, 30, 30, re3, wb, ar200m, en, ed, wa8m
+analog/e_r1007:8 resistor 10k+450,30,20,re3,wb,ar200m,ed, en
+analog/e_r1008:12 resistor 10k,25,20,re4,wb,ar100m,ed,wa50m
+analog/r131:8 resistor 10k,25,20,re4,wb,ar100m,ed
+analog/r132:8 resistor 10k,25,25,re4,wb,ar100m,en,ed 
+analog/r378:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed, wa20m
+analog/r422:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed
+analog/r611:7 resistor 10k, 25, 20, re4, wb, ar100m,ed,wa50m
+analog/r819:9 resistor 10k, 25, 20, re3, wb, ar400m, ed, wa16u, sl,en
+analog/r934_c:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed
+analog/r976:8 resistor 10k, 25, 20, re3, wb, ar100m,ed,  wa25m, sl
+analog/r977:8 resistor 10k, 25, 20, re3, wb, ar100m, ed,wa250m,sl
+analog/r982:9 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa146u, sl,en
+analog/r1041_c:7 resistor 10k, 25, 20, re4, wb, ar100m,wa50m,ed
+analog/r1074_c:7 resistor 10k, 25, 25, re4, wb, ar100m, ed, wa100m
+analog/r1075_c:7 resistor 10k, 25, 20, re2, wb, ar100m, ed, wa50m
+analog/r1076_c:7 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa50m
+analog/r1077_c:7 resistor 10k, 25, 20, re3, wb, ar100m,ed,en, wa 60m 
+analog/r1239:8 resistor 10k+150, 30, 20, re4, wb, ar100m, ed, wa150u, sl
+analog/r1240:8 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa15m, sl
+analog/r1242:9 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa146u, sl,en
+analog/r1243:9 resistor 10k, 30, 20, re4, wb, ar100m, ed, wa146u, sl, en
+analog/r1535_c:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed
+analog/r1541_c:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed
+analog/r1542_c:7 resistor 10k, 25, 20, re4, wb, ar200m, ed
+analog/r1578_c:7 resistor 8k -1000, 35, 38, re4, wb, ar50m,en,ico100m
+analog/r1612_c:8 resistor 158k, 25, 35, re5, wb, ar100m, en, wa 600m, ed   ! Rev 9
+analog/r1639_c:7 resistor 10k, 25, 20, re2, wb, ar180m,en,ed, wa 60m
+analog/r1640_c:7 resistor 10k, 25, 20, re2, wb, ar200m, en, ed, wa 60m
+analog/r1861_c:9 resistor 768, 25, 20, re2, wb, ar470m,en, ed   !C0 !@With 3.3V battery(B1)
+analog/r1862_c:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed
+analog/x_r64:8 resistor 10k,26,20,re4,wb,ar100m,ed
+analog/x_r65:12 resistor 10k,25,20,re4,wb,ar100m,ed
+analog/r64:8 resistor 33, 30, 20, re1, ar200m, en,ed,wb 
+analog/r353:8 resistor 33+5 , 40, 20, re1, ar200m,en, ed
+analog/r1099:8 resistor 33, 40, 20, re2, ar200m, en, ed, wb
+analog/r457:9 resistor 22 + 5, 40, 20, re2, ar100m, en, ed, wb
+analog/r458:8 resistor 22, 40, 20, re2, ar100m,sa,sb, en, ed 
+analog/r469:9 resistor 22, 40, 20, re2, ar500m,ed  !rev 06
+analog/r474:8 resistor 22, 40, 20, re2, ar500m, en, ed, wa25m
+analog/r1421:8 resistor 22, 40, 20, re1, ar190m,ed,en
+analog/r935_c:7 resistor 2.21k, 25, 20, re4, wb, ar500m, en, ed
+analog/bma2_ren_pd:7 resistor 1k, 25, 20, re4, wb, ar200m, en, ed
+analog/bma3_ren_pd:7 resistor 1k, 25, 20, re4, wb, ar200m, ed, en
+analog/bma4_ren_pd:7 resistor 1k, 25, 20, re4, wb, ar200m, en, ed 
+analog/bma5_r6:8 resistor 4.99k, 25, 20, re4, wb, ar200m, en, ed
+analog/bma5_ren_pd:7 resistor 1k, 25, 20, re4, wb, ar200m, en, ed
+analog/fc_r3_hs0:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/fc_r3_hs1:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/fc_r3_hs2:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/fc_r3_hs3:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/fc_r3_hs4:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/fc_r3_hs5:10 resistor 4.99k,25,20,re4,wb,ar200m,ed
+analog/r54_m1:7 resistor 845k, 30, 30, re6, wb, ar100m, ed, wa78.8m
+analog/bma4_r5:12 resistor 1.645k, 25, 20, re4, wb, ar1.00,en,  ed
+analog/bma4_r6:8 resistor 2k, 25, 20, re4, wb, ar500m, en, ed
+analog/dma1_r8:12 resistor 2k,25,20,re4,wb,ar500m,ed
+analog/dma1_r1:9 resistor 550,25,20,re4,wb,ar100m,ed
+analog/r561:7 resistor 1.37k, 25, 20, re4, wb, ar1.00, ed, wa20m
+analog/r565:7 resistor 1.37k, 25, 20, re4, wb, ar1.00, wa30m,en,ed
+analog/r558:11 resistor 13.7k, 25, 28, re5, wb, ar1.00, ed, sl, en,wa 20m
+analog/e_r350:11 resistor 2.86k,25,20, re3, ar200m, wb, en, ed
+analog/e_r956:22 resistor 310+10,35,30,re2,ar200m, wa50m,wb,ed
+analog/e_r954:19 resistor 300, 25,20, re3, ar200m, wa50m,en,ed
+analog/r512_c:7 resistor 499, 25, 20, re3, ar200m,en,ed, wa60m
+analog/e_r1012:22 resistor 100, 30, 20, re2, ar100m, wa42u, ed, en
+analog/fc_r1_hs4:10 resistor 100, 30, 20, re2, ar100m, ed, en
+analog/r4_m1:9 resistor 100, 30, 20, re2, ar100m, en, ed
+analog/r65_m2:9 resistor 100, 35, 20, re2, ar100m, en, ed,wa20m
+analog/r913:9 resistor 100, 30, 20, re2, ar100m, en
+analog/fc_r2_hs0:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/fc_r2_hs1:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/fc_r2_hs2:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/fc_r2_hs3:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/fc_r2_hs4:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/fc_r2_hs5:9 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/r55_m1:8 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/r57_m2:8 resistor 20k,25,25,re5,wb,ar500m,ed
+analog/r1907_c:7 resistor 20k, 25, 25, re3, wb, ar500m, en, ed
+analog/fc_r6_hs2:12 resistor 1.0k , 55, 40, re1, wb, ar100m, ed,am.04 !!!Diodo np 13-100578-01 NEXPERIA and ON
+analog/fc_r6_hs3:12 resistor 1.0k , 55, 40, re1, wb, ar100m, ed,am.04 !!!Diodo np 13-100578-01 NEXPERIA and ON
+analog/fc_r6_hs4:12 resistor 1.0k , 55, 40, re1, wb, ar100m, ed,am.04 !!!Diodo np 13-100578-01 NEXPERIA and ON
+analog/fc_r6_hs5:12 resistor 1.0k , 55, 40, re1, wb, ar100m, ed,am.04 !!!Diodo np 13-100578-01 NEXPERIA and ON
+analog/r462:11 resistor 2.2k, 25, 60, re2, wb, ar500m, en, ed  !rev 06
+analog/r801:7 resistor 2.2k, 25, 20, re4, wb, ar500m, en, ed
+analog/r426:7 resistor 4.7k, 25, 20, re2, wb, en, ed, ar100m 
+analog/fc_r132:6 resistor 240, 30, 20, re3, ar500m, ed
+analog/fc_r133:6 resistor 240, 30, 20, re2, ar500m, en
+analog/r103:6 resistor 240, 30, 20, re3, ar500m,en,ed,wb
+analog/r1810_c:7 resistor 270, 30, 20, re3, ar500m,en,ed,wb
+analog/r496:6 resistor 220, 30, 20, re2, ar500m, en
+analog/r1_m1:7 resistor 112,25,20, re2, wb, ar200m, en, ed 
+analog/r52_m2:7 resistor 125, 25,20, re3, wb, ar1.00, en, ed, wa20m
+analog/r1146_c:9 resistor 33.2 +9, 40, 32, re2, ar200m, en, ed, wb
+analog/r1780_c:8 resistor 33.2+10, 40, 20, re3, ar200m, ed, en
+analog/r56_m2:7 resistor 442k, 30, 30, re6, wb, ar200m, en, ed
+analog/r77_c:8 resistor 150k, 30, 30, re6, wb, ar1.00, en, ed, sl
+analog/r78_c:10 resistor 100k+20k,30,30, re6, wb, ar1.00, en, ed, wa20m
+analog/r165:7 resistor 100k, 25, 25, re5, wb, ar200m, en,ed,wa10m
+analog/r343:6 resistor 100k, 25, 25, re5, wb, ar100m, ed
+analog/r1263:7 resistor 100k, 25, 25, re4, wb, ar400m,en,ed,wa40m
+analog/x_r72:6 resistor 100k, 25, 25, re5,  ar100m,ed
+analog/r507_c:8 resistor 49.9, 30, 20, re1, ar200m,en,ed
+analog/r187:7 resistor 200k, 30, 30, re4, wb, ar500m,wa30m,ed
+analog/r893_c:9 resistor 22.1 +3, 40, 20, re1, ar500m,en,ed,wb,wa 60m
+analog/r1182:8 resistor 22.1, 40, 20, re1, ar500m, ed, en, wa20m
+analog/r1606_c:9 resistor 22.1, 45, 20, re1, ar500m,en,wb,wa 50m
+analog/r1078_c:6 resistor 4.75k, 25, 35, re4, wb, ar200m,ed,en
+analog/r1084_c:6 resistor 4.75k, 25, 35, re4, wb, ar200m,ed
+analog/r505_c:6 resistor 5.1k, 25, 20, re4, wb, ar200m, en, ed
+analog/r941_c:7 resistor 5.1k, 25, 20, re4, wb, ar200m, en, ed
+analog/r460:7 resistor 470, 25, 30, re3, ar200m, ed, en, sl, wa20m, wb
+analog/r692:7 resistor 470, 25, 25, re3, ar200m, ed, wa505u, sl,en
+analog/r490:8 resistor 4.64k, 35, 30, re4, wb, ar200m, en,ed
+analog/r627:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa20m, en, ed
+analog/r1603_c:8 resistor 40.2, 30, 20, re1, ar200m,ed,en
+analog/r648_i2:9 resistor 82k,25,20,re6,wb,ar200m,ed,en,wa50m
+analog/r917_c:7 resistor 10M, 30, 30, re6, wb, ar20.0m, en, ed
+analog/r694:10 resistor 56, 30, 20, re2, ar200m, en, ed
+analog/r695:10 resistor 56, 30, 20, re2, ar200m, en, ed
+analog/r828:9 resistor 82.5, 30, 20, re2, ar100m, en, ed
+analog/r863:9 resistor 82.5, 30, 20, re2, ar100m, en, ed
+analog/r866:9 resistor 82.5, 30, 20, re2, ar100m, wa20m, en
+analog/r3490:9 resistor 82.5, 30, 20, re2, ar100m, wa20m,en
+analog/r868:7 resistor 127, 30, 20, re3, ar1.00, wa505m,sl,ed,en
+analog/r3489:8 resistor 127, 30, 20, re3, ar1.00, wa487m,sl,ed,en
+analog/r3491:8 resistor 127, 30, 20, re3, ar1.00, wa487m,sl,ed,en 
+analog/r928_c:6 resistor 330k, 30, 30, re6, wb, ar500m, en, ed
+analog/r930_c:6 resistor 330k, 30, 30, re6, wb, ar500m, en, ed
+analog/r1073_c:7 resistor 1.02M, 30, 30, re5, wb, ar500m, en, ed
+analog/r1505_c:8 resistor 51.1, 30, 20, re1, ar200m, en, ed, wa 60m
+analog/r1829:7 resistor 5.11k, 25, 20, re4, wb, ar200m, ed, wa650m
+analog/r1905_c:7 resistor 39.2k, 25, 25, re3, wb, ar200m, en, ed
+analog/cr21%ds:11 zener 4.3, 14.4, 23.29, idc39m,  ar3.68,wa200m ,ed,fi5 !!datecode Y9
+analog/cr23%cr:13 diode 970m, 440m, idc99m, co10, ar10.63, ed
+analog/cr23%cr:14 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/d6%cr:12 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr1_hs0%cr:13 diode 990m, 440m, idc98m, co10, ar10.63, ed, wa120m
+analog/fc_cr1_hs0%cr:14 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr1_hs2%cr:12 diode 990m, 440m, idc99m, co10, ar9.63, ed
+analog/fc_cr1_hs2%cr:13 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr1_hs3%cr:13 diode 990m, 440m, idc99m, co10, ar10.63, ed
+analog/fc_cr1_hs3%cr:14 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr1_hs4%cr:12 diode 990m, 440m, idc99.8m, co10, ar10.63, ed, wa 20m
+analog/fc_cr1_hs4%cr:14 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr1_hs5%cr:12 diode 990m, 465m, idc100m, co10, ar10.63, ed
+analog/fc_cr1_hs5%cr:13 warning "A 'wait' option may be required to correctly fail a reversed diode"
+analog/fc_cr12%ds:11 zener 4.3, 12.5, 24.29, idc40m,  ar1.68,wa200m ,ed !!datecode y9
+analog/fc_cr16%ds:12 zener 4.3, 12.5, 25.29, idc39m,  ar1.68,wa300m ,ed, fi5 !!datecode y9
+analog/fc_cr42%ds:12 zener 4.3, 11.4, 24.29, idc38m,  ar1.68,wa300m ,ed !!datecode y9
+analog/fc_cr50%ds:12 zener 4.3, 11.4, 24.29, idc38m,  ar1.68,wa300m ,ed !!datecode y9
+analog/cr20%cr2:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed,wa20m
+analog/cr20%cr3:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed,wa20m
+analog/fc_cr19%cr2:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr19%cr3:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr20%cr2:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr20%cr3:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr21%cr2:10 diode 3.6, 3.1, idc28m, co4.5, ar2.35, ed
+analog/fc_cr21%cr3:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr22%cr2:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr22%cr3:10 diode 3.6, 2.8, idc20m, co4.5, ar2.35, ed
+analog/fc_cr23%cr2:10 diode 3.6, 2.8, idc10m, co4.5, ar2.35, ed
+analog/fc_cr23%cr3:10 diode 3.6, 2.8, idc18m, co4.5, ar2.35, ed
+analog/dma1_cr1:6 diode 990m, 500m, idc60m, co3.2, ar1.04,ed
+analog/dma1_cr2:6 diode 990m, 500m, idc60m, co3.2, ar1.04, ed
+analog/cr22%ds1:12 zener 3.5, 20, 20, idc39m, ar3.68, ed, wa200m,fi5!Changed from BOM
+analog/j2%presence:8 jumper  20.0,  re1, ar200m,ed
+analog/p2%presence:8 jumper  2.0,  re1, ar200m,ed, op ! P4C - A2
+analog/p3%presence:8 jumper  20.0,  re1, ar200m ,ed
+analog/p4%presence:8 jumper  2.0,  re1, ar200m,ed, op !P4C - A2
+analog/p5%presence:8 jumper  2.0,  re1, ar200m  ,ed, op !P4C- A2
+analog/p10%presence:8 jumper  2.0,  re1, ar200m,ed, op !P2C
+analog/p45_50%presence:8 jumper  20.0,  re1, ar200m,ed
+analog/u36_ca%presence:8 jumper  20.0,  re1, ar200m ,ed
+analog/sw3%presence:8 jumper  20.0,  re1, ar200m,ed
+
+         Removing the test option may improve test time.
+
+     Delays                           
+         The following tests contain dwa or wa waits:
+
+analog/bma1_r8:11 jumper 20.0,re1,ar200m,ed, wa20m, en, wb
+analog/bma3_r4:7 jumper 20.0,re2,ar200m,ed,en, wa 20m
+analog/r1927:9 jumper 3,re2,ar200m,op, wa20m  !P4c A2
+analog/c170:11 capacitor 60u, 35, 50, fr128, re1, ar120.0m, ed, nocomp, wa60m,en
+analog/fc_c6_hs5:11 capacitor 10u, 35, 45, fr1024, re3, ar50m, nocomp, en, ed, wb, wa 100m
+analog/c479:8 capacitor 100p+10p,60,35, fr8192, re3, wb, ar150m, nocomp,ed,  wa 10m, en
+analog/fc_c354:7 capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp, wa20m, en
+analog/dma1_c10:12 capacitor 6.8n, 45, 40, fr128, re3, wb, ar100m, ed, nocomp, wa50m
+analog/a_r1273:7 resistor 1k, 25, 20, re3, ar100m, wa253m
+analog/e_r921:11 resistor 1k, 25, 20, re3, ar100m, wa31.2m
+analog/r275:7 resistor 1k, 25, 20, re3, ar100m, wa177m
+analog/r1577_c:7 resistor 1k, 25, 20, re3, ar100m, ed, wa102m
+analog/r1681:7 resistor 1k, 25, 20, re1, ar200m, en, ed, wa20m
+analog/r1897_c:7 resistor 1k, 25, 20, re3, ar100m, wa1.81m
+analog/r1906_c:7 resistor 1k, 25, 20, re3, ar100m, wa2.38m
+analog/bma2_r6:8 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa83.4m
+analog/dma1_r24:7 resistor 10k, 25, 20, re4, wb, ar100m, wa2.78m
+analog/dma1_r31:7 resistor 150, 30, 30, re3, wb, ar200m, en, ed, wa8m
+analog/e_r1008:12 resistor 10k,25,20,re4,wb,ar100m,ed,wa50m
+analog/r378:7 resistor 10k, 25, 20, re4, wb, ar200m, en, ed, wa20m
+analog/r611:7 resistor 10k, 25, 20, re4, wb, ar100m,ed,wa50m
+analog/r819:9 resistor 10k, 25, 20, re3, wb, ar400m, ed, wa16u, sl,en
+analog/r961_c:7 resistor 10k, 25, 20, re4, wb, ar100m,wa50m
+analog/r976:8 resistor 10k, 25, 20, re3, wb, ar100m,ed,  wa25m, sl
+analog/r977:8 resistor 10k, 25, 20, re3, wb, ar100m, ed,wa250m,sl
+analog/r982:9 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa146u, sl,en
+analog/r1041_c:7 resistor 10k, 25, 20, re4, wb, ar100m,wa50m,ed
+analog/r1074_c:7 resistor 10k, 25, 25, re4, wb, ar100m, ed, wa100m
+analog/r1075_c:7 resistor 10k, 25, 20, re2, wb, ar100m, ed, wa50m
+analog/r1076_c:7 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa50m
+analog/r1077_c:7 resistor 10k, 25, 20, re3, wb, ar100m,ed,en, wa 60m 
+analog/r1239:8 resistor 10k+150, 30, 20, re4, wb, ar100m, ed, wa150u, sl
+analog/r1240:8 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa15m, sl
+analog/r1242:9 resistor 10k, 25, 20, re4, wb, ar100m, ed, wa146u, sl,en
+analog/r1243:9 resistor 10k, 30, 20, re4, wb, ar100m, ed, wa146u, sl, en
+analog/r1355_c:6 resistor 10k, 25, 20, re4, wb, ar100m, wa6.47m
+analog/r1383:8 resistor 10k, 25, 20, re4, wb, ar100m, wa20.0u, sl
+analog/r1384:8 resistor 10k -200, 25, 29, re5, ar100m, wa7.55m,wb
+analog/r1612_c:8 resistor 158k, 25, 35, re5, wb, ar100m, en, wa 600m, ed   ! Rev 9
+analog/r1639_c:7 resistor 10k, 25, 20, re2, wb, ar180m,en,ed, wa 60m
+analog/r1640_c:7 resistor 10k, 25, 20, re2, wb, ar200m, en, ed, wa 60m
+analog/r468:8 resistor 22+2, 40, 20, re1, wa50m,  ar500m
+analog/r474:8 resistor 22, 40, 20, re2, ar500m, en, ed, wa25m
+analog/bma1_r5:11 resistor 2.205k, 25, 20, re4, wb, ar500m, wa174m
+analog/bma5_r5:11 resistor 2.205k, 25, 20, re4, wb, ar500m, wa240m
+analog/r1356_c:6 resistor 2.21k, 25, 20, re4, wb, ar500m, wa3.74m
+analog/bma1_r6:8 resistor 4.99k, 25, 20, re4, wb, ar200m, wa174m
+analog/bma3_r6:12 resistor 4.961k, 25, 20, re4, wb, ar200m, wa282m
+analog/r342:6 resistor 4.99k, 25, 20, re4, wb, ar200m, wa20m
+analog/bma2_r5:11 resistor 1.808k, 25, 20, re4, wb, ar500m, wa102m
+analog/r54_m1:7 resistor 845k, 30, 30, re6, wb, ar100m, ed, wa78.8m
+analog/e_r917:11 resistor 1.616k, 25, 20, re4, wb, ar1.00, wa31.2m
+analog/dma1_r11:12 resistor 4.274k, 25, 20, re4, wb, ar200m, wa505u, sl
+analog/dma1_r13:12 resistor 1.362k, 25, 20, re4, wb, ar1.00, wa505m
+analog/r561:7 resistor 1.37k, 25, 20, re4, wb, ar1.00, ed, wa20m
+analog/r565:7 resistor 1.37k, 25, 20, re4, wb, ar1.00, wa30m,en,ed
+analog/r2091:7 resistor 1.37k, 25, 20, re4, wb, ar1.00, wa293m
+analog/r558:11 resistor 13.7k, 25, 28, re5, wb, ar1.00, ed, sl, en,wa 20m
+analog/dma1_r25:11 resistor 2.94k, 25, 20, re4, wb, ar500m, wa6.19m
+analog/e_r956:22 resistor 310+10,35,30,re2,ar200m, wa50m,wb,ed
+analog/e_r954:19 resistor 300, 25,20, re3, ar200m, wa50m,en,ed
+analog/r512_c:7 resistor 499, 25, 20, re3, ar200m,en,ed, wa60m
+analog/e_r1012:22 resistor 100, 30, 20, re2, ar100m, wa42u, ed, en
+analog/r65_m2:9 resistor 100, 35, 20, re2, ar100m, en, ed,wa20m
+analog/fc_r6_hs0:11 resistor 2.2k, 25, 65, re4, wb, ar500m, wa53.3m  !rev06
+analog/fc_r78:7 resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m
+analog/fc_r79:7 resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m
+analog/fc_r80:7 resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m
+analog/fc_r81:7 resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m
+analog/fc_r87:7 resistor 2.2k, 25, 20, re4, wb, ar500m, wa4.57m
+analog/fc_r17:8 resistor 4.7k, 25, 20, re4, wb, ar200m, wa174m
+analog/fc_r18:8 resistor 4.7k, 25, 20, re4, wb, ar200m, wa174m
+analog/fc_r19:8 resistor 4.7k, 25, 20, re4, wb, ar200m, wa174m
+analog/fc_r89:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/fc_r130:8 resistor 4.7k, 25, 20, re4, wb, ar200m, wa174m
+analog/fc_r131:8 resistor 4.7k, 25, 20, re4, wb, ar200m, wa174m
+analog/fc_r142:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/fc_r143:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/fc_r144:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/fc_r145:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/fc_r146:7 resistor 4.7k, 25, 20, re4, wb, ar200m, wa4.58m
+analog/r348_c:9 resistor 4.7k,25,20,re4,wb,ar200m,wa10m
+analog/r410:9 resistor 4.7k,25,20,re4,wb,ar200m,wa14m
+analog/r869:9 resistor 4.7k,25,20,re4,wb,ar200m,wa15m
+analog/r1595:8 resistor 240,30,20,re3,ar500m,wa28m
+analog/fc_r82:7 resistor 220, 30, 20, re3, ar500m, wa1.11m
+analog/fc_r83:7 resistor 220, 30, 20, re1, ar50m, wa9.11m
+analog/fc_r84:7 resistor 220, 30, 20, re3, ar500m, wa1.11m
+analog/fc_r85:7 resistor 220, 30, 20, re3, ar500m, wa1.11m
+analog/fc_r86:7 resistor 220, 30, 20, re3, ar500m, wa1.11m
+analog/fc_r88:7 resistor 220, 30, 20, re3, ar500m, wa1.11m
+analog/r52_m2:7 resistor 125, 25,20, re3, wb, ar1.00, en, ed, wa20m
+analog/r981:11 resistor 2.309k, 25, 20, re4, wb, ar500m, wa92.6m
+analog/r78_c:10 resistor 100k+20k,30,30, re6, wb, ar1.00, en, ed, wa20m
+analog/r1828:11 resistor 200, 30, 20, re3, ar500m, wa288m
+analog/r165:7 resistor 100k, 25, 25, re5, wb, ar200m, en,ed,wa10m
+analog/r958:11 resistor 100k-20k, 25, 25, re5, wb, ar150m, wa14.5m
+analog/r1263:7 resistor 100k, 25, 25, re4, wb, ar400m,en,ed,wa40m
+analog/r1387:11 resistor 100k, 25, 25, re5, wb, ar100m, wa26.5m
+analog/r1920_c:9 resistor 49.9, 30, 20, re2, ar200m, wa1.23u
+analog/r1921_c:9 resistor 49.9, 30, 20, re2, ar200m, wa2.14u
+analog/r187:7 resistor 200k, 30, 30, re4, wb, ar500m,wa30m,ed
+analog/r893_c:9 resistor 22.1 +3, 40, 20, re1, ar500m,en,ed,wb,wa 60m
+analog/r1182:8 resistor 22.1, 40, 20, re1, ar500m, ed, en, wa20m
+analog/r1606_c:9 resistor 22.1, 45, 20, re1, ar500m,en,wb,wa 50m
+analog/r1604_c:10 resistor 4.75k, 25, 20, re4, wb, ar200m, wa4.96m
+analog/r363:8 resistor 1.5k,25,20,re4,wb,ar1.00,wa22m
+analog/r373:7 resistor 1.62k, 25, 20, re4, wb, ar1.00, wa288u, sl
+analog/r460:7 resistor 470, 25, 30, re3, ar200m, ed, en, sl, wa20m, wb
+analog/r692:7 resistor 470, 25, 25, re3, ar200m, ed, wa505u, sl,en
+analog/r557:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa1.03
+analog/r559:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa175m
+analog/r563:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa56.0m
+analog/r567:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa31.8m
+analog/r623:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa31.8m
+analog/r627:7 resistor 4.64k, 25, 20, re4, wb, ar200m, wa20m, en, ed
+analog/r491:11 resistor 2.61k, 25, 20, re4, wb, ar500m, wa237m
+analog/r560:11 resistor 2.61k, 25, 20, re4, wb, ar500m, wa178m
+analog/r556:7 resistor 3.3k, 25, 20, re4, wb, ar500m, wa253m
+analog/r562:11 resistor 510, 25, 20, re3, ar200m, wa505m
+analog/r566:11 resistor 510, 25, 20, re3, ar200m, wa283m
+analog/r2068:11 resistor 510, 25, 20, re3, ar200m, wa253m
+analog/r564:11 resistor 16.9k, 25, 25, re5, wb, ar500m, wa65.7m
+analog/r571:11 resistor 10.5k, 25, 25, re4, wb, ar100m, wa36.7m
+analog/r615:10 resistor 1.1k, 25, 20, re4, wb, ar1.00, wa2.53m
+analog/r624:11 resistor 6.98k, 25, 20, re4, wb, ar100m, wa36.2m
+analog/r625:7 resistor 34.4k, 25, 25, re5, wb, ar200m, wa859m
+analog/r1649:7 resistor 34.4k, 25, 25, re5, wb, ar500m, wa291u, sl
+analog/r626:11 resistor 2.8k, 25, 20, re4, wb, ar500m, wa860m
+analog/r1650:11 resistor 2.8k, 25, 20, re4, wb, ar500m, wa292m
+analog/r628:11 resistor 1.02k, 25, 20, re3, ar100m, wa27.7m
+analog/r648_i2:9 resistor 82k,25,20,re6,wb,ar200m,ed,en,wa50m
+analog/r866:9 resistor 82.5, 30, 20, re2, ar100m, wa20m, en
+analog/r3490:9 resistor 82.5, 30, 20, re2, ar100m, wa20m,en
+analog/r867:7 resistor 127, 30, 20, re3, ar1.00, wa505m
+analog/r868:7 resistor 127, 30, 20, re3, ar1.00, wa505m,sl,ed,en
+analog/r3489:8 resistor 127, 30, 20, re3, ar1.00, wa487m,sl,ed,en
+analog/r3491:8 resistor 127, 30, 20, re3, ar1.00, wa487m,sl,ed,en 
+analog/r946:7 resistor 5.6k, 25, 20, re4, wb, ar200m, wa10.1m
+analog/r1505_c:8 resistor 51.1, 30, 20, re1, ar200m, en, ed, wa 60m
+analog/r1829:7 resistor 5.11k, 25, 20, re4, wb, ar200m, ed, wa650m
+analog/r1830:12 resistor 237, 30, 20, re3, ar500m, wa1.38
+analog/r1831:8 resistor 140k, 30, 30, re6, wb, ar1.00, wa4.19u, sl
+analog/r2064:11 resistor 3.83k, 25, 20, re4, wb, ar200m, wa167m  !P4c a2
+analog/r2087:7 resistor 3.4k, 25, 20, re4, wb, ar200m, wa123m !p4c a2
+analog/a_q28%qf:20 nfetr 208, 50.7, re2, ar200m, wa2.26m
+analog/dma1_q1%qf1:21 nfetr 210, 52.8, re2, ar200m, wa98.6m
+analog/dma1_q1%qf2:117 nfetr 237, 25.3, re2, ar200m, wa576m
+analog/dma1_q2%qf1:21 nfetr 212, 53.5, re2, ar200m, wa39.1m
+analog/dma1_q2%qf2:246 nfetr 220, -10.5, re2, ar200m, wa208m
+analog/fc_q56%qf:19 nfetr 205, 52.8, re2, ar200m, wa0.114m
+analog/fc_q58%qf:19 nfetr 205, 52.8, re2, ar200m, wa0.114m
+analog/fc_q59%qf:19 nfetr 205, 52.8, re2, ar200m, wa0.114m
+analog/fc_q60%qf:19 nfetr 205, 52.8, re2, ar200m, wa0.114m
+analog/q7_c%qf:20 nfetr 207, 51.4, re2, ar200m, wa12.3m
+analog/q30_c%qf:20 nfetr 206, 53.0, re2, ar200m, wa124m
+analog/cr16%ds:10 zener 4.3, 11.4, 9.23, idc10m, co5.8, ar3.68 ,wa20m
+analog/cr17%ds:10 zener 4.3, 15, 15, idc20m, co6.8, ar3.68 ,wa10m
+analog/cr18%ds:10 zener 4.6, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+analog/cr21%cr:10 diode 990m, 500m, idc10m, co3.0, ar845m,wa20m
+analog/cr21%ds:11 zener 4.3, 14.4, 23.29, idc39m,  ar3.68,wa200m ,ed,fi5 !!datecode Y9
+analog/d6%ds:11 zener 3.5, 11.4, 9.23, idc35m, co6.8, ar3.68 ,wa500m
+analog/fc_cr1%cr:10 diode 990m, 500m, idc10m, co3.0, ar845m,wa10m
+analog/fc_cr1%ds:10 zener 4.3, 12.4, 23.49, idc27m, co6.2, ar5.60 ,wa250m !!datecode y6
+analog/fc_cr1_hs0%cr:13 diode 990m, 440m, idc98m, co10, ar10.63, ed, wa120m
+analog/fc_cr1_hs4%cr:12 diode 990m, 440m, idc99.8m, co10, ar10.63, ed, wa 20m
+analog/fc_cr6%ds:10 zener 4.3, 11.4, 9.23, idc15m, co5.8, ar3.68 ,wa20m
+analog/fc_cr7%ds:10 zener 4.3, 12.4, 10.23, idc20m, co5.8, ar3.68 ,wa20m
+analog/fc_cr8%ds:10 zener 4.3, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+analog/fc_cr9%ds:10 zener 4.3, 11.4, 9.23, idc10m, co5.8, ar3.68 ,wa20m
+analog/fc_cr10%ds:10 zener 4.3, 11.4, 9.23, idc15m, co5.8, ar3.78 ,wa20m
+analog/fc_cr12%cr:10 diode 990m, 500m, idc10m, co3.0, ar845m,wa10m
+analog/fc_cr12%ds:11 zener 4.3, 12.5, 24.29, idc40m,  ar1.68,wa200m ,ed !!datecode y9
+analog/fc_cr14%ds:10 zener 4.3, 11.9, 10.23, idc16m, co5.9, ar3.78 ,wa20m
+analog/fc_cr15%ds:10 zener 4.3 +0.2, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+analog/fc_cr16%ds:12 zener 4.3, 12.5, 25.29, idc39m,  ar1.68,wa300m ,ed, fi5 !!datecode y9
+analog/fc_cr28%ds:10 zener 4.3+0.2, 11.4, 9.23, idc20m, co5.8, ar3.68 ,wa20m
+analog/fc_cr37%ds:10 zener 4.3, 11.4, 9.23, idc18m, co5.8, a

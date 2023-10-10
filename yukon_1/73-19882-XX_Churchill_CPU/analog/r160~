@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512851  V12dd                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "SPI_X86_OBFL_WP"
+connect i to "SPIFLASH_WP_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r160" test.

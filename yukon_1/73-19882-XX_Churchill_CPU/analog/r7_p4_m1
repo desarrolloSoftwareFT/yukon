@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512806  V3521                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+disconnect all
+connect s to "P5V"
+connect i to "PMOD_PH4_VDD_M1"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r7_p4_m1" test.

@@ -1,0 +1,712 @@
+!!!!    6    0    1  859855723  V69ff                                         
+!
+!***  All contents copyright 2006 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         24C64
+! Alias:             24C65
+! Part Type:         VLSI
+! Description:       64K Bit (8K X 8) Serial EEPROM
+! Manufacturer:      
+! Package Style:     8 pin SOC
+! Created:           Sep 27, 2002
+! Updated:           Apr 19, 2006. Updated tests for pin WP.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Fault coverage:    100%, Pin test only
+!                          To test pin 7, WP, memory location $1FFF will be
+!                          over-written. If this is not allowed, the test
+!                          units for pin 7, WP, should be deleted.
+! Constraints:       No
+! Cisco Part #:      15-11063-02
+
+sequential
+
+vector cycle 1u
+receive delay 0.9u
+
+assign VCC  to pins 8
+assign GND  to pins 4
+
+assign ABUS to pins 5,6,7
+assign SCL  to pins 2
+assign SDA  to pins 1
+assign WP   to pins 3
+
+power  VCC, GND
+inputs ABUS,SCL,WP
+bidirectional SDA
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector A_000
+ drive SDA
+ set ABUS to "000"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_001
+ drive SDA
+ set ABUS to "001"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_010
+ drive SDA
+ set ABUS to "010"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_011
+ drive SDA
+ set ABUS to "011"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_100
+ drive SDA
+ set ABUS to "100"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_101
+ drive SDA
+ set ABUS to "101"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_110
+ drive SDA
+ set ABUS to "110"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_111
+ drive SDA
+ set ABUS to "111"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS to "kkk"
+ set SCL  to "k"
+ set SDA  to "x"
+ set WP   to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS to "kkk"
+ set SCL  to "k"
+ set SDA  to "k"
+ set WP   to "k"
+end vector
+
+vector WP_0
+ initialize to KEEP2
+ set WP     to "0"
+end vector
+
+vector WP_1
+ initialize to KEEP2
+ set WP     to "1"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector IDLE1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SCL    to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ repeat 10 times
+ execute D_1
+ end repeat
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)  ! Read protocol
+ execute D7
+ execute SK_11
+ execute SK_10
+ execute D6
+ execute SK_11
+ execute SK_10
+ execute D5
+ execute SK_11
+ execute SK_10
+ execute D4
+ execute SK_11
+ execute SK_10
+ execute D3
+ execute SK_11
+ execute SK_10
+ execute D2
+ execute SK_11
+ execute SK_10
+ execute D1
+ execute SK_11
+ execute SK_10
+ execute D0
+ execute SK_11
+ execute SK_10
+ execute D_0      ! Acknowledge bit
+ execute SK_21
+ execute SK_10
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      !  with Acknowledge bit active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      ! Acknowledge bit not active
+ execute SK_11
+ execute SK_10
+end sub
+
+! ***************************************************************************
+
+unit "A = 000"
+ repeat 20 times
+  execute A_000
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 000, Pin WP test"
+! execute A_000
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 001"
+ repeat 20 times
+  execute A_001
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 001, Pin WP test"
+! execute A_001
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 010"
+ repeat 20 times
+  execute A_010
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 010, Pin WP test"
+! execute A_010
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 011"
+ repeat 20 times
+  execute A_011
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 011, Pin WP test"
+! execute A_011
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 100"
+ repeat 20 times
+  execute A_100
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 100, Pin WP test"
+! execute A_100
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 101"
+ repeat 20 times
+  execute A_101
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 101, Pin WP test"
+! execute A_101
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 110"
+ repeat 20 times
+  execute A_110
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 110, Pin WP test"
+! execute A_110
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+
+! ***************************************************************************
+
+unit "A = 111"
+ repeat 20 times
+  execute A_111
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+!unit "A = 111, Pin WP test"
+! execute A_111
+! repeat 20 times
+!  execute WP_0
+! end repeat
+! call STRT                                  ! Write A = $1FFF, D = $A6
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+! call STOP
+! wait 20m
+!
+! repeat 20 times                            ! Write A = $1FFF, D = $59
+!  execute WP_1                              ! with WP = 1
+! end repeat
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_0,D_1,D_0,D_1, D_1,D_0,D_0,D_1)
+! call STOP
+! wait 20m
+!
+! call STRT                                  ! Read A = $1FFF
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_0)
+! call WR(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_1)
+! call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_1)
+! call STOP
+! call STRT
+! call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_1)
+! call RD(R_1,R_0,R_1,R_0, R_0,R_1,R_1,R_0)
+! call STOP
+!end unit
+

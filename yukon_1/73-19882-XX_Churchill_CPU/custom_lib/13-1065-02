@@ -1,0 +1,14 @@
+!!!!   21    2    1 1594122957  V56ff                                         
+
+diode "Pin_3_1",    600m, 400m, nr
+diode "Pin_3_2",    600m, 400m, nr
+
+external pins 1
+   device "Pin_3_1" pins "A"
+
+external pins 2
+   device "Pin_3_2" pins "A"
+
+external pins 3
+   device "Pin_3_1" pins "C"
+   device "Pin_3_2" pins "C"

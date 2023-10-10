@@ -1,0 +1,9 @@
+!!!!    2    0    1 1623166526   0000                                         
+on failure
+   report "Check for P1 presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "P1_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m, op ! P2C
+off failure

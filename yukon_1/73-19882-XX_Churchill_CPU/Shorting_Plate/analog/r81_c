@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_38_CAP_I48_B P-Pin resistance"
+report "check nodes UNNAMED_38_NMOSFET5P_I50_G P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_38_CAP_I48_B"
+connect i to "UNNAMED_38_NMOSFET5P_I50_G"
+resistor 10,20,100, re1, ar100m,ed
+off failure

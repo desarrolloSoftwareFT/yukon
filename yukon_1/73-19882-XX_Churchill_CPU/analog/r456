@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512896  Vd035                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "UNNAMED_4189_AST2520_I1_GPIOD7SD2WPM"
+connect i to "BMC_EMMC_RST_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r456" test.

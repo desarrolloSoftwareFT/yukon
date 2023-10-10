@@ -1,0 +1,7 @@
+!!!!    2    0    1 1596691168   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:11 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_1_RES_I5_B"
+!@connect g to "PMOD_PVCCSCFUSESUS_EN"
+resistor 1k, 25, 20, re4, wb, ar200m, en, ed 

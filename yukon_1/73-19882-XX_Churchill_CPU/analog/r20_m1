@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512819  Vc600                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+disconnect all
+connect s to "PIN_ALT_RESET_L_M1"
+connect i to "PVCCIN_P1V05_VCCSUS_PIN_ALT_RESET_3V_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r20_m1" test.

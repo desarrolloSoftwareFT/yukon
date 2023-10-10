@@ -1,0 +1,7 @@
+!!!!    2    0    1 1671176801   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:17 2020
+disconnect all
+connect s to "FAN1011_AMB_LED_CON"
+connect i to "A3P3V"
+diode 2.35, 1.73, idc20m, co4.5, ar2.35
+! "cr20%cr1" test.

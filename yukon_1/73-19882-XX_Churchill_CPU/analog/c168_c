@@ -1,0 +1,16 @@
+!!!!    2    0    1 1609287497   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:47 2020
+on failure
+   report parallel devices
+   report "c1162_c 1.00u"
+   report "x_c117 1.00u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P3V3_VBAT"
+connect g to "RST_SRTCRST_L_C" 
+connect g to "RST_RTCRST_L" 
+capacitor 14u, 45,40, fr128, re2, ar20.0m, ed, nocomp 
+! "c168_c" test.
+off failure
+

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175943   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:04 2020
+disconnect all
+connect s to "GND"
+connect i to "DC_VCCSUS3_C"
+jumper 10.0k, re4, wb, ar100m, op
+! "c98_c" test.

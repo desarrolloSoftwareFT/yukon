@@ -1,0 +1,7 @@
+!!!!    2    0    1 1618522792   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:20 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "CLK100M_I210_PE_AC_DP"
+connect gl to "GND" 
+resistor 470, 25, 25, re3, ar200m, ed, wa505u, sl,en

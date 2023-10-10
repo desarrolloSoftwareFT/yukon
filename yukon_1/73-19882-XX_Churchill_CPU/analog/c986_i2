@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600863916  V3da0                                         
+!* 27pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:53 2020
+disconnect all
+connect s to "GND"
+connect i to "MGMT_PHY_XTAL_IN2_R"
+connect g to "MGMT_PHY_XTAL_IN1_R"
+capacitor 27p, 115.00, 15.00, fr8192, re5, wb, ar50.0m, comp
+! "c986_i2" test.

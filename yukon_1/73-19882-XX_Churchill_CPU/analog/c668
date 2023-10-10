@@ -1,0 +1,9 @@
+!!!!    2    0    1 1661842565   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:47 2020
+disconnect all
+connect s to "GND"
+connect i to "P3V3_STBY_ON"
+!connect gl to "P12V_STBY" 
+!connect g to "UNNAMED_108_CAP_I56_B" 
+capacitor 1u-.18u, 35, 40, fr1024, re2, ar100m, ed, nocomp
+! "c668" is a limited test.

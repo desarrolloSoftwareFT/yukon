@@ -1,0 +1,32 @@
+!!!!    2    0    1 1594175936   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:57 2020
+on failure
+   report parallel devices
+   report "r493_c"
+   report "r494_c"
+   report "r502_c"
+   report "r503_c"
+   report "r504_c"
+   report "r518_c"
+   report "bma5_c5 100u"
+   report "bma5_c6 10.0u"
+   report "bma5_c11 100u"
+   report "bma5_c13 100u"
+   report "bma5_c14 100u"
+   report "c401_c 1.00u"
+   report "c403_c 10.0u"
+   report "c406_c 1.00u"
+   report "c408_c 1.00u"
+   report "c457_c 1.00u"
+   report "c459_c 10.0u"
+   report "c462_c 1.00u"
+   report "c464_c 1.00u"
+   report "c788_c 100n"
+   report "bma5_c7 100p"
+end on failure
+disconnect all
+connect s to "P2V5_VPP_2"
+connect i to "GND"
+jumper 1.00k, re4, wb, ar1.00, op
+! "bma5_c16" test.
+off failure

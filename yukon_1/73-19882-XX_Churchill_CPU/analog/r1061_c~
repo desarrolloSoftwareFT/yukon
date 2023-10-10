@@ -1,0 +1,6 @@
+!!!!    2    0    1 1622930423   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:00 2020
+disconnect all
+connect s to "GND"
+connect i to "PCH_UART0_TXD_1V"
+resistor 5.1k, 25, 25, re4, wb, ar200m

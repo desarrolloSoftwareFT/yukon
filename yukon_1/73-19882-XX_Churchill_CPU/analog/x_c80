@@ -1,0 +1,14 @@
+!!!!    2    0    1 1597477521   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:35 2020
+on failure
+   report parallel devices
+   report "x_r65 10.0k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PMOD_DDR4_VTT_REFIN"
+!connect gl to "A1_2V" 
+capacitor 10n, 35, 40, fr1024, re3, wb, ar50.0m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "x_c80" is a commented test.
+off failure

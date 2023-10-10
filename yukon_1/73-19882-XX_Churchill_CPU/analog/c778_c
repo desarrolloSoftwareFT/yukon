@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176116   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:57 2020
+disconnect all
+connect s to "GND"
+connect i to "XTAL_CPU_RTC_32K_OUT"
+connect g to "XTAL_CPU_RTC_32K_IN" 
+capacitor 20p, 150.00, 15.00, fr8192, re5, wb, ar50.0m, comp
+! "c778_c" test.

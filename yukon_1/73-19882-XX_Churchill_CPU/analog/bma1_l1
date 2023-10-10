@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512702  Vebda                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:02 2020
+disconnect all
+connect i to "PWR_A2V5_DIDT"
+connect s to "A2_5V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma1_l1" test.

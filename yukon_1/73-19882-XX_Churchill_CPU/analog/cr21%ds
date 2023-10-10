@@ -1,0 +1,13 @@
+!!!!    2    0    1 1660574553   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:05 2020
+on failure
+   report parallel devices
+   report "cr21 cr21%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN1011_PRSNT_L"
+!zener 4.3, 11.4, 19.29, idc32m, co5.8, ar3.68 ,wa200m !!datecode Y6
+zener 4.3, 14.4, 23.29, idc39m,  ar3.68,wa200m ,ed,fi5 !!datecode Y9
+! "cr21%cr" test.
+off failure

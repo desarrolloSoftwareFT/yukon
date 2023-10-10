@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512934  V4f53                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "I2C_MB_ALERT_R"
+connect i to "MB_I2C_ALERT_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r684" test.

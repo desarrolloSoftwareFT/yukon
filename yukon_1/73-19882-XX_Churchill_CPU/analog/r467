@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512898  Vb9c5                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_MISO"
+connect i to "SRT_BMC_SPI2_MUX_MISO"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r467" test.

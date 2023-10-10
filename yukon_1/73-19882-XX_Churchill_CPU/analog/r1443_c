@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175985   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:46 2020
+disconnect all
+connect s to "P3V3"
+connect i to "PCH_RSMRST_L"
+jumper 5.02k, re4, wb, ar200m, op
+! "r1443_c" test.

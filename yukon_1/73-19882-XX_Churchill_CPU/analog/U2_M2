@@ -1,0 +1,19 @@
+!!!!    2    0    1 1594193247  V2e4d                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+  test "OUT"
+end test
+
+
+
+subtest "OUT"
+  connect i to "P1V2_VDDQ"
+  connect l to ground
+
+  detector dcv, expect 1.2
+  measure  1.29, 1.14
+end subtest
+
+
+

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1660654096   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:01 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "I2C_DDR_SCL_ST_C"
+resistor 4.7k, 25, 35, re4, wb, ar200m,am.02

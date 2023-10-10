@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176592   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect s to "CPU_SPI_CS1_L_ST_C"
+connect i to "SPI_PCH_CS1_L"
+connect a to "CPU_SPI_CS1_L_ST_C"
+connect b to "SPI_PCH_CS1_L"
+resistor 33.2, 40, 20, re2, ar200m
+! "r877_c" test.

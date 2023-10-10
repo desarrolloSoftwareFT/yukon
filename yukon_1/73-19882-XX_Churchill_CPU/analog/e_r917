@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176330   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:31 2020
+on failure
+   report parallel devices
+   report "r356 78.7k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PVCCKRHV_FB"
+connect g to "PVCCKRHV" 
+resistor 1.616k, 25, 20, re4, wb, ar1.00, wa31.2m
+off failure

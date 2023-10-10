@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176496   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:17 2020
+disconnect all
+connect s to "GND"
+connect i to "FPGA_BMC_UART5_RXD"
+resistor 4.7k, 25, 20, re4, wb, ar200m

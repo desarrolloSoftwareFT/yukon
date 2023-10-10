@@ -1,0 +1,43 @@
+!!!!    2    0    1 1601047828  V3574                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+ ! test "IN"
+ ! test "EN"
+  test "OUT"
+ ! test "PG"
+end test
+
+subtest "IN"
+  connect i to pins 1
+  connect l to ground
+
+  detector dcv, expect 5
+  measure 5.5, 4.5
+end subtest
+
+subtest "EN"
+  connect i to pins 5
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 2.7, 2.0
+end subtest
+
+subtest "OUT"
+  connect i to "PVCCKRHV"
+  connect l to ground
+
+  detector dcv, expect 1.365
+  measure  1.49, 1.23
+end subtest
+
+subtest "PG"
+  connect i to pins 3
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.5 , 2.0
+end subtest
+
+

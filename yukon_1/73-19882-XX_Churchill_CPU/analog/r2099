@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176500   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:21 2020
+disconnect all
+connect i to "SRT_SF_JTAG_TCK"
+connect s to "A3P3V"
+connect g to "UNNAMED_4206_CAP_I795_B" 
+resistor 4.7k, 25, 20, re4, wb, ar200m

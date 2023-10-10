@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176237   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:58 2020
+disconnect all
+connect s to "P3V3_PCH_2"
+connect i to "FM_BDXDE_ERR0_LVT3_N"
+resistor 10k, 25, 20, re4, wb, ar100m

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512886  V4a24                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "PMOD_P1V5_PCH_EN"
+connect i to "UNNAMED_6_CAP_I7_B"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r364" test.

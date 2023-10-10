@@ -1,0 +1,33 @@
+!!!!   24    0    1 1600601349  V6377                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:08 2020
+
+connect "u1"
+test inputs only
+ground bounce suppression   on
+family "LVT"
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+!@tdi "CPLD_JTAG_TDI"
+!@tdo "CPLD_JTAG_TDO"
+!@tms "CPLD_JTAG_TMS"
+!@tck "CPLD_JTAG_TCK"
+  devices
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+nodes
+!@node "BMC_CPU_SPIFLASH_SEL" family "LVT_2V5" hybrid test "u1.T13"
+  node "PCH_I210_PERST_L" hybrid test "u1.T14"
+end nodes
+
+!IPG: Family information could not be found for node BMC_CPU_SPIFLASH_SEL
+!IPG: Family information could not be found for node PCH_I210_PERST_L
+end connect
+

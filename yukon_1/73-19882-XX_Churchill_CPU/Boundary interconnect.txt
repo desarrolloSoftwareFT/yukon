@@ -1,0 +1,40 @@
+----------------------------------------
+73-19882-04
+Sat Nov 07 12:57:37 2020
+----------------------------------------
+u1_c_u1 HAS FAILED
+Failing Vector #: 54 (message follows)
+Test Status (hex) = 15
+IEEE Std 1149.1-2001 Integrity Failure
+  Device U1_C_PCH has failed,
+  suspect device or these pins:
+  (tck)  BM3
+  (tms)  BJ2
+  (tdi)  BM5
+  (tdo)  BK3
+----------------------------------------
+u1_c_u1_aio HAS FAILED
+Failing Vector #: 54 (message follows)
+Test Status (hex) = 15
+IEEE Std 1149.1-2001 Integrity Failure
+  Device U1_C_PCH has failed,
+  suspect device or these pins:
+  (tck)  BM3
+  (tms)  BJ2
+  (tdi)  BM5
+  (tdo)  BK3
+----------------------------------------
+u1_c_u8_dis HAS FAILED
+vector      = 54
+Status:  15H
+Pass/Fail error on following pins:
+BRRCC  NODE            PIN
+20904  ljtag_tdo_hdr_3v3_mux
+IEEE Std 1149.1-2001 Integrity Failure
+  Device U1_C_P has failed,
+  suspect device or these pins:
+  (tck)  BM3
+  (tms)  BJ2
+  (tdi)  BM5
+  (tdo)  BK3
+----------------------------------------

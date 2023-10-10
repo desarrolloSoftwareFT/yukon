@@ -1,0 +1,77 @@
+!!!!    6    0    1 1665788034   0000                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:44 2019
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         AUC1G00
+! Alias:             AUC1G00, IC-LOGIC,NAND
+! Part Type:         VLSI
+! Description:       TinyLogic UHS Buffer with 3_State Output
+! Manufacturer:      Fairchild, Texas Instruments
+! Package Style:     5 pin SOT23
+! Created:           Sep 23, 2001
+! Updated:           Jul 25, 2005. Added alias and Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-3254-01,15-101781-01
+
+sequential
+
+vector cycle 60u
+receive delay 50u
+
+default device "u137_c"
+set terminators to on
+assign VDD   to pins *
+assign GND   to pins *
+
+power VDD,GND
+
+assign DIN  to pins 1,2
+assign DOUT to pins 4
+
+inputs  DIN
+outputs DOUT
+
+family LVT_1V05
+
+set load on pins 4 to pull up
+set ref on groups DOUT to rh 1.0, rl 0.5
+
+vector DIN_00
+ set DIN  to "00"
+ set DOUT to "1"
+end vector
+
+vector DIN_01
+ set DIN  to "01"
+ set DOUT to "0"!!Tomnas
+end vector
+
+vector DIN_10
+ set DIN  to "10"
+ set DOUT to "1"
+end vector
+
+vector DIN_11
+ set DIN  to "11"
+ set DOUT to "0"
+end vector
+
+! ************************************************
+
+unit"test"
+  execute DIN_01
+  execute DIN_10
+  execute DIN_01
+  execute DIN_11
+end unit

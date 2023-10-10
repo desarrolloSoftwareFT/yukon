@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175973   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:34 2020
+disconnect all
+connect i to "CPU_SATA1GP_GPIO19"
+connect s to "GND"
+jumper 5.09k, re4, wb, ar200m, op
+! "r1032_c" test.

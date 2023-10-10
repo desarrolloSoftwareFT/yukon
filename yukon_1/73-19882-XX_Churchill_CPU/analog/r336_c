@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512878  V00b9                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "SPI0_PCH_CS0_L_C"
+connect i to "UNNAMED_152_PI5A3157_I24_A_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r336_c" test.

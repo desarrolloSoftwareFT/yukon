@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BMFPGA_BUF_SPI_FLSH_SEL P-Pin resistance"
+report "check nodes BMFPGA_SPI_GOLD_SEL P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BMFPGA_BUF_SPI_FLSH_SEL"
+connect i to "BMFPGA_SPI_GOLD_SEL"
+resistor 10,20,100, re1, ar100m,ed
+off failure

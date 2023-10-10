@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600915157  V64b9                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:11 2020
+disconnect all
+connect i to "BMC_SPI2_MUX_CLK"
+connect s to "GND"
+!@connect g to "SRT_BMC_SPI2_MUX_CLK"
+resistor 100k, 25, 25, re4, wb, ar400m,en,ed,wa40m

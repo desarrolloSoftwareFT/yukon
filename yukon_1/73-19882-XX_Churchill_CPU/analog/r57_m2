@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513072  Va269                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:34 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_25_BROADWELLTI536591PLUS1_I32"
+connect g to "PMOD_VREF_P1V2_VCCGBE_CSN"
+!B!resistor 20k, 25, 25, re5, wb, ar500m, wa1.01m
+resistor 20k,25,25,re5,wb,ar500m,ed

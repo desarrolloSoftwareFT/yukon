@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes P12V P-Pin resistance"
+report "check nodes FAN23_EN P-Pin resistance"
+end on failure
+disconnect all
+connect s to "P12V"
+connect i to "FAN23_EN"
+resistor 10,20,100, re1, ar100m,ed
+off failure

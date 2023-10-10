@@ -1,0 +1,9 @@
+!!!!    2    0    1 1689789844   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:42 2020
+disconnect all
+connect s to "JTAG_BMC_FPGA_TDO"
+connect i to "SRT_JTAG_BMC_FPGA_TDO"
+connect a to "JTAG_BMC_FPGA_TDO"
+!connect b to "SRT_JTAG_BMC_FPGA_TDO"
+resistor 33, 40, 20, re2, ar200m
+! "r811" test.

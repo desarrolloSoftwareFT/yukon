@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600589891   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:02 2020
+on failure
+   report parallel devices
+   report "a_q28 a_q28%qf 200, 50.0"
+end on failure
+disconnect all
+connect s to "P12V_STBY"
+connect i to "PWR_A3V3_DIDT"
+diode 990m, 500m, idc50m, co3.0, ar845m
+! "dma1_q2%cr2" test.
+off failure

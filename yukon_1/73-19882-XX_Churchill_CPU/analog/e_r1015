@@ -1,0 +1,11 @@
+!!!!    2    0    1 1594176128   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:09 2020
+on failure
+   report parallel devices
+   report "e_c699 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FM_CPLD_P0V6_VTT_DIMM_EN_R"
+resistor 1k, 25, 20, re3, ar100m
+off failure

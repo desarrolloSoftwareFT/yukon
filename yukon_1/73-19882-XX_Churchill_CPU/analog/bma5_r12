@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512724  V8b85                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect s to "PMOD_P2V5_VPP_TRIM"
+connect i to "UNNAMED_7_CAP_I36_B"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma5_r12" test.

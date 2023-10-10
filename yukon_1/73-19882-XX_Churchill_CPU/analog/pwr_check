@@ -1,0 +1,257 @@
+!!!!    2    0    1 1668620630  Vc69f                                         
+
+test powered analog
+  test "P12V"
+  test "P12V_STBY"
+!  test "FAN01_P12V_PWR_F"
+!  test "FAN23_P12V_PWR_F"
+!  test "FAN45_P12V_PWR_F"
+!  test "FAN67_P12V_PWR_F"
+!  test "FAN89_P12V_PWR_F"
+!  test "FAN1011_P12V_PWR_F"
+  test "P5V"
+  test "A3P3V"
+  test "A2_5V"
+  test "A1_2V"
+! test "P2V5_VPP_2" !@RTJ pending to validate
+  test "P3V3"
+  test "P3V3_PCH_2"
+  test "P1V5_PCH_2"
+  test "P1V2_VDDQ"
+  test "VP3P3_SATA"
+!  test "P1V15_BMC"    P4C A2
+  test "PVCCSCFUSESUS"
+  test "PVCCKRHV"
+  test "PVCCIN"
+  test "P1V05_COMBINED"
+  test "P1V05_VCCSUS"
+  test "P0V6_VTT_2"
+!  test "DDR4_VTT"     P4C A2
+!  test "DDR4_VREF"    P4C A2
+
+
+end test
+
+!##########################
+
+subtest "P12V"
+  connect i to nodes "P12V"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "P12V_STBY"
+  connect i to nodes "P12V_STBY"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN01_P12V_PWR_F"
+  connect i to nodes "FAN01_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN23_P12V_PWR_F"
+  connect i to nodes "FAN23_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN45_P12V_PWR_F "
+  connect i to nodes "FAN45_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN67_P12V_PWR_F"
+  connect i to nodes "FAN67_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN89_P12V_PWR_F"
+  connect i to nodes "FAN89_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "FAN1011_P12V_PWR_F"
+  connect i to nodes "FAN1011_P12V_PWR_F"
+  connect l to ground      ! GND
+  detector dcv, expect 12
+  measure  12.6, 11.4
+end subtest
+
+subtest "P5V"
+  connect i to nodes "P5V"
+  connect l to ground      ! GND
+  detector dcv, expect 5
+  measure  5.28, 4.75
+end subtest
+
+subtest "A3P3V"
+  connect i to nodes "A3P3V"
+  connect l to ground      ! GND
+  detector dcv, expect 3.3
+  measure   3.465,  3.135
+end subtest
+
+subtest "A2_5V"
+  connect i to nodes "A2_5V"
+  connect l to ground      ! GND
+  detector dcv, expect 2.5
+  measure   2.625,  2.375
+end subtest
+
+subtest "A1_2V"
+  connect i to nodes "A1_2V"
+  connect l to ground      ! GND
+  detector dcv, expect 1.2
+  measure  1.29, 1.14
+end subtest
+
+subtest "P2V5_VPP_2"
+  connect i to nodes "P2V5_VPP_2"
+  connect l to ground      ! GND
+  detector dcv, expect 2.5
+wait 20m
+  measure   2.625,  2.3175
+end subtest
+
+subtest "P3V3"
+  connect i to nodes "P3V3"
+  connect l to ground      ! GND
+  detector dcv, expect 3.3
+  measure  3.465,  3.135
+end subtest
+
+subtest "P3V3_PCH_2"
+  connect i to nodes "P3V3_PCH_2"
+  connect l to ground      ! GND
+  detector dcv, expect 3.3
+  measure  3.465,  3.135
+end subtest
+
+subtest "VP3P3_SATA"
+  connect i to nodes "VP3P3_SATA"
+  connect l to ground      ! GND
+  detector dcv, expect 3.3
+  measure  3.465,  3.135
+end subtest
+
+
+subtest "P1V5_PCH_2"
+  connect i to nodes "P1V5_PCH_2"
+  connect l to ground      ! GND
+  detector dcv, expect 1.5
+  measure  1.60, 1.45
+end subtest
+
+subtest "P1V2_VDDQ"
+  connect i to nodes "P1V2_VDDQ"
+  connect l to ground      ! GND
+  detector dcv, expect 1.2
+  measure  1.28, 1.14
+end subtest
+
+subtest "P1V15_BMC"
+  connect i to nodes "P1V15_BMC"
+  connect l to ground      ! GND
+  detector dcv, expect 1.15
+  measure  1.265, 1.035
+end subtest
+
+subtest "PVCCSCFUSESUS"
+  connect i to nodes "PVCCSCFUSESUS"
+  connect l to ground      ! GND
+  detector dcv, expect 1.7
+  measure  1.83, 1.58
+end subtest
+
+subtest "PVCCKRHV"
+  connect i to nodes "PVCCKRHV"
+  connect l to ground      ! GND
+  detector dcv, expect 1.365
+  measure  1.49, 1.23
+end subtest
+
+subtest "PVCCIN"
+  connect i to nodes "PVCCIN"
+  connect l to ground      ! GND
+  detector dcv, expect 1.8
+  measure  1.89, 1.64
+end subtest
+
+subtest "P1V05_COMBINED"
+  connect i to nodes "P1V05_COMBINED"
+  connect l to ground      ! GND
+  detector dcv, expect 1.05
+  measure  1.155, 0.945
+end subtest
+
+subtest "P1V05_VCCSUS"
+  connect i to nodes "P1V05_VCCSUS"
+  connect l to ground      ! GND
+  detector dcv, expect 1.05
+  measure  1.155, 0.945
+end subtest
+
+subtest "P0V6_VTT_2"
+  connect i to nodes "P0V6_VTT_2"
+  connect l to ground      ! GND
+  detector dcv, expect 0.6
+   measure   0.66,0.54
+end subtest
+
+subtest "DDR4_VTT"
+  connect i to nodes "DDR4_VTT"
+  connect l to ground      ! GND
+  detector dcv, expect 0.6
+   measure   0.66,0.54
+end subtest
+
+
+subtest "DDR4_VREF"
+  connect i to nodes "DDR4_VREF"
+  connect l to ground      ! GND
+  detector dcv, expect 0.6
+  measure   0.66,0.54
+end subtest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
