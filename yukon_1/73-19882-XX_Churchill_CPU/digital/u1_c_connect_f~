@@ -1,0 +1,152 @@
+!!!!   24    0    1 1597893344  V79b3                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:09 2020
+
+connect "u1_c"
+
+test inputs only
+
+ground bounce suppression   on
+family "LVT_1V05"
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX" family "LVT"
+  tdo "LJTAG_TDO_HDR_3V3_MUX" family "LVT"
+  tms "LJTAG_TMS_HDR_3V3_MUX" family "LVT"
+  tck "LJTAG_TCK_HDR_3V3_MUX" family "LVT"
+  trst "LJTAG_TRST_L_HDR_3V3" family "LVT"
+  devices
+    "u1_c", "bsdl//15-104798-01_cpu.bsm", "lga", no
+    "u1_c_pch", "bsdl//15-104798-01_pch.bsm", "bga", yes
+!@  "u1_c", "bsdl/b1510634101_BDX_DE_NS.BSDL", "lga", no
+!@  "u1_c_p", "bsdl//15-106341-01_pch.bsm", "bga", yes
+    "u1_i2", "bsdl//b1510342501_i210.bsm", "I210", no
+!@  "u1", "bsdl//lcmxo3lf-1300-bga256.bsm", "cabga256", no
+!@  "u8", "bsdl//15-105116-01.bsm", "ITFBGA456_2", yes
+  end devices
+end chain
+
+disables "disable vector"
+ node "BDXDE_DRAM_PWROK" family "LVT_1V05" hybrid default "1"
+ node "LAN_PWRGOOD_C" family "LVT_1V05" hybrid default "1"
+ node "PWRGOOD_CPU_C" family "LVT_1V05" hybrid default "1"
+
+ pcf order is nodes "BDXDE_DRAM_PWROK","PWRGOOD_CPU_C","LAN_PWRGOOD_C"
+  unit "disable_1"
+  pcf
+ "111"
+  end pcf
+  end unit
+end disables
+
+set slew rate on nodes "LJTAG_TDI_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TMS_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TCK_HDR_3V3_MUX" to 250
+
+nodes
+  silicon node  "M_A_CS_N<0>" hold high  "u1_c.CL54"
+  silicon node  "M_A_CS_N<1>" hold high  "u1_c.CJ58"
+  silicon node  "M_A_CS_N<4>" hold high  "u1_c.CD54"
+  silicon node  "M_A_CS_N<5>" hold high  "u1_c.CF52"
+!@node "M_A_ALERT_N" hybrid test "u1_c.CK33"
+  node "M_A_BA<0>" hybrid test "u1_c.CH52"
+  node "M_A_CKE<1>" hybrid test "u1_c.CG32"
+  node "M_A_CLK_DN<0>" hybrid test "u1_c.CJ47"
+  node "M_A_CLK_DN<2>" hybrid test "u1_c.CG47"
+!@node "M_A_CS_N<1>" hybrid test "u1_c.CJ58"
+  node "M_A_DQ<14>" hybrid test "u1_c.CK7"
+  node "M_A_DQ<15>" hybrid test "u1_c.CJ9"
+  node "M_A_DQ<22>" hybrid test "u1_c.CJ13"
+  node "M_A_DQ<23>" hybrid test "u1_c.CK14"
+  node "M_A_DQ<41>" hybrid test "u1_c.CJ66"
+  node "M_A_DQ<43>" hybrid test "u1_c.CJ72"
+  node "M_A_DQ<45>" hybrid test "u1_c.CK64"
+  node "M_A_DQS_DN<1>" hybrid test "u1_c.CH7"
+  node "M_A_DQS_DN<2>" hybrid test "u1_c.CG13"
+  node "M_A_DQS_DN<17>" hybrid test "u1_c.CK22"
+  node "M_A_DQS_DP<1>" hybrid test "u1_c.CG9"
+  node "M_A_DQS_DP<2>" hybrid test "u1_c.CH14"
+  node "M_A_DQS_DP<5>" hybrid test "u1_c.CJ69"
+  node "M_A_DQS_DP<8>" hybrid test "u1_c.CJ24"
+  node "M_A_ECC<1>" hybrid test "u1_c.CJ20"
+  node "M_A_ECC<3>" hybrid test "u1_c.CJ28"
+  node "M_A_ECC<5>" hybrid test "u1_c.CK18"
+  node "M_A_ECC<7>" hybrid test "u1_c.CK26"
+  node "M_A_MA<0>" hybrid test "u1_c.CK49"
+  node "M_A_MA<1>" hybrid test "u1_c.CK41"
+  node "M_A_MA<5>" hybrid test "u1_c.CG39"
+  node "M_A_MA<6>" hybrid test "u1_c.CK37"
+  node "M_A_MA<9>" hybrid test "u1_c.CJ35"
+  node "M_A_MA<10>" hybrid test "u1_c.CJ51"
+  node "M_A_MA<11>" hybrid test "u1_c.CG35"
+  node "M_A_MA<13>" hybrid test "u1_c.CK56"
+  node "M_A_MA<15>" hybrid test "u1_c.CJ54"
+  node "M_B_DQ<0>" hybrid test "u1_c.CG1"
+  node "M_B_DQ<1>" hybrid test "u1_c.CG3"
+  node "M_B_DQ<7>" hybrid test "u1_c.CK4"
+  node "M_B_DQ<34>" hybrid test "u1_c.CJ78"
+  node "M_B_DQ<35>" hybrid test "u1_c.CJ76"
+  node "M_B_DQ<40>" hybrid test "u1_c.CF77"
+  node "M_B_DQ<41>" hybrid test "u1_c.CF75"
+  node "M_B_DQ<44>" hybrid test "u1_c.CG78"
+  node "M_B_DQ<45>" hybrid test "u1_c.CG76"
+  node "M_B_DQS_DN<0>" hybrid test "u1_c.CJ1"
+  node "M_B_DQS_DN<9>" hybrid test "u1_c.CH4"
+  node "M_B_DQS_DP<0>" hybrid test "u1_c.CJ3"
+  node "M_B_DQS_DP<9>" hybrid test "u1_c.CH2"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "DDR_A_ODT3_C"
+!IPG: node "DDR_A_CKE3_C"
+!IPG: node "DDR_A_CLK3_P_C"
+!IPG: node "DDR_A_CLK1_P_C"
+
+!IPG: Family information could not be found for node M_A_ALERT_N
+!IPG: Family information could not be found for node M_A_BA<0>
+!IPG: Family information could not be found for node M_A_CKE<1>
+!IPG: Family information could not be found for node M_A_CLK_DN<0>
+!IPG: Family information could not be found for node M_A_CLK_DN<2>
+!IPG: Family information could not be found for node M_A_CS_N<1>
+!IPG: Family information could not be found for node M_A_DQ<14>
+!IPG: Family information could not be found for node M_A_DQ<15>
+!IPG: Family information could not be found for node M_A_DQ<22>
+!IPG: Family information could not be found for node M_A_DQ<23>
+!IPG: Family information could not be found for node M_A_DQ<41>
+!IPG: Family information could not be found for node M_A_DQ<43>
+!IPG: Family information could not be found for node M_A_DQ<45>
+!IPG: Family information could not be found for node M_A_DQS_DN<1>
+!IPG: Family information could not be found for node M_A_DQS_DN<2>
+!IPG: Family information could not be found for node M_A_DQS_DN<17>
+!IPG: Family information could not be found for node M_A_DQS_DP<1>
+!IPG: Family information could not be found for node M_A_DQS_DP<2>
+!IPG: Family information could not be found for node M_A_DQS_DP<5>
+!IPG: Family information could not be found for node M_A_DQS_DP<8>
+!IPG: Family information could not be found for node M_A_ECC<1>
+!IPG: Family information could not be found for node M_A_ECC<3>
+!IPG: Family information could not be found for node M_A_ECC<5>
+!IPG: Family information could not be found for node M_A_ECC<7>
+!IPG: Family information could not be found for node M_A_MA<0>
+!IPG: Family information could not be found for node M_A_MA<1>
+!IPG: Family information could not be found for node M_A_MA<5>
+!IPG: Family information could not be found for node M_A_MA<6>
+!IPG: Family information could not be found for node M_A_MA<9>
+!IPG: Family information could not be found for node M_A_MA<10>
+!IPG: Family information could not be found for node M_A_MA<11>
+!IPG: Family information could not be found for node M_A_MA<13>
+!IPG: Family information could not be found for node M_A_MA<15>
+!IPG: Family information could not be found for node M_B_DQ<0>
+!IPG: Family information could not be found for node M_B_DQ<1>
+!IPG: Family information could not be found for node M_B_DQ<7>
+!IPG: Family information could not be found for node M_B_DQ<34>
+!IPG: Family information could not be found for node M_B_DQ<35>
+!IPG: Family information could not be found for node M_B_DQ<40>
+!IPG: Family information could not be found for node M_B_DQ<41>
+!IPG: Family information could not be found for node M_B_DQ<44>
+!IPG: Family information could not be found for node M_B_DQ<45>
+!IPG: Family information could not be found for node M_B_DQS_DN<0>
+!IPG: Family information could not be found for node M_B_DQS_DN<9>
+!IPG: Family information could not be found for node M_B_DQS_DP<0>
+!IPG: Family information could not be found for node M_B_DQS_DP<9>
+end connect
+

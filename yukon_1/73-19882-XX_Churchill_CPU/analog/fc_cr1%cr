@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600587437   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:06 2020
+on failure
+   report parallel devices
+   report "fc_cr1 fc_cr1%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN01_PRSNT_L"
+diode 990m, 500m, idc10m, co3.0, ar845m,wa10m
+! "fc_cr1%cr" test.
+off failure

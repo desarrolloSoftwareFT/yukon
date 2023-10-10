@@ -1,0 +1,28 @@
+!!!!    2    0    1 1600855831  V8558                                         
+! IPG: rev 07.20p  Thu Oct 17 16:57:54 2013
+!
+
+! *****************************************************************************
+
+test powered analog
+
+   test "Pin4_offset"
+   test "Y1_U25_U24"
+
+end test
+
+
+subtest "Pin4_offset"
+   global Offset
+   connect i to nodes "CLK100M_CLKGEN_PCIE_REFCLK_DN"
+   connect l to ground
+   detector dcv, expect 2.5
+   measure 5,-5,Offset
+end subtest
+
+subtest "Y1_U25_U24"
+   global Offset
+   connect rcva to nodes "CLK100M_CLKGEN_PCIE_REFCLK_DN"
+   detector frequency, threshold Offset, expect 12.5M
+   measure 13.1M ,  11.9M
+end subtest

@@ -1,0 +1,38 @@
+!!!!   21    1    1 1428399307   0000                                         
+
+fet "qf1", 200,  50, n, nr
+fet "qf2", 200,  50, n, nr
+pin library "pwr1", nr, ns, pn"nch_fet_power_off" 
+pin library "pwr2", nr, ns, pn"nch_fet_power_off"
+
+external pins 1
+   device "qf1" pins "G"
+   device "pwr1" pins "G"
+
+external pins 2
+   device "qf1" pins "D"
+   device "pwr1" pins "D"
+
+external pins 3; noconnect
+
+external pins 4; noconnect
+
+external pins 5
+   device "qf2" pins "S"
+   device "pwr2" pins "S"
+
+external pins 6; noconnect
+
+external pins 7; noconnect
+
+external pins 8
+   device "qf2" pins "G"
+   device "pwr2" pins "G"
+
+external pins 9; noconnect
+
+external pins 10
+   device "qf1" pins "S"
+   device "pwr1" pins "S"
+   device "qf2" pins "D"
+   device "pwr2" pins "D"

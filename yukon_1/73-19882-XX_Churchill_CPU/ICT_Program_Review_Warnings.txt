@@ -1,0 +1,206 @@
+====================================================================================================================================================================
+ICT Program Review Checklist Report (Agilent 3070)
+Script Version  : b1.02 (MPa)
+DATE            : Thu Sep 24 10:39:59 2020
+User            : F1318569
+====================================================================================================================================================================
+
+1. Review that Parallel capacitor tests are executed/tested in the testplan:
+
+    Tested Bypass Capacitors
+    ========================
+    RefDes			NomVal	HighTol	LowTol
+    ------			------	-------	------
+    bma2_c5			 222.2u	 35	 40
+    bma3_c5			 222.7u	 35	 40
+    bma4_c5			 268.01u	 35	 40
+    bma5_c5			 436.1u	 35	 40
+    c13_p1_m1			 4.542m	 35	 40
+    c1493			 1.1u	 35	 40
+    c170			 22.1u	 35	 40
+    c21_m1			 2.191m	 35	 40
+    c220			 121.1u	 35	 40
+    c223			 10.1u	 35	 40
+    c295_c			 68.21u	 35	 40
+    c296_c			 68.102u	 35	 40
+    c30				 10.1u	 35	 40
+    c34				 22.1u	 35	 40
+    c35				 22.1u	 35	 40
+    c371			 20.1u	 35	 40
+    c394_c			 100u	 35	 40
+    c39_m2			 3.052m	 35	 40
+    c415			 20.1u	 35	 40
+    c499			 974.96u	 35	 40
+    c507			 115.1u	 35	 40
+    c515			 12.1u	 35	 40
+    c55				 415.33u	 35	 40
+    c598			 22.1u	 35	 40
+    c600			 22.1u	 35	 40
+    c607			 22.1u	 35	 40
+    c633			 71.9u	 35	 40
+    c649			 22.1u	 35	 40
+    c651			 22.1u	 35	 40
+    c679			 22.1u	 35	 40
+    c681			 22.1u	 35	 40
+    c682			 22.1u	 35	 40
+    c686			 22.1u	 35	 40
+    c728			 22.1u	 35	 40
+    c77_c			 353.5u	 35	 40
+    c87_m1			 1.870m	 35	 40
+    dma1_c16			 100.01n	 35	 40
+    x_c81			 2m	 35	 40
+    x_c95			 204u	 35	 40
+
+    All Bypass Capacitors are tested
+
+2. Review all diode tests and ensure idc is set at minimum of 10mA:
+
+    Diode within idc spec
+    =====================
+    cr16%cr(10mA)
+    cr16%ds(20mA) -> Zener Test
+    cr17%cr(10mA)
+    cr17%ds(20mA) -> Zener Test
+    cr18%cr(10mA)
+    cr18%ds(20mA) -> Zener Test
+    cr19(10mA)
+    cr21%cr(10mA)
+    cr21%ds(25mA) -> Zener Test
+    cr23%cr(75mA)
+    d6%cr(10mA)
+    d6%ds(35mA) -> Zener Test
+    fc_cr1%cr(10mA)
+    fc_cr1%ds(25mA) -> Zener Test
+    fc_cr1_hs0%cr(80mA)
+    fc_cr1_hs2%cr(80mA)
+    fc_cr1_hs3%cr(80mA)
+    fc_cr1_hs4%cr(80mA)
+    fc_cr1_hs5%cr(80mA)
+    fc_cr6%cr(10mA)
+    fc_cr6%ds(20mA) -> Zener Test
+    fc_cr7%cr(10mA)
+    fc_cr7%ds(20mA) -> Zener Test
+    fc_cr8%cr(10mA)
+    fc_cr8%ds(20mA) -> Zener Test
+    fc_cr9%cr(10mA)
+    fc_cr9%ds(20mA) -> Zener Test
+    fc_cr10%cr(10mA)
+    fc_cr10%ds(20mA) -> Zener Test
+    fc_cr12%cr(10mA)
+    fc_cr12%ds(25mA) -> Zener Test
+    fc_cr14%cr(10mA)
+    fc_cr14%ds(20mA) -> Zener Test
+    fc_cr15%cr(10mA)
+    fc_cr15%ds(20mA) -> Zener Test
+    fc_cr16%cr(10mA)
+    fc_cr16%ds(25mA) -> Zener Test
+    fc_cr24(10mA)
+    fc_cr25(10mA)
+    fc_cr26(10mA)
+    fc_cr27(10mA)
+    fc_cr28%cr(10mA)
+    fc_cr28%ds(20mA) -> Zener Test
+    fc_cr29(10mA)
+    fc_cr37%cr(10mA)
+    fc_cr37%ds(20mA) -> Zener Test
+    fc_cr42%cr(10mA)
+    fc_cr42%ds(25mA) -> Zener Test
+    fc_cr43%cr(10mA)
+    fc_cr43%ds(20mA) -> Zener Test
+    fc_cr44%cr(10mA)
+    fc_cr44%ds(25mA) -> Zener Test
+    fc_cr45%cr(10mA)
+    fc_cr45%ds(20mA) -> Zener Test
+    fc_cr46%cr(10mA)
+    fc_cr46%ds(20mA) -> Zener Test
+    fc_cr48%cr(10mA)
+    fc_cr48%ds(20mA) -> Zener Test
+    fc_cr49%cr(10mA)
+    fc_cr49%ds(20mA) -> Zener Test
+    fc_cr50%cr(10mA)
+    fc_cr50%ds(25mA) -> Zener Test
+    cr22%cr1(10mA)
+    cr22%cr2(10mA)
+    cr22%cr3(10mA)
+    cr22%cr4(10mA)
+    dma1_cr1(60mA)
+    dma1_cr2(60mA)
+    cr22%ds1(25mA) -> Zener Test
+    x_cr19%pin_3_1(60mA)
+    x_cr19%pin_3_2(50mA)
+
+    Diode below idc spec
+    ====================
+
+    Diode NOT tested
+    ================
+
+3. Review all LED tests and insure idc is set at minimum of 20mA:
+
+    LED within idc spec
+    ===================
+    cr9(20mA)
+    cr10(20mA)
+    cr11(20mA)
+    cr12(20mA)
+    cr13(20mA)
+    cr14(20mA)
+    cr15(20mA)
+    cr24(20mA)
+    cr25(20mA)
+    cr26(20mA)
+    cr33(20mA)
+    cr37(20mA)
+    cr42(20mA)
+    cr43(20mA)
+    cr44(20mA)
+    cr2001_c(20mA)
+    cr20%cr1(20mA)
+    cr20%cr2(20mA)
+    cr20%cr3(20mA)
+    fc_cr19%cr1(20mA)
+    fc_cr19%cr2(20mA)
+    fc_cr19%cr3(20mA)
+    fc_cr20%cr1(20mA)
+    fc_cr20%cr2(20mA)
+    fc_cr20%cr3(20mA)
+    fc_cr21%cr1(20mA)
+    fc_cr21%cr2(20mA)
+    fc_cr21%cr3(20mA)
+    fc_cr22%cr1(20mA)
+    fc_cr22%cr2(20mA)
+    fc_cr22%cr3(20mA)
+    fc_cr23%cr1(20mA)
+    fc_cr23%cr2(20mA)
+    fc_cr23%cr3(20mA)
+
+    LED below idc spec
+    ==================
+    cr20%cr4(10mA)
+    cr20%cr5(10mA)
+    fc_cr19%cr4(10mA)
+    fc_cr19%cr5(10mA)
+    fc_cr20%cr4(10mA)
+    fc_cr20%cr5(10mA)
+    fc_cr21%cr4(10mA)
+    fc_cr21%cr5(10mA)
+    fc_cr22%cr4(10mA)
+    fc_cr22%cr5(10mA)
+    fc_cr23%cr4(10mA)
+    fc_cr23%cr5(10mA)
+
+    LED NOT tested
+    ==============
+
+4. Review that capacitors with values <= 33pF are not tested:
+    All low value capacitors are NOT tested
+
+5. Review that in all resistor and capacitor tests the I bus is connected to the non power rail net:
+
+    Device			Fixed Node			High Tol Warning	Low Tol Warning
+    ------			----------			----------------	---------------
+
+
+
+Report Generated On Thu Sep 24 10:40:53 2020
+Total Script Runtime: 0.90 minutes

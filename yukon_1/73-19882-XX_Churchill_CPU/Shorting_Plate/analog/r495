@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes C105_SYNC_CPU_TO_FPGA_INTR_L P-Pin resistance"
+report "check nodes C105_SYNC_CPU_TO_FPGA_INTR_L_R P-Pin resistance"
+end on failure
+disconnect all
+connect s to "C105_SYNC_CPU_TO_FPGA_INTR_L"
+connect i to "C105_SYNC_CPU_TO_FPGA_INTR_L_R"
+resistor 10,20,100, re1, ar100m,ed
+off failure

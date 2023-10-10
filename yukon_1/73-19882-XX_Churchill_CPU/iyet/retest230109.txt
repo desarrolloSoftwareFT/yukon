@@ -1,0 +1,716 @@
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jan 09 21:33:05 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r      22226
+                 r309.1
+                 u1.B6
+Common Devices:
+                  r309
+Message is:
+Check r309
+----------------------------------------
+Open #3 Thresh 35, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r2    221109
+                 r251.1
+                u40.E21
+Common Devices:
+                  r251
+Message is:
+Check r251
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: BM_SPI_FLSH_MISO       219152 Open
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+To:   BM_FPGA_SPI_FLSH_MISO  217152
+                 r526.2
+                x_r216.1
+Common Devices:
+                 x_r216
+Message is:
+Check x_r216
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: spi_boot_miso          220128 Open
+                 r362.1
+                 u8.T18
+                x_r471.1
+To:   BM_SPI_FLSH_MISO       219152
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+Common Devices:
+                  r362
+Message is:
+Check r362
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_srst               219132 Open
+                 p9.15
+                 r87.1
+                 r190.2
+                 r536.2
+                 r709.2
+                 u8.U18
+To:   bmc_srst_r              22227
+                 r709.1
+                 u27.F3
+Common Devices:
+                  r709
+Message is:
+Check r709
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P2PM_MB_CPU<1>         214149   47
+               mb_slvr.29
+                 r555.2
+                 r676.1
+To:   p2pm_mb_cpu_r<1>       122176   47
+                 r555.1
+                u40.U19
+Common Devices:
+                  r555
+Message is:
+Check r555
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: pmod_a3v3_isenn         22149 Open
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+To:   PMOD_A3V3_ISENN_R      219146
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+Common Devices:
+                dma1_r21
+Message is:
+Check dma1_r21
+------End, 8 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jan 09 21:33:16 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r      22226
+                 r309.1
+                 u1.B6
+Common Devices:
+                  r309
+Message is:
+Check r309
+----------------------------------------
+Open #3 Thresh 35, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r2    221109
+                 r251.1
+                u40.E21
+Common Devices:
+                  r251
+Message is:
+Check r251
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: BM_SPI_FLSH_MISO       219152 Open
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+To:   BM_FPGA_SPI_FLSH_MISO  217152
+                 r526.2
+                x_r216.1
+Common Devices:
+                 x_r216
+Message is:
+Check x_r216
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: spi_boot_miso          220128 Open
+                 r362.1
+                 u8.T18
+                x_r471.1
+To:   BM_SPI_FLSH_MISO       219152
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+Common Devices:
+                  r362
+Message is:
+Check r362
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_srst               219132 Open
+                 p9.15
+                 r87.1
+                 r190.2
+                 r536.2
+                 r709.2
+                 u8.U18
+To:   bmc_srst_r              22227
+                 r709.1
+                 u27.F3
+Common Devices:
+                  r709
+Message is:
+Check r709
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P2PM_MB_CPU<1>         214149   47
+               mb_slvr.29
+                 r555.2
+                 r676.1
+To:   p2pm_mb_cpu_r<1>       122176   47
+                 r555.1
+                u40.U19
+Common Devices:
+                  r555
+Message is:
+Check r555
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: pmod_a3v3_isenn         22149 Open
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+To:   PMOD_A3V3_ISENN_R      219146
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+Common Devices:
+                dma1_r21
+Message is:
+Check dma1_r21
+------End, 8 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jan 09 21:33:27 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r      22226
+                 r309.1
+                 u1.B6
+Common Devices:
+                  r309
+Message is:
+Check r309
+----------------------------------------
+Open #3 Thresh 35, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r2    221109
+                 r251.1
+                u40.E21
+Common Devices:
+                  r251
+Message is:
+Check r251
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: BM_SPI_FLSH_MISO       219152 Open
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+To:   BM_FPGA_SPI_FLSH_MISO  217152
+                 r526.2
+                x_r216.1
+Common Devices:
+                 x_r216
+Message is:
+Check x_r216
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: spi_boot_miso          220128 Open
+                 r362.1
+                 u8.T18
+                x_r471.1
+To:   BM_SPI_FLSH_MISO       219152
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+Common Devices:
+                  r362
+Message is:
+Check r362
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_srst               219132 Open
+                 p9.15
+                 r87.1
+                 r190.2
+                 r536.2
+                 r709.2
+                 u8.U18
+To:   bmc_srst_r              22227
+                 r709.1
+                 u27.F3
+Common Devices:
+                  r709
+Message is:
+Check r709
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P2PM_MB_CPU<1>         214149   48
+               mb_slvr.29
+                 r555.2
+                 r676.1
+To:   p2pm_mb_cpu_r<1>       122176   48
+                 r555.1
+                u40.U19
+Common Devices:
+                  r555
+Message is:
+Check r555
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: pmod_a3v3_isenn         22149 Open
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+To:   PMOD_A3V3_ISENN_R      219146
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+Common Devices:
+                dma1_r21
+Message is:
+Check dma1_r21
+------End, 8 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jan 09 21:33:38 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r      22226
+                 r309.1
+                 u1.B6
+Common Devices:
+                  r309
+Message is:
+Check r309
+----------------------------------------
+Open #3 Thresh 35, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127 Open
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r2    221109
+                 r251.1
+                u40.E21
+Common Devices:
+                  r251
+Message is:
+Check r251
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: BM_SPI_FLSH_MISO       219152 Open
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+To:   BM_FPGA_SPI_FLSH_MISO  217152
+                 r526.2
+                x_r216.1
+Common Devices:
+                 x_r216
+Message is:
+Check x_r216
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: spi_boot_miso          220128 Open
+                 r362.1
+                 u8.T18
+                x_r471.1
+To:   BM_SPI_FLSH_MISO       219152
+                 r362.2
+                x_r216.2
+                x_r231.2
+                x_r232.2
+Common Devices:
+                  r362
+Message is:
+Check r362
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_srst               219132 Open
+                 p9.15
+                 r87.1
+                 r190.2
+                 r536.2
+                 r709.2
+                 u8.U18
+To:   bmc_srst_r              22227
+                 r709.1
+                 u27.F3
+Common Devices:
+                  r709
+Message is:
+Check r709
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P2PM_MB_CPU<1>         214149   47
+               mb_slvr.29
+                 r555.2
+                 r676.1
+To:   p2pm_mb_cpu_r<1>       122176   47
+                 r555.1
+                u40.U19
+Common Devices:
+                  r555
+Message is:
+Check r555
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: pmod_a3v3_isenn         22149 Open
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+To:   PMOD_A3V3_ISENN_R      219146
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+Common Devices:
+                dma1_r21
+Message is:
+Check dma1_r21
+------End, 8 Problems Reported----------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jan 09 21:35:21 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1b_skt_c
+  Pin 145  Node spare_i_dimm_b0_p12v_2
+  Measured 0.7              (BRC 11632)
+Open #2  Device u1b_skt_c
+  Pin 232  Node m_b_ma<13>
+  Measured -2.1             (BRC 109154)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u4_m1
+  Pin 28  Node pmod_vob_vsense_k_m1
+  Measured -3.1             (BRC 20207)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u5_m2
+  Pin 28  Node pmod_vob_vsense_k_m2
+  Measured -2.8             (BRC 11736)
+Open #2  Device u5_m2
+  Pin 29  Node pmod_vob_vsense_n_m2
+  Measured -0.1             (BRC 205118)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u40
+  Pin B19  Node srt_fpga_bmc_uart5_txd
+  Measured -0.8             (BRC 221128)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jan 09 21:35:31 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1b_skt_c
+  Pin 145  Node spare_i_dimm_b0_p12v_2
+  Measured 3.0              (BRC 11632)
+Open #2  Device u1b_skt_c
+  Pin 232  Node m_b_ma<13>
+  Measured -0.6             (BRC 109154)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u4_m1
+  Pin 3  Node pmod_voa_vsense_n_m1
+  Measured 1.5              (BRC 205114)
+Open #2  Device u4_m1
+  Pin 2  Node pmod_voa_vsense_k_m1
+  Measured -1.2             (BRC 203138)
+Open #3  Device u4_m1
+  Pin 29  Node pmod_vob_vsense_n_m1
+  Measured -0.7             (BRC 20516)
+Open #4  Device u4_m1
+  Pin 28  Node pmod_vob_vsense_k_m1
+  Measured -0.4             (BRC 20207)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u5_m2
+  Pin 28  Node pmod_vob_vsense_k_m2
+  Measured -4.1             (BRC 11736)
+Open #2  Device u5_m2
+  Pin 29  Node pmod_vob_vsense_n_m2
+  Measured -6.4             (BRC 205118)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u40
+  Pin B19  Node srt_fpga_bmc_uart5_txd
+  Measured 0.8              (BRC 221128)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u57
+  Pin 15  Node vr_smb_clk
+  Measured 0.9              (BRC 211107)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jan 09 21:35:40 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 197  Node m_a_dqs_dp<8>
+  Measured 6.1              (BRC 11650)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u1b_skt_c
+  Pin 145  Node spare_i_dimm_b0_p12v_2
+  Measured 2.6              (BRC 11632)
+Open #2  Device u1b_skt_c
+  Pin 232  Node m_b_ma<13>
+  Measured -1.1             (BRC 109154)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u4_m1
+  Pin 28  Node pmod_vob_vsense_k_m1
+  Measured -1.1             (BRC 20207)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u5_m2
+  Pin 28  Node pmod_vob_vsense_k_m2
+  Measured -1.8             (BRC 11736)
+Open #2  Device u5_m2
+  Pin 29  Node pmod_vob_vsense_n_m2
+  Measured -2.6             (BRC 205118)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u40
+  Pin B19  Node srt_fpga_bmc_uart5_txd
+  Measured 0.4              (BRC 221128)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u57
+  Pin 13  Node bmc_fan_i2c_scl_mux
+  Measured -1.5             (BRC 211104)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Open #1  Device u111
+  Pin 5  Node srt_clk50m_ncsi_bmc
+  Measured 13.2             (BRC 216138)
+15-105045-01 IC-TIMING,BUFFER,NON ZERO D
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jan 09 21:35:50 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 197  Node m_a_dqs_dp<8>
+  Measured 12.1             (BRC 11650)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u1b_skt_c
+  Pin 145  Node spare_i_dimm_b0_p12v_2
+  Measured 3.4              (BRC 11632)
+Open #2  Device u1b_skt_c
+  Pin 232  Node m_b_ma<13>
+  Measured 1.1              (BRC 109154)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u4_m1
+  Pin 2  Node pmod_voa_vsense_k_m1
+  Measured -1.8             (BRC 203138)
+Open #2  Device u4_m1
+  Pin 29  Node pmod_vob_vsense_n_m1
+  Measured -2.3             (BRC 20516)
+Open #3  Device u4_m1
+  Pin 28  Node pmod_vob_vsense_k_m1
+  Measured -0.2             (BRC 20207)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u5_m2
+  Pin 28  Node pmod_vob_vsense_k_m2
+  Measured -4.9             (BRC 11736)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u40
+  Pin B19  Node srt_fpga_bmc_uart5_txd
+  Measured 1.8              (BRC 221128)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u57
+  Pin 15  Node vr_smb_clk
+  Measured 1.0              (BRC 211107)
+Open #2  Device u57
+  Pin 13  Node bmc_fan_i2c_scl_mux
+  Measured -0.5             (BRC 211104)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Open #1  Device u111
+  Pin 5  Node srt_clk50m_ncsi_bmc
+  Measured 28.8             (BRC 216138)
+15-105045-01 IC-TIMING,BUFFER,NON ZERO D
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jan 09 21:36:01 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1b_skt_c
+  Pin 145  Node spare_i_dimm_b0_p12v_2
+  Measured 4.6              (BRC 11632)
+Open #2  Device u1b_skt_c
+  Pin 232  Node m_b_ma<13>
+  Measured -1.2             (BRC 109154)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Open #1  Device u4_m1
+  Pin 2  Node pmod_voa_vsense_k_m1
+  Measured -2.3             (BRC 203138)
+Open #2  Device u4_m1
+  Pin 29  Node pmod_vob_vsense_n_m1
+  Measured 0.8              (BRC 20516)
+Open #3  Device u4_m1
+  Pin 28  Node pmod_vob_vsense_k_m1
+  Measured -1.2             (BRC 20207)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u5_m2
+  Pin 28  Node pmod_vob_vsense_k_m2
+  Measured -1.0             (BRC 11736)
+Open #2  Device u5_m2
+  Pin 29  Node pmod_vob_vsense_n_m2
+  Measured 1.0              (BRC 205118)
+15-105255-01 IC-LIN,VREG,SW,BUCK,QFN,40 
+----------------------------------------
+Open #1  Device u40
+  Pin B19  Node srt_fpga_bmc_uart5_txd
+  Measured 0.8              (BRC 221128)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u57
+  Pin 13  Node bmc_fan_i2c_scl_mux
+  Measured -1.1             (BRC 211104)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Open #1  Device u111
+  Pin 5  Node srt_clk50m_ncsi_bmc
+  Measured 14.4             (BRC 216138)
+15-105045-01 IC-TIMING,BUFFER,NON ZERO D
+----------------------------------------
+Board #: 4 
+Version:
+S/N:FLM26500GYZ

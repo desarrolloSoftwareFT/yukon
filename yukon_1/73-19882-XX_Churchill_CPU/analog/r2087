@@ -1,0 +1,8 @@
+!!!!    2    0    1 1685006536   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:46 2020
+disconnect all
+connect s to "PMOD_PVCCSCFUSESUS_VSENSE_P"
+connect i to "ADC0_PVCCFUSESUS_CH4"
+!connect g to "GND" 
+resistor 3.4k, 45, 20, re4, wb, ar200m, wa123m !p4c a2
+!jumper 5k, re2, am200m, op, e

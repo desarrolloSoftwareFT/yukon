@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176727   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:08 2020
+disconnect all
+connect s to "CPLD_JTAG_TCK"
+connect i to "UNNAMED_90_CAP_I173_B"
+connect a to "CPLD_JTAG_TCK"
+connect b to "UNNAMED_90_CAP_I173_B"
+resistor 68, 30, 20, re2, ar100m
+! "r805" test.

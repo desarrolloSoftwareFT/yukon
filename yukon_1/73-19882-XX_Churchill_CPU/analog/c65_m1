@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175940   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:01 2020
+on failure
+   report parallel devices
+   report "r5_m1"
+end on failure
+disconnect all
+connect s to "PMOD_VOB_VSENSE_K_M1"
+connect i to "PMOD_VOB_VSENSE_N_M1"
+jumper 5.00k, re4, wb, ar200m, op
+! "c65_m1" test.
+off failure

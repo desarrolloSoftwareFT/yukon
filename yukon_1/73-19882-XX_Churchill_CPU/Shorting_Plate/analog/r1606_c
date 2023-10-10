@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes R_CLK_100M_CPU_XDP_N_C P-Pin resistance"
+report "check nodes CLK_100M_CPU_XDP_N_C P-Pin resistance"
+end on failure
+disconnect all
+connect s to "R_CLK_100M_CPU_XDP_N_C"
+connect i to "CLK_100M_CPU_XDP_N_C"
+resistor 10,20,100, re1, ar100m,ed
+off failure

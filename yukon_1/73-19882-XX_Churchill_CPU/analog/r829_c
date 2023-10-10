@@ -1,0 +1,9 @@
+!!!!    2    0    1 1603147250   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "SPI_FLSH_MISO"
+connect i to "SRT_FLSHG_MISO_C"
+connect a to "SPI_FLSH_MISO"
+connect b to "SRT_FLSHG_MISO_C"
+resistor 22+1, 40, 20, re2, ar500m
+! "r829_c" test.

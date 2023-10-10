@@ -1,0 +1,17 @@
+!!!!    2    0    1 1594176085   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:26 2020
+on failure
+   report parallel devices
+   report "c1140_c 4.70u"
+   report "c1141_c 4.70u"
+   report "c1142_c 4.70u"
+   report "c1143_c 4.70u"
+   report "c1144_c 4.70u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "VP3P3_SATA"
+connect g to "P3V3" 
+capacitor 353.5u, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+! "c77_c" test.
+off failure

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175946   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:07 2020
+on failure
+   report parallel devices
+   report "e_r1189 1.00k"
+end on failure
+disconnect all
+connect i to "PMOD_PVCCKRHV_EN"
+connect s to "GND"
+jumper 876, re3, wb, ar100m, op
+! "e_c620" test.
+off failure

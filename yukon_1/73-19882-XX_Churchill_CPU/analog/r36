@@ -1,0 +1,8 @@
+!!!!    2    0    1 1688185985   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+disconnect all
+connect s to "BMC_SPI2_MUX_MOSI"
+connect i to "BMC_CPU_SPI0_MUX_MOSI"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed,wa10m
+! "r36" test.

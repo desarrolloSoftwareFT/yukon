@@ -1,0 +1,1309 @@
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:14:27 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_l23_refret      223147 Open
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076   30
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158   30
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: spi0_pch_mosi_c        121157   30
+                r330_c.1
+                u51_c.12
+To:   spi_flsh_mosi           12076   30
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+Common Devices:
+                 r330_c
+Message is:
+Check r330_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_i210_reset_l        21435   51
+                 r34.1
+                 r52.1
+                r1609.2
+                r1610.1
+                u1_i2.28
+To:   x86_bmc_i210_reset_l_r 221123   51
+                r1610.2
+                u40.U16
+Common Devices:
+                 r1610
+Message is:
+Check r1610
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: ddr4_vref               20731 Open
+              bmc_ddr4.M1
+                 c618.1
+                 c622.1
+                 c708.1
+                 u8.T9
+                x_c96.1
+                x_r71.2
+To:   PMOD_DDR4_VTT_REFOUT   205144
+                x_c418.1
+                x_r71.1
+                x_u05.1
+Common Devices:
+                 x_r71
+Message is:
+Check x_r71
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   66
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203137   66 
+PMOD_PVCCSCFUSESUS_VSENSE_P             
+                 r9_v.2
+                r2087.1
+Common Devices:
+                  r9_v
+Message is:
+Check r9_v
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028   65
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203136   65 
+PMOD_PVCCSCFUSESUS_DIDT                 
+               bma4_c7.1
+               bma4_c8.1
+               bma4_l1.1
+               bma4_r10.1
+               bma4_u1.10
+               bma4_u1.11
+Common Devices:
+                bma4_l1
+Message is:
+Check bma4_l1
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: PVCCSCFUSESUS           21028   76
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                     20337   76 
+PMOD_PVCCSCFUSESUS_VOSEN                
+               bma4_c12.1
+               bma4_c17.1
+               bma4_r1.1
+               bma4_r6.1
+               bma4_r7.2
+               bma4_r8.1
+               bma4_tp1.1
+               bma4_u1.1
+Common Devices:
+                bma4_c12
+                bma4_r1
+                bma4_r8
+Message is:
+Check bma4_r8
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: P5V                    205103   29
+               bma2_c5.1
+               bma2_c6.1
+               bma2_c11.1
+               bma2_c12.2
+               bma2_c13.1
+               bma2_c14.1
+               bma2_c16.1
+               bma2_l1.2
+               bma2_r1.2
+               bma2_r8.2
+Too many to print.
+To:   PMOD_5V0_VOSEN          20330   29
+               bma2_c12.1
+               bma2_c17.1
+               bma2_r1.1
+               bma2_r6.1
+               bma2_r7.2
+               bma2_r8.1
+               bma2_tp1.1
+               bma2_u1.1
+Common Devices:
+                bma2_c12
+                bma2_r1
+                bma2_r8
+Message is:
+Check bma2_r8
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: C105_PHY_RST_SDP1_0    121143 Open
+                r1305.1
+               r1761_c.2
+                u1_c.F76
+              u1_c_pch.F76
+To:   c105_phy_rst_sdp0_1_r  117142
+                r1305.2
+                 u1.K13
+Common Devices:
+                 r1305
+Message is:
+Check r1305
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: i2c_ddr_sda_st_c       108171 Open
+                r967_c.2
+                r970_c.2
+                u83_c.3
+To:   I2C_DDR_SDA_C           10854
+                r967_c.1
+               u1_c.CC60
+             u1_c_pch.CC60
+Common Devices:
+                 r967_c
+Message is:
+Check r967_c
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: i2c_ddr_scl_st_c       108168 Open
+                r968_c.2
+                r969_c.2
+                u83_c.2
+To:   I2C_DDR_SCL_C          108154
+                r968_c.1
+               u1_c.CD58
+             u1_c_pch.CD58
+Common Devices:
+                 r968_c
+Message is:
+Check r968_c
+----------------------------------------
+Open #15 Thresh 25, Delay 50ms      Ohms
+From: BDXDE_DRAM_PWROK       119177   54
+                 r308.1
+                r512_c.2
+                u1_c.BA9
+               u1_c.CV55
+              u1_c_pch.BA9
+             u1_c_pch.CV55
+To:   dram_pwr_ok_r           12034   54
+                 r308.2
+                 u1.L12
+Common Devices:
+                  r308
+Message is:
+Check r308
+----------------------------------------
+Open #16 Thresh 25, Delay 50ms      Ohms
+From: FAN01_PRSNT_L_CON_ZL    10572  267
+               fc_c354.1
+                fc_l26.2
+               fc_r152.2
+To:   FAN01_PRSNT_L_CON      105163  267
+                fc_l26.1
+                fc_p1.8
+Common Devices:
+                 fc_l26
+Message is:
+Check fc_l26
+----------------------------------------
+Open #17 Thresh 25, Delay 50ms      Ohms
+From: pmod_p0v6_vtt_pg        10866   60
+               e_r1010.2
+                 r382.1
+                u40.A10
+To:   PWRDGD_P0V6_VTT_R      108146   60
+               e_r1010.1
+                e_u110.9
+Common Devices:
+                e_r1010
+Message is:
+Check e_r1010
+----------------------------------------
+Open #18 Thresh 25, Delay 50ms      Ohms
+From: FAN23_PRSNT_L_CON_ZL   105173 Open
+               fc_c1169.1
+                fc_l27.2
+               fc_r153.2
+To:   FAN23_PRSNT_L_CON       10563
+                fc_l27.1
+                fc_p2.8
+Common Devices:
+                 fc_l27
+Message is:
+Check fc_l27
+----------------------------------------
+Open #19 Thresh 25, Delay 50ms      Ohms
+From: P12V                    20827 Open
+               b_c1350.1
+               b_c1352.1
+               b_c1353.1
+               b_c1356.1
+               bma3_c1.1
+               bma3_c3.1
+               bma3_c4.1
+               bma3_c18.1
+               bma3_u1.13
+               bma3_u1.14
+Too many to print.
+To:   pmod_svin_m2            20335
+               c104_m2.1
+                r44_m2.2
+                u5_m2.11
+                u5_m2.12
+Common Devices:
+                 r44_m2
+Message is:
+Check r44_m2
+----------------------------------------
+Open #20 Thresh 25, Delay 50ms      Ohms
+From: spi_x86_obfl_miso       22104 Open
+                 r193.1
+                r1351.2
+                 u40.J6
+To:   spi_x86_obfl_miso_r    222134
+                r1351.1
+                 u3.D2
+Common Devices:
+                 r1351
+Message is:
+Check r1351
+----------------------------------------
+Open #21 Thresh 25, Delay 50ms      Ohms
+From: A3P3V                  220144  449
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   pmod_vdd_p3p_m2        223132  449
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+Common Devices:
+                 r45_m2
+Message is:
+Check r45_m2
+------End, 21 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:14:39 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi0_pch_mosi_c        121157 Open
+                r330_c.1
+                u51_c.12
+To:   spi_flsh_mosi           12076
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+Common Devices:
+                 r330_c
+Message is:
+Check r330_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: pch_console_rxd1        22030   31
+                 r480.1
+                 u1.B7
+To:     v                     22222   31 
+pch_console_rxd1_x86fpga                
+                 r480.2
+                u40.AB18
+Common Devices:
+                  r480
+Message is:
+Check r480
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: BMC_FAN_CARD_RST        20534  264
+                fc_r24.1
+                 p2.17
+                 r574.2
+                r1645.1
+To:   bmc_fan_card_rst_r2     12275  264
+                 r574.1
+                 u40.T3
+Common Devices:
+                  r574
+Message is:
+Check r574
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: ddr4_vref               20731   87
+              bmc_ddr4.M1
+                 c618.1
+                 c622.1
+                 c708.1
+                 u8.T9
+                x_c96.1
+                x_r71.2
+To:   PMOD_DDR4_VTT_REFOUT   205144   87
+                x_c418.1
+                x_r71.1
+                x_u05.1
+Common Devices:
+                 x_r71
+Message is:
+Check x_r71
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: i2c_ddr_sda_st_c       108171 Open
+                r967_c.2
+                r970_c.2
+                u83_c.3
+To:   I2C_DDR_SDA_C           10854
+                r967_c.1
+               u1_c.CC60
+             u1_c_pch.CC60
+Common Devices:
+                 r967_c
+Message is:
+Check r967_c
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: i2c_ddr_scl_st_c       108168 Open
+                r968_c.2
+                r969_c.2
+                u83_c.2
+To:   I2C_DDR_SCL_C          108154
+                r968_c.1
+               u1_c.CD58
+             u1_c_pch.CD58
+Common Devices:
+                 r968_c
+Message is:
+Check r968_c
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: FAN01_PRSNT_L_CON_ZL    10572 Open
+               fc_c354.1
+                fc_l26.2
+               fc_r152.2
+To:   FAN01_PRSNT_L_CON      105163
+                fc_l26.1
+                fc_p1.8
+Common Devices:
+                 fc_l26
+Message is:
+Check fc_l26
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: pmod_p0v6_vtt_pg        10866   59
+               e_r1010.2
+                 r382.1
+                u40.A10
+To:   PWRDGD_P0V6_VTT_R      108146   59
+               e_r1010.1
+                e_u110.9
+Common Devices:
+                e_r1010
+Message is:
+Check e_r1010
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: FAN23_PRSNT_L_CON_ZL   105173 Open
+               fc_c1169.1
+                fc_l27.2
+               fc_r153.2
+To:   FAN23_PRSNT_L_CON       10563
+                fc_l27.1
+                fc_p2.8
+Common Devices:
+                 fc_l27
+Message is:
+Check fc_l27
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: bmc_fw_spi_cs2_fpga    221117   48
+                 r688.1
+                r1280.1
+                 u27.H3
+To:   fw_spi2_r              221138   48
+                r1280.2
+                 u8.T19
+Common Devices:
+                 r1280
+Message is:
+Check r1280
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: spi_x86_obfl_miso       22104 Open
+                 r193.1
+                r1351.2
+                 u40.J6
+To:   spi_x86_obfl_miso_r    222134
+                r1351.1
+                 u3.D2
+Common Devices:
+                 r1351
+Message is:
+Check r1351
+------End, 14 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:16:43 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: PMOD_PH2_BOOT_R_M2     105153 3608
+                c44_m2.1
+                r55_m2.2
+To:   PMOD_PH2_DIDT_M2       119136 3608
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+No common devices.
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: spi0_pch_mosi_c        121157 Open
+                r330_c.1
+                u51_c.12
+To:   spi_flsh_mosi           12076
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+Common Devices:
+                 r330_c
+Message is:
+Check r330_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: i2c_ddr_sda_st_c       108171 Open
+                r967_c.2
+                r970_c.2
+                u83_c.3
+To:   I2C_DDR_SDA_C           10854
+                r967_c.1
+               u1_c.CC60
+             u1_c_pch.CC60
+Common Devices:
+                 r967_c
+Message is:
+Check r967_c
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: p1v05_combined          12251 3975
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   PMOD_PH2_DIDT_M2       119136 3975
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+Common Devices:
+                 l3_m2
+                 u3_m2
+Message is:
+Check l3_m2
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: pmod_p0v6_vtt_pg        10866  406
+               e_r1010.2
+                 r382.1
+                u40.A10
+To:   PWRDGD_P0V6_VTT_R      108146  406
+               e_r1010.1
+                e_u110.9
+Common Devices:
+                e_r1010
+Message is:
+Check e_r1010
+------End, 8 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:16:54 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: i2c_ddr_sda_st_c       108171 Open
+                r967_c.2
+                r970_c.2
+                u83_c.3
+To:   I2C_DDR_SDA_C           10854
+                r967_c.1
+               u1_c.CC60
+             u1_c_pch.CC60
+Common Devices:
+                 r967_c
+Message is:
+Check r967_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pmod_p0v6_vtt_pg        10866   61
+               e_r1010.2
+                 r382.1
+                u40.A10
+To:   PWRDGD_P0V6_VTT_R      108146   61
+               e_r1010.1
+                e_u110.9
+Common Devices:
+                e_r1010
+Message is:
+Check e_r1010
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:29:13 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:29:22 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   PMOD_P1V5_PCH_VSENSE_P 210144
+                 r4_v.2
+                 r623.1
+Common Devices:
+                  r4_v
+Message is:
+Check r4_v
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028  346
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203137  346 
+PMOD_PVCCSCFUSESUS_VSENSE_P             
+                 r9_v.2
+                r2087.1
+Common Devices:
+                  r9_v
+Message is:
+Check r9_v
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028  338
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                    203136  338 
+PMOD_PVCCSCFUSESUS_DIDT                 
+               bma4_c7.1
+               bma4_c8.1
+               bma4_l1.1
+               bma4_r10.1
+               bma4_u1.10
+               bma4_u1.11
+Common Devices:
+                bma4_l1
+Message is:
+Check bma4_l1
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: PVCCSCFUSESUS           21028  266
+               bma4_c5.1
+               bma4_c6.1
+               bma4_c11.1
+               bma4_c12.2
+               bma4_c13.1
+               bma4_c14.1
+               bma4_c16.1
+               bma4_c19.1
+               bma4_l1.2
+               bma4_r1.2
+Too many to print.
+To:     v                     20337  266 
+PMOD_PVCCSCFUSESUS_VOSEN                
+               bma4_c12.1
+               bma4_c17.1
+               bma4_r1.1
+               bma4_r6.1
+               bma4_r7.2
+               bma4_r8.1
+               bma4_tp1.1
+               bma4_u1.1
+Common Devices:
+                bma4_c12
+                bma4_r1
+                bma4_r8
+Message is:
+Check bma4_r8
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:32:25 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_clk_dn<2>           11675    2
+               u1_c.CR57
+             u1_c_pch.CR57
+             u1b_skt_c.219
+To:   PMOD_PH1_PH_M1         105156   41
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146    7
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH1_PH_M2          10555    5
+                r54_m2.1
+                u2_m2.32
+      pmod_voa_vsense_k_m2    20544    5
+                c68_m2.1
+                c73_m2.1
+                r34_m2.1
+                r43_m2.2
+                r48_m2.2
+                u5_m2.2
+      PMOD_PH1_DIDT_M2        20209    5
+                c49_m2.2
+                l1_m2.1
+                u2_m2.10
+                u2_m2.11
+                u2_m2.12
+                u2_m2.13
+                u2_m2.14
+                u2_m2.15
+                u2_m2.16
+                u2_m2.17
+Too many to print.
+      p1v2_vddq              205110    4
+                c33_m2.1
+                c35_m2.1
+                c37_m2.1
+                c39_m2.1
+                c41_m2.1
+                c51_m2.1
+                c59_m2.1
+                c68_m2.2
+                c74_m2.1
+                c158_c.1
+Too many to print.
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 7 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:32:37 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_clk_dn<2>           11675    2
+               u1_c.CR57
+             u1_c_pch.CR57
+             u1b_skt_c.219
+To:   PMOD_PH1_PH_M1         105156   42
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146    7
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH1_PH_M2          10555    5
+                r54_m2.1
+                u2_m2.32
+      pmod_voa_vsense_k_m2    20544    5
+                c68_m2.1
+                c73_m2.1
+                r34_m2.1
+                r43_m2.2
+                r48_m2.2
+                u5_m2.2
+      PMOD_PH1_DIDT_M2        20209    5
+                c49_m2.2
+                l1_m2.1
+                u2_m2.10
+                u2_m2.11
+                u2_m2.12
+                u2_m2.13
+                u2_m2.14
+                u2_m2.15
+                u2_m2.16
+                u2_m2.17
+Too many to print.
+      p1v2_vddq              205110    4
+                c33_m2.1
+                c35_m2.1
+                c37_m2.1
+                c39_m2.1
+                c41_m2.1
+                c51_m2.1
+                c59_m2.1
+                c68_m2.2
+                c74_m2.1
+                c158_c.1
+Too many to print.
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 7 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:34:39 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130   27
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944   27
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_clk_dn<2>           11675    2
+               u1_c.CR57
+             u1_c_pch.CR57
+             u1b_skt_c.219
+To:   PMOD_PH1_PH_M1         105156   42
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146    7
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH1_PH_M2          10555    5
+                r54_m2.1
+                u2_m2.32
+      pmod_voa_vsense_k_m2    20544    6
+                c68_m2.1
+                c73_m2.1
+                r34_m2.1
+                r43_m2.2
+                r48_m2.2
+                u5_m2.2
+      PMOD_PH1_DIDT_M2        20209    5
+                c49_m2.2
+                l1_m2.1
+                u2_m2.10
+                u2_m2.11
+                u2_m2.12
+                u2_m2.13
+                u2_m2.14
+                u2_m2.15
+                u2_m2.16
+                u2_m2.17
+Too many to print.
+      p1v2_vddq              205110    5
+                c33_m2.1
+                c35_m2.1
+                c37_m2.1
+                c39_m2.1
+                c41_m2.1
+                c51_m2.1
+                c59_m2.1
+                c68_m2.2
+                c74_m2.1
+                c158_c.1
+Too many to print.
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 7 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ
+----------------------------------------
+Shorts Report for "shorts".
+Tue Sep 06 16:34:51 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130   36
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944   36
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_clk_dn<2>           11675    2
+               u1_c.CR57
+             u1_c_pch.CR57
+             u1b_skt_c.219
+To:   PMOD_PH1_PH_M1         105156   42
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146    7
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH1_PH_M2          10555    5
+                r54_m2.1
+                u2_m2.32
+      pmod_voa_vsense_k_m2    20544    6
+                c68_m2.1
+                c73_m2.1
+                r34_m2.1
+                r43_m2.2
+                r48_m2.2
+                u5_m2.2
+      PMOD_PH1_DIDT_M2        20209    4
+                c49_m2.2
+                l1_m2.1
+                u2_m2.10
+                u2_m2.11
+                u2_m2.12
+                u2_m2.13
+                u2_m2.14
+                u2_m2.15
+                u2_m2.16
+                u2_m2.17
+Too many to print.
+      p1v2_vddq              205110    4
+                c33_m2.1
+                c35_m2.1
+                c37_m2.1
+                c39_m2.1
+                c41_m2.1
+                c51_m2.1
+                c59_m2.1
+                c68_m2.2
+                c74_m2.1
+                c158_c.1
+Too many to print.
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 7 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM263206XQ

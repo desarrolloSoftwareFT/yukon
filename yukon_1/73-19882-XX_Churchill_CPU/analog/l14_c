@@ -1,0 +1,8 @@
+!!!!    2    0    1 1603314233   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:06 2020
+disconnect all
+connect i to "P1V05_COMBINED"
+connect s to "VFLT_P1P05_VCCSCPLL_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 45.0,re2,ar200m,ed, en
+! "l14_c" test.

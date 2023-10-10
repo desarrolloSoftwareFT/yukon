@@ -1,0 +1,8 @@
+!!!!    2    0    1 1596101465   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:47 2020
+disconnect all
+connect i to "FAN3_TACH_ZL"
+connect s to "GND"
+connect gl to "FAN4_TACH" 
+capacitor 1n, 35, 35, fr1024, re3, wb, ar100m, ed, comp
+! "fc_c1164" test.

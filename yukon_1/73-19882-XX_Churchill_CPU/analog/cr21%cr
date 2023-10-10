@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600587303   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:05 2020
+on failure
+   report parallel devices
+   report "cr21 cr21%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN1011_PRSNT_L"
+diode 990m, 500m, idc10m, co3.0, ar845m,wa20m
+! "cr21%cr" test.
+off failure

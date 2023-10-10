@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176462   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:43 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "P2PM_MB_CPU<1>"
+resistor 4.7k, 25, 20, re4, wb, ar200m

@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176593   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:54 2020
+disconnect all
+connect s to "SPI1_10GE_FLSH_CS_L_1V_ST_C"
+connect i to "SPI1_10GE_FLSH_CS_L_1V_C"
+connect g to "P1V05_COMBINED" 
+connect a to "SPI1_10GE_FLSH_CS_L_1V_ST_C"
+connect b to "SPI1_10GE_FLSH_CS_L_1V_C"
+resistor 33.2, 40, 20, re2, ar200m
+! "r1815_c" test.

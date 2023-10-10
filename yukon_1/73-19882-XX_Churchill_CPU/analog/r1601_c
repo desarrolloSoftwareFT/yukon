@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175991   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:52 2020
+on failure
+   report parallel devices
+   report "r858_c 49.9"
+end on failure
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "SVID_ALERT_L_R_C"
+jumper 50.9, re2, ar200m, op
+! "r1601_c" test.
+off failure

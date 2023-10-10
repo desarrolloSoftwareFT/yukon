@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600569226  V14de                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:49:54 2020
+disconnect all
+connect s to "SPI0_10GE_FLSH_CS_L_3V_C"
+connect i to "SPI0_10GE_FLSH_CS_L_3V_ST_C"
+connect a to "SPI0_10GE_FLSH_CS_L_3V_C"
+connect b to "SPI0_10GE_FLSH_CS_L_3V_ST_C"
+resistor 33.2, 40, 20, re2, ar200m
+! "r1816_c" test.

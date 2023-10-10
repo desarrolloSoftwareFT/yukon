@@ -1,0 +1,2869 @@
+!!!!   22    0    1 1489580427  Vdaae                                         
+-- ***************************************************************************
+-- Boundary-Scan Description Language (BSDL) file 
+-- Manufacturer: Intel Corporation
+-- Component   : PCH
+-- Package(s)  : BGA 
+-- Version     : 1.5
+-- Entity name : BDWDE_PCH
+-- ***************************************************************************
+-- Information in this document is provided in connection with Intel products.
+-- No license, express or implied, by estoppel or otherwise, to any
+-- intellectual property rights is granted by this document. Except as
+-- provided in Intel's Terms and Conditions of Sale for such products,
+-- Intel assumes no liability whatsoever, and Intel disclaims any express or
+-- implied warranty, relating to sale and/or use of Intel products including
+-- liability or warranties relating to fitness for a particular purpose,
+-- merchantability, or infringement of any patent, copyright or other
+-- intellectual property right. Intel products are not intended for use in
+-- medical, life saving, or life sustaining applications.
+--
+-- Intel may make changes to specifications and product descriptions at any
+-- time, without notice.
+--
+-- This product may contain design defects or errors 
+-- known as errata which may cause the product to deviate from published
+-- specifications. Current characterized errata are available on request.
+--
+-- Contact your local Intel sales office or your distributor to obtain the
+-- latest specifications and before placing your product order.
+--
+-- Copyright (c) Intel Corporation 2015. Third-party brands and names are the
+-- property of their respective owners.
+-- ***************************************************************************
+--
+-- Revision History 
+-- v1.5 April 2015
+--    Cleaned up the BSDL errors 
+-- v1.0 July 2014
+--      - Initial Release
+--
+-- ***************************************************************************
+--
+entity BDWDE_PCH is 
+
+generic(PHYSICAL_PIN_MAP : string := "bga"); 
+
+port(
+        ADR_COMPLETE             :        linkage bit;
+        ADR_IN                 :        linkage bit;
+        APWROK                 :        linkage bit;
+        BIST_ENABLE                  :        linkage bit;
+        BMBUSY_N_GPIO0            :inout bit;
+        BMCINIT                      :        linkage bit;
+        CATERR_N                     :        linkage bit;
+        CLKIN_GND1_DN                :        linkage bit;
+        CLKIN_GND1_DP                :        linkage bit;
+        CLKIN_GND2_DN                :        linkage bit;
+        CLKIN_GND2_DP                :        linkage bit;
+        CLKIN_GND3_DN                :        linkage bit;
+        CLKIN_GND3_DP                :        linkage bit;
+        CLKIN_GND4_DN                :        linkage bit;
+        CLKIN_GND4_DP                :        linkage bit;
+        CLKIN_PCILOOPBACK            :        linkage bit;
+        CLKOUTFLEX1_GPIO65            :inout bit;
+        CLKOUTFLEX3_GPIO67            :inout bit;
+        CLKOUT_ITPXDP_DN            :out bit;
+        CLKOUT_ITPXDP_DP            :out bit;
+        CLKOUT_PCIE_DN_0            :out bit;
+        CLKOUT_PCIE_DN_1            :out bit;
+        CLKOUT_PCIE_DN_2            :out bit;
+        CLKOUT_PCIE_DN_3            :out bit;
+        CLKOUT_PCIE_DN_4            :out bit;
+        CLKOUT_PCIE_DN_5            :out bit;
+        CLKOUT_PCIE_DN_6            :out bit;
+        CLKOUT_PCIE_DN_7            :out bit;
+        CLKOUT_PCIE_DP_0            :out bit;
+        CLKOUT_PCIE_DP_1            :out bit;
+        CLKOUT_PCIE_DP_2            :out bit;
+        CLKOUT_PCIE_DP_3            :out bit;
+        CLKOUT_PCIE_DP_4            :out bit;
+        CLKOUT_PCIE_DP_5            :out bit;
+        CLKOUT_PCIE_DP_6            :out bit;
+        CLKOUT_PCIE_DP_7            :out bit;
+        CLKOUT_PCI_0            :out bit;    
+        CLKOUT_PCI_1            :out bit;    
+        CLKOUT_PCI_2            :out bit;    
+        CLKOUT_PCI_3            :out bit;
+        CLKOUT_PCI_4            :out bit; 
+        CLKOUT_PEG_DN            :out bit;
+        CLKOUT_PEG_DP            :out bit;
+        DDR0_ACT_N_MA_15             :        linkage bit;
+        DDR0_ALERT_N_PAR_ERR_N       :        linkage bit;
+        DDR0_BA_0                    :        linkage bit;
+        DDR0_BA_1                    :        linkage bit;
+        DDR0_BG0_BA_2             :        linkage bit;    
+        DDR0_BG1_MA_14             :        linkage bit;            
+        DDR0_CKE_0                   :        linkage bit;
+        DDR0_CKE_1                   :        linkage bit;
+        DDR0_CKE_2                   :        linkage bit;
+        DDR0_CKE_3                   :        linkage bit;
+        DDR0_CLK_DN_0                :        linkage bit;
+        DDR0_CLK_DN_1                :        linkage bit;
+        DDR0_CLK_DN_2                :        linkage bit;
+        DDR0_CLK_DN_3                :        linkage bit;
+        DDR0_CLK_DP_0                :        linkage bit;
+        DDR0_CLK_DP_1                :        linkage bit;
+        DDR0_CLK_DP_2                :        linkage bit;
+        DDR0_CLK_DP_3                :        linkage bit;
+        DDR0_CS_N_0                  :        linkage bit;
+        DDR0_CS_N_1                  :        linkage bit;
+        DDR0_CS_N_4                  :        linkage bit;
+        DDR0_CS_N_5                  :        linkage bit;
+        DDR0_DQS_DN_0                :        linkage bit;
+        DDR0_DQS_DN_1                :        linkage bit;
+        DDR0_DQS_DN_10               :        linkage bit;
+        DDR0_DQS_DN_11               :        linkage bit;
+        DDR0_DQS_DN_12               :        linkage bit;
+        DDR0_DQS_DN_13               :        linkage bit;
+        DDR0_DQS_DN_14               :        linkage bit;
+        DDR0_DQS_DN_15               :        linkage bit;
+        DDR0_DQS_DN_16               :        linkage bit;
+        DDR0_DQS_DN_17               :        linkage bit;
+        DDR0_DQS_DN_2                :        linkage bit;
+        DDR0_DQS_DN_3                :        linkage bit;
+        DDR0_DQS_DN_4                :        linkage bit;
+        DDR0_DQS_DN_5                :        linkage bit;
+        DDR0_DQS_DN_6                :        linkage bit;
+        DDR0_DQS_DN_7                :        linkage bit;
+        DDR0_DQS_DN_8                :        linkage bit;
+        DDR0_DQS_DN_9                :        linkage bit;
+        DDR0_DQS_DP_0                :        linkage bit;
+        DDR0_DQS_DP_1                :        linkage bit;
+        DDR0_DQS_DP_10               :        linkage bit;
+        DDR0_DQS_DP_11               :        linkage bit;
+        DDR0_DQS_DP_12               :        linkage bit;
+        DDR0_DQS_DP_13               :        linkage bit;
+        DDR0_DQS_DP_14               :        linkage bit;
+        DDR0_DQS_DP_15               :        linkage bit;
+        DDR0_DQS_DP_16               :        linkage bit;
+        DDR0_DQS_DP_17               :        linkage bit;
+        DDR0_DQS_DP_2                :        linkage bit;
+        DDR0_DQS_DP_3                :        linkage bit;
+        DDR0_DQS_DP_4                :        linkage bit;
+        DDR0_DQS_DP_5                :        linkage bit;
+        DDR0_DQS_DP_6                :        linkage bit;
+        DDR0_DQS_DP_7                :        linkage bit;
+        DDR0_DQS_DP_8                :        linkage bit;
+        DDR0_DQS_DP_9                :        linkage bit;
+        DDR0_DQ_0                    :        linkage bit;
+        DDR0_DQ_1                    :        linkage bit;
+        DDR0_DQ_10                   :        linkage bit;
+        DDR0_DQ_11                   :        linkage bit;
+        DDR0_DQ_12                   :        linkage bit;
+        DDR0_DQ_13                   :        linkage bit;
+        DDR0_DQ_14                   :        linkage bit;
+        DDR0_DQ_15                   :        linkage bit;
+        DDR0_DQ_16                   :        linkage bit;
+        DDR0_DQ_17                   :        linkage bit;
+        DDR0_DQ_18                   :        linkage bit;
+        DDR0_DQ_19                   :        linkage bit;
+        DDR0_DQ_2                    :        linkage bit;
+        DDR0_DQ_20                   :        linkage bit;
+        DDR0_DQ_21                   :        linkage bit;
+        DDR0_DQ_22                   :        linkage bit;
+        DDR0_DQ_23                   :        linkage bit;
+        DDR0_DQ_24                   :        linkage bit;
+        DDR0_DQ_25                   :        linkage bit;
+        DDR0_DQ_26                   :        linkage bit;
+        DDR0_DQ_27                   :        linkage bit;
+        DDR0_DQ_28                   :        linkage bit;
+        DDR0_DQ_29                   :        linkage bit;
+        DDR0_DQ_3                    :        linkage bit;
+        DDR0_DQ_30                   :        linkage bit;
+        DDR0_DQ_31                   :        linkage bit;
+        DDR0_DQ_32                   :        linkage bit;
+        DDR0_DQ_33                   :        linkage bit;
+        DDR0_DQ_34                   :        linkage bit;
+        DDR0_DQ_35                   :        linkage bit;
+        DDR0_DQ_36                   :        linkage bit;
+        DDR0_DQ_37                   :        linkage bit;
+        DDR0_DQ_38                   :        linkage bit;
+        DDR0_DQ_39                   :        linkage bit;
+        DDR0_DQ_4                    :        linkage bit;
+        DDR0_DQ_40                   :        linkage bit;
+        DDR0_DQ_41                   :        linkage bit;
+        DDR0_DQ_42                   :        linkage bit;
+        DDR0_DQ_43                   :        linkage bit;
+        DDR0_DQ_44                   :        linkage bit;
+        DDR0_DQ_45                   :        linkage bit;
+        DDR0_DQ_46                   :        linkage bit;
+        DDR0_DQ_47                   :        linkage bit;
+        DDR0_DQ_48                   :        linkage bit;
+        DDR0_DQ_49                   :        linkage bit;
+        DDR0_DQ_5                    :        linkage bit;
+        DDR0_DQ_50                   :        linkage bit;
+        DDR0_DQ_51                   :        linkage bit;
+        DDR0_DQ_52                   :        linkage bit;
+        DDR0_DQ_53                   :        linkage bit;
+        DDR0_DQ_54                   :        linkage bit;
+        DDR0_DQ_55                   :        linkage bit;
+        DDR0_DQ_56                   :        linkage bit;
+        DDR0_DQ_57                   :        linkage bit;
+        DDR0_DQ_58                   :        linkage bit;
+        DDR0_DQ_59                   :        linkage bit;
+        DDR0_DQ_6                    :        linkage bit;
+        DDR0_DQ_60                   :        linkage bit;
+        DDR0_DQ_61                   :        linkage bit;
+        DDR0_DQ_62                   :        linkage bit;
+        DDR0_DQ_63                   :        linkage bit;
+        DDR0_DQ_7                    :        linkage bit;
+        DDR0_DQ_8                    :        linkage bit;
+        DDR0_DQ_9                    :        linkage bit;
+        DDR0_ECC_0                   :        linkage bit;
+        DDR0_ECC_1                   :        linkage bit;
+        DDR0_ECC_2                   :        linkage bit;
+        DDR0_ECC_3                   :        linkage bit;
+        DDR0_ECC_4                   :        linkage bit;
+        DDR0_ECC_5                   :        linkage bit;
+        DDR0_ECC_6                   :        linkage bit;
+        DDR0_ECC_7                   :        linkage bit;
+        DDR0_MA14_WE_N             :        linkage bit;
+        DDR0_MA15_CAS_N                 :        linkage bit;
+        DDR0_MA16_RAS_N                 :        linkage bit;
+        DDR0_MA_0                    :        linkage bit;
+        DDR0_MA_1                    :        linkage bit;
+        DDR0_MA_10                   :        linkage bit;
+        DDR0_MA_11                   :        linkage bit;
+        DDR0_MA_12                   :        linkage bit;
+        DDR0_MA_13                   :        linkage bit;
+        DDR0_MA_2                    :        linkage bit;
+        DDR0_MA_3                    :        linkage bit;
+        DDR0_MA_4                    :        linkage bit;
+        DDR0_MA_5                    :        linkage bit;
+        DDR0_MA_6                    :        linkage bit;
+        DDR0_MA_7                    :        linkage bit;
+        DDR0_MA_8                    :        linkage bit;
+        DDR0_MA_9                    :        linkage bit;
+        DDR0_ODT_0                   :        linkage bit;
+        DDR0_ODT_1                   :        linkage bit;
+        DDR0_ODT_2                   :        linkage bit;
+        DDR0_ODT_3                   :        linkage bit;
+        DDR0_PAR                     :        linkage bit;
+        DDR1_ACT_N_MA_15         :        linkage bit;
+        DDR1_ALERT_N_PAR_ERR_N         :        linkage bit;
+        DDR1_BA_0                    :        linkage bit;
+        DDR1_BA_1                    :        linkage bit;
+        DDR1_BG0_BA_2             :        linkage bit;    
+        DDR1_BG1_MA_14             :        linkage bit;            
+        DDR1_CKE_0                   :        linkage bit;
+        DDR1_CKE_1                   :        linkage bit;
+        DDR1_CKE_2                   :        linkage bit;
+        DDR1_CKE_3                   :        linkage bit;
+        DDR1_CLK_DN_0                :        linkage bit;
+        DDR1_CLK_DN_1                :        linkage bit;
+        DDR1_CLK_DN_2                :        linkage bit;
+        DDR1_CLK_DN_3                :        linkage bit;
+        DDR1_CLK_DP_0                :        linkage bit;
+        DDR1_CLK_DP_1                :        linkage bit;
+        DDR1_CLK_DP_2                :        linkage bit;
+        DDR1_CLK_DP_3                :        linkage bit;
+        DDR1_CS_N_0                  :        linkage bit;
+        DDR1_CS_N_1                  :        linkage bit;
+        DDR1_CS_N_4                  :        linkage bit;
+        DDR1_CS_N_5                  :        linkage bit;
+        DDR1_DQS_DN_0                :        linkage bit;
+        DDR1_DQS_DN_1                :        linkage bit;
+        DDR1_DQS_DN_10               :        linkage bit;
+        DDR1_DQS_DN_11               :        linkage bit;
+        DDR1_DQS_DN_12               :        linkage bit;
+        DDR1_DQS_DN_13               :        linkage bit;
+        DDR1_DQS_DN_14               :        linkage bit;
+        DDR1_DQS_DN_15               :        linkage bit;
+        DDR1_DQS_DN_16               :        linkage bit;
+        DDR1_DQS_DN_17               :        linkage bit;
+        DDR1_DQS_DN_2                :        linkage bit;
+        DDR1_DQS_DN_3                :        linkage bit;
+        DDR1_DQS_DN_4                :        linkage bit;
+        DDR1_DQS_DN_5                :        linkage bit;
+        DDR1_DQS_DN_6                :        linkage bit;
+        DDR1_DQS_DN_7                :        linkage bit;
+        DDR1_DQS_DN_8                :        linkage bit;
+        DDR1_DQS_DN_9                :        linkage bit;
+        DDR1_DQS_DP_0                :        linkage bit;
+        DDR1_DQS_DP_1                :        linkage bit;
+        DDR1_DQS_DP_10               :        linkage bit;
+        DDR1_DQS_DP_11               :        linkage bit;
+        DDR1_DQS_DP_12               :        linkage bit;
+        DDR1_DQS_DP_13               :        linkage bit;
+        DDR1_DQS_DP_14               :        linkage bit;
+        DDR1_DQS_DP_15               :        linkage bit;
+        DDR1_DQS_DP_16               :        linkage bit;
+        DDR1_DQS_DP_17               :        linkage bit;
+        DDR1_DQS_DP_2                :        linkage bit;
+        DDR1_DQS_DP_3                :        linkage bit;
+        DDR1_DQS_DP_4                :        linkage bit;
+        DDR1_DQS_DP_5                :        linkage bit;
+        DDR1_DQS_DP_6                :        linkage bit;
+        DDR1_DQS_DP_7                :        linkage bit;
+        DDR1_DQS_DP_8                :        linkage bit;
+        DDR1_DQS_DP_9                :        linkage bit;
+        DDR1_DQ_0                    :        linkage bit;
+        DDR1_DQ_1                    :        linkage bit;
+        DDR1_DQ_10                   :        linkage bit;
+        DDR1_DQ_11                   :        linkage bit;
+        DDR1_DQ_12                   :        linkage bit;
+        DDR1_DQ_13                   :        linkage bit;
+        DDR1_DQ_14                   :        linkage bit;
+        DDR1_DQ_15                   :        linkage bit;
+        DDR1_DQ_16                   :        linkage bit;
+        DDR1_DQ_17                   :        linkage bit;
+        DDR1_DQ_18                   :        linkage bit;
+        DDR1_DQ_19                   :        linkage bit;
+        DDR1_DQ_2                    :        linkage bit;
+        DDR1_DQ_20                   :        linkage bit;
+        DDR1_DQ_21                   :        linkage bit;
+        DDR1_DQ_22                   :        linkage bit;
+        DDR1_DQ_23                   :        linkage bit;
+        DDR1_DQ_24                   :        linkage bit;
+        DDR1_DQ_25                   :        linkage bit;
+        DDR1_DQ_26                   :        linkage bit;
+        DDR1_DQ_27                   :        linkage bit;
+        DDR1_DQ_28                   :        linkage bit;
+        DDR1_DQ_29                   :        linkage bit;
+        DDR1_DQ_3                    :        linkage bit;
+        DDR1_DQ_30                   :        linkage bit;
+        DDR1_DQ_31                   :        linkage bit;
+        DDR1_DQ_32                   :        linkage bit;
+        DDR1_DQ_33                   :        linkage bit;
+        DDR1_DQ_34                   :        linkage bit;
+        DDR1_DQ_35                   :        linkage bit;
+        DDR1_DQ_36                   :        linkage bit;
+        DDR1_DQ_37                   :        linkage bit;
+        DDR1_DQ_38                   :        linkage bit;
+        DDR1_DQ_39                   :        linkage bit;
+        DDR1_DQ_4                    :        linkage bit;
+        DDR1_DQ_40                   :        linkage bit;
+        DDR1_DQ_41                   :        linkage bit;
+        DDR1_DQ_42                   :        linkage bit;
+        DDR1_DQ_43                   :        linkage bit;
+        DDR1_DQ_44                   :        linkage bit;
+        DDR1_DQ_45                   :        linkage bit;
+        DDR1_DQ_46                   :        linkage bit;
+        DDR1_DQ_47                   :        linkage bit;
+        DDR1_DQ_48                   :        linkage bit;
+        DDR1_DQ_49                   :        linkage bit;
+        DDR1_DQ_5                    :        linkage bit;
+        DDR1_DQ_50                   :        linkage bit;
+        DDR1_DQ_51                   :        linkage bit;
+        DDR1_DQ_52                   :        linkage bit;
+        DDR1_DQ_53                   :        linkage bit;
+        DDR1_DQ_54                   :        linkage bit;
+        DDR1_DQ_55                   :        linkage bit;
+        DDR1_DQ_56                   :        linkage bit;
+        DDR1_DQ_57                   :        linkage bit;
+        DDR1_DQ_58                   :        linkage bit;
+        DDR1_DQ_59                   :        linkage bit;
+        DDR1_DQ_6                    :        linkage bit;
+        DDR1_DQ_60                   :        linkage bit;
+        DDR1_DQ_61                   :        linkage bit;
+        DDR1_DQ_62                   :        linkage bit;
+        DDR1_DQ_63                   :        linkage bit;
+        DDR1_DQ_7                    :        linkage bit;
+        DDR1_DQ_8                    :        linkage bit;
+        DDR1_DQ_9                    :        linkage bit;
+        DDR1_ECC_0                   :        linkage bit;
+        DDR1_ECC_1                   :        linkage bit;
+        DDR1_ECC_2                   :        linkage bit;
+        DDR1_ECC_3                   :        linkage bit;
+        DDR1_ECC_4                   :        linkage bit;
+        DDR1_ECC_5                   :        linkage bit;
+        DDR1_ECC_6                   :        linkage bit;
+        DDR1_ECC_7                   :        linkage bit;
+        DDR1_MA14_WE_N                 :        linkage bit;
+        DDR1_MA15_CAS_N              :        linkage bit;
+        DDR1_MA16_RAS_N              :        linkage bit;
+        DDR1_MA_0                    :        linkage bit;
+        DDR1_MA_1                    :        linkage bit;
+        DDR1_MA_10                   :        linkage bit;
+        DDR1_MA_11                   :        linkage bit;
+        DDR1_MA_12                   :        linkage bit;
+        DDR1_MA_13                   :        linkage bit;
+        DDR1_MA_2                    :        linkage bit;
+        DDR1_MA_3                    :        linkage bit;
+        DDR1_MA_4                    :        linkage bit;
+        DDR1_MA_5                    :        linkage bit;
+        DDR1_MA_6                    :        linkage bit;
+        DDR1_MA_7                    :        linkage bit;
+        DDR1_MA_8                    :        linkage bit;
+        DDR1_MA_9                    :        linkage bit;
+        DDR1_ODT_0                   :        linkage bit;
+        DDR1_ODT_1                   :        linkage bit;
+        DDR1_ODT_2                   :        linkage bit;
+        DDR1_ODT_3                   :        linkage bit;
+        DDR1_PAR                     :        linkage bit;
+        DDR3_4_STRAP             :        linkage bit;        
+        DDR_PWRGOOD             :        linkage bit;
+        DDR_RCOMP_0             :        linkage bit;
+        DDR_RCOMP_1             :        linkage bit;
+        DDR_RCOMP_2             :        linkage bit;
+        DDR_RESET_N                  :        linkage bit;
+        DDR_SCL                      :        linkage bit;
+        DDR_SDA                      :        linkage bit;
+        DDR_VREF                     :        linkage bit;
+        DDR_VREFDQ_0                 :        linkage bit;
+        DDR_VREFDQ_1                 :        linkage bit;
+        DEBUG_EN_N                   :        linkage bit;
+        DIFFCLK_BIASREF             :        linkage bit;
+        DPWROK                 :        linkage bit;
+        DRAMPWROK_PCH            :out bit;
+        DRAM_PWR_OK                  :        linkage bit;
+        DSWODVREN            :in bit;
+        ERROR_N_0                    :        linkage bit;
+        ERROR_N_1                    :        linkage bit;
+        ERROR_N_2                    :        linkage bit;
+        FIVR_FAULT                   :        linkage bit;
+        GPIO15            :inout bit;
+        GPIO20_SMI_N            :inout bit;
+        GPIO24_MGPIO0            :inout bit;
+        GPIO25            :inout bit;
+        GPIO26            :inout bit;
+        GPIO27_MGPIO6            :inout bit;
+        GPIO28_MGPIO7            :inout bit;
+        GPIO31_MGPIO2            :inout bit;
+        GPIO32            :inout bit;
+        GPIO33            :inout bit;
+        GPIO35_NMI_N            :inout bit;
+        GPIO44            :inout bit;
+        GPIO45            :inout bit;
+        GPIO46            :inout bit;
+        GPIO50            :inout bit;
+        GPIO51            :inout bit;
+        GPIO52            :inout bit;
+        GPIO53            :inout bit;
+        GPIO54            :inout bit;
+        GPIO55            :inout bit;
+        GPIO57_MGPIO5            :inout bit;
+        GPIO72            :inout bit;
+        GPIO8_OCS            :inout bit;
+        ICLK_IREF                    :        linkage bit;
+        INTRUDER_N            :in bit;
+        INTVRMEN            :in bit;
+        JTAG_TCK_CPU                 :        linkage bit;
+        JTAG_TCK_PCH            :in bit;
+        JTAG_TDI_CPU                 :        linkage bit;
+        JTAG_TDI_PCH            :in bit;
+        JTAG_TDO_CPU                 :        linkage bit;
+        JTAG_TDO_PCH            :out bit;
+        JTAG_TMS_CPU                 :        linkage bit;
+        JTAG_TMS_PCH            :in bit;
+        JTAG_TRST_N_CPU              :        linkage bit;
+        LAD_0            :inout bit;       
+        LAD_1            :inout bit;       
+        LAD_2            :inout bit;       
+        LAD_3            :inout bit; 
+        LAN_FLSH_CLK              :        linkage bit;    
+        LAN_FLSH_CS_N             :        linkage bit;    
+        LAN_FLSH_DI             :        linkage bit;    
+        LAN_FLSH_DO             :        linkage bit;     
+        LAN_I2C_SCL0             :        linkage bit;        
+        LAN_I2C_SCL1             :        linkage bit;        
+        LAN_I2C_SDA0             :        linkage bit;        
+        LAN_I2C_SDA1             :        linkage bit;        
+        LAN_JRST_N_SDP1_1         :        linkage bit;
+        LAN_JTCK_SDP0_0             :        linkage bit;
+        LAN_JTDI_SDP1_0             :        linkage bit;
+        LAN_JTDO             :        linkage bit;
+        LAN_JTMS_SDP0_1             :        linkage bit;
+        LAN_KR_RX0_N             :        linkage bit;
+        LAN_KR_RX0_P             :        linkage bit;
+        LAN_KR_RX1_N             :        linkage bit;
+        LAN_KR_RX1_P             :        linkage bit;
+        LAN_KR_TX0_N             :        linkage bit;
+        LAN_KR_TX0_P             :        linkage bit;
+        LAN_KR_TX1_N             :        linkage bit;
+        LAN_KR_TX1_P             :        linkage bit;
+        LAN_KX4_RX0_L0_N         :        linkage bit;
+        LAN_KX4_RX0_L0_P         :        linkage bit;
+        LAN_KX4_RX0_L1_N         :        linkage bit;
+        LAN_KX4_RX0_L1_P         :        linkage bit;
+        LAN_KX4_RX0_L2_N         :        linkage bit;
+        LAN_KX4_RX0_L2_P         :        linkage bit;
+        LAN_KX4_RX0_L3_N         :        linkage bit;
+        LAN_KX4_RX0_L3_P         :        linkage bit;
+        LAN_KX4_RX1_L0_N         :        linkage bit;
+        LAN_KX4_RX1_L0_P         :        linkage bit;
+        LAN_KX4_RX1_L1_N         :        linkage bit;
+        LAN_KX4_RX1_L1_P         :        linkage bit;
+        LAN_KX4_RX1_L2_N         :        linkage bit;
+        LAN_KX4_RX1_L2_P         :        linkage bit;
+        LAN_KX4_RX1_L3_N         :        linkage bit;
+        LAN_KX4_RX1_L3_P         :        linkage bit;
+        LAN_KX4_TX0_L0_N         :        linkage bit;
+        LAN_KX4_TX0_L0_P         :        linkage bit;
+        LAN_KX4_TX0_L1_N         :        linkage bit;
+        LAN_KX4_TX0_L1_P         :        linkage bit;
+        LAN_KX4_TX0_L2_N         :        linkage bit;
+        LAN_KX4_TX0_L2_P         :        linkage bit;
+        LAN_KX4_TX0_L3_N         :        linkage bit;
+        LAN_KX4_TX0_L3_P         :        linkage bit;
+        LAN_KX4_TX1_L0_N         :        linkage bit;
+        LAN_KX4_TX1_L0_P         :        linkage bit;
+        LAN_KX4_TX1_L1_N         :        linkage bit;
+        LAN_KX4_TX1_L1_P         :        linkage bit;
+        LAN_KX4_TX1_L2_N         :        linkage bit;
+        LAN_KX4_TX1_L2_P         :        linkage bit;
+        LAN_KX4_TX1_L3_N         :        linkage bit;
+        LAN_KX4_TX1_L3_P         :        linkage bit;
+        LAN_MDC0_LED0_1          :        linkage bit;      
+        LAN_MDC1_LED1_1          :        linkage bit;      
+        LAN_MDIO0_LED0_0         :        linkage bit;    
+        LAN_MDIO1_LED1_0         :        linkage bit;    
+        LAN_MDIO_DIR_CTL_0         :        linkage bit;
+        LAN_MDIO_DIR_CTL_1         :        linkage bit;
+        LAN_NCSI_ARB_IN          :        linkage bit;
+        LAN_NCSI_ARB_OUT         :        linkage bit;
+        LAN_NCSI_CLK_IN          :        linkage bit;
+        LAN_NCSI_CRS_DV          :        linkage bit;
+        LAN_NCSI_RXD0               :        linkage bit;
+        LAN_NCSI_RXD1               :        linkage bit;
+        LAN_NCSI_TRI_EN_PECI_ID1     :        linkage bit;
+        LAN_NCSI_TXD0               :        linkage bit;
+        LAN_NCSI_TXD1               :        linkage bit;
+        LAN_NCSI_TX_EN           :        linkage bit;
+        LAN_PHY_PWR_CTRL_GPIO12            :inout bit;
+        LAN_PWRGOOD             :        linkage bit;        
+        LAN_SMBALRT_N             :        linkage bit;
+        LAN_XTAL_IN                  :        linkage bit;
+        LAN_XTAL_OUT                 :        linkage bit;
+        LDRQ0_N            :in bit;
+        LDRQ1_N_GPIO23            :inout bit;
+        LFRAME_N            :inout bit;
+        MBP_N_2                      :        linkage bit;
+        MBP_N_3                      :        linkage bit;
+        MBP_N_4                      :        linkage bit;
+        MBP_N_5                      :        linkage bit;
+        MBP_N_6                      :        linkage bit;
+        MBP_N_7                      :        linkage bit;
+        MEM_HOT_N                 :        linkage bit;
+        MFG_MODE_STRAP            :inout bit;
+        NCTF_TP                      :        linkage bit;
+        OC0_N_GPIO59            :inout bit;
+        OC1_N_GPIO40            :inout bit;
+        OC2_N_GPIO41            :inout bit;
+        OC3_N_GPIO42            :inout bit;
+        OC4_N_GPIO43            :inout bit;
+        OC5_N_GPIO9            :inout bit;
+        OC6_N_GPIO10            :inout bit;
+        OC7_N_GPIO14            :inout bit;
+        PCHHOT_CPU_N                 :        linkage bit;
+        PCH_PWROK                    :        linkage bit;
+        PCIE_IREF                    :        linkage bit;
+        PCIE_RCOMP                   :        linkage bit;
+        PCIE_RX_DN_1            :in bit;
+        PCIE_RX_DN_2            :in bit;
+        PCIE_RX_DN_3            :in bit;
+        PCIE_RX_DN_4            :in bit;
+        PCIE_RX_DN_5            :in bit;
+        PCIE_RX_DN_6            :in bit;
+        PCIE_RX_DN_7            :in bit;
+        PCIE_RX_DN_8            :in bit;
+        PCIE_RX_DP_1            :in bit;
+        PCIE_RX_DP_2            :in bit;
+        PCIE_RX_DP_3            :in bit;
+        PCIE_RX_DP_4            :in bit;
+        PCIE_RX_DP_5            :in bit;
+        PCIE_RX_DP_6            :in bit;
+        PCIE_RX_DP_7            :in bit;
+        PCIE_RX_DP_8            :in bit;
+        PCIE_TX_DN_1            : buffer bit;
+        PCIE_TX_DN_2            : buffer bit;
+        PCIE_TX_DN_3            : buffer bit;
+        PCIE_TX_DN_4            : buffer bit;
+        PCIE_TX_DN_5            : buffer bit;
+        PCIE_TX_DN_6            : buffer bit;
+        PCIE_TX_DN_7            : buffer bit;
+        PCIE_TX_DN_8            : buffer bit;
+        PCIE_TX_DP_1            : buffer bit;
+        PCIE_TX_DP_2            : buffer bit;
+        PCIE_TX_DP_3            : buffer bit;
+        PCIE_TX_DP_4            : buffer bit;
+        PCIE_TX_DP_5            : buffer bit;
+        PCIE_TX_DP_6            : buffer bit;
+        PCIE_TX_DP_7            : buffer bit;
+        PCIE_TX_DP_8            : buffer bit;
+        PE1_RX_DN_0                  :        linkage bit;
+        PE1_RX_DN_1                  :        linkage bit;
+        PE1_RX_DN_10                 :        linkage bit;
+        PE1_RX_DN_11                 :        linkage bit;
+        PE1_RX_DN_12                 :        linkage bit;
+        PE1_RX_DN_13                 :        linkage bit;
+        PE1_RX_DN_14                 :        linkage bit;
+        PE1_RX_DN_15                 :        linkage bit;
+        PE1_RX_DN_2                  :        linkage bit;
+        PE1_RX_DN_3                  :        linkage bit;
+        PE1_RX_DN_4                  :        linkage bit;
+        PE1_RX_DN_5                  :        linkage bit;
+        PE1_RX_DN_6                  :        linkage bit;
+        PE1_RX_DN_7                  :        linkage bit;
+        PE1_RX_DN_8                  :        linkage bit;
+        PE1_RX_DN_9                  :        linkage bit;
+        PE1_RX_DP_0                  :        linkage bit;
+        PE1_RX_DP_1                  :        linkage bit;
+        PE1_RX_DP_10                 :        linkage bit;
+        PE1_RX_DP_11                 :        linkage bit;
+        PE1_RX_DP_12                 :        linkage bit;
+        PE1_RX_DP_13                 :        linkage bit;
+        PE1_RX_DP_14                 :        linkage bit;
+        PE1_RX_DP_15                 :        linkage bit;
+        PE1_RX_DP_2                  :        linkage bit;
+        PE1_RX_DP_3                  :        linkage bit;
+        PE1_RX_DP_4                  :        linkage bit;
+        PE1_RX_DP_5                  :        linkage bit;
+        PE1_RX_DP_6                  :        linkage bit;
+        PE1_RX_DP_7                  :        linkage bit;
+        PE1_RX_DP_8                  :        linkage bit;
+        PE1_RX_DP_9                  :        linkage bit;
+        PE1_TX_DN_0                  :        linkage bit;
+        PE1_TX_DN_1                  :        linkage bit;
+        PE1_TX_DN_10                 :        linkage bit;
+        PE1_TX_DN_11                 :        linkage bit;
+        PE1_TX_DN_12                 :        linkage bit;
+        PE1_TX_DN_13                 :        linkage bit;
+        PE1_TX_DN_14                 :        linkage bit;
+        PE1_TX_DN_15                 :        linkage bit;
+        PE1_TX_DN_2                  :        linkage bit;
+        PE1_TX_DN_3                  :        linkage bit;
+        PE1_TX_DN_4                  :        linkage bit;
+        PE1_TX_DN_5                  :        linkage bit;
+        PE1_TX_DN_6                  :        linkage bit;
+        PE1_TX_DN_7                  :        linkage bit;
+        PE1_TX_DN_8                  :        linkage bit;
+        PE1_TX_DN_9                  :        linkage bit;
+        PE1_TX_DP_0                  :        linkage bit;
+        PE1_TX_DP_1                  :        linkage bit;
+        PE1_TX_DP_10                 :        linkage bit;
+        PE1_TX_DP_11                 :        linkage bit;
+        PE1_TX_DP_12                 :        linkage bit;
+        PE1_TX_DP_13                 :        linkage bit;
+        PE1_TX_DP_14                 :        linkage bit;
+        PE1_TX_DP_15                 :        linkage bit;
+        PE1_TX_DP_2                  :        linkage bit;
+        PE1_TX_DP_3                  :        linkage bit;
+        PE1_TX_DP_4                  :        linkage bit;
+        PE1_TX_DP_5                  :        linkage bit;
+        PE1_TX_DP_6                  :        linkage bit;
+        PE1_TX_DP_7                  :        linkage bit;
+        PE1_TX_DP_8                  :        linkage bit;
+        PE1_TX_DP_9                  :        linkage bit;
+        PE2_RX_DN_0                  :        linkage bit;
+        PE2_RX_DN_1                  :        linkage bit;
+        PE2_RX_DN_2                  :        linkage bit;
+        PE2_RX_DN_3                  :        linkage bit;
+        PE2_RX_DN_4                  :        linkage bit;
+        PE2_RX_DN_5                  :        linkage bit;
+        PE2_RX_DN_6                  :        linkage bit;
+        PE2_RX_DN_7                  :        linkage bit;
+        PE2_RX_DP_0                  :        linkage bit;
+        PE2_RX_DP_1                  :        linkage bit;
+        PE2_RX_DP_2                  :        linkage bit;
+        PE2_RX_DP_3                  :        linkage bit;
+        PE2_RX_DP_4                  :        linkage bit;
+        PE2_RX_DP_5                  :        linkage bit;
+        PE2_RX_DP_6                  :        linkage bit;
+        PE2_RX_DP_7                  :        linkage bit;
+        PE2_TX_DN_0                  :        linkage bit;
+        PE2_TX_DN_1                  :        linkage bit;
+        PE2_TX_DN_2                  :        linkage bit;
+        PE2_TX_DN_3                  :        linkage bit;
+        PE2_TX_DN_4                  :        linkage bit;
+        PE2_TX_DN_5                  :        linkage bit;
+        PE2_TX_DN_6                  :        linkage bit;
+        PE2_TX_DN_7                  :        linkage bit;
+        PE2_TX_DP_0                  :        linkage bit;
+        PE2_TX_DP_1                  :        linkage bit;
+        PE2_TX_DP_2                  :        linkage bit;
+        PE2_TX_DP_3                  :        linkage bit;
+        PE2_TX_DP_4                  :        linkage bit;
+        PE2_TX_DP_5                  :        linkage bit;
+        PE2_TX_DP_6                  :        linkage bit;
+        PE2_TX_DP_7                  :        linkage bit;
+        PECI_CPU                     :        linkage bit;    
+        PECI_ID0             :        linkage bit;            
+        PECI_PCH            :inout bit;
+        PE_HP_SCL                    :        linkage bit;
+        PE_HP_SDA                    :        linkage bit;
+        PIRQA_N            :inout bit;
+        PIRQB_N            :inout bit;
+        PIRQC_N            :inout bit;
+        PIRQD_N            :inout bit;
+        PIRQE_N_GPIO2            :inout bit;
+        PIRQF_N_GPIO3            :inout bit;
+        PIRQG_N_GPIO4            :inout bit;
+        PIRQH_N_GPIO5            :inout bit;
+        PLTRST_N            :inout bit;
+        PLTRST_PROC_N            :inout bit;
+        PME_N            :inout bit;
+        PMSYNC_CPU                   :        linkage bit;
+        PM_SYNC_PCH            :inout bit;
+        PRDY_N                       :        linkage bit;
+        PREQ_N                       :        linkage bit;
+        PROCHOT_N                    :        linkage bit;
+        PROCPWRGD_PCH            :inout bit;
+        PWM0            :out bit;
+        PWRBTN_N            :in bit;
+        PWRGOOD_CPU                  :        linkage bit;
+        PWR_DEBUG_N                  :        linkage bit;
+        REFCLK14IN            :in bit;
+        RESET_CPU_N                  :        linkage bit;
+        RI_N            :in bit;
+        RSMRST_CPU_N             :        linkage bit;
+        RSMRST_N                     :        linkage bit;
+        RTCRST_N            :in bit;
+        RTCX1                        :        linkage bit;
+        RTCX2                        :        linkage bit;
+        SAFE_MODE_BOOT               :        linkage bit;
+        SATA0GP_GPIO21            :inout bit;
+        SATA1GP_GPIO19            :inout bit;
+        SATA2GP_GPIO36            :inout bit;
+        SATA3GP_GPIO37            :inout bit;
+        SATA4GP_GPIO16            :inout bit;
+        SATA5GP_GPIO49            :inout bit;
+        SATALED_N            :inout bit;
+        SATA_IREF                    :        linkage bit;
+        SATA_RCOMP                   :        linkage bit;
+        SATA_RX_DN_0            : in bit;
+        SATA_RX_DN_1            : in bit;
+        SATA_RX_DN_2            : in bit;
+        SATA_RX_DN_3            : in bit;
+        SATA_RX_DN_4            : in bit;
+        SATA_RX_DN_5            : in bit;
+        SATA_RX_DP_0            : in bit;
+        SATA_RX_DP_1            : in bit;
+        SATA_RX_DP_2            : in bit;
+        SATA_RX_DP_3            : in bit;
+        SATA_RX_DP_4            : in bit;
+        SATA_RX_DP_5            : in bit;
+        SATA_TX_DN_0            : buffer bit;
+        SATA_TX_DN_1            : buffer bit;
+        SATA_TX_DN_2            : buffer bit;
+        SATA_TX_DN_3            : buffer bit;
+        SATA_TX_DN_4            : buffer bit;
+        SATA_TX_DN_5            : buffer bit;
+        SATA_TX_DP_0            : buffer bit;
+        SATA_TX_DP_1            : buffer bit;
+        SATA_TX_DP_2            : buffer bit;
+        SATA_TX_DP_3            : buffer bit;
+        SATA_TX_DP_4            : buffer bit;
+        SATA_TX_DP_5            : buffer bit;
+        SCLOCK_GPIO22            :inout bit;
+        SDATAOUT0_GPIO39            :inout bit;
+        SDATAOUT1_GPIO48            :inout bit;
+        SERIRQ            :inout bit;
+        SLOAD_GPIO38            :inout bit;
+        SLP_A_N            :inout bit;
+        SLP_S3_CPU_N                 :        linkage bit;
+        SLP_S3_N            :inout bit;
+        SLP_S4_N            :inout bit;
+        SLP_SUS_N            :inout bit;
+        SLP_WLAN_N_GPIO29_MGPIO3            :inout bit;
+        SMBALERT_N_GPIO11            :inout bit;
+        SMBCLK            :inout bit;
+        SMBDATA            :inout bit;
+        SML0ALERT_N_GPIO60_MGPIO4            :inout bit;
+        SML0CLK            :inout bit;
+        SML0DATA            :inout bit;
+        SML1ALERT_N_PCHHOT_N_GPIO74            :inout bit;
+        SML1CLK_GPIO58_MGPIO11            :inout bit;
+        SML1DATA_GPIO75_MGPIO12            :inout bit;
+        SOC_IREF                     :        linkage bit;
+        SOC_RCOMP                    :        linkage bit;
+        SPARE_1                      :        linkage bit;
+        SPARE_2                      :        linkage bit;
+        SPARE_3                      :        linkage bit;
+        SPARE_4                      :        linkage bit;
+        SPARE_5                      :        linkage bit;
+        SPI_CLK            :inout bit;
+        SPI_CS0_N            :inout bit;
+        SPI_CS1_N            :inout bit;
+        SPI_CS2_N            :inout bit;
+        SPI_IO2            :inout bit;
+        SPI_IO3            :inout bit;
+        SPI_MISO_IO1            :inout bit;
+        SPI_MOSI_IO0            :inout bit;
+        SPKR            :inout bit;
+        SRC1CLKRQ_N_GPIO18            :inout bit;
+        SRTCRST_N            :in bit;
+        SUSACK_N            :in bit;
+        SUSCLK_GPIO62            :inout bit;
+        SUSWARN_N_SUSPWRDNACK_GPIO30            :inout bit;
+        SUS_STAT_N_GPIO61            :inout bit;
+        SVIDALERT_N                  :        linkage bit;
+        SVIDCLK                      :        linkage bit;
+        SVIDDATA                     :        linkage bit;
+        SYS_PWROK                    :        linkage bit;
+        SYS_RESET_N            :in bit;
+        TACH0_GPIO17            :inout bit;
+        TACH1_GPIO1            :inout bit;
+        TACH2_GPIO6            :inout bit;
+        TACH3_GPIO7            :inout bit;
+        TACH4_GPIO68            :inout bit;
+        TACH5_GPIO69            :inout bit;
+        TACH6_GPIO70            :inout bit;
+        TACH7_GPIO71            :inout bit;
+        TEST0                        :        linkage bit;        
+        TEST1                     :        linkage bit;             
+        TEST_CGU_AMONI               :        linkage bit;
+        TEST_CGU_AMONV               :        linkage bit;
+        TEST_CPU_TSTCLK_DN           :        linkage bit;
+        TEST_CPU_TSTCLK_DP           :        linkage bit;
+        TEST_CPU_TSTSTRAP0           :        linkage bit;
+        TEST_DMI_PLLOBS0_PCH         :        linkage bit;
+        TEST_DMI_PLLOBS1_PCH         :        linkage bit;
+        TEST_EAR_N                   :        linkage bit;
+        TEST_EDM_0                   :        linkage bit;
+        TEST_EDM_1                   :        linkage bit;
+        TEST_EDM_PCH                 :        linkage bit;
+        TEST_FIVR_CLKREF             :        linkage bit;
+        TEST_FIVR_PROBE_ANA_0        :        linkage bit;
+        TEST_FIVR_PROBE_ANA_1        :        linkage bit;
+        TEST_FIVR_PROBE_DIG_1        :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_0     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_1     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_10    :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_15    :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_2     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_3     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_4     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_4_11  :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_5     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_5_12  :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_6     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_6_13  :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_7     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_7_14  :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_8     :        linkage bit;
+        TEST_FIVR_VCCCORE_LOAD_9     :        linkage bit;
+        TEST_FIVR_VCCIIO_LOAD        :        linkage bit;
+        TEST_FIVR_VCCPIO_LOAD        :        linkage bit;
+        TEST_FIVR_VCCPQ_LOAD         :        linkage bit;
+        TEST_FIVR_VCCP_LOAD          :        linkage bit;
+        TEST_FIVR_VCCR0_LOAD         :        linkage bit;
+        TEST_FIVR_VCCSFR_LOAD        :        linkage bit;
+        TEST_FIVR_VCCU_LOAD          :        linkage bit;
+        TEST_FIVR_VTARGET_CORE       :        linkage bit;
+        TEST_FIVR_VTARGET_IIO        :        linkage bit;
+        TEST_FIVR_VTARGET_P          :        linkage bit;
+        TEST_FIVR_VTARGET_PIO        :        linkage bit;
+        TEST_FIVR_VTARGET_PQ         :        linkage bit;
+        TEST_FIVR_VTARGET_RING       :        linkage bit;
+        TEST_FIVR_VTARGET_SFR        :        linkage bit;
+        TEST_FIVR_VTARGET_U          :        linkage bit;
+        TEST_KX_AMONI                :        linkage bit;
+        TEST_KX_AMONV                :        linkage bit;
+        TEST_KX_DFX_DN               :        linkage bit;
+        TEST_KX_DFX_DP               :        linkage bit;
+        TEST_KX_HSCLK_DN             :        linkage bit;
+        TEST_KX_HSCLK_DP             :        linkage bit;
+        TEST_LYA_0                   :        linkage bit;
+        TEST_LYA_1                   :        linkage bit;
+        TEST_MBP_N_0                 :        linkage bit;
+        TEST_MBP_N_1                 :        linkage bit;
+        TEST_NOA_AVRB_0              :        linkage bit;
+        TEST_NOA_AVRB_1              :        linkage bit;
+        TEST_NOA_AVRB_10             :        linkage bit;
+        TEST_NOA_AVRB_11             :        linkage bit;
+        TEST_NOA_AVRB_12             :        linkage bit;
+        TEST_NOA_AVRB_13             :        linkage bit;
+        TEST_NOA_AVRB_14             :        linkage bit;
+        TEST_NOA_AVRB_15             :        linkage bit;
+        TEST_NOA_AVRB_2              :        linkage bit;
+        TEST_NOA_AVRB_3              :        linkage bit;
+        TEST_NOA_AVRB_4              :        linkage bit;
+        TEST_NOA_AVRB_5              :        linkage bit;
+        TEST_NOA_AVRB_6              :        linkage bit;
+        TEST_NOA_AVRB_7              :        linkage bit;
+        TEST_NOA_AVRB_8              :        linkage bit;
+        TEST_NOA_AVRB_9              :        linkage bit;
+        TEST_NOA_AVRB_STB_DN_0       :        linkage bit;
+        TEST_NOA_AVRB_STB_DN_1       :        linkage bit;
+        TEST_NOA_AVRB_STB_DP_0       :        linkage bit;
+        TEST_NOA_AVRB_STB_DP_1       :        linkage bit;
+        TEST_NOA_COMP                :        linkage bit;
+        TEST_PE_AMONI                :        linkage bit;
+        TEST_PE_AMONV                :        linkage bit;
+        TEST_PE_DFX_DN               :        linkage bit;
+        TEST_PE_DFX_DP               :        linkage bit;
+        TEST_PE_HSCLK_DN             :        linkage bit;
+        TEST_PE_HSCLK_DP             :        linkage bit;
+        TEST_PGDMON                  :        linkage bit;
+        TEST_RCIN_N                  :        linkage bit;
+        TEST_SATA_PLLOBS0            :        linkage bit;
+        TEST_SATA_PLLOBS1            :        linkage bit;
+        TEST_TD_ANODE                :        linkage bit;
+        TEST_TD_CATHODE              :        linkage bit;
+        TEST_TD_DFTANATP0            :        linkage bit;
+        TEST_TD_DFTANATP1            :        linkage bit;
+        TEST_TD_IREF                 :        linkage bit;
+        TEST_THERMADA                :        linkage bit;
+        TEST_THERMADC                :        linkage bit;
+        TEST_TSTCLK_SC_DN            :        linkage bit;
+        TEST_TSTCLK_SC_DP            :        linkage bit;
+        TEST_USB2_PLLMON_DN          :        linkage bit;
+        TEST_USB2_PLLMON_DP          :        linkage bit;
+        TEST_VCCF_SC_SENSE           :        linkage bit;
+        TEST_VCCF_SENSE              :        linkage bit_vector(1 downto 0);
+        THERMTRIP_N                  :        linkage bit;
+        THERMTRIP_PCH_N            :in bit;
+        THROTTLE_PECI_ID2          :        linkage bit;
+        TXT_AGENT                    :        linkage bit;
+        TXT_PLTEN                    :        linkage bit;
+        UART_RXD_0             :        linkage bit;
+        UART_RXD_1             :        linkage bit;
+        UART_TXD_0             :        linkage bit;
+        UART_TXD_1             :        linkage bit;
+        USB2_DN_0            :inout bit;   
+        USB2_DN_1            :inout bit;   
+        USB2_DN_2            :inout bit;   
+        USB2_DN_3            :inout bit;   
+        USB2_DP_0            :inout bit;   
+        USB2_DP_1            :inout bit;   
+        USB2_DP_2            :inout bit;   
+        USB2_DP_3            :inout bit; 
+        USB2_RBIAS                   :        linkage bit;
+        USB2_RBIAS_N                 :        linkage bit;
+        USB3_RX_DN_0            : in bit;
+        USB3_RX_DN_1            : in bit;
+        USB3_RX_DN_4            : in bit;
+        USB3_RX_DN_5            : in bit;
+        USB3_RX_DP_0            : in bit;
+        USB3_RX_DP_1            : in bit;
+        USB3_RX_DP_4            : in bit;
+        USB3_RX_DP_5            : in bit;
+        USB3_TX_DN_0            : buffer bit;
+        USB3_TX_DN_1            : buffer bit;
+        USB3_TX_DN_4            : buffer bit;
+        USB3_TX_DN_5            : buffer bit;
+        USB3_TX_DP_0            : buffer bit;
+        USB3_TX_DP_1            : buffer bit;
+        USB3_TX_DP_4            : buffer bit;
+        USB3_TX_DP_5            : buffer bit;
+        VCCADACBG_3P3                :        linkage bit;
+        VCCADAC_1P5                  :        linkage bit;
+        VCCADMIPLL_1P5               :        linkage bit_vector(1 downto 0);
+        VCCAFDIPLL_1P5               :        linkage bit;
+        VCCASATA3PLL_1P5             :        linkage bit_vector(1 downto 0);
+        VCCASEFLEX0_3P3              :        linkage bit;
+        VCCASEFLEX1_3P3              :        linkage bit;
+        VCCASEFLEX23_3P3             :        linkage bit_vector(1 downto 0);
+        VCCASEPCI_3P3                :        linkage bit_vector(1 downto 0);
+        VCCASW_1P05                  :        linkage bit_vector(2 downto 0);
+        VCCATS_1P5                   :        linkage bit_vector(1 downto 0);
+        VCCAUSB3PLL_1P5              :        linkage bit_vector(1 downto 0);
+        VCCAUSB_1P05                 :        linkage bit;
+        VCCAUSB_3P3                  :        linkage bit;
+        VCCAUX_1P05                  :        linkage bit;
+        VCCAXCK_DCB_1P05             :        linkage bit;
+        VCCAXCK_VRM_1P5              :        linkage bit;
+        VCCCLKF100OC_1P05            :        linkage bit;
+        VCCCLKF100_1P05              :        linkage bit_vector(1 downto 0);
+        VCCCLKF135_1P05              :        linkage bit;
+        VCCCORE_1P05                 :        linkage bit_vector(5 downto 0);
+        VCCCORE_1P05_SENSE           :        linkage bit;
+        VCCD01                       :        linkage bit_vector(38 downto 0);
+        VCCDSW_1P05                  :        linkage bit_vector(1 downto 0);
+        VCCDUSBSUS_1P05              :        linkage bit;
+        VCCDUSB_1P05                 :        linkage bit_vector(2 downto 0);
+        VCCFDI_1P05                  :        linkage bit;
+        VCCFHV0_2P2                  :        linkage bit;
+        VCCFHV1_2P2                  :        linkage bit;
+        VCCFUSEPRG                   :        linkage bit_vector(1 downto 0);
+        VCCGBE_SENSE                 :        linkage bit;
+        VCCIN                        :        linkage bit_vector(56 downto 0);
+        VCCIN_SENSE                  :        linkage bit;
+        VCCIO_IN                     :        linkage bit_vector(3 downto 0);
+        VCCKRA_LV                    :        linkage bit_vector(5 downto 0);
+        VCCKRLCPLL                   :        linkage bit;
+        VCCKR_HV                     :        linkage bit;
+        VCCKX4A                      :        linkage bit_vector(4 downto 0);
+        VCCKX4PLL                    :        linkage bit;
+        VCCMPHY_1P05                 :        linkage bit_vector(5 downto 0);
+        VCCPAZSUS_3P3                :        linkage bit;
+        VCCPCORE_3P3                 :        linkage bit_vector(1 downto 0);
+        VCCPCPU_1P0                  :        linkage bit;
+        VCCPDSW_3P3                  :        linkage bit;
+        VCCPECI                      :        linkage bit_vector(1 downto 0);
+        VCCPFUSE_3P3                 :        linkage bit;
+        VCCPHVC_3P3                  :        linkage bit;
+        VCCPRTCSUS_3P3               :        linkage bit;
+        VCCPRTC_3P3                  :        linkage bit;
+        VCCPSPI_3P3                  :        linkage bit;
+        VCCPSUS_3P3                  :        linkage bit;
+        VCCPTS_3P3                   :        linkage bit_vector(1 downto 0);
+        VCCPUSB3SUS_3P3              :        linkage bit_vector(1 downto 0);
+        VCCRTCEXT                    :        linkage bit;
+        VCCSCFUSEPRG                 :        linkage bit_vector(1 downto 0);
+        VCCSCFUSESUS                 :        linkage bit_vector(1 downto 0);
+        VCCSCPLL                     :        linkage bit;
+        VCCSCSUS                     :        linkage bit_vector(5 downto 0);
+        VCCSCSUS_SENSE               :        linkage bit;
+        VCCSSCF100OC_1P05            :        linkage bit;
+        VCCSSCF100_1P05              :        linkage bit;
+        VCCSSCF135_1P05              :        linkage bit;
+        VCCSSCFF_1P05                :        linkage bit;
+        VCCSST_1P5                   :        linkage bit;
+        VCCSUS_1P05                  :        linkage bit;
+        VCCUSB3SUS_1P05              :        linkage bit_vector(1 downto 0);
+        VCCUSBSUS_3P3                :        linkage bit_vector(1 downto 0);
+        VSS                          :        linkage bit_vector(538 downto 0);
+        VSSA_DAC                     :        linkage bit;
+        VSSA_USB                     :        linkage bit;
+        VSSGBE_SENSE                 :        linkage bit;
+        VSSIN_SENSE                  :        linkage bit;
+        VSSSCSUS_SENSE               :        linkage bit;
+        WAKELAN_N             :        linkage bit;
+        WAKE_N            :inout bit;
+        XTAL25_IN                    :        linkage bit;
+        LAN_SMBCLK             :     linkage bit;
+        LAN_SMBDATA             :     linkage bit;
+        SERIRQ_DIR             :     linkage bit;
+        SERIRQ_DATA             :     linkage bit;
+        XTAL25_OUT                   :        linkage bit
+    );
+
+use STD_1149_1_2001.all;
+use STD_1149_6_2003.all;
+
+attribute COMPONENT_CONFORMANCE of BDWDE_PCH : entity is "STD_1149_1_2001";
+
+attribute PIN_MAP of BDWDE_PCH : entity is PHYSICAL_PIN_MAP; 
+
+constant bga : PIN_MAP_STRING := 
+        "GPIO31_MGPIO2                :   BC9, " &    
+        "ADR_COMPLETE                :   AF66, " &    
+        "ADR_IN                    :   AD66, " &
+        "APWROK                    :   BE13, " &
+        "LAN_JTDO                :   B71, " &    
+        "GPIO72                    :   BB4, " &    
+        "BIST_ENABLE                :   AM69, " &
+        "BMCINIT                :   AD69, " &
+        "CATERR_N                :   Y67, " &
+        "CLKIN_GND1_DN                :   Y30, " &    
+        "CLKIN_GND1_DP                :   AA30, " &   
+        "CLKIN_GND2_DN                :   N35, " &    
+        "CLKIN_GND2_DP                :   P33, " &    
+        "CLKIN_GND3_DN                :   AB1, " &    
+        "CLKIN_GND3_DP                :   AB3, " &    
+        "CLKIN_GND4_DN                :   BG32, " &    
+        "CLKIN_GND4_DP                :   BH33, " &   
+        "CLKOUTFLEX1_GPIO65            :   AC4, " &    
+        "CLKOUTFLEX3_GPIO67            :   AA2, " &    
+        "CLKOUT_ITPXDP_DN            :   H2, " &
+        "CLKOUT_ITPXDP_DP            :   H4, " &
+        "CLKOUT_PCI_0                :   AA9, " &
+        "CLKOUT_PCI_1                :   Y7, " &
+        "CLKOUT_PCI_2                :   AA4, " &
+        "CLKOUT_PCI_3                :   V11, " &
+        "CLKOUT_PCI_4                :   Y11, " &
+        "CLKOUT_PEG_DN                :   W2, " &    
+        "CLKOUT_PEG_DP                :   W4, " &     
+        "CLKOUT_PCIE_DN_0            :   U2, " &    
+        "CLKOUT_PCIE_DN_1            :   Y1, " &     
+        "CLKOUT_PCIE_DN_2            :   T1, " &     
+        "CLKOUT_PCIE_DN_3            :   T7, " &     
+        "CLKOUT_PCIE_DN_4            :   R9, " &     
+        "CLKOUT_PCIE_DN_5            :   R2, " &     
+        "CLKOUT_PCIE_DN_6            :   M4, " &     
+        "CLKOUT_PCIE_DN_7            :   N1, " &     
+        "CLKOUT_PCIE_DP_0            :   U4, " &     
+        "CLKOUT_PCIE_DP_1            :   Y3, " &     
+        "CLKOUT_PCIE_DP_2            :   T3, " &     
+        "CLKOUT_PCIE_DP_3            :   P7, " &     
+        "CLKOUT_PCIE_DP_4            :   N9, " &     
+        "CLKOUT_PCIE_DP_5            :   R4, " &     
+        "CLKOUT_PCIE_DP_6            :   M2, " &     
+        "CLKOUT_PCIE_DP_7            :   N3, " &     
+        "THROTTLE_PECI_ID2            :   AL74, " &    
+        "PROCPWRGD_PCH                :   BU11, " &    
+        "RSMRST_CPU_N                :   R77, " &    
+        "MEM_HOT_N                :   CC56, " &
+        "DDR_PWRGOOD                :   CR39, " &
+        "DDR_RCOMP_0                :   CC52, " &    
+        "DDR_RCOMP_1                :   CD51, " &   
+        "DDR_RCOMP_2                :   CC49, " &   
+        "DDR_RESET_N                :   CR43, " &    
+        "DDR_SCL                :   CD58, " &    
+        "DDR_SDA                :   CC60, " &   
+        "DDR_VREF                :   CR52, " &    
+        "DDR_VREFDQ_0                :   CV51, " &   
+        "DDR_VREFDQ_1                :   CT51, " &   
+        "DDR0_ACT_N_MA_15            :   CF33, " &
+        "DDR0_ALERT_N_PAR_ERR_N            :   CK33, " &
+        "DDR0_BA_0                :   CH52, " &
+        "DDR0_BA_1                :   CL51, " &
+        "DDR0_BG0_BA_2                :   CM33, " &
+        "DDR0_BG1_MA_14                :   CD35, " &
+        "DDR0_CKE_0                :   CD32, " &
+        "DDR0_CKE_1                :   CG32, " &
+        "DDR0_CKE_2                :   CL32, " &
+        "DDR0_CKE_3                :   CJ32, " &
+        "DDR0_CLK_DN_0                :   CJ47, " &
+        "DDR0_CLK_DN_1                :   CM45, " &
+        "DDR0_CLK_DN_2                :   CG47, " &
+        "DDR0_CLK_DN_3                :   CL43, " &
+        "DDR0_CLK_DP_0                :   CL47, " &
+        "DDR0_CLK_DP_1                :   CK45, " &
+        "DDR0_CLK_DP_2                :   CF45, " &
+        "DDR0_CLK_DP_3                :   CJ43, " &
+        "DDR0_CS_N_0                :   CL54, " &
+        "DDR0_CS_N_1                :   CJ58, " &
+        "DDR0_CS_N_4                :   CD54, " &
+        "DDR0_CS_N_5                :   CF52, " &
+        "DDR0_DQS_DN_0                :   CB4, " &
+        "DDR0_DQS_DN_10                :   CD9, " &
+        "DDR0_DQS_DN_11                :   CF14, " &
+        "DDR0_DQS_DN_12                :   CC22, " &
+        "DDR0_DQS_DN_13                :   CC67, " &
+        "DDR0_DQS_DN_14                :   CK67, " &
+        "DDR0_DQS_DN_15                :   BR71, " &
+        "DDR0_DQS_DN_16                :   BP66, " &
+        "DDR0_DQS_DN_17                :   CK22, " &
+        "DDR0_DQS_DN_1                :   CH7, " &
+        "DDR0_DQS_DN_2                :   CG13, " &
+        "DDR0_DQS_DN_3                :   CD24, " &
+        "DDR0_DQS_DN_4                :   CD69, " &
+        "DDR0_DQS_DN_5                :   CL69, " &
+        "DDR0_DQS_DN_6                :   BM72, " &
+        "DDR0_DQS_DN_7                :   BN67, " &
+        "DDR0_DQS_DN_8                :   CL24, " &
+        "DDR0_DQS_DN_9                :   CA1, " &
+        "DDR0_DQS_DP_0                :   CB2, " &
+        "DDR0_DQS_DP_10                :   CF7, " &
+        "DDR0_DQS_DP_11                :   CD13, " &
+        "DDR0_DQS_DP_12                :   CF22, " &
+        "DDR0_DQS_DP_13                :   CF67, " &
+        "DDR0_DQS_DP_14                :   CM67, " &
+        "DDR0_DQS_DP_15                :   BP72, " &
+        "DDR0_DQS_DP_16                :   BR67, " &
+        "DDR0_DQS_DP_17                :   CM22, " &
+        "DDR0_DQS_DP_1                :   CG9, " &
+        "DDR0_DQS_DP_2                :   CH14, " &
+        "DDR0_DQS_DP_3                :   CB24, " &
+        "DDR0_DQS_DP_4                :   CB69, " &
+        "DDR0_DQS_DP_5                :   CJ69, " &
+        "DDR0_DQS_DP_6                :   BN71, " &
+        "DDR0_DQS_DP_7                :   BM66, " &
+        "DDR0_DQS_DP_8                :   CJ24, " &
+        "DDR0_DQS_DP_9                :   CA3, " &
+        "DDR0_DQ_0                :   BY2, " &
+        "DDR0_DQ_10                :   CM7, " &
+        "DDR0_DQ_11                :   CL9, " &
+        "DDR0_DQ_12                :   CA7, " &
+        "DDR0_DQ_13                :   BY9, " &
+        "DDR0_DQ_14                :   CK7, " &
+        "DDR0_DQ_15                :   CJ9, " &
+        "DDR0_DQ_16                :   CB13, " &
+        "DDR0_DQ_17                :   CC14, " &
+        "DDR0_DQ_18                :   CL13, " &
+        "DDR0_DQ_19                :   CM14, " &
+        "DDR0_DQ_1                :   BY4, " &
+        "DDR0_DQ_20                :   BY13, " &
+        "DDR0_DQ_21                :   CA14, " &
+        "DDR0_DQ_22                :   CJ13, " &
+        "DDR0_DQ_23                :   CK14, " &
+        "DDR0_DQ_24                :   CD20, " &
+        "DDR0_DQ_25                :   CB20, " &
+        "DDR0_DQ_26                :   CD28, " &
+        "DDR0_DQ_27                :   CB28, " &
+        "DDR0_DQ_28                :   CF18, " &
+        "DDR0_DQ_29                :   CC18, " &
+        "DDR0_DQ_2                :   CD2, " &
+        "DDR0_DQ_30                :   CF26, " &
+        "DDR0_DQ_31                :   CC26, " &
+        "DDR0_DQ_32                :   CD66, " &
+        "DDR0_DQ_33                :   CB66, " &
+        "DDR0_DQ_34                :   CD72, " &
+        "DDR0_DQ_35                :   CB72, " &
+        "DDR0_DQ_36                :   CF64, " &
+        "DDR0_DQ_37                :   CC64, " &
+        "DDR0_DQ_38                :   CF71, " &
+        "DDR0_DQ_39                :   CC71, " &
+        "DDR0_DQ_3                :   CD4, " &
+        "DDR0_DQ_40                :   CL66, " &
+        "DDR0_DQ_41                :   CJ66, " &
+        "DDR0_DQ_42                :   CL72, " &
+        "DDR0_DQ_43                :   CJ72, " &
+        "DDR0_DQ_44                :   CM64, " &
+        "DDR0_DQ_45                :   CK64, " &
+        "DDR0_DQ_46                :   CM71, " &
+        "DDR0_DQ_47                :   CK71, " &
+        "DDR0_DQ_48                :   BT72, " &
+        "DDR0_DQ_49                :   BU71, " &
+        "DDR0_DQ_4                :   BW1, " &
+        "DDR0_DQ_50                :   BG72, " &
+        "DDR0_DQ_51                :   BH71, " &
+        "DDR0_DQ_52                :   BV72, " &
+        "DDR0_DQ_53                :   BW71, " &
+        "DDR0_DQ_54                :   BJ72, " &
+        "DDR0_DQ_55                :   BL71, " &
+        "DDR0_DQ_56                :   BU67, " &
+        "DDR0_DQ_57                :   BT66, " &
+        "DDR0_DQ_58                :   BH67, " &
+        "DDR0_DQ_59                :   BG66, " &
+        "DDR0_DQ_5                :   BW3, " &
+        "DDR0_DQ_60                :   BW67, " &
+        "DDR0_DQ_61                :   BV66, " &
+        "DDR0_DQ_62                :   BL67, " &
+        "DDR0_DQ_63                :   BJ66, " &
+        "DDR0_DQ_6                :   CC1, " &
+        "DDR0_DQ_7                :   CC3, " &
+        "DDR0_DQ_8                :   CC7, " &
+        "DDR0_DQ_9                :   CB9, " &
+        "DDR0_ECC_0                :   CL20, " &
+        "DDR0_ECC_1                :   CJ20, " &
+        "DDR0_ECC_2                :   CL28, " &
+        "DDR0_ECC_3                :   CJ28, " &
+        "DDR0_ECC_4                :   CM18, " &
+        "DDR0_ECC_5                :   CK18, " &
+        "DDR0_ECC_6                :   CM26, " &
+        "DDR0_ECC_7                :   CK26, " &
+        "DDR0_MA14_WE_N                :   CM52, " &
+        "DDR0_MA15_CAS_N            :   CJ54, " &
+        "DDR0_MA16_RAS_N            :   CF49, " &
+        "DDR0_MA_0                :   CK49, " &
+        "DDR0_MA_10                :   CJ51, " &
+        "DDR0_MA_11                :   CG35, " &
+        "DDR0_MA_12                :   CF37, " &
+        "DDR0_MA_13                :   CK56, " &
+        "DDR0_MA_1                :   CK41, " &
+        "DDR0_MA_2                :   CM41, " &
+        "DDR0_MA_3                :   CF41, " &
+        "DDR0_MA_4                :   CL39, " &
+        "DDR0_MA_5                :   CG39, " &
+        "DDR0_MA_6                :   CK37, " &
+        "DDR0_MA_7                :   CD39, " &
+        "DDR0_MA_8                :   CM37, " &
+        "DDR0_MA_9                :   CJ35, " &
+        "DDR0_ODT_0                :   CF56, " &
+        "DDR0_ODT_1                :   CM60, " &
+        "DDR0_ODT_2                :   CM56, " &
+        "DDR0_ODT_3                :   CH60, " &
+        "DDR0_PAR                :   CM49, " &
+        "DDR1_ACT_N_MA_15            :   CU41, " &
+        "DDR1_ALERT_N_PAR_ERR_N            :   CT42, " &
+        "DDR1_BA_0                :   CR61, " &
+        "DDR1_BA_1                :   CT60, " &
+        "DDR1_BG0_BA_2                :   CR41, " &
+        "DDR1_BG1_MA_14                :   CV42, " &
+        "DDR1_CKE_0                :   CT40, " &
+        "DDR1_CKE_1                :   CV38, " &
+        "DDR1_CKE_2                :   CV40, " &
+        "DDR1_CKE_3                :   CT38, " &
+        "DDR1_CLK_DN_0                :   CT58, " &
+        "DDR1_CLK_DN_1                :   CR54, " &
+        "DDR1_CLK_DN_2                :   CR57, " &
+        "DDR1_CLK_DN_3                :   CT53, " &
+        "DDR1_CLK_DP_0                :   CV58, " &
+        "DDR1_CLK_DP_1                :   CU54, " &
+        "DDR1_CLK_DP_2                :   CU57, " &
+        "DDR1_CLK_DP_3                :   CV53, " &
+        "DDR1_CS_N_0                :   CR63, " &
+        "DDR1_CS_N_1                :   CV66, " &
+        "DDR1_CS_N_4                :   CR65, " &
+        "DDR1_CS_N_5                :   CT68, " &
+        "DDR1_DQS_DN_0                :   CJ1, " &
+        "DDR1_DQS_DN_10                :   CT9, " &
+        "DDR1_DQS_DN_11                :   CR17, " &
+        "DDR1_DQS_DN_12                :   CT25, " &
+        "DDR1_DQS_DN_13                :   CR74, " &
+        "DDR1_DQS_DN_14                :   CE76, " &
+        "DDR1_DQS_DN_15                :   BU75, " &
+        "DDR1_DQS_DN_16                :   BK76, " &
+        "DDR1_DQS_DN_17                :   CR32, " &
+        "DDR1_DQS_DN_1                :   CU10, " &
+        "DDR1_DQS_DN_2                :   CV18, " &
+        "DDR1_DQS_DN_3                :   CU26, " &
+        "DDR1_DQS_DN_4                :   CM76, " &
+        "DDR1_DQS_DN_5                :   CD77, " &
+        "DDR1_DQS_DN_6                :   BT78, " &
+        "DDR1_DQS_DN_7                :   BJ77, " &
+        "DDR1_DQS_DN_8                :   CV34, " &
+        "DDR1_DQS_DN_9                :   CH4, " &
+        "DDR1_DQS_DP_0                :   CJ3, " &
+        "DDR1_DQS_DP_10                :   CV9, " &
+        "DDR1_DQS_DP_11                :   CU17, " &
+        "DDR1_DQS_DP_12                :   CV25, " &
+        "DDR1_DQS_DP_13                :   CR76, " &
+        "DDR1_DQS_DP_14                :   CE78, " &
+        "DDR1_DQS_DP_15                :   BU77, " &
+        "DDR1_DQS_DP_16                :   BK78, " &
+        "DDR1_DQS_DP_17                :   CU32, " &
+        "DDR1_DQS_DP_1                :   CR10, " &
+        "DDR1_DQS_DP_2                :   CT18, " &
+        "DDR1_DQS_DP_3                :   CR26, " &
+        "DDR1_DQS_DP_4                :   CN75, " &
+        "DDR1_DQS_DP_5                :   CD75, " &
+        "DDR1_DQS_DP_6                :   BT76, " &
+        "DDR1_DQS_DP_7                :   BJ75, " &
+        "DDR1_DQS_DP_8                :   CT34, " &
+        "DDR1_DQS_DP_9                :   CH2, " &
+        "DDR1_DQ_0                :   CG1, " &
+        "DDR1_DQ_10                :   CU13, " &
+        "DDR1_DQ_11                :   CR13, " &
+        "DDR1_DQ_12                :   CU5, " &
+        "DDR1_DQ_13                :   CT7, " &
+        "DDR1_DQ_14                :   CV12, " &
+        "DDR1_DQ_15                :   CT12, " &
+        "DDR1_DQ_16                :   CV16, " &
+        "DDR1_DQ_17                :   CT16, " &
+        "DDR1_DQ_18                :   CV20, " &
+        "DDR1_DQ_19                :   CT20, " &
+        "DDR1_DQ_1                :   CG3, " &
+        "DDR1_DQ_20                :   CU15, " &
+        "DDR1_DQ_21                :   CR15, " &
+        "DDR1_DQ_22                :   CU19, " &
+        "DDR1_DQ_23                :   CR19, " &
+        "DDR1_DQ_24                :   CU24, " &
+        "DDR1_DQ_25                :   CR24, " &
+        "DDR1_DQ_26                :   CU28, " &
+        "DDR1_DQ_27                :   CR28, " &
+        "DDR1_DQ_28                :   CV23, " &
+        "DDR1_DQ_29                :   CT23, " &
+        "DDR1_DQ_2                :   CM3, " &
+        "DDR1_DQ_30                :   CV27, " &
+        "DDR1_DQ_31                :   CT27, " &
+        "DDR1_DQ_32                :   CT73, " &
+        "DDR1_DQ_33                :   CU74, " &
+        "DDR1_DQ_34                :   CJ78, " &
+        "DDR1_DQ_35                :   CJ76, " &
+        "DDR1_DQ_36                :   CU71, " &
+        "DDR1_DQ_37                :   CR71, " &
+        "DDR1_DQ_38                :   CL77, " &
+        "DDR1_DQ_39                :   CK75, " &
+        "DDR1_DQ_3                :   CN4, " &
+        "DDR1_DQ_40                :   CF77, " &
+        "DDR1_DQ_41                :   CF75, " &
+        "DDR1_DQ_42                :   CB77, " &
+        "DDR1_DQ_43                :   CB75, " &
+        "DDR1_DQ_44                :   CG78, " &
+        "DDR1_DQ_45                :   CG76, " &
+        "DDR1_DQ_46                :   CC78, " &
+        "DDR1_DQ_47                :   CC76, " &
+        "DDR1_DQ_48                :   BW78, " &
+        "DDR1_DQ_49                :   BW76, " &
+        "DDR1_DQ_4                :   CF2, " &
+        "DDR1_DQ_50                :   BP78, " &
+        "DDR1_DQ_51                :   BP76, " &
+        "DDR1_DQ_52                :   BY77, " &
+        "DDR1_DQ_53                :   BY75, " &
+        "DDR1_DQ_54                :   BR77, " &
+        "DDR1_DQ_55                :   BR75, " &
+        "DDR1_DQ_56                :   BL77, " &
+        "DDR1_DQ_57                :   BL75, " &
+        "DDR1_DQ_58                :   BG77, " &
+        "DDR1_DQ_59                :   BG75, " &
+        "DDR1_DQ_5                :   CF4, " &
+        "DDR1_DQ_60                :   BM78, " &
+        "DDR1_DQ_61                :   BM76, " &
+        "DDR1_DQ_62                :   BH78, " &
+        "DDR1_DQ_63                :   BH76, " &
+        "DDR1_DQ_6                :   CL2, " &
+        "DDR1_DQ_7                :   CK4, " &
+        "DDR1_DQ_8                :   CU8, " &
+        "DDR1_DQ_9                :   CR8, " &
+        "DDR1_ECC_0                :   CV31, " &
+        "DDR1_ECC_1                :   CT31, " &
+        "DDR1_ECC_2                :   CV36, " &
+        "DDR1_ECC_3                :   CT36, " &
+        "DDR1_ECC_4                :   CU30, " &
+        "DDR1_ECC_5                :   CR30, " &
+        "DDR1_ECC_6                :   CU35, " &
+        "DDR1_ECC_7                :   CR35, " &
+        "DDR1_MA14_WE_N                :   CV62, " &
+        "DDR1_MA15_CAS_N            :   CT64, " &
+        "DDR1_MA16_RAS_N            :   CT62, " &
+        "DDR1_MA_0                :   CV60, " &
+        "DDR1_MA_10                :   CU61, " &
+        "DDR1_MA_11                :   CU46, " &
+        "DDR1_MA_12                :   CV44, " &
+        "DDR1_MA_13                :   CT66, " &
+        "DDR1_MA_1                :   CU50, " &
+        "DDR1_MA_2                :   CR50, " &
+        "DDR1_MA_3                :   CT49, " &
+        "DDR1_MA_4                :   CV49, " &
+        "DDR1_MA_5                :   CR48, " &
+        "DDR1_MA_6                :   CT47, " &
+        "DDR1_MA_7                :   CR46, " &
+        "DDR1_MA_8                :   CV47, " &
+        "DDR1_MA_9                :   CT44, " &
+        "DDR1_ODT_0                :   CV64, " &
+        "DDR1_ODT_1                :   CR69, " &
+        "DDR1_ODT_2                :   CR67, " &
+        "DDR1_ODT_3                :   CV68, " &
+        "DDR1_PAR                :   CR59, " &
+        "DDR3_4_STRAP                :   AK69, " &
+        "DEBUG_EN_N                :   M77, " &
+        "SOC_IREF                :   V33, " &        
+        "SOC_RCOMP                :   AA28, " &        
+        "DPWROK                    :   AV4, " &
+        "DRAM_PWR_OK                :   CV55, " &        
+        "DRAMPWROK_PCH                :   BA9, " &        
+        "DSWODVREN                :   AL1, " &
+        "ERROR_N_0                :   AC77, " &
+        "ERROR_N_1                :   AC75, " &
+        "ERROR_N_2                :   AB76, " &
+        "FIVR_FAULT                :   AP69, " &
+        "LAN_I2C_SCL0                :   R72, " &        
+        "LAN_I2C_SDA0                :   U72, " &        
+        "LAN_I2C_SCL1                :   P71, " &        
+        "LAN_I2C_SDA1                :   T71, " &        
+        "LAN_MDIO0_LED0_0            :   W69, " &    
+        "LAN_MDC0_LED0_1             :   U69, " &      
+        "LAN_MDIO1_LED1_0            :   T67, " &      
+        "LAN_MDC1_LED1_1             :   V67, " &      
+        "LAN_MDIO_DIR_CTL_0            :   E75, " &    
+        "LAN_MDIO_DIR_CTL_1            :   N72, " &      
+        "LAN_JTCK_SDP0_0            :   G74, " &    
+        "LAN_JTMS_SDP0_1            :   C76, " &        
+        "LAN_JTDI_SDP1_0            :   F76, " &          
+        "LAN_JRST_N_SDP1_1            :   N69, " &    
+        "LAN_SMBALRT_N                :   AN71, " &        
+        "LAN_SMBCLK                :   AM75, " &        
+        "LAN_SMBDATA                :   AM77, " &        
+        "LAN_FLSH_CLK                :   M67, " &    
+        "LAN_FLSH_CS_N                :   P67, " &        
+        "LAN_FLSH_DI                :   C73, " &    
+        "LAN_FLSH_DO                :   D74, " &      
+        "GPIO27_MGPIO6                :   BB16, " &    
+        "GPIO35_NMI_N                :   BP1, " &             
+        "GPIO50                    :   BV20, " &            
+        "GPIO51                    :   BL18, " &            
+        "GPIO52                    :   BP16, " &            
+        "GPIO53                    :   BT20, " &            
+        "GPIO54                    :   BW18, " &    
+        "GPIO55                    :   BU22, " &                    
+        "GPIO57_MGPIO5                :   BP9, " &             
+        "GPIO8_OCS                :   BJ4, " &             
+        "GPIO33                    :   AN11, " &    
+        "MFG_MODE_STRAP                :   BD22, " &        
+        "NCTF_TP                 :   AN7, " &        
+        "ICLK_IREF                :   W20, " &        
+        "INTRUDER_N                :   AK2, " &
+        "INTVRMEN                :   AP2, " &
+        "JTAG_TCK_PCH                :   BM3, " &
+        "JTAG_TDI_PCH                :   BM5, " &
+        "JTAG_TDO_PCH                :   BK3, " &
+        "JTAG_TMS_PCH                :   BJ2, " &
+        "LAN_XTAL_IN                :   J58, " &    
+        "LAN_XTAL_OUT                :   F58, " &      
+        "LAN_KR_RX0_N                :   N62, " &
+        "LAN_KR_RX1_N                :   T64, " &
+        "LAN_KR_RX0_P                :   R62, " &
+        "LAN_KR_RX1_P                :   P64, " &
+        "LAN_KR_TX0_N                :   J62, " &
+        "LAN_KR_TX1_N                :   J66, " &
+        "LAN_KR_TX0_P                :   F62, " &
+        "LAN_KR_TX1_P                :   F66, " &
+        "LAN_KX4_RX0_L0_N            :   B50, " &
+        "LAN_KX4_RX0_L1_N            :   A51, " &
+        "LAN_KX4_RX0_L2_N            :   B52, " &
+        "LAN_KX4_RX0_L3_N            :   A53, " &
+        "LAN_KX4_RX0_L0_P            :   D50, " &
+        "LAN_KX4_RX0_L1_P            :   C51, " &
+        "LAN_KX4_RX0_L2_P            :   D52, " &
+        "LAN_KX4_RX0_L3_P            :   C53, " &
+        "LAN_KX4_TX0_L0_N            :   A62, " &
+        "LAN_KX4_TX0_L1_N            :   B63, " &
+        "LAN_KX4_TX0_L2_N            :   A64, " &
+        "LAN_KX4_TX0_L3_N            :   B65, " &
+        "LAN_KX4_TX0_L0_P            :   C62, " &
+        "LAN_KX4_TX0_L1_P            :   D63, " &
+        "LAN_KX4_TX0_L2_P            :   C64, " &
+        "LAN_KX4_TX0_L3_P            :   D65, " &
+        "LAN_KX4_RX1_L0_N            :   B57, " &
+        "LAN_KX4_RX1_L1_N            :   A58, " &
+        "LAN_KX4_RX1_L2_N            :   B59, " &
+        "LAN_KX4_RX1_L3_N            :   A60, " &
+        "LAN_KX4_RX1_L0_P            :   D57, " &
+        "LAN_KX4_RX1_L1_P            :   C58, " &
+        "LAN_KX4_RX1_L2_P            :   D59, " &
+        "LAN_KX4_RX1_L3_P            :   C60, " &
+        "LAN_KX4_TX1_L0_N            :   B67, " &
+        "LAN_KX4_TX1_L1_N            :   A68, " &
+        "LAN_KX4_TX1_L2_N            :   B69, " &
+        "LAN_KX4_TX1_L3_N            :   A70, " &
+        "LAN_KX4_TX1_L0_P            :   D67, " &
+        "LAN_KX4_TX1_L1_P            :   C68, " &
+        "LAN_KX4_TX1_L2_P            :   D69, " &
+        "LAN_KX4_TX1_L3_P            :   C70, " &
+        "LAD_0                    :   AF3, " &
+        "LAD_1                    :   AG4, " &
+        "LAD_2                    :   AL3, " &
+        "LAD_3                    :   AF1, " &
+        "LAN_PHY_PWR_CTRL_GPIO12        :   BD26, " &    
+        "LDRQ0_N                :   AK4, " &
+        "LFRAME_N                :   AH1, " &
+        "MBP_N_2                :   N78, " &
+        "MBP_N_3                :   M75, " &
+        "MBP_N_4                :   J78, " &
+        "MBP_N_5                :   H75, " &
+        "MBP_N_6                :   K75, " &
+        "MBP_N_7                :   J76, " &
+        "LAN_NCSI_ARB_IN            :   AA77, " &
+        "LAN_NCSI_ARB_OUT            :   AB78, " &
+        "LAN_NCSI_CLK_IN            :   AA72, " &
+        "LAN_NCSI_CRS_DV            :   V74, " &
+        "LAN_NCSI_RXD0                :   Y71, " &
+        "LAN_NCSI_RXD1                :   W72, " &
+        "LAN_NCSI_TRI_EN_PECI_ID1        :   AD78, " &
+        "LAN_NCSI_TXD0                :   W77, " &
+        "LAN_NCSI_TXD1                :   Y78, " &
+        "LAN_NCSI_TX_EN                :   AA75, " &
+        "OC0_N_GPIO59                :   BH1, " &
+        "OC1_N_GPIO40                :   BE2, " &
+        "OC2_N_GPIO41                :   BG4, " &
+        "OC3_N_GPIO42                :   BG2, " &
+        "OC4_N_GPIO43                :   BE4, " &
+        "OC5_N_GPIO9                :   BF3, " &
+        "OC6_N_GPIO10                :   BF1, " &
+        "OC7_N_GPIO14                :   BD3, " &
+        "PCHHOT_CPU_N                :   AL76, " &    
+        "PCH_PWROK                :   AN1, " &
+        "CLKIN_PCILOOPBACK            :   AC7, " &    
+        "PCIE_IREF                 :   W28, " &    
+        "PCIE_RCOMP                :   AA27, " &
+        "PCIE_RX_DN_1                :   D15, " &    
+        "PCIE_RX_DN_2                :   C14, " &      
+        "PCIE_RX_DN_3                :   D13, " &
+        "PCIE_RX_DN_4                :   C12, " &
+        "PCIE_RX_DN_5                :   D10, " &
+        "PCIE_RX_DN_6                :   C9, " &
+        "PCIE_RX_DN_7                :   D8, " &
+        "PCIE_RX_DN_8                :   C7, " &
+        "PCIE_RX_DP_1                :   B15, " &    
+        "PCIE_RX_DP_2                :   A14, " &      
+        "PCIE_RX_DP_3                :   B13, " &
+        "PCIE_RX_DP_4                :   A12, " &
+        "PCIE_RX_DP_5                :   B10, " &
+        "PCIE_RX_DP_6                :   A9, " &
+        "PCIE_RX_DP_7                :   B8, " &
+        "PCIE_RX_DP_8                :   B5, " &
+        "PCIE_TX_DN_1                :   J9, " &    
+        "PCIE_TX_DN_2                :   K7, " &       
+        "PCIE_TX_DN_3                :   J5, " &
+        "PCIE_TX_DN_4                :   C3, " &
+        "PCIE_TX_DN_5                :   T18, " &
+        "PCIE_TX_DN_6                :   R16, " &
+        "PCIE_TX_DN_7                :   R13, " &
+        "PCIE_TX_DN_8                :   T14, " &
+        "PCIE_TX_DP_1                :   F9, " &    
+        "PCIE_TX_DP_2                :   H7, " &       
+        "PCIE_TX_DP_3                :   G5, " &
+        "PCIE_TX_DP_4                :   E4, " &
+        "PCIE_TX_DP_5                :   P18, " &
+        "PCIE_TX_DP_6                :   N16, " &
+        "PCIE_TX_DP_7                :   N13, " &
+        "PCIE_TX_DP_8                :   P14, " &
+        "PE1_RX_DN_0                :   J24, " &
+        "PE1_RX_DN_10                :   J43, " &
+        "PE1_RX_DN_11                :   K45, " &
+        "PE1_RX_DN_12                :   J47, " &
+        "PE1_RX_DN_13                :   K49, " &
+        "PE1_RX_DN_14                :   J51, " &
+        "PE1_RX_DN_15                :   K52, " &
+        "PE1_RX_DN_1                :   K26, " &
+        "PE1_RX_DN_2                :   J28, " &
+        "PE1_RX_DN_3                :   K30, " &
+        "PE1_RX_DN_4                :   J32, " &
+        "PE1_RX_DN_5                :   K33, " &
+        "PE1_RX_DN_6                :   J35, " &
+        "PE1_RX_DN_7                :   K37, " &
+        "PE1_RX_DN_8                :   J39, " &
+        "PE1_RX_DN_9                :   K41, " &
+        "PE1_RX_DP_0                :   F24, " &
+        "PE1_RX_DP_10                :   F43, " &
+        "PE1_RX_DP_11                :   H45, " &
+        "PE1_RX_DP_12                :   F47, " &
+        "PE1_RX_DP_13                :   H49, " &
+        "PE1_RX_DP_14                :   F51, " &
+        "PE1_RX_DP_15                :   H52, " &
+        "PE1_RX_DP_1                :   H26, " &
+        "PE1_RX_DP_2                :   F28, " &
+        "PE1_RX_DP_3                :   H30, " &
+        "PE1_RX_DP_4                :   F32, " &
+        "PE1_RX_DP_5                :   H33, " &
+        "PE1_RX_DP_6                :   F35, " &
+        "PE1_RX_DP_7                :   H37, " &
+        "PE1_RX_DP_8                :   F39, " &
+        "PE1_RX_DP_9                :   H41, " &
+        "PE1_TX_DN_0                :   D30, " &
+        "PE1_TX_DN_10                :   D41, " &
+        "PE1_TX_DN_11                :   C42, " &
+        "PE1_TX_DN_12                :   D43, " &
+        "PE1_TX_DN_13                :   C44, " &
+        "PE1_TX_DN_14                :   D46, " &
+        "PE1_TX_DN_15                :   C47, " &
+        "PE1_TX_DN_1                :   C31, " &
+        "PE1_TX_DN_2                :   D32, " &
+        "PE1_TX_DN_3                :   C34, " &
+        "PE1_TX_DN_4                :   D35, " &
+        "PE1_TX_DN_5                :   C36, " &
+        "PE1_TX_DN_6                :   D37, " &
+        "PE1_TX_DN_7                :   C38, " &
+        "PE1_TX_DN_8                :   D39, " &
+        "PE1_TX_DN_9                :   C40, " &
+        "PE1_TX_DP_0                :   B30, " &
+        "PE1_TX_DP_10                :   B41, " &
+        "PE1_TX_DP_11                :   A42, " &
+        "PE1_TX_DP_12                :   B43, " &
+        "PE1_TX_DP_13                :   A44, " &
+        "PE1_TX_DP_14                :   B46, " &
+        "PE1_TX_DP_15                :   A47, " &
+        "PE1_TX_DP_1                :   A31, " &
+        "PE1_TX_DP_2                :   B32, " &
+        "PE1_TX_DP_3                :   A34, " &
+        "PE1_TX_DP_4                :   B35, " &
+        "PE1_TX_DP_5                :   A36, " &
+        "PE1_TX_DP_6                :   B37, " &
+        "PE1_TX_DP_7                :   A38, " &
+        "PE1_TX_DP_8                :   B39, " &
+        "PE1_TX_DP_9                :   A40, " &
+        "PE2_RX_DN_0                :   K22, " &
+        "PE2_RX_DN_1                :   R20, " &
+        "PE2_RX_DN_2                :   T22, " &
+        "PE2_RX_DN_3                :   R24, " &
+        "PE2_RX_DN_4                :   T26, " &
+        "PE2_RX_DN_5                :   R28, " &
+        "PE2_RX_DN_6                :   T30, " &
+        "PE2_RX_DN_7                :   R32, " &
+        "PE2_RX_DP_0                :   H22, " &
+        "PE2_RX_DP_1                :   N20, " &
+        "PE2_RX_DP_2                :   P22, " &
+        "PE2_RX_DP_3                :   N24, " &
+        "PE2_RX_DP_4                :   P26, " &
+        "PE2_RX_DP_5                :   N28, " &
+        "PE2_RX_DP_6                :   P30, " &
+        "PE2_RX_DP_7                :   N32, " &
+        "PE2_TX_DN_0                :   D21, " &
+        "PE2_TX_DN_1                :   C23, " &
+        "PE2_TX_DN_2                :   D24, " &
+        "PE2_TX_DN_3                :   C25, " &
+        "PE2_TX_DN_4                :   D26, " &
+        "PE2_TX_DN_5                :   C27, " &
+        "PE2_TX_DN_6                :   D28, " &
+        "PE2_TX_DN_7                :   C29, " &
+        "PE2_TX_DP_0                :   B21, " &
+        "PE2_TX_DP_1                :   A23, " &
+        "PE2_TX_DP_2                :   B24, " &
+        "PE2_TX_DP_3                :   A25, " &
+        "PE2_TX_DP_4                :   B26, " &
+        "PE2_TX_DP_5                :   A27, " &
+        "PE2_TX_DP_6                :   B28, " &
+        "PE2_TX_DP_7                :   A29, " &
+        "PECI_CPU                :   AL78, " &
+        "PECI_PCH                :   BG16, " &
+        "PE_HP_SCL                :   AR67, " &
+        "PE_HP_SDA                :   AN67, " &
+        "PIRQA_N                :   BG20, " &
+        "PIRQB_N                :   BF22, " &
+        "PIRQC_N                :   AR11, " &
+        "PIRQD_N                :   BH22, " &
+        "PIRQE_N_GPIO2                :   BV16, " &
+        "PIRQF_N_GPIO3                :   BN22, " &
+        "PIRQG_N_GPIO4                :   BL22, " &
+        "PIRQH_N_GPIO5                :   BW22, " &
+        "PLTRST_PROC_N                :   BU7, " &    
+        "PLTRST_N                :   BE24, " &
+        "PME_N                    :   BE16, " &
+        "PMSYNC_CPU                :   H77, " &
+        "PM_SYNC_PCH                :   BT9, " &
+        "PRDY_N                    :   L78, " &
+        "PREQ_N                    :   K77, " &
+        "PROCHOT_N                :   AG71, " &
+        "PWM0                    :   AW12, " &
+        "PWRBTN_N                :   AW3, " &
+        "PWRGOOD_CPU                :   V76, " &
+        "PWR_DEBUG_N                :   U77, " &
+        "REFCLK14IN                :   W9, " &
+        "RESET_CPU_N                :   L76, " &    
+        "RSMRST_N                :   AR7, " &
+        "RTCX1                    :   AT2, " &
+        "RTCX2                    :   AT4, " &
+        "RTCRST_N                :   AP9, " &        
+        "SAFE_MODE_BOOT                :   AF69, " &
+        "SATA0GP_GPIO21                :   BR2, " &
+        "SATA1GP_GPIO19                :   BT3, " &
+        "SATA2GP_GPIO36                :   BT1, " &
+        "SATA3GP_GPIO37                :   BL2, " &
+        "SATA4GP_GPIO16                :   BN2, " &
+        "SATA5GP_GPIO49                :   BM1, " &
+        "SATALED_N                :   BF14, " &
+        "SATA_IREF                :   BD30, " &    
+        "SATA_RCOMP                :   BB32, " &
+        "SATA_RX_DN_4                :   BN33, " &        
+        "SATA_RX_DN_5                :   BL33, " &             
+        "SATA_RX_DN_0                :   CA33, " &
+        "SATA_RX_DN_1                :   BW33, " &
+        "SATA_RX_DN_2                :   BU33, " &
+        "SATA_RX_DN_3                :   BR33, " &
+        "SATA_RX_DP_4                :   BM32, " &        
+        "SATA_RX_DP_5                :   BJ32, " &             
+        "SATA_RX_DP_0                :   BY32, " &
+        "SATA_RX_DP_1                :   BV32, " &
+        "SATA_RX_DP_2                :   BT32, " &
+        "SATA_RX_DP_3                :   BP32, " &
+        "SATA_TX_DN_4                :   BJ28, " &    
+        "SATA_TX_DN_5                :   BG28, " &     
+        "SATA_TX_DN_0                :   BV28, " &
+        "SATA_TX_DN_1                :   BT28, " &
+        "SATA_TX_DN_2                :   BP28, " &
+        "SATA_TX_DN_3                :   BM28, " &
+        "SATA_TX_DP_4                :   BL26, " &    
+        "SATA_TX_DP_5                :   BH26, " &     
+        "SATA_TX_DP_0                :   BW26, " &
+        "SATA_TX_DP_1                :   BU26, " &
+        "SATA_TX_DP_2                :   BR26, " &
+        "SATA_TX_DP_3                :   BN26, " &
+        "SCLOCK_GPIO22                :   BN14, " &
+        "LAN_PWRGOOD                :   AE77, " &    
+        "SDATAOUT0_GPIO39            :   BU18, " &
+        "SDATAOUT1_GPIO48            :   BT16, " &
+        "SERIRQ_DATA                :   AE75, " &
+        "SERIRQ_DIR                :   AD74, " &
+        "SLOAD_GPIO38                :   BP13, " &
+        "SLP_A_N                :   BB7, " &
+        "SLP_S3_CPU_N                :   AC71, " &
+        "SLP_S3_N                :   AY2, " &
+        "SLP_S4_N                :   AW1, " &
+        "SLP_SUS_N                :   AY7, " &
+        "SMBALERT_N_GPIO11            :   BH7, " &    
+        "SMBCLK                    :   BN11, " &
+        "SMBDATA                :   BJ13, " &
+        "SML0CLK                :   BR7, " &
+        "SML0DATA                :   BN18, " &
+        "SML1ALERT_N_PCHHOT_N_GPIO74        :    BF7, " &    
+        "SML1CLK_GPIO58_MGPIO11            :   BG9, " &
+        "SML1DATA_GPIO75_MGPIO12        :   BB11, " &
+        "PECI_ID0                :   L72, " &        
+        "SPARE_1                :   AC64, " &
+        "SPARE_2                :   AN78, " &
+        "SPARE_3                :   AG67, " &
+        "SPARE_4                :   AJ67, " &
+        "SPARE_5                :   D71, " &
+        "SPI_CLK                :   BG13, " &
+        "SPI_CS0_N                :   BN7, " &
+        "SPI_CS1_N                :   BT13, " &
+        "SPI_CS2_N                :   BJ9, " &
+        "SPI_IO2                :   BF18, " &
+        "SPI_IO3                :   BE20, " &
+        "SPI_MISO_IO1                :   BJ20, " &
+        "SPI_MOSI_IO0                :   BL11, " &
+        "SPKR                    :   BP20, " &
+        "SRC1CLKRQ_N_GPIO18            :   BN4, " &
+        "GPIO20_SMI_N                :   BR4, " &
+        "SRTCRST_N                :   AP4, " &
+        "SUSACK_N                :   AY4, " &
+        "SUSCLK_GPIO62                :   BD11, " &
+        "SUSWARN_N_SUSPWRDNACK_GPIO30        :    AY11, " &
+        "SVIDALERT_N                :   AK72, " &
+        "SVIDCLK                :   AH72, " &
+        "SVIDDATA                :   AJ71, " &
+        "SYS_PWROK                :   BP5, " &
+        "SYS_RESET_N                :   BL4, " &
+        "TACH0_GPIO17                :   AN3, " &
+        "TACH1_GPIO1                :   AM4, " &
+        "JTAG_TCK_CPU                :   T76, " &
+        "JTAG_TDI_CPU                :   V78, " &
+        "JTAG_TDO_CPU                :   T78, " &
+        "TEST_CGU_AMONI                :   N54, " &
+        "TEST_CGU_AMONV                :   L54, " &
+        "TEST_CPU_TSTCLK_DN            :   F54, " &
+        "TEST_CPU_TSTCLK_DP            :   J54, " &
+        "TEST_CPU_TSTSTRAP0            :   E55, " &
+        "TEST0                        :   CU76, " &    
+        "TEST1                        :   CM78, " &     
+        "TEST_DMI_PLLOBS0_PCH            :   T37, " &
+        "TEST_DMI_PLLOBS1_PCH            :   T35, " &
+        "TEST_EAR_N                :   AH62, " &
+        "TEST_EDM_0                :   W66, " &
+        "TEST_EDM_1                :   Y64, " &
+        "TEST_EDM_PCH                :   BA14, " &
+        "TEST_FIVR_CLKREF            :   AP75, " &
+        "TEST_FIVR_PROBE_ANA_0            :   AM56, " &
+        "TEST_FIVR_PROBE_ANA_1            :   AP55, " &
+        "TEST_FIVR_PROBE_DIG_1            :   AM55, " &
+        "TEST_FIVR_VCCCORE_LOAD_0        :   BL60, " &
+        "TEST_FIVR_VCCCORE_LOAD_10        :   V40, " &
+        "TEST_FIVR_VCCCORE_LOAD_15        :   CA37, " &
+        "TEST_FIVR_VCCCORE_LOAD_1        :   BJ62, " &
+        "TEST_FIVR_VCCCORE_LOAD_2        :   AP60, " &
+        "TEST_FIVR_VCCCORE_LOAD_3        :   AP56, " &
+        "TEST_FIVR_VCCCORE_LOAD_4        :   AK56, " &
+        "TEST_FIVR_VCCCORE_LOAD_4_11        :   BL37, " &
+        "TEST_FIVR_VCCCORE_LOAD_5        :   AG56, " &
+        "TEST_FIVR_VCCCORE_LOAD_5_12        :   BP37, " &
+        "TEST_FIVR_VCCCORE_LOAD_6        :   AE56, " &
+        "TEST_FIVR_VCCCORE_LOAD_6_13        :   BT37, " &
+        "TEST_FIVR_VCCCORE_LOAD_7        :   AC56, " &
+        "TEST_FIVR_VCCCORE_LOAD_7_14        :   BW37, " &
+        "TEST_FIVR_VCCCORE_LOAD_8        :   T42, " &
+        "TEST_FIVR_VCCCORE_LOAD_9        :   T40, " &
+        "TEST_FIVR_VCCIIO_LOAD            :   T44, " &
+        "TEST_FIVR_VCCPIO_LOAD            :   R44, " &
+        "TEST_FIVR_VCCPQ_LOAD            :   BP56, " &
+        "TEST_FIVR_VCCP_LOAD            :   BP58, " &
+        "TEST_FIVR_VCCR0_LOAD            :   CB43, " &
+        "TEST_FIVR_VCCSFR_LOAD            :   CB39, " &
+        "TEST_FIVR_VCCU_LOAD            :   BM62, " &
+        "TEST_FIVR_VTARGET_CORE            :   V39, " &
+        "TEST_FIVR_VTARGET_IIO            :   Y33, " &
+        "TEST_FIVR_VTARGET_P            :   BU60, " &
+        "TEST_FIVR_VTARGET_PIO            :   Y37, " &
+        "TEST_FIVR_VTARGET_PQ            :   BR60, " &
+        "TEST_FIVR_VTARGET_RING            :   V37, " &
+        "TEST_FIVR_VTARGET_SFR            :   Y35, " &
+        "TEST_FIVR_VTARGET_U            :   Y32, " &
+        "TEST_KX_AMONI                :   A66, " &
+        "TEST_KX_AMONV                :   C66, " &
+        "TEST_KX_DFX_DN                :   B54, " &
+        "TEST_KX_DFX_DP                :   D54, " &
+        "TEST_KX_HSCLK_DN            :   A55, " &
+        "TEST_KX_HSCLK_DP            :   C55, " &
+        "TEST_LYA_0                :   AE58, " &
+        "TEST_LYA_1                :   AG58, " &
+        "TEST_MBP_N_0                :   W75, " &
+        "TEST_MBP_N_1                :   AD72, " &
+        "TEST_NOA_AVRB_0            :   AK58, " &
+        "TEST_NOA_AVRB_10            :   AP66, " &
+        "TEST_NOA_AVRB_11            :   AR64, " &
+        "TEST_NOA_AVRB_12            :   AP62, " &
+        "TEST_NOA_AVRB_13            :   AM62, " &
+        "TEST_NOA_AVRB_14            :   AK62, " &
+        "TEST_NOA_AVRB_15            :   AJ64, " &
+        "TEST_NOA_AVRB_1            :   AP58, " &
+        "TEST_NOA_AVRB_2            :   AC60, " &
+        "TEST_NOA_AVRB_3            :   AC62, " &
+        "TEST_NOA_AVRB_4            :   AG60, " &
+        "TEST_NOA_AVRB_5            :   AH58, " &
+        "TEST_NOA_AVRB_6            :   AG64, " &
+        "TEST_NOA_AVRB_7            :   AH60, " &
+        "TEST_NOA_AVRB_8            :   AM58, " &
+        "TEST_NOA_AVRB_9            :   AM60, " &
+        "TEST_NOA_AVRB_STB_DN_0            :   AE62, " &
+        "TEST_NOA_AVRB_STB_DN_1            :   AM66, " &
+        "TEST_NOA_AVRB_STB_DP_0            :   AE60, " &
+        "TEST_NOA_AVRB_STB_DP_1            :   AN64, " &
+        "TEST_NOA_COMP                :   AA66, " &
+        "TEST_PE_AMONI                :   N43, " &
+        "TEST_PE_AMONV                :   N47, " &
+        "TEST_PE_DFX_DN                :   R39, " &
+        "TEST_PE_DFX_DP                :   N39, " &
+        "TEST_PE_HSCLK_DN            :   C49, " &
+        "TEST_PE_HSCLK_DP            :   A49, " &
+        "TEST_PGDMON                :   BA18, " &
+        "TEST_RCIN_N                :   BA27, " &
+        "TEST_SATA_PLLOBS0            :   BF33, " &
+        "TEST_SATA_PLLOBS1            :   BE32, " &
+        "TEST_TD_ANODE                :   F20, " &
+        "TEST_TD_CATHODE            :   J20, " &
+        "TEST_TD_DFTANATP0            :   K11, " &
+        "TEST_TD_DFTANATP1            :   H11, " &
+        "TEST_TD_IREF                :   P11, " &
+        "TEST_THERMADA                :   Y60, " &
+        "TEST_THERMADC                :   Y62, " &
+        "TEST_TSTCLK_SC_DN            :   A73, " &
+        "TEST_TSTCLK_SC_DP            :   A74, " &
+        "TEST_USB2_PLLMON_DN            :   AD9, " &
+        "TEST_USB2_PLLMON_DP            :   AC11, " &
+        "TEST_VCCF_SC_SENSE            :   A76, " &
+        "TEST_VCCF_SENSE            :   (AR71, BT62), " &
+        "THERMTRIP_N                :   AF72, " &
+        "THERMTRIP_PCH_N            :   BJ16, " &
+        "JTAG_TMS_CPU                :   R75, " &
+        "JTAG_TRST_N_CPU            :   U75, " &
+        "TXT_AGENT                :   AM72, " &
+        "TXT_PLTEN                :   AP72, " &
+        "UART_RXD_0                :   AG77, " &
+        "UART_RXD_1                :   AH78, " &
+        "UART_TXD_0                :   AG75, " &
+        "UART_TXD_1                :   AH76, " &
+        "USB2_DN_0                :   AD3, " &
+        "USB2_DN_1                :   AK9, " &
+        "USB2_DN_2                :   AE4, " &
+        "USB2_DN_3                :   AG7, " &
+        "USB2_DP_0                :   AD1, " &
+        "USB2_DP_1                :   AH9, " &
+        "USB2_DP_2                :   AE2, " &
+        "USB2_DP_3                :   AJ7, " &
+        "USB2_RBIAS                :   AG11, " &
+        "USB2_RBIAS_N                :   AJ11, " &
+        "USB3_RX_DN_0                :   D19, " &
+        "USB3_RX_DN_1                :   C18, " &
+        "USB3_RX_DN_4                :   D17, " &
+        "USB3_RX_DN_5                :   C16, " &
+        "USB3_RX_DP_0                :   B19, " &
+        "USB3_RX_DP_1                :   A18, " &
+        "USB3_RX_DP_4                :   B17, " &
+        "USB3_RX_DP_5                :   A16, " &
+        "USB3_TX_DN_0                :   K18, " &
+        "USB3_TX_DN_1                :   J16, " &
+        "USB3_TX_DN_4                :   K14, " &
+        "USB3_TX_DN_5                :   J13, " &
+        "USB3_TX_DP_0                :   H18, " &
+        "USB3_TX_DP_1                :   F16, " &
+        "USB3_TX_DP_4                :   H14, " &
+        "USB3_TX_DP_5                :   F13, " &
+        "VCCADACBG_3P3                :   AC19, " &
+        "VCCADAC_1P5                :   AG19, " &
+        "VCCADMIPLL_1P5                :   (AW28, AW30), " &
+        "VCCAFDIPLL_1P5                :   AC30, " &
+        "VCCASATA3PLL_1P5            :   (BA30, BB30), " &
+        "VCCASEFLEX0_3P3            :   AC14, " &
+        "VCCASEFLEX1_3P3            :   AE12, " &
+        "VCCASEFLEX23_3P3            :   (AG14, AH14), " &
+        "VCCASEPCI_3P3                :   (AE16, AE18), " &
+        "VCCASW_1P05                :   (AP21, AR21,AR23), " &
+        "VCCATS_1P5                :   (AE28, AE30), " &
+        "VCCAUSB3PLL_1P5            :   (AK28,AK30), " &
+        "VCCAUSB_1P05                :   AM14, " &
+        "VCCAUSB_3P3                :   AM12, " &
+        "VCCAUX_1P05                :   AH21, " &
+        "VCCAXCK_DCB_1P05            :   AE27, " &
+        "VCCAXCK_VRM_1P5            :   AC28, " &
+        "VCCCLKF100OC_1P05            :   AE21, " &
+        "VCCCLKF100_1P05            :   (AC23, AC25), " &
+        "VCCCLKF135_1P05            :   AC21, " &
+        "VCCCORE_1P05                :   (AK21,AK23,AK25,AM23,AM25,AP25), " &
+        "VCCCORE_1P05_SENSE            :   BT5, " &
+        "VCCD01                        :   (CF60,CG43,CG51,CG54,CG58,CH33,CH37,CH41,CH45,CH49,CH56, " &
+                              " CJ39, CK52,CK60,CL35,CL58,CP38,CP40,CP42,CP44,CP47,CP49, " &
+                              " CP51, CP53,CP55,CP58,CP60,CP62,CP68,CT55,CU39,CU43,CU48, " &
+                              " CU52, CU59,CU63,CU65,CU67,CU69), " &
+        "VCCDSW_1P05                :   (AU21, AW21), " &
+        "VCCDUSBSUS_1P05            :   AK14, " &
+        "VCCDUSB_1P05                :   (AK18, AM16,AM18), " &
+        "VCCFDI_1P05                :   AG27, " &
+        "VCCFHV0_2P2                :   AR18, " &
+        "VCCFHV1_2P2                :   AP18, " &
+        "VCCFUSEPRG                :   (AG53, AG55), " &
+        "VCCGBE_SENSE                :   AR78, " &
+        "VCCIN                        :   (AV60, AW55,AW56,AW58,AW62,AW66,AW69,AW72,AW74,AW76,AW78, " &
+                                      " AY60, AY64,AY67,AY71,AY75,AY77,BA58,BA62,BA66,BA69,BA72, " &
+                                      " BA74, BA76,BA78,BB36,BB56,BB60,BB64,BB67,BB71,BB75,BB77, " &
+                                      " BC58, BC62,BC66,BC69,BC72,BD36,BD37,BD56,BD60,BD64,BD67, " &
+                                      " BD71, BD74,BD76,BD78,BE37,BE58,BE62,BF60,BG37,BG58,BH37, " &
+                                      " BH56,  BJ56), " &
+        "VCCIN_SENSE                :   AT77, " &
+        "VCCIO_IN                :   (AH55, AK53,AK55,AM53), " &
+        "VCCKRA_LV                :   (AA58,R58,V56,V58,Y56,Y58), " &
+        "VCCKRLCPLL                :   T56, " &
+        "VCCKR_HV                :   N58, " &
+        "VCCKX4A                :   (T51, T53,V51,V53,Y53), " &
+        "VCCKX4PLL                :   N51, " &
+        "VCCMPHY_1P05                :   (AK27, AM27,AP27,AR27,AU27,AW27), " &
+        "VCCPAZSUS_3P3                :   AR16, " &
+        "VCCPCORE_3P3                :   (AW25, BA25), " &
+        "VCCPCPU_1P0                :   BB25, " &
+        "VCCPDSW_3P3                :   AW18, " &
+        "VCCPECI                :   (AC53, AC55), " &
+        "VCCPFUSE_3P3                :   AU12, " &
+        "VCCPHVC_3P3                :   AG18, " &
+        "VCCPRTCSUS_3P3                :   AU18, " &
+        "VCCPRTC_3P3                :   AW14, " &
+        "VCCPSPI_3P3                :   AW23, " &
+        "VCCPSUS_3P3                :   AP12, " &
+        "VCCPTS_3P3                :   (AG28, AG30), " &
+        "VCCPUSB3SUS_3P3            :   (AR28, AR30), " &
+        "VCCRTCEXT                :   AW16, " &
+        "VCCSCFUSEPRG                :   (AE53, AE55), " &
+        "VCCSCFUSESUS                :   (AA53, AA55), " &
+        "VCCSCPLL                :   T46, " &
+        "VCCSCSUS                :   (R48, R49,T48,T49,V48,V49), " &
+        "VCCSCSUS_SENSE                :   AR76, " &
+        "VCCSSCF100OC_1P05            :   AH23, " &
+        "VCCSSCF100_1P05            :   AE25, " &
+        "VCCSSCF135_1P05            :   AG23, " &
+        "VCCSSCFF_1P05                :   AG25, " &
+        "VCCSST_1P5                :   AW19, " &
+        "VCCSUS_1P05                :   AU16, " &
+        "VCCUSB3SUS_1P05            :   (AP28, AP30), " &
+        "VCCUSBSUS_3P3                :   (AP16, AR14), " &
+        "VSS                        :   (A20, A3,A5,A6,A77,AA12,AA14,AA16,AA19,AA21,AA23,AA25,AA56, " &
+                                "AA60, AA62,AA69,AB5,AB74,AC12,AC16,AC18,AC2,AC27,AC58, " &
+                                "AD5,AE11,AE14,AE19,AE23,AE64,AE67,AE7,AE71,AF5,AF74, " &
+                                "AF76,AF78,AF9,AG12,AG16,AG62,AH12,AH16,AH18,AH19,AH25, " &
+                                "AH27,AH28,AH3,AH30,AH5,AH53,AH56,AH66,AH69,AH74,AK16, " &
+                                "AK19,AK60,AK75,AK77,AL11,AL64,AL67,AL7,AL71,AM19,AM21, " &
+                                "AM28, AM30,AM9,AN5,AN74,AN76,AP14,AP19,AP23,AP53,AR1, " &
+                                "AR12, AR19,AR25,AR3,AR5,AR53,AR55,AR56,AR60,AU1,AU19, " &
+                                "AU23, AU25,AU28,AU3,AU30,AU5,AU53,AU55,AU56,AU58,AU62, " &
+                                "AU66, AU69,AU72,AU74,AU76,AU78,AV2,AV64,AV67,AV71,AV75, " &
+                                "AV77, AW5,AW9,B2,B3,B48,B61,B74,B76,B77,B78, " &
+                                "BA12, BA16,BA28,BA3,BA56,BB19,BB2,BB33,BB35,BD1,BD14, " &
+                                "BD33, BD5,BE28,BE35,BE66,BE69,BE72,BE75,BE77,BE9,BF26, " &
+                                "BF30, BF5,BF56,BF64,BF67,BF71,BF74,BF76,BF78,BG24,BG35, " &
+                                "BG62, BG69,BH11,BH14,BH18,BH3,BH30,BH5,BH60,BH64,BH74, " &
+                                "BJ24, BJ35,BJ58,BJ69,BK1,BK37,BK5,BK74,BL30,BL56,BL64, " &
+                                "BM13, BM16,BM20,BM24,BM35,BM58,BM69,BM74,BM9,BN30,BN37, " &
+                                "BN56, BN60,BN64,BN75,BN77,BP24,BP3,BP35,BP62,BP69,BP74, " &
+                                "BR11, BR14,BR18,BR22,BR30,BR64,BT24,BT35,BT56,BT58,BT69, " &
+                                "BT74, BU2,BU30,BU37,BU4,BU64,BV13,BV24,BV35,BV56,BV58, " &
+                                "BV62, BV69,BV9,BW11,BW14,BW30,BW39,BW40,BW42,BW43,BW45, " &
+                                "BW47, BW49,BW5,BW50,BW52,BW54,BW55,BW60,BW64,BW7,BW74, " &
+                                "BY16, BY20,BY24,BY28,BY35,BY39,BY43,BY54,BY58,BY62,BY66, " &
+                                "BY69, BY72,C1,C2,C20,C77,C78,CA11,CA18,CA22,CA26, " &
+                                "CA30, CA41,CA45,CA46,CA49,CA5,CA51,CA52,CA56,CA60,CA64, " &
+                                "CA67, CA71,CA74,CA76,CA78,CB16,CB32,CB35,CB47,CB51,CB54, " &
+                                "CB58,CB62,CC11,CC30,CC33,CC37,CC41,CC45,CC5,CC74,CD16, " &
+                                "CD43, CD47,CD62,CE1,CE3,CE5,CE74,CF11,CF30,CG16,CG20, " &
+                                "CG24, CG28,CG5,CG62,CG66,CG69,CG72,CG74,CH11,CH18,CH22, " &
+                                "CH26, CH30,CH64,CH67,CH71,CH75,CH77,CJ16,CJ5,CJ62,CJ74, " &
+                                "CK11, CK30,CL16,CL5,CL62,CL74,CM1,CM11,CM30,CN5,CN74, " &
+                                "CP1, CP12,CP14,CP16,CP18,CP2,CP20,CP23,CP25,CP27,CP29, " &
+                                "CP31, CP34,CP36,CP64,CP66,CP7,CP70,CP72,CP77,CP78,CP9, " &
+                                "CR1, CR2,CR21,CR3,CR37,CR5,CR77,CR78,CT14,CT29,CT70, " &
+                                "CU1, CU2,CU21,CU3,CU37,CU77,CU78,CV14,CV2,CV29,CV3, " &
+                                "CV5, CV6,CV70,CV73,CV74,CV76,CV77,D48,D5,D61,E1, " &
+                                "E12, E14,E16,E18,E2,E20,E23,E25,E27,E29,E31, " &
+                                "E34, E36,E38,E40,E42,E44,E47,E49,E5,E51,E53, " &
+                                "E58, E60,E62,E64,E66,E68,E7,E70,E74,E77,E78, " &
+                                "E9,F1,F3,F72,F78,H56,H60,H67,J3,J72,J74, " &
+                                "K4, K56,K60,K67,L1,L13,L16,L20,L24,L28,L3, " &
+                                "L32, L35,L39,L43,L47,L5,L51,L58,L62,L66,L69, " &
+                                "L74, L9,M11,M14,M18,M22,M26,M30,M33,M37,M41, " &
+                                "M45, M49,M52,M56,M60,M64,M7,M71,N5,N66,N74, " &
+                                "N76, P52,P60,R35,R37,R40,R42,R46,R54,R66,R69, " &
+                                "T11, T33,T39,T5,T60,T74,U13,U16,U20,U24,U28, " &
+                                "U32, U66,U9,V1,V14,V18,V22,V26,V3,V30,V35, " &
+                                "V42, V44,V46,V5,V55,V60,V62,V64,V7,V71,W13, " &
+                                "W16, W24,Y39,Y40,Y42,Y5,Y55,Y74,Y76 ), " &
+        "VSSA_DAC                 :  AG21, " &
+        "VSSA_USB                 :  AK12, " &
+        "VSSGBE_SENSE                 :  AP77, " &
+        "VSSIN_SENSE                 :  AT75, " &
+        "VSSSCSUS_SENSE                 :  AR74, " &
+        "WAKELAN_N                 :  AD76, " &
+        "WAKE_N                         :  BA1, " &
+        "DIFFCLK_BIASREF             :  AA18, " &        
+        "XTAL25_IN                 :  K2, " &
+        " BMBUSY_N_GPIO0        :BB28, " &
+" GPIO32        :BB27, " &
+" GPIO15        :BA23, " &
+" GPIO24_MGPIO0        :BB21, " &
+" GPIO28_MGPIO7        :BB23, " &
+" LDRQ1_N_GPIO23        :AL5, " &
+" SLP_WLAN_N_GPIO29_MGPIO3        :BB12, " &
+" GPIO25        :BA5, " &
+" GPIO26        :BB14, " &
+" GPIO44        :BD18, " &
+" GPIO45        :BA21, " &
+" GPIO46        :BA19, " &
+" SUS_STAT_N_GPIO61        :BB18, " &
+" TACH2_GPIO6        :AV11, " &
+" TACH3_GPIO7        :AG2, " &
+" TACH4_GPIO68        :AV7, " &
+" TACH5_GPIO69        :AU9, " &
+" TACH6_GPIO70        :AU14, " &
+" TACH7_GPIO71        :AM2, " &
+" RI_N        :BF11, " &
+" SERIRQ        :BU14, " &
+" SML0ALERT_N_GPIO60_MGPIO4        :BL7, " &
+        "XTAL25_OUT                 :  J1 " ;
+
+
+attribute PORT_GROUPING of BDWDE_PCH : entity is
+"Differential_Voltage ((SATA_TX_DP_1,SATA_TX_DN_1)),"&
+"Differential_Voltage ((SATA_TX_DP_0,SATA_TX_DN_0)),"&
+"Differential_Voltage ((SATA_TX_DP_5,SATA_TX_DN_5)),"&
+"Differential_Voltage ((SATA_TX_DP_4,SATA_TX_DN_4)),"&
+"Differential_Voltage ((SATA_TX_DP_3,SATA_TX_DN_3)),"&
+"Differential_Voltage ((SATA_TX_DP_2,SATA_TX_DN_2)),"&
+"Differential_Voltage ((USB3_TX_DP_4,USB3_TX_DN_4)),"&
+"Differential_Voltage ((USB3_TX_DP_5,USB3_TX_DN_5)),"&
+"Differential_Voltage ((PCIE_TX_DP_1,PCIE_TX_DN_1)),"&
+"Differential_Voltage ((PCIE_TX_DP_2,PCIE_TX_DN_2)),"&
+"Differential_Voltage ((PCIE_TX_DP_3,PCIE_TX_DN_3)),"&
+"Differential_Voltage ((PCIE_TX_DP_4,PCIE_TX_DN_4)),"&
+"Differential_Voltage ((PCIE_TX_DP_5,PCIE_TX_DN_5)),"&
+"Differential_Voltage ((PCIE_TX_DP_6,PCIE_TX_DN_6)),"&
+"Differential_Voltage ((PCIE_TX_DP_7,PCIE_TX_DN_7)),"&
+"Differential_Voltage ((PCIE_TX_DP_8,PCIE_TX_DN_8)),"&
+"Differential_Voltage ((USB3_TX_DP_0,USB3_TX_DN_0)),"&
+"Differential_Voltage ((USB3_TX_DP_1,USB3_TX_DN_1)),"&
+"Differential_Voltage ((CLKOUT_ITPXDP_DP,CLKOUT_ITPXDP_DN)),"&
+"Differential_Voltage ((CLKOUT_PEG_DP,CLKOUT_PEG_DN)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_7,CLKOUT_PCIE_DN_7)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_6,CLKOUT_PCIE_DN_6)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_5,CLKOUT_PCIE_DN_5)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_4,CLKOUT_PCIE_DN_4)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_3,CLKOUT_PCIE_DN_3)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_2,CLKOUT_PCIE_DN_2)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_1,CLKOUT_PCIE_DN_1)),"&
+"Differential_Voltage ((CLKOUT_PCIE_DP_0,CLKOUT_PCIE_DN_0)),"&
+"Differential_Voltage ((USB2_DP_3,USB2_DN_3)),"&
+"Differential_Voltage ((USB2_DP_2,USB2_DN_2)),"&
+"Differential_Voltage ((USB2_DP_1,USB2_DN_1)),"&
+"Differential_Voltage ((USB2_DP_0,USB2_DN_0))";
+
+attribute TAP_SCAN_IN of JTAG_TDI_PCH : signal is true;
+attribute TAP_SCAN_MODE of JTAG_TMS_PCH : signal is true;
+attribute TAP_SCAN_OUT of JTAG_TDO_PCH : signal is true;
+attribute TAP_SCAN_CLOCK of JTAG_TCK_PCH : signal is (1.0e6,BOTH);
+
+attribute INSTRUCTION_LENGTH of BDWDE_PCH : entity is 9;
+attribute INSTRUCTION_OPCODE of BDWDE_PCH : entity is 
+     "extest  (000001001)," &
+     "sample  (000000001)," &
+     "preload (000000001)," &
+     "highz   (000001000)," &
+     "clamp   (000000100)," & 
+     "idcode  (000000010)," &
+     "extest_toggle (000001101)," &
+     "extest_train (000001111)," &
+     "extest_pulse (000001110)," &
+     "bypass  (111111111)" ;
+   
+attribute INSTRUCTION_CAPTURE of BDWDE_PCH : entity is "XXXXXXX01";
+
+attribute IDCODE_REGISTER of BDWDE_PCH : entity is 
+    "xxxx" &               -- Version Number 
+    "xxxx" &               -- Part Number
+    "xxxx" &               -- Part Number
+    "xxxx" &               -- Part Number
+    "xxxx" &               -- Part Number
+    "xxxxxxxxxxx" &        -- Manufacturer ID 
+    "1";                   -- Required by IEEE Std. to be 1
+
+attribute REGISTER_ACCESS of BDWDE_PCH : entity is 
+    "BOUNDARY (extest, sample, extest_toggle, extest_train, extest_pulse)," &
+    "DEVICE_ID (idcode)," &
+    "BYPASS (bypass, clamp, highz)";
+
+attribute BOUNDARY_LENGTH of BDWDE_PCH: entity is 416;
+attribute BOUNDARY_REGISTER of BDWDE_PCH : entity is 
+-- num cell      port                   function          safe _ccell disval rslt
+"   0( bc_8    , SPI_IO3, bidir            , X  , 8     , 1  , Z      )," &
+"   1( bc_8    , SPI_IO2, bidir            , X  , 8     , 1  , Z      )," &
+"   2( bc_8    , SPI_MISO_IO1, bidir            , X  , 9     , 1  , Z      )," &
+"   3( bc_8    , SPI_MOSI_IO0, bidir            , X  , 10    , 1  , Z      )," &
+"   4( bc_8    , SPI_CS2_N, bidir            , X  , 11    , 1  , Z      )," &
+"   5( bc_8    , SPI_CS0_N, bidir            , X  , 12    , 1  , Z      )," &
+"   6( bc_8    , SPI_CLK, bidir            , X  , 13    , 1  , Z      )," &
+"   7( bc_8    , SPI_CS1_N, bidir            , X  , 14    , 1  , Z      )," &
+"   8( bc_1    , *, control          , 1 )," &
+"   9( bc_1    , *, control          , 1 )," &
+"  10( bc_1    , *, control          , 1 )," &
+"  11( bc_1    , *, control          , 1 )," &
+"  12( bc_1    , *, control          , 1 )," &
+"  13( bc_1    , *, control          , 1 )," &
+"  14( bc_1    , *, control          , 1 )," &
+"  15( bc_8    , SATA5GP_GPIO49, bidir            , X  , 326   , 1  , Z      )," &
+"  16( bc_8    , SATA4GP_GPIO16, bidir            , X  , 326   , 1  , Z      )," &
+"  17( bc_8    , SATA3GP_GPIO37, bidir            , X  , 45    , 1  , Z      )," &
+"  18( bc_8    , GPIO55, bidir            , X  , 327   , 1  , Z      )," &
+"  19( bc_8    , GPIO20_SMI_N, bidir            , X  , 327   , 1  , Z      )," &
+"  20( bc_0    , *, internal         , X )," &
+"  21( bc_8    , GPIO35_NMI_N, bidir            , X  , 327   , 1  , Z      )," &
+"  22( bc_4    , SYS_RESET_N, observe_only     , X )," &
+"  23( bc_8    , SDATAOUT0_GPIO39, bidir            , X  , 326   , 1  , Z      )," &
+"  24( bc_8    , SRC1CLKRQ_N_GPIO18, bidir            , X  , 322   , 1  , Z      )," &
+"  25( bc_8    , SPKR, bidir            , X  , 323   , 1  , Z      )," &
+"  26( bc_4    ,*, internal         , X )," &
+"  27( bc_8    , SATA1GP_GPIO19, bidir            , X  , 326   , 1  , Z      )," &
+"  28( bc_8    , SATA0GP_GPIO21, bidir            , X  , 327   , 1  , Z      )," &
+"  29( bc_8    , SATALED_N, bidir            , X  , 47    , 1  , Z      )," &
+"  30( bc_4    , *, internal         , X )," &
+"  31( bc_8    , GPIO32, bidir            , X  , 327   , 1  , Z      )," &
+"  32( bc_8    , SLOAD_GPIO38, bidir            , X  , 327   , 1  , Z      )," &
+"  33( bc_8    , SDATAOUT1_GPIO48, bidir            , X  , 326   , 1  , Z      )," &
+"  34( bc_8    , SATA2GP_GPIO36, bidir            , X  , 46    , 1  , Z      )," &
+"  35( bc_8    , BMBUSY_N_GPIO0, bidir            , X  , 327   , 1  , Z      )," &
+"  36( bc_8    , SERIRQ, bidir            , X  , 327   , 1  , Z      )," &
+"  37( bc_8    , SCLOCK_GPIO22, bidir            , X  , 327   , 1  , Z      )," &
+"  38( bc_8    , PECI_PCH, bidir            , X  , 48    , 1  , Z      )," &
+"  39( bc_8    , PLTRST_PROC_N, bidir            , X  , 49    , 1  , Z      )," &
+"  40( bc_8    , PM_SYNC_PCH, bidir            , X  , 41    , 1  , Z      )," &
+"  41( bc_1    , *, control          , 1 )," &
+"  42( bc_8    , PROCPWRGD_PCH, bidir            , X  , 43    , 1  , Z      )," &
+"  43( bc_1    , *, control          , 1 )," &
+"  44( bc_4    , THERMTRIP_PCH_N, observe_only     , X )," &
+"  45( bc_1    , *, control          , 1 )," &
+"  46( bc_1    , *, control          , 1 )," &
+"  47( bc_1    , *, control          , 1 )," &
+"  48( bc_1    , *, control          , 1 )," &
+"  49( bc_1    , *, control          , 1 )," &
+"  50( ac_10   , SATA_TX_DP_1    , output2          , X )," &
+"  51( bc_4    , SATA_TX_DN_1    , observe_only     , X )," &
+"  52( ac_10   , SATA_TX_DP_0    , output2          , X )," &
+"  53( bc_4    , SATA_TX_DN_0    , observe_only     , X )," &
+"  54( ac_10   , SATA_TX_DP_5    , output2          , X )," &
+"  55( bc_4    , SATA_TX_DN_5    , observe_only     , X )," &
+"  56( ac_10   , SATA_TX_DP_4    , output2          , X )," &
+"  57( bc_4    , SATA_TX_DN_4    , observe_only     , X )," &
+"  58( bc_4    , SATA_RX_DP_4, observe_only     , X )," &
+"  59( bc_4    , SATA_RX_DN_4, observe_only     , X )," &
+"  60( bc_4    , SATA_RX_DP_5, observe_only     , X )," &
+"  61( bc_4    , SATA_RX_DN_5, observe_only     , X )," &
+"  62( bc_4    , SATA_RX_DP_0, observe_only     , X )," &
+"  63( bc_4    , SATA_RX_DN_0, observe_only     , X )," &
+"  64( bc_4    , SATA_RX_DP_1, observe_only     , X )," &
+"  65( bc_4    , SATA_RX_DN_1, observe_only     , X )," &
+"  66( bc_4    , SATA_RX_DP_2, observe_only     , X )," &
+"  67( bc_4    , SATA_RX_DN_2, observe_only     , X )," &
+"  68( bc_4    , SATA_RX_DP_3, observe_only     , X )," &
+"  69( bc_4    , SATA_RX_DN_3, observe_only     , X )," &
+"  70( ac_10   , SATA_TX_DP_3    , output2          , X )," &
+"  71( bc_4    , SATA_TX_DN_3    , observe_only     , X )," &
+"  72( ac_10   , SATA_TX_DP_2    , output2          , X )," &
+"  73( bc_4    , SATA_TX_DN_2    , observe_only     , X )," &
+"  74( bc_1    , *, internal         , X )," &
+"  75( bc_1    , *, internal         , X )," &
+"  76( bc_1    , *, internal         , X )," &
+"  77( bc_1    , *, internal         , X )," &
+"  78( bc_1    , *, internal         , X )," &
+"  79( bc_1    , *, internal         , X )," &
+"  80( bc_1    , *, internal         , X )," &
+"  81( bc_1    , *, internal         , X )," &
+"  82( bc_1    , *, internal         , X )," &
+"  83( bc_1    , *, internal         , X )," &
+"  84( bc_1    , *, internal         , X )," &
+"  85( bc_1    , *, internal         , X )," &
+"  86( bc_1    , *, internal         , X )," &
+"  87( bc_1    , *, internal         , X )," &
+"  88( bc_1    , *, internal         , X )," &
+"  89( bc_1    , *, internal         , X )," &
+"  90( ac_10   , USB3_TX_DP_4      , output2          , X )," &
+"  91( bc_4    , USB3_TX_DN_4      , observe_only     , X )," &
+"  92( ac_10   , USB3_TX_DP_5      , output2          , X )," &
+"  93( bc_4    , USB3_TX_DN_5      , observe_only     , X )," &
+"  94( ac_10   , PCIE_TX_DP_1        , output2          , X )," &
+"  95( bc_4    , PCIE_TX_DN_1        , observe_only     , X )," &
+"  96( ac_10   , PCIE_TX_DP_2        , output2          , X )," &
+"  97( bc_4    , PCIE_TX_DN_2        , observe_only     , X )," &
+"  98( ac_10   , PCIE_TX_DP_3        , output2          , X )," &
+"  99( bc_4    , PCIE_TX_DN_3        , observe_only     , X )," &
+" 100( ac_10   , PCIE_TX_DP_4        , output2          , X )," &
+" 101( bc_4    , PCIE_TX_DN_4        , observe_only     , X )," &
+" 102( ac_10   , PCIE_TX_DP_5        , output2          , X )," &
+" 103( bc_4    , PCIE_TX_DN_5        , observe_only     , X )," &
+" 104( ac_10   , PCIE_TX_DP_6        , output2          , X )," &
+" 105( bc_4    , PCIE_TX_DN_6        , observe_only     , X )," &
+" 106( ac_10   , PCIE_TX_DP_7        , output2          , X )," &
+" 107( bc_4    , PCIE_TX_DN_7        , observe_only     , X )," &
+" 108( ac_10   , PCIE_TX_DP_8        , output2          , X )," &
+" 109( bc_4    , PCIE_TX_DN_8        , observe_only     , X )," &
+" 110( bc_4    , PCIE_RX_DP_8, observe_only     , X )," &
+" 111( bc_4    , PCIE_RX_DN_8, observe_only     , X )," &
+" 112( bc_4    , PCIE_RX_DP_7, observe_only     , X )," &
+" 113( bc_4    , PCIE_RX_DN_7, observe_only     , X )," &
+" 114( bc_4    , PCIE_RX_DP_6, observe_only     , X )," &
+" 115( bc_4    , PCIE_RX_DN_6, observe_only     , X )," &
+" 116( bc_4    , PCIE_RX_DP_5, observe_only     , X )," &
+" 117( bc_4    , PCIE_RX_DN_5, observe_only     , X )," &
+" 118( bc_4    , PCIE_RX_DP_4, observe_only     , X )," &
+" 119( bc_4    , PCIE_RX_DN_4, observe_only     , X )," &
+" 120( bc_4    , PCIE_RX_DP_3, observe_only     , X )," &
+" 121( bc_4    , PCIE_RX_DN_3, observe_only     , X )," &
+" 122( bc_4    , PCIE_RX_DP_2, observe_only     , X )," &
+" 123( bc_4    , PCIE_RX_DN_2, observe_only     , X )," &
+" 124( bc_4    , PCIE_RX_DP_1, observe_only     , X )," &
+" 125( bc_4    , PCIE_RX_DN_1, observe_only     , X )," &
+" 126( bc_4    , USB3_RX_DP_5, observe_only     , X )," &
+" 127( bc_4    , USB3_RX_DN_5, observe_only     , X )," &
+" 128( bc_4    , USB3_RX_DP_4, observe_only     , X )," &
+" 129( bc_4    , USB3_RX_DN_4, observe_only     , X )," &
+" 130( bc_4    , USB3_RX_DP_1, observe_only     , X )," &
+" 131( bc_4    , USB3_RX_DN_1, observe_only     , X )," &
+" 132( bc_4    , USB3_RX_DP_0, observe_only     , X )," &
+" 133( bc_4    , USB3_RX_DN_0, observe_only     , X )," &
+" 134( ac_10   , USB3_TX_DP_0      , output2          , X )," &
+" 135( bc_4    , USB3_TX_DN_0      , observe_only     , X )," &
+" 136( ac_10   , USB3_TX_DP_1      , output2          , X )," &
+" 137( bc_4    , USB3_TX_DN_1      , observe_only     , X )," &
+" 138( bc_0   , *, internal         , X )," &
+" 139( bc_4    , *, internal         , X )," &
+" 140( bc_0   , *, internal         , X )," &
+" 141( bc_4    , *, internal         , X )," &
+" 142( bc_4    , *, internal         , X )," &
+" 143( bc_4    , *, internal         , X )," &
+" 144( bc_4    , *, internal         , X )," &
+" 145( bc_4    , *, internal         , X )," &
+" 146( bc_0    , *, internal         , X )," &
+" 147( bc_0    , *, internal         , X )," &
+" 148( bc_0    , *, internal         , X )," &
+" 149( bc_0    , *, internal         , X )," &
+" 150( bc_0    , *, internal         , X )," &
+" 151( bc_1    , *, internal         , X )," &
+" 152( bc_1    , *, internal         , X )," &
+" 153( bc_0    , *, internal         , X )," &
+" 154( bc_0    , *, internal         , X )," &
+" 155( bc_0    , *, internal         , X )," &
+" 156( bc_0    , *, internal         , X )," &
+" 157( bc_0    , *, internal         , X )," &
+" 158( bc_0    , *, internal         , X )," &
+" 159( bc_0    , *, internal         , X )," &
+" 160( bc_0    , *, internal         , X )," &
+" 161( bc_0    , *, internal         , X )," &
+" 162( bc_0    , *, internal         , X )," &
+" 163( bc_1    , CLKOUT_ITPXDP_DP , output3          , X  , 164   , 1  , Z      )," &
+" 164( bc_1    , *, control          , 1 )," &
+" 165( bc_1    , *, internal         , X )," &
+" 166( bc_0    , *, internal         , X )," &
+" 167( bc_1    , *, internal         , X )," &
+" 168( bc_0    , *, internal         , X )," &
+" 169( bc_1    , *, internal         , X )," &
+" 170( bc_0    , *, internal         , X )," &
+" 171( bc_1    , CLKOUT_PEG_DP, output3          , X  , 172   , 1  , Z      )," &
+" 172( bc_1    , *, control          , 1 )," &
+" 173( bc_1    , *, internal         , X )," &
+" 174( bc_0    , *, internal         , X )," &
+" 175( bc_1    , CLKOUT_PCIE_DP_7   , output3          , X  , 176   , 1  , Z      )," &
+" 176( bc_1    , *, control          , 1 )," &
+" 177( bc_1    , CLKOUT_PCIE_DP_6   , output3          , X  , 178   , 1  , Z      )," &
+" 178( bc_1    , *, control          , 1 )," &
+" 179( bc_1    , CLKOUT_PCIE_DP_5   , output3          , X  , 180   , 1  , Z      )," &
+" 180( bc_1    , *, control          , 1 )," &
+" 181( bc_1    , CLKOUT_PCIE_DP_4   , output3          , X  , 182   , 1  , Z      )," &
+" 182( bc_1    , *, control          , 1 )," &
+" 183( bc_1    , CLKOUT_PCIE_DP_3   , output3          , X  , 184   , 1  , Z      )," &
+" 184( bc_1    , *, control          , 1 )," &
+" 185( bc_1    , CLKOUT_PCIE_DP_2   , output3          , X  , 186   , 1  , Z      )," &
+" 186( bc_1    , *, control          , 1 )," &
+" 187( bc_1    , CLKOUT_PCIE_DP_1   , output3          , X  , 188   , 1  , Z      )," &
+" 188( bc_1    , *, control          , 1 )," &
+" 189( bc_1    , CLKOUT_PCIE_DP_0   , output3          , X  , 190   , 1  , Z      )," &
+" 190( bc_1    , *, control          , 1 )," &
+" 191( bc_1    , CLKOUT_PCI_0, output3          , X  , 208   , 1  , Z      )," &
+" 192( bc_1    , CLKOUT_PCI_1, output3          , X  , 208   , 1  , Z      )," &
+" 193( bc_1    , CLKOUT_PCI_2, output3          , X  , 208   , 1  , Z      )," &
+" 194( bc_1    , CLKOUT_PCI_3, output3          , X  , 208   , 1  , Z      )," &
+" 195( bc_1    , CLKOUT_PCI_4, output3          , X  , 208   , 1  , Z      )," &
+" 196( bc_4    , *, internal         , X )," &
+" 197( bc_4    , *, internal         , X )," &
+" 198( bc_4    , *, internal         , X )," &
+" 199( bc_4    , *, internal         , X )," &
+" 200( bc_4    , *, internal         , X )," &
+" 201( bc_1    , *, internal         , X )," &
+" 202( bc_4    , *, internal         , X )," &
+" 203( bc_4    , *, internal         , X )," &
+" 204( bc_1    , *, internal         , X )," &
+" 205( bc_4    , *, internal         , X )," &
+" 206( bc_4    , *, internal         , X )," &
+" 207( bc_1    , *, internal         , X )," &
+" 208( bc_1    , *, control          , 1 )," &
+" 209( bc_0    , *, internal         , X )," &
+" 210( bc_0    , *, internal         , X )," &
+" 211( bc_1    , *, internal         , X )," &
+" 212( bc_0    , *, internal         , X )," &
+" 213( bc_1    , *, internal         , X )," &
+" 214( bc_4    , *, internal         , X )," &
+" 215( bc_0    , *, internal         , X )," &
+" 216( bc_0    , *, internal         , X )," &
+" 217( bc_1    , *, internal         , X )," &
+" 218( bc_4    , *, internal         , X )," &
+" 219( bc_0    , *, internal         , X )," &
+" 220( bc_0    , *, internal         , X )," &
+" 221( bc_1    , *, internal         , X )," &
+" 222( bc_4    , *, internal         , X )," &
+" 223( bc_0    , *, internal         , X )," &
+" 224( bc_0    , *, internal         , X )," &
+" 225( bc_1    , *, internal         , X )," &
+" 226( bc_4    , *, internal         , X )," &
+" 227( bc_0    , *, internal         , X )," &
+" 228( bc_0    , *, internal         , X )," &
+" 229( bc_1    , *, internal         , X )," &
+" 230( bc_4    , *, internal         , X )," &
+" 231( bc_0    , *, internal         , X )," &
+" 232( bc_0    , *, internal         , X )," &
+" 233( bc_1    , *, internal         , X )," &
+" 234( bc_4    , *, internal         , X )," &
+" 235( bc_0    , *, internal         , X )," &
+" 236( bc_0    , *, internal         , X )," &
+" 237( bc_1    , *, internal         , X )," &
+" 238( bc_4    , *, internal         , X )," &
+" 239( bc_0    , *, internal         , X )," &
+" 240( bc_0    , *, internal         , X )," &
+" 241( bc_1    , *, internal         , X )," &
+" 242( bc_4    , *, internal         , X )," &
+" 243( bc_0    , *, internal         , X )," &
+" 244( bc_0    , *, internal         , X )," &
+" 245( bc_1    , *, internal         , X )," &
+" 246( bc_4    , *, internal         , X )," &
+" 247( bc_0    , *, internal         , X )," &
+" 248( bc_0    , *, internal         , X )," &
+" 249( bc_1    , *, internal         , X )," &
+" 250( bc_4    , *, internal         , X )," &
+" 251( bc_0    , *, internal         , X )," &
+" 252( bc_0    , *, internal         , X )," &
+" 253( bc_1    , *, internal         , X )," &
+" 254( bc_4    , USB2_DN_3    , observe_only     , X )," &
+" 255( bc_1    , *, control          , 0 )," &
+" 256( bc_8    , USB2_DP_3    , bidir            , X  , 255   , 0  , Z      )," &
+" 257( bc_1    , *, internal         , X )," &
+" 258( bc_4    , USB2_DN_2    , observe_only     , X )," &
+" 259( bc_1    , *, control          , 0 )," &
+" 260( bc_8    , USB2_DP_2    , bidir            , X  , 259   , 0  , Z      )," &
+" 261( bc_1    , *, internal         , X )," &
+" 262( bc_4    , USB2_DN_1    , observe_only     , X )," &
+" 263( bc_1    , *, control          , 0 )," &
+" 264( bc_8    , USB2_DP_1    , bidir            , X  , 263   , 0  , Z      )," &
+" 265( bc_1    , *, internal         , X )," &
+" 266( bc_4    , USB2_DN_0    , observe_only     , X )," &
+" 267( bc_1    , *, control          , 0 )," &
+" 268( bc_8    , USB2_DP_0    , bidir            , X  , 267   , 0  , Z      )," &
+" 269( bc_8    , MFG_MODE_STRAP, bidir            , X  , 278   , 1  , Z      )," &
+" 270( bc_0    , *, internal         , X )," &
+" 271( bc_0    , *, internal         , X )," &
+" 272( bc_0    , *, internal         , X )," &
+" 273( bc_0    , *, internal         , X )," &
+" 274( bc_0    , *, internal         , X )," &
+" 275( bc_0    , *, internal         , X )," &
+" 276( bc_0    , *, internal         , X )," &
+" 277( bc_0    , *, internal         , X )," &
+" 278( bc_1    , *, control          , 1 )," &
+" 279( bc_8    , CLKOUTFLEX3_GPIO67, bidir            , X  , 327   , 1  , Z      )," &
+" 280( bc_0    , *, internal         , X )," &
+" 281( bc_8    , CLKOUTFLEX1_GPIO65, bidir            , X  , 327   , 1  , Z      )," &
+" 282( bc_0    , *, internal         , X )," &
+" 283( bc_4    , REFCLK14IN, observe_only     , X )," &
+" 284( bc_8    , LFRAME_N, bidir            , X  , 325   , 1  , Z      )," &
+" 285( bc_8    , LAD_0, bidir            , X  , 325   , 1  , Z      )," &
+" 286( bc_8    , LAD_1, bidir            , X  , 325   , 1  , Z      )," &
+" 287( bc_8    , LAD_3, bidir            , X  , 325   , 1  , Z      )," &
+" 288( bc_4    , LDRQ0_N, observe_only     , X )," &
+" 289( bc_8    , LAD_2, bidir            , X  , 325   , 1  , Z      )," &
+" 290( bc_8    , LDRQ1_N_GPIO23, bidir            , X  , 327   , 1  , Z      )," &
+" 291( bc_8    , GPIO33, bidir            , X  , 318   , 1  , Z      )," &
+" 292( bc_8    , PIRQD_N, bidir            , X  , 320   , 1  , Z      )," &
+" 293( bc_8    , PIRQC_N, bidir            , X  , 320   , 1  , Z      )," &
+" 294( bc_8    , PIRQB_N, bidir            , X  , 320   , 1  , Z      )," &
+" 295( bc_8    , PIRQA_N, bidir            , X  , 320   , 1  , Z      )," &
+" 296( bc_8    , PIRQH_N_GPIO5, bidir            , X  , 319   , 1  , Z      )," &
+" 297( bc_8    , PIRQG_N_GPIO4, bidir            , X  , 319   , 1  , Z      )," &
+" 298( bc_8    , PIRQF_N_GPIO3, bidir            , X  , 319   , 1  , Z      )," &
+" 299( bc_8    , PIRQE_N_GPIO2, bidir            , X  , 319   , 1  , Z      )," &
+" 300( bc_8    , GPIO50, bidir            , X  , 321   , 1  , Z      )," &
+" 301( bc_8    , GPIO53, bidir            , X  , 317   , 1  , Z      )," &
+" 302( bc_8    , GPIO54, bidir            , X  , 321   , 1  , Z      )," &
+" 303( bc_8    , GPIO52, bidir            , X  , 321   , 1  , Z      )," &
+" 304( bc_8    , GPIO51, bidir            , X  , 321   , 1  , Z      )," &
+" 305( bc_8    , TACH2_GPIO6, bidir            , X  , 327   , 1  , Z      )," &
+" 306( bc_8    , TACH1_GPIO1, bidir            , X  , 327   , 1  , Z      )," &
+" 307( bc_8    , TACH0_GPIO17, bidir            , X  , 327   , 1  , Z      )," &
+" 308( bc_8    , TACH3_GPIO7, bidir            , X  , 327   , 1  , Z      )," &
+" 309( bc_8    , TACH6_GPIO70, bidir            , X  , 327   , 1  , Z      )," &
+" 310( bc_8    , TACH5_GPIO69, bidir            , X  , 327   , 1  , Z      )," &
+" 311( bc_8    , TACH4_GPIO68, bidir            , X  , 327   , 1  , Z      )," &
+" 312( bc_1    , PWM0, output3          , X  , 324   , 1  , Z      )," &
+" 313( bc_8    , TACH7_GPIO71, bidir            , X  , 327   , 1  , Z      )," &
+" 314( bc_1    , *, internal         , X )," &
+" 315( bc_1    , *, internal         , X )," &
+" 316( bc_1    , *, internal         , X )," &
+" 317( bc_1    , *, control          , 1 )," &
+" 318( bc_1    , *, control          , 1 )," &
+" 319( bc_1    , *, control          , 1 )," &
+" 320( bc_1    , *, control          , 1 )," &
+" 321( bc_1    , *, control          , 1 )," &
+" 322( bc_1    , *, control          , 1 )," &
+" 323( bc_1    , *, control          , 1 )," &
+" 324( bc_1    , *, control          , 1 )," &
+" 325( bc_1    , *, control          , 1 )," &
+" 326( bc_1    , *, control          , 1 )," &
+" 327( bc_1    , *, control          , 1 )," &
+" 328( bc_8    , WAKE_N, bidir            , X  , 329   , 1  , Z      )," &
+" 329( bc_1    , *, control          , 1 )," &
+" 330( bc_8    , GPIO72, bidir            , X  , 331   , 1  , Z      )," &
+" 331( bc_1    , *, control          , 1 )," &
+" 332( bc_1    , *, control          , 1 )," &
+" 333( bc_1    , *, control          , 1 )," &
+" 334( bc_1    , *, control          , 1 )," &
+" 335( bc_4    , INTRUDER_N, observe_only     , X )," &
+" 336( bc_4    , RTCRST_N, observe_only     , X )," &
+" 337( bc_4    , SRTCRST_N, observe_only     , X )," &
+" 338( bc_4    , INTVRMEN, observe_only     , X )," &
+" 339( bc_4    , DSWODVREN, observe_only     , X )," &
+" 340( bc_8    , LAN_PHY_PWR_CTRL_GPIO12, bidir            , X  , 332   , 1  , Z      )," &
+" 341( bc_0    , *, internal         , X )," &
+" 342( bc_0    , *, internal         , X )," &
+" 343( bc_8    , SLP_WLAN_N_GPIO29_MGPIO3, bidir            , X  , 344   , 1  , Z      )," &
+" 344( bc_1    , *, control          , 1 )," &
+" 345( bc_8    , SLP_A_N, bidir            , X  , 346   , 1  , Z      )," &
+" 346( bc_1    , *, control          , 1 )," &
+" 347( bc_8    , SLP_S4_N, bidir            , X  , 348   , 1  , Z      )," &
+" 348( bc_1    , *, control          , 1 )," &
+" 349( bc_8    , SLP_S3_N, bidir            , X  , 350   , 1  , Z      )," &
+" 350( bc_1    , *, control          , 1 )," &
+" 351( bc_8    , GPIO27_MGPIO6, bidir            , X  , 334   , 1  , Z      )," &
+" 352( bc_4    , PWRBTN_N, observe_only     , X )," &
+" 353( bc_8    , GPIO31_MGPIO2, bidir            , X  , 334   , 1  , Z      )," &
+" 354( bc_8    , SLP_SUS_N, bidir            , X  , 333   , 1  , Z      )," &
+" 355( bc_1    , *, internal         , X )," &
+" 356( bc_8    , SUSWARN_N_SUSPWRDNACK_GPIO30, bidir            , X  , 410   , 1  , Z      )," &
+" 357( bc_8    , OC1_N_GPIO40, bidir            , X  , 415   , 1  , Z      )," &
+" 358( bc_8    , OC2_N_GPIO41, bidir            , X  , 415   , 1  , Z      )," &
+" 359( bc_8    , SML1ALERT_N_PCHHOT_N_GPIO74, bidir            , X  , 360   , 1  , Z      )," &
+" 360( bc_1    , *, control          , 1 )," &
+" 361( bc_1    , DRAMPWROK_PCH, output3          , X  , 412   , 1  , Z      )," &
+" 362( bc_8    , SML1DATA_GPIO75_MGPIO12, bidir            , X  , 413   , 1  , Z      )," &
+" 363( bc_8    , OC7_N_GPIO14, bidir            , X  , 415   , 1  , Z      )," &
+" 364( bc_8    , OC6_N_GPIO10, bidir            , X  , 415   , 1  , Z      )," &
+" 365( bc_8    , OC4_N_GPIO43, bidir            , X  , 415   , 1  , Z      )," &
+" 366( bc_0    , *, internal         , X )," &
+" 367( bc_8    , SML1CLK_GPIO58_MGPIO11, bidir            , X  , 413   , 1  , Z      )," &
+" 368( bc_8    , OC3_N_GPIO42, bidir            , X  , 415   , 1  , Z      )," &
+" 369( bc_8    , OC0_N_GPIO59, bidir            , X  , 415   , 1  , Z      )," &
+" 370( bc_8    , OC5_N_GPIO9, bidir            , X  , 415   , 1  , Z      )," &
+" 371( bc_8    , SML0ALERT_N_GPIO60_MGPIO4, bidir            , X  , 415   , 1  , Z      )," &
+" 372( bc_4    , SUSACK_N, observe_only     , X )," &
+" 373( bc_4    , RI_N, observe_only     , X )," &
+" 374( bc_8    , SMBCLK, bidir            , X  , 412   , 1  , Z      )," &
+" 375( bc_8    , SMBALERT_N_GPIO11, bidir            , X  , 415   , 1  , Z      )," &
+" 376( bc_8    , GPIO8_OCS, bidir            , X  , 405   , 1  , Z      )," &
+" 377( bc_8    , SMBDATA, bidir            , X  , 412   , 1  , Z      )," &
+" 378( bc_8    , GPIO25, bidir            , X  , 415   , 1  , Z      )," &
+" 379( bc_8    , GPIO57_MGPIO5, bidir            , X  , 415   , 1  , Z      )," &
+" 380( bc_8    , SML0CLK, bidir            , X  , 415   , 1  , Z      )," &
+" 381( bc_8    , SML0DATA, bidir            , X  , 415   , 1  , Z      )," &
+" 382( bc_8    , PLTRST_N, bidir            , X  , 383   , 1  , Z      )," &
+" 383( bc_1    , *, control          , 1 )," &
+" 384( bc_8    , GPIO24_MGPIO0, bidir            , X  , 415   , 1  , Z      )," &
+" 385( bc_1    , *, internal         , X )," &
+" 386( bc_0    , *, internal         , X )," &
+" 387( bc_0    , *, internal         , X )," &
+" 388( bc_8    , SUS_STAT_N_GPIO61, bidir            , X  , 415   , 1  , Z      )," &
+" 389( bc_8    , GPIO26, bidir            , X  , 408   , 1  , Z      )," &
+" 390( bc_8    , GPIO15, bidir            , X  , 415   , 1  , Z      )," &
+" 391( bc_8    , GPIO46, bidir            , X  , 415   , 1  , Z      )," &
+" 392( bc_0    , *, internal         , X )," &
+" 393( bc_8    , GPIO44, bidir            , X  , 415   , 1  , Z      )," &
+" 394( bc_8    , SUSCLK_GPIO62, bidir            , X  , 395   , 1  , Z      )," &
+" 395( bc_1    , *, control          , 1 )," &
+" 396( bc_8    , PME_N, bidir            , X  , 412   , 1  , Z      )," &
+" 397( bc_0    , *, internal         , X )," &
+" 398( bc_8    , GPIO45, bidir            , X  , 415   , 1  , Z      )," &
+" 399( bc_0    , *, internal         , X )," &
+" 400( bc_8    , GPIO28_MGPIO7, bidir            , X  , 404   , 1  , Z      )," &
+" 401( bc_1    , *, internal         , X )," &
+" 402( bc_0    , *, internal         , X )," &
+" 403( bc_0    , *, internal         , X )," &
+" 404( bc_1    , *, control          , 1 )," &
+" 405( bc_1    , *, control          , 1 )," &
+" 406( bc_0    , *, internal         , X )," &
+" 407( bc_1    , *, internal         , X )," &
+" 408( bc_1    , *, control          , 1 )," &
+" 409( bc_0    , *, internal         , X )," &
+" 410( bc_1    , *, control          , 1 )," &
+" 411( bc_1    , *, internal         , X )," &
+" 412( bc_1    , *, control          , 1 )," &
+" 413( bc_1    , *, control          , 1 )," &
+" 414( bc_1    , *, internal         , X )," &
+" 415( bc_1    , *, control          , 1 )" ;
+
+-- Advanced I/O Description for 1149.6 AC-coupled and differential pins
+attribute AIO_COMPONENT_CONFORMANCE of BDWDE_PCH : entity is
+   "STD_1149_6_2003";
+
+-- 1149.6 7.5.2 Define optional Pulse width timing requirements for EXTEST_PULSE
+--              (specify minimum wait time in RUTI, in seconds)
+attribute AIO_EXTEST_Pulse_Execution of BDWDE_PCH : entity is 
+   "wait_duration 1.0e-5";
+
+-- 1149.6 7.5.3 Define optional requirements for EXTEST_TRAIN
+--              (5.4.2 permission: specify min # of pulses produced during extest_train)
+attribute AIO_EXTEST_Train_Execution of BDWDE_PCH : entity is 
+   "train 2";
+
+-- Define charactistics of any AC pins
+attribute AIO_Pin_Behavior of BDWDE_PCH : entity is
+"SATA_TX_DP_1                                      ; " &
+"SATA_TX_DP_0                                      ; " &
+"SATA_TX_DP_5                                      ; " &
+"SATA_TX_DP_4                                      ; " &
+"SATA_RX_DP_4              [58] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_4              [59] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DP_5              [60] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_5              [61] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DP_0              [62] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_0              [63] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DP_1              [64] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_1              [65] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DP_2              [66] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_2              [67] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DP_3              [68] :                  HP_time=8.0e-9 ; " &
+"SATA_RX_DN_3              [69] :                  HP_time=8.0e-9 ; " &
+"SATA_TX_DP_3                                      ; " &
+"SATA_TX_DP_2                                      ; " &
+"USB3_TX_DP_4                                        ; " &
+"USB3_TX_DP_5                                        ; " &
+"PCIE_TX_DP_1                                          ; " &
+"PCIE_TX_DP_2                                          ; " &
+"PCIE_TX_DP_3                                          ; " &
+"PCIE_TX_DP_4                                          ; " &
+"PCIE_TX_DP_5                                          ; " &
+"PCIE_TX_DP_6                                          ; " &
+"PCIE_TX_DP_7                                          ; " &
+"PCIE_TX_DP_8                                          ; " &
+"PCIE_RX_DP_8                 [110] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_8                 [111] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_7                 [112] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_7                 [113] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_6                 [114] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_6                 [115] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_5                 [116] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_5                 [117] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_4                 [118] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_4                 [119] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_3                 [120] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_3                 [121] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_2                 [122] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_2                 [123] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DP_1                 [124] :                  HP_time=8.0e-9 ; " &
+"PCIE_RX_DN_1                 [125] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DP_5               [126] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DN_5               [127] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DP_4               [128] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DN_4               [129] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DP_1               [130] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DN_1               [131] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DP_0               [132] :                  HP_time=8.0e-9 ; " &
+"USB3_RX_DN_0               [133] :                  HP_time=8.0e-9 ; " &
+"USB3_TX_DP_0                                        ; " &
+"USB3_TX_DP_1                                         " ;
+
+attribute EXTEST_TOGGLE_CELLS : BSDL_EXTENSION;
+----Extest Toggle Extension----
+
+-- Tcell:
+-- The boundary register cell number that allows the associated "Signal"(s)
+-- output(s) to toggle at ?the TCK frequency when the "Tcell" contains the
+-- "Tval" value, the EXTEST_TOGGLE command is active and the TAP state machine
+-- is in Run-Test-Idle.
+
+-- Tval:
+-- The value required in the "Tcell" of the boundary register that allows the
+-- associated "Signal"(s) output(s) to toggle at ?the TCK frequency when the
+-- "Tcell" contains the "Tval" value, the EXTEST_TOGGLE command is active and
+-- the TAP state machine is in Run-Test-Idle.
+
+--   Options: 0 = Output toggles when "Tcell" is set to zero
+--            1 = Output toggles when "Tcell" is set to one
+
+-- DI/PS/SE:
+-- Differential/Pseudo Single Ended/Single Ended. "Tcell" will enable toggling
+-- one output if pseudo single ended or single ended, and enable toggling two
+-- outputs if differential.
+
+-- Note: Pseudo single ended is one output leg of a differential pair output
+--       that will be configured to toggle. "PS" looks much like "SE" mode
+--       other than there could be more "Treq" parameters for proper operation.
+
+--   Options: DI = Differential (two differential output legs toggle
+--                 simultaneously)
+--            PS = Pseudo Single Ended (one leg of a differential can toggle
+--                 independent of the other)
+--            SE = Single Ended (one output will toggle)
+                        
+-- Signal:
+-- Associates the signal name to the "Tcell" number for the EXTEST_TOGGLE
+-- instruction and also represents the positive output of a differential pair.
+-- A signal name defined in the PHYSICAL_PIN_MAP area of the BSDL file is
+-- required for this field.
+      
+-- DiffNeg:
+-- When both legs of the differential pair are controlled by the same "Tcell",
+-- "DiffNeg" identifies the negative leg of the differential pair. A signal
+-- name defined in the PHYSICAL_PIN_MAP area of the BSDL file is required for
+-- this field.
+
+-- DiffMode:
+-- Describes if the differential pair outputs are simultaneously driven to the
+-- same logic state or to opposite logic states.
+
+--   Options: OPPO = Simultaneous 1/0 or 0/1 logic levels.
+--           SAME = Simultaneous 1/1 or 0/0 logic levels.
+
+-- Treq:
+-- The field contains values required in other boundary register cells that
+-- enable the described "Signal" to toggle. The field originated to support
+-- pseudo single ended but is not limited to that use. 'cell# = value'
+
+--   Example: '510=1, 511=0'
+
+-- Single quotes define the field with commas defining each entry. There is no
+-- limit to the number of entries.
+
+-- The following would typically follow what has already been defined through IEEE 1149.1 and
+-- 1149.6 syntax in the BSDL file.
+                    
+-- Ccell:
+-- The control cell number that enables the output signal(s) to drive out.
+
+-- Disval:
+-- The logic value placed into the control cell that disables the signal(s)
+-- output(s) from driving. 
+
+--   Options: 0 = Output(s) not driven when zero
+--            1 = Output(s) not driven when one
+ 
+-- Rslt:
+-- The resulting state the output(s) maintains when disabled.
+ 
+--   Options:     Z = High Impedance
+--                WEAK0 = External pull down
+--                WEAK1 = External pull up
+--                PULL0 = Internal pull down
+--                PULL1 = Internal pull up
+
+attribute EXTEST_TOGGLE_CELLS of BDWDE_PCH : entity is
+
+--{Tcell, Tval, DI/PS/SE, Signal, DiffNeg, DiffMode, Treq, Ccell, Disval, Rslt}
+"{   0, 1, SE, SPI_IO3,                   ,      ,                    ,   8, 1, Z }," &
+"{   1, 1, SE, SPI_IO2,                   ,      ,                    ,   8, 1, Z }," &
+"{   2, 1, SE, SPI_MISO_IO1,                   ,      ,                    ,   9, 1, Z }," &
+"{   3, 1, SE, SPI_MOSI_IO0,                   ,      ,                    ,  10, 1, Z }," &
+"{   4, 1, SE, SPI_CS2_N,                   ,      ,                    ,  11, 1, Z }," &
+"{   5, 1, SE, SPI_CS0_N,                   ,      ,                    ,  12, 1, Z }," &
+"{   6, 1, SE, SPI_CLK,                   ,      ,                    ,  13, 1, Z }," &
+"{   7, 1, SE, SPI_CS1_N,                   ,      ,                    ,  14, 1, Z }," &
+"{  15, 1, SE, SATA5GP_GPIO49,                   ,      ,                    , 326, 1, Z }," &
+"{  16, 1, SE, SATA4GP_GPIO16,                   ,      ,                    , 326, 1, Z }," &
+"{  17, 1, SE, SATA3GP_GPIO37,                   ,      ,                    ,  45, 1, Z }," &
+"{  18, 1, SE, GPIO55,                   ,      ,                    , 327, 1, Z }," &
+"{  19, 1, SE, GPIO20_SMI_N,                   ,      ,                    , 327, 1, Z }," &
+"{  21, 1, SE, GPIO35_NMI_N,                   ,      ,                    , 327, 1, Z }," &
+"{  23, 1, SE, SDATAOUT0_GPIO39,                   ,      ,                    , 326, 1, Z }," &
+"{  24, 1, SE, SRC1CLKRQ_N_GPIO18,                   ,      ,                    , 322, 1, Z }," &
+"{  25, 1, SE, SPKR,                   ,      ,                    , 323, 1, Z }," &
+"{  27, 1, SE, SATA1GP_GPIO19,                   ,      ,                    , 326, 1, Z }," &
+"{  28, 1, SE, SATA0GP_GPIO21,                   ,      ,                    , 327, 1, Z }," &
+"{  29, 1, SE, SATALED_N,                   ,      ,                    ,  47, 1, Z }," &
+"{  31, 1, SE, GPIO32,                   ,      ,                    , 327, 1, Z }," &
+"{  32, 1, SE, SLOAD_GPIO38,                   ,      ,                    , 327, 1, Z }," &
+"{  33, 1, SE, SDATAOUT1_GPIO48,                   ,      ,                    , 326, 1, Z }," &
+"{  34, 1, SE, SATA2GP_GPIO36,                   ,      ,                    ,  46, 1, Z }," &
+"{  35, 1, SE, BMBUSY_N_GPIO0,                   ,      ,                    , 327, 1, Z }," &
+"{  36, 1, SE, SERIRQ,                   ,      ,                    , 327, 1, Z }," &
+"{  37, 1, SE, SCLOCK_GPIO22,                   ,      ,                    , 327, 1, Z }," &
+"{  38, 1, SE, PECI_PCH,                   ,      ,                    ,  48, 1, Z }," &
+"{  39, 1, SE, PLTRST_PROC_N,                   ,      ,                    ,  49, 1, Z }," &
+"{  40, 1, SE, PM_SYNC_PCH,                   ,      ,                    ,  41, 1, Z }," &
+"{  42, 1, SE, PROCPWRGD_PCH,                   ,      ,                    ,  43, 1, Z }," &
+"{  50, 1, SE, SATA_TX_DP_1    ,                   ,      ,                    ,    ,  ,   }," &
+"{  51, 1, SE, SATA_TX_DN_1    ,                   ,      ,                    ,    ,  ,   }," &
+"{  52, 1, SE, SATA_TX_DP_0    ,                   ,      ,                    ,    ,  ,   }," &
+"{  53, 1, SE, SATA_TX_DN_0    ,                   ,      ,                    ,    ,  ,   }," &
+"{  54, 1, SE, SATA_TX_DP_5    ,                   ,      ,                    ,    ,  ,   }," &
+"{  55, 1, SE, SATA_TX_DN_5    ,                   ,      ,                    ,    ,  ,   }," &
+"{  56, 1, SE, SATA_TX_DP_4    ,                   ,      ,                    ,    ,  ,   }," &
+"{  57, 1, SE, SATA_TX_DN_4    ,                   ,      ,                    ,    ,  ,   }," &
+"{  70, 1, SE, SATA_TX_DP_3    ,                   ,      ,                    ,    ,  ,   }," &
+"{  71, 1, SE, SATA_TX_DN_3    ,                   ,      ,                    ,    ,  ,   }," &
+"{  72, 1, SE, SATA_TX_DP_2    ,                   ,      ,                    ,    ,  ,   }," &
+"{  73, 1, SE, SATA_TX_DN_2    ,                   ,      ,                    ,    ,  ,   }," &
+"{  90, 1, SE, USB3_TX_DP_4      ,                   ,      ,                    ,    ,  ,   }," &
+"{  91, 1, SE, USB3_TX_DN_4      ,                   ,      ,                    ,    ,  ,   }," &
+"{  92, 1, SE, USB3_TX_DP_5      ,                   ,      ,                    ,    ,  ,   }," &
+"{  93, 1, SE, USB3_TX_DN_5      ,                   ,      ,                    ,    ,  ,   }," &
+"{  94, 1, SE, PCIE_TX_DP_1        ,                   ,      ,                    ,    ,  ,   }," &
+"{  95, 1, SE, PCIE_TX_DN_1        ,                   ,      ,                    ,    ,  ,   }," &
+"{  96, 1, SE, PCIE_TX_DP_2        ,                   ,      ,                    ,    ,  ,   }," &
+"{  97, 1, SE, PCIE_TX_DN_2        ,                   ,      ,                    ,    ,  ,   }," &
+"{  98, 1, SE, PCIE_TX_DP_3        ,                   ,      ,                    ,    ,  ,   }," &
+"{  99, 1, SE, PCIE_TX_DN_3        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 100, 1, SE, PCIE_TX_DP_4        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 101, 1, SE, PCIE_TX_DN_4        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 102, 1, SE, PCIE_TX_DP_5        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 103, 1, SE, PCIE_TX_DN_5        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 104, 1, SE, PCIE_TX_DP_6        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 105, 1, SE, PCIE_TX_DN_6        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 106, 1, SE, PCIE_TX_DP_7        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 107, 1, SE, PCIE_TX_DN_7        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 108, 1, SE, PCIE_TX_DP_8        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 109, 1, SE, PCIE_TX_DN_8        ,                   ,      ,                    ,    ,  ,   }," &
+"{ 134, 1, SE, USB3_TX_DP_0      ,                   ,      ,                    ,    ,  ,   }," &
+"{ 135, 1, SE, USB3_TX_DN_0      ,                   ,      ,                    ,    ,  ,   }," &
+"{ 136, 1, SE, USB3_TX_DP_1      ,                   ,      ,                    ,    ,  ,   }," &
+"{ 137, 1, SE, USB3_TX_DN_1      ,                   ,      ,                    ,    ,  ,   }," &
+"{ 163, 1, DI, CLKOUT_ITPXDP_DP , CLKOUT_ITPXDP_DN   , OPPO ,                    , 164, 1, Z }," &
+"{ 171, 1, DI, CLKOUT_PEG_DP, CLKOUT_PEG_DN    , OPPO ,                    , 172, 1, Z }," &
+"{ 175, 1, DI, CLKOUT_PCIE_DP_7   , CLKOUT_PCIE_DN_7    , OPPO ,                    , 176, 1, Z }," &
+"{ 177, 1, DI, CLKOUT_PCIE_DP_6   , CLKOUT_PCIE_DN_6    , OPPO ,                    , 178, 1, Z }," &
+"{ 179, 1, DI, CLKOUT_PCIE_DP_5   , CLKOUT_PCIE_DN_5    , OPPO ,                    , 180, 1, Z }," &
+"{ 181, 1, DI, CLKOUT_PCIE_DP_4   , CLKOUT_PCIE_DN_4    , OPPO ,                    , 182, 1, Z }," &
+"{ 183, 1, DI, CLKOUT_PCIE_DP_3   , CLKOUT_PCIE_DN_3    , OPPO ,                    , 184, 1, Z }," &
+"{ 185, 1, DI, CLKOUT_PCIE_DP_2   , CLKOUT_PCIE_DN_2    , OPPO ,                    , 186, 1, Z }," &
+"{ 187, 1, DI, CLKOUT_PCIE_DP_1   , CLKOUT_PCIE_DN_1    , OPPO ,                    , 188, 1, Z }," &
+"{ 189, 1, DI, CLKOUT_PCIE_DP_0   , CLKOUT_PCIE_DN_0    , OPPO ,                    , 190, 1, Z }," &
+"{ 191, 1, SE, CLKOUT_PCI_0,                   ,      ,                    , 208, 1, Z }," &
+"{ 192, 1, SE, CLKOUT_PCI_1,                   ,      ,                    , 208, 1, Z }," &
+"{ 193, 1, SE, CLKOUT_PCI_2,                   ,      ,                    , 208, 1, Z }," &
+"{ 194, 1, SE, CLKOUT_PCI_3,                   ,      ,                    , 208, 1, Z }," &
+"{ 195, 1, SE, CLKOUT_PCI_4,                   ,      ,                    , 208, 1, Z }," &
+"{ 256, 0, DI, USB2_DP_3    , USB2_DN_3            , OPPO ,                    , 255, 0, Z }," &
+"{ 260, 0, DI, USB2_DP_2    , USB2_DN_2            , OPPO ,                    , 259, 0, Z }," &
+"{ 264, 0, DI, USB2_DP_1    , USB2_DN_1            , OPPO ,                    , 263, 0, Z }," &
+"{ 268, 0, DI, USB2_DP_0    , USB2_DN_0            , OPPO ,                    , 267, 0, Z }," &
+"{ 269, 1, SE, MFG_MODE_STRAP,                   ,      ,                    , 278, 1, Z }," &
+"{ 270, 1, SE, *, internal         , X )," &
+"{ 279, 1, SE, CLKOUTFLEX3_GPIO67,                   ,      ,                    , 327, 1, Z }," &
+"{ 281, 1, SE, CLKOUTFLEX1_GPIO65,                   ,      ,                    , 327, 1, Z }," &
+"{ 284, 1, SE, LFRAME_N,                   ,      ,                    , 325, 1, Z }," &
+"{ 285, 1, SE, LAD_0,                   ,      ,                    , 325, 1, Z }," &
+"{ 286, 1, SE, LAD_1,                   ,      ,                    , 325, 1, Z }," &
+"{ 287, 1, SE, LAD_3,                   ,      ,                    , 325, 1, Z }," &
+"{ 289, 1, SE, LAD_2,                   ,      ,                    , 325, 1, Z }," &
+"{ 290, 1, SE, LDRQ1_N_GPIO23,                   ,      ,                    , 327, 1, Z }," &
+"{ 291, 1, SE, GPIO33,                   ,      ,                    , 318, 1, Z }," &
+"{ 292, 1, SE, PIRQD_N,                   ,      ,                    , 320, 1, Z }," &
+"{ 293, 1, SE, PIRQC_N,                   ,      ,                    , 320, 1, Z }," &
+"{ 294, 1, SE, PIRQB_N,                   ,      ,                    , 320, 1, Z }," &
+"{ 295, 1, SE, PIRQA_N,                   ,      ,                    , 320, 1, Z }," &
+"{ 296, 1, SE, PIRQH_N_GPIO5,                   ,      ,                    , 319, 1, Z }," &
+"{ 297, 1, SE, PIRQG_N_GPIO4,                   ,      ,                    , 319, 1, Z }," &
+"{ 298, 1, SE, PIRQF_N_GPIO3,                   ,      ,                    , 319, 1, Z }," &
+"{ 299, 1, SE, PIRQE_N_GPIO2,                   ,      ,                    , 319, 1, Z }," &
+"{ 300, 1, SE, GPIO50,                   ,      ,                    , 321, 1, Z }," &
+"{ 301, 1, SE, GPIO53,                   ,      ,                    , 317, 1, Z }," &
+"{ 302, 1, SE, GPIO54,                   ,      ,                    , 321, 1, Z }," &
+"{ 303, 1, SE, GPIO52,                   ,      ,                    , 321, 1, Z }," &
+"{ 304, 1, SE, GPIO51,                   ,      ,                    , 321, 1, Z }," &
+"{ 305, 1, SE, TACH2_GPIO6,                   ,      ,                    , 327, 1, Z }," &
+"{ 306, 1, SE, TACH1_GPIO1,                   ,      ,                    , 327, 1, Z }," &
+"{ 307, 1, SE, TACH0_GPIO17,                   ,      ,                    , 327, 1, Z }," &
+"{ 308, 1, SE, TACH3_GPIO7,                   ,      ,                    , 327, 1, Z }," &
+"{ 309, 1, SE, TACH6_GPIO70,                   ,      ,                    , 327, 1, Z }," &
+"{ 310, 1, SE, TACH5_GPIO69,                   ,      ,                    , 327, 1, Z }," &
+"{ 311, 1, SE, TACH4_GPIO68,                   ,      ,                    , 327, 1, Z }," &
+"{ 312, 1, SE, PWM0,                   ,      ,                    , 324, 1, Z }," &
+"{ 313, 1, SE, TACH7_GPIO71,                   ,      ,                    , 327, 1, Z }," &
+"{ 328, 1, SE, WAKE_N,                   ,      ,                    , 329, 1, Z }," &
+"{ 330, 1, SE, GPIO72,                   ,      ,                    , 331, 1, Z }," &
+"{ 340, 1, SE, LAN_PHY_PWR_CTRL_GPIO12,                   ,      ,                    , 332, 1, Z }," &
+"{ 343, 1, SE, SLP_WLAN_N_GPIO29_MGPIO3,                   ,      ,                    , 344, 1, Z }," &
+"{ 351, 1, SE, GPIO27_MGPIO6,                   ,      ,                    , 334, 1, Z }," &
+"{ 353, 1, SE, GPIO31_MGPIO2,                   ,      ,                    , 334, 1, Z }," &
+"{ 356, 1, SE, SUSWARN_N_SUSPWRDNACK_GPIO30,                   ,      ,                    , 410, 1, Z }," &
+"{ 357, 1, SE, OC1_N_GPIO40,                   ,      ,                    , 415, 1, Z }," &
+"{ 358, 1, SE, OC2_N_GPIO41,                   ,      ,                    , 415, 1, Z }," &
+"{ 359, 1, SE, SML1ALERT_N_PCHHOT_N_GPIO74,                   ,      ,                    , 360, 1, Z }," &
+"{ 361, 1, SE, DRAMPWROK_PCH,                   ,      ,                    , 412, 1, Z }," &
+"{ 362, 1, SE, SML1DATA_GPIO75_MGPIO12,                   ,      ,                    , 413, 1, Z }," &
+"{ 363, 1, SE, OC7_N_GPIO14,                   ,      ,                    , 415, 1, Z }," &
+"{ 364, 1, SE, OC6_N_GPIO10,                   ,      ,                    , 415, 1, Z }," &
+"{ 365, 1, SE, OC4_N_GPIO43,                   ,      ,                    , 415, 1, Z }," &
+"{ 367, 1, SE, SML1CLK_GPIO58_MGPIO11,                   ,      ,                    , 413, 1, Z }," &
+"{ 368, 1, SE, OC3_N_GPIO42,                   ,      ,                    , 415, 1, Z }," &
+"{ 369, 1, SE, OC0_N_GPIO59,                   ,      ,                    , 415, 1, Z }," &
+"{ 370, 1, SE, OC5_N_GPIO9,                   ,      ,                    , 415, 1, Z }," &
+"{ 371, 1, SE, SML0ALERT_N_GPIO60_MGPIO4,                   ,      ,                    , 415, 1, Z }," &
+"{ 374, 1, SE, SMBCLK,                   ,      ,                    , 412, 1, Z }," &
+"{ 375, 1, SE, SMBALERT_N_GPIO11,                   ,      ,                    , 415, 1, Z }," &
+"{ 376, 1, SE, GPIO8_OCS,                   ,      ,                    , 405, 1, Z }," &
+"{ 377, 1, SE, SMBDATA,                   ,      ,                    , 412, 1, Z }," &
+"{ 378, 1, SE, GPIO25,                   ,      ,                    , 415, 1, Z }," &
+"{ 379, 1, SE, GPIO57_MGPIO5,                   ,      ,                    , 415, 1, Z }," &
+"{ 380, 1, SE, SML0CLK,                   ,      ,                    , 415, 1, Z }," &
+"{ 381, 1, SE, SML0DATA,                   ,      ,                    , 415, 1, Z }," &
+"{ 382, 1, SE, PLTRST_N,                   ,      ,                    , 383, 1, Z }," &
+"{ 384, 1, SE, GPIO24_MGPIO0,                   ,      ,                    , 415, 1, Z }," &
+"{ 388, 1, SE, SUS_STAT_N_GPIO61,                   ,      ,                    , 415, 1, Z }," &
+"{ 389, 1, SE, GPIO26,                   ,      ,                    , 408, 1, Z }," &
+"{ 390, 1, SE, GPIO15,                   ,      ,                    , 415, 1, Z }," &
+"{ 391, 1, SE, GPIO46,                   ,      ,                    , 415, 1, Z }," &
+"{ 393, 1, SE, GPIO44,                   ,      ,                    , 415, 1, Z }," &
+"{ 394, 1, SE, SUSCLK_GPIO62,                   ,      ,                    , 395, 1, Z }," &
+"{ 396, 1, SE, PME_N,                   ,      ,                    , 412, 1, Z }," &
+"{ 398, 1, SE, GPIO45,                   ,      ,                    , 415, 1, Z }," &
+"{ 400, 1, SE, GPIO28_MGPIO7,                   ,      ,                    , 404, 1, Z }" ;
+
+end BDWDE_PCH;

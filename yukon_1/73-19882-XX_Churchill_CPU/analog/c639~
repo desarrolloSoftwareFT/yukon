@@ -1,0 +1,12 @@
+!!!!    2    0    1 1629854510   0000                                         
+!* 33pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:54 2020
+disconnect all
+connect i to "SRT_BMC_SPI2_MUX_CLK"
+connect s to "GND"
+connect g to "BMC_SPI2_MUX_CLK"
+!capacitor 33p+150p , 96.82, 15.00, fr8192, re5, wb, ar50.0m!, sl, comp
+resistor 4.7k, 25, 25, re3, ar200m, wb, en    !rwk CPU May 21 Depop c639 add 4.7k res
+!resistor 100k, 20, 20, re4, ar200m, wb500m, ed, en   !rwk CPU May 21 Depop c639 add 4.7k res
+warning "excessive minus tolerance or low limit."
+! "c639" is a commented test.

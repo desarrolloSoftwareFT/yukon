@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175986   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:47 2020
+disconnect all
+connect s to "LAN_PWRGOOD_C"
+connect i to "UNNAMED_61_RES_I147_B_C"
+jumper 3.70k, re4, wb, ar200m, op
+! "r1494_c" test.

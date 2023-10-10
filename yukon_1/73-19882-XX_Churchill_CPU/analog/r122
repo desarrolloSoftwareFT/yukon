@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175958   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:19 2020
+disconnect all
+connect i to "FAB_REV3"
+connect s to "A2_5V"
+jumper 3.31k, re4, wb, ar200m, op
+! "r122" test.

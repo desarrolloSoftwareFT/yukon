@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "I2C_DDR_2P5V_SCL_ST_C"
+connect i to "I2C_DDR_2P5V_SCL"
+connect a to "I2C_DDR_2P5V_SCL_ST_C"
+connect b to "I2C_DDR_2P5V_SCL"
+resistor 22, 40, 20, re2, ar500m
+! "r974_c" test.

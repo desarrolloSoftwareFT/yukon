@@ -1,0 +1,396 @@
+{@BATCH|73-19882-04|06|3296|1||btest|201021173541||FGNICT14|73-19882-04|RevA|||
+{@BTEST|FOC2430NG5C|14|201021175737|000080|0|all||n|n|201021175857||1
+{@BLOCK|j2%presence|00
+{@A-JUM|0|+3.950187E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|j3%presence|00
+{@A-JUM|0|+4.003673E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|j8%presence|00
+{@A-JUM|0|+3.827966E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|j2001_c%presence|00
+{@A-JUM|0|+3.722943E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|j2003_c%presence|00
+{@A-JUM|0|+3.798195E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|mb_slvr%presence|00
+{@A-JUM|0|+3.893291E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p1%presence|00
+{@A-JUM|0|+3.975327E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p2%presence|00
+{@A-JUM|0|+3.990420E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p3%presence|00
+{@A-JUM|0|+3.915913E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p4%presence|00
+{@A-JUM|0|+3.726513E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p5%presence|00
+{@A-JUM|0|+3.879448E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p10%presence|00
+{@A-JUM|0|+3.764143E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p45_50%presence|00
+{@A-JUM|0|+3.788772E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|sw3%presence|00
+{@A-JUM|0|+3.966866E+00{@LIM2|+2.000000E+01|+0.000000E+00}}
+}
+{@BLOCK|p9%presence|00
+{@A-JUM|0|-1.814836E+06{@LIM2|+9.999999E+99|+1.000000E+03}}
+}
+{@TS|1|000|001|000|shorts
+{@RPT|----------------------------------------}
+{@RPT|Shorts Report for "shorts".}
+{@RPT|Wed Oct 21 17:57:40 2020}
+{@RPT|73-19882-04}
+{@RPT|----------------------------------------}
+{@RPT|Open #1 Thresh 25, Delay 50ms       Ohms}
+{@RPT|From: PVCCSCFUSESUS           21028   27}
+{@RPT|               bma4_c5.1}
+{@RPT|               bma4_c6.1}
+{@RPT|               bma4_c11.1}
+{@RPT|               bma4_c12.2}
+{@RPT|               bma4_c13.1}
+{@RPT|               bma4_c14.1}
+{@RPT|               bma4_c16.1}
+{@RPT|               bma4_c19.1}
+{@RPT|               bma4_l1.2}
+{@RPT|               bma4_r1.2}
+{@RPT|Too many to print.}
+{@RPT|To:     v                     20337   27 }
+{@RPT|PMOD_PVCCSCFUSESUS_VOSEN                }
+{@RPT|               bma4_c12.1}
+{@RPT|               bma4_c17.1}
+{@RPT|               bma4_r1.1}
+{@RPT|               bma4_r6.1}
+{@RPT|               bma4_r7.2}
+{@RPT|               bma4_r8.1}
+{@RPT|               bma4_tp1.1}
+{@RPT|               bma4_u1.1}
+{@RPT|Common Devices:}
+{@RPT|                bma4_c12}
+{@RPT|                bma4_r1}
+{@RPT|                bma4_r8}
+{@RPT|Message is:}
+{@RPT|Check bma4_r8}
+{@TS-O|PVCCSCFUSESUS|PMOD_PVCCSCFUSESUS_VOSEN|2}
+{@RPT|------End, 1 Problem Reported-----------}
+}
+{@RPT|Board #: 0 }
+{@RPT|Version:}
+{@RPT|S/N:FOC2430NG5C}
+{@TS|0|000|000|000|shorts
+}
+{@BLOCK|testjet|01
+{@TJET|00|0000|u1a_skt_c
+}
+{@TJET|00|0000|u1b_skt_c
+}
+{@TJET|00|0000|a_u139
+}
+{@TJET|00|0000|bmc_ddr4
+}
+{@TJET|00|0000|dma1_u1
+}
+{@TJET|00|0000|fc_u2
+}
+{@TJET|00|0000|fc_u4
+}
+{@TJET|00|0000|u1
+}
+{@TJET|00|0000|u1_i2
+}
+{@TJET|00|0000|u2_i2
+}
+{@TJET|00|0000|u3
+}
+{@TJET|00|0000|u4
+}
+{@TJET|00|0000|u4_m1
+}
+{@TJET|00|0000|u5_m2
+}
+{@TJET|00|0000|u7
+}
+{@TJET|00|0000|u22
+}
+{@TJET|00|0000|u24
+}
+{@TJET|00|0000|u25
+}
+{@TJET|00|0000|u30
+}
+{@TJET|00|0000|u34_c
+}
+{@TJET|00|0000|u36_c
+}
+{@TJET|00|0000|u38
+}
+{@RPT|----------------------------------------}
+{@RPT|TestJet Report for "testjet".}
+{@RPT|Wed Oct 21 17:57:54 2020}
+{@RPT|73-19882-04}
+{@RPT|----------------------------------------}
+{@TJET|01|0002|u40
+{@RPT|Open #1  Device u40}
+{@RPT|  Pin N8  Node x86_fpga_mdio_mux_sel0}
+{@RPT|  Measured 3.0              (BRC 214131)}
+{@RPT|Open #2  Device u40}
+{@RPT|  Pin R3  Node I210_FLASH_WP}
+{@RPT|  Measured 2.5              (BRC 215127)}
+{@RPT|17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,}
+{@RPT|----------------------------------------}
+{@DPIN|u40\4|x86_fpga_mdio_mux_sel0|N8|I210_FLASH_WP|R3}}
+{@TJET|00|0000|u42
+}
+{@TJET|00|0000|u44
+}
+{@TJET|00|0000|u46
+}
+{@TJET|00|0000|u49
+}
+{@TJET|00|0000|u51_c
+}
+{@TJET|00|0000|u57
+}
+{@TJET|00|0000|u64
+}
+{@TJET|00|0000|u66
+}
+{@TJET|00|0000|u68
+}
+{@TJET|00|0000|u74
+}
+{@TJET|00|0000|u78
+}
+{@TJET|00|0000|u92_c
+}
+{@TJET|00|0000|u111
+}
+{@TJET|00|0000|u135_c
+}
+{@TJET|00|0000|u158
+}
+{@TJET|00|0000|u168_c
+}
+{@TJET|00|0000|u171
+}
+{@TJET|00|0000|u175_c
+}
+{@TJET|00|0000|u176_c
+}
+{@TJET|00|0000|u300
+}
+{@TJET|00|0000|u301
+}
+{@RPT|Board #: 0 }
+{@RPT|Version:}
+{@RPT|S/N:FOC2430NG5C}
+{@TJET|00|0000|u1a_skt_c
+}
+{@TJET|00|0000|u1b_skt_c
+}
+{@TJET|00|0000|a_u139
+}
+{@TJET|00|0000|bmc_ddr4
+}
+{@TJET|00|0000|dma1_u1
+}
+{@TJET|00|0000|fc_u2
+}
+{@TJET|00|0000|fc_u4
+}
+{@TJET|00|0000|u1
+}
+{@TJET|00|0000|u1_i2
+}
+{@TJET|00|0000|u2_i2
+}
+{@TJET|00|0000|u3
+}
+{@TJET|00|0000|u4
+}
+{@TJET|00|0000|u4_m1
+}
+{@TJET|00|0000|u5_m2
+}
+{@TJET|00|0000|u7
+}
+{@TJET|00|0000|u22
+}
+{@TJET|00|0000|u24
+}
+{@TJET|00|0000|u25
+}
+{@TJET|00|0000|u30
+}
+{@TJET|00|0000|u34_c
+}
+{@TJET|00|0000|u36_c
+}
+{@TJET|00|0000|u38
+}
+{@RPT|----------------------------------------}
+{@RPT|TestJet Report for "testjet".}
+{@RPT|Wed Oct 21 17:58:13 2020}
+{@RPT|73-19882-04}
+{@RPT|----------------------------------------}
+{@TJET|01|0001|u40
+{@RPT|Open #1  Device u40}
+{@RPT|  Pin N8  Node x86_fpga_mdio_mux_sel0}
+{@RPT|  Measured 3.9              (BRC 214131)}
+{@RPT|17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,}
+{@RPT|----------------------------------------}
+{@DPIN|u40\2|x86_fpga_mdio_mux_sel0|N8}}
+{@TJET|00|0000|u42
+}
+{@TJET|00|0000|u44
+}
+{@TJET|00|0000|u46
+}
+{@TJET|00|0000|u49
+}
+{@TJET|00|0000|u51_c
+}
+{@TJET|00|0000|u57
+}
+{@TJET|00|0000|u64
+}
+{@TJET|00|0000|u66
+}
+{@TJET|00|0000|u68
+}
+{@TJET|00|0000|u74
+}
+{@TJET|00|0000|u78
+}
+{@TJET|00|0000|u92_c
+}
+{@TJET|00|0000|u111
+}
+{@TJET|00|0000|u135_c
+}
+{@TJET|00|0000|u158
+}
+{@TJET|00|0000|u168_c
+}
+{@TJET|00|0000|u171
+}
+{@TJET|00|0000|u175_c
+}
+{@TJET|00|0000|u176_c
+}
+{@TJET|00|0000|u300
+}
+{@TJET|00|0000|u301
+}
+{@RPT|Board #: 0 }
+{@RPT|Version:}
+{@RPT|S/N:FOC2430NG5C}
+{@TJET|00|0000|u1a_skt_c
+}
+{@TJET|00|0000|u1b_skt_c
+}
+{@TJET|00|0000|a_u139
+}
+{@TJET|00|0000|bmc_ddr4
+}
+{@TJET|00|0000|dma1_u1
+}
+{@TJET|00|0000|fc_u2
+}
+{@TJET|00|0000|fc_u4
+}
+{@TJET|00|0000|u1
+}
+{@TJET|00|0000|u1_i2
+}
+{@TJET|00|0000|u2_i2
+}
+{@TJET|00|0000|u3
+}
+{@TJET|00|0000|u4
+}
+{@TJET|00|0000|u4_m1
+}
+{@TJET|00|0000|u5_m2
+}
+{@TJET|00|0000|u7
+}
+{@TJET|00|0000|u22
+}
+{@TJET|00|0000|u24
+}
+{@TJET|00|0000|u25
+}
+{@TJET|00|0000|u30
+}
+{@TJET|00|0000|u34_c
+}
+{@TJET|00|0000|u36_c
+}
+{@TJET|00|0000|u38
+}
+{@RPT|----------------------------------------}
+{@RPT|TestJet Report for "testjet".}
+{@RPT|Wed Oct 21 17:58:51 2020}
+{@RPT|73-19882-04}
+{@RPT|----------------------------------------}
+{@TJET|01|0001|u40
+{@RPT|Open #1  Device u40}
+{@RPT|  Pin R3  Node I210_FLASH_WP}
+{@RPT|  Measured 3.7              (BRC 215127)}
+{@RPT|17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,}
+{@RPT|----------------------------------------}
+{@DPIN|u40\2|I210_FLASH_WP|R3}}
+{@TJET|00|0000|u42
+}
+{@TJET|00|0000|u44
+}
+{@TJET|00|0000|u46
+}
+{@TJET|00|0000|u49
+}
+{@TJET|00|0000|u51_c
+}
+{@TJET|00|0000|u57
+}
+{@TJET|00|0000|u64
+}
+{@TJET|00|0000|u66
+}
+{@TJET|00|0000|u68
+}
+{@TJET|00|0000|u74
+}
+{@TJET|00|0000|u78
+}
+{@TJET|00|0000|u92_c
+}
+{@TJET|00|0000|u111
+}
+{@TJET|00|0000|u135_c
+}
+{@TJET|00|0000|u158
+}
+{@TJET|00|0000|u168_c
+}
+{@TJET|00|0000|u171
+}
+{@TJET|00|0000|u175_c
+}
+{@TJET|00|0000|u176_c
+}
+{@TJET|00|0000|u300
+}
+{@TJET|00|0000|u301
+}
+}
+}}

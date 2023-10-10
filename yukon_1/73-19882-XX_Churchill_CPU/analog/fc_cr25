@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600571135  Vf673                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:12 2020
+disconnect all
+connect s to "FAN2_EEPROM"
+connect i to "GND"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr25" test.

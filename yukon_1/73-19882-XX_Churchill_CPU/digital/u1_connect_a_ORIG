@@ -1,0 +1,157 @@
+!!!!   24    0    1 1594176846  Ve8a9                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:07 2020
+
+connect "u1"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+  node "UNNAMED_59_PI5A3157_I15_S" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "GPIOA0_JTSCAN","GPIOA1_JTSCAN","LAN_PWRGOOD_C"
+  pcf order is nodes "PWRGOOD_CPU_C","UNNAMED_59_PI5A3157_I15_S","WP_R"
+  unit "disable_1"
+  pcf
+  "111101110"
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   a_u85.3
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "a_u85" pins 3
+!IPG: with pin 6 on node "UNNAMED_59_PI5A3157_I15_S"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "1GPHY_RST_L" hybrid test "u1.B12"
+  node "10GPHY_RST_L" hybrid test "u1.B11"
+  node "BDXDE_CATERR_GTL_N" hybrid test "u1.C1"
+  node "BMC_CPU_MEM_WP_L" hybrid test "u1.D11"
+  node "BMC_I2C_RST_L" hybrid test "u1.C11"
+  node "C33_CPU_PWRGD_PCH" hybrid test "u1.B3"
+  node "C33_PLTRST_PROC_N" hybrid test "u1.A3"
+  node "CONSOLE_RXD_DBG_2V5" hybrid test "u1.D1"
+  node "CPLD_DONE" hybrid test "u1.C13"
+  node "CPLD_I2C_SCL" hybrid test "u1.A9"
+  node "CPLD_I2C_SDA" hybrid test "u1.C9"
+  node "CPLD_INIT_M" hybrid test "u1.A13"
+  node "CPLD_PROG_M" hybrid test "u1.B10"
+  node "CPU_ADR_IN_3V" hybrid test "u1.C12"
+  node "CPU_MEM_HOT_3V_L" hybrid test "u1.A12"
+  node "CPU_PROCHOT_3V_L" hybrid test "u1.B13"
+  node "CPU_SEC_BOOT_JTAG_TRST" hybrid test "u1.E1"
+  node "CPU_THERMTRIP_3V3_L" hybrid test "u1.C5"
+  node "DRAM_PWR_OK_FPGA_R" hybrid test "u1.B6"
+  node "FM_BDXDE_ERR0_LVT3_N" hybrid test "u1.C4"
+  node "FM_PCH_HOT_N_P3V3" hybrid test "u1.B9"
+  node "FPGA_PRIMARY_MUX_WP_L" hybrid test "u1.D10"
+  node "H_FIVR_FAULT" hybrid test "u1.D2"
+  node "PCH_CONSOLE_RXD" hybrid test "u1.D8"
+  node "PCH_CONSOLE_RXD1" hybrid test "u1.B7"
+  node "PCH_CONSOLE_TXD" hybrid test "u1.C7"
+  node "PCHGP_PMB_FORCE_PWRDN" hybrid test "u1.A11"
+  node "PMOD_P1V5_PCH_PG_3V" hybrid test "u1.A5"
+  node "R_BMC_UART5_RXD" hybrid test "u1.A15"
+  node "R_BMC_UART5_TX" hybrid test "u1.A14"
+  node "SPARE1_P1V05" hybrid test "u1.C16"
+  node "SPARE2_P1V05" hybrid test "u1.D15"
+  node "SPARE3_P1V05" hybrid test "u1.D14"
+  node "SPARE5_P1V05" hybrid test "u1.C15"
+  node "SPARE6_P1V05" hybrid test "u1.B16"
+  node "UNNAMED_90_LCMXO3LF1300_I55_PT20CJTAGENB" hybrid test "u1.C10"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "_d_U1_C8"
+
+!IPG: Family information could not be found for node 1GPHY_RST_L
+!IPG: Family information could not be found for node 10GPHY_RST_L
+!IPG: Family information could not be found for node BDXDE_CATERR_GTL_N
+!IPG: Family information could not be found for node BMC_CPU_MEM_WP_L
+!IPG: Family information could not be found for node BMC_I2C_RST_L
+!IPG: Family information could not be found for node C33_CPU_PWRGD_PCH
+!IPG: Family information could not be found for node C33_PLTRST_PROC_N
+!IPG: Family information could not be found for node CONSOLE_RXD_DBG_2V5
+!IPG: Family information could not be found for node CPLD_DONE
+!IPG: Family information could not be found for node CPLD_I2C_SCL
+!IPG: Family information could not be found for node CPLD_I2C_SDA
+!IPG: Family information could not be found for node CPLD_INIT_M
+!IPG: Family information could not be found for node CPLD_PROG_M
+!IPG: Family information could not be found for node CPU_ADR_IN_3V
+!IPG: Family information could not be found for node CPU_MEM_HOT_3V_L
+!IPG: Family information could not be found for node CPU_PROCHOT_3V_L
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TRST
+!IPG: Family information could not be found for node CPU_THERMTRIP_3V3_L
+!IPG: Family information could not be found for node DRAM_PWR_OK_FPGA_R
+!IPG: Family information could not be found for node FM_BDXDE_ERR0_LVT3_N
+!IPG: Family information could not be found for node FM_PCH_HOT_N_P3V3
+!IPG: Family information could not be found for node FPGA_PRIMARY_MUX_WP_L
+!IPG: Family information could not be found for node H_FIVR_FAULT
+!IPG: Family information could not be found for node PCH_CONSOLE_RXD
+!IPG: Family information could not be found for node PCH_CONSOLE_RXD1
+!IPG: Family information could not be found for node PCH_CONSOLE_TXD
+!IPG: Family information could not be found for node PCHGP_PMB_FORCE_PWRDN
+!IPG: Family information could not be found for node PMOD_P1V5_PCH_PG_3V
+!IPG: Family information could not be found for node R_BMC_UART5_RXD
+!IPG: Family information could not be found for node R_BMC_UART5_TX
+!IPG: Family information could not be found for node SPARE1_P1V05
+!IPG: Family information could not be found for node SPARE2_P1V05
+!IPG: Family information could not be found for node SPARE3_P1V05
+!IPG: Family information could not be found for node SPARE5_P1V05
+!IPG: Family information could not be found for node SPARE6_P1V05
+!IPG: Family information could not be found for node UNNAMED_90_LCMXO3LF1300_I55_PT20CJTAGENB
+end connect
+

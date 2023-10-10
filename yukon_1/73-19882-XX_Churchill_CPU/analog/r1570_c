@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513006  V3619                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "LAN_PWRGOOD_1V"
+connect i to "LAN_PWRGOOD_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1570_c" test.

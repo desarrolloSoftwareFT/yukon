@@ -1,0 +1,8 @@
+!!!!    2    0    1 1686181519   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect i to "I2C_BUS9_ALERT_R"
+connect s to "I2C_BUS9_ALERT"
+connect g to "GND"
+jumper  30+7, re2, ar200m,wa10m,en,ed,wb
+! "r1294" test.

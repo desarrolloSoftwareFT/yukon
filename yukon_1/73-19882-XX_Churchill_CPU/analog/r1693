@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175996   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:57 2020
+on failure
+   report parallel devices
+   report "c636 10.0n"
+end on failure
+disconnect all
+connect i to "PMOD_P1V15_BMC_EN"
+connect s to "GND"
+jumper 4.93k, re4, wb, ar200m, op
+! "r1693" test.
+off failure

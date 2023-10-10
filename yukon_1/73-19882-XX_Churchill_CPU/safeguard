@@ -1,0 +1,59 @@
+!!!!    8    0    1 1594175496   0000                                         
+
+parameters "standard_cmos"
+   backdrive current of 5m for "0", 50m for "1"
+   bond wire 2540 by 25.4
+   heat source 100 by 10, 1 per output
+   operating temperature 40
+   overdrive power 20m, 20m dissipated by heat source
+   package ceramic
+   thermal resistance 60
+end parameters
+
+use parameters "standard_cmos" for "a_u85"
+use parameters "standard_cmos" for "a_u139"
+use parameters "standard_cmos" for "a_u149"
+use parameters "standard_cmos" for "bmc_ddr4"
+use parameters "standard_cmos" for "fc_u2"
+use parameters "standard_cmos" for "fc_u4"
+use parameters "standard_cmos" for "u2_i2"
+use parameters "standard_cmos" for "u3"
+use parameters "standard_cmos" for "u4"
+use parameters "standard_cmos" for "u7"
+use parameters "standard_cmos" for "u22"
+use parameters "standard_cmos" for "u24"
+use parameters "standard_cmos" for "u30"
+use parameters "standard_cmos" for "u33_c"
+use parameters "standard_cmos" for "u34_c"
+use parameters "standard_cmos" for "u36_c"
+use parameters "standard_cmos" for "u38"
+use parameters "standard_cmos" for "u42"
+use parameters "standard_cmos" for "u43"
+use parameters "standard_cmos" for "u44"
+use parameters "standard_cmos" for "u46"
+use parameters "standard_cmos" for "u49"
+use parameters "standard_cmos" for "u51_c"
+use parameters "standard_cmos" for "u57"
+use parameters "standard_cmos" for "u64"
+use parameters "standard_cmos" for "u66"
+use parameters "standard_cmos" for "u68"
+use parameters "standard_cmos" for "u69"
+use parameters "standard_cmos" for "u72"
+use parameters "standard_cmos" for "u74"
+use parameters "standard_cmos" for "u78"
+use parameters "standard_cmos" for "u83_c"
+use parameters "standard_cmos" for "u92_c"
+use parameters "standard_cmos" for "u111"
+use parameters "standard_cmos" for "u116"
+use parameters "standard_cmos" for "u125_c"
+use parameters "standard_cmos" for "u135_c"
+use parameters "standard_cmos" for "u136_c"
+use parameters "standard_cmos" for "u137_c"
+use parameters "standard_cmos" for "u158"
+use parameters "standard_cmos" for "u168_c"
+use parameters "standard_cmos" for "u175_c"
+use parameters "standard_cmos" for "u176_c"
+use parameters "standard_cmos" for "u300"
+use parameters "standard_cmos" for "u301"
+use parameters "standard_cmos" for "x_u17"
+

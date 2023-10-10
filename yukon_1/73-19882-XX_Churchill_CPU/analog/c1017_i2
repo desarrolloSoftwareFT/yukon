@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176117   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:58 2020
+disconnect all
+connect s to "CTOP_PIN40"
+connect i to "CBOT_PIN37"
+capacitor 39n, 35, 40, fr1024, re3, wb, ar20.0m, nocomp
+! "c1017_i2" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175980   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:41 2020
+disconnect all
+connect s to "SRT_CPU_1G_MDC"
+connect i to "BMCPHY_MDC2"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1251" test.

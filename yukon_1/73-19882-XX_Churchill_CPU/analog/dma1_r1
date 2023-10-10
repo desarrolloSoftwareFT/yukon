@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600586895   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:37 2020
+disconnect all
+connect s to "A1_2V"
+connect i to "PMOD_A1V2_ISENP"
+!@connect g to "GND"
+!@connect g to "PWR_A1V2_DIDT"
+!B!resistor 10k, 25, 20, re4, wb, ar100m, wa1.03
+resistor 550,25,20,re4,wb,ar100m,ed

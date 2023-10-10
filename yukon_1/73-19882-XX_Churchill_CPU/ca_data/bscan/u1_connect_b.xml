@@ -1,0 +1,35 @@
+<!-- Created Fri Sep 25 23:21:36 2020 from ITL Source digital/u1_connect_b -->
+<Test name="u1_connect_b"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BDXDE_DRAM_PWROK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="LAN_PWRGOOD_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="PWRGOOD_CPU_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="A7"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="B8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="A6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="C6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="E3"><node name="SYNC_CPU_TO_FPGA_INTR_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F2"><node name="FM_BDXDE_ERR1_LVT2V5_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F4"><node name="FM_BDXDE_ERR2_LVT2V5_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F1"><node name="FPGA_BMC_UART5_TX" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G1"><node name="BMCPHY_INT_M_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H3"><node name="1GPHY_INTR_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H1"><node name="10GPHY_INTR_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J1"><node name="CPLD_HOST_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H5"><node name="PCHGP_PMB_FORCE_PWRDN_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F10"><node name="FPGA_PRIMARY_WP_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E10"><node name="ADR_COMPLETE_3V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E11"><node name="SRT_P2PM_TX" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F9"><node name="CPLD_P2PM_RX" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E7"><node name="CONSOLE_RXD_DBG_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

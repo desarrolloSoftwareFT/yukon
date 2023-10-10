@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175965   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:26 2020
+disconnect all
+connect i to "I2C_BUS9_ALERT"
+connect s to "A3P3V"
+jumper 10.0k, re4, wb, ar100m, op
+! "r767" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1668027398   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:03 2020
+disconnect all
+connect s to "CLK100M_IOFPGA_PE_AC_DP"
+connect i to "A2_5V"
+connect gl to "GND" 
+connect g to "CLK100M_IOFPGA_PE_AC_DN" 
+resistor 10k, 25, 20, re3, wb, ar100m, ed,wa250m,sl

@@ -1,0 +1,13 @@
+!!!!    2    0    1 1695900632   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:16 2020
+on failure
+   report parallel devices
+   report "c677 100n"
+end on failure
+disconnect all
+connect s to "CCC_PLL_VDDA"
+connect i to "CCC_PLL_VSSA"
+!connect g to "GND"
+capacitor 65u, 35, 40, fr128, re1, ar20.0m, ed, nocomp, en, wb
+! "c681" test.
+off failure

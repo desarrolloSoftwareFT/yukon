@@ -1,0 +1,20 @@
+report is "debug/report"
+report " Creating ""testplan.bdg"" file"
+report
+!grade tests ; testplan
+execute "perl debug/board/Test_Grader_Macros/create_testplan.bdg 2>testplan.bdg.l",Error;nowait
+if Error then
+  report 
+  report errm$ (Error)
+  get 'testplan.bdg.l'
+else
+   unlink 'testplan.bdg.l',Error
+   get "testplan.bdg"
+   report  
+   report "Please review the ""testplan.bdg"" in your" 
+   report "BT-BASIC workspace.  Make any changes" 
+   report "necessary and 're-save' the file."
+   report 
+   report "You are now ready for the next macro."
+end if
+report is *

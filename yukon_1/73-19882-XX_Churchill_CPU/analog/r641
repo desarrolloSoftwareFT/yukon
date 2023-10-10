@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175963   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:24 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "BMC_UART5_TX"
+jumper 3.05k, re4, wb, ar500m, op
+! "r641" test.

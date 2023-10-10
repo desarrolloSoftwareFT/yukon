@@ -1,0 +1,1982 @@
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:08:34 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: mss_hpms_pll_vssa      223149 Open
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750 Open
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: i2c_bus6_alert_r       221137 Open
+                r1297.1
+                 u8.P18
+To:   X86_INTR_BMC            22152
+                r1297.2
+                r1621.1
+Common Devices:
+                 r1297
+Message is:
+Check r1297
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115  294
+                 r233.1
+                u27.A15
+To:     v                     22215  294 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #6 Thresh 25, Delay 50us       Ohms
+From: bmc_uart4_tx_fpga       22218   59
+                r1507.2
+                u40.M17
+To:   bmc_uart4_tx_r          22217   59
+                r1507.1
+                 u8.G17
+Common Devices:
+                 r1507
+Message is:
+Check r1507
+----------------------------------------
+Open #7 Thresh 25, Delay 50us       Ohms
+From: adr_complete_3v        222132   29
+                 r182.2
+                 u1.E10
+To:   adr_complete_3v_r       22304   29
+                 r182.1
+                u40.C22
+Common Devices:
+                  r182
+Message is:
+Check r182
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_FPD_CS1_L      21449   40
+                 r38.1
+                 r887.1
+                r1269.2
+                r1436.2
+To:   spi2_cs1_r             221131   40
+                r1269.1
+                 u8.V20
+Common Devices:
+                 r1269
+Message is:
+Check r1269
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   bmc_spi2_bmfpga_miso   222127
+                r1473.2
+                u27.N10
+Common Devices:
+                 r1473
+Message is:
+Check r1473
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   srt_bmc_spi2_mux_miso   22131
+                 r467.2
+                 u8.V19
+Common Devices:
+                  r467
+Message is:
+Check r467
+----------------------------------------
+Open #15 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   SPI_MB_MISO             21550
+               mb_slvr.54
+                 r99.2
+Common Devices:
+                  r99
+Message is:
+Check r99
+----------------------------------------
+Open #16 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #17 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 18 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:08:45 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750 Open
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: i2c_bus6_alert_r       221137  490
+                r1297.1
+                 u8.P18
+To:   X86_INTR_BMC            22152  490
+                r1297.2
+                r1621.1
+Common Devices:
+                 r1297
+Message is:
+Check r1297
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115  275
+                 r233.1
+                u27.A15
+To:     v                     22215  275 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: adr_complete_3v        222132 Open
+                 r182.2
+                 u1.E10
+To:   adr_complete_3v_r       22304
+                 r182.1
+                u40.C22
+Common Devices:
+                  r182
+Message is:
+Check r182
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: SML1DATA_BMC            12072 Open
+                 r106.1
+               r1070_c.2
+                r1378.2
+               u1_c.BB11
+             u1_c_pch.BB11
+To:   srt_sml1_data_bmc       11545
+                 r106.2
+                 u8.N22
+Common Devices:
+                  r106
+Message is:
+Check r106
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   bmc_spi2_bmfpga_miso   222127
+                r1473.2
+                u27.N10
+Common Devices:
+                 r1473
+Message is:
+Check r1473
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   srt_bmc_spi2_mux_miso   22131
+                 r467.2
+                 u8.V19
+Common Devices:
+                  r467
+Message is:
+Check r467
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   SPI_MB_MISO             21550
+               mb_slvr.54
+                 r99.2
+Common Devices:
+                  r99
+Message is:
+Check r99
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #15 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #16 Thresh 25, Delay 50ms      Ohms
+From: pseq_vmon_p12v         219125   82
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   82
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    4
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 17 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:08:55 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750 Open
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212  139
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128  139
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: adr_complete_3v        222132 Open
+                 r182.2
+                 u1.E10
+To:   adr_complete_3v_r       22304
+                 r182.1
+                u40.C22
+Common Devices:
+                  r182
+Message is:
+Check r182
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: bmc_i2c_rst_l           20821 3967
+                 r683.2
+                 r766.1
+                 u1.C11
+To:   i2c_mb_rst_l_r          20822 3967
+                 r683.1
+                 u8.T3
+Common Devices:
+                  r683
+Message is:
+Check r683
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: SML1DATA_BMC            12072   43
+                 r106.1
+               r1070_c.2
+                r1378.2
+               u1_c.BB11
+             u1_c_pch.BB11
+To:   srt_sml1_data_bmc       11545   43
+                 r106.2
+                 u8.N22
+Common Devices:
+                  r106
+Message is:
+Check r106
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   bmc_spi2_bmfpga_miso   222127
+                r1473.2
+                u27.N10
+Common Devices:
+                 r1473
+Message is:
+Check r1473
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   srt_bmc_spi2_mux_miso   22131
+                 r467.2
+                 u8.V19
+Common Devices:
+                  r467
+Message is:
+Check r467
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   SPI_MB_MISO             21550
+               mb_slvr.54
+                 r99.2
+Common Devices:
+                  r99
+Message is:
+Check r99
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #15 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #16 Thresh 25, Delay 50ms      Ohms
+From: bdxde_caterr_gtl_n     222101 Open
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Open #17 Thresh 25, Delay 50ms      Ohms
+From: pseq_vmon_p12v         219125 Open
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 18 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:09:06 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750 Open
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: i2c_bus6_alert_r       221137  101
+                r1297.1
+                 u8.P18
+To:   X86_INTR_BMC            22152  101
+                r1297.2
+                r1621.1
+Common Devices:
+                 r1297
+Message is:
+Check r1297
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115 1106
+                 r233.1
+                u27.A15
+To:     v                     22215 1106 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: adr_complete_3v        222132 Open
+                 r182.2
+                 u1.E10
+To:   adr_complete_3v_r       22304
+                 r182.1
+                u40.C22
+Common Devices:
+                  r182
+Message is:
+Check r182
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_i2c_rst_l           20821  230
+                 r683.2
+                 r766.1
+                 u1.C11
+To:   i2c_mb_rst_l_r          20822  230
+                 r683.1
+                 u8.T3
+Common Devices:
+                  r683
+Message is:
+Check r683
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: UNNAMED_1_RES_I5_B     223107 Open
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: SML1DATA_BMC            12072   95
+                 r106.1
+               r1070_c.2
+                r1378.2
+               u1_c.BB11
+             u1_c_pch.BB11
+To:   srt_sml1_data_bmc       11545   95
+                 r106.2
+                 u8.N22
+Common Devices:
+                  r106
+Message is:
+Check r106
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   bmc_spi2_bmfpga_miso   222127
+                r1473.2
+                u27.N10
+Common Devices:
+                 r1473
+Message is:
+Check r1473
+----------------------------------------
+Open #13 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   srt_bmc_spi2_mux_miso   22131
+                 r467.2
+                 u8.V19
+Common Devices:
+                  r467
+Message is:
+Check r467
+----------------------------------------
+Open #14 Thresh 25, Delay 50ms      Ohms
+From: BMC_SPI2_MUX_MISO       22325 Open
+                 r35.1
+                 r99.1
+                 r467.1
+                r1262.1
+                r1473.1
+To:   SPI_MB_MISO             21550
+               mb_slvr.54
+                 r99.2
+Common Devices:
+                  r99
+Message is:
+Check r99
+----------------------------------------
+Open #15 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #16 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 17 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:17:17 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750  251
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126  251
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: i2c_bus6_alert_r       221137   42
+                r1297.1
+                 u8.P18
+To:   X86_INTR_BMC            22152   42
+                r1297.2
+                r1621.1
+Common Devices:
+                 r1297
+Message is:
+Check r1297
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115  736
+                 r233.1
+                u27.A15
+To:     v                     22215  736 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: adr_complete_3v        222132   38
+                 r182.2
+                 u1.E10
+To:   adr_complete_3v_r       22304   38
+                 r182.1
+                u40.C22
+Common Devices:
+                  r182
+Message is:
+Check r182
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: bdxde_caterr_gtl_n     222101 Open
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Open #12 Thresh 25, Delay 50ms      Ohms
+From: pseq_vmon_p12v         219125  193
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450  193
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    2
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    5
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 13 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:17:27 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115  155
+                 r233.1
+                u27.A15
+To:     v                     22215  155 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: bdxde_caterr_gtl_n     222101   32
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104   32
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: pseq_vmon_p12v         219125   87
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   87
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    4
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 11 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:17:38 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 1183
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128 1183
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109   54
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151   54
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109   51
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230   51
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 7 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:17:48 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: fpga_bmc_uart5_tx       22212 Open
+                 r494.1
+                 u1.F1
+To:   srt_fpga_bmc_uart5_txd 221128
+                 r494.2
+                u40.B19
+Common Devices:
+                  r494
+Message is:
+Check r494
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115 1179
+                 r233.1
+                u27.A15
+To:     v                     22215 1179 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_i2c_rst_l           20821 Open
+                 r683.2
+                 r766.1
+                 u1.C11
+To:   i2c_mb_rst_l_r          20822
+                 r683.1
+                 u8.T3
+Common Devices:
+                  r683
+Message is:
+Check r683
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #9 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #10 Thresh 25, Delay 50ms      Ohms
+From: bdxde_caterr_gtl_n     222101  302
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104  302
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Open #11 Thresh 25, Delay 50ms      Ohms
+From: pseq_vmon_p12v         219125   62
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   62
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 12 Problems Reported---------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:17:59 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: SF_JTAG_TRST            11977 Open
+                p45_50.8
+                 r206.1
+                 r240.1
+                 r719.1
+To:   jtag_bmc_fpga_trst      12134
+                 r719.2
+                u27.N13
+Common Devices:
+                  r719
+Message is:
+Check r719
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_1_RES_I5_B     223107  158
+               bma4_r11.2
+               bma4_ren.2
+             bma4_ren_pd.1
+               bma4_u1.7
+To:   pmod_pvccscfusesus_en   22207  158
+               bma4_r11.1
+                u40.A13
+Common Devices:
+                bma4_r11
+Message is:
+Check bma4_r11
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109   62
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151   62
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109   62
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230   62
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bdxde_caterr_gtl_n     222101   32
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104   32
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    3
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    6
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 9 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 17 19:18:09 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: cpu_fpga_bmfpga_spare0 222115 2264
+                 r233.1
+                u27.A15
+To:     v                     22215 2264 
+cpu_fpga_bmfpga_spare0_r                
+                 r233.2
+                 u40.F8
+Common Devices:
+                  r233
+Message is:
+Check r233
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: bmc_i2c_rst_l           20821 Open
+                 r683.2
+                 r766.1
+                 u1.C11
+To:   i2c_mb_rst_l_r          20822
+                 r683.1
+                 u8.T3
+Common Devices:
+                  r683
+Message is:
+Check r683
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   SPI_MB_CLK             113133
+               mb_slvr.58
+                 r101.2
+Common Devices:
+                  r101
+Message is:
+Check r101
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_clk       119175 Open
+                 r37.1
+                 r101.1
+                 r469.1
+                r1263.1
+                 u27.N8
+To:   bmc_cpu_spi0_mux_clk   119142
+                 r37.2
+                u51_c.9
+Common Devices:
+                  r37
+Message is:
+Check r37
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Open #8 Thresh 25, Delay 50ms       Ohms
+From: bdxde_caterr_gtl_n     222101 Open
+                 r236.1
+                 r793.2
+                 u1.C1
+To:   bdxde_caterr_gtl_r     223104
+                 r236.2
+                 u40.A7
+Common Devices:
+                  r236
+Message is:
+Check r236
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: m_b_dq<10>              11553    4
+               u1_c.CU13
+             u1_c_pch.CU13
+              u1b_skt_c.23
+To:   m_b_dq<20>              11554    5
+               u1_c.CU15
+             u1_c_pch.CU15
+              u1b_skt_c.25
+Common Devices:
+                  u1_c
+                u1_c_pch
+               u1b_skt_c
+Total of 2 nodes, Message is:  None.
+------End, 9 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C

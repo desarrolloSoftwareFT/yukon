@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176766   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:47 2020
+disconnect all
+connect s to "UNNAMED_4221_CAP_I6_B"
+connect i to "UNNAMED_4221_LM339_I29_IP"
+connect g to "GND" 
+connect a to "UNNAMED_4221_CAP_I6_B"
+connect b to "UNNAMED_4221_LM339_I29_IP"
+resistor 84.5, 30, 20, re2, ar100m
+! "r2260" test.

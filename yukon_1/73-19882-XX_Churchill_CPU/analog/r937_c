@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175972   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:33 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PU_CPU_EAR_L_C"
+jumper 10.0k, re4, wb, ar100m, op
+! "r937_c" test.

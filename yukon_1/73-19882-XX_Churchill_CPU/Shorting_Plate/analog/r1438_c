@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes SVID_ALERT_L_R_C P-Pin resistance"
+report "check nodes SVID1_ALERT_PMOD_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "SVID_ALERT_L_R_C"
+connect i to "SVID1_ALERT_PMOD_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

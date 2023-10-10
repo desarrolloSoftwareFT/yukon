@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512817  Va8ca                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:08 2020
+disconnect all
+connect s to "BMC_I2C_RST_L_2V5"
+connect i to "BMC_I2C_RST_L_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r16" test.

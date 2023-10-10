@@ -1,0 +1,73 @@
+!!!!    6    0    1 1571308262  Vf603                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         AUC1G00
+! Alias:             AUC1G00, IC-LOGIC,NAND
+! Part Type:         VLSI
+! Description:       TinyLogic UHS Buffer with 3_State Output
+! Manufacturer:      Fairchild, Texas Instruments
+! Package Style:     5 pin SOT23
+! Created:           Sep 23, 2001
+! Updated:           Jul 25, 2005. Added alias and Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-3254-01,15-101781-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VDD   to pins 5
+assign GND   to pins 3
+
+power VDD,GND
+
+assign DIN  to pins 1,2
+assign DOUT to pins 4
+
+inputs  DIN
+outputs DOUT
+
+family LVT
+
+set load on pins 4 to pull up
+
+vector DIN_00
+ set DIN  to "00"
+ set DOUT to "1"
+end vector
+
+vector DIN_01
+ set DIN  to "01"
+ set DOUT to "1"
+end vector
+
+vector DIN_10
+ set DIN  to "10"
+ set DOUT to "1"
+end vector
+
+vector DIN_11
+ set DIN  to "11"
+ set DOUT to "0"
+end vector
+
+! ************************************************
+
+unit"test"
+  execute DIN_00
+  execute DIN_10
+  execute DIN_01
+  execute DIN_11
+end unit

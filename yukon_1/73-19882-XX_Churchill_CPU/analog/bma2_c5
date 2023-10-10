@@ -1,0 +1,33 @@
+!!!!    2    0    1 1655550269   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:48 2020
+on failure
+   report parallel devices
+   report "bma2_c11 47.0u"
+   report "bma2_c13 47.0u"
+   report "bma2_c14 47.0u"
+   report "bma2_c6 10.0u"
+   report "c16_p1_m1 2.20u"
+   report "c16_p2_m1 2.20u"
+   report "c17_p1_m1 2.20u"
+   report "c17_p2_m1 2.20u"
+   report "c29_p4_m1 2.20u"
+   report "c32_p4_m1 2.20u"
+   report "c45_m2 2.20u"
+   report "c46_m2 2.20u"
+   report "c47_m2 2.20u"
+   report "c48_m2 2.20u"
+   report "e_c621 1.00u"
+   report "e_c759 1.00u"
+   report "c213 100n"
+   report "dma1_c12 100n"
+   report "bma2_c7 100p"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P5V"
+!connect g to "ADC_P5V_CH12" 
+!connect g to "UNNAMED_13_CAP_I35_B" 
+!capacitor 222.2u, 35, 40, fr1024, re1, ar200m, nocomp, ed, en, sm
+capacitor 222.2u, 35, 40, fr1024, re2, ar200m, nocomp, ed, en, sm
+! "bma2_c5" is a limited test.
+off failure

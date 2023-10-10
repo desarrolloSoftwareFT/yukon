@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600590918  Vd4a1                                         
+! IPG: rev 08.30pb Fri Apr 21 12:54:23 2017
+test powered analog
+  power pins 1,2
+  test "b2"
+end test
+
+subtest "b2"
+  connect i to nodes"VBATT_P3V3_2"!pins 2
+  connect l to nodes"GND"!pins 1
+  detector dcv, expect 3.0
+  measure  3.35,2.85
+end subtest

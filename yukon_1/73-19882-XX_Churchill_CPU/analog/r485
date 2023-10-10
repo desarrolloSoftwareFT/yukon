@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "FPGA2_SPIFLASH_CLK"
+connect i to "SRT_FPGA2_SPI_CLK"
+connect a to "FPGA2_SPIFLASH_CLK"
+connect b to "SRT_FPGA2_SPI_CLK"
+resistor 22, 40, 20, re2, ar500m
+! "r485" test.

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176245   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:06 2020
+disconnect all
+connect s to "GND"
+connect i to "PD_LAN_NCSI_TXD1_C"
+resistor 10k, 25, 20, re4, wb, ar100m

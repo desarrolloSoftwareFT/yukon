@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600569301  Vcca5                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:40:00 2020
+disconnect all
+connect i to "SPI1_10GE_FLSH_CS_L_1V_ST_C"
+connect s to "GND"
+jumper 3.66k, re4, wb, ar200m, op
+! "r1901_c" test.

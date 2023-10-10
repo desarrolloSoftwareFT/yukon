@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176300   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:01 2020
+on failure
+   report parallel devices
+   report "bma5_r9 909k"
+end on failure
+disconnect all
+connect i to "UNNAMED_7_CAP_I36_B"
+connect s to "GND"
+connect g to "P2V5_VPP_2" 
+resistor 2.205k, 25, 20, re4, wb, ar500m, wa240m
+off failure

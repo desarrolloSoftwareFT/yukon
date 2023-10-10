@@ -1,0 +1,48 @@
+!!!!    6    0    1 1594176840  Vc150                                         
+! IPG: rev 09.20p  Wed Jul 08 10:54:01 2020
+!
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+default device "u135_c"
+set terminators to on
+assign VCC  to pins *
+assign GND  to pins *
+
+assign OE   to pins 8
+assign CLKI to pins 1
+assign CLKO to pins 2,3,4,5
+
+power   VCC,GND
+inputs  OE,CLKI
+outputs CLKO
+
+family LVT_1V8
+
+!IPG: Add defaults or loads to floating inputs and bidirs.
+assign Floating__Inputs to pins 1 default "0"
+inputs Floating__Inputs
+
+vector CLK_0
+ set CLKI to "t"
+ set CLKO to "0000"
+end vector
+
+vector CLK_1
+ set CLKI to "t"
+ set CLKO to "1111"
+end vector
+
+! *************************************************************************
+
+unit "CLKO vs CLKI"
+ homingloop 20 times
+  execute CLK_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  execute CLK_1 exit if pass
+ end homingloop
+end unit
+

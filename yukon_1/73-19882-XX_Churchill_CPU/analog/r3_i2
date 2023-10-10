@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175950   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:10 2020
+disconnect all
+connect s to "GND"
+connect i to "BMC_NCSI_TXEN"
+jumper 3.06k, re4, wb, ar500m, op
+! "r3_i2" test.

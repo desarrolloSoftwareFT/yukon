@@ -1,0 +1,25 @@
+! 75-Mil Probe Attributes
+! Revision 05.30
+!
+! WARNING: Consult with the documentation and your fixture vendor before
+! making any changes to the parameters outlined below.  Failure to do so
+! could result in fixtures that cannot be populated with probes or may 
+! add significant cost to building the fixture.
+!
+! The "Usage" field is used during probe selection to determine how this 
+! probe type should be selected. This field should be used instead of the 
+! Ps.75mil flag in the .hp3070 file. Usage field meaning:
+!   preferred   - use this probe type if at all possible
+!   acceptable  - use this probe type only as needed
+!   minimize    - don't use this probe type unless absolutely necessary
+!   unavailable - do not use this probe type at all
+!
+Name: 75 mil
+Usage: acceptable
+DiameterMils: 55
+WireWrapCount: 3
+CollisionDiameterMils: 78
+ProbePlateDrill: 0.055in.,Long,Flute
+SupportPlateDrill: 2.30mm,Long,Flute
+GroundPlateDrill: 0.0625in,Std.,Flute
+GroundPlateClearance: 0.080in,Std.,Flute

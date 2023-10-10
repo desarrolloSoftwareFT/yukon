@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513012  V0b83                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "UNNAMED_4164_HDR2X3_I84_P2"
+connect i to "SMBUS_PCH_SCL"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1616" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600567276  V7208                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:50:50 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_136_AVCH8T245_I121_OE_C"
+resistor 4.75k, 25, 20, re4, wb, ar200m

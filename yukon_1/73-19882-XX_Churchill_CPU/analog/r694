@@ -1,0 +1,11 @@
+!!!!    2    0    1 1596106135   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:05 2020
+disconnect all
+connect s to "GND"
+connect i to "CLK100M_I210_PE_AC_DP"
+connect g to "A3P3V" 
+connect g to "CLK100M_I210_PE_DP" 
+connect a to "GND"
+connect b to "CLK100M_I210_PE_AC_DP"
+resistor 56, 30, 20, re2, ar200m, en, ed
+! "r694" test.

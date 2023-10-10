@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175998   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:59 2020
+disconnect all
+connect i to "XDP_CPU_BPM4_L_C"
+connect s to "P1V05_COMBINED"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1866_c" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176705   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:46 2020
+on failure
+   report parallel devices
+   report "c548 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_A3V3_CH6"
+connect g to "A3P3V" 
+resistor 510, 25, 20, re3, ar200m, wa505m
+off failure

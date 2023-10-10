@@ -1,0 +1,130 @@
+!!!!   24    0    1 1594176851  Vce42                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:12 2020
+
+connect "u1_c_pch"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm_noidcode", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm_noidcode", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm_noidcode", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "GPIOA0_JTSCAN","GPIOA1_JTSCAN","LAN_PWRGOOD_C"
+  pcf order is nodes "PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "11110110"
+  end pcf
+  end unit
+end disables
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "BIOS_GOLD_ACTIVE" hybrid test "u1_c_pch.BW18"
+  node "CLKOUT_PCIE_DN<6>" hybrid test "u1_c_pch.M4"
+  node "FM_BDXDE_ERR0_LVT3_N" hybrid test "u1_c_pch.BV16"
+  node "GP5_CPU_CATERR_3V_L" hybrid test "u1_c_pch.BW22"
+  node "PCHGP_PMB_FORCE_PWRDN" hybrid test "u1_c_pch.BV20"
+  node "PU_CPU_GPIO55_C" hybrid test "u1_c_pch.BU22"
+  node "R_CLK_100M_CPU_XDP_N_C" hybrid test "u1_c_pch.H2"
+  node "R_CLK_100M_CPU_XDP_P_C" hybrid test "u1_c_pch.H4"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "HSD_SATA_GEN3_P0_TX_DN"
+!IPG: node "HSD_SATA_GEN3_P0_TX_DP"
+!IPG: node "HSD_SATA_GEN3_P0_RX_DP"
+!IPG: node "HSD_PCIE_CPU_BMCFPGA_AC_DN"
+!IPG: node "PCH_PORT_RX_PCIE_N<7>"
+!IPG: node "PCH_PORT_RX_PCIE_N<5>"
+!IPG: node "HSD_PCIE_BMCFPGA_CPU_DN"
+!IPG: node "PCH_PORT_RX_PCIE_N<1>"
+!IPG: node "USB3_RX_D_N<3>"
+!IPG: node "USB3_RX_D_N<1>"
+!IPG: node "HSD_SATA_GEN3_P0_RX_DN"
+!IPG: node "PCH_PORT_RX_PCIE_N<6>"
+!IPG: node "PCH_PORT_RX_PCIE_N<4>"
+!IPG: node "PCH_PORT_RX_PCIE_N<2>"
+!IPG: node "HSD_PCIE_MB_SPARE0_CPU_DN"
+!IPG: node "USB3_RX_D_N<2>"
+!IPG: node "USB3_RX_D_N<0>"
+!IPG: node "HSD_PCIE_CPU_BMCFPGA_AC_DP"
+!IPG: node "HSD_PCIE_CPU_MB_SPARE0_AC_DP"
+!IPG: node "USB3_TX_D_P<3>"
+!IPG: node "USB3_TX_D_P<1>"
+!IPG: node "PCH_PORT_TX_PCIE_P<2>"
+!IPG: node "PCH_PORT_TX_PCIE_P<1>"
+!IPG: node "USB3_TX_D_P<2>"
+!IPG: node "USB3_TX_D_P<0>"
+!IPG: node "PCH_PORT_TX_PCIE_N<2>"
+!IPG: node "HSD_PCIE_CPU_MB_SPARE0_AC_DN"
+!IPG: node "USB3_TX_D_N<3>"
+!IPG: node "USB3_TX_D_N<1>"
+!IPG: node "PCH_PORT_TX_PCIE_N<1>"
+!IPG: node "USB3_TX_D_N<2>"
+!IPG: node "USB3_TX_D_N<0>"
+!IPG: node "CLKOUT_PCIE_DP<6>"
+!IPG: node "CLKOUT_PCIE_DN<7>"
+!IPG: node "CLKOUT_PCIE_DP<7>"
+!IPG: node "CLKOUT_PCIE_DP<4>"
+!IPG: node "PCH_PORT_TX_PCIE_P<6>"
+!IPG: node "PCH_PORT_TX_PCIE_P<5>"
+
+!IPG: Family information could not be found for node BIOS_GOLD_ACTIVE
+!IPG: Family information could not be found for node CLKOUT_PCIE_DN<6>
+!IPG: Family information could not be found for node FM_BDXDE_ERR0_LVT3_N
+!IPG: Family information could not be found for node GP5_CPU_CATERR_3V_L
+!IPG: Family information could not be found for node PCHGP_PMB_FORCE_PWRDN
+!IPG: Family information could not be found for node PU_CPU_GPIO55_C
+!IPG: Family information could not be found for node R_CLK_100M_CPU_XDP_N_C
+!IPG: Family information could not be found for node R_CLK_100M_CPU_XDP_P_C
+end connect
+

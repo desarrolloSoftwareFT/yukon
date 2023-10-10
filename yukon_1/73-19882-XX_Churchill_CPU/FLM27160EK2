@@ -1,0 +1,91 @@
+----------------------------------------
+Shorts Report for "shorts".
+Sat Jul 01 21:27:00 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: SATA0_ACT_L            222150 Open
+               j2003_c.10
+               r1654_c.1
+To:   SATA0_LED_L             22050
+               cr2001_c.C
+               r1654_c.2
+               r1660_c.2
+Common Devices:
+                r1654_c
+Message is:
+Check r1654_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: m_ab_vref_r             20317   28
+                c391_c.1
+                c466_c.1
+                r513_c.2
+                r514_c.2
+                r515_c.1
+             u1a_skt_c.146
+             u1b_skt_c.146
+To:   M_AB_VREF              205109   28
+                c390_c.1
+                r513_c.1
+               u1_c.CR52
+             u1_c_pch.CR52
+Common Devices:
+                 r513_c
+Message is:
+Check r513_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: p2v5_vpp_2             108150  139
+               bma5_c5.1
+               bma5_c6.1
+               bma5_c11.1
+               bma5_c12.2
+               bma5_c13.1
+               bma5_c14.1
+               bma5_c16.1
+               bma5_l1.2
+               bma5_r1.2
+               bma5_r8.2
+Too many to print.
+To:   PMOD_P2V5_DIDT          10948  139
+               bma5_c7.1
+               bma5_c8.1
+               bma5_l1.1
+               bma5_r10.1
+               bma5_u1.10
+               bma5_u1.11
+Common Devices:
+                bma5_l1
+Message is:
+Check bma5_l1
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: SVID_DATA_R_C          105170   50
+                r859_c.2
+                r861_c.1
+               r1437_c.1
+               r1440_c.1
+               r1602_c.2
+To:   svid2_data_pmod         10557   50
+               r1440_c.2
+                u5_m2.21
+Common Devices:
+                r1440_c
+Message is:
+Check r1440_c
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: FM_NMI_EVENT_N         222112 Open
+                 r246.2
+               r1862_c.2
+                u1_c.BP1
+              u1_c_pch.BP1
+To:   fm_nmi_event_n_r        22214
+                 r246.1
+                u40.G18
+Common Devices:
+                  r246
+Message is:
+Check r246
+------End, 5 Problems Reported----------

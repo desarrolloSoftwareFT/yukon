@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513033  V3298                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect i to "PMOD_DDR4_VTT_OUTS"
+connect s to "DDR4_VTT"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "x_r67" test.

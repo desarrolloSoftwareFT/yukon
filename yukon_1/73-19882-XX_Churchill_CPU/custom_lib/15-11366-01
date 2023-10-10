@@ -1,0 +1,246 @@
+!!!!    6    0    1 1290173525  V73b3                                         
+
+sequential
+
+vector cycle  1u
+receive delay 0.9u
+
+assign VCC  to pins 13
+assign GND  to pins 3
+
+assign ABUS to pins 11,9
+assign SCL  to pins 2
+assign SDA  to pins 1
+assign EP   to pins 15
+assign FS_3_0 to pins 4,5,6,7
+assign OUT3 to pins 14
+assign OUT2 to pins 12
+assign OUT1 to pins 10
+assign OUT0 to pins 8
+
+
+power  VCC, GND
+inputs ABUS,SCL!,EP,FS_3_0
+bidirectional SDA
+!outputs OUT3,OUT2,OUT1,OUT0
+nondigital OUT3,OUT2,OUT1,OUT0,EP,FS_3_0
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector A_00
+ drive SDA
+ set ABUS to "00"
+ set SCL  to "1"
+ set SDA  to "1"
+end vector
+
+vector A_01
+ drive SDA
+ set ABUS to "01"
+ set SCL  to "1"
+ set SDA  to "1"
+end vector
+
+vector A_10
+ drive SDA
+ set ABUS to "10"
+ set SCL  to "1"
+ set SDA  to "1"
+end vector
+
+vector A_11
+ drive SDA
+ set ABUS to "11"
+ set SCL  to "1"
+ set SDA  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS to "kk"
+ set SCL  to "k"
+ set SDA  to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS to "kk"
+ set SCL  to "k"
+ set SDA  to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector IDLE1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SCL    to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute D_1
+ execute D_1
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      !  with Acknowledge bit active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+! ***************************************************************************
+! I2C ADC Address Test
+
+unit "A = 00"
+ repeat 20 times
+  execute A_00
+  execute R_1
+ end repeat
+
+ call STRT                                  ! Start bit
+ call WR(D_0,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Address Match 20 for A1,A0=(0,0) config (U10)
+ call STOP                                  ! Stop bit
+end unit
+
+unit "A = 01"
+ repeat 20 times
+  execute A_01
+  execute R_1
+ end repeat
+
+ call STRT                                  ! Start bit
+ call WR(D_0,D_1,D_1,D_0, D_0,D_0,D_0,D_0)  ! Address Match 60 for A1,A0=(0,1) config (U3)
+ call STOP                                  ! Stop bit
+end unit
+
+unit "A = 10"
+ repeat 20 times
+  execute A_10
+  execute R_1
+ end repeat
+
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Address Match A0 for A1,A0=(1,0) config (*)
+ call STOP                                  ! Stop bit
+end unit
+
+
+unit "A = 11"
+ repeat 20 times
+  execute A_11
+  execute R_1
+ end repeat
+
+ call STRT                                  ! Start bit
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)  ! Address Match E0 for A1,A0=(1,1) config (U9)
+ call STOP                                  ! Stop bit
+end unit

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175986   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:47 2020
+disconnect all
+connect i to "JTAG_BDX_TRST_N"
+connect s to "GND"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1499_c" test.

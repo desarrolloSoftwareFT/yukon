@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176603   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:04 2020
+on failure
+   report parallel devices
+   report "c4273 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "COMP_REF_IN_P0_6V"
+connect g to "P12V_STBY" 
+resistor 200, 30, 20, re3, ar500m, wa288m
+off failure

@@ -1,0 +1,97 @@
+!!!!   24    0    1 1594176861  V09c5                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:22 2020
+
+shorted_cap "u1_c_u1_sc"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+rti delay 0
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BMC_ENTEST_R","GPIOA0_JTSCAN","GPIOA1_JTSCAN"
+  pcf order is nodes "LAN_PWRGOOD_C","PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "110110"
+  end pcf
+  end unit
+end disables
+
+!IPG: The following pins are disabled by Boundary-Scan:
+!IPG:   u40.AA15  u40.U13  u40.W14  u40.AA11  u40.Y14  u40.J19  u40.K18  u40.G22  u40.K17  u40.E22  u40.V19  u40.F21  u40.T20  u40.J18  u40.F19  u40.L19  u40.U17  u40.Y15  u40.L21  u40.G16  u40.G18  u40.G6  u40.J22
+!IPG:   u40.AB11  u40.F20  u27.R11  u40.H21  u40.AB15  u40.W15  u27.C6  u27.H12  u27.G2  u27.R13  u27.F4  u27.T11  u40.H22  u27.E15  u40.M17  u40.M16  u27.H13  u40.L16  u40.U22  u27.L14  u40.D4  u27.G13  u40.D3
+!IPG:   u40.U21  u40.A9  u40.K22  u40.V18  u27.C11  u27.G16  u27.M8  u27.F2  u27.H3  u27.B12  u27.G1  u27.G5  u27.F3  u40.W19  u40.D5  u27.N10  u40.C4  u40.V16  u27.R9  u27.N8  u40.U16  u40.T4  u40.R2  u40.P1
+!IPG:   u40.R1  u40.P2  u40.P17  u40.AA18  u40.V13  u40.L18  u40.E21  u40.AB18  u40.G5  u40.A2  u40.V14  u40.A7  u40.R16  u40.V17  u40.AB17  u40.F17  u40.M1  u40.T16  u40.B6  u40.D8  u40.C22  u40.E4  u40.B19
+!IPG:   u40.E19  u40.B21  u40.B1  u40.J20  u40.K5  u40.A19  u40.D20  u40.C15  u40.A16  u40.K8  u40.A17  u40.C18  u40.M7  u40.N4  u27.L15  u40.N16  u27.T8  u40.T18  u40.N17  u27.L13  u27.K16  u27.L12  u40.D2  u27.R8
+!IPG:   u40.D1  u40.E2  u40.AB19  u27.T7  u27.L11  u40.C1  u40.M19  u40.R22  u27.P13
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u27" pins "B12","C11","C6","E15","F2","F3","F4","G1"
+disabled device "u27" pins "G13","G16","G2","G5","H12","H13","H3"
+disabled device "u27" pins "K16","L11","L12","L13","L14","L15","M8"
+disabled device "u27" pins "N10","N8","P13","R11","R13","R8","R9"
+disabled device "u27" pins "T11","T7","T8"
+!IPG: with boundary scan disabling
+disabled device "u40" pins "A16","A17","A19","A2","A7","A9","AA11"
+disabled device "u40" pins "AA15","AA18","AB11","AB15","AB17","AB18"
+disabled device "u40" pins "AB19","B1","B19","B21","B6","C1","C15"
+disabled device "u40" pins "C18","C22","C4","D1","D2","D20","D3","D4"
+disabled device "u40" pins "D5","D8","E19","E2","E21","E22","E4","F17"
+disabled device "u40" pins "F19","F20","F21","G16","G18","G22","G5"
+disabled device "u40" pins "G6","H21","H22","J18","J19","J20","J22"
+disabled device "u40" pins "K17","K18","K22","K5","K8","L16","L18"
+disabled device "u40" pins "L19","L21","M1","M16","M17","M19","M7"
+disabled device "u40" pins "N16","N17","N4","P1","P17","P2","R1","R16"
+disabled device "u40" pins "R2","R22","T16","T18","T20","T4","U13"
+disabled device "u40" pins "U16","U17","U21","U22","V13","V14","V16"
+disabled device "u40" pins "V17","V18","V19","W14","W15","W19","Y14"
+disabled device "u40" pins "Y15"
+!IPG: with boundary scan disabling
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+end nodes
+
+end shorted_cap
+

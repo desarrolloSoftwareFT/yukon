@@ -1,0 +1,34 @@
+!!!!    2    0    1 1571323958  Vac6a                                         
+test powered analog
+  disconnect all
+  test "PIN1"
+  test "PIN3"
+  test "PIN4"
+end test
+
+subtest "PIN1"
+  connect i to pins 1
+  connect l to pins 2
+
+  detector dcv, expect 1.05
+  measure 1.05*1.05, 1.05*0.95
+end subtest
+
+subtest "PIN3"
+  connect rcva to pins 3
+  connect l to pins 2
+
+  detector frequency, expect 25M
+  measure 25M*1.01, 25M*0.99
+end subtest
+
+subtest "PIN4"
+  connect i to pins 4
+  connect l to pins 2
+
+  detector dcv, expect 1.05
+  measure 1.05*1.05, 1.05*0.95
+end subtest
+
+
+

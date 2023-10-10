@@ -1,0 +1,23 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+call Set_Custom_Options
+call Initialize_Constants
+call Verify_Autofile
+report level is report
+report is "debug/report"
+buffered reporting on
+log level is failures
+call Setup_FXT_Power_Supplies (Failed_In_Fixture_Power_Supplies, FixturePowerMsg$)
+log out "debug/log"
+log clear
+report out
+report is *

@@ -1,0 +1,52 @@
+!!!!    2    0    1 1594176083   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:23 2020
+on failure
+   report parallel devices
+   report "c13_p2_m1 470u"
+   report "c14_p1_m1 470u"
+   report "c14_p2_m1 470u"
+   report "c89_m1 470u"
+   report "c91_m1 470u"
+   report "c9_p1_m1 100u"
+   report "c9_p2_m1 100u"
+   report "c10_p1_m1 100u"
+   report "c10_p2_m1 100u"
+   report "c11_p1_m1 100u"
+   report "c11_p2_m1 100u"
+   report "c12_p1_m1 100u"
+   report "c12_p2_m1 100u"
+   report "c19_p1_m1 100u"
+   report "c19_p2_m1 100u"
+   report "b_c851 47.0u"
+   report "b_c852 47.0u"
+   report "b_c853 47.0u"
+   report "b_c887 47.0u"
+   report "b_c888 47.0u"
+   report "b_c889 47.0u"
+   report "b_c841 22.0u"
+   report "b_c842 22.0u"
+   report "b_c843 22.0u"
+   report "b_c844 22.0u"
+   report "c106_c 22.0u"
+   report "c115_c 22.0u"
+   report "c119_c 22.0u"
+   report "c123_c 22.0u"
+   report "c126_c 22.0u"
+   report "c129_c 22.0u"
+   report "c133_c 22.0u"
+   report "c137_c 22.0u"
+   report "c140_c 22.0u"
+   report "c143_c 22.0u"
+   report "c145_c 22.0u"
+   report "c148_c 22.0u"
+   report "c151_c 22.0u"
+   report "c154_c 22.0u"
+   report "c155_c 22.0u"
+   report "c834_c 22.0u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PVCCIN"
+capacitor 4.542m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+! "c13_p1_m1" test.
+off failure

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1628355092   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:32 2020
+disconnect all
+connect s to "GND"
+connect i to "PMOD_P1V15_BMC_EN"
+!connect g to "A3P3V" 
+capacitor 10n, 35, 40, fr8192, re3, wb, ar100m, en, ed, nocomp, pm, am10m
+!Flex AR Adjusted to center nominal value
+!capacitor 10n, 35, 35, fr1024, re2,  ar200m, ed, en, nocomp, wb
+!warning "excessive minus tolerance or low limit."
+! "c636" is a commented test.

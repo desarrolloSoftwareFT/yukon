@@ -1,0 +1,46 @@
+! Simplate or Simplate Express Full Size Fixture Attributes
+! Revision 05.30
+!
+! WARNING: Consult with the documentation and your fixture vendor before
+! making any changes to the parameters outlined below.  Failure to do so
+! could result in fixtures that cannot be built or may add significant
+! cost to building the fixture.
+!
+! All units are in inches, specified to 10th mils (0.0001").
+!
+!                               --- +------------------------+
+! "Fixture zero" (F0)is at       |  |     Probe Plate        |
+! a fixed position relative    MaxY |     (top view)         |
+! to the testhead modules.       |  |                        |
+! F0 is 0.1889 inches from      --- | o <-F0                 |
+! the left edge and 8.5275       |  |                        |
+! inches from the bottom of    MinY |                        |
+! an Agilent standard full       |  |                        |
+! size probe plate.             --- +------------------------+
+!                              MinX |-|------ MaxX ----------|
+!
+! The following fields define the size of a full size probe plate. Probe
+! plate dimensions are relative to "Fixture zero". The Agilent standard
+! full size probe plate is 30.1" wide by 18.0" high.
+!
+ProbePlateMinX: -0.1889
+ProbePlateMaxX: 29.9111
+ProbePlateMinY: -8.5275
+ProbePlateMaxY:  9.4725
+!
+! The following fields define the largest board that will fit on a full
+! size fixture. Board dimensions are absolute. The Agilent standard full
+! size fixture supports a maximum board size of 29.8" wide by 17.7" high.
+!
+BoardMaxX: 29.8000
+BoardMaxY: 17.7000
+!
+! The following fields define the area in which probes can be placed and
+! take into account probe clearance and other mechanical considerations.
+! Probe area dimensions are relative to "Fixture zero". The Agilent
+! standard full size probe area is 28.6" wide by 16.23" high.
+!
+ProbeAreaMinX:  0.5611
+ProbeAreaMaxX: 29.1611
+ProbeAreaMinY: -7.6430
+ProbeAreaMaxY:  8.5870

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176592   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect s to "PCH_LPC_LAD<3>"
+connect i to "PCH_LPC_AD3_ST_C"
+connect a to "PCH_LPC_LAD<3>"
+connect b to "PCH_LPC_AD3_ST_C"
+resistor 33.2, 40, 20, re2, ar200m
+! "r35_c" test.

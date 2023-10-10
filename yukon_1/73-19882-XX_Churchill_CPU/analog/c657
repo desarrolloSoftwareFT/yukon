@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176072   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:13 2020
+disconnect all
+connect i to "ADC1_FAN01_ISENSE_CH0"
+connect s to "GND"
+connect g to "FAN01_ISENSE" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, nocomp
+! "c657" test.

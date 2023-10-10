@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513007  Va5a0                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "PCH_PWR_OK"
+connect i to "PCH_PWROK_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1585_c" test.

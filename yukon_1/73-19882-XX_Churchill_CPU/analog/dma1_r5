@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512729  V1e7f                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "P12V_STBY"
+connect i to "PWR_A1V2_A3V3_VCC"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_r5" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600566360  V97e3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:15 2020
+on failure
+   report parallel devices
+   report "fc_cr46 fc_cr46%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FC_PWM89"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr46%cr" test.
+off failure

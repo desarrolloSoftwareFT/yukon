@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176714   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:55 2020
+on failure
+   report parallel devices
+   report "c540 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_P1V5_CH10"
+connect g to "P1V5_PCH_2" 
+resistor 6.98k, 25, 20, re4, wb, ar100m, wa36.2m
+off failure

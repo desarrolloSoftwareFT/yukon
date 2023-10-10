@@ -1,0 +1,55 @@
+----------------------------------------
+73-19882-04
+Sat Jul 31 20:33:37 2021
+----------------------------------------
+l22%jp1 HAS FAILED
+
+REPLACE DEVICE: l22
+24-3011-01 ACQ,CHOKES,CMODE,90OHM,25%,33
+Measured:   -729.13k
+Threshold: 900.00k
+Jumper Resistance in OHMS
+----------------------------------------
+l22%jp2 HAS FAILED
+
+REPLACE DEVICE: l22
+24-3011-01 ACQ,CHOKES,CMODE,90OHM,25%,33
+Measured:   1.0000e+100
+Threshold: 20.000M
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM252903ED
+----------------------------------------
+Shorts Report for "shorts".
+Sat Jul 31 20:37:48 2021
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   18
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   21
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   20
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   23
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM252903ED

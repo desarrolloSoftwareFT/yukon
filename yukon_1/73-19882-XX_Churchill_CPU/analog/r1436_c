@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512990  Vb0cb                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "PCH_RSMRST_N"
+connect i to "PCH_RSMRST_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1436_c" test.

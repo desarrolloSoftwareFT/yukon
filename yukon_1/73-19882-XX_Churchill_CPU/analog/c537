@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596099208   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:00 2020
+on failure
+   report parallel devices
+   report "r617 1.00k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_0V6_BM_DDR4_CH13"
+!connect gl to "DDR4_VTT" 
+capacitor 100n, 35, 40, fr8192, re2, ar50.0m, ed, en, nocomp
+warning "excessive minus tolerance or low limit."
+! "c537" is a commented test.
+off failure

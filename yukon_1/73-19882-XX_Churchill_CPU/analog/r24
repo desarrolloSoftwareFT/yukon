@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175953   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:14 2020
+disconnect all
+connect i to "BOARD_ID_SPARE1"
+connect s to "A2_5V"
+jumper 1.23k, re4, wb, ar1.00, op
+! "r24" test.

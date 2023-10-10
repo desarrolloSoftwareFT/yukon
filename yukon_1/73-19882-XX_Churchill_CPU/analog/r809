@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176728   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:09 2020
+disconnect all
+connect s to "JTAG_BMC_FPGA_TCK"
+connect i to "UNNAMED_4206_CAP_I795_B"
+connect a to "JTAG_BMC_FPGA_TCK"
+connect b to "UNNAMED_4206_CAP_I795_B"
+resistor 68, 30, 20, re2, ar100m
+! "r809" test.

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176752   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:33 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "XDP_CPU_BPM6_L_C"
+connect a to "P1V05_COMBINED"
+connect b to "XDP_CPU_BPM6_L_C"
+resistor 51.1, 30, 20, re2, ar200m
+! "r1504_c" test.

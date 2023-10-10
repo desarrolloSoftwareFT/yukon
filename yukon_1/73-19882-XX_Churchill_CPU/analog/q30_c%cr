@@ -1,0 +1,14 @@
+!!!!    2    0    1 1609980171   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:01 2020
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect i to "GND"
+connect s to "CPU_PROCHOT_1V_L"
+diode 990m, 500m, idc29m, co3.0, ar845m
+! "q30_c%qf" test.
+! DUT: nominal 125, plus tol 60.0 %, minus tol 60.0 %
+! DUT: high 200, low 50
+! TEST: high limit 205.87, low limit 53.032
+! Tolerance Multiplier 3.00
+! Remote Sensing is not Allowed

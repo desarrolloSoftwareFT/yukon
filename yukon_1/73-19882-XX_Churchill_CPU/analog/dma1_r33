@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512739  Vdad8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "PMOD_A1V2_ENABLE"
+connect i to "UNNAMED_4238_LTC3850UH_I22_RUN1"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_r33" test.

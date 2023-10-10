@@ -1,0 +1,8 @@
+!!!!    2    0    1 1634132735   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:43 2020
+disconnect all
+connect i to "FAN01_PRSNT_L_CON_ZL"
+connect s to "GND"
+connect gl to "FAN01_PRSNT_L" 
+capacitor 1n, 35, 35, fr8192, re2, wb, ar100m, ed, comp, wa20m
+! "fc_c354" test.

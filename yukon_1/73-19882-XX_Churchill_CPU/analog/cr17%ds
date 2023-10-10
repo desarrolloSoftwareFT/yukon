@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600587266   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:04 2020
+on failure
+   report parallel devices
+   report "cr17 cr17%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN12_TACH"
+zener 4.3, 15, 15, idc20m, co6.8, ar3.68 ,wa10m
+! "cr17%cr" test.
+off failure

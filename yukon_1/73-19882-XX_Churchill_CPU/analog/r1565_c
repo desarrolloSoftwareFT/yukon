@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175987   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:48 2020
+disconnect all
+connect s to "PCH_IPU_CPU_PWRGOOD2_1V"
+connect i to "PWRGOOD_CPU_C"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1565_c" test.

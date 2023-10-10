@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176626   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "R_CLK_100M_CPU_XDP_N_C"
+connect i to "CLK_100M_CPU_XDP_N_C"
+connect a to "R_CLK_100M_CPU_XDP_N_C"
+connect b to "CLK_100M_CPU_XDP_N_C"
+resistor 22.1, 40, 20, re2, ar500m
+! "r1606_c" test.

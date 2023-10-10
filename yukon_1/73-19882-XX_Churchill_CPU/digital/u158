@@ -1,0 +1,420 @@
+!!!!    6    0    1 1571390131  V36ad                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:32 2019
+! 
+sequential
+
+vector cycle 1u
+receive delay 0.9u
+
+default device "u158"
+set terminators to on
+assign VCC  to pins *
+assign GND  to pins *
+
+assign ABUS to pins *,11,9
+assign SCL  to pins 2
+assign SDA  to pins 1
+assign WP   to pins *
+
+power  VCC, GND
+inputs ABUS,SCL,WP
+bidirectional SDA
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector A_000
+ drive SDA
+ set ABUS to "000"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_001
+ drive SDA
+ set ABUS to "001"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_010
+ drive SDA
+ set ABUS to "010"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_011
+ drive SDA
+ set ABUS to "011"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_100
+ drive SDA
+ set ABUS to "100"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_101
+ drive SDA
+ set ABUS to "101"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_110
+ drive SDA
+ set ABUS to "110"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector A_111
+ drive SDA
+ set ABUS to "111"
+ set SCL  to "1"
+ set SDA  to "1"
+ set WP   to "z"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS to "kkk"
+ set SCL  to "k"
+ set SDA  to "x"
+ set WP   to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS to "kkk"
+ set SCL  to "k"
+ set SDA  to "k"
+ set WP   to "k"
+end vector
+
+vector WP_0
+ initialize to KEEP2
+ set WP     to "0"
+end vector
+
+vector WP_1
+ initialize to KEEP2
+ set WP     to "1"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector IDLE1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SCL    to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ repeat 10 times
+ execute D_1
+ end repeat
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)  ! Read protocol
+ execute D7
+ execute SK_11
+ execute SK_10
+ execute D6
+ execute SK_11
+ execute SK_10
+ execute D5
+ execute SK_11
+ execute SK_10
+ execute D4
+ execute SK_11
+ execute SK_10
+ execute D3
+ execute SK_11
+ execute SK_10
+ execute D2
+ execute SK_11
+ execute SK_10
+ execute D1
+ execute SK_11
+ execute SK_10
+ execute D0
+ execute SK_11
+ execute SK_10
+ execute D_0      ! Acknowledge bit
+ execute SK_21
+ execute SK_10
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      !  with Acknowledge bit active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      ! Acknowledge bit not active
+ execute SK_11
+ execute SK_10
+end sub
+
+! ***************************************************************************
+
+
+
+unit "A = 00"
+! repeat 20 times
+!  execute A_000
+! end repeat
+ call STRT                                  ! Start bit
+ call WX(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_0,D_0,D_1,D_0, D_0,D_0,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+
+! ***************************************************************************
+
+ 
+unit "A = 11"
+ repeat 20 times
+  execute A_111
+ end repeat
+ call STRT                                  ! Start bit
+ call WX(D_0,D_0,D_1,D_0, D_0,D_0,D_0,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+end unit
+
+
+
+!x
+!xunit "A = 001"
+!x repeat 20 times
+!x  execute A_001
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+
+! ***************************************************************************
+!x
+!xunit "A = 010"
+!x repeat 20 times
+!x  execute A_010
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+!x
+!x! ***************************************************************************
+!x
+!xunit "A = 011"
+!x repeat 20 times
+!x  execute A_011
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+!x
+!x! ***************************************************************************
+!x
+!xunit "A = 100"
+!x repeat 20 times
+!x  execute A_100
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+!x! ***************************************************************************
+!x
+!xunit "A = 101"
+!x repeat 20 times
+!x  execute A_101
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+!x! ***************************************************************************
+!x
+!xunit "A = 110"
+!x repeat 20 times
+!x  execute A_110
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WX(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)  ! Read Command, addr don't match
+!x call STOP                                  ! Stop bit
+!x repeat 20 times
+!x  execute IDLE1
+!x end repeat
+!x call STRT                                  ! Start bit
+!x call WR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)  ! Read Command, addr match
+!x call STOP                                  ! Stop bit
+!xend unit
+!x
+!x! ***************************************************************************

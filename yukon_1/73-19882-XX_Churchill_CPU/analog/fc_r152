@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176534   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:55 2020
+disconnect all
+connect s to "FAN01_PRSNT_L"
+connect i to "FAN01_PRSNT_L_CON_ZL"
+resistor 220, 30, 20, re3, ar500m

@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600568192  Vdf12                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:44:47 2020
+disconnect all
+connect s to "SRT_CLK50M_IOFPGA"
+connect i to "CLK50M_IOFPGA"
+connect a to "SRT_CLK50M_IOFPGA"
+connect b to "CLK50M_IOFPGA"
+resistor 33, 40, 20, re2, ar200m
+! "r1014" test.

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596099446   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:56 2020
+on failure
+   report parallel devices
+   report "e_r921 1.00k"
+end on failure
+disconnect all
+connect s to "UNNAMED_33_CAP_I22_B"
+connect i to "PVCCKRHV_FB"
+!connect gl to "GND" 
+capacitor 3.3n, 35, 40, fr1024, re2, ar20.0m, ed, en, comp
+warning "excessive plus tolerance or high limit."
+! "c654" is a commented test.
+off failure

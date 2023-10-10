@@ -1,0 +1,21 @@
+!!!!    2    0    1 1594175934   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:55 2020
+on failure
+   report parallel devices
+   report "bma4_c5 47.0u"
+   report "bma4_c6 10.0u"
+   report "bma4_c11 47.0u"
+   report "bma4_c13 47.0u"
+   report "bma4_c14 47.0u"
+   report "bma4_c19 1.00u"
+   report "c297_c 22.0u"
+   report "e_c618 47.0u"
+   report "e_c619 10.0n"
+   report "bma4_c7 100p"
+end on failure
+disconnect all
+connect s to "PVCCSCFUSESUS"
+connect i to "GND"
+jumper 1.87k, re4, wb, ar500m, op
+! "bma4_c16" test.
+off failure

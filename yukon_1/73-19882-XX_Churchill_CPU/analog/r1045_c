@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175977   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:38 2020
+disconnect all
+connect i to "LAN0_SEL0_C"
+connect s to "GND"
+jumper 3.68k, re4, wb, ar200m, op
+! "r1045_c" test.

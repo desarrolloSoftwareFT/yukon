@@ -1,0 +1,13 @@
+!!!!    2    0    1 1611858197   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:54 2020
+on failure
+   report parallel devices
+   report "c32 100n"
+end on failure
+disconnect all
+connect i to "SERDES_L01_VDDAPLL"
+connect s to "SERDES_L01_REFRET"
+!connect g to "GND"
+capacitor 70u, 38, 40, fr128, re2, ar220.0m, ed, nocomp, en , wa .05
+! "c34" test.
+off failure

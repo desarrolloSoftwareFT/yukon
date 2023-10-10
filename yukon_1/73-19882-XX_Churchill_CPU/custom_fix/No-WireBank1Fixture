@@ -1,0 +1,46 @@
+! No-Wire Bank1 Size Fixture Attributes
+! Revision 05.30
+!
+! WARNING: Consult with the documentation and your fixture vendor before
+! making any changes to the parameters outlined below.  Failure to do so
+! could result in fixtures that cannot be built or may add significant
+! cost to building the fixture.
+!
+! All units are in inches, specified to 10th mils (0.0001").
+!
+!                               --- +---------------+
+! "Fixture zero" (F0)is at       |  |  Probe Plate  |
+! a fixed position relative    MaxY |  (top view)   |
+! to the testhead modules.       |  |               |
+! F0 is 0.1889 inches from      --- | o <-F0        |
+! the left edge and 8.5275       |  |               |
+! inches from the bottom of    MinY |               |
+! an Agilent standard bank1      |  |               |
+! probe plate.                  --- +---------------+
+!                              MinX |-|--- MaxX ----|
+!
+! The following fields define the size of a bank1 probe plate. Probe
+! plate dimensions are relative to "Fixture zero". The Agilent standard
+! bank1 probe plate is 15.85" wide by 18.0" high.
+!
+ProbePlateMinX: -0.1889
+ProbePlateMaxX: 15.6611
+ProbePlateMinY: -8.5275
+ProbePlateMaxY:  9.4725
+!
+! The following fields define the largest board that will fit on a
+! bank1 fixture. Board dimensions are absolute. The Agilent standard 
+! bank1 fixture supports a maximum board size of 15.6" wide by 17.7" high.
+!
+BoardMaxX: 15.6000
+BoardMaxY: 17.7000
+!
+! The following fields define the area in which probes can be placed and
+! take into account probe clearance and other mechanical considerations.
+! Probe area dimensions are relative to "Fixture zero". The Agilent
+! standard bank1 probe area is 14.8" wide by 16.75" high.
+!
+ProbeAreaMinX:  0.3360
+ProbeAreaMaxX: 15.1360
+ProbeAreaMinY: -7.9030
+ProbeAreaMaxY:  8.8470

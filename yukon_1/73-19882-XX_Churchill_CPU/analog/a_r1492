@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600996691  V340b                                         
+!* Removed top probe for JTAG test
+! IPG: rev 09.20p  Wed Jul 08 10:40:02 2020
+disconnect all
+connect s to "JTAG_1V05SB_CPU_TDO"
+connect i to "CPLD_JTAG_1V05SB_PCH_TDI"
+jumper  20.0,  re1, ar200m  ,ed
+! "a_r1492" test.

@@ -1,0 +1,36 @@
+!!!!    2    0    1 1600995850  Vf6c8                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+!  test "IN"
+ ! test "EN"
+  test "OUT"
+!  test "PG"
+end test
+
+
+subtest "EN"
+  connect i to pins 5
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.5, 2.0
+end subtest
+
+subtest "OUT"
+  connect i to "P1V5_PCH_2"
+  connect l to ground
+
+  detector dcv, expect 1.15
+  measure 1.62, 1.38
+end subtest
+
+subtest "PG"
+  connect i to pins 3
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.5, 2.0
+end subtest
+
+

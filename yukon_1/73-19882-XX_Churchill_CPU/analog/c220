@@ -1,0 +1,27 @@
+!!!!    2    0    1 1597477061   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:40 2020
+on failure
+   report parallel devices
+   report "c259 10.0u"
+   report "c218 1.00u"
+   report "c219 1.00u"
+   report "c260 1.00u"
+   report "c261 1.00u"
+   report "c262 1.00u"
+   report "c263 1.00u"
+   report "c265 1.00u"
+   report "c267 1.00u"
+   report "c268 1.00u"
+   report "c271 1.00u"
+   report "c272 1.00u"
+   report "c281 100n"
+   report "c270 100p"
+end on failure
+disconnect all
+connect i to "P1V15_BMC"
+connect s to "GND"
+!connect g to "UNNAMED_4199_CAP_I55_A" 
+!connect g to "ADC0_P1V15_CH5" 
+capacitor 121.1u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp
+! "c220" test.
+off failure

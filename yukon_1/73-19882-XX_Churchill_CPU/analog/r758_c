@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512944  V41c7                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "UNNAMED_152_N25QXX_I36_SCK_C"
+connect i to "SPI_FPGA_CLK"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r758_c" test.

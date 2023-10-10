@@ -1,0 +1,11 @@
+!!!!    2    0    1 1594176713   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:54 2020
+on failure
+   report parallel devices
+   report "c536 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_3V3_VBAT_CH14"
+resistor 1.1k, 25, 20, re4, wb, ar1.00, wa2.53m
+off failure

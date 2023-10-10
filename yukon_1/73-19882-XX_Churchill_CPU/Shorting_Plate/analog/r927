@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_76_CAP_I40_B P-Pin resistance"
+report "check nodes UNNAMED_76_LM4041ADJ_I27_FB P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_76_CAP_I40_B"
+connect i to "UNNAMED_76_LM4041ADJ_I27_FB"
+resistor 10,20,100, re1, ar100m,ed
+off failure

@@ -1,0 +1,54 @@
+!!!!    2    0    1 1600513198  Vff59                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:42 2020
+
+test powered analog
+
+test "NFET_OFF"
+test "NFET_ON"
+
+end test
+
+!*****************************************!
+
+subtest "NFET_ON"
+disconnect all
+
+connect s to pins "S"  !D
+connect a to pins "D"  !G
+
+connect i to pins "S"  !D
+connect l to pins "G"  !S
+
+!   connect g to pins "S"
+!   connect g to ground
+
+source dcv, amplitude 3, ico1, terminated 500, on
+auxiliary dcv, amplitude 3.3, ico1, on
+
+detector dcv, expect 0.5
+! wait 5m
+!B!measure 0.1, -0.1
+measure 0.6,-0.6
+end subtest
+
+subtest "NFET_OFF"
+   disconnect all
+
+   connect s to pins "S"  !D
+   connect a to pins "D"  !G
+
+   connect i to pins "S"  !D
+   connect l to pins "G"  !S
+
+!   connect g to pins "S"
+!   connect g to ground
+
+  source dcv, amplitude 3, ico1, terminated 500, on
+  auxiliary dcv, amplitude 0.0, ico1, on
+
+  detector dcv, expect 3
+! wait 20m
+  measure 3.5, 2
+end subtest
+
+!*****************************************!

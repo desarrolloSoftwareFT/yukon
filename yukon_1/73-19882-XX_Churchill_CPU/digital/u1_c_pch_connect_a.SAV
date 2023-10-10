@@ -1,0 +1,154 @@
+!!!!   24    0    1 1594176850  V1cd7                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:11 2020
+
+connect "u1_c_pch"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm_noidcode", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm_noidcode", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm_noidcode", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "GPIOA0_JTSCAN","GPIOA1_JTSCAN","LAN_PWRGOOD_C"
+  pcf order is nodes "PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "11110110"
+  end pcf
+  end unit
+end disables
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "CLK_33M_CLKOUT_PCI0_ST_C" hybrid test "u1_c_pch.AA9"
+  node "FM_SLPS3_N" hybrid test "u1_c_pch.AY2"
+  node "FM_SLPS4_N" hybrid test "u1_c_pch.AW1"
+  node "GPIO_TACH<0>" hybrid test "u1_c_pch.AN3"
+  node "GPIO_TACH<1>" hybrid test "u1_c_pch.AM4"
+  node "GPIO_TACH<2>" hybrid test "u1_c_pch.AV11"
+  node "GPIO_TACH<3>" hybrid test "u1_c_pch.AG2"
+  node "GPIO_TACH<4>" hybrid test "u1_c_pch.AV7"
+  node "GPIO_TACH<5>" hybrid test "u1_c_pch.AU9"
+  node "GPIO_TACH<6>" hybrid test "u1_c_pch.AU14"
+  node "GPIO_TACH<7>" hybrid test "u1_c_pch.AM2"
+  node "IRQ_PIRQC_L_C" hybrid test "u1_c_pch.AR11"
+  node "PCH_IPU_LPC_FRAME_L_ST_C" hybrid test "u1_c_pch.AH1"
+  node "PCH_LPC_AD0_ST_C" hybrid test "u1_c_pch.AF3"
+  node "PCH_LPC_AD1_ST_C" hybrid test "u1_c_pch.AG4"
+  node "PCH_LPC_AD2_ST_C" hybrid test "u1_c_pch.AL3"
+  node "PCH_LPC_AD3_ST_C" hybrid test "u1_c_pch.AF1"
+  node "PCH_PWRBTN_N" hybrid test "u1_c_pch.AW3"
+  node "PD_CPU_GPIO33_C" hybrid test "u1_c_pch.AN11"
+  node "PU_CPU_DSWODVREN_C" hybrid test "u1_c_pch.AL1"
+  node "PU_CPU_INTVRMEN_C" hybrid test "u1_c_pch.AP2"
+  node "PU_INTRUDER_L_C" hybrid test "u1_c_pch.AK2"
+  node "PU_SUSACK_L_C" hybrid test "u1_c_pch.AY4"
+  node "PU_SUSWARN_L_C" hybrid test "u1_c_pch.AY11"
+  node "RST_RTCRST_L" hybrid test "u1_c_pch.AP9"
+  node "RST_SRTCRST_L_C" hybrid test "u1_c_pch.AP4"
+  node "USB_BMC_DN" hybrid test "u1_c_pch.AD3"
+  node "USB_BMC_DP" hybrid test "u1_c_pch.AD1"
+  node "USB_EXT_DRIVE_DBG_DN" hybrid test "u1_c_pch.AK9"
+  node "USB_EXT_DRIVE_DBG_DP" hybrid test "u1_c_pch.AH9"
+  node "USB_EXT_DRIVE_DN" hybrid test "u1_c_pch.AE4"
+  node "USB_EXT_DRIVE_DP" hybrid test "u1_c_pch.AE2"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "PCH_PORT_RX_PCIE_P<5>"
+!IPG: node "HSD_PCIE_BMCFPGA_CPU_DP"
+!IPG: node "PCH_PORT_RX_PCIE_P<1>"
+!IPG: node "USB3_RX_D_P<3>"
+!IPG: node "USB3_RX_D_P<1>"
+!IPG: node "USB2_D_N<3>"
+!IPG: node "USB2_D_P<3>"
+!IPG: node "BDWL_FPGA_LPC_DRQ0_L"
+!IPG: node "BDWL_FPGA_LPC_DRQ1_L"
+!IPG: node "SPARE_CPU_SLP_SUS_L_C"
+!IPG: node "PCH_PORT_RX_PCIE_P<7>"
+!IPG: node "PCH_PORT_RX_PCIE_P<6>"
+!IPG: node "PCH_PORT_RX_PCIE_P<4>"
+!IPG: node "PCH_PORT_RX_PCIE_P<2>"
+
+!IPG: Family information could not be found for node CLK_33M_CLKOUT_PCI0_ST_C
+!IPG: Family information could not be found for node FM_SLPS3_N
+!IPG: Family information could not be found for node FM_SLPS4_N
+!IPG: Family information could not be found for node GPIO_TACH<0>
+!IPG: Family information could not be found for node GPIO_TACH<1>
+!IPG: Family information could not be found for node GPIO_TACH<2>
+!IPG: Family information could not be found for node GPIO_TACH<3>
+!IPG: Family information could not be found for node GPIO_TACH<4>
+!IPG: Family information could not be found for node GPIO_TACH<5>
+!IPG: Family information could not be found for node GPIO_TACH<6>
+!IPG: Family information could not be found for node GPIO_TACH<7>
+!IPG: Family information could not be found for node IRQ_PIRQC_L_C
+!IPG: Family information could not be found for node PCH_IPU_LPC_FRAME_L_ST_C
+!IPG: Family information could not be found for node PCH_LPC_AD0_ST_C
+!IPG: Family information could not be found for node PCH_LPC_AD1_ST_C
+!IPG: Family information could not be found for node PCH_LPC_AD2_ST_C
+!IPG: Family information could not be found for node PCH_LPC_AD3_ST_C
+!IPG: Family information could not be found for node PCH_PWRBTN_N
+!IPG: Family information could not be found for node PD_CPU_GPIO33_C
+!IPG: Family information could not be found for node PU_CPU_DSWODVREN_C
+!IPG: Family information could not be found for node PU_CPU_INTVRMEN_C
+!IPG: Family information could not be found for node PU_INTRUDER_L_C
+!IPG: Family information could not be found for node PU_SUSACK_L_C
+!IPG: Family information could not be found for node PU_SUSWARN_L_C
+!IPG: Family information could not be found for node RST_RTCRST_L
+!IPG: Family information could not be found for node RST_SRTCRST_L_C
+!IPG: Family information could not be found for node USB_BMC_DN
+!IPG: Family information could not be found for node USB_BMC_DP
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DBG_DN
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DBG_DP
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DN
+!IPG: Family information could not be found for node USB_EXT_DRIVE_DP
+end connect
+

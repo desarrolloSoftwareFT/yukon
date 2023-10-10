@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513036  V8431                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:16 2020
+disconnect all
+connect s to "BM_FPGA_SPI_FLSH_MOSI"
+connect i to "BM_SPI_FLSH_MOSI"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "x_r215" test.

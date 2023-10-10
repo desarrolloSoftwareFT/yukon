@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176322   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:23 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PMB_SPIFLASH_CS0_L"
+resistor 4.99k, 25, 20, re4, wb, ar200m

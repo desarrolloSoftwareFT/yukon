@@ -1,0 +1,7 @@
+!!!!    2    0    1 1633455792   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:14 2020
+disconnect all
+connect i to "GND"
+connect s to "SPI1_10GE_FLSH_CLK_3V_C"
+resistor 100k, 25, 25, re5, wb, ar100m
+!resistor 46k, 25, 25, re5, wb, ar100m  !cambio de proveedor. c0

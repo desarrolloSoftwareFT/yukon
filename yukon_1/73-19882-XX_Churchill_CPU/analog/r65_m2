@@ -1,0 +1,10 @@
+!!!!    2    0    1 1668094134   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:15 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PMOD_J1_PS_EN_M2"
+connect g to "GND" 
+connect a to "A3P3V"
+connect b to "PMOD_J1_PS_EN_M2"
+resistor 100, 35, 20, re2, ar100m, en, ed,wa20m
+! "r65_m2" test.

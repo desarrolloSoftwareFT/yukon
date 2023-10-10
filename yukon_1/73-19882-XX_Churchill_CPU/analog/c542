@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596099250   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:03 2020
+on failure
+   report parallel devices
+   report "r560 2.61k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_A2V5_CH7"
+!connect gl to "A2_5V" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, en, nocomp
+warning "excessive minus tolerance or low limit."
+! "c542" is a commented test.
+off failure

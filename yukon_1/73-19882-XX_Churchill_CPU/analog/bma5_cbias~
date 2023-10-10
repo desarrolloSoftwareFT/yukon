@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176034   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:35 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_7_CAP_I15_B"
+capacitor 1u, 35, 40, fr1024, re2, ar100m, nocomp
+! "bma5_cbias" test.

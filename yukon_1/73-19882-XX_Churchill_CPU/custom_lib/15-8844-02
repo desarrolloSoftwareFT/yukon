@@ -1,0 +1,11 @@
+!!!!   21    2    1 1485249731   0000                                         
+
+diode "cr", 800m, 200m, nr
+
+external pins 1
+   device "cr" pins "C"
+
+external pins 2
+   device "cr" pins "A"
+
+external pins 3; noconnect

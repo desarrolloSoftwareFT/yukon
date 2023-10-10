@@ -1,0 +1,142 @@
+!!!!   24    0    1 1594176852  Va84b                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:13 2020
+
+connect "u1_i2"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+  node "FPGA_MUX_DATA" hybrid default "1"
+  node "FPGA_MUX_SCLK" hybrid default "T"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "FPGA_MUX_DATA","FPGA_MUX_SCLK","GPIOA0_JTSCAN"
+  pcf order is nodes "GPIOA1_JTSCAN","LAN_PWRGOOD_C","PWRGOOD_CPU_C"
+  pcf order is nodes "WP_R"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "1111010110"
+  "1111110110"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "BMC_I210_INTR_L" hybrid test "u1_i2.35"
+  node "BMC_I210_RESET_L" hybrid test "u1_i2.28"
+  node "BMC_MB_SCL_R" hybrid test "u1_i2.34"
+  node "BMC_MB_SDA_R" hybrid test "u1_i2.36"
+  node "BMC_NCSI_CRSDV" hybrid test "u1_i2.3"
+  node "BMC_NCSI_RXD0" hybrid test "u1_i2.6"
+  node "BMC_NCSI_RXD1" hybrid test "u1_i2.5"
+  node "BMC_NCSI_TXD0" hybrid test "u1_i2.9"
+  node "BMC_NCSI_TXD1" hybrid test "u1_i2.8"
+  node "BMC_NCSI_TXEN" hybrid test "u1_i2.7"
+  node "I210_NVM_CLK_ST" hybrid test "u1_i2.13"
+  node "I210_NVM_CS_L_ST" hybrid test "u1_i2.15"
+  node "I210_NVM_SI_ST" hybrid test "u1_i2.12"
+  node "I210_SDP0" hybrid test "u1_i2.63"
+  node "I210_SDP1" hybrid test "u1_i2.61"
+  node "I210_SDP2" hybrid test "u1_i2.62"
+  node "I210_SDP3" hybrid test "u1_i2.60"
+  node "I210_SRDS_SIG_DET" hybrid test "u1_i2.54"
+  node "LED_I210_100LINK_GREEN_L" hybrid test "u1_i2.31"
+  node "LED_I210_1000LINK_GREEN_L" hybrid test "u1_i2.33"
+  node "UNNAMED_30_I210_I39_LED1" hybrid test "u1_i2.30"
+  node "UNNAMED_30_I210_I39_PEWAKE" hybrid test "u1_i2.16"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+  node "CLK50M_NCSI_I210" hybrid test "u1_i2.2" !Not disabled
+  node "I210_MDC_1G_PHY" hybrid test "u1_i2.55" !Not disabled
+  node "I210_MDIO_1G_PHY" hybrid test "u1_i2.57" !Not disabled
+  node "I210_NVM_SO" hybrid test "u1_i2.14" !Not disabled
+end nodes
+
+!IPG: Family information could not be found for node BMC_I210_INTR_L
+!IPG: Family information could not be found for node BMC_I210_RESET_L
+!IPG: Family information could not be found for node BMC_MB_SCL_R
+!IPG: Family information could not be found for node BMC_MB_SDA_R
+!IPG: Family information could not be found for node BMC_NCSI_CRSDV
+!IPG: Family information could not be found for node BMC_NCSI_RXD0
+!IPG: Family information could not be found for node BMC_NCSI_RXD1
+!IPG: Family information could not be found for node BMC_NCSI_TXD0
+!IPG: Family information could not be found for node BMC_NCSI_TXD1
+!IPG: Family information could not be found for node BMC_NCSI_TXEN
+!IPG: Family information could not be found for node I210_NVM_CLK_ST
+!IPG: Family information could not be found for node I210_NVM_CS_L_ST
+!IPG: Family information could not be found for node I210_NVM_SI_ST
+!IPG: Family information could not be found for node I210_SDP0
+!IPG: Family information could not be found for node I210_SDP1
+!IPG: Family information could not be found for node I210_SDP2
+!IPG: Family information could not be found for node I210_SDP3
+!IPG: Family information could not be found for node I210_SRDS_SIG_DET
+!IPG: Family information could not be found for node LED_I210_100LINK_GREEN_L
+!IPG: Family information could not be found for node LED_I210_1000LINK_GREEN_L
+!IPG: Family information could not be found for node UNNAMED_30_I210_I39_LED1
+!IPG: Family information could not be found for node UNNAMED_30_I210_I39_PEWAKE
+!IPG: Family information could not be found for node CLK50M_NCSI_I210
+!IPG: Family information could not be found for node I210_MDC_1G_PHY
+!IPG: Family information could not be found for node I210_MDIO_1G_PHY
+!IPG: Family information could not be found for node I210_NVM_SO
+end connect
+

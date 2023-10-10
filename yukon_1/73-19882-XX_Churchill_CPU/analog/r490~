@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600861293   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:23 2020
+disconnect all
+connect i to "ADC0_2V5_VPP_CH3"
+connect s to "PMOD_P2V5_VPP_VSENSE_P"
+connect g to "UNNAMED_7_CAP_I36_B" 
+connect g to "GND"
+resistor 4.64k, 25, 20, re4, wb, ar200m, en,ed

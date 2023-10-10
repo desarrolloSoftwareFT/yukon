@@ -1,0 +1,29 @@
+prerun
+dim InvOn$[28]
+dim InvOff$[11]
+dim O$[128]
+dim Retry_Pintest$[168]
+dim Cycle_Vacuum$[128]
+dim Recycle_Vacuum$[128]
+dim Testplan$[100]
+dim Board$[100]
+dim Board_Rev$[14]
+dim Log_Path$[200]
+option bit 32
+call Initialize_Board_Constants
+call Initialize_Constants
+call Initialize_Handler_Com
+call Init_Option_To_Handler
+call Set_Auto_Mode
+report is *
+log level is none
+testjet print level is all
+call Ready_To_Test_Board
+call Check_Readiness (Successful)
+unpowered
+call Move_Press_To_All_Probes (Success)
+printer is "debug/blank"
+call VectorlessTest (Failed_In_VectorlessTest, Mode$ & VectorlessTestMsg$)
+call Recycle_Press (Success)
+printer is *
+testjet print level is none

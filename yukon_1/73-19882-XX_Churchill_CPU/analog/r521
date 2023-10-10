@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "SRT_CLK50M_NCSI_BMC"
+connect i to "CLK50M_NCSI_BMC"
+connect a to "SRT_CLK50M_NCSI_BMC"
+connect b to "CLK50M_NCSI_BMC"
+resistor 22, 40, 20, re2, ar500m
+! "r521" test.

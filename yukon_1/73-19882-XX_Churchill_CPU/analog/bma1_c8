@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176050   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:51 2020
+disconnect all
+connect s to "PWR_A2V5_DIDT"
+connect i to "PWR_A2V5_BST"
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, nocomp
+! "bma1_c8" test.

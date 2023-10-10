@@ -1,0 +1,12 @@
+!!!!    2    0    1 1622128052   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:30 2020
+disconnect all
+connect i to "UNNAMED_4206_CAP_I795_B"
+connect s to "GND"
+!connect gl to "SRT_SF_JTAG_TCK"
+connect g to "P3v3"
+connect g to "P5V"
+!connect g to "A3P3V"
+capacitor 100p,50,50, fr8192, re3, wb, ar150m, ed, nocomp, am150m, en
+! "c531" test.
+

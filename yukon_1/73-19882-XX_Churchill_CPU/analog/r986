@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175973   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:34 2020
+disconnect all
+connect i to "FPGA_BMC_UART5_RXD"
+connect s to "A2_5V"
+jumper 3.32k, re4, wb, ar200m, op
+! "r986" test.

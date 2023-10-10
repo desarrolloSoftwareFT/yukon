@@ -1,0 +1,95 @@
+<!-- Created Thu Jul 23 13:31:25 2020 from ITL Source digital/u8_connect_i -->
+<Test name="u8_connect_i"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="ADC_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BDXDE_DRAM_PWROK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMCPHY_INT_M" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMC_ENTEST_R" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMC_FAN_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_GOLD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_STD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="CHASSIS_IDPROM_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="DAC0_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="DAC1_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="GPIOA0_JTSCAN" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="GPIOA1_JTSCAN" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="LAN_PWRGOOD_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="PWRGOOD_CPU_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I520_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_76_LTC2497_I65_SCL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="WP_R" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="A7"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="B8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="A6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="C6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_i2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="19"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="18"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="29"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="4"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u8"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="C10"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="C8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="D12"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="D11"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="E11"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="K3"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="B14"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="D14"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="D13"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="E13"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="W22"><node name="GPIOZ5_VPOG7_NORA5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W21"><node name="GPIOZ7_VPOG7_NORA7" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W20"><node name="BMC_GPIOS5_STRAP" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W19"><node name="SRT_BMC_SPI2_MUX_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W18"><node name="CLK25M_BMC_CLKIN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W16"><node name="MEM_DDR4_MA<8>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W15"><node name="MEM_DDR4_MA<4>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y14"><node name="MEM_DDR4_MA<12>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W14"><node name="MEM_DDR4_MA<2>" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W13"><node name="MEM_DDR4_BG0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W12"><node name="MEM_DDR4_RAS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y12"><node name="MEM_DDR4_WE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y11"><node name="MEM_DDR4_CKE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W6"><node name="BMC_FAN_INTR_R" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+<Device name="u1_c_pch"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="BM3"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BJ2"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BM5"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="BK3"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_c"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="T76"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R75"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="V78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="T78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="U75"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="CV55"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="AE77"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="V76"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+</Device>
+</Test>

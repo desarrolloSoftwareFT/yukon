@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600996706  Veb4e                                         
+on failure
+   report "Check for J2 presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "J2_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m,ed
+off failure

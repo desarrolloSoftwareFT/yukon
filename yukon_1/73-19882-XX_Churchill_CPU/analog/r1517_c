@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176200   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:21 2020
+disconnect all
+connect s to "CPU_RESET_1V_L"
+connect i to "XDP_CPU_RESET_L_C"
+resistor 1k, 25, 20, re3, ar100m

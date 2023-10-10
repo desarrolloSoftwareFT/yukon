@@ -1,0 +1,9 @@
+!!!!    2    0    1 1634308263   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "PMB_SPIFLASH_MISO"
+connect i to "PMB_SPIFLASH_MISO_ST"
+!connect a to "PMB_SPIFLASH_MISO"
+!connect b to "PMB_SPIFLASH_MISO_ST"
+resistor 22.1, 40, 20, re1, ar500m, ed, en, wa20m
+! "r1182" test.

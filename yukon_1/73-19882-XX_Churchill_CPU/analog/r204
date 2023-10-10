@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176291   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:52 2020
+disconnect all
+connect s to "SF_JTAG_TCK"
+connect i to "SRT_SF_JTAG_TCK"
+connect a to "SF_JTAG_TCK"
+connect b to "SRT_SF_JTAG_TCK"
+resistor 22, 40, 20, re2, ar500m
+! "r204" test.

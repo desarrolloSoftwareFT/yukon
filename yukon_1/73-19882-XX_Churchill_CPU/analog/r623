@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176688   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:29 2020
+disconnect all
+connect s to "PMOD_P1V5_PCH_VSENSE_P"
+connect i to "ADC0_P1V5_CH10"
+connect g to "GND" 
+resistor 4.64k, 25, 20, re4, wb, ar200m, wa31.8m

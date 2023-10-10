@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176639   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:40 2020
+disconnect all
+connect s to "VP3P3_SATA"
+connect i to "R_SATA0_LED_L"
+resistor 150, 30, 20, re3, ar1.00

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512927  Va1db                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "BMC_FAN_CARD_RST_R2"
+connect i to "BMC_FAN_CARD_RST"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r574" test.

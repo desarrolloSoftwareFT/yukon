@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600513366   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:37 2020
+on failure
+report parallel devices
+report "e_c681 1.00n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P1V2_VDDQ_VREF_IN"
+connect g to "P1V2_VDDQ"
+!B!resistor 10k, 25, 20, re4, wb, ar100m, wa1.40
+resistor 10k,25,20,re4,wb,ar100m,ed,wa50m
+off failure

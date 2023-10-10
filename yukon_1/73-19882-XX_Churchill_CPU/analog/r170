@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512853  V195b                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "CCC_PLL_VDDA"
+connect i to "A3P3V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r170" test.

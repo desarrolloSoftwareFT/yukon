@@ -1,0 +1,8 @@
+!!!!    2    0    1 1623169304   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:23 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "LJTAG_CABLE_PRSNT_L"
+!resistor 4.7k, 25, 20, re4, wb, ar200m
+!nueva revision 21 May
+jumper 5k, re2, wb, ar200m, en, ed

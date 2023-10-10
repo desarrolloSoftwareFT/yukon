@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175954   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:15 2020
+disconnect all
+connect s to "P5V"
+connect i to "P1V2_VDDQ_EN_ST"
+jumper 5.75k, re4, wb, ar200m, op
+! "r27_m2" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1605726936   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:37 2020
+disconnect all
+connect s to "P1V2_VDDQ"
+connect i to "P1V2_VDDQ_VREF_IN"
+connect g to "GND"
+!B!resistor 10k, 25, 20, re3, wb, ar400m, wa5.40
+resistor 10k+450,30,20,re2,wb,ar200m,ed, en

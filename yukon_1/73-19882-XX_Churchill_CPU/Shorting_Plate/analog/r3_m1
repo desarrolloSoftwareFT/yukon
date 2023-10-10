@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes VP1P05_VCCSCSUS_SNS_CPU_KP P-Pin resistance"
+report "check nodes PMOD_VOB_VSENSE_K_M1 P-Pin resistance"
+end on failure
+disconnect all
+connect s to "VP1P05_VCCSCSUS_SNS_CPU_KP"
+connect i to "PMOD_VOB_VSENSE_K_M1"
+resistor 10,20,100, re1, ar100m,ed
+off failure

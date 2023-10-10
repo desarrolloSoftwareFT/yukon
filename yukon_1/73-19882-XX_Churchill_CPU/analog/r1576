@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175988   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:49 2020
+disconnect all
+connect i to "BMC_ENTEST_R"
+connect s to "A3P3V"
+jumper 4.91k, re4, wb, ar200m, op
+! "r1576" test.

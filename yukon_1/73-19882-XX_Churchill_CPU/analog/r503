@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512910  V45e6                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "GPIO_TACH<2>"
+connect i to "SYNC_FPGA_TO_CPU_INTR_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r503" test.

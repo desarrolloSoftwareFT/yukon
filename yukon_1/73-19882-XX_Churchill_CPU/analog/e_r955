@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512741  V6af9                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect s to "PWRGD_P1V5_PCH_R"
+connect i to "PMOD_P1V5_PCH_PG_3V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "e_r955" test.

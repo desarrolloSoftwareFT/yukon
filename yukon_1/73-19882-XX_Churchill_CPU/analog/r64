@@ -1,0 +1,9 @@
+!!!!    2    0    1 1631630964   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:41 2020
+disconnect all
+connect s to "CPLD_P2PM_TX"
+connect i to "SRT_P2PM_TX"
+connect a to "CPLD_P2PM_TX"
+connect b to "SRT_P2PM_TX"
+resistor 33, 30, 20, re1, ar200m, en,ed,wb 
+! "r64" test.

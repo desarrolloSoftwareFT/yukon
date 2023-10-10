@@ -1,0 +1,140 @@
+!!!!   24    0    1 1594176857  Va29a                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:18 2020
+
+connect "u40"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+!IPG  family "???"
+!IPG: Family information could not be found for any node; TTL will be assumed
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u40.Y22
+!IPG:    u27.N13
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u40_u27"
+  tdi "SF_JTAG_TDI"
+  tdo "SF_JTAG_TDO"
+  tms "SF_JTAG_TMS"
+  tck "SF_JTAG_TCK"
+  trst "SF_JTAG_TRST"
+  devices
+    "u40", "custom_lib/16-101031-01.bsm_noidcode", "fg484", no
+    "u27", "custom_lib/m2s025ts-vf256.bsd_noidcode", "vf256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node SF_JTAG_TDI
+!IPG: Family information could not be found for node SF_JTAG_TDO
+!IPG: Family information could not be found for node SF_JTAG_TMS
+!IPG: Family information could not be found for node SF_JTAG_TCK
+!IPG: Family information could not be found for node SF_JTAG_TRST
+
+disables "disable vector"
+  node "BMC_FAN_I2C_SCL" family "LVT" hybrid default "1"
+  node "BUF_SPI_FLSH_SEL_C" family "LVT" hybrid default "0"
+  node "FPGA_MUX_DATA" family "LVT" hybrid default "1"
+  node "FPGA_MUX_SCLK" family "LVT" hybrid default "T"
+  node "JTAG_BDX_TCK" family "LVT" hybrid default "1"
+  node "UNNAMED_76_LTC2497_I65_SCL" family "LVT" hybrid default "1"
+  node "UNNAMED_598_PI5A3157_I509_S" family "LVT" hybrid default "0"
+  node "UNNAMED_598_PI5A3157_I520_S" family "LVT" hybrid default "0"
+
+  pcf order is nodes "BMC_FAN_I2C_SCL","BUF_SPI_FLSH_SEL_C"
+  pcf order is nodes "FPGA_MUX_DATA","FPGA_MUX_SCLK","JTAG_BDX_TCK"
+  pcf order is nodes "UNNAMED_76_LTC2497_I65_SCL"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I509_S"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I520_S"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "10101100"
+  "10111100"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   fc_u4.1  u22.4  u33_c.1  u33_c.4  u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.20  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8  u69.1  u69.4  u72.1  u72.4  u74.3
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "fc_u4" pins 1
+!IPG: with pin 2 on node "BMC_FAN_I2C_SCL"
+disabled device "u22" pins 4
+!IPG: with pin 1 on node "JTAG_BDX_TCK"
+disabled device "u33_c" pins 1,4
+!IPG: with pin 6 on node "BUF_SPI_FLSH_SEL_C"
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,20,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+disabled device "u69" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I520_S"
+disabled device "u72" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I509_S"
+disabled device "u74" pins 3
+!IPG: with pin 2 on node "UNNAMED_76_LTC2497_I65_SCL"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+!IPG used for disable:   node "BMC_FAN_I2C_SCL" hybrid test "u40.W15"
+  node "CPU_FPGA_BWDT_EXPIRED" hybrid test "u40.V19"
+  node "FAN01_AMB_LED" hybrid test "u40.W12"
+  node "FAN01_BLU_LED" hybrid test "u40.Y12"
+  node "FAN11_TACH_R" hybrid test "u40.Y18"
+  node "FAN12_TACH_R" hybrid test "u40.Y19"
+  node "FAN45_GRN_LED" hybrid test "u40.Y13"
+  node "FAN67_AMB_LED" hybrid test "u40.W9"
+  node "FAN67_BLU_LED" hybrid test "u40.Y10"
+  node "FAN67_GRN_LED" hybrid test "u40.Y9"
+  node "FAN89_GRN_LED" hybrid test "u40.W10"
+  node "FAN1011_GRN_LED" hybrid test "u40.W11"
+!IPG used for disable:   node "FAN_CARD_PRSNT_L" hybrid test "u40.Y20"
+  node "IDPROM_WP" hybrid test "u40.W16"
+  node "P2PM_MB_CPU_R<0>" hybrid test "u40.V22"
+  node "PCH_SYS_PWROK" hybrid test "u40.Y17"
+  node "PU_CPU_GPIO51_R" hybrid test "u40.Y15"
+  node "SRT_FPGA_LPC_LAD<1>" hybrid test "u40.W14"
+  node "SRT_FPGA_LPC_LAD<2>" hybrid test "u40.Y14"
+  node "SRT_P2PM_CPU_MB<0>" hybrid test "u40.V21"
+  node "X86_FPGA_INTR_BMC" hybrid test "u40.W19"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+  node "SPI_FPGA_CS0_L" hybrid test "u40.W17" !Not disabled
+end nodes
+
+!IPG: Family information could not be found for node BMC_FAN_I2C_SCL
+!IPG: Family information could not be found for node CPU_FPGA_BWDT_EXPIRED
+!IPG: Family information could not be found for node FAN01_AMB_LED
+!IPG: Family information could not be found for node FAN01_BLU_LED
+!IPG: Family information could not be found for node FAN11_TACH_R
+!IPG: Family information could not be found for node FAN12_TACH_R
+!IPG: Family information could not be found for node FAN45_GRN_LED
+!IPG: Family information could not be found for node FAN67_AMB_LED
+!IPG: Family information could not be found for node FAN67_BLU_LED
+!IPG: Family information could not be found for node FAN67_GRN_LED
+!IPG: Family information could not be found for node FAN89_GRN_LED
+!IPG: Family information could not be found for node FAN1011_GRN_LED
+!IPG: Family information could not be found for node FAN_CARD_PRSNT_L
+!IPG: Family information could not be found for node IDPROM_WP
+!IPG: Family information could not be found for node P2PM_MB_CPU_R<0>
+!IPG: Family information could not be found for node PCH_SYS_PWROK
+!IPG: Family information could not be found for node PU_CPU_GPIO51_R
+!IPG: Family information could not be found for node SRT_FPGA_LPC_LAD<1>
+!IPG: Family information could not be found for node SRT_FPGA_LPC_LAD<2>
+!IPG: Family information could not be found for node SRT_P2PM_CPU_MB<0>
+!IPG: Family information could not be found for node X86_FPGA_INTR_BMC
+!IPG: Family information could not be found for node SPI_FPGA_CS0_L
+end connect
+

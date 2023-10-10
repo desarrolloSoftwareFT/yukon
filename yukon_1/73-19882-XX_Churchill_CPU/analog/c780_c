@@ -1,0 +1,9 @@
+!!!!    2    0    1 1596099695   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:37 2020
+disconnect all
+connect s to "GND"
+connect i to "RST_RTCRST_L"
+connect gl to "BDX_RTCRST_FET" 
+!connect g to "P3V3_VBAT" 
+capacitor 2.2u, 35, 40, fr1024, re1, ar20.0m, ed, en, nocomp
+! "c780_c" test.

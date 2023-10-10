@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175991   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:52 2020
+disconnect all
+connect i to "CPU_PCH_HOT_1V_L"
+connect s to "GND"
+jumper 2.35k, re4, wb, ar500m, op
+! "r1596_c" test.

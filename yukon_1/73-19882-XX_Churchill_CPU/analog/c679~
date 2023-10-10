@@ -1,0 +1,15 @@
+!!!!    2    0    1 1645899893   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:15 2020
+on failure
+   report parallel devices
+   report "c676 100n"
+end on failure
+disconnect all
+connect s to "MSS_HPMS_PLL_VDDA"
+connect i to "MSS_HPMS_PLL_VSSA"
+connect g to "GND"
+capacitor 65u, 45, 50, fr128, re2, ar20.0m, ed, nocomp, en
+!Nueva revision
+!capacitor 20u, 35, 40, fr128, re1, ar120.0m, ed, nocomp, en
+! "c679" test.
+off failure

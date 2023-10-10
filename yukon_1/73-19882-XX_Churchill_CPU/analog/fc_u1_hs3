@@ -1,0 +1,39 @@
+!!!!    2    0    1 1600996085  V89ca                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+  connect s to "FAN67_PRSNT_L"
+  source dcv, am0, ico1, on, terminated 50
+  wait 50m
+!@test "IN"
+!@test "EN"
+  test "OUT"
+!@test "PG"
+end test
+
+
+subtest "EN"
+  connect i to pins 6
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.5, 2.0
+end subtest
+
+subtest "OUT"
+  connect i to pins 17
+  connect l to ground
+
+  detector dcv, expect 12
+  measure 12.6, 11.4
+end subtest
+
+subtest "PG"
+  connect i to pins 13
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.5, 2.0
+end subtest
+
+

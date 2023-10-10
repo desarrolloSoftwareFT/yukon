@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176090   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:31 2020
+disconnect all
+connect s to "GND"
+connect i to "PWR_A1V2_ITH"
+connect g to "PWR_A1V2_ITH_RC" 
+capacitor 100p, 50, 50, fr8192, re5, wb, ar100m, comp
+! "dma1_c20" test.

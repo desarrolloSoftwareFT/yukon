@@ -1,0 +1,13 @@
+!!!!    2    0    1 1632316939   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:24 2020
+on failure
+   report parallel devices
+   report "fc_cr22 fc_cr22%cr3"
+end on failure
+disconnect all
+connect s to "A3P3V"
+connect i to "FAN01_BLU_LED_CON"
+!diode 990m, 500m, idc10m, co3.0, ar845m
+diode 930m, 500m, idc1m, co3.0, ar845m
+! "fc_cr22%cr5" test.
+off failure

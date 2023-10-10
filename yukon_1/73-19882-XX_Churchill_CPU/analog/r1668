@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513025  V8182                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "FPGA_BMC_UART5_RXD"
+connect i to "SRT_FPGA_BMC_UART5_RXD"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1668" test.

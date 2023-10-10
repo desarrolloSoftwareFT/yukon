@@ -1,0 +1,13 @@
+!!!!    2    0    1 1682595505   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:10 2020
+on failure
+   report parallel devices
+   report "fc_cr14 fc_cr14%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FC_PWM45"
+zener 4.3, 11.9, 10.23, idc14m, co5.9, ar3.78 ,wa20m
+!zener 4.3, 11.9, 9.23, idc19m, co5.9, ar3.78 ,wa20m !origin
+! "fc_cr14%cr" test.
+off failure

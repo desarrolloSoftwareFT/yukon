@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600997175  V8f77                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+disconnect all
+connect s to "VBATT_P3V3_2"
+connect i to "VBATT_P3V3_VSENSE_P"
+jumper  20.0,  re1, ar200m,ed
+! "r3_v" test.

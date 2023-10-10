@@ -1,0 +1,10 @@
+!!!!    2    0    1 1623172491   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:51 2020
+disconnect all
+connect s to "VR_SMB_CLK"
+connect i to "SRT_PMOD_SCL"
+connect a to "VR_SMB_CLK"
+connect b to "SRT_PMOD_SCL"
+!resistor 22+3, 40, 20, re2, ar500m
+jumper 20, re2, ed, op   !p4c a2
+! "b_imar18" test.

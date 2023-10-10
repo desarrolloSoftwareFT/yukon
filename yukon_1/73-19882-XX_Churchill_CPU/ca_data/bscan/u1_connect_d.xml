@@ -1,0 +1,28 @@
+<!-- Created Sat Jun 17 20:27:52 2023 from ITL Source digital/u1_connect_d -->
+<Test name="u1_connect_d"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+</Chain>
+<Device name="u1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="A7"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="B8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="A6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="C6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="P4"><node name="BMC_SEC_BOOT_JTAG_TDO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T4"><node name="LJTAG_TDO_HDR_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P5"><node name="JTAG_BMC_TDI_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N6"><node name="BMC_SEC_BOOT_JTAG_TCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P7"><node name="JTAG_TDO_3V3_I210" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N8"><node name="BMC_SEC_BOOT_JTAG_TDI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T9"><node name="CPU_SEC_BOOT_JTAG_TMS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R10"><node name="LJTAG_TCK_HDR_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N10"><node name="LJTAG_TDI_HDR_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P16"><node name="CPU_PCH_HOT_1V_L" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1596098619   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:19 2020
+disconnect all
+connect s to "GND"
+connect i to "CPU_PWR_DEBUG_L_C"
+!connect gl to "P1V05_COMBINED" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar200m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "c1074_c" is a commented test.

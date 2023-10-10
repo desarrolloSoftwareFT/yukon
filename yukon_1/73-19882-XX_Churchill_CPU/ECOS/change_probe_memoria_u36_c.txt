@@ -1,0 +1,30 @@
+  NODE SPI0_10GE_FLSH_CLK_3V_C  (remove in pin test )   no populled
+    ALTERNATES
+         22500,   23880 TOP UNRELIABLE;
+
+@  NODE SPI0_10GE_FLSH_CLK_3V_ST_C   (remove in pin test )   no populled
+    ALTERNATES
+         22150,   24700 TOP UNRELIABLE;
+
+@  NODE SPI0_10GE_FLSH_CS_L_3V_ST_C   (remove in pin test )  no populled
+    ALTERNATES
+         21320,   24700 TOP UNRELIABLE;
+
+@  NODE SPI0_10GE_FLSH_MISO_3V_C      (remove in pins test ) no populled
+    ALTERNATES
+         18870,   25630 TOP UNRELIABLE;
+         
+@  NODE SPI0_10GE_FLSH_MOSI_3V_ST_C   (remove in pins test ) no populled
+    ALTERNATES
+         21320,   24200 TOP UNRELIABLE;
+         
+
+  U92_C (need to check to make sure these are short probes) 
+    1.SPI0_10GE_FLSH_CS_L_3V_C                                it is short
+    2.SPI0_10GE_FLSH_MISO_3V_ST_C                             it is short
+    3.FPGA_CPU_MEM_WP_L                                       it is short
+
+    5.SPI0_10GE_FLSH_MOSI_3V_C                                it is short
+    6.SPI0_10GE_FLSH_CLK_3V_C   (need to make sure probe remove)   no populled
+    7.PU_10GE_FLSH0_HOLD_L_C                                  it is short
+

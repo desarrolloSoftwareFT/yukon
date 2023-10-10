@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600512810  Va700                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+on failure
+report parallel devices
+report "r10_p4_m1"
+end on failure
+disconnect all
+connect i to "PMOD_PH4_SNU_RC_M1"
+connect s to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r9_p4_m1" test.
+off failure

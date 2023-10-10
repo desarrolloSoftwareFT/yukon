@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176091   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:31 2020
+disconnect all
+connect s to "UNNAMED_3_CAP_I35_B"
+connect i to "UNNAMED_3_CAP_I34_A"
+connect g to "A2_5V" 
+capacitor 470p, 35, 35, fr1024, re5, wb, ar50.0m, comp
+! "bma1_c10" test.

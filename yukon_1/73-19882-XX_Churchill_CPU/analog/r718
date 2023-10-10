@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512937  V26de                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "SF_JTAG_TCK"
+connect i to "JTAG_BMC_FPGA_TCK"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r718" test.

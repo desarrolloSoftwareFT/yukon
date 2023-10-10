@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513015  Va794                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "SML1ALERT_PCHHOT_C"
+connect i to "FM_PCH_HOT_N_P3V3"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1626_c" test.

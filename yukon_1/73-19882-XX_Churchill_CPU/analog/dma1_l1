@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512725  V735e                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect i to "PWR_A1V2_DIDT"
+connect s to "A1_2V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_l1" test.

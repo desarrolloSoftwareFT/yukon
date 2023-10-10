@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176294   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:55 2020
+disconnect all
+connect s to "BMC_OBFL_SPI1_MISO"
+connect i to "SRT_MISO_OBFL_BMC"
+connect a to "BMC_OBFL_SPI1_MISO"
+connect b to "SRT_MISO_OBFL_BMC"
+resistor 22, 40, 20, re2, ar500m
+! "r932" test.

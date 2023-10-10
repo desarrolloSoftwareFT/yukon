@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512905  Vebc1                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "CONSOLE_RXD_BB"
+connect i to "CONSOLE_RXD_BB_X86FPGA"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r488" test.

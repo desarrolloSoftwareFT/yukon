@@ -1,0 +1,51 @@
+!!!!   24    0    1 1621641648  V39ef                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:19 2020
+
+disable "u1_c_u1"
+
+ground bounce suppression   on
+family "LVT"
+!family "LVT_1V05"
+
+chain "u1_c_u1"
+ tdi "LJTAG_TDI_HDR_3V3_MUX"
+ tdo "LJTAG_TDO_HDR_3V3_MUX"
+ tms "LJTAG_TMS_HDR_3V3_MUX"
+ tck "LJTAG_TCK_HDR_3V3_MUX"
+ trst "LJTAG_TRST_L_HDR_3V3"
+!  tdi "JTAG_BDX_TDI"!family "LVT_1V05"
+!  tdo "JTAG_BDX_TDO"!family "LVT_1V05"
+!  tms "JTAG_BDX_TMS"!family "LVT_1V05"
+!  tck "JTAG_BDX_TCK"!family "LVT_1V05"
+!  trst "JTAG_BDX_TRST_N"!family "LVT_1V05"
+  devices
+    !"u1_c", "custom_lib/B1510342501_I210.bsm", "I210", no
+    !"u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+     "u1_c", "custom_lib/b1510634101_BDX_DE_NS.BSDL", "lga", no
+    !"u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    !"u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    !"u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    !"u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+
+disables "disable vector"
+ node "BDXDE_DRAM_PWROK" family "LVT_1V05" hybrid default "1"
+ node "LAN_PWRGOOD_C" family "LVT_1V05" hybrid default "1"
+ node "PWRGOOD_CPU_C" family "LVT_1V05" hybrid default "1"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","PWRGOOD_CPU_C","LAN_PWRGOOD_C"
+  unit "disable_1"
+  pcf
+  "111"
+  end pcf
+  end unit
+end disables
+
+nodes
+end nodes
+
+end disable
+

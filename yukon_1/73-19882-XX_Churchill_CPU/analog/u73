@@ -1,0 +1,25 @@
+!!!!    2    0    1 1600996488  Vc0f5                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:58 2020
+
+test powered analog
+ !  power pins 1
+   nonanalog pins 1
+
+   test "output"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "output"
+   connect i to pins 2           ! Output
+   connect l to pins 3                      ! Ground
+
+   detector dcv, expect  2.06
+   measure   2.22,   1.9
+end subtest
+
+!
+!  End test
+!

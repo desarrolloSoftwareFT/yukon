@@ -1,0 +1,43 @@
+!!!!    2    0    1 1600995474  V137e                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+!  test "IN"
+!  test "EN"
+  test "OUT"
+!  test "PG"
+end test
+
+subtest "IN"
+  connect i to pins 13
+  connect l to ground
+
+  detector dcv, expect 12
+  measure 12.5, 11.5
+end subtest
+
+subtest "EN"
+  connect i to pins 7
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 3.3, 2.0
+end subtest
+
+subtest "OUT"
+  connect i to "P5V"
+  connect l to ground
+
+  detector dcv, expect 5
+  measure 5.25, 4.75
+end subtest
+
+subtest "PG"
+  connect i to pins 6
+  connect l to ground
+
+  detector dcv, expect 2.5
+  measure 2.5*1.05, 2.5*0.95
+end subtest
+
+

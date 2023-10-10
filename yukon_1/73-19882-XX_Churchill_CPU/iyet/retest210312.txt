@@ -1,0 +1,920 @@
+----------------------------------------
+73-19882-04
+Fri Mar 12 08:43:38 2021
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.6801k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C88
+----------------------------------------
+73-19882-04
+Fri Mar 12 08:51:38 2021
+----------------------------------------
+c681 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   28.965u
+Nominal:    65.000u
+High Limit: 87.750u
+Low Limit:  39.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c677 100n
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.8956k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C6M
+----------------------------------------
+73-19882-04
+Fri Mar 12 09:32:27 2021
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.7869k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C88
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 09:39:36 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144  245
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323  245
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C86
+----------------------------------------
+TestJet Report for "testjet".
+Fri Mar 12 09:39:52 2021
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin R7  Node jtag_tck_3v3_i210
+  Measured 22.2             (BRC 214112)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C86
+----------------------------------------
+TestJet Report for "testjet".
+Fri Mar 12 09:40:00 2021
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin R7  Node jtag_tck_3v3_i210
+  Measured 22.7             (BRC 214112)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C86
+----------------------------------------
+73-19882-04
+Fri Mar 12 09:47:38 2021
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.7875k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C86
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 09:57:18 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750 Open
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: buf_spi_flsh_sel_c     119176 Open
+                r736_c.2
+                r739_c.2
+               r2397_c.1
+                u33_c.6
+To:   fpga_spi_gold_sel       12234
+                r739_c.1
+                u40.B22
+Common Devices:
+                 r739_c
+Message is:
+Check r739_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: P1V5_PCH_2             208130 Open
+                c296_c.1
+                e_c633.1
+                e_c634.1
+                e_c635.1
+                e_c636.1
+                e_c637.1
+                e_r956.1
+                e_u108.9
+               e_u108.10
+                 r4_v.1
+Too many to print.
+To:   UNNAMED_6_CAP_I17_B     20944
+                 c653.1
+                e_r923.2
+                 r511.2
+Common Devices:
+                  r511
+Message is:
+Check r511
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: p3v3_pch_2              12237 Open
+                a_c828.1
+                a_c833.2
+                a_c834.2
+                a_q28.1
+                a_q28.2
+                a_q28.3
+               a_q28%cr.A
+              a_q28%pwr.S
+               a_q28%qf.S
+               a_r1273.1
+Too many to print.
+To:   PMOD_P3V3_PCH_VSENSE_P 122146
+                 r6_v.2
+                r2091.1
+Common Devices:
+                  r6_v
+Message is:
+Check r6_v
+------End, 5 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 09:57:27 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971 Open
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: p3v3_pch_2              12237 Open
+                a_c828.1
+                a_c833.2
+                a_c834.2
+                a_q28.1
+                a_q28.2
+                a_q28.3
+               a_q28%cr.A
+              a_q28%pwr.S
+               a_q28%qf.S
+               a_r1273.1
+Too many to print.
+To:   PMOD_P3V3_PCH_VSENSE_P 122146
+                 r6_v.2
+                r2091.1
+Common Devices:
+                  r6_v
+Message is:
+Check r6_v
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: pmod_p1v5_pch_pg_3v     11974 3179
+                e_r955.2
+                 r378.1
+               r1581_c.1
+               r1641_c.1
+                 u1.A5
+                u40.AA18
+To:   PWRGD_P1V5_PCH_R        11533 3179
+                e_r955.1
+                e_u108.3
+Common Devices:
+                 e_r955
+Message is:
+Check e_r955
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 09:57:36 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: serdes_pll_vssa         21750  109
+                 c678.2
+                 c682.2
+                 u40.T6
+To:   GND                     21126  109
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                  u40
+Message is:  None.
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076   51
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158   51
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971 Open
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: p3v3_pch_2              12237 Open
+                a_c828.1
+                a_c833.2
+                a_c834.2
+                a_q28.1
+                a_q28.2
+                a_q28.3
+               a_q28%cr.A
+              a_q28%pwr.S
+               a_q28%qf.S
+               a_r1273.1
+Too many to print.
+To:   PMOD_P3V3_PCH_VSENSE_P 122146
+                 r6_v.2
+                r2091.1
+Common Devices:
+                  r6_v
+Message is:
+Check r6_v
+------End, 4 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+TestJet Report for "testjet".
+Fri Mar 12 10:02:59 2021
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin P13  Node cpld_spi_mosi
+  Measured -0.7             (BRC 119153)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin D1  Node cpld_spi_mosi
+  Measured 2.0              (BRC 119153)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+TestJet Report for "testjet".
+Fri Mar 12 10:03:07 2021
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin P13  Node cpld_spi_mosi
+  Measured -0.0             (BRC 119153)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin D1  Node cpld_spi_mosi
+  Measured 1.2              (BRC 119153)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+73-19882-04
+Fri Mar 12 10:06:48 2021
+----------------------------------------
+r477 HAS FAILED
+12-2475-02 RES,TKF,1 k ohm,0.063W,5%,SM,
+Measured:   -10.638M
+Nominal:    1.0000k
+High Limit: 1.2500k
+Low Limit:  800.00
+Resistance in OHMS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   140.31
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+c1346_c HAS FAILED
+11-101274-01 CAP,CE,2.2uF,16.0 V,10%,X5R
+Measured:   1.8873u
+Nominal:    2.2000u
+High Limit: 2.9700u
+Low Limit:  1.3200u
+Capacitance in FARADS
+Status:  1H
+Source Current Compliance
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+73-19882-04
+Fri Mar 12 10:06:59 2021
+----------------------------------------
+r477 HAS FAILED
+12-2475-02 RES,TKF,1 k ohm,0.063W,5%,SM,
+Measured:   188.35k
+Nominal:    1.0000k
+High Limit: 1.2500k
+Low Limit:  800.00
+Resistance in OHMS
+----------------------------------------
+c1346_c HAS FAILED
+11-101274-01 CAP,CE,2.2uF,16.0 V,10%,X5R
+Measured:   -118.85p
+Nominal:    2.2000u
+High Limit: 2.9700u
+Low Limit:  1.3200u
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+73-19882-04
+Fri Mar 12 10:07:05 2021
+----------------------------------------
+r477 HAS FAILED
+12-2475-02 RES,TKF,1 k ohm,0.063W,5%,SM,
+Measured:   63.339k
+Nominal:    1.0000k
+High Limit: 1.2500k
+Low Limit:  800.00
+Resistance in OHMS
+----------------------------------------
+c1346_c HAS FAILED
+11-101274-01 CAP,CE,2.2uF,16.0 V,10%,X5R
+Measured:   476.16p
+Nominal:    2.2000u
+High Limit: 2.9700u
+Low Limit:  1.3200u
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+73-19882-04
+Fri Mar 12 10:07:12 2021
+----------------------------------------
+r477 HAS FAILED
+12-2475-02 RES,TKF,1 k ohm,0.063W,5%,SM,
+Measured:   225.43k
+Nominal:    1.0000k
+High Limit: 1.2500k
+Low Limit:  800.00
+Resistance in OHMS
+----------------------------------------
+c1346_c HAS FAILED
+11-101274-01 CAP,CE,2.2uF,16.0 V,10%,X5R
+Measured:   118.68p
+Nominal:    2.2000u
+High Limit: 2.9700u
+Low Limit:  1.3200u
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C85
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:21:55 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127  359
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r      22226  359
+                 r309.1
+                 u1.B6
+Common Devices:
+                  r309
+Message is:
+Check r309
+----------------------------------------
+Open #2 Thresh 35, Delay 50us       Ohms
+From: DRAM_PWR_OK_FPGA       223127  367
+                 r251.2
+                 r309.2
+                r1683.1
+To:   dram_pwr_ok_fpga_r2    221109  367
+                 r251.1
+                u40.E21
+Common Devices:
+                  r251
+Message is:
+Check r251
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:22:04 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111 Open
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:22:17 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111 Open
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+73-19882-04
+Fri Mar 12 11:24:12 2021
+----------------------------------------
+bma5_c8 HAS FAILED
+11-3113-01 CAP,CE,0.1uF,16.0 V,10%,X7R,S
+Measured:   42.599p
+Nominal:    0.10000u
+High Limit: 0.13500u
+Low Limit:  0.060000u
+Capacitance in FARADS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.7891k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+73-19882-04
+Fri Mar 12 11:24:23 2021
+----------------------------------------
+bma5_c8 HAS FAILED
+11-3113-01 CAP,CE,0.1uF,16.0 V,10%,X7R,S
+Measured:   47.332p
+Nominal:    0.10000u
+High Limit: 0.13500u
+Low Limit:  0.060000u
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+73-19882-04
+Fri Mar 12 11:24:30 2021
+----------------------------------------
+bma5_c8 HAS FAILED
+11-3113-01 CAP,CE,0.1uF,16.0 V,10%,X7R,S
+Measured:   37.866p
+Nominal:    0.10000u
+High Limit: 0.13500u
+Low Limit:  0.060000u
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:28:23 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: fpga_golden_wp_l       222111 Open
+                 r231.2
+                r827_c.1
+                u34_c.3
+To:   bios_golden_wp_r        22303
+                 r231.1
+                 u40.B3
+Common Devices:
+                  r231
+Message is:
+Check r231
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C8C
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:31:01 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   srt_spi_boot_mosi      215141
+                r1434.2
+                 u8.U17
+Common Devices:
+                 r1434
+Message is:
+Check r1434
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: SPI_BOOT_MOSI          222141 Open
+                 r360.1
+                r1277.1
+                r1434.1
+                x_r444.2
+To:   bm_spi_flsh_mosi       220110
+                 r360.2
+                u300.15
+                u301.15
+                x_r215.2
+Common Devices:
+                  r360
+Message is:
+Check r360
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: pmod_vob_vsense_n_m1    20516 Open
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+To:     v                    204144
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+Common Devices:
+                 r10_m1
+Message is:
+Check r10_m1
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: FAN10_TACH_ZL           20930 Open
+                 c209.1
+                 l16.2
+                 r411.2
+To:   FAN10_TACH_CON          20543
+                fc_p6.1
+                 l16.1
+Common Devices:
+                  l16
+Message is:
+Check l16
+----------------------------------------
+Open #5 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144 Open
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+----------------------------------------
+Open #6 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209141
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+Common Devices:
+                  r605
+Message is:
+Check r605
+----------------------------------------
+Open #7 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209128
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+Common Devices:
+                bma4_r4
+Message is:
+Check bma4_r4
+------End, 7 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C8D
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:31:10 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pmod_vob_vsense_n_m1    20516 Open
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+To:     v                    204144
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+Common Devices:
+                 r10_m1
+Message is:
+Check r10_m1
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144  103
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323  103
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM25080C8D
+----------------------------------------
+73-19882-04
+Fri Mar 12 11:32:16 2021
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.6828k
+Nominal:    105.00
+High Limit: 136.50
+Low Limit:  73.500
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM25080C8D
+----------------------------------------
+Shorts Report for "shorts".
+Fri Mar 12 11:36:43 2021
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144 Open
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   fltr_dac1_3p3v          22323
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+Common Devices:
+                  l27
+Message is:
+Check l27
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM25080C8D

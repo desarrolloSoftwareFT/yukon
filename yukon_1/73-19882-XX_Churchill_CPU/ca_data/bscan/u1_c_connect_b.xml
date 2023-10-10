@@ -1,0 +1,55 @@
+<!-- Created Sat Jun 17 20:18:30 2023 from ITL Source digital/u1_c_connect_b -->
+<Test name="u1_c_connect_b"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="BDXDE_DRAM_PWROK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="LAN_PWRGOOD_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="PWRGOOD_CPU_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u1_i2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="19"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="18"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="29"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="4"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_c_pch"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Partial</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="BM3"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BJ2"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BM5"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="BK3"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u1_c"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="T76"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R75"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="V78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="T78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="U75"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="CV55"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="AE77"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="V76"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="AH78"><node name="PCH_UART1_RXD_1V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AG77"><node name="PCH_UART0_RXD_1V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF66"><node name="CPU_ADR_COMPLETE_1V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD66"><node name="CPU_ADR_IN_1V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD74"><node name="SERIRQ_DIR_1V_ST_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE75"><node name="SERIRQ_DATA_1V_ST_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD76"><node name="PU_CPU_WAKELAN_L_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC75"><node name="CPU_ERR1_1V_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC77"><node name="CPU_ERR0_1V_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF69"><node name="PU_CPU_SAFE_MODE_BOOT_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AG71"><node name="CPU_PROCHOT_1V_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AJ71"><node name="SVID_DATA_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AH62"><node name="PU_CPU_EAR_L_C" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD69"><node name="PU_CPU_BMCINIT_C" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

@@ -1,0 +1,1097 @@
+!!!!   24    1    1 1594178145  V9f43                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! IPG: rev 09.20p  Wed Jul 08 11:15:46 2020
+
+silicon nail "bmc_ddr4"
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT_1V0"
+
+
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX" family "LVT"
+  tdo "LJTAG_TDO_HDR_3V3_MUX" family "LVT"
+  tms "LJTAG_TMS_HDR_3V3_MUX" family "LVT"
+  tck "LJTAG_TCK_HDR_3V3_MUX" family "LVT"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/15-104798-01_cpu.bsm", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm_noidcode", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm_noidcode", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm_noidcode", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+!IPG: Family information could not be found for node BMC_TRST_L
+  node "BMC_TRST_L" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "JTAG_BDX_TRST_N" family "LVT" hybrid default "1"
+  node "LAN_PWRGOOD_C" family "LVT" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMC_TRST_L"
+  pcf order is nodes "BMCPHY_INT_M","GPIOA0_JTSCAN","GPIOA1_JTSCAN"
+  pcf order is nodes "JTAG_BDX_TRST_N","LAN_PWRGOOD_C","PWRGOOD_CPU_C"
+  pcf order is nodes "WP_R"
+  unit "disable_1"
+  pcf
+  "1111101110"
+  end pcf
+  end unit
+end disables
+!IPG: User may add VCL pass-through statements here if needed.
+
+set slew rate on nodes "LJTAG_TDI_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TMS_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TCK_HDR_3V3_MUX" to 250
+
+nodes
+  silicon node "MEM_DDR4_DQ<8>" test "bmc_ddr4.A3", "u8.AA8"  
+  silicon node "MEM_DDR4_DQS_1_DN" test "bmc_ddr4.A7", "u8.AB6"  
+  silicon node "MEM_DDR4_DQS_1_DP" test "bmc_ddr4.B7", "u8.AB7"  
+  silicon node "MEM_DDR4_DQ<9>" test "bmc_ddr4.B8", "u8.Y8"  
+  silicon node "MEM_DDR4_DQ<12>" test "bmc_ddr4.C2", "u8.AA6"  
+  silicon node "MEM_DDR4_DQ<10>" test "bmc_ddr4.C3", "u8.Y7"  
+  silicon node "MEM_DDR4_DQ<11>" test "bmc_ddr4.C7", "u8.W8"  
+  silicon node "MEM_DDR4_DQ<13>" test "bmc_ddr4.C8", "u8.W7"  
+  silicon node "MEM_DDR4_DQ<14>" test "bmc_ddr4.D3", "u8.V7"  
+  silicon node "MEM_DDR4_DQ<15>" test "bmc_ddr4.D7", "u8.U7"  
+  silicon node "MEM_DDR4_DM0" test "bmc_ddr4.E2", "u8.U8"  
+  silicon node "MEM_DDR4_DM1" test "bmc_ddr4.E7", "u8.AB8"  
+  silicon node "MEM_DDR4_DQS_0_DN" test "bmc_ddr4.F3", "u8.AB10"  
+  silicon node "MEM_DDR4_DQ<1>" test "bmc_ddr4.F7", "u8.W10"  
+  silicon node "MEM_DDR4_DQ<0>" test "bmc_ddr4.G2", "u8.U10"  
+  silicon node "MEM_DDR4_DQS_0_DP" test "bmc_ddr4.G3", "u8.AB9"  
+  silicon node "MEM_DDR4_DQ<4>" test "bmc_ddr4.H2", "u8.U9"  
+  silicon node "MEM_DDR4_DQ<2>" test "bmc_ddr4.H3", "u8.Y10"  
+  silicon node "MEM_DDR4_DQ<3>" test "bmc_ddr4.H7", "u8.AA10"  
+  silicon node "MEM_DDR4_DQ<5>" test "bmc_ddr4.H8", "u8.Y9"  
+  silicon node "MEM_DDR4_DQ<6>" test "bmc_ddr4.J3", "u8.W9"  
+  silicon node "MEM_DDR4_DQ<7>" test "bmc_ddr4.J7", "u8.V9"  
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_CKE" test "bmc_ddr4.K2" !IPG: Default
+  ! silicon node "MEM_DDR4_CKE" test "bmc_ddr4.K2", "u8.Y11" !IPG: Alternate
+ 
+  silicon node "MEM_DDR4_ODT" test "bmc_ddr4.K3", "u8.V11"  
+  silicon node "MEM_DDR4_CK_DP" test "bmc_ddr4.K7", "u8.AB11"  
+  silicon node "MEM_DDR4_CK_DN" test "bmc_ddr4.K8", "u8.AB12"  
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_WE" test "bmc_ddr4.L2" !IPG: Default
+  ! silicon node "MEM_DDR4_WE" test "bmc_ddr4.L2", "u8.Y12" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_ACT_N" test "bmc_ddr4.L3" !IPG: Default
+  ! silicon node "MEM_DDR4_ACT_N" test "bmc_ddr4.L3", "u8.Y15" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_CS" test "bmc_ddr4.L7" !IPG: Default
+  ! silicon node "MEM_DDR4_CS" test "bmc_ddr4.L7", "u8.AA12" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_RAS" test "bmc_ddr4.L8" !IPG: Default
+  ! silicon node "MEM_DDR4_RAS" test "bmc_ddr4.L8", "u8.W12" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_BG0" test "bmc_ddr4.M2" !IPG: Default
+  ! silicon node "MEM_DDR4_BG0" test "bmc_ddr4.M2", "u8.W13" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<10>" test "bmc_ddr4.M3" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<10>" test "bmc_ddr4.M3", "u8.U13" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<12>" test "bmc_ddr4.M7" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<12>" test "bmc_ddr4.M7", "u8.Y14" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_CAS" test "bmc_ddr4.M8" !IPG: Default
+  ! silicon node "MEM_DDR4_CAS" test "bmc_ddr4.M8", "u8.AB13" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_BA0" test "bmc_ddr4.N2" !IPG: Default
+  ! silicon node "MEM_DDR4_BA0" test "bmc_ddr4.N2", "u8.U12" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<4>" test "bmc_ddr4.N3" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<4>" test "bmc_ddr4.N3", "u8.W15" !IPG: Alternate
+ 
+  silicon node "MEM_DDR4_MA<3>" test "bmc_ddr4.N7", "u8.U14"  
+  silicon node "MEM_DDR4_BA1" test "bmc_ddr4.N8", "u8.Y13"  
+  silicon node "MEM_DDR4_RESET" test "bmc_ddr4.P1", "u8.AB17"  
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<6>" test "bmc_ddr4.P2" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<6>" test "bmc_ddr4.P2", "u8.AB16" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<0>" test "bmc_ddr4.P3" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<0>" test "bmc_ddr4.P3", "u8.V13" !IPG: Alternate
+ 
+  silicon node "MEM_DDR4_MA<1>" test "bmc_ddr4.P7", "u8.AB14"  
+  silicon node "MEM_DDR4_MA<5>" test "bmc_ddr4.P8", "u8.V15"  
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_ALERT_N" test "bmc_ddr4.P9" !IPG: Default
+  ! silicon node "MEM_DDR4_ALERT_N" test "bmc_ddr4.P9", "u8.U16" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<8>" test "bmc_ddr4.R2" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<8>" test "bmc_ddr4.R2", "u8.W16" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<2>" test "bmc_ddr4.R3" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<2>" test "bmc_ddr4.R3", "u8.W14" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<9>" test "bmc_ddr4.R7" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<9>" test "bmc_ddr4.R7", "u8.Y16" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<7>" test "bmc_ddr4.R8" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<7>" test "bmc_ddr4.R8", "u8.AA16" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<11>" test "bmc_ddr4.T2" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<11>" test "bmc_ddr4.T2", "u8.AA14" !IPG: Alternate
+ 
+  !IPG: Alternative Node Statements. Only ONE statement may be active.
+  node "MEM_DDR4_MA<13>" test "bmc_ddr4.T8" !IPG: Default
+  ! silicon node "MEM_DDR4_MA<13>" test "bmc_ddr4.T8", "u8.AB15" !IPG: Alternate
+ 
+
+  !IPG: node "UNNAMED_4196_DDR4SDRAMX16_I1_ZQ" NonDigital "bmc_ddr4.F9"
+  !IPG: FIXED node "GND" test "bmc_ddr4.N9"
+  !IPG: FIXED node "GND" test "bmc_ddr4.T3"
+  !IPG: UNCONNECTED "bmc_ddr4.T7"
+  inputs "MEM_DDR4_WE"
+  inputs "MEM_DDR4_RESET"
+  inputs "MEM_DDR4_RAS"
+  inputs "MEM_DDR4_ODT"
+  inputs "MEM_DDR4_MA<9>"
+  inputs "MEM_DDR4_MA<8>"
+  inputs "MEM_DDR4_MA<7>"
+  inputs "MEM_DDR4_MA<6>"
+  inputs "MEM_DDR4_MA<5>"
+  inputs "MEM_DDR4_MA<4>"
+  inputs "MEM_DDR4_MA<3>"
+  inputs "MEM_DDR4_MA<2>"
+  inputs "MEM_DDR4_MA<1>"
+  inputs "MEM_DDR4_MA<13>"
+  inputs "MEM_DDR4_MA<12>"
+  inputs "MEM_DDR4_MA<11>"
+  inputs "MEM_DDR4_MA<10>"
+  inputs "MEM_DDR4_MA<0>"
+  inputs "MEM_DDR4_DM1"
+  inputs "MEM_DDR4_DM0"
+  inputs "MEM_DDR4_CS"
+  inputs "MEM_DDR4_CK_DP"
+  inputs "MEM_DDR4_CK_DN"
+  inputs "MEM_DDR4_CKE"
+  inputs "MEM_DDR4_CAS"
+  inputs "MEM_DDR4_BG0"
+  inputs "MEM_DDR4_BA1"
+  inputs "MEM_DDR4_BA0"
+  inputs "MEM_DDR4_ALERT_N"
+  inputs "MEM_DDR4_ACT_N"
+  outputs "MEM_DDR4_DQS_1_DP"
+  outputs "MEM_DDR4_DQS_1_DN"
+  outputs "MEM_DDR4_DQS_0_DP"
+  outputs "MEM_DDR4_DQS_0_DN"
+  outputs "MEM_DDR4_DQ<9>"
+  outputs "MEM_DDR4_DQ<8>"
+  outputs "MEM_DDR4_DQ<7>"
+  outputs "MEM_DDR4_DQ<6>"
+  outputs "MEM_DDR4_DQ<5>"
+  outputs "MEM_DDR4_DQ<4>"
+  outputs "MEM_DDR4_DQ<3>"
+  outputs "MEM_DDR4_DQ<2>"
+  outputs "MEM_DDR4_DQ<1>"
+  outputs "MEM_DDR4_DQ<15>"
+  outputs "MEM_DDR4_DQ<14>"
+  outputs "MEM_DDR4_DQ<13>"
+  outputs "MEM_DDR4_DQ<12>"
+  outputs "MEM_DDR4_DQ<11>"
+  outputs "MEM_DDR4_DQ<10>"
+  outputs "MEM_DDR4_DQ<0>"
+  set terminators to on
+
+
+  pcf order is nodes "MEM_DDR4_MA<1>"
+  pcf order is nodes "MEM_DDR4_MA<6>"
+  pcf order is nodes "MEM_DDR4_MA<8>"
+  pcf order is nodes "MEM_DDR4_ALERT_N"
+  pcf order is nodes "MEM_DDR4_MA<9>"
+  pcf order is nodes "MEM_DDR4_MA<2>"
+  pcf order is nodes "MEM_DDR4_MA<5>"
+  pcf order is nodes "MEM_DDR4_MA<13>"
+  pcf order is nodes "MEM_DDR4_MA<0>"
+  pcf order is nodes "MEM_DDR4_MA<7>"
+  pcf order is nodes "MEM_DDR4_MA<11>"
+  pcf order is nodes "MEM_DDR4_CK_DN"
+  pcf order is nodes "MEM_DDR4_ODT"
+  pcf order is nodes "MEM_DDR4_CAS"
+  pcf order is nodes "MEM_DDR4_CKE"
+  pcf order is nodes "MEM_DDR4_RAS"
+  pcf order is nodes "MEM_DDR4_MA<10>"
+  pcf order is nodes "MEM_DDR4_ACT_N"
+  pcf order is nodes "MEM_DDR4_MA<4>"
+  pcf order is nodes "MEM_DDR4_BA1"
+  pcf order is nodes "MEM_DDR4_DM0"
+  pcf order is nodes "MEM_DDR4_DM1"
+  pcf order is nodes "MEM_DDR4_CK_DP"
+  pcf order is nodes "MEM_DDR4_WE"
+  pcf order is nodes "MEM_DDR4_MA<12>"
+  pcf order is nodes "MEM_DDR4_BA0"
+  pcf order is nodes "MEM_DDR4_BG0"
+  pcf order is nodes "MEM_DDR4_MA<3>"
+  pcf order is nodes "MEM_DDR4_RESET"
+  pcf order is nodes "MEM_DDR4_CS"
+  pcf order is nodes "MEM_DDR4_DQ<0>"
+  pcf order is nodes "MEM_DDR4_DQ<1>"
+  pcf order is nodes "MEM_DDR4_DQ<2>"
+  pcf order is nodes "MEM_DDR4_DQ<3>"
+  pcf order is nodes "MEM_DDR4_DQ<4>"
+  pcf order is nodes "MEM_DDR4_DQ<5>"
+  pcf order is nodes "MEM_DDR4_DQ<6>"
+  pcf order is nodes "MEM_DDR4_DQ<7>"
+  pcf order is nodes "MEM_DDR4_DQ<8>"
+  pcf order is nodes "MEM_DDR4_DQ<9>"
+  pcf order is nodes "MEM_DDR4_DQ<10>"
+  pcf order is nodes "MEM_DDR4_DQ<11>"
+  pcf order is nodes "MEM_DDR4_DQ<12>"
+  pcf order is nodes "MEM_DDR4_DQ<13>"
+  pcf order is nodes "MEM_DDR4_DQ<14>"
+  pcf order is nodes "MEM_DDR4_DQ<15>"
+  pcf order is nodes "MEM_DDR4_DQS_0_DP"
+  pcf order is nodes "MEM_DDR4_DQS_0_DN"
+  pcf order is nodes "MEM_DDR4_DQS_1_DP"
+  pcf order is nodes "MEM_DDR4_DQS_1_DN"
+
+  unit "Default"
+    pcf
+      "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZXXXXXXXXXXXXXXXXXXXX" !vector 1 "Default"
+    end pcf
+  end unit
+
+end nodes
+end silicon nail
+
+
+!The following is the commented source for the original library.
+! ! IPG: rev 09.20p  Wed Jul 08 11:15:46 2020
+! 
+! !!********************************************************
+! !! cisco pn: 15-103396-01
+! !! Micron pn: MT40A512M16
+! !! Package: 96-Ball x16 Ball Assignments
+! !! Connectivity Test Mode: Logic Equations for a x16 Device
+! !!********************************************************
+! 
+! default device "bmc_ddr4"
+! set terminators to on
+! assign MT0 to nodes "MEM_DDR4_MA<1>","MEM_DDR4_MA<6>",*    !(A1, A6, PAR)
+! assign MT1 to nodes "MEM_DDR4_MA<8>","MEM_DDR4_ALERT_N","MEM_DDR4_MA<9>"    !(A8, ALERT_n, A9)
+! assign MT2 to nodes "MEM_DDR4_MA<2>","MEM_DDR4_MA<5>","MEM_DDR4_MA<13>"    !(A2, A5, A13)
+! assign MT3 to nodes "MEM_DDR4_MA<0>","MEM_DDR4_MA<7>","MEM_DDR4_MA<11>"    !(A0, A7, A11)
+! assign MT4 to nodes "MEM_DDR4_CK_DN","MEM_DDR4_ODT","MEM_DDR4_CAS"    !(CK_c, ODT, CAS_n/A15)
+! assign MT5 to nodes "MEM_DDR4_CKE","MEM_DDR4_RAS","MEM_DDR4_MA<10>"    !(CKE, RAS_n/A16, A10/AP)
+! assign MT6 to nodes "MEM_DDR4_ACT_N","MEM_DDR4_MA<4>","MEM_DDR4_BA1"    !(ACT_n, A4, BA1)
+! assign MT7 to nodes "MEM_DDR4_DM0","MEM_DDR4_DM1","MEM_DDR4_CK_DP"    !(DMU_n/DBIU_n , DML_n/DBIL_n, CK_t)
+! assign MT8 to nodes "MEM_DDR4_WE","MEM_DDR4_MA<12>","MEM_DDR4_BA0"    !(WE_n/A14, A12/BC, BA0)
+! assign MT9 to nodes "MEM_DDR4_BG0","MEM_DDR4_MA<3>","MEM_DDR4_RESET",* !(BG0, A3, RESET_n, TEN)
+! assign CS_L to nodes "MEM_DDR4_CS"
+! assign DQ0_DQ7 to nodes "MEM_DDR4_DQ<0>","MEM_DDR4_DQ<1>","MEM_DDR4_DQ<2>","MEM_DDR4_DQ<3>","MEM_DDR4_DQ<4>","MEM_DDR4_DQ<5>","MEM_DDR4_DQ<6>","MEM_DDR4_DQ<7>"
+! assign DQ8_DQ15 to nodes "MEM_DDR4_DQ<8>","MEM_DDR4_DQ<9>","MEM_DDR4_DQ<10>","MEM_DDR4_DQ<11>","MEM_DDR4_DQ<12>","MEM_DDR4_DQ<13>","MEM_DDR4_DQ<14>","MEM_DDR4_DQ<15>"
+! assign LDQS_T_LDQS_C to nodes "MEM_DDR4_DQS_0_DP","MEM_DDR4_DQS_0_DN"
+! assign UDQS_T_UDQS_C to nodes "MEM_DDR4_DQS_1_DP","MEM_DDR4_DQS_1_DN"
+! assign ZQ to nodes *,*
+! assign VDD to nodes *, *, *, *, *, *, *, *, *, *
+! assign VDDQ to nodes *, *, *, *, *, *, *, *, *, *
+! assign VPP to nodes *, *
+! assign VREFCA to nodes *
+! assign VSS to nodes *, *, *, *, *, *, *, *, *
+! assign VSSQ to nodes *, *, *, *, *, *, *, *, *, *
+! 
+! 
+! inputs MT0
+! inputs MT1
+! inputs MT2
+! inputs MT3
+! inputs MT4
+! inputs MT5
+! inputs MT6
+! inputs MT7
+! inputs MT8
+! inputs MT9
+! inputs CS_L
+! outputs DQ0_DQ7
+! outputs DQ8_DQ15
+! outputs LDQS_T_LDQS_C
+! outputs UDQS_T_UDQS_C
+! nondigital ZQ
+! power VDD
+! power VDDQ
+! power VPP
+! power VREFCA
+! power VSS
+! power VSSQ
+! 
+! family LVT_1V0
+! 
+! !####################################################
+! !DQ0 = MT0 = XOR (A1, A6, PAR)
+! !DQ1 = MT1 = XOR (A8, ALERT_n, A9)
+! !DQ2 = MT2 = XOR (A2, A5, A13)
+! !DQ3 = MT3 = XOR (A0, A7, A11)
+! !DQ4 = MT4 = XOR (CK_c, ODT, CAS_n/A15)
+! !DQ5 = MT5 = XOR (CKE, RAS_n/A16, A10/AP)
+! !DQ6 = MT6 = XOR (ACT_n, A4, BA1)
+! !DQ7 = MT7 = XOR (DMU_n/DBIU_n , DML_n/DBIL_n, CK_t)
+! !DQ8 = INV DQ0
+! !DQ9 = INV DQ1
+! !DQ10 = INV DQ2
+! !DQ11 = INV DQ3
+! !DQ12 = INV DQ4
+! !DQ13 = INV DQ5
+! !DQ14 = INV DQ6
+! !DQ15 = INV DQ7
+! !LDQS_t = MT8 = XOR (WE_n/A14, A12 / BC, BA0)
+! !LDQS_c = MT9 = XOR (BG0, A3, RESET_n and TEN)
+! !UDQS_t = INV LDQS_t
+! !UDQS_c = INV LDQS_c
+! !Init0: CKE 0; RESET_L 0; TEN 0;CS_N 1 (wait 200us)
+! !Init1: CKE 0; RESET_L 1; TEN 0;CS_N 1 (wait 500us)
+! !Init2: CKE 1; RESET_L 1; TEN 0;CS_N 1
+! !Init3: CKE input; RESET_L 1; TEN 1;CS_N 0
+! !####################################################
+! 
+! vector Init0
+!   set MT0 to "ZZZ"
+!   set MT1 to "ZZZ"
+!   set MT2 to "ZZZ"
+!   set MT3 to "ZZZ"
+!   set MT4 to "XZZ"
+!   set MT5 to "0ZZ"
+!   set MT6 to "ZZZ"
+!   set MT7 to "ZZZ"
+!   set MT8 to "ZZZ"
+!   set MT9 to "ZZ00"
+!   set CS_L to "1"
+!   set DQ0_DQ7 to "XXXXXXXX"
+!   set DQ8_DQ15 to "XXXXXXXX"
+!   set LDQS_T_LDQS_C to "XX"
+!   set UDQS_T_UDQS_C to "XX"
+! end vector
+! 
+! vector Init1
+!   set MT0 to "ZZZ"
+!   set MT1 to "ZZZ"
+!   set MT2 to "ZZZ"
+!   set MT3 to "ZZZ"
+!   set MT4 to "XZZ"
+!   set MT5 to "0ZZ"
+!   set MT6 to "ZZZ"
+!   set MT7 to "ZZZ"
+!   set MT8 to "ZZZ"
+!   set MT9 to "ZZ10"
+!   set CS_L to "1"
+!   set DQ0_DQ7 to "XXXXXXXX"
+!   set DQ8_DQ15 to "XXXXXXXX"
+!   set LDQS_T_LDQS_C to "XX"
+!   set UDQS_T_UDQS_C to "XX"
+! end vector
+! 
+! vector Init2
+!   set MT0 to "ZZZ"
+!   set MT1 to "ZZZ"
+!   set MT2 to "ZZZ"
+!   set MT3 to "ZZZ"
+!   set MT4 to "XZZ"
+!   set MT5 to "1ZZ"
+!   set MT6 to "ZZZ"
+!   set MT7 to "ZZZ"
+!   set MT8 to "ZZZ"
+!   set MT9 to "ZZ10"
+!   set CS_L to "1"
+!   set DQ0_DQ7 to "XXXXXXXX"
+!   set DQ8_DQ15 to "XXXXXXXX"
+!   set LDQS_T_LDQS_C to "XX"
+!   set UDQS_T_UDQS_C to "XX"
+! end vector
+! 
+! vector Init3
+!   set MT0 to "ZZZ"
+!   set MT1 to "ZZZ"
+!   set MT2 to "ZZZ"
+!   set MT3 to "ZZZ"
+!   set MT4 to "XZZ"
+!   set MT5 to "1ZZ"
+!   set MT6 to "ZZZ"
+!   set MT7 to "ZZZ"
+!   set MT8 to "ZZZ"
+!   set MT9 to "ZZ11"
+!   set CS_L to "1"
+!   set DQ0_DQ7 to "XXXXXXXX"
+!   set DQ8_DQ15 to "XXXXXXXX"
+!   set LDQS_T_LDQS_C to "XX"
+!   set UDQS_T_UDQS_C to "XX"
+! end vector
+! 
+! vector Init4
+!   set MT0 to "ZZZ"
+!   set MT1 to "ZZZ"
+!   set MT2 to "ZZZ"
+!   set MT3 to "ZZZ"
+!   set MT4 to "XZZ"
+!   set MT5 to "ZZZ"
+!   set MT6 to "ZZZ"
+!   set MT7 to "ZZZ"
+!   set MT8 to "ZZZ"
+!   set MT9 to "ZZ11"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "XXXXXXXX"
+!   set DQ8_DQ15 to "XXXXXXXX"
+!   set LDQS_T_LDQS_C to "XX"
+!   set UDQS_T_UDQS_C to "XX"
+! end vector
+! 
+! vector All_0
+!   set MT0 to "000"
+!   set MT1 to "000"
+!   set MT2 to "000"
+!   set MT3 to "000"
+!   set MT4 to "X00"
+!   set MT5 to "000"
+!   set MT6 to "000"
+!   set MT7 to "000"
+!   set MT8 to "000"
+!   set MT9 to "0011"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "00000000"
+!   set DQ8_DQ15 to "11111111"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_0_with_A1_high
+!   initialize to All_0
+!   set MT0 to "100"
+!   set DQ0_DQ7 to "10000000"
+!   set DQ8_DQ15 to "01111111"
+! end vector
+! 
+! vector All_0_with_A6_high
+!   initialize to All_0
+!   set MT0 to "010"
+!   set DQ0_DQ7 to "10000000"
+!   set DQ8_DQ15 to "01111111"
+! end vector
+! 
+! vector All_0_with_PAR_high
+!   initialize to All_0
+!   set MT0 to "001"
+!   set DQ0_DQ7 to "10000000"
+!   set DQ8_DQ15 to "01111111"
+! end vector
+! 
+! vector All_0_with_A8_high
+!   initialize to All_0
+!   set MT1 to "100"
+!   set DQ0_DQ7 to "01000000"
+!   set DQ8_DQ15 to "10111111"
+! end vector
+! 
+! vector All_0_with_ALERT_N_high
+!   initialize to All_0
+!   set MT1 to "010"
+!   set DQ0_DQ7 to "01000000"
+!   set DQ8_DQ15 to "10111111"
+! end vector
+! 
+! vector All_0_with_A9_high
+!   initialize to All_0
+!   set MT1 to "001"
+!   set DQ0_DQ7 to "01000000"
+!   set DQ8_DQ15 to "10111111"
+! end vector
+! 
+! vector All_0_with_A2_high
+!   initialize to All_0
+!   set MT2 to "100"
+!   set DQ0_DQ7 to "00100000"
+!   set DQ8_DQ15 to "11011111"
+! end vector
+! 
+! vector All_0_with_A5_high
+!   initialize to All_0
+!   set MT2 to "010"
+!   set DQ0_DQ7 to "00100000"
+!   set DQ8_DQ15 to "11011111"
+! end vector
+! 
+! vector All_0_with_A13_high
+!   initialize to All_0
+!   set MT2 to "001"
+!   set DQ0_DQ7 to "00100000"
+!   set DQ8_DQ15 to "11011111"
+! end vector
+! 
+! vector All_0_with_A0_high
+!   initialize to All_0
+!   set MT3 to "100"
+!   set DQ0_DQ7 to "00010000"
+!   set DQ8_DQ15 to "11101111"
+! end vector
+! 
+! vector All_0_with_A7_high
+!   initialize to All_0
+!   set MT3 to "010"
+!   set DQ0_DQ7 to "00010000"
+!   set DQ8_DQ15 to "11101111"
+! end vector
+! 
+! vector All_0_with_A11_high
+!   initialize to All_0
+!   set MT3 to "001"
+!   set DQ0_DQ7 to "00010000"
+!   set DQ8_DQ15 to "11101111"
+! end vector
+! 
+! vector All_0_with_CK_C_high
+!   initialize to All_0
+!   set MT4 to "X00"
+!   set DQ0_DQ7 to "00001000"
+!   set DQ8_DQ15 to "11110111"
+! end vector
+! 
+! vector All_0_with_ODT_high
+!   initialize to All_0
+!   set MT4 to "X10"
+!   set DQ0_DQ7 to "00001000"
+!   set DQ8_DQ15 to "11110111"
+! end vector
+! 
+! vector All_0_with_CAS_N_high
+!   initialize to All_0
+!   set MT4 to "X01"
+!   set DQ0_DQ7 to "00001000"
+!   set DQ8_DQ15 to "11110111"
+! end vector
+! 
+! vector All_0_with_CKE_high
+!   initialize to All_0
+!   set MT5 to "100"
+!   set DQ0_DQ7 to "00000100"
+!   set DQ8_DQ15 to "11111011"
+! end vector
+! 
+! vector All_0_with_RAS_N_high
+!   initialize to All_0
+!   set MT5 to "010"
+!   set DQ0_DQ7 to "00000100"
+!   set DQ8_DQ15 to "11111011"
+! end vector
+! 
+! vector All_0_with_A10_high
+!   initialize to All_0
+!   set MT5 to "001"
+!   set DQ0_DQ7 to "00000100"
+!   set DQ8_DQ15 to "11111011"
+! end vector
+! 
+! vector All_0_with_ACT_N_high
+!   initialize to All_0
+!   set MT6 to "100"
+!   set DQ0_DQ7 to "00000010"
+!   set DQ8_DQ15 to "11111101"
+! end vector
+! 
+! vector All_0_with_A4_high
+!   initialize to All_0
+!   set MT6 to "010"
+!   set DQ0_DQ7 to "00000010"
+!   set DQ8_DQ15 to "11111101"
+! end vector
+! 
+! vector All_0_with_BA1_high
+!   initialize to All_0
+!   set MT6 to "001"
+!   set DQ0_DQ7 to "00000010"
+!   set DQ8_DQ15 to "11111101"
+! end vector
+! 
+! vector All_0_with_DMU_N_high
+!   initialize to All_0
+!   set MT7 to "100"
+!   set DQ0_DQ7 to "00000001"
+!   set DQ8_DQ15 to "11111110"
+! end vector
+! 
+! vector All_0_with_DML_N_high
+!   initialize to All_0
+!   set MT7 to "010"
+!   set DQ0_DQ7 to "00000001"
+!   set DQ8_DQ15 to "11111110"
+! end vector
+! 
+! vector All_0_with_CK_T_high
+!   initialize to All_0
+!   set MT7 to "001"
+!   set DQ0_DQ7 to "00000001"
+!   set DQ8_DQ15 to "11111110"
+! end vector
+! 
+! vector All_0_with_WE_N_high
+!   initialize to All_0
+!   set MT8 to "100"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector All_0_with_A12_high
+!   initialize to All_0
+!   set MT8 to "010"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector All_0_with_BA0_high
+!   initialize to All_0
+!   set MT8 to "001"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector All_0_with_BG0_high
+!   initialize to All_0
+!   set MT9 to "1011"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_0_with_A3_high
+!   initialize to All_0
+!   set MT9 to "0111"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_1
+!   set MT0 to "111"
+!   set MT1 to "111"
+!   set MT2 to "111"
+!   set MT3 to "111"
+!   set MT4 to "X11"
+!   set MT5 to "111"
+!   set MT6 to "111"
+!   set MT7 to "111"
+!   set MT8 to "111"
+!   set MT9 to "1111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "11111111"
+!   set DQ8_DQ15 to "00000000"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector All_1_with_A1_low
+!   initialize to All_1
+!   set MT0 to "011"
+!   set DQ0_DQ7 to "01111111"
+!   set DQ8_DQ15 to "10000000"
+! end vector
+! 
+! vector All_1_with_A6_low
+!   initialize to All_1
+!   set MT0 to "101"
+!   set DQ0_DQ7 to "01111111"
+!   set DQ8_DQ15 to "10000000"
+! end vector
+! 
+! vector All_1_with_PAR_low
+!   initialize to All_1
+!   set MT0 to "110"
+!   set DQ0_DQ7 to "01111111"
+!   set DQ8_DQ15 to "10000000"
+! end vector
+! 
+! vector All_1_with_A8_low
+!   initialize to All_1
+!   set MT1 to "011"
+!   set DQ0_DQ7 to "10111111"
+!   set DQ8_DQ15 to "01000000"
+! end vector
+! 
+! vector All_1_with_ALERT_N_low
+!   initialize to All_1
+!   set MT1 to "101"
+!   set DQ0_DQ7 to "10111111"
+!   set DQ8_DQ15 to "01000000"
+! end vector
+! 
+! vector All_1_with_A9_low
+!   initialize to All_1
+!   set MT1 to "101"
+!   set DQ0_DQ7 to "10111111"
+!   set DQ8_DQ15 to "01000000"
+! end vector
+! 
+! vector All_1_with_A2_low
+!   initialize to All_1
+!   set MT2 to "011"
+!   set DQ0_DQ7 to "11011111"
+!   set DQ8_DQ15 to "00100000"
+! end vector
+! 
+! vector All_1_with_A5_low
+!   initialize to All_1
+!   set MT2 to "101"
+!   set DQ0_DQ7 to "11011111"
+!   set DQ8_DQ15 to "00100000"
+! end vector
+! 
+! vector All_1_with_A13_low
+!   initialize to All_1
+!   set MT2 to "110"
+!   set DQ0_DQ7 to "11011111"
+!   set DQ8_DQ15 to "00100000"
+! end vector
+! 
+! vector All_1_with_A0_low
+!   initialize to All_1
+!   set MT3 to "011"
+!   set DQ0_DQ7 to "11101111"
+!   set DQ8_DQ15 to "00010000"
+! end vector
+! 
+! vector All_1_with_A7_low
+!   initialize to All_1
+!   set MT3 to "101"
+!   set DQ0_DQ7 to "11101111"
+!   set DQ8_DQ15 to "00010000"
+! end vector
+! 
+! vector All_1_with_A11_low
+!   initialize to All_1
+!   set MT3 to "110"
+!   set DQ0_DQ7 to "11101111"
+!   set DQ8_DQ15 to "00010000"
+! end vector
+! 
+! vector All_1_with_CK_C_low
+!   initialize to All_1
+!   set MT4 to "x11"
+!   set DQ0_DQ7 to "11110111"
+!   set DQ8_DQ15 to "00001000"
+! end vector
+! 
+! vector All_1_with_ODT_low
+!   initialize to All_1
+!   set MT4 to "X01"
+!   set DQ0_DQ7 to "11110111"
+!   set DQ8_DQ15 to "00001000"
+! end vector
+! 
+! vector All_1_with_CAS_N_low
+!   initialize to All_1
+!   set MT4 to "X10"
+!   set DQ0_DQ7 to "11110111"
+!   set DQ8_DQ15 to "00001000"
+! end vector
+! 
+! vector All_1_with_CKE_low
+!   initialize to All_1
+!   set MT5 to "011"
+!   set DQ0_DQ7 to "11111011"
+!   set DQ8_DQ15 to "00000100"
+! end vector
+! 
+! vector All_1_with_RAS_N_low
+!   initialize to All_1
+!   set MT5 to "101"
+!   set DQ0_DQ7 to "11111011"
+!   set DQ8_DQ15 to "00000100"
+! end vector
+! 
+! vector All_1_with_A10_low
+!   initialize to All_1
+!   set MT5 to "110"
+!   set DQ0_DQ7 to "11111011"
+!   set DQ8_DQ15 to "00000100"
+! end vector
+! 
+! vector All_1_with_ACT_N_low
+!   initialize to All_1
+!   set MT6 to "011"
+!   set DQ0_DQ7 to "11111101"
+!   set DQ8_DQ15 to "00000010"
+! end vector
+! 
+! vector All_1_with_A4_low
+!   initialize to All_1
+!   set MT6 to "101"
+!   set DQ0_DQ7 to "11111101"
+!   set DQ8_DQ15 to "00000010"
+! end vector
+! 
+! vector All_1_with_BA1_low
+!   initialize to All_1
+!   set MT6 to "110"
+!   set DQ0_DQ7 to "11111101"
+!   set DQ8_DQ15 to "00000010"
+! end vector
+! 
+! vector All_1_with_DMU_N_low
+!   initialize to All_1
+!   set MT7 to "011"
+!   set DQ0_DQ7 to "11111110"
+!   set DQ8_DQ15 to "00000001"
+! end vector
+! 
+! vector All_1_with_DML_N_low
+!   initialize to All_1
+!   set MT7 to "101"
+!   set DQ0_DQ7 to "11111110"
+!   set DQ8_DQ15 to "00000001"
+! end vector
+! 
+! vector All_1_with_CK_T_low
+!   initialize to All_1
+!   set MT7 to "110"
+!   set DQ0_DQ7 to "11111110"
+!   set DQ8_DQ15 to "00000001"
+! end vector
+! 
+! vector All_1_with_WE_N_low
+!   initialize to All_1
+!   set MT8 to "011"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_1_with_A12_low
+!   initialize to All_1
+!   set MT8 to "101"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_1_with_BA0_low
+!   initialize to All_1
+!   set MT8 to "110"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector All_1_with_BG0_low
+!   initialize to All_1
+!   set MT9 to "0111"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector All_1_with_A3_low
+!   initialize to All_1
+!   set MT9 to "1011"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector DQ0_DQ7_high1
+!   set MT0 to "100"
+!   set MT1 to "100"
+!   set MT2 to "100"
+!   set MT3 to "100"
+!   set MT4 to "X00"
+!   set MT5 to "100"
+!   set MT6 to "100"
+!   set MT7 to "100"
+!   set MT8 to "100"
+!   set MT9 to "1011"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "11111111"
+!   set DQ8_DQ15 to "00000000"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector DQ0_DQ7_high2
+!   set MT0 to "010"
+!   set MT1 to "010"
+!   set MT2 to "010"
+!   set MT3 to "010"
+!   set MT4 to "X10"
+!   set MT5 to "010"
+!   set MT6 to "010"
+!   set MT7 to "010"
+!   set MT9 to "0111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "11111111"
+!   set DQ8_DQ15 to "00000000"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector DQ0_DQ7_high3
+!   set MT0 to "001"
+!   set MT1 to "001"
+!   set MT2 to "001"
+!   set MT3 to "001"
+!   set MT4 to "X01"
+!   set MT5 to "001"
+!   set MT6 to "001"
+!   set MT7 to "001"
+!   set MT8 to "001"
+!   set MT9 to "0111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "11111111"
+!   set DQ8_DQ15 to "00000000"
+!   set LDQS_T_LDQS_C to "1X"
+!   set UDQS_T_UDQS_C to "0X"
+! end vector
+! 
+! vector DQ0_DQ7_low1
+!   set MT0 to "110"
+!   set MT1 to "110"
+!   set MT2 to "110"
+!   set MT3 to "110"
+!   set MT4 to "X10"
+!   set MT5 to "110"
+!   set MT6 to "110"
+!   set MT7 to "110"
+!   set MT8 to "110"
+!   set MT9 to "1111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "00000000"
+!   set DQ8_DQ15 to "11111111"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector DQ0_DQ7_low2
+!   set MT0 to "011"
+!   set MT1 to "011"
+!   set MT2 to "011"
+!   set MT3 to "011"
+!   set MT4 to "X11"
+!   set MT5 to "011"
+!   set MT6 to "011"
+!   set MT7 to "011"
+!   set MT8 to "011"
+!   set MT9 to "1111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "00000000"
+!   set DQ8_DQ15 to "11111111"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! vector DQ0_DQ7_low3
+!   set MT0 to "101"
+!   set MT1 to "101"
+!   set MT2 to "101"
+!   set MT3 to "101"
+!   set MT4 to "X01"
+!   set MT5 to "101"
+!   set MT6 to "101"
+!   set MT7 to "101"
+!   set MT8 to "101"
+!   set MT9 to "1111"
+!   set CS_L to "0"
+!   set DQ0_DQ7 to "00000000"
+!   set DQ8_DQ15 to "11111111"
+!   set LDQS_T_LDQS_C to "0X"
+!   set UDQS_T_UDQS_C to "1X"
+! end vector
+! 
+! !IPG: Unit removed due to conflict in vector INIT3
+! !IPG: Pin N9 tied low. 
+! !*IPG*unit "DDR4_Test"
+! !*IPG* execute Init0
+! !*IPG* wait 200u
+! !*IPG* execute Init1
+! !*IPG* wait 500u
+! !*IPG* execute Init2
+! !*IPG* execute Init3
+! !*IPG* execute Init4
+! !*IPG* execute All_0_with_A1_high
+! !*IPG* execute All_0_with_A6_high
+! !*IPG* execute All_0_with_PAR_high
+! !*IPG* execute All_0_with_A8_high
+! !*IPG* execute All_0_with_ALERT_N_high
+! !*IPG* execute All_0_with_A9_high
+! !*IPG* execute All_0_with_A2_high
+! !*IPG* execute All_0_with_A5_high
+! !*IPG* execute All_0_with_A13_high
+! !*IPG* execute All_0_with_A0_high
+! !*IPG* execute All_0_with_A7_high
+! !*IPG* execute All_0_with_A11_high
+! !*IPG* execute All_0_with_CK_C_high
+! !*IPG* execute All_0_with_ODT_high
+! !*IPG* execute All_0_with_CAS_N_high
+! !*IPG* execute All_0_with_CKE_high
+! !*IPG* execute All_0_with_RAS_N_high
+! !*IPG* execute All_0_with_A10_high
+! !*IPG* execute All_0_with_ACT_N_high
+! !*IPG* execute All_0_with_A4_high
+! !*IPG* execute All_0_with_BA1_high
+! !*IPG* execute All_0_with_DMU_N_high
+! !*IPG* execute All_0_with_DML_N_high
+! !*IPG* execute All_0_with_CK_T_high
+! !*IPG* execute All_0_with_WE_N_high
+! !*IPG* execute All_0_with_A12_high
+! !*IPG* execute All_0_with_BA0_high
+! !*IPG* execute All_0_with_BG0_high
+! !*IPG* execute All_0_with_A3_high
+! !*IPG* execute All_1_with_A1_low
+! !*IPG* execute All_1_with_A6_low
+! !*IPG* execute All_1_with_PAR_low
+! !*IPG* execute All_1_with_A8_low
+! !*IPG* execute All_1_with_ALERT_N_low
+! !*IPG* execute All_1_with_A9_low
+! !*IPG* execute All_1_with_A2_low
+! !*IPG* execute All_1_with_A5_low
+! !*IPG* execute All_1_with_A13_low
+! !*IPG* execute All_1_with_A0_low
+! !*IPG* execute All_1_with_A7_low
+! !*IPG* execute All_1_with_A11_low
+! !*IPG* execute All_1_with_CK_C_low
+! !*IPG* execute All_1_with_ODT_low
+! !*IPG* execute All_1_with_CAS_N_low
+! !*IPG* execute All_1_with_CKE_low
+! !*IPG* execute All_1_with_RAS_N_low
+! !*IPG* execute All_1_with_A10_low
+! !*IPG* execute All_1_with_ACT_N_low
+! !*IPG* execute All_1_with_A4_low
+! !*IPG* execute All_1_with_BA1_low
+! !*IPG* execute All_1_with_DMU_N_low
+! !*IPG* execute All_1_with_DML_N_low
+! !*IPG* execute All_1_with_CK_T_low
+! !*IPG* execute All_1_with_WE_N_low
+! !*IPG* execute All_1_with_A12_low
+! !*IPG* execute All_1_with_BA0_low
+! !*IPG* execute All_1_with_BG0_low
+! !*IPG* execute All_1_with_A3_low
+! !*IPG* !execute All_0
+! !*IPG* !execute All_1
+! !*IPG* !execute DQ0_DQ7_high1
+! !*IPG* !execute DQ0_DQ7_high2
+! !*IPG* !execute DQ0_DQ7_high3
+! !*IPG* !execute DQ0_DQ7_low1
+! !*IPG* !execute DQ0_DQ7_low2
+! !*IPG* !execute DQ0_DQ7_low3
+! !*IPG*end unit

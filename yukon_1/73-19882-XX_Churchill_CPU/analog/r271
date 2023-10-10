@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175959   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:20 2020
+disconnect all
+connect i to "MDDR_IMP_CALIB_RES"
+connect s to "GND"
+jumper 10.0k, re4, wb, ar100m, op
+! "r271" test.

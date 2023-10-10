@@ -1,0 +1,9 @@
+!!!!    2    0    1 1600513069  Vd4f3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:30 2020
+disconnect all
+connect s to "P12V"
+connect i to "FAN67_EN"
+connect g to "A2_5V"
+connect g to "GND"
+!B!resistor 20k, 25, 25, re5, wb, ar500m, wa855m
+resistor 20k,25,25,re5,wb,ar500m,ed

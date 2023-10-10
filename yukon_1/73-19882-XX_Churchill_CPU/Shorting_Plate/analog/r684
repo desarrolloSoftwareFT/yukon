@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes I2C_MB_ALERT_R P-Pin resistance"
+report "check nodes MB_I2C_ALERT_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "I2C_MB_ALERT_R"
+connect i to "MB_I2C_ALERT_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

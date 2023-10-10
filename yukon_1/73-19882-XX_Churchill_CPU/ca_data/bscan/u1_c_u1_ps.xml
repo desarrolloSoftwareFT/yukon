@@ -1,0 +1,143 @@
+<!-- Created Thu Jul 23 13:26:41 2020 from ITL Source digital/u1_c_u1_ps -->
+<Test name="u1_c_u1_ps"><Type>"Boundary-Scan Powered Shorts Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="ADC_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMC_ENTEST_R" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BMC_FAN_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_GOLD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="BM_SPI_STD_CS0_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="CHASSIS_IDPROM_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="DAC0_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="DAC1_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_DATA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="FPGA_MUX_SCLK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="GPIOA0_JTSCAN" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="GPIOA1_JTSCAN" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="I2C_DDR_EN_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="LAN_PWRGOOD_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="PWRGOOD_CPU_C" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_598_PI5A3157_I520_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_59_PI5A3157_I15_S" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_76_LTC2497_I65_SCL" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="WP_R" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="A7"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="B8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="A6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="C6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="R8"><node name="_D_U1_R8" /></Pin>
+<Pin name="M10"><node name="_D_U1_M10" /></Pin>
+<Pin name="F12"><node name="_D_U1_F12" /></Pin>
+<Pin name="C8"><node name="_D_U1_C8" /></Pin>
+</Device>
+<Device name="u1_i2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="19"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="18"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="29"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="4"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+</Device>
+<Device name="u8"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="C10"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="C8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="D12"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="D11"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="E11"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="K3"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="B14"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="D14"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="D13"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="E13"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="D18"><node name="_D_U8_D18" /></Pin>
+<Pin name="D18"><node name="_D_U8_D18" /></Pin>
+<Pin name="L19"><node name="_D_U8_L19" /></Pin>
+<Pin name="L19"><node name="_D_U8_L19" /></Pin>
+<Pin name="C4"><node name="BMC_NCSI_RXER" /></Pin>
+<Pin name="C4"><node name="BMC_NCSI_RXER" /></Pin>
+</Device>
+<Device name="u1_c_pch"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="BM3"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BJ2"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BM5"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="BK3"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="BN4"><node name="CPU_GPIO18" /></Pin>
+<Pin name="AG7"><node name="USB2_D_N<3>" /></Pin>
+<Pin name="AJ7"><node name="USB2_D_P<3>" /></Pin>
+<Pin name="AL5"><node name="BDWL_FPGA_LPC_DRQ1_L" /></Pin>
+<Pin name="BB7"><node name="SPARE_PCH_IPU_SLP_A_L_C" /></Pin>
+<Pin name="AY7"><node name="SPARE_CPU_SLP_SUS_L_C" /></Pin>
+<Pin name="BJ4"><node name="CPU_GPIO8_OCS" /></Pin>
+</Device>
+<Device name="u1_c"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="T76"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R75"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="V78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="T78"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="U75"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="CV55"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="AE77"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<DeviceEnable><Pin name="V76"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+</Device>
+<NodePair><Node name="BDWL_FPGA_LPC_DRQ1_L" /><Node name="PCH_LPC_AD2_ST_C" /></NodePair>
+<NodePair><Node name="BDWL_FPGA_LPC_DRQ1_L" /><Node name="GPIO_TACH<1>" /></NodePair>
+<NodePair><Node name="BDWL_FPGA_LPC_DRQ1_L" /><Node name="PCH_LPC_AD2_ST_C" /></NodePair>
+<NodePair><Node name="BMC_NCSI_RXER" /><Node name="BMC_NCSI_CRSDV" /></NodePair>
+<NodePair><Node name="BMC_NCSI_RXER" /><Node name="BMC_NCSI_RCLKO_R" /></NodePair>
+<NodePair><Node name="CPU_GPIO18" /><Node name="RST_PCH_SYSRST_N" /></NodePair>
+<NodePair><Node name="CPU_GPIO18" /><Node name="CPU_SATA4GP_GPIO16" /></NodePair>
+<NodePair><Node name="CPU_GPIO18" /><Node name="CPU_GPIO20_SMI_L" /></NodePair>
+<NodePair><Node name="CPU_GPIO18" /><Node name="PCH_SYS_PWROK" /></NodePair>
+<NodePair><Node name="CPU_GPIO18" /><Node name="CPU_SATA4GP_GPIO16" /></NodePair>
+<NodePair><Node name="CPU_GPIO8_OCS" /><Node name="USB_OC2_GPIO41" /></NodePair>
+<NodePair><Node name="CPU_GPIO8_OCS" /><Node name="RST_PCH_SYSRST_N" /></NodePair>
+<NodePair><Node name="SPARE_CPU_SLP_SUS_L_C" /><Node name="GPIO_TACH<4>" /></NodePair>
+<NodePair><Node name="SPARE_CPU_SLP_SUS_L_C" /><Node name="PU_SUSACK_L_C" /></NodePair>
+<NodePair><Node name="SPARE_CPU_SLP_SUS_L_C" /><Node name="PU_SUSWARN_L_C" /></NodePair>
+<NodePair><Node name="SPARE_PCH_IPU_SLP_A_L_C" /><Node name="PU_GPIO31_C" /></NodePair>
+<NodePair><Node name="SPARE_PCH_IPU_SLP_A_L_C" /><Node name="PU_GPIO72_C" /></NodePair>
+<NodePair><Node name="SPARE_PCH_IPU_SLP_A_L_C" /><Node name="SML1DATA_BMC" /></NodePair>
+<NodePair><Node name="USB2_D_N<3>" /><Node name="USB_EXT_DRIVE_DBG_DP" /></NodePair>
+<NodePair><Node name="USB2_D_N<3>" /><Node name="PCH_LPC_AD1_ST_C" /></NodePair>
+<NodePair><Node name="USB2_D_P<3>" /><Node name="USB_EXT_DRIVE_DBG_DP" /></NodePair>
+<NodePair><Node name="USB2_D_P<3>" /><Node name="USB_EXT_DRIVE_DBG_DN" /></NodePair>
+<NodePair><Node name="USB2_D_P<3>" /><Node name="PCH_UART1_RXD_1V" /></NodePair>
+<NodePair><Node name="_D_U1_C8" /><Node name="PCH_CONSOLE_RXD1" /></NodePair>
+<NodePair><Node name="_D_U1_C8" /><Node name="PCH_CONSOLE_TXD" /></NodePair>
+<NodePair><Node name="_D_U1_C8" /><Node name="FM_PCH_HOT_N_P3V3" /></NodePair>
+<NodePair><Node name="_D_U1_C8" /><Node name="CPLD_I2C_SDA" /></NodePair>
+<NodePair><Node name="_D_U1_C8" /><Node name="PCH_CONSOLE_RXD" /></NodePair>
+<NodePair><Node name="_D_U1_F12" /><Node name="SRT_P2PM_TX" /></NodePair>
+<NodePair><Node name="_D_U1_F12" /><Node name="PWRGD_P1V5_PCH_1V" /></NodePair>
+<NodePair><Node name="_D_U1_M10" /><Node name="FM_CPU2PCH_THROT_LVT3" /></NodePair>
+<NodePair><Node name="_D_U1_M10" /><Node name="CPU_SEC_BOOT_JTAG_TCK" /></NodePair>
+<NodePair><Node name="_D_U1_M10" /><Node name="CPU_SEC_BOOT_JTAG_TDI" /></NodePair>
+<NodePair><Node name="_D_U1_M10" /><Node name="LJTAG_TMS_HDR_3V3" /></NodePair>
+<NodePair><Node name="_D_U1_M10" /><Node name="LJTAG_TDI_HDR_3V3" /></NodePair>
+<NodePair><Node name="_D_U1_R8" /><Node name="CLK50M_CPLD" /></NodePair>
+<NodePair><Node name="_D_U1_R8" /><Node name="CPU_SEC_BOOT_JTAG_TMS" /></NodePair>
+<NodePair><Node name="_D_U8_D18" /><Node name="BMC_CPU_SPIFLASH_EN_L" /></NodePair>
+<NodePair><Node name="_D_U8_D18" /><Node name="I2C_BUS1_ALERT_R" /></NodePair>
+<NodePair><Node name="_D_U8_L19" /><Node name="UNNAMED_4188_AST2520_I1_PEREXTRSVD" /></NodePair>
+<NodePair><Node name="_D_U8_L19" /><Node name="CHASSIS_IDPROM_SDA" /></NodePair>
+<NodePair><Node name="_D_U8_L19" /><Node name="BMC_FPD_SEL_R" /></NodePair>
+<NodePair><Node name="_D_U8_L19" /><Node name="BMC_ID_ACCESS_3" /></NodePair>
+<NodePair><Node name="_D_U8_L19" /><Node name="BMC_ID_ACCESS_4" /></NodePair>
+</Test>

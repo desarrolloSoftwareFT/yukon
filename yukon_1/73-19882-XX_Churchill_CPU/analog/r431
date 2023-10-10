@@ -1,0 +1,7 @@
+!!!!    2    0    1 1623168840   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:50 2020
+disconnect all
+connect s to "A2_5V"
+connect i to "PMOD_PVCCIN_P1V05_VCCSUS_VRHOT_L"
+jumper 5k, re2, ed, op
+!resistor 10k, 25, 20, re4, wb, ar100m !P4c a2

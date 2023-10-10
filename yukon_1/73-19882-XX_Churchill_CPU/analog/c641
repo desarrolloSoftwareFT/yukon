@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600521040  Vcf46                                         
+!* 22pf can't be tested
+! IPG: rev 09.20p  Wed Jul 08 10:41:55 2020
+disconnect all
+connect i to "SRT_CPU_SEC_BOOT_JTAG_TCK"
+connect s to "GND"
+connect gl to "CPU_SEC_BOOT_JTAG_TCK"
+capacitor 22p - 50.293p, 137.73, 15.00, fr8192, re5, wb, ar100m, sl, comp
+warning "excessive minus tolerance or low limit."
+! "c641" is a commented test.

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1594176647   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:48 2020
+on failure
+   report parallel devices
+   report "c1073_c 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "PCH_SYS_PWROK"
+resistor 4.75k, 25, 20, re4, wb, ar200m, wa4.96m
+off failure

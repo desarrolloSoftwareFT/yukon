@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512713  Vc1e6                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect s to "PMOD_P3V3_EN"
+connect i to "UNNAMED_9_RES_I3_B"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "bma3_r11" test.

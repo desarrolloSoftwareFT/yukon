@@ -1,0 +1,26 @@
+!!!!    2    0    1 1597476945   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:31 2020
+on failure
+   report parallel devices
+   report "a_c834 22.0u"
+   report "c128_c 1.00u"
+   report "c132_c 1.00u"
+   report "c136_c 1.00u"
+   report "c139_c 1.00u"
+   report "c142_c 1.00u"
+   report "a_c828 100n"
+   report "c118_c 100n"
+   report "c122_c 100n"
+   report "c1099_c 100n"
+   report "c110_c 10.0n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P3V3_PCH_2"
+!connect gl to "P3V3" 
+!connect g to "ADC0_3V3_PCH_CH1" 
+!connect g to "PMOD_P3V3_PCH_PG" 
+!connect g to "RST_PCH_SYSRST_N" 
+capacitor 49.41u, 35, 40, fr128, re1, ar50.0m, ed, sm, nocomp, am0.2
+! "a_c833" test.
+off failure

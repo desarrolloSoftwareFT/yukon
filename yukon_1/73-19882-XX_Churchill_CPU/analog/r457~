@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176292   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:53 2020
+disconnect all
+connect s to "VR_SMB_CLK"
+connect i to "SRT_VR_SMB_CLK"
+connect a to "VR_SMB_CLK"
+connect b to "SRT_VR_SMB_CLK"
+resistor 22, 40, 20, re2, ar500m
+! "r457" test.

@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176436   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:47:17 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "CPLD_I2C_SDA"
+resistor 4.7k, 25, 20, re4, wb, ar200m

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes RST_RTCRST_L P-Pin resistance"
+report "check nodes P3V3_VBAT P-Pin resistance"
+end on failure
+disconnect all
+connect s to "RST_RTCRST_L"
+connect i to "P3V3_VBAT"
+resistor 10,20,100, re1, ar100m,ed
+off failure

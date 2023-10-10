@@ -1,0 +1,12 @@
+rm -rf *.bak
+rm -rf */*.bak
+rm -rf */*/*.bak
+rm -rf */*/*/*.bak
+rm -rf */*/*/*~
+rm -rf */*/*~
+rm -rf */*~
+rm -rf *~
+rm -rf *.r
+rm -rf */*.r
+rm -rf */*/*.r
+rm -rf */*/*/*.r

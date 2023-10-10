@@ -1,0 +1,26 @@
+!!!!    2    0    1 1668206460  Vac78                                         
+
+test powered analog;Value
+
+  test "Boot_EN"
+
+end test
+
+!##########################
+
+subtest "Boot_EN"
+  global Value
+
+!@connect i to nodes "UNNAMED_256_LED_I189_A"  !@cr25
+!@connect l to "LED_SB_L<5>"
+
+
+connect i to nodes "UNNAMED_256_LED_I183_A"  !@cr44
+!@connect l to ground      ! GND
+connect l to "led_sb_l<0>"
+
+  detector dcv, expect 3.0
+  measure 3.0, 2,Value!!!
+end subtest
+
+

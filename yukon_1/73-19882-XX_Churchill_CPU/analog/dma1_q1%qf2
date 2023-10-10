@@ -1,0 +1,124 @@
+!!!!    2    0    1 1600569586  V373b                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:52:49 2020
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+on failure
+   report parallel devices
+   report "c40 100u"
+   report "c41 100u"
+   report "c46 10.0n"
+   report "c47 10.0n"
+   report "c49 10.0n"
+   report "c52 100n"
+   report "c53 100n"
+   report "c64 100p"
+   report "c65 1.00u"
+   report "c67 4.70u"
+   report "c127 1.00u"
+   report "c229 100u"
+   report "c230 100n"
+   report "c237 10.0u"
+   report "c239 1.00u"
+   report "c243 1.00u"
+   report "c247 1.00u"
+   report "c249 1.00u"
+   report "c251 1.00u"
+   report "c253 1.00u"
+   report "c255 1.00u"
+   report "c257 1.00u"
+   report "c266 10.0n"
+   report "c285 1.00u"
+   report "c286 1.00u"
+   report "c287 4.70u"
+   report "c290 10.0n"
+   report "c291 1.00u"
+   report "c293 1.00u"
+   report "c294 1.00u"
+   report "c300 100n"
+   report "c322 100n"
+   report "c323 100n"
+   report "c324 100n"
+   report "c330 100n"
+   report "c331 100n"
+   report "c333 220u"
+   report "c334 220u"
+   report "c335 10.0n"
+   report "c336 220u"
+   report "c337 330u"
+   report "c338 10.0n"
+   report "c339 10.0n"
+   report "c340 10.0n"
+   report "c341 10.0n"
+   report "c342 10.0n"
+   report "c343 10.0n"
+   report "c344 10.0n"
+   report "c363 10.0n"
+   report "c364 10.0n"
+   report "c365 10.0u"
+   report "c405 100n"
+   report "c410 100n"
+   report "c411 100n"
+   report "c416 100n"
+   report "c420 100n"
+   report "c427 10.0n"
+   report "c429 10.0n"
+   report "c432 100n"
+   report "c433 100n"
+   report "c578 10.0u"
+   report "c711 1.00u"
+   report "c712 1.00u"
+   report "c713 1.00u"
+   report "c714 1.00u"
+   report "c715 1.00u"
+   report "c716 1.00u"
+   report "c717 1.00u"
+   report "c718 1.00u"
+   report "c1021 100u"
+   report "c1022 100n"
+   report "c1023 100n"
+   report "c1027 100n"
+   report "c1028 100n"
+   report "c1031 100n"
+   report "c1032 100n"
+   report "c1035 100n"
+   report "c1055 10.0n"
+   report "dma1_c2 47.0u"
+   report "dma1_c27 100u"
+   report "dma1_c28 100u"
+   report "x_c79 22.0u"
+   report "x_c81 470u"
+   report "c579 100n"
+   report "c580 100n"
+   report "c581 10.0n"
+   report "c582 10.0n"
+   report "c366 100n"
+   report "c367 100n"
+   report "c368 10.0n"
+end on failure
+disconnect all
+connect s to "PWR_A1V2_DIDT"
+connect i to "GND"
+connect g to "P12V_STBY" ! 50 ! IPG recommended
+connect g to "ADC0_A1V2_CH8" !4408 ! IPG recommended
+connect g to "PMOD_DDR4_VTT_REFIN" !9494 ! IPG recommended
+connect g to "PWR_A1V2_BG" !2000000000 ! IPG recommended
+connect g to "UNNAMED_4238_CAP_I129_A" !942 ! IPG recommended
+!gg! connect g to "BMC_SEC_BOOT_JTAG_TCK" ! 2000000000
+!gg! connect g to "CLK_BMCPHY_25M_XTAL1" ! 2000000000
+!gg! connect g to "CLK_BMCPHY_25M_XTAL2" ! 2000000000
+!gg! connect g to "MGMT_PHY_XTAL_IN1_R" ! 2000000000
+!gg! connect g to "MGMT_PHY_XTAL_IN2_R" ! 2000000000
+!gg! connect g to "SRT_BMC_SEC_BOOT_JTAG_TCK" ! 2000000000
+!gg! connect g to "UNNAMED_135_CAP_I319_B" ! 2000000000
+!gg! connect g to "XTAL_CLKBUF_25M_IN" ! 2000000000
+!gg! connect g to "XTAL_CPU_RTC_32K_IN" ! 2000000000
+!gg! connect g to "XTAL_CPU_RTC_32K_OUT" ! 2000000000
+nfetr 237, 25.3, re2, ar200m, wa576m
+! "dma1_q1%qf2" test.
+! DUT: nominal 125, plus tol 60.0 %, minus tol 60.0 %
+! DUT: high 200, low 50
+! TEST: high limit 237.48, low limit 25.345
+! Tolerance Multiplier 3.00
+! Remote Sensing is not Allowed
+off failure

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176519   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:40 2020
+disconnect all
+connect s to "UNNAMED_142_NMOSFET_I31_G"
+connect i to "FAN89_PWM_CON"
+connect g to "GND" 
+resistor 220, 30, 20, re3, ar500m, wa1.11m

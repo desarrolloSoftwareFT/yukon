@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176681   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:22 2020
+disconnect all
+connect s to "GND"
+connect i to "CLK_33M_SERIRQ_C"
+connect a to "GND"
+connect b to "CLK_33M_SERIRQ_C"
+resistor 75, 30, 20, re2, ar100m
+! "r466_c" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176739   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:20 2020
+disconnect all
+connect s to "GND"
+connect i to "CLK_100M_CPU_REF_AC_DN"
+connect g to "A3P3V" 
+resistor 127, 30, 20, re3, ar1.00, wa505m

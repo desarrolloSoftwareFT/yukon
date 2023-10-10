@@ -1,0 +1,280 @@
+!!!!    6    0    1 1288445062  V402a                                         
+!
+!***  All contents copyright 2004 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         PI3B3257
+! Alias:             SN74CBTLV3257
+! Part Type:         VLSI
+! Description:       Bus Switch Quad 2 to 1 Mux/Demux
+! Manufacturer:      Pericom, TI
+! Package Style:     16 pin SOP,SOIC
+! Created:           Dec 02, 2004
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-3699-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC to pins 16
+assign GND to pins 8
+
+assign OEB to pins 15
+assign SEL to pins 1
+
+assign A0  to pins 2
+assign A1  to pins 3
+assign YA  to pins 4
+
+assign B0  to pins 5
+assign B1  to pins 6
+assign YB  to pins 7
+
+assign C0  to pins 11
+assign C1  to pins 10
+assign YC  to pins 9
+
+assign D0  to pins 14
+assign D1  to pins 13
+assign YD  to pins 12
+
+power   VCC,GND
+inputs  OEB,SEL
+inputs  A0,A1,B0,B1,C0,C1,D0,D1
+outputs YA,YB,YC,YD
+
+disable YA,YB,YC,YD with OEB to "1"
+
+family LVT
+
+set load on groups YA,YB,YC,YD to pull up
+
+vector A0_YA_0
+ set OEB to "0"
+ set SEL to "0"
+ set A0 to "0"
+ set YA  to "0"
+end vector
+
+vector A0_YA_1
+ set OEB to "0"
+ set SEL to "0"
+ set A0  to "1"
+ set YA  to "1"
+end vector
+
+vector A0_YA_Z
+ set OEB to "1"
+ set SEL to "0"
+ set A0  to "0"
+ set YA  to "1"
+end vector
+
+vector A1_YA_0
+ set OEB to "0"
+ set SEL to "1"
+ set A1  to "0"
+ set YA  to "0"
+end vector
+
+vector A1_YA_1
+ set OEB to "0"
+ set SEL to "1"
+ set A1  to "1"
+ set YA  to "1"
+end vector
+
+vector A1_YA_Z
+ set OEB to "1"
+ set SEL to "1"
+ set A1  to "0"
+ set YA  to "1"
+end vector
+
+vector B0_YB_0
+ set OEB to "0"
+ set SEL to "0"
+ set B0 to "0"
+ set YB  to "0"
+end vector
+
+vector B0_YB_1
+ set OEB to "0"
+ set SEL to "0"
+ set B0  to "1"
+ set YB  to "1"
+end vector
+
+vector B0_YB_Z
+ set OEB to "1"
+ set SEL to "0"
+ set B0  to "0"
+ set YB  to "1"
+end vector
+
+vector B1_YB_0
+ set OEB to "0"
+ set SEL to "1"
+ set B1  to "0"
+ set YB  to "0"
+end vector
+
+vector B1_YB_1
+ set OEB to "0"
+ set SEL to "1"
+ set B1  to "1"
+ set YB  to "1"
+end vector
+
+vector B1_YB_Z
+ set OEB to "1"
+ set SEL to "1"
+ set B1  to "0"
+ set YB  to "1"
+end vector
+
+vector C0_YC_0
+ set OEB to "0"
+ set SEL to "0"
+ set C0 to "0"
+ set YC  to "0"
+end vector
+
+vector C0_YC_1
+ set OEB to "0"
+ set SEL to "0"
+ set C0  to "1"
+ set YC  to "1"
+end vector
+
+vector C0_YC_Z
+ set OEB to "1"
+ set SEL to "0"
+ set C0  to "0"
+ set YC  to "1"
+end vector
+
+vector C1_YC_0
+ set OEB to "0"
+ set SEL to "1"
+ set C1  to "0"
+ set YC  to "0"
+end vector
+
+vector C1_YC_1
+ set OEB to "0"
+ set SEL to "1"
+ set C1  to "1"
+ set YC  to "1"
+end vector
+
+vector C1_YC_Z
+ set OEB to "1"
+ set SEL to "1"
+ set C1  to "0"
+ set YC  to "1"
+end vector
+
+vector D0_YD_0
+ set OEB to "0"
+ set SEL to "0"
+ set D0 to "0"
+ set YD  to "0"
+end vector
+
+vector D0_YD_1
+ set OEB to "0"
+ set SEL to "0"
+ set D0  to "1"
+ set YD  to "1"
+end vector
+
+vector D0_YD_Z
+ set OEB to "1"
+ set SEL to "0"
+ set D0  to "0"
+ set YD  to "1"
+end vector
+
+vector D1_YD_0
+ set OEB to "0"
+ set SEL to "1"
+ set D1  to "0"
+ set YD  to "0"
+end vector
+
+vector D1_YD_1
+ set OEB to "0"
+ set SEL to "1"
+ set D1  to "1"
+ set YD  to "1"
+end vector
+
+vector D1_YD_Z
+ set OEB to "1"
+ set SEL to "1"
+ set D1  to "0"
+ set YD  to "1"
+end vector
+
+! **************************************************************************
+
+unit "YA vs A0"
+ execute A0_YA_0
+ execute A0_YA_1
+ execute A0_YA_Z
+end unit
+
+unit "YA vs A1"
+ execute A1_YA_0
+ execute A1_YA_1
+ execute A1_YA_Z
+end unit
+
+unit "YB vs B0"
+ execute B0_YB_0
+ execute B0_YB_1
+ execute B0_YB_Z
+end unit
+
+unit "YB vs B1"
+ execute B1_YB_0
+ execute B1_YB_1
+ execute B1_YB_Z
+end unit
+
+unit "YC vs C0"
+ execute C0_YC_0
+ execute C0_YC_1
+ execute C0_YC_Z
+end unit
+
+unit "YC vs C1"
+ execute C1_YC_0
+ execute C1_YC_1
+ execute C1_YC_Z
+end unit
+
+unit "YD vs D0"
+ execute D0_YD_0
+ execute D0_YD_1
+ execute D0_YD_Z
+end unit
+
+unit "YD vs D1"
+ execute D1_YD_0
+ execute D1_YD_1
+ execute D1_YD_Z
+end unit
+

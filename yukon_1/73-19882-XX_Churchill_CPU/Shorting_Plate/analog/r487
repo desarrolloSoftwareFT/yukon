@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes CONSOLE_TXD_BB P-Pin resistance"
+report "check nodes CONSOLE_TXD_BB_X86FPGA P-Pin resistance"
+end on failure
+disconnect all
+connect s to "CONSOLE_TXD_BB"
+connect i to "CONSOLE_TXD_BB_X86FPGA"
+resistor 10,20,100, re1, ar100m,ed
+off failure

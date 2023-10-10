@@ -1,0 +1,12 @@
+!!!!    2    0    1 1622920253   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:16 2020
+on failure
+   report parallel devices
+   report "c678 100n"
+end on failure
+disconnect all
+connect s to "SERDES_PLL_VDDA"
+connect i to "SERDES_PLL_VSSA"
+capacitor 22.1u -3u,  35, 40, fr128, re2, ar20.0m, ed, nocomp
+! "c682" test.
+off failure

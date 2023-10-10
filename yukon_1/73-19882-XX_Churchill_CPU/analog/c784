@@ -1,0 +1,17 @@
+!!!!    2    0    1 1594175944   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:05 2020
+on failure
+   report parallel devices
+   report "c623 1.00u"
+   report "c624 1.00u"
+   report "c625 1.00u"
+   report "c626 1.00u"
+   report "x_c95 100u"
+   report "x_c97 100u"
+end on failure
+disconnect all
+connect s to "DDR4_VTT"
+connect i to "GND"
+jumper 1.60k, re4, wb, ar500m, op
+! "c784" test.
+off failure

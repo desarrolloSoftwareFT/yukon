@@ -1,0 +1,280 @@
+/* v2.12 jme     11/29/00     fixed all references to font-size: [XX]pt 
+ and changed to font-size: [XX]px  
+
+ ****any elements added in the future should be added with a font size 
+ determinded by px NOT pt***.  
+ 
+ px is browser  universal.  Also added comments for menu toplevel 
+ and item style elements.											  */
+/* v2.11 kkh     28 Nov 2000  fixed comment syntax, reordered specs   */
+/*                              to improve inheritance, changed       */
+/*                              toplevelmenulink to all lowercase     */
+/*                              (matches top.inc)                     */
+/* v2.10 kkh     15 Nov 2000  fixed altnavmenu styles, added          */ 
+/*                              parentheading, updated UL font size,  */ 
+/*                              general formatting clean-up           */ 
+/* v2.9  kristen 26 Oct 2000  added tableheader styles                */ 
+/* v2.8  kristen 20 Oct 2000  included kkh additions for the major    */ 
+/*                              account sites.                        */ 
+/* v2.7  kristen 18 Oct 2000                                          */ 
+/* v2.6  kkh     16 Oct 2000                                          */ 
+
+
+/* link colors */ 
+
+A:link              { font-family        : arial,helvetica,sans-serif;
+                      color              : #CC3300;
+                    }
+
+A:active            { font-family        : arial,helvetica,sans-serif;
+                      color              : #CCCCCC;
+                    }
+
+
+/* html styles */
+
+BODY                { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      line-height        : 14px;
+                    }
+
+UL                  { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                    }
+
+
+
+/* copy styles */ 
+
+.bodycopy           { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      line-height        : 14px;
+                      color              : #000000;
+                    }
+                
+.bodycopysmall      { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      line-height        : 14px;
+                      color              : #000000;
+                    }
+
+.additionalButton   { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      text-decoration    : none;
+                      font-weight        : bold;
+                      color              : #000000;
+                    }
+
+a.additionalButton  { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      text-decoration    : none;
+                      font-weight        : bold;
+                      color              : #CC3300;
+                    }
+
+
+/* heading styles */ 
+
+.pageheading        { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 18px;
+                      color              : #333333;
+                      font-weight        : bold;
+                    }
+
+
+.parentheading      { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      font-weight        : bold;
+                      color              : #666666;
+                      text-decoration    : none;
+                    }
+
+a.parentheading     { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      font-weight        : bold;
+                      color              : #336699;
+                      text-decoration    : none;
+                    }
+
+.subheading         { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 14px;
+                      color              : #333333;
+                      font-weight        : bold;
+                    }
+
+a.subheading        { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 14px;
+                      text-decoration    : underline;
+                      font-weight        : bold;
+                      color              : #336699;
+                    }
+                                
+.pagetitle          { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 14px;
+                      color              : #ffffff;
+                      font-weight        : bold;
+                    }
+
+.producttitle       { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 14px;
+                      color              : #000000;
+                      font-weight        : bold;
+                    }
+
+.subtitle           { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 13px;
+                      color              : #000000;
+                      font-weight        : bold;
+                    }
+                
+.subtitle2          { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 13px;
+                      color              : #336699;
+                    }
+
+.whitesubtitle      { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 13px;
+                      color              : #ffffff;
+                      font-weight        : bold;
+                    }
+
+.leftnavtitle       { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 15px;
+                      color              : #333333;
+                      font-weight        : bold;
+                    }
+
+					
+/* search box text and item dropdown styles */ 						
+					
+.menulink           { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      text-decoration    : none;
+                      color              : #ffffff;
+                    }
+                                
+a.menulink          { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      text-decoration    : none;
+                      color              : #ffffff;
+                    }
+					                             
+.dontchange         { font-size          : 16px;
+                    }     
+			
+			
+/* top level drop down and static menu styles */ 				   
+
+.dontchange2        { font-size          : 16px;
+                    }
+
+.toplevelmenulink  { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+					}      
+					                          
+a.toplevelmenulink  { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+					  text-decoration    : none;
+                      color              : #ffffff;
+                      font-weight        : bold;
+                    }
+					
+										
+
+/* other */ 
+
+.ddm                { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      color              : #ffffff;
+                    }
+                                
+a.bvbuttons         { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      color              : #cc3300;
+                      text-decoration    : underline;
+                    }
+
+a.ddm               { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      text-decoration    : none;
+                      color              : #ffffff;
+                    }
+
+.altnavmenu1        { font-family        : arial,helvetica,sans-serif; 
+                      font-size          : 12px; 
+                      color              : #666666; 
+                      text-decoration    : none;
+                    }
+
+a.altnavmenu1       { font-family        : arial,helvetica,sans-serif; 
+                      font-size          : 12px; 
+                      color              : #336699; 
+                      text-decoration    : none;
+                    }
+
+.altnavmenu2        { font-family        : arial,helvetica,sans-serif; 
+                      font-size          : 11px; 
+                      color              : #666666; 
+                      text-decoration    : none;
+                    }
+
+a.altnavmenu2       { font-family        : arial,helvetica,sans-serif; 
+                      font-size          : 11px; 
+                      color              : #336699; 
+                      text-decoration    : none;
+                    }
+
+.vertline           { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      text-decoration    : none;
+                      color              : #ffffff;
+                    } 	
+
+a.listitem          { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      text-decoration    : none;
+                      color              : #CC3300;
+                    }
+
+a.breadcrumb        { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 10px;
+                    }
+
+.breadcrumb         { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 10px;
+                    }
+              
+a.ctmenu            { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 11px;
+                      text-decoration    : none;
+                      color              : #ffffff;
+                    }
+
+a.rmenu             { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 13px;
+                      text-decoration    : none;
+                      color              : #cc3300;
+                      font-weight        : bold;
+                    }
+
+a.aboutSub          { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      text-decoration    : none;
+                      color              : #CC3300;
+                    }
+                                
+.tableheader        { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      color              : #FFFFFF;
+                      text-decoration    : none;
+                      font-weight        : bold;
+                    }
+                                
+a.tableheader       { font-family        : arial,helvetica,sans-serif;
+                      font-size          : 12px;
+                      color              : #FFFFFF;
+                      text-decoration    : underline;
+                      font-weight        : bold;
+                    }
+b {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #003366; font-weight: bold}
+i {  font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: italic; font-weight: normal; color: #003366}

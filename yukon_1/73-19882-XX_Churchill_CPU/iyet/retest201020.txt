@@ -1,0 +1,3363 @@
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:39:01 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: buf_pch_pltrst_l       122148   45
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   45
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:39:44 2020
+----------------------------------------
+r335_c HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   23.733
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+r758_c HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   22.349
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   14.654
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  8H
+Detector Over Range
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:40:24 2020
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:53:38 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: buf_pch_pltrst_l       122148  418
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  418
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From: p1v05_combined          12251   48
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   vfltp1p05_25m_osc_c     11376   48
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+Common Devices:
+                 l23_c
+Message is:
+Check l23_c
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:53:47 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   33
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   33
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   33
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   33
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: buf_pch_pltrst_l       122148  109
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  109
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:54:39 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   72
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   72
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   72
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   72
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: buf_pch_pltrst_l       122148   40
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   40
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #4 Thresh 25, Delay 50us       Ohms
+From: p1v05_combined          12251 1442
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   vfltp1p05_25m_osc_c     11376 1442
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+Common Devices:
+                 l23_c
+Message is:
+Check l23_c
+----------------------------------------
+Open #5 Thresh 25, Delay 50us       Ohms
+From: a2_5v                  223105   31
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   31
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 5 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:54:49 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   33
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   33
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   31
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   31
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:56:27 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   34.573u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   11.332
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  8H
+Detector Over Range
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.9451k
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:56:41 2020
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 09:57:33 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   39
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   39
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   38
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   38
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: buf_pch_pltrst_l       122148   30
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   30
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:58:25 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   19.872u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   16.535
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  8H
+Detector Over Range
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 09:59:05 2020
+----------------------------------------
+r1011 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   11.049
+Threshold: 32.000
+Jumper Resistance in OHMS
+Status:  8H
+Detector Over Range
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:01:32 2020
+----------------------------------------
+bma4_c5 HAS FAILED
+11-3497-01 CAP,CE,47uF,6.3V,X5R,20%,SM,0
+Measured:   160.16u
+Nominal:    268.01u
+High Limit: 361.81u
+Low Limit:  160.81u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+bma4_c11 47.0u
+bma4_c13 47.0u
+bma4_c14 47.0u
+e_c618 47.0u
+c297_c 22.0u
+bma4_c6 10.0u
+bma4_c19 1.00u
+e_c619 10.0n
+bma4_c7 100p
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   15.147u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+bma4_l1 HAS FAILED
+24-3063-01 INDUCT,PWR,1.5uH,20%,Ir 11A,7
+Measured:   27.028
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+bma4_r8 HAS FAILED
+12-2209-02 RES,TKF,10 ohm,0.063W,1%,SM,0
+Measured:   37.252
+Threshold: 22.000
+Jumper Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+bma4_c12 100n
+----------------------------------------
+r9_v HAS FAILED
+12-2551-01 RES,TKF,0 ohm,0.063W,SM,0402,
+Measured:   26.540
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+r335_c HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   23.076
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:02:11 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   26.039u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+bma4_r8 HAS FAILED
+12-2209-02 RES,TKF,10 ohm,0.063W,1%,SM,0
+Measured:   26.670
+Threshold: 22.000
+Jumper Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+bma4_c12 100n
+----------------------------------------
+r335_c HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   82.077
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:03:23 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: p1v05_combined          12251   52
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   VFLT_P1P05_VCCSCPLL_C  122143   52
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+Common Devices:
+                 l14_c
+                  u1_c
+                u1_c_pch
+Message is:
+Check l14_c
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:03:33 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: a2_5v                  223105   31
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   31
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:04:03 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   33
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   33
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   33
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   33
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: p1v05_combined          12251   37
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   VFLT_P1P05_VCCSCPLL_C  122143   37
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+Common Devices:
+                 l14_c
+                  u1_c
+                u1_c_pch
+Message is:
+Check l14_c
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:04:12 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   50
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   50
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50us       Ohms
+From:   v                     11971   49
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   49
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50us       Ohms
+From: p1v05_combined          12251   30
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   VFLT_P1P05_VCCSCPLL_C  122143   30
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+Common Devices:
+                 l14_c
+                  u1_c
+                u1_c_pch
+Message is:
+Check l14_c
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:16:07 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   54
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   54
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   27
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   27
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144   56
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   ccc_pll_vdda_bmfpga    223126   56
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+Common Devices:
+                 r1508
+                  u27
+Message is:
+Check r1508
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:16:16 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 45, Delay 50ms       Ohms
+From:   v                     11971   50
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   50
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971   50
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   50
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   36
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   36
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144  122
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   ccc_pll_vdda_bmfpga    223126  122
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+Common Devices:
+                 r1508
+                  u27
+Message is:
+Check r1508
+------End, 4 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:16:47 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   45
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   45
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   29
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   29
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144  443
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   ccc_pll_vdda_bmfpga    223126  443
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+Common Devices:
+                 r1508
+                  u27
+Message is:
+Check r1508
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:16:56 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971   38
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   38
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148  281
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  281
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   28
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   28
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:17:27 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148  823
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  823
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   26
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   26
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144   54
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   ccc_pll_vdda_bmfpga    223126   54
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+Common Devices:
+                 r1508
+                  u27
+Message is:
+Check r1508
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:17:36 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148  598
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  598
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 10:20:19 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 18  Node unnamed_598_pca9548a_i494_a2
+  Measured 3.9              (BRC 210122)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 10:20:28 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin N8  Node x86_fpga_mdio_mux_sel0
+  Measured 3.7              (BRC 214131)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:21:55 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   31.118u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.9576k
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+r816_c HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   31.575
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   484.81m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   491.59m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:22:09 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   33.292u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   486.51m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   488.20m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:22:38 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148  200
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  200
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   29
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   29
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:22:48 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148  114
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148  114
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:23:37 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   18.053u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r782 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   47.205
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r458 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   38.858
+Nominal:    23.000
+High Limit: 32.200
+Low Limit:  18.400
+Resistance in OHMS
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   486.51m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   488.20m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   491.59m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:24:19 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   20.742u
+Nominal:    59.000u
+High Limit: 79.650u
+Low Limit:  35.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r782 HAS FAILED
+12-4650-01 RES,TKF,33 ohm,0.063W,1%,SM,0
+Measured:   46.893
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   486.51m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   491.59m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   491.59m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:37:29 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   32
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   32
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:37:39 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   26
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   26
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:38:09 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971   39
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   39
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:38:19 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   26
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   26
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:39:36 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   43
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   43
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   61
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   61
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:39:45 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: buf_pch_pltrst_l       122148   31
+                 r905.2
+                r1011.1
+                 u1.P10
+To:   fpga_bmc_lpc_rst       113148   31
+                r1011.2
+                 u1.L5
+                 u8.G22
+Common Devices:
+                 r1011
+                   u1
+Message is:
+Check r1011
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   45
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   45
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:40:29 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   12.870u
+Nominal:    34.000u
+High Limit: 45.900u
+Low Limit:  20.400u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   151.44
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+r458 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   35.795
+Nominal:    23.000
+High Limit: 32.200
+Low Limit:  18.400
+Resistance in OHMS
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   486.51m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   486.51m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   488.20m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   491.59m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:41:09 2020
+----------------------------------------
+r458 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   37.159
+Nominal:    23.000
+High Limit: 32.200
+Low Limit:  18.400
+Resistance in OHMS
+----------------------------------------
+cr23%cr HAS FAILED
+
+REPLACE DEVICE: cr23
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+cr23 cr23%ds
+fc_c6_hs1 10.0u
+r462 2.20k
+----------------------------------------
+fc_cr1_hs0%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs0
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   488.20m
+High Limit: 990.00m
+Low Limit:  490.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs0 fc_cr1_hs0%ds
+fc_c6_hs0 10.0u
+fc_r6_hs0 2.20k
+----------------------------------------
+fc_cr1_hs3%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs3
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs3 fc_cr1_hs3%ds
+fc_c6_hs3 10.0u
+fc_r6_hs3 2.20k
+----------------------------------------
+fc_cr1_hs4%cr HAS FAILED
+
+REPLACE DEVICE: fc_cr1_hs4
+13-100578-01 DIO,SH,0.43 VF,0.7V VF max 
+Measured:   489.90m
+High Limit: 990.00m
+Low Limit:  492.00m
+Forward VOLTAGE drop
+----------------------------------------
+DEVICES IN PARALLEL
+fc_cr1_hs4 fc_cr1_hs4%ds
+fc_c6_hs4 10.0u
+fc_r6_hs4 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:52:13 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   26
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   26
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:52:22 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971   29
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   29
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:53:04 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   10.927u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r289 HAS FAILED
+12-5367-01 RES,TKF,3.3 ohm,0.063W,1%,SM,
+Measured:   22.654
+Threshold: 22.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:55:12 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   40
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   40
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:55:22 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   33
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   33
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:55:54 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   30
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   30
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:56:37 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   12.033u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 10:57:14 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   21.315u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:57:38 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   35
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   35
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 10:57:48 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 45, Delay 50ms       Ohms
+From:   v                     11971   81
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi_fpga_clk           116145   81
+                r758_c.2
+                u40.G17
+Common Devices:
+                 r758_c
+Message is:
+Check r758_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From:   v                     11971   83
+unnamed_152_n25qxx_i36_sck_c            
+                r335_c.2
+                r758_c.1
+               r1401_c.2
+                u34_c.6
+                u36_c.6
+To:   spi0_pch_clk_c         121156   83
+                r335_c.1
+                u51_c.8
+Common Devices:
+                 r335_c
+Message is:
+Check r335_c
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: a2_5v                  223105   29
+                a_u22.15
+                a_u22.16
+                a_u22.17
+               bma1_c5.1
+               bma1_c6.1
+               bma1_c11.1
+               bma1_c12.2
+               bma1_c13.1
+               bma1_c14.1
+               bma1_c16.1
+Too many to print.
+To:   serdes_l01_vddapll     223116   29
+                 c32.1
+                 c34.1
+                 r289.1
+                 u40.U7
+Common Devices:
+                  r289
+                  u40
+Message is:
+Check r289
+------End, 3 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 11:08:52 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   29
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   29
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 11:09:07 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin R3  Node I210_FLASH_WP
+  Measured 4.0              (BRC 215127)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 11:09:16 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin R3  Node I210_FLASH_WP
+  Measured 3.0              (BRC 215127)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:20:57 2020
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   135.05
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:28:08 2020
+----------------------------------------
+l23_c HAS FAILED
+36-0329-01 FERRITE,BEAD,600Ohm@100MHz,25
+Measured:   21.949
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   431.26
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:29:59 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: A3P3V                  220144   32
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+To:   pllav33                216148   32
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+Common Devices:
+                   l7
+                   u8
+Message is:
+Check l7
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:30:50 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   23.591u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+r958 HAS FAILED
+12-2479-02 RES,TKF,100 k ohm,0.063W,5%,S
+Measured:   863.22k
+Nominal:    48.000k
+High Limit: 60.000k
+Low Limit:  36.000k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c667 1.00u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:31:31 2020
+----------------------------------------
+r958 HAS FAILED
+12-2479-02 RES,TKF,100 k ohm,0.063W,5%,S
+Measured:   806.28k
+Nominal:    48.000k
+High Limit: 60.000k
+Low Limit:  36.000k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c667 1.00u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:32:38 2020
+----------------------------------------
+r819 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   19.670k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r976 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   7.1233k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r977 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   17.788k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r982 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   7.0038k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r1332 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   24.977k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r974 HAS FAILED
+12-1639-02 RES,TKF,100 ohm,0.063W,5%,SM,
+Measured:   188.60
+Nominal:    100.00
+High Limit: 130.00
+Low Limit:  80.000
+Resistance in OHMS
+----------------------------------------
+r958 HAS FAILED
+12-2479-02 RES,TKF,100 k ohm,0.063W,5%,S
+Measured:   932.55k
+Nominal:    48.000k
+High Limit: 60.000k
+Low Limit:  36.000k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c667 1.00u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:33:14 2020
+----------------------------------------
+r958 HAS FAILED
+12-2479-02 RES,TKF,100 k ohm,0.063W,5%,S
+Measured:   604.74k
+Nominal:    48.000k
+High Limit: 60.000k
+Low Limit:  36.000k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+c667 1.00u
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:40:31 2020
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   28.732u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+c728 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   36.055u
+Nominal:    70.000u
+High Limit: 94.500u
+Low Limit:  42.000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c727 100n
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.013705u
+Nominal:    8200.0p
+High Limit: 0.011070u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+x_r64 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   13.883k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r458 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   48.006
+Nominal:    32.000
+High Limit: 44.800
+Low Limit:  25.600
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:42:59 2020
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.318u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+r816_c HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   32.651
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+r829_c HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   33.114
+Nominal:    23.000
+High Limit: 32.200
+Low Limit:  18.400
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:45:18 2020
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   28.726u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+l7 HAS FAILED
+36-187061-01 FERRITE,BEAD,80Ohms@100MHz,
+Measured:   20.303
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+r1332 HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   25.600k
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+q4_c%pwr HAS FAILED
+Subtest: NFET_OFF
+
+REPLACE DEVICE: q4_c
+20-0127-02 XTR,NCH,BSS138,50V,200mA,SOT-
+Measured:   1.4488
+High Limit: 3.5000
+Low Limit:  1.4500
+Direct Current VOLTS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:46:15 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u171
+  Pin 2  Node p12v_fault
+  Measured 220.3            (BRC 21452)
+The part may be missing.
+15-9669-01 IC-LIN,COMP,TSSOP14,STD,LM339
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:46:23 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin R3  Node I210_FLASH_WP
+  Measured 3.5              (BRC 215127)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:47:16 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   29
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   29
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:47:26 2020
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                    203103    5
+unnamed_4188_ast2520_i1_adcrext         
+                r1001.1
+                 u8.J1
+To:   unnamed_108_cap_i56_b  205116    6
+                 c667.1
+                 r946.2
+                 r958.1
+                 u76.5
+No common devices.
+Total of 2 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:48:02 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u171
+  Pin 2  Node p12v_fault
+  Measured 215.9            (BRC 21452)
+The part may be missing.
+15-9669-01 IC-LIN,COMP,TSSOP14,STD,LM339
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:48:11 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u171
+  Pin 2  Node p12v_fault
+  Measured 269.3            (BRC 21452)
+The part may be missing.
+15-9669-01 IC-LIN,COMP,TSSOP14,STD,LM339
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:48:43 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   39
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   39
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:48:57 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin N8  Node x86_fpga_mdio_mux_sel0
+  Measured 4.0              (BRC 214131)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u171
+  Pin 2  Node p12v_fault
+  Measured 225.5            (BRC 21452)
+The part may be missing.
+15-9669-01 IC-LIN,COMP,TSSOP14,STD,LM339
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+TestJet Report for "testjet".
+Tue Oct 20 16:49:05 2020
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin R3  Node I210_FLASH_WP
+  Measured 3.9              (BRC 215127)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Open #1  Device u171
+  Pin 2  Node p12v_fault
+  Measured 280.7            (BRC 21452)
+The part may be missing.
+15-9669-01 IC-LIN,COMP,TSSOP14,STD,LM339
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:50:40 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 40, Delay 50ms       Ohms
+From: p1v05_combined          12251   44
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+To:   vfltp1p05_25m_osc_c     11376   44
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+Common Devices:
+                 l23_c
+Message is:
+Check l23_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125  207
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450  207
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:50:49 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125 Open
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:51:16 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125  185
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450  185
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:51:25 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   35
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   35
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:51:52 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   70
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   70
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:52:02 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125  224
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450  224
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:53:32 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   24.789u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+dma1_r31 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   9.2734k
+Nominal:    105.00
+High Limit: 131.25
+Low Limit:  84.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:54:29 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   39
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   39
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                    203103    3
+unnamed_4188_ast2520_i1_adcrext         
+                r1001.1
+                 u8.J1
+To:   unnamed_108_cap_i56_b  205116    4
+                 c667.1
+                 r946.2
+                 r958.1
+                 u76.5
+No common devices.
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:54:39 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   41
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   41
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:55:05 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   28
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   28
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:55:15 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   61
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   61
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:55:43 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   90
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   90
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 16:55:52 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125   53
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450   53
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:56:43 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   14.804u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.763u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:58:42 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   13.914u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   28.840u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 16:59:20 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   15.683u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 17:00:19 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   20.971u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   30.307u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+r1097 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   50.420
+Nominal:    35.000
+High Limit: 49.000
+Low Limit:  28.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 17:00:57 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   17.297u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   25.408u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+r1097 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   54.879
+Nominal:    35.000
+High Limit: 49.000
+Low Limit:  28.000
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+Shorts Report for "shorts".
+Tue Oct 20 17:01:19 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pseq_vmon_p12v         219125  348
+                 r869.1
+                r1839.2
+                r2261.2
+                u40.P22
+To:   p12v_good               21450  348
+                r1831.2
+                r1839.1
+                 u171.1
+Common Devices:
+                 r1839
+Message is:
+Check r1839
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 17:02:02 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   16.768u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   23.037u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C
+----------------------------------------
+73-19882-04
+Tue Oct 20 17:02:39 2020
+----------------------------------------
+c34 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   16.746u
+Nominal:    42.000u
+High Limit: 56.700u
+Low Limit:  25.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c32 100n
+----------------------------------------
+c170 HAS FAILED
+11-2686-02 CAP,CE,22.0uF,6.3 V,20%,X5R,S
+Measured:   22.763u
+Nominal:    52.000u
+High Limit: 70.200u
+Low Limit:  31.200u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+c169 100n
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FOC2430NG5C

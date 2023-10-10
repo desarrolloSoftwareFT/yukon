@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176656   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:57 2020
+disconnect all
+connect s to "P3V3"
+connect i to "CLK_CPU_SUSCLK"
+resistor 5.1k, 25, 20, re4, wb, ar200m

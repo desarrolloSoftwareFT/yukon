@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512981  V6e8e                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "BMFPGA_SERDES_L01_VDDAPLL"
+connect i to "A2_5V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1329" test.

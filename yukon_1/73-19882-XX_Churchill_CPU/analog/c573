@@ -1,0 +1,13 @@
+!!!!    2    0    1 1596099316   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:09 2020
+on failure
+   report parallel devices
+   report "r2064 3.83k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_PVCCFUSESUS_CH4"
+!connect gl to "PMOD_PVCCSCFUSESUS_VOSEN" 
+capacitor 100n, 35, 40, fr1024, re3, wb, ar100m, ed, nocomp
+! "c573" is a limited test.
+off failure

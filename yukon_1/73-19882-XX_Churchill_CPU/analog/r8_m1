@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600997873  Va1ae                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:11 2020
+disconnect all
+connect s to "P1V05_VCCSUS"
+connect i to "PMOD_VOB_VSENSE_K_M1"
+connect a to "P1V05_VCCSUS"
+connect b to "PMOD_VOB_VSENSE_K_M1"
+!@resistor 100, 30, 20, re2, ar100m
+jumper 20, re1, ar200m, wb,ed
+! "r8_m1" test.

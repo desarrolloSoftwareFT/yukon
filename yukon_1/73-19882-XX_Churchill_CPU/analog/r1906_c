@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594176209   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:30 2020
+disconnect all
+connect i to "BDX_SRTCRST_FET"
+connect s to "GND"
+connect g to "RST_SRTCRST_L_C" 
+resistor 1k, 25, 20, re3, ar100m, wa2.38m

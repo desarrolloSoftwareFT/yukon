@@ -1,0 +1,36 @@
+!!!!    2    0    1 1600995146  V23ee                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+ ! test "IN"
+ ! test "EN"
+  test "OUT"
+ ! test "PG"
+end test
+
+
+subtest "EN"
+  connect i to pins 14
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.5, 3.0
+end subtest
+
+subtest "OUT"
+  connect i to "P1V15_BMC"
+  connect l to ground
+
+  detector dcv, expect 1.15
+  measure 1.24, 1.05
+end subtest
+
+subtest "PG"
+  connect i to pins 4
+  connect l to ground
+
+  detector dcv, expect 3
+  measure 3, 2.0
+end subtest
+
+

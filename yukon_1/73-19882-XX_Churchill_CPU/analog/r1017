@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176243   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:04 2020
+disconnect all
+connect s to "GND"
+connect i to "PD_SERDES_0_RXD2_P"
+resistor 10k, 25, 20, re4, wb, ar100m

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes FPGA2_SPIFLASH_HOLD P-Pin resistance"
+report "check nodes UNNAMED_4210_N25QXX_I72_HOLDMDQ3 P-Pin resistance"
+end on failure
+disconnect all
+connect s to "FPGA2_SPIFLASH_HOLD"
+connect i to "UNNAMED_4210_N25QXX_I72_HOLDMDQ3"
+resistor 10,20,100, re1, ar100m,ed
+off failure

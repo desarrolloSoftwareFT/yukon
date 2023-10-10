@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176720   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:01 2020
+on failure
+   report parallel devices
+   report "c669 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4156_CAP_I169_B"
+connect g to "P12V_STBY" 
+resistor 2.8k, 25, 20, re4, wb, ar500m, wa292m
+off failure

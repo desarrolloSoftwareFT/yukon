@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BMFPGA_SERDES_PLL_VDDA P-Pin resistance"
+report "check nodes A3P3V P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BMFPGA_SERDES_PLL_VDDA"
+connect i to "A3P3V"
+resistor 10,20,100, re1, ar100m,ed
+off failure

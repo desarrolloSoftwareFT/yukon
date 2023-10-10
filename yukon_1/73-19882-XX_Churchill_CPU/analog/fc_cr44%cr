@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600566103  V1b03                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:15 2020
+on failure
+   report parallel devices
+   report "fc_cr44 fc_cr44%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN3_TACH"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr44%cr" test.
+off failure

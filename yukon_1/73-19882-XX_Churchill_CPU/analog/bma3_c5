@@ -1,0 +1,33 @@
+!!!!    2    0    1 1597477005   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:38 2020
+on failure
+   report parallel devices
+   report "bma3_c11 47.0u"
+   report "bma3_c13 47.0u"
+   report "bma3_c14 47.0u"
+   report "bma3_c6 10.0u"
+   report "e_c682 10.0u"
+   report "c1075_c 4.70u"
+   report "c1128_c 4.70u"
+   report "c157_c 1.00u"
+   report "c811_c 1.00u"
+   report "c1265_c 1.00u"
+   report "c1352_c 1.00u"
+   report "c1355_c 1.00u"
+   report "c147_c 100n"
+   report "c150_c 100n"
+   report "c153_c 100n"
+   report "bma3_c7 100p"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P3V3"
+!connect g to "P3V3_PCH_2" 
+!connect g to "ADC0_3V3_CPU_CH2" 
+!connect g to "PCH_PWRBTN_N" 
+!connect g to "UNNAMED_9_CAP_I36_B" 
+!connect g to "VP3P3_SATA" 
+capacitor 222.7u, 35, 40, fr128, re1, sm, ar200m, ed, nocomp, am0.2
+warning "excessive minus tolerance or low limit."
+! "bma3_c5" is a commented test.
+off failure

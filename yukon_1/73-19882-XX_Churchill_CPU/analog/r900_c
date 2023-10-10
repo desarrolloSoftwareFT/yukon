@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175971   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:32 2020
+disconnect all
+connect i to "IRQ_SERIRQ_DIR"
+connect s to "GND"
+jumper 3.69k, re4, wb, ar200m, op
+! "r900_c" test.

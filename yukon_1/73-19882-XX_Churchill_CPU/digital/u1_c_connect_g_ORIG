@@ -1,0 +1,180 @@
+!!!!   24    0    1 1594176849  V7a18                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:10 2020
+
+connect "u1_c"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "I2C_DDR_EN_C" hybrid default "1"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "BDXDE_DRAM_PWROK","BMC_ENTEST_R","BMCPHY_INT_M"
+  pcf order is nodes "GPIOA0_JTSCAN","GPIOA1_JTSCAN","I2C_DDR_EN_C"
+  pcf order is nodes "LAN_PWRGOOD_C","PWRGOOD_CPU_C","WP_R"
+  unit "disable_1"
+  pcf
+  "111101110"
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   u83_c.2  u83_c.3  u83_c.6  u83_c.7
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u83_c" pins 2,3,6,7
+!IPG: with pin 5 on node "I2C_DDR_EN_C"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "M_A_BA<1>" hybrid test "u1_c.CL51"
+  node "M_A_BG<0>" hybrid test "u1_c.CM33"
+  node "M_A_CLK_DP<0>" hybrid test "u1_c.CL47"
+  node "M_A_CS_N<0>" hybrid test "u1_c.CL54"
+  node "M_A_DQ<10>" hybrid test "u1_c.CM7"
+  node "M_A_DQ<11>" hybrid test "u1_c.CL9"
+  node "M_A_DQ<18>" hybrid test "u1_c.CL13"
+  node "M_A_DQ<19>" hybrid test "u1_c.CM14"
+  node "M_A_DQ<40>" hybrid test "u1_c.CL66"
+  node "M_A_DQ<42>" hybrid test "u1_c.CL72"
+  node "M_A_DQ<44>" hybrid test "u1_c.CM64"
+  node "M_A_DQ<46>" hybrid test "u1_c.CM71"
+  node "M_A_DQ<47>" hybrid test "u1_c.CK71"
+  node "M_A_DQS_DN<5>" hybrid test "u1_c.CL69"
+  node "M_A_DQS_DN<8>" hybrid test "u1_c.CL24"
+  node "M_A_DQS_DN<14>" hybrid test "u1_c.CK67"
+  node "M_A_DQS_DP<14>" hybrid test "u1_c.CM67"
+  node "M_A_DQS_DP<17>" hybrid test "u1_c.CM22"
+  node "M_A_ECC<0>" hybrid test "u1_c.CL20"
+  node "M_A_ECC<2>" hybrid test "u1_c.CL28"
+  node "M_A_ECC<4>" hybrid test "u1_c.CM18"
+  node "M_A_ECC<6>" hybrid test "u1_c.CM26"
+  node "M_A_MA<2>" hybrid test "u1_c.CM41"
+  node "M_A_MA<4>" hybrid test "u1_c.CL39"
+  node "M_A_MA<8>" hybrid test "u1_c.CM37"
+  node "M_A_MA<14>" hybrid test "u1_c.CM52"
+  node "M_A_ODT<1>" hybrid test "u1_c.CM60"
+  node "M_A_PAR" hybrid test "u1_c.CM49"
+  node "M_B_DQ<2>" hybrid test "u1_c.CM3"
+  node "M_B_DQ<3>" hybrid test "u1_c.CN4"
+  node "M_B_DQ<6>" hybrid test "u1_c.CL2"
+  node "M_B_DQ<9>" hybrid test "u1_c.CR8"
+  node "M_B_DQ<11>" hybrid test "u1_c.CR13"
+  node "M_B_DQ<21>" hybrid test "u1_c.CR15"
+  node "M_B_DQ<23>" hybrid test "u1_c.CR19"
+  node "M_B_DQ<25>" hybrid test "u1_c.CR24"
+  node "M_B_DQ<27>" hybrid test "u1_c.CR28"
+  node "M_B_DQ<38>" hybrid test "u1_c.CL77"
+  node "M_B_DQ<39>" hybrid test "u1_c.CK75"
+  node "M_B_DQS_DN<4>" hybrid test "u1_c.CM76"
+  node "M_B_DQS_DN<11>" hybrid test "u1_c.CR17"
+  node "M_B_DQS_DP<1>" hybrid test "u1_c.CR10"
+  node "M_B_DQS_DP<3>" hybrid test "u1_c.CR26"
+  node "M_B_DQS_DP<4>" hybrid test "u1_c.CN75"
+  node "M_B_ECC<5>" hybrid test "u1_c.CR30"
+  node "PD_DDR_TEST1_C" hybrid test "u1_c.CM78"
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "DDR_A_CKE2_C"
+!IPG: node "DDR_A_CLK3_N_C"
+!IPG: node "DDR_A_CLK1_N_C"
+!IPG: node "DDR_A_ODT2_C"
+
+!IPG: Family information could not be found for node M_A_BA<1>
+!IPG: Family information could not be found for node M_A_BG<0>
+!IPG: Family information could not be found for node M_A_CLK_DP<0>
+!IPG: Family information could not be found for node M_A_CS_N<0>
+!IPG: Family information could not be found for node M_A_DQ<10>
+!IPG: Family information could not be found for node M_A_DQ<11>
+!IPG: Family information could not be found for node M_A_DQ<18>
+!IPG: Family information could not be found for node M_A_DQ<19>
+!IPG: Family information could not be found for node M_A_DQ<40>
+!IPG: Family information could not be found for node M_A_DQ<42>
+!IPG: Family information could not be found for node M_A_DQ<44>
+!IPG: Family information could not be found for node M_A_DQ<46>
+!IPG: Family information could not be found for node M_A_DQ<47>
+!IPG: Family information could not be found for node M_A_DQS_DN<5>
+!IPG: Family information could not be found for node M_A_DQS_DN<8>
+!IPG: Family information could not be found for node M_A_DQS_DN<14>
+!IPG: Family information could not be found for node M_A_DQS_DP<14>
+!IPG: Family information could not be found for node M_A_DQS_DP<17>
+!IPG: Family information could not be found for node M_A_ECC<0>
+!IPG: Family information could not be found for node M_A_ECC<2>
+!IPG: Family information could not be found for node M_A_ECC<4>
+!IPG: Family information could not be found for node M_A_ECC<6>
+!IPG: Family information could not be found for node M_A_MA<2>
+!IPG: Family information could not be found for node M_A_MA<4>
+!IPG: Family information could not be found for node M_A_MA<8>
+!IPG: Family information could not be found for node M_A_MA<14>
+!IPG: Family information could not be found for node M_A_ODT<1>
+!IPG: Family information could not be found for node M_A_PAR
+!IPG: Family information could not be found for node M_B_DQ<2>
+!IPG: Family information could not be found for node M_B_DQ<3>
+!IPG: Family information could not be found for node M_B_DQ<6>
+!IPG: Family information could not be found for node M_B_DQ<9>
+!IPG: Family information could not be found for node M_B_DQ<11>
+!IPG: Family information could not be found for node M_B_DQ<21>
+!IPG: Family information could not be found for node M_B_DQ<23>
+!IPG: Family information could not be found for node M_B_DQ<25>
+!IPG: Family information could not be found for node M_B_DQ<27>
+!IPG: Family information could not be found for node M_B_DQ<38>
+!IPG: Family information could not be found for node M_B_DQ<39>
+!IPG: Family information could not be found for node M_B_DQS_DN<4>
+!IPG: Family information could not be found for node M_B_DQS_DN<11>
+!IPG: Family information could not be found for node M_B_DQS_DP<1>
+!IPG: Family information could not be found for node M_B_DQS_DP<3>
+!IPG: Family information could not be found for node M_B_DQS_DP<4>
+!IPG: Family information could not be found for node M_B_ECC<5>
+!IPG: Family information could not be found for node PD_DDR_TEST1_C
+end connect
+

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512879  V09e3                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "SPI0_PCH_MISO_C"
+connect i to "SPI_FLSH_MISO"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r337_c" test.

@@ -1,0 +1,170 @@
+!!!!   24    0    1 1594176853  V191f                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:14 2020
+
+connect "u8"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+!IPG: Connect test generated with CONNECTMAX value of 30
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_c.U75
+!IPG:    u8.E11
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX"
+  tdo "LJTAG_TDO_HDR_3V3_MUX"
+  tms "LJTAG_TMS_HDR_3V3_MUX"
+  tck "LJTAG_TCK_HDR_3V3_MUX"
+  trst "LJTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c", "custom_lib/b1510634101_bdx.bsdl", "LGA", no
+    "u1_c_pch", "custom_lib/15-104798-01_pch.bsm_noidcode", "bga", no
+    "u8", "custom_lib/15-105116-01.bsm_noidcode", "ITFBGA456_2", no
+    "u1_i2", "custom_lib/b1510342501_i210.bsm_noidcode", "I210", no
+    "u1", "custom_lib/lcmxo3lf-1300-bga256.bsm_noidcode", "cabga256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node LJTAG_TDI_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TDO_HDR_3V3_MUX
+!IPG: Family information could not be found for node LJTAG_TRST_L_HDR_3V3
+
+disables "disable vector"
+  node "ADC_SCL" hybrid default "1"
+!IPG: Family information could not be found for node BDXDE_DRAM_PWROK
+  node "BDXDE_DRAM_PWROK" hybrid default "1"
+  node "BM_SPI_GOLD_CS0_L" hybrid default "1"
+  node "BM_SPI_STD_CS0_L" hybrid default "1"
+!IPG: Family information could not be found for node BMC_ENTEST_R
+  node "BMC_ENTEST_R" hybrid default "1"
+  node "BMC_FAN_I2C_SCL" hybrid default "1"
+  node "BMCPHY_INT_M" family "TTL" hybrid default "1"
+  node "CHASSIS_IDPROM_SCL" hybrid default "1"
+  node "DAC0_SCL" hybrid default "1"
+  node "DAC1_SCL" hybrid default "1"
+  node "FPGA_MUX_DATA" hybrid default "1"
+  node "FPGA_MUX_SCLK" hybrid default "T"
+!IPG: Family information could not be found for node GPIOA0_JTSCAN
+  node "GPIOA0_JTSCAN" hybrid default "1"
+!IPG: Family information could not be found for node GPIOA1_JTSCAN
+  node "GPIOA1_JTSCAN" hybrid default "0"
+  node "LAN_PWRGOOD_C" hybrid default "1"
+!IPG: Family information could not be found for node PWRGOOD_CPU_C
+  node "PWRGOOD_CPU_C" hybrid default "1"
+  node "UNNAMED_76_LTC2497_I65_SCL" hybrid default "1"
+  node "UNNAMED_598_PI5A3157_I520_S" hybrid default "0"
+!IPG: Family information could not be found for node WP_R
+  node "WP_R" hybrid default "0"
+
+  pcf order is nodes "ADC_SCL","BDXDE_DRAM_PWROK","BM_SPI_GOLD_CS0_L"
+  pcf order is nodes "BM_SPI_STD_CS0_L","BMC_ENTEST_R"
+  pcf order is nodes "BMC_FAN_I2C_SCL","BMCPHY_INT_M"
+  pcf order is nodes "CHASSIS_IDPROM_SCL","DAC0_SCL","DAC1_SCL"
+  pcf order is nodes "FPGA_MUX_DATA","FPGA_MUX_SCLK","GPIOA0_JTSCAN"
+  pcf order is nodes "GPIOA1_JTSCAN","LAN_PWRGOOD_C","PWRGOOD_CPU_C"
+  pcf order is nodes "UNNAMED_76_LTC2497_I65_SCL"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I520_S","WP_R"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "1111111111101011100"
+  "1111111111111011100"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   fc_u4.1  u158.1  u300.8  u301.8  u38.5  u46.3  u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8  u69.1  u69.4  u72.1  u72.4  u74.3
+!IPG:   u78.1
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "fc_u4" pins 1
+!IPG: with pin 2 on node "BMC_FAN_I2C_SCL"
+disabled device "u158" pins 1
+!IPG: with pin 2 on node "DAC0_SCL"
+disabled device "u300" pins 8
+!IPG: with pin 7 on node "BM_SPI_GOLD_CS0_L"
+disabled device "u301" pins 8
+!IPG: with pin 7 on node "BM_SPI_STD_CS0_L"
+disabled device "u38" pins 5
+!IPG: with pin 6 on node "CHASSIS_IDPROM_SCL"
+disabled device "u46" pins 3
+!IPG: with pin 2 on node "ADC_SCL"
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+disabled device "u69" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I520_S"
+disabled device "u72" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I509_S"
+disabled device "u74" pins 3
+!IPG: with pin 2 on node "UNNAMED_76_LTC2497_I65_SCL"
+disabled device "u78" pins 1
+!IPG: with pin 2 on node "DAC1_SCL"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "BMC_CPU_SPIFLASH_EN_L" hybrid test "u8.E19"
+  node "BMC_FPD_SEL_R" hybrid test "u8.K19"
+  node "BMC_ID_ACCESS_0" hybrid test "u8.H20"
+  node "BMC_ID_ACCESS_1" hybrid test "u8.H22"
+  node "BMC_ID_ACCESS_2" hybrid test "u8.H21"
+  node "BMC_ID_ACCESS_4" hybrid test "u8.K18"
+  node "BMC_NCSI_TXD0_R" hybrid test "u8.F9"
+  node "BMC_UART4_RX_R" hybrid test "u8.H18"
+  node "BMC_UART4_TX_R" hybrid test "u8.G17"
+  node "BMC_UART5_RX" hybrid test "u8.K2"
+  node "BMC_UART5_TX" hybrid test "u8.K1"
+  node "CLK24M_BMC_USBCKI" hybrid test "u8.J20"
+  node "FAN_TEMP_SENSOR_ALERT_L" hybrid test "u8.J19"
+  node "FPGA_BMC_LPC_RST" hybrid test "u8.G22"
+  node "P2PM2_BMC_FP1_R" hybrid test "u8.H19"
+  node "PCH_LPC_FRAME_L" hybrid test "u8.F21"
+  node "SRT_BMC_CPU_FPGA_SCL" hybrid test "u8.L1"
+  node "SRT_BMC_LPC_LAD<0>" hybrid test "u8.G21"
+  node "SRT_BMC_LPC_LAD<1>" hybrid test "u8.G20"
+  node "SRT_BMC_LPC_LAD<3>" hybrid test "u8.E22"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+  node "BMC_EMMC_D4" hybrid test "u8.F20" !Not disabled
+  node "BMC_EMMC_D7" hybrid test "u8.E20" !Not disabled
+  node "PCH_SERIRQ" hybrid test "u8.F22" !Not disabled
+end nodes
+
+!IPG: Family information could not be found for node BMC_CPU_SPIFLASH_EN_L
+!IPG: Family information could not be found for node BMC_FPD_SEL_R
+!IPG: Family information could not be found for node BMC_ID_ACCESS_0
+!IPG: Family information could not be found for node BMC_ID_ACCESS_1
+!IPG: Family information could not be found for node BMC_ID_ACCESS_2
+!IPG: Family information could not be found for node BMC_ID_ACCESS_4
+!IPG: Family information could not be found for node BMC_NCSI_TXD0_R
+!IPG: Family information could not be found for node BMC_UART4_RX_R
+!IPG: Family information could not be found for node BMC_UART4_TX_R
+!IPG: Family information could not be found for node BMC_UART5_RX
+!IPG: Family information could not be found for node BMC_UART5_TX
+!IPG: Family information could not be found for node CLK24M_BMC_USBCKI
+!IPG: Family information could not be found for node FAN_TEMP_SENSOR_ALERT_L
+!IPG: Family information could not be found for node FPGA_BMC_LPC_RST
+!IPG: Family information could not be found for node P2PM2_BMC_FP1_R
+!IPG: Family information could not be found for node PCH_LPC_FRAME_L
+!IPG: Family information could not be found for node SRT_BMC_CPU_FPGA_SCL
+!IPG: Family information could not be found for node SRT_BMC_LPC_LAD<0>
+!IPG: Family information could not be found for node SRT_BMC_LPC_LAD<1>
+!IPG: Family information could not be found for node SRT_BMC_LPC_LAD<3>
+!IPG: Family information could not be found for node BMC_EMMC_D4
+!IPG: Family information could not be found for node BMC_EMMC_D7
+!IPG: Family information could not be found for node PCH_SERIRQ
+end connect
+

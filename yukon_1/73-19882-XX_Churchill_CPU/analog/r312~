@@ -1,0 +1,10 @@
+!!!!    2    0    1 1621609414   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:10 2020
+disconnect all
+connect s to "LJTAG_CABLE_PRSNT_L"
+connect i to "CPU_JTAG_CABLE_PRSNT_L"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+!nueva version 21 may validar
+jumper 20.0,re1,ar200m,ed, op
+! "r312" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512962  V2d14                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "I2C_DDR_SDA_C"
+connect i to "I2C_DDR_SDA_ST_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r967_c" test.

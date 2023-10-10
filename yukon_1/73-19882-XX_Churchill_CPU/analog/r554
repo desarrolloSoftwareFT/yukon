@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512920  Vb9b1                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "P2PM_MB_CPU_R<0>"
+connect i to "P2PM_MB_CPU<0>"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r554" test.

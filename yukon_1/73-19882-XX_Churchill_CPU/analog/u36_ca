@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600586291  V1d06                                         
+!* FLASH SOCKET, cover by U36_c testjet test
+on failure
+   report "Check for U36_CA presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "U36_CA_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m
+off failure

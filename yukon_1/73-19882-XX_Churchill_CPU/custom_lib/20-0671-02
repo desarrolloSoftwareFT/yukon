@@ -1,0 +1,16 @@
+!!!!   21    1    1 1422338221  V3a28                                         
+
+fet "qf", 200,  50, n, nr
+pin library "pwr", nr, ns, pn"nch_fet_power_off"
+
+external pins "S"
+   device "qf" pins "S"
+   device "pwr" pins "S"
+
+external pins "G"
+   device "qf" pins "G"
+   device "pwr" pins "G"
+
+external pins "D"
+   device "qf" pins "D"
+   device "pwr" pins "D"

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512772  Vd70a                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:05 2020
+disconnect all
+connect i to "PMOD_PH2_DIDT_M1"
+connect s to "PVCCIN"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "l1_p2_m1" test.

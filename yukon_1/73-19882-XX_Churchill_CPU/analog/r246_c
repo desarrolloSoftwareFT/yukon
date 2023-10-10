@@ -1,0 +1,9 @@
+!!!!    2    0    1 1695253504   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:47 2020
+disconnect all
+connect s to "GND"
+connect i to "PD_CLKIN_GND4_NEG_C"
+!resistor 10k, 25, 20, re2, wb, ar100m, wa10m
+!Validar ueva version 21 May
+jumper 10k, re4, wb, ar100m, op, en
+!jumper 10k, re1, wb, ar100m

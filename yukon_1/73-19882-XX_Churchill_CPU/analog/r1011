@@ -1,0 +1,8 @@
+!!!!    2    0    1 1603206035   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect i to "BUF_PCH_PLTRST_L"
+connect s to "FPGA_BMC_LPC_RST"
+!B!jumper  20.0,  re1, ar200m
+jumper 32.0,re1,ar20m
+! "r1011" test.

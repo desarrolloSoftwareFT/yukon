@@ -1,0 +1,7 @@
+!!!!    2    0    1 1596106356   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:52 2020
+disconnect all
+connect s to "GND"
+connect i to "CPU_SLP3_CPU_L_C"
+connect g to "FM_SLPS3_N"
+resistor 1k, 25, 20, re3, ar100m, en, ed

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600514473   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:50 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "IRQ_SERIRQ_DATA"
+connect g to "GND"
+resistor 10k, 25, 20, re4, wb, ar100m,ed,wa50m

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1625666796   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "SPI2_CS1_R"
+connect i to "BMC_SPI2_FPD_CS1_L"
+!B!jumper  20.0,  re1, ar200m
+jumper 16.0,re1,ar200m,ed, en, am200m
+! "r1269" test.

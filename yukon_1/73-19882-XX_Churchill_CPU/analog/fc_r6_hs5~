@@ -1,0 +1,14 @@
+!!!!    2    0    1 1689584680   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:41 2020
+on failure
+   report parallel devices
+   report "fc_c6_hs5 10.0u"
+end on failure
+disconnect all
+connect s to "FAN1011_P12V_PWR_F"
+connect i to "GND"
+!@connect g to "FAN1011_PWM_PWR"
+!resistor 2.2k, 25, 45, re3, wb, ar200m,  ed, am200m
+resistor 1.2k , 55, 40, re2, wb, ar100m, ed !!!Diodo np 13-100578-01 NEXPERIA and O
+off failure
+

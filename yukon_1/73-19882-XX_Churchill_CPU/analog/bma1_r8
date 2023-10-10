@@ -1,0 +1,13 @@
+!!!!    2    0    1 1634304963   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:02 2020
+on failure
+report parallel devices
+report "bma1_c12 100n"
+end on failure
+disconnect all
+connect i to "PMOD_A2V5_VOSEN"
+connect s to "A2_5V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed, wa20m, en, wb
+! "bma1_r8" test.
+off failure

@@ -1,0 +1,9 @@
+!!!!    2    0    1  990065614   0000                                         
+on failure
+   report "Check for J2003_C presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "J2003_C_PRESENCE_SWITCH_PIN_2"
+jumper  20.0,  re1, ar200m
+off failure

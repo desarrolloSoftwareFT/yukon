@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176554   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:15 2020
+disconnect all
+connect s to "FC_PWM01"
+connect i to "FAN01_PWM_CON_ZL"
+resistor 220, 30, 20, re3, ar500m

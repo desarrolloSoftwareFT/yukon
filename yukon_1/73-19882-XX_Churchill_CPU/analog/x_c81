@@ -1,0 +1,11 @@
+!!!!    2    0    1 1600512964   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:24 2020
+on failure
+   report parallel devices
+   end on failure
+disconnect all
+connect i to "GND"
+connect s to "A1_2V"
+capacitor 2m, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+! "x_c81" is a limited test.
+off failure

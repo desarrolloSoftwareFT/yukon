@@ -1,0 +1,9 @@
+!!!!    2    0    1 1603227227   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:53 2020
+disconnect all
+connect s to "BMC_I2C1_SCL"
+connect i to "SRT_BMC_I2C1_SCL"
+connect a to "BMC_I2C1_SCL"
+connect b to "SRT_BMC_I2C1_SCL"
+resistor 22+10, 40, 20, re2, ar100m,sa,sb, en, ed 
+! "r458" test.

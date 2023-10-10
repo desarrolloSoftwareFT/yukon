@@ -1,0 +1,10 @@
+!!!!    2    0    1 1621631906   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect i to "PMOD_P2V5_DIDT"
+connect s to "P2V5_VPP_2"
+!B!jumper  20.0,  re1, ar200m
+!jumper 20.0,re1,ar200m,ed
+!revisar despues, se aprendio tarjeta
+jumper 38.0,re1,ar200m,ed, en
+! "bma5_l1" test.

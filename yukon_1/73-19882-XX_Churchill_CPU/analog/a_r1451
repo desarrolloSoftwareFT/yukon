@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176280   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:41 2020
+disconnect all
+connect s to "IRQ_SERIRQ_DATA"
+connect i to "IRQ_SERIRQ_DATA_R"
+connect a to "IRQ_SERIRQ_DATA"
+connect b to "IRQ_SERIRQ_DATA_R"
+resistor 33, 40, 20, re2, ar200m
+! "a_r1451" test.

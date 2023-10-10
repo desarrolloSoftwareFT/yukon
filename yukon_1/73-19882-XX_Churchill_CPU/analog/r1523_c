@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175986   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:47 2020
+disconnect all
+connect s to "P3V3"
+connect i to "CPU_FPGA_BWDT_EXPIRED"
+jumper 5.09k, re4, wb, ar200m, op
+! "r1523_c" test.

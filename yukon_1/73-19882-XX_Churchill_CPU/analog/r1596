@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176266   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:27 2020
+disconnect all
+connect s to "FPGA_STANDBY_TPS_EN"
+connect i to "PMOD_A3V3_ENABLE"
+resistor 10k, 25, 20, re4, wb, ar100m

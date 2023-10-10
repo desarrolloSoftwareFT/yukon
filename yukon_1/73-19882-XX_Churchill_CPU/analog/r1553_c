@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175987   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:48 2020
+on failure
+   report parallel devices
+   report "r1609_c 4.75k"
+end on failure
+disconnect all
+connect i to "CPU_APWROK_BUF"
+connect s to "GND"
+jumper 3.13k, re4, wb, ar500m, op
+! "r1553_c" test.
+off failure

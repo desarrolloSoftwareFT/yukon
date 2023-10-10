@@ -1,0 +1,12 @@
+!!!!    2    0    1 1623857291   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:02 2020
+on failure
+   report parallel devices
+   report "a_q28 a_q28%qf 200, 50.0"
+end on failure
+disconnect all
+connect s to "P3V3"
+connect i to "P3V3_PCH_2"
+diode 990m, 500m, idc38m, co3.0, ar845m
+! "a_q28%cr" test.
+off failure

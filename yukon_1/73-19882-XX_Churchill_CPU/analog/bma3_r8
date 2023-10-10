@@ -1,0 +1,13 @@
+!!!!    2    0    1 1625783462   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+on failure
+   report parallel devices
+   report "bma3_c12 100n"
+end on failure
+disconnect all
+connect i to "PMOD_P3V3_VOSEN"
+connect s to "P3V3"
+resistor 12, 70, 25, re2, ar200m, wb, en, ed
+! "bma3_r8" test.
+off failure
+

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1684553349   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:25 2020
+disconnect all
+connect i to "CPU_PROCHOT_1V_L"
+connect s to "P1V05_COMBINED"
+!connect g to "GND"
+resistor 8k , 35, 48, re4,  ar50m,ico100m,am50m
+!resistor 8k -1000, 25, 35, re4, wb, ar150m,en,ico50m

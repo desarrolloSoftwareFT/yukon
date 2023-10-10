@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175977   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:38 2020
+disconnect all
+connect i to "PU_LAN_NCSI_RXD1_C"
+connect s to "GND"
+jumper 5.16k, re4, wb, ar200m, op
+! "r1062_c" test.

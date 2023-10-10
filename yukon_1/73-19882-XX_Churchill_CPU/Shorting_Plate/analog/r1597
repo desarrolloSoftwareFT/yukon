@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes FPGA_STANDBY_TPS_EN P-Pin resistance"
+report "check nodes PMOD_A2V5_ENABLE P-Pin resistance"
+end on failure
+disconnect all
+connect s to "FPGA_STANDBY_TPS_EN"
+connect i to "PMOD_A2V5_ENABLE"
+resistor 10,20,100, re1, ar100m,ed
+off failure

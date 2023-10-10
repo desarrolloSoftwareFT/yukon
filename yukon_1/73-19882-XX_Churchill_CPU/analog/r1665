@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175995   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:56 2020
+disconnect all
+connect s to "GND"
+connect i to "BMC_TMS"
+jumper 4.92k, re4, wb, ar200m, op
+! "r1665" test.

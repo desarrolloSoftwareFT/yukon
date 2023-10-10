@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175993   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:54 2020
+disconnect all
+connect s to "BMC_FAN_CARD_RST"
+connect i to "BMC_FAN_CARD_RST_R"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1645" test.

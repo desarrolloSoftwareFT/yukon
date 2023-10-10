@@ -1,0 +1,103 @@
+!!!!    5    0    2 1619221997  V7854                                         
+! CONFIGURATION FOR DEVELOPING BOARD TESTS
+!
+!
+target hp3073 standard
+
+  enable common delimiter
+  enable advanced fixturing
+! enable 1149.6 boundary scan
+
+! enable awaretest 1.0
+! enable silicon nails
+  enable software revision b
+! enable drivethru
+! enable cover extend
+! enable magic
+! enable multiple board versions
+! enable connect check
+  enable express fixturing
+! enable flash70
+! enable serial test
+! enable combo test
+! enable paneltest
+! enable throughput multiplier
+  enable testjet
+  enable advanced boundary scan
+! enable dual well shared wiring
+! enable hp3065 fixture interface
+! enable gr fixture interface
+! enable gr fixture interface 4:16
+! enable gr fixture interface 2:8
+
+!bank 1
+   module 0
+      cards 1 asru c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 13 to 16 asru channels 1 to 4
+!!     connect "ext7" signal to ext7
+!!!     connect "ext8" signal to ext8
+   end module
+   module 1
+      cards 1 asru c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 9 to 12 asru channels 1 to 4
+!     connect "ext5" signal to ext5
+!     connect "ext6" signal to ext6
+   end module
+!end bank
+
+!bank 2
+   module 2
+      cards 1 asru  c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 5 to 8 asru channels 1 to 4
+!     connect "ext3" signal to ext3
+!     connect "ext4" signal to ext4
+   end module
+   module 3
+!     probe
+!     debug port
+      cards 1 asru  c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 1 to 4 asru channels 1 to 4
+!     connect "ext1" signal to ext1
+!     connect "ext2" signal to ext2
+   end module
+!end bank

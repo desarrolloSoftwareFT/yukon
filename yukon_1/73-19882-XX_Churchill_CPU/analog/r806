@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176281   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:42 2020
+disconnect all
+connect s to "CPLD_JTAG_TDO"
+connect i to "SRT_CPLD_JTAG_TDO"
+connect a to "CPLD_JTAG_TDO"
+connect b to "SRT_CPLD_JTAG_TDO"
+resistor 33, 40, 20, re2, ar200m
+! "r806" test.

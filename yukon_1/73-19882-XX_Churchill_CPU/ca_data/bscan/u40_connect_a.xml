@@ -1,0 +1,51 @@
+<!-- Created Wed Aug 19 09:34:11 2020 from ITL Source digital/u40_connect_a -->
+<Test name="u40_connect_a"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u40_u27"><ChainTCK><node name="SF_JTAG_TCK" /><opensCoverage>Full</opensCoverage>
+</ChainTCK>
+<ChainTMS><node name="SF_JTAG_TMS" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="SF_JTAG_TDI" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="SF_JTAG_TDO" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="SF_JTAG_TRST" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="JTAG_BDX_TCK" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+</Chain>
+<Device name="u40"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="W20"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="V20"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="Y22"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<Pin name="AB18"><node name="PCH_CONSOLE_RXD1_X86FPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA18"><node name="PMOD_P1V5_PCH_PG_3V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA17"><node name="FPGA_CPU_SRST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA16"><node name="FPGA_CPU_HRST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA15"><node name="SRT_FPGA_LPC_LAD&lt;3&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA13"><node name="FAN45_AMB_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB14"><node name="FAN23_AMB_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB13"><node name="FAN23_BLU_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA12"><node name="FAN23_GRN_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB11"><node name="PCH_SERIRQ" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA11"><node name="PCH_LPC_FRAME_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB10"><node name="FAN1011_BLU_LED" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA10"><node name="CLK_33M_LPC_FPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B1"><node name="CPLD_P2PM_RX" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B2"><node name="X86_FPGA_MDC_1G_PHY" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A2"><node name="1GPHY_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A5"><node name="PMOD_PVCCSCFUSESUS_PG" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B6"><node name="CPU_SEC_BOOT_JTAG_TRST" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B7"><node name="SRT_P2PM_CPU_FPGA_BMC_FPGA1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A8"><node name="LED_CPU_FPGA_HEARTBEAT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B9"><node name="PMOD_P1V05_VCCSCSUS_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B11"><node name="LED_SB_L&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A10"><node name="PMOD_P0V6_VTT_PG" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A13"><node name="PMOD_PVCCSCFUSESUS_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B13"><node name="PMOD_P1V05_COMBINED_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A14"><node name="PMOD_P1V05_COMBINED_PG" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A16"><node name="PCHGP_PWRDN_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A17"><node name="BMC_I2C_RST_L_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A19"><node name="10GPHY_INTR_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B17"><node name="PMOD_P1V05_VCCSCSUS_PG" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B19"><node name="SRT_FPGA_BMC_UART5_TXD" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

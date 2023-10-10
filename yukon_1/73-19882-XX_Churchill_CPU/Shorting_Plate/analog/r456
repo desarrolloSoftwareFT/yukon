@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_4189_AST2520_I1_GPIOD7SD2WPM P-Pin resistance"
+report "check nodes BMC_EMMC_RST_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_4189_AST2520_I1_GPIOD7SD2WPM"
+connect i to "BMC_EMMC_RST_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

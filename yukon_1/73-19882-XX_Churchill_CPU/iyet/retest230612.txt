@@ -1,0 +1,1179 @@
+----------------------------------------
+CHEK-POINT Report for "pins".
+Mon Jun 12 13:36:03 2023
+73-19882-04
+----------------------------------------
+Failed Open #1
+(12047) jtag_bdx_trst_n
+                a_u139.8
+               r1499_c.1
+                u1_c.U75
+              u1_c_pch.U75
+------End, 1 Problem Reported-----------
+----------------------------------------
+CHEK-POINT Report for "pins".
+Mon Jun 12 13:36:13 2023
+73-19882-04
+----------------------------------------
+Failed Open #1
+(12047) jtag_bdx_trst_n
+                a_u139.8
+               r1499_c.1
+                u1_c.U75
+              u1_c_pch.U75
+------End, 1 Problem Reported-----------
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:36:39 2023
+----------------------------------------
+c479 HAS FAILED
+11-100081-01 CAP, CE, 100pF, 25V ,NP0,5%
+Measured:   176.96p
+Nominal:    110.00p
+High Limit: 176.00p
+Low Limit:  71.500p
+Capacitance in FARADS
+----------------------------------------
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:37:20 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.3023k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.3063k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WT
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:38:06 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2736k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2918k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WT
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:38:14 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2850k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2894k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WT
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jun 12 13:39:42 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126   68
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209128   68 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+Common Devices:
+                bma4_r4
+Message is:
+Check bma4_r4
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jun 12 13:39:54 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pch_serirq             119158 3604
+               r1404_c.2
+               r1586_c.2
+               r1622_c.1
+                 u8.F22
+                u40.AB11
+To:   CPU_SERIRQ_DATA        215151 3604
+               a_r1446.2
+               r1404_c.1
+Common Devices:
+                r1404_c
+Message is:
+Check r1404_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: GND                     21126 Open
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+To:     v                    209128
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+Common Devices:
+                bma4_r4
+Message is:
+Check bma4_r4
+------End, 2 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+Shorts Report for "shorts".
+Mon Jun 12 13:40:05 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: pch_serirq             119158 2020
+               r1404_c.2
+               r1586_c.2
+               r1622_c.1
+                 u8.F22
+                u40.AB11
+To:   CPU_SERIRQ_DATA        215151 2020
+               a_r1446.2
+               r1404_c.1
+Common Devices:
+                r1404_c
+Message is:
+Check r1404_c
+------End, 1 Problem Reported-----------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:43:33 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -3526.4p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:44:41 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -4461.4p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:44:49 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -4072.0p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:51:56 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.3009k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.3032k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:52:34 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2910k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2941k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+73-19882-04
+Mon Jun 12 13:52:42 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2896k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+fc_r6_hs5 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2918k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs5 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:04:17 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.3027k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SBD
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:04:28 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2866k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SBD
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:04:35 2023
+----------------------------------------
+fc_r6_hs4 HAS FAILED
+12-3586-02 RES,TKF,2.2 k ohm,0.1W,1%,SM,
+Measured:   1.2850k
+Nominal:    2.2000k
+High Limit: 2.7500k
+Low Limit:  1.3200k
+Resistance in OHMS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_c6_hs4 10.0u
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SBD
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:15:30 2023
+----------------------------------------
+r1330 HAS FAILED
+12-5367-01 RES,TKF,3.3 ohm,0.063W,1%,SM,
+Measured:   93.331
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:16:36 2023
+----------------------------------------
+r1330 HAS FAILED
+12-5367-01 RES,TKF,3.3 ohm,0.063W,1%,SM,
+Measured:   39.211
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:16:43 2023
+----------------------------------------
+r1330 HAS FAILED
+12-5367-01 RES,TKF,3.3 ohm,0.063W,1%,SM,
+Measured:   323.49
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM27130SF0
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jun 12 14:25:41 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin B3  Node c33_cpu_pwrgd_pch
+  Measured 1.9              (BRC 11750)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin H6  Node fan1_tach
+  Measured 0.8              (BRC 210113)
+Open #2  Device u40
+  Pin M22  Node pch_rsmrst_n
+  Measured 3.9              (BRC 121150)
+Open #3  Device u40
+  Pin D3  Node x86_bmcfpga_sda
+  Measured 0.9              (BRC 21524)
+Open #4  Device u40
+  Pin V18  Node mb_i2c_alert_l
+  Measured -2.4             (BRC 22137)
+Open #5  Device u40
+  Pin D4  Node x86_bmcfpga_scl
+  Measured 1.3              (BRC 21425)
+Open #6  Device u40
+  Pin W22  Node jtag_cpu_fpga_tdi
+  Measured 0.5              (BRC 114178)
+Open #7  Device u40
+  Pin V22  Node p2pm_mb_cpu_r<0>
+  Measured -3.3             (BRC 22135)
+Open #8  Device u40
+  Pin A11  Node pmod_pvccin_en
+  Measured 1.8              (BRC 20716)
+Open #9  Device u40
+  Pin AB14  Node fan23_amb_led
+  Measured 6.3              (BRC 108164)
+Open #10  Device u40
+  Pin B3  Node bios_golden_wp_r
+  Measured 4.3              (BRC 22303)
+Open #11  Device u40
+  Pin Y19  Node fan12_tach_r
+  Measured 2.4              (BRC 121145)
+Open #12  Device u40
+  Pin C3  Node spi_x86_obfl_wp
+  Measured 0.5              (BRC 12062)
+Open #13  Device u40
+  Pin AA18  Node pmod_p1v5_pch_pg_3v
+  Measured 0.0              (BRC 11974)
+Open #14  Device u40
+  Pin A8  Node led_cpu_fpga_heartbeat_l
+  Measured -1.5             (BRC 222125)
+Open #15  Device u40
+  Pin E1  Node fpgabdx_cpu_rsmrst_n
+  Measured -0.3             (BRC 120172)
+Open #16  Device u40
+  Pin W17  Node spi_fpga_cs0_l
+  Measured 0.5              (BRC 12157)
+Open #17  Device u40
+  Pin T20  Node cpu_boot_success_r
+  Measured 1.4              (BRC 119143)
+Open #18  Device u40
+  Pin B9  Node pmod_p1v05_vccscsus_en
+  Measured 0.4              (BRC 207116)
+Open #19  Device u40
+  Pin Y15  Node pu_cpu_gpio51_r
+  Measured -1.2             (BRC 12152)
+Open #20  Device u40
+  Pin B21  Node fm_bdxde_err2_lvt2v5_n
+  Measured 1.8              (BRC 217113)
+Open #21  Device u40
+  Pin F2  Node fan4_tach
+  Measured 5.5              (BRC 109172)
+Open #22  Device u40
+  Pin Y17  Node pch_sys_pwrok
+  Measured 5.9              (BRC 119167)
+Open #23  Device u40
+  Pin D5  Node bmc_console1_txd
+  Measured 5.0              (BRC 20711)
+Open #24  Device u40
+  Pin AA13  Node fan45_amb_led
+  Measured 2.2              (BRC 107172)
+Open #25  Device u40
+  Pin J1  Node fan3_eeprom
+  Measured 6.3              (BRC 10773)
+Open #26  Device u40
+  Pin A6  Node p2pm_bmc_fpga_cpu_fpga1
+  Measured -1.5             (BRC 222122)
+Open #27  Device u40
+  Pin AA12  Node fan23_grn_led
+  Measured 8.6              (BRC 10771)
+Open #28  Device u40
+  Pin A10  Node pmod_p0v6_vtt_pg
+  Measured -2.2             (BRC 10866)
+Open #29  Device u40
+  Pin B1  Node cpld_p2pm_rx
+  Measured -1.5             (BRC 21904)
+Open #30  Device u40
+  Pin W19  Node x86_fpga_intr_bmc
+  Measured 0.2              (BRC 22012)
+Open #31  Device u40
+  Pin D1  Node cpld_spi_mosi
+  Measured 4.2              (BRC 119153)
+Open #32  Device u40
+  Pin A9  Node r_x86_intr_bmc
+  Measured -2.4             (BRC 221133)
+Open #33  Device u40
+  Pin U21  Node bmc_cpu_fpga_sda
+  Measured -6.7             (BRC 219118)
+Open #34  Device u40
+  Pin V20  Node jtag_cpu_fpga_tms
+  Measured 9.0              (BRC 215104)
+Open #35  Device u40
+  Pin N22  Node PMB_SPIFLASH_CS0_L
+  Measured 2.2              (BRC 11962)
+Open #36  Device u40
+  Pin AA17  Node fpga_cpu_srst_l
+  Measured 1.4              (BRC 120173)
+Open #37  Device u40
+  Pin V21  Node srt_p2pm_cpu_mb<0>
+  Measured 0.5              (BRC 22015)
+Open #38  Device u40
+  Pin Y18  Node fan11_tach_r
+  Measured 5.4              (BRC 121144)
+Open #39  Device u40
+  Pin B7  Node srt_p2pm_cpu_fpga_bmc_fpga1
+  Measured -0.8             (BRC 22126)
+Open #40  Device u40
+  Pin D9  Node led_sb_l<7>
+  Measured 5.1              (BRC 22210)
+Open #41  Device u40
+  Pin AB10  Node fan1011_blu_led
+  Measured 2.1              (BRC 20823)
+Open #42  Device u40
+  Pin G1  Node fan8_tach
+  Measured 3.4              (BRC 208102)
+Open #43  Device u40
+  Pin AB15  Node bmc_fan_i2c_sda
+  Measured 8.4              (BRC 210104)
+Open #44  Device u40
+  Pin AA16  Node fpga_cpu_hrst_l
+  Measured 2.3              (BRC 12071)
+Open #45  Device u40
+  Pin A19  Node 10gphy_intr_2v5
+  Measured -0.7             (BRC 21924)
+Open #46  Device u40
+  Pin A20  Node board_id_spare3
+  Measured 2.2              (BRC 221111)
+Open #47  Device u40
+  Pin Y22  Node jtag_cpu_fpga_trst
+  Measured 6.9              (BRC 120134)
+Open #48  Device u40
+  Pin W20  Node jtag_cpu_fpga_tck
+  Measured 0.2              (BRC 215109)
+Open #49  Device u40
+  Pin D6  Node pmod_ddr4_vtt_pgood
+  Measured 3.3              (BRC 21023)
+Open #50  Device u40
+  Pin AB18  Node pch_console_rxd1_x86fpga
+  Measured 6.0              (BRC 22222)
+Open #51  Device u40
+  Pin B5  Node fab_rev3
+  Measured 4.4              (BRC 22108)
+Open #52  Device u40
+  Pin Y21  Node jtag_cpu_fpga_tdo
+  Measured 2.2              (BRC 21603)
+Open #53  Device u40
+  Pin H1  Node fan9_tach
+  Measured 6.5              (BRC 210112)
+Open #54  Device u40
+  Pin A7  Node bdxde_caterr_gtl_r
+  Measured 3.7              (BRC 223104)
+Open #55  Device u40
+  Pin AB19  Node pch_console_txd1_x86fpga
+  Measured -1.0             (BRC 121146)
+Open #56  Device u40
+  Pin B6  Node cpu_sec_boot_jtag_trst
+  Measured -1.5             (BRC 21917)
+Open #57  Device u40
+  Pin B2  Node x86_fpga_mdc_1g_phy
+  Measured 4.3              (BRC 21431)
+Open #58  Device u40
+  Pin G2  Node fan5_tach
+  Measured 3.2              (BRC 10878)
+Open #59  Device u40
+  Pin A21  Node pmod_p3v3_pch_pg
+  Measured 6.1              (BRC 12074)
+Open #60  Device u40
+  Pin AA22  Node cpu_fpga_jtagsel
+  Measured 3.2              (BRC 22243)
+Open #61  Device u40
+  Pin C5  Node pmod_pvcckrhv_pg
+  Measured 2.6              (BRC 120150)
+Open #62  Device u40
+  Pin A5  Node pmod_pvccscfusesus_pg
+  Measured 2.3              (BRC 12153)
+Open #63  Device u40
+  Pin A2  Node 1gphy_rst_l
+  Measured -4.7             (BRC 219104)
+Open #64  Device u40
+  Pin A4  Node pmod_p2v5_vpp_pg
+  Measured 3.1              (BRC 10867)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WK
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jun 12 14:25:55 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin B3  Node c33_cpu_pwrgd_pch
+  Measured 3.9              (BRC 11750)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin H6  Node fan1_tach
+  Measured 1.0              (BRC 210113)
+Open #2  Device u40
+  Pin M22  Node pch_rsmrst_n
+  Measured 1.6              (BRC 121150)
+Open #3  Device u40
+  Pin T19  Node fpga_mux_sclk
+  Measured 3.2              (BRC 215124)
+Open #4  Device u40
+  Pin D3  Node x86_bmcfpga_sda
+  Measured -0.8             (BRC 21524)
+Open #5  Device u40
+  Pin V18  Node mb_i2c_alert_l
+  Measured 0.9              (BRC 22137)
+Open #6  Device u40
+  Pin D4  Node x86_bmcfpga_scl
+  Measured -0.7             (BRC 21425)
+Open #7  Device u40
+  Pin W22  Node jtag_cpu_fpga_tdi
+  Measured -2.2             (BRC 114178)
+Open #8  Device u40
+  Pin Y10  Node fan67_blu_led
+  Measured 7.3              (BRC 20502)
+Open #9  Device u40
+  Pin V22  Node p2pm_mb_cpu_r<0>
+  Measured 0.5              (BRC 22135)
+Open #10  Device u40
+  Pin A11  Node pmod_pvccin_en
+  Measured -0.1             (BRC 20716)
+Open #11  Device u40
+  Pin AB14  Node fan23_amb_led
+  Measured 2.8              (BRC 108164)
+Open #12  Device u40
+  Pin B3  Node bios_golden_wp_r
+  Measured -4.1             (BRC 22303)
+Open #13  Device u40
+  Pin R22  Node cpu_sec_boot_jtag_tms
+  Measured -2.6             (BRC 21605)
+Open #14  Device u40
+  Pin Y19  Node fan12_tach_r
+  Measured 4.9              (BRC 121145)
+Open #15  Device u40
+  Pin C3  Node spi_x86_obfl_wp
+  Measured -3.2             (BRC 12062)
+Open #16  Device u40
+  Pin AA18  Node pmod_p1v5_pch_pg_3v
+  Measured -2.5             (BRC 11974)
+Open #17  Device u40
+  Pin A8  Node led_cpu_fpga_heartbeat_l
+  Measured -0.6             (BRC 222125)
+Open #18  Device u40
+  Pin E1  Node fpgabdx_cpu_rsmrst_n
+  Measured -0.2             (BRC 120172)
+Open #19  Device u40
+  Pin W17  Node spi_fpga_cs0_l
+  Measured -0.3             (BRC 12157)
+Open #20  Device u40
+  Pin T20  Node cpu_boot_success_r
+  Measured -2.7             (BRC 119143)
+Open #21  Device u40
+  Pin B9  Node pmod_p1v05_vccscsus_en
+  Measured 2.8              (BRC 207116)
+Open #22  Device u40
+  Pin Y13  Node fan45_grn_led
+  Measured 2.0              (BRC 107173)
+Open #23  Device u40
+  Pin Y15  Node pu_cpu_gpio51_r
+  Measured 2.3              (BRC 12152)
+Open #24  Device u40
+  Pin B21  Node fm_bdxde_err2_lvt2v5_n
+  Measured -0.6             (BRC 217113)
+Open #25  Device u40
+  Pin F2  Node fan4_tach
+  Measured 4.1              (BRC 109172)
+Open #26  Device u40
+  Pin Y17  Node pch_sys_pwrok
+  Measured 0.6              (BRC 119167)
+Open #27  Device u40
+  Pin D5  Node bmc_console1_txd
+  Measured -0.6             (BRC 20711)
+Open #28  Device u40
+  Pin AA13  Node fan45_amb_led
+  Measured -0.1             (BRC 107172)
+Open #29  Device u40
+  Pin J1  Node fan3_eeprom
+  Measured 5.0              (BRC 10773)
+Open #30  Device u40
+  Pin A6  Node p2pm_bmc_fpga_cpu_fpga1
+  Measured -0.3             (BRC 222122)
+Open #31  Device u40
+  Pin AA12  Node fan23_grn_led
+  Measured 4.6              (BRC 10771)
+Open #32  Device u40
+  Pin A10  Node pmod_p0v6_vtt_pg
+  Measured -0.7             (BRC 10866)
+Open #33  Device u40
+  Pin B1  Node cpld_p2pm_rx
+  Measured -2.2             (BRC 21904)
+Open #34  Device u40
+  Pin W19  Node x86_fpga_intr_bmc
+  Measured -3.5             (BRC 22012)
+Open #35  Device u40
+  Pin D1  Node cpld_spi_mosi
+  Measured -2.5             (BRC 119153)
+Open #36  Device u40
+  Pin A9  Node r_x86_intr_bmc
+  Measured -1.0             (BRC 221133)
+Open #37  Device u40
+  Pin U21  Node bmc_cpu_fpga_sda
+  Measured 2.2              (BRC 219118)
+Open #38  Device u40
+  Pin V20  Node jtag_cpu_fpga_tms
+  Measured 5.0              (BRC 215104)
+Open #39  Device u40
+  Pin N22  Node PMB_SPIFLASH_CS0_L
+  Measured 0.6              (BRC 11962)
+Open #40  Device u40
+  Pin AA17  Node fpga_cpu_srst_l
+  Measured -1.8             (BRC 120173)
+Open #41  Device u40
+  Pin V21  Node srt_p2pm_cpu_mb<0>
+  Measured 2.2              (BRC 22015)
+Open #42  Device u40
+  Pin Y18  Node fan11_tach_r
+  Measured -0.6             (BRC 121144)
+Open #43  Device u40
+  Pin B7  Node srt_p2pm_cpu_fpga_bmc_fpga1
+  Measured 2.3              (BRC 22126)
+Open #44  Device u40
+  Pin D9  Node led_sb_l<7>
+  Measured -1.0             (BRC 22210)
+Open #45  Device u40
+  Pin AB10  Node fan1011_blu_led
+  Measured 2.0              (BRC 20823)
+Open #46  Device u40
+  Pin G1  Node fan8_tach
+  Measured 5.6              (BRC 208102)
+Open #47  Device u40
+  Pin AB15  Node bmc_fan_i2c_sda
+  Measured -0.5             (BRC 210104)
+Open #48  Device u40
+  Pin AA16  Node fpga_cpu_hrst_l
+  Measured 0.1              (BRC 12071)
+Open #49  Device u40
+  Pin A19  Node 10gphy_intr_2v5
+  Measured 0.3              (BRC 21924)
+Open #50  Device u40
+  Pin A20  Node board_id_spare3
+  Measured 5.7              (BRC 221111)
+Open #51  Device u40
+  Pin Y22  Node jtag_cpu_fpga_trst
+  Measured -3.0             (BRC 120134)
+Open #52  Device u40
+  Pin W20  Node jtag_cpu_fpga_tck
+  Measured 10.2             (BRC 215109)
+Open #53  Device u40
+  Pin D6  Node pmod_ddr4_vtt_pgood
+  Measured 0.9              (BRC 21023)
+Open #54  Device u40
+  Pin AB18  Node pch_console_rxd1_x86fpga
+  Measured 3.4              (BRC 22222)
+Open #55  Device u40
+  Pin B5  Node fab_rev3
+  Measured 4.8              (BRC 22108)
+Open #56  Device u40
+  Pin Y21  Node jtag_cpu_fpga_tdo
+  Measured -0.3             (BRC 21603)
+Open #57  Device u40
+  Pin H1  Node fan9_tach
+  Measured 4.8              (BRC 210112)
+Open #58  Device u40
+  Pin A7  Node bdxde_caterr_gtl_r
+  Measured 3.8              (BRC 223104)
+Open #59  Device u40
+  Pin AB19  Node pch_console_txd1_x86fpga
+  Measured 0.6              (BRC 121146)
+Open #60  Device u40
+  Pin B6  Node cpu_sec_boot_jtag_trst
+  Measured 1.8              (BRC 21917)
+Open #61  Device u40
+  Pin B2  Node x86_fpga_mdc_1g_phy
+  Measured 0.9              (BRC 21431)
+Open #62  Device u40
+  Pin G2  Node fan5_tach
+  Measured 5.1              (BRC 10878)
+Open #63  Device u40
+  Pin A21  Node pmod_p3v3_pch_pg
+  Measured -2.8             (BRC 12074)
+Open #64  Device u40
+  Pin AA22  Node cpu_fpga_jtagsel
+  Measured 0.2              (BRC 22243)
+Open #65  Device u40
+  Pin C5  Node pmod_pvcckrhv_pg
+  Measured 1.6              (BRC 120150)
+Open #66  Device u40
+  Pin A5  Node pmod_pvccscfusesus_pg
+  Measured -4.9             (BRC 12153)
+Open #67  Device u40
+  Pin A2  Node 1gphy_rst_l
+  Measured -0.7             (BRC 219104)
+Open #68  Device u40
+  Pin A4  Node pmod_p2v5_vpp_pg
+  Measured -2.3             (BRC 10867)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WK
+----------------------------------------
+TestJet Report for "testjet".
+Mon Jun 12 14:26:19 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u1
+  Pin B3  Node c33_cpu_pwrgd_pch
+  Measured 3.9              (BRC 11750)
+17-15891-02 CPLD, PROG, LCMX03LF, VALENT
+----------------------------------------
+Open #1  Device u40
+  Pin H6  Node fan1_tach
+  Measured 0.8              (BRC 210113)
+Open #2  Device u40
+  Pin G3  Node fan6_tach
+  Measured 3.3              (BRC 109173)
+Open #3  Device u40
+  Pin M22  Node pch_rsmrst_n
+  Measured 4.9              (BRC 121150)
+Open #4  Device u40
+  Pin T19  Node fpga_mux_sclk
+  Measured 1.4              (BRC 215124)
+Open #5  Device u40
+  Pin D3  Node x86_bmcfpga_sda
+  Measured 4.2              (BRC 21524)
+Open #6  Device u40
+  Pin V18  Node mb_i2c_alert_l
+  Measured 1.4              (BRC 22137)
+Open #7  Device u40
+  Pin D4  Node x86_bmcfpga_scl
+  Measured -1.1             (BRC 21425)
+Open #8  Device u40
+  Pin W22  Node jtag_cpu_fpga_tdi
+  Measured 2.5              (BRC 114178)
+Open #9  Device u40
+  Pin Y10  Node fan67_blu_led
+  Measured 7.6              (BRC 20502)
+Open #10  Device u40
+  Pin V22  Node p2pm_mb_cpu_r<0>
+  Measured 1.1              (BRC 22135)
+Open #11  Device u40
+  Pin A11  Node pmod_pvccin_en
+  Measured 0.4              (BRC 20716)
+Open #12  Device u40
+  Pin AB14  Node fan23_amb_led
+  Measured 2.8              (BRC 108164)
+Open #13  Device u40
+  Pin B3  Node bios_golden_wp_r
+  Measured 0.2              (BRC 22303)
+Open #14  Device u40
+  Pin R22  Node cpu_sec_boot_jtag_tms
+  Measured 2.3              (BRC 21605)
+Open #15  Device u40
+  Pin Y19  Node fan12_tach_r
+  Measured 3.8              (BRC 121145)
+Open #16  Device u40
+  Pin C3  Node spi_x86_obfl_wp
+  Measured -0.4             (BRC 12062)
+Open #17  Device u40
+  Pin AA18  Node pmod_p1v5_pch_pg_3v
+  Measured 4.1              (BRC 11974)
+Open #18  Device u40
+  Pin E1  Node fpgabdx_cpu_rsmrst_n
+  Measured 2.4              (BRC 120172)
+Open #19  Device u40
+  Pin W17  Node spi_fpga_cs0_l
+  Measured -1.0             (BRC 12157)
+Open #20  Device u40
+  Pin T20  Node cpu_boot_success_r
+  Measured 4.3              (BRC 119143)
+Open #21  Device u40
+  Pin B9  Node pmod_p1v05_vccscsus_en
+  Measured 0.3              (BRC 207116)
+Open #22  Device u40
+  Pin Y13  Node fan45_grn_led
+  Measured 2.8              (BRC 107173)
+Open #23  Device u40
+  Pin Y15  Node pu_cpu_gpio51_r
+  Measured -2.0             (BRC 12152)
+Open #24  Device u40
+  Pin B21  Node fm_bdxde_err2_lvt2v5_n
+  Measured 7.9              (BRC 217113)
+Open #25  Device u40
+  Pin F2  Node fan4_tach
+  Measured 4.9              (BRC 109172)
+Open #26  Device u40
+  Pin Y17  Node pch_sys_pwrok
+  Measured -3.9             (BRC 119167)
+Open #27  Device u40
+  Pin D5  Node bmc_console1_txd
+  Measured 2.5              (BRC 20711)
+Open #28  Device u40
+  Pin AA13  Node fan45_amb_led
+  Measured 4.7              (BRC 107172)
+Open #29  Device u40
+  Pin A6  Node p2pm_bmc_fpga_cpu_fpga1
+  Measured -0.0             (BRC 222122)
+Open #30  Device u40
+  Pin AA12  Node fan23_grn_led
+  Measured 2.1              (BRC 10771)
+Open #31  Device u40
+  Pin A10  Node pmod_p0v6_vtt_pg
+  Measured 0.3              (BRC 10866)
+Open #32  Device u40
+  Pin B1  Node cpld_p2pm_rx
+  Measured -0.7             (BRC 21904)
+Open #33  Device u40
+  Pin W19  Node x86_fpga_intr_bmc
+  Measured 6.9              (BRC 22012)
+Open #34  Device u40
+  Pin D1  Node cpld_spi_mosi
+  Measured -1.3             (BRC 119153)
+Open #35  Device u40
+  Pin A9  Node r_x86_intr_bmc
+  Measured -1.6             (BRC 221133)
+Open #36  Device u40
+  Pin U21  Node bmc_cpu_fpga_sda
+  Measured -2.3             (BRC 219118)
+Open #37  Device u40
+  Pin V20  Node jtag_cpu_fpga_tms
+  Measured 11.7             (BRC 215104)
+Open #38  Device u40
+  Pin N22  Node PMB_SPIFLASH_CS0_L
+  Measured 3.9              (BRC 11962)
+Open #39  Device u40
+  Pin AA17  Node fpga_cpu_srst_l
+  Measured 3.3              (BRC 120173)
+Open #40  Device u40
+  Pin V21  Node srt_p2pm_cpu_mb<0>
+  Measured 1.8              (BRC 22015)
+Open #41  Device u40
+  Pin Y18  Node fan11_tach_r
+  Measured -1.0             (BRC 121144)
+Open #42  Device u40
+  Pin B7  Node srt_p2pm_cpu_fpga_bmc_fpga1
+  Measured 1.2              (BRC 22126)
+Open #43  Device u40
+  Pin D9  Node led_sb_l<7>
+  Measured 3.8              (BRC 22210)
+Open #44  Device u40
+  Pin AB10  Node fan1011_blu_led
+  Measured -0.8             (BRC 20823)
+Open #45  Device u40
+  Pin G1  Node fan8_tach
+  Measured 3.8              (BRC 208102)
+Open #46  Device u40
+  Pin AB15  Node bmc_fan_i2c_sda
+  Measured 5.8              (BRC 210104)
+Open #47  Device u40
+  Pin AA16  Node fpga_cpu_hrst_l
+  Measured -2.1             (BRC 12071)
+Open #48  Device u40
+  Pin A19  Node 10gphy_intr_2v5
+  Measured 1.0              (BRC 21924)
+Open #49  Device u40
+  Pin A20  Node board_id_spare3
+  Measured 1.2              (BRC 221111)
+Open #50  Device u40
+  Pin Y22  Node jtag_cpu_fpga_trst
+  Measured 2.1              (BRC 120134)
+Open #51  Device u40
+  Pin W20  Node jtag_cpu_fpga_tck
+  Measured 3.9              (BRC 215109)
+Open #52  Device u40
+  Pin D6  Node pmod_ddr4_vtt_pgood
+  Measured 1.3              (BRC 21023)
+Open #53  Device u40
+  Pin AB18  Node pch_console_rxd1_x86fpga
+  Measured -1.0             (BRC 22222)
+Open #54  Device u40
+  Pin B5  Node fab_rev3
+  Measured -0.4             (BRC 22108)
+Open #55  Device u40
+  Pin Y21  Node jtag_cpu_fpga_tdo
+  Measured 2.5              (BRC 21603)
+Open #56  Device u40
+  Pin H1  Node fan9_tach
+  Measured 4.3              (BRC 210112)
+Open #57  Device u40
+  Pin A7  Node bdxde_caterr_gtl_r
+  Measured 5.0              (BRC 223104)
+Open #58  Device u40
+  Pin AB19  Node pch_console_txd1_x86fpga
+  Measured -0.7             (BRC 121146)
+Open #59  Device u40
+  Pin B6  Node cpu_sec_boot_jtag_trst
+  Measured 0.0              (BRC 21917)
+Open #60  Device u40
+  Pin B2  Node x86_fpga_mdc_1g_phy
+  Measured 0.7              (BRC 21431)
+Open #61  Device u40
+  Pin G2  Node fan5_tach
+  Measured 7.8              (BRC 10878)
+Open #62  Device u40
+  Pin A21  Node pmod_p3v3_pch_pg
+  Measured 6.5              (BRC 12074)
+Open #63  Device u40
+  Pin AA22  Node cpu_fpga_jtagsel
+  Measured -0.4             (BRC 22243)
+Open #64  Device u40
+  Pin C5  Node pmod_pvcckrhv_pg
+  Measured 0.1              (BRC 120150)
+Open #65  Device u40
+  Pin A5  Node pmod_pvccscfusesus_pg
+  Measured -2.9             (BRC 12153)
+Open #66  Device u40
+  Pin A2  Node 1gphy_rst_l
+  Measured 1.1              (BRC 219104)
+Open #67  Device u40
+  Pin A4  Node pmod_p2v5_vpp_pg
+  Measured 4.8              (BRC 10867)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271404WK
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:28:53 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -2331.0p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:29:53 2023
+----------------------------------------
+r1905_c HAS FAILED
+12-2557-01 RES,TKF,39.2 k ohm,0.063W,1%,
+Measured:   4.8121k
+Nominal:    39.200k
+High Limit: 49.000k
+Low Limit:  29.400k
+Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:30:02 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -3218.5p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+r1905_c HAS FAILED
+12-2557-01 RES,TKF,39.2 k ohm,0.063W,1%,
+Measured:   7.5672M
+Nominal:    39.200k
+High Limit: 49.000k
+Low Limit:  29.400k
+Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5
+----------------------------------------
+73-19882-04
+Mon Jun 12 14:30:10 2023
+----------------------------------------
+fc_c6_hs2 HAS FAILED
+11-100358-01 CAP, CE, 10uF, 25V, X5R, 10
+Measured:   -3548.0p
+Nominal:    10.000u
+High Limit: 13.500u
+Low Limit:  6.0000u
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+fc_r6_hs2 2.20k
+----------------------------------------
+r1905_c HAS FAILED
+12-2557-01 RES,TKF,39.2 k ohm,0.063W,1%,
+Measured:   3.7841M
+Nominal:    39.200k
+High Limit: 49.000k
+Low Limit:  29.400k
+Resistance in OHMS
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM271409S5

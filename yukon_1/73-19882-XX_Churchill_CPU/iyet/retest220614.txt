@@ -1,0 +1,533 @@
+----------------------------------------
+TestJet Report for "testjet".
+Tue Jun 14 17:24:08 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u3
+  Pin D4  Node hold_obfl
+  Measured 0.8              (BRC 122166)
+16-100083-01 IC-FEPROM-D, SPI, 256Mb, X1
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+TestJet Report for "testjet".
+Tue Jun 14 17:24:17 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u40
+  Pin AB14  Node fan23_amb_led
+  Measured 0.1              (BRC 108164)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+TestJet Report for "testjet".
+Tue Jun 14 17:24:25 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u3
+  Pin D4  Node hold_obfl
+  Measured -0.6             (BRC 122166)
+16-100083-01 IC-FEPROM-D, SPI, 256Mb, X1
+----------------------------------------
+Open #1  Device u40
+  Pin AB14  Node fan23_amb_led
+  Measured 0.4              (BRC 108164)
+17-15769-02 FPGA, PROG, x86 AIKIDO FPGA,
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+TestJet Report for "testjet".
+Tue Jun 14 17:24:34 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u3
+  Pin D4  Node hold_obfl
+  Measured -0.0             (BRC 122166)
+16-100083-01 IC-FEPROM-D, SPI, 256Mb, X1
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+73-19882-04
+Tue Jun 14 17:31:08 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   745.32
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+fc_r65 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   323.24
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+73-19882-04
+Tue Jun 14 17:31:49 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   748.23
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+fc_r65 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   421.25
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+73-19882-04
+Tue Jun 14 17:31:56 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   747.94
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+fc_r65 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   515.52
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+73-19882-04
+Tue Jun 14 17:32:02 2022
+----------------------------------------
+r1861_c HAS FAILED
+12-2570-02 RES,TKF,10 k ohm,0.063W,1%,SM
+Measured:   748.65
+Nominal:    10.000k
+High Limit: 12.500k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+fc_r65 HAS FAILED
+12-3620-02 RES,TKF,240 ohm,0.1W,1%,SM,06
+Measured:   -4.2008M
+Nominal:    240.00
+High Limit: 312.00
+Low Limit:  192.00
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2607046K
+----------------------------------------
+CHEK-POINT Report for "pins".
+Tue Jun 14 17:35:19 2022
+73-19882-04
+----------------------------------------
+Failed Open #1
+(20907) adc0_2v5_vpp_ch3
+                 c557.1
+                 r490.2
+                 r491.2
+                 u46.12
+------End, 1 Problem Reported-----------
+----------------------------------------
+CHEK-POINT Report for "pins".
+Tue Jun 14 17:35:42 2022
+73-19882-04
+----------------------------------------
+Failed Open #1
+(20907) adc0_2v5_vpp_ch3
+                 c557.1
+                 r490.2
+                 r491.2
+                 u46.12
+------End, 1 Problem Reported-----------
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:35:56 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    2
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:36:12 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    1
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    0
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:36:22 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    2
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    3
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:36:33 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    1
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:36:43 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    2
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    1
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    2
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:36:53 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    0
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:37:04 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    0
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    0
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    1
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:37:14 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From:   v                     12070    1
+bmc_cpu_spiflash_sel_and                
+                r298_c.2
+               r1910_c.2
+                 u1.R11
+                u51_c.6
+                u51_c.14
+To:   bmc_cpu_spi0_mux_mosi   22230    2
+                 r36.2
+                u51_c.13
+      bmc_spi2_mux_mosi      219109    2
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+Common Devices:
+                 u51_c
+Total of 3 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 8, Delay 50ms      Ohms
+From: srt_bmc_spi2_mux_mosi  214108    0
+                 r468.2
+                 u8.W19
+To:   srt_bmc_spi2_mux_clk   119172    2
+                 c639.2
+                 r469.2
+                 u8.Y19
+Common Devices:
+                   u8
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2533022G
+----------------------------------------
+Shorts Report for "shorts".
+Tue Jun 14 17:53:10 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   18
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   20
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   19
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   22
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2607046K

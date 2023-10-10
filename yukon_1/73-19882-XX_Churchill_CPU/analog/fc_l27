@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512762  V409d                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:05 2020
+disconnect all
+connect s to "FAN23_PRSNT_L_CON"
+connect i to "FAN23_PRSNT_L_CON_ZL"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "fc_l27" test.

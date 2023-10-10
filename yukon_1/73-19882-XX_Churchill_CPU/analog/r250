@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512867  V6f52                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "NMI_TO_CPU_R"
+connect i to "NMI_TO_CPU"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r250" test.

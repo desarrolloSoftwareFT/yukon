@@ -1,0 +1,29 @@
+! Connect Test Dictionary created Thu Jul 23 13:29:22 2020
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! Chain:  U40_U27
+! Source: digital/u40_connect_f
+! Output: digital/u40_connect_f.vcl.x
+!
+U40
+1201
+!FrCell DvCell Dev Pin  Node               Signature
+   21  20      U40 W19  X86_FPGA_INTR_BMC LHXX
+   39  38      U40 Y19  FAN12_TACH_R     LHXX
+   42  41      U40 Y18  FAN11_TACH_R     LHXX
+   51  50      U40 W17  SPI_FPGA_CS0_L   LHXX
+   54  53      U40 Y17  PCH_SYS_PWROK    LHXX
+   78  77      U40 W16  IDPROM_WP        LHXX
+  108 107      U40 Y15  PU_CPU_GPIO51_R  LHXX
+  129 128      U40 W14  SRT_FPGA_LPC_LAD<1> LHXX
+  132 131      U40 Y14  SRT_FPGA_LPC_LAD<2> LHXX
+  147 146      U40 Y13  FAN45_GRN_LED    LHXX
+  159 158      U40 Y12  FAN01_BLU_LED    LHXX
+  168 167      U40 W12  FAN01_AMB_LED    LHXX
+  195 194      U40 W11  FAN1011_GRN_LED  LHXX
+  219 218      U40 Y10  FAN67_BLU_LED    LHXX
+  222 221      U40 W10  FAN89_GRN_LED    LHXX
+  225 224      U40 Y9   FAN67_GRN_LED    LHXX
+  228 227      U40 W9   FAN67_AMB_LED    LHXX
+ 1179 1178      U40 V21  SRT_P2PM_CPU_MB<0> LHXX
+ 1182 1181      U40 V22  P2PM_MB_CPU_R<0> LHXX
+ 1197 1196      U40 V19  CPU_FPGA_BWDT_EXPIRED LHXX

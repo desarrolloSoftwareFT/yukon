@@ -1,0 +1,10 @@
+!!!!    2    0    1 1596106199   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:11 2020
+disconnect all
+connect s to "FLTR_VP3P3_PCIE_BUF1"
+connect i to "CLK100M_CLKGEN_PCIE_REFCLK_AC_DN"
+connect g to "GND" 
+connect a to "FLTR_VP3P3_PCIE_BUF1"
+connect b to "CLK100M_CLKGEN_PCIE_REFCLK_AC_DN"
+resistor 82.5, 30, 20, re2, ar100m, en, ed
+! "r828" test.

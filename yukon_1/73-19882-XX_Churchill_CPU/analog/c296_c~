@@ -1,0 +1,20 @@
+!!!!    2    0    1 1603204139   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:49 2020
+on failure
+   report parallel devices
+   report "e_c636 22.0u"
+   report "e_c637 22.0u"
+   report "e_c634 1.00u"
+   report "e_c635 1.00u"
+   report "e_c633 100n"
+   report "c653 2.20n"
+   report "e_r956 499"
+   report "e_r923 2.49k"
+end on failure
+disconnect all
+connect s to "P1V5_PCH_2"
+connect i to "GND"
+connect g to "ADC0_P1V5_CH10" 
+capacitor 68.102u-9.5u, 35, 40, fr128, re1, ar100m, ed, en, nocomp
+! "c296_c" test.
+off failure

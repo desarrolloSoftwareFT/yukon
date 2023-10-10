@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175955   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:16 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "BMC_GPIOS5_STRAP"
+jumper 3.09k, re4, wb, ar500m, op
+! "r71" test.

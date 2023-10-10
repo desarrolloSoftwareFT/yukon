@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175939   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:00 2020
+on failure
+   report parallel devices
+   report "r6_m1 100"
+end on failure
+disconnect all
+connect i to "PMOD_VOA_VSENSE_K_M1"
+connect s to "PVCCIN"
+jumper 99.3, re2, ar100m, op
+! "c61_m1" test.
+off failure

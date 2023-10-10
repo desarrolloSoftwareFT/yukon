@@ -1,0 +1,240 @@
+!!!!   24    0    1 1687054694  Vb5f0                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 07.20p  Thu Apr 23 21:51:20 2020
+
+connect "u1_c"
+
+ground bounce suppression   on
+family "LVT_1V05"
+
+chain "u1_c_u1"
+  tdi "LJTAG_TDI_HDR_3V3_MUX" family "LVT"
+  tdo "LJTAG_TDO_HDR_3V3_MUX" family "LVT"
+  tms "LJTAG_TMS_HDR_3V3_MUX" family "LVT"
+  tck "LJTAG_TCK_HDR_3V3_MUX" family "LVT"
+  trst "LJTAG_TRST_L_HDR_3V3" family "LVT"
+  devices
+    "u1_c", "bsdl//15-104798-01_cpu.bsm", "lga", no
+    "u1_c_pch", "bsdl//15-104798-01_pch.bsm", "bga", yes
+!@  "u1_c", "bsdl/b1510634101_BDX_DE_NS.BSDL", "lga", no
+!@  "u1_c_p", "bsdl//15-106341-01_pch.bsm", "bga", yes
+    "u1_i2", "bsdl//b1510342501_i210.bsm", "I210", no
+!@  "u1", "bsdl//lcmxo3lf-1300-bga256.bsm", "cabga256", no
+!@  "u8", "bsdl//15-105116-01.bsm", "ITFBGA456_2", yes
+  end devices
+end chain
+
+disables "disable vector"
+ node "BDXDE_DRAM_PWROK" family "LVT_1V05" hybrid default "1"
+ node "LAN_PWRGOOD_C" family "LVT_1V05" hybrid default "1"
+ node "PWRGOOD_CPU_C" family "LVT_1V05" hybrid default "1"
+
+ pcf order is nodes "BDXDE_DRAM_PWROK","PWRGOOD_CPU_C","LAN_PWRGOOD_C"
+  unit "disable_1"
+  pcf
+ "111"
+  end pcf
+  end unit
+end disables
+
+vector cycle 3u
+receive delay 3u
+
+set slew rate on nodes "LJTAG_TDI_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TMS_HDR_3V3_MUX" to 250
+set slew rate on nodes "LJTAG_TCK_HDR_3V3_MUX" to 250
+
+nodes
+  node "CPU_ADR_COMPLETE_1V" hybrid test "u1_c.AF66"
+  node "CPU_ADR_IN_1V" hybrid test "u1_c.AD66"
+  node "CPU_ERR0_1V_L" hybrid test "u1_c.AC77"
+  node "CPU_ERR1_1V_L" hybrid test "u1_c.AC75"
+  node "CPU_PROCHOT_1V_L" hybrid test "u1_c.AG71"
+!@node "FM_BDXDE_THERMTRIP_N" hybrid test "u1_c.AF72"   !cause power down
+  node "PCH_UART0_RXD_1V" hybrid test "u1_c.AG77"
+!@node "PCH_UART0_TXD_1V_ST_C" hybrid test "u1_c.AG75"
+  node "PCH_UART1_RXD_1V" hybrid test "u1_c.AH78"
+!@node "PCH_UART1_TXD_1V_ST_C" hybrid test "u1_c.AH76"
+!@node "PECI_ID1_C" hybrid test "u1_c.AD78"
+  node "PU_CPU_BMCINIT_C" hybrid test "u1_c.AD69"
+  node "PU_CPU_EAR_L_C" hybrid test "u1_c.AH62"
+  node "PU_CPU_SAFE_MODE_BOOT_C" hybrid test "u1_c.AF69"
+  node "PU_CPU_WAKELAN_L_C" hybrid test "u1_c.AD76"
+  node "SERIRQ_DATA_1V_ST_C" hybrid test "u1_c.AE75"
+  node "SERIRQ_DIR_1V_ST_C" hybrid test "u1_c.AD74"
+!@node "SPI1_10GE_FLSH_CLK_1V_ST_C" hybrid test "u1_c.AJ67"
+!@node "SPI1_10GE_FLSH_CS_L_1V_ST_C" hybrid test "u1_c.AG67"
+!@node "SVID_CLK_C" hybrid test "u1_c.AH72"
+  node "SVID_DATA_C" hybrid test "u1_c.AJ71" !Not disabled
+end nodes
+
+!IPG: Inaccessible nodes
+!IPG: node "CPU_PE2_TX_PCIE_P_1_"
+!IPG: node "CPU_PE2_TX_PCIE_P_3_"
+!IPG: node "CPU_PE2_TX_PCIE_P_5_"
+!IPG: node "CPU_PE2_TX_PCIE_P_7_"
+!IPG: node "CPU_PE1_TX_PCIE_P_1_"
+!IPG: node "CPU_PE1_TX_PCIE_P_3_"
+!IPG: node "HSD_PCIE_CPU_PAC_LN1_AC_DP"
+!IPG: node "CPU_PE1_TX_PCIE_P_7_"
+!IPG: node "CPU_PE1_TX_PCIE_P_9_"
+!IPG: node "CPU_PE1_TX_PCIE_P_11_"
+!IPG: node "CPU_PE1_TX_PCIE_P_13_"
+!IPG: node "CPU_PE1_TX_PCIE_P_15_"
+!IPG: node "XGE_CPU_KR1_P_0_"
+!IPG: node "UNCONNECTED_163"
+!IPG: node "CPU_XGE_KR1_N_0_"
+!IPG: node "UNCONNECTED_161"
+!IPG: node "CPU_XGE_KR1_N_1_"
+!IPG: node "UNCONNECTED_143"
+!IPG: node "UNCONNECTED_207"
+!IPG: node "UNCONNECTED_208"
+!IPG: node "UNCONNECTED_116"
+!IPG: node "UNCONNECTED_202"
+!IPG: node "UNCONNECTED_200"
+!IPG: node "UNCONNECTED_209"
+!IPG: node "UNCONNECTED_211"
+!IPG: node "UNCONNECTED_210"
+!IPG: node "UNCONNECTED_212"
+!IPG: node "UNCONNECTED_221"
+!IPG: node "UNCONNECTED_204"
+!IPG: node "UNCONNECTED_220"
+!IPG: node "UNCONNECTED_170"
+!IPG: node "UNCONNECTED_213"
+!IPG: node "UNCONNECTED_214"
+!IPG: node "UNCONNECTED_219"
+!IPG: node "UNCONNECTED_201"
+!IPG: node "UNCONNECTED_203"
+!IPG: node "UNCONNECTED_206"
+!IPG: node "UNCONNECTED_218"
+!IPG: node "UNCONNECTED_215"
+!IPG: node "UNCONNECTED_217"
+!IPG: node "HSD_PCIE_CPU_IOFPGA_AC_DP"
+!IPG: node "CPU_PE2_TX_PCIE_P_2_"
+!IPG: node "HSD_PCIE_CPU_NIC_AC_DP"
+!IPG: node "CPU_PE2_TX_PCIE_P_6_"
+!IPG: node "HSD_PCIE_CPU_MB_FPGA_AC_DP"
+!IPG: node "CPU_PE1_TX_PCIE_P_2_"
+!IPG: node "HSD_PCIE_CPU_PAC_LN0_AC_DP"
+!IPG: node "CPU_PE1_TX_PCIE_P_6_"
+!IPG: node "CPU_PE1_TX_PCIE_P_8_"
+!IPG: node "CPU_PE1_TX_PCIE_P_10_"
+!IPG: node "CPU_PE1_TX_PCIE_P_12_"
+!IPG: node "CPU_PE1_TX_PCIE_P_14_"
+!IPG: node "CPU_PE2_TX_PCIE_N_1_"
+!IPG: node "CPU_PE2_TX_PCIE_N_3_"
+!IPG: node "CPU_PE2_TX_PCIE_N_5_"
+!IPG: node "CPU_PE2_TX_PCIE_N_7_"
+!IPG: node "CPU_PE1_TX_PCIE_N_1_"
+!IPG: node "CPU_PE1_TX_PCIE_N_3_"
+!IPG: node "HSD_PCIE_CPU_PAC_LN1_AC_DN"
+!IPG: node "CPU_PE1_TX_PCIE_N_7_"
+!IPG: node "CPU_PE1_TX_PCIE_N_9_"
+!IPG: node "CPU_PE1_TX_PCIE_N_11_"
+!IPG: node "CPU_PE1_TX_PCIE_N_13_"
+!IPG: node "CPU_PE1_TX_PCIE_N_15_"
+!IPG: node "XGE_CPU_KR1_N_0_"
+!IPG: node "UNCONNECTED_229"
+!IPG: node "CPU_XGE_KR1_P_0_"
+!IPG: node "UNCONNECTED_162"
+!IPG: node "CPU_XGE_KR1_P_1_"
+!IPG: node "DDR_A_CS4_L_C"
+!IPG: node "DDR_A_CS5_L_C"
+!IPG: node "DDR_A_ODT3_C"
+!IPG: node "DDR_A_CKE3_C"
+!IPG: node "DDR_A_CLK3_P_C"
+!IPG: node "DDR_A_CLK1_P_C"
+!IPG: node "DDR_A_CKE2_C"
+!IPG: node "DDR_A_CLK3_N_C"
+!IPG: node "DDR_A_CLK1_N_C"
+!IPG: node "DDR_A_ODT2_C"
+!IPG: node "DDR_B_CLK1_N_C"
+!IPG: node "DDR_B_CS4_L_C"
+!IPG: node "DDR_B_ODT2_C"
+!IPG: node "DDR_B_CKE3_C"
+!IPG: node "DDR_B_CLK3_N_C"
+!IPG: node "DDR_B_CS5_L_C"
+!IPG: node "DDR_B_CLK1_P_C"
+!IPG: node "DDR_B_CKE2_C"
+!IPG: node "DDR_B_CLK3_P_C"
+!IPG: node "DDR_B_ODT3_C"
+!IPG: node "HSD_PCIE_CPU_IOFPGA_AC_DN"
+!IPG: node "CPU_PE2_TX_PCIE_N_2_"
+!IPG: node "HSD_PCIE_CPU_NIC_AC_DN"
+!IPG: node "CPU_PE2_TX_PCIE_N_6_"
+!IPG: node "HSD_PCIE_CPU_MB_FPGA_AC_DN"
+!IPG: node "CPU_PE1_TX_PCIE_N_2_"
+!IPG: node "HSD_PCIE_CPU_PAC_LN0_AC_DN"
+!IPG: node "CPU_PE1_TX_PCIE_N_6_"
+!IPG: node "CPU_PE1_TX_PCIE_N_8_"
+!IPG: node "CPU_PE1_TX_PCIE_N_10_"
+!IPG: node "CPU_PE1_TX_PCIE_N_12_"
+!IPG: node "CPU_PE1_TX_PCIE_N_14_"
+!IPG: node "CPU_PE1_RX_PCIE_P_2_"
+!IPG: node "CPU_PE1_RX_PCIE_P_6_"
+!IPG: node "CPU_PE1_RX_PCIE_P_8_"
+!IPG: node "CPU_PE1_RX_PCIE_P_10_"
+!IPG: node "CPU_PE1_RX_PCIE_P_12_"
+!IPG: node "CPU_PE1_RX_PCIE_P_14_"
+!IPG: node "CPU_PE1_RX_PCIE_P_1_"
+!IPG: node "CPU_PE1_RX_PCIE_P_3_"
+!IPG: node "CPU_PE1_RX_PCIE_P_7_"
+!IPG: node "CPU_PE1_RX_PCIE_P_9_"
+!IPG: node "CPU_PE1_RX_PCIE_P_11_"
+!IPG: node "CPU_PE1_RX_PCIE_P_13_"
+!IPG: node "CPU_PE1_RX_PCIE_P_15_"
+!IPG: node "CPU_PE1_RX_PCIE_N_2_"
+!IPG: node "CPU_PE1_RX_PCIE_N_6_"
+!IPG: node "CPU_PE1_RX_PCIE_N_8_"
+!IPG: node "CPU_PE1_RX_PCIE_N_10_"
+!IPG: node "CPU_PE1_RX_PCIE_N_12_"
+!IPG: node "CPU_PE1_RX_PCIE_N_14_"
+!IPG: node "CPU_PE1_RX_PCIE_N_1_"
+!IPG: node "CPU_PE1_RX_PCIE_N_3_"
+!IPG: node "CPU_PE1_RX_PCIE_N_7_"
+!IPG: node "CPU_PE1_RX_PCIE_N_9_"
+!IPG: node "CPU_PE1_RX_PCIE_N_11_"
+!IPG: node "CPU_PE1_RX_PCIE_N_13_"
+!IPG: node "CPU_PE1_RX_PCIE_N_15_"
+!IPG: node "CPU_PE2_RX_PCIE_P_1_"
+!IPG: node "CPU_PE2_RX_PCIE_P_3_"
+!IPG: node "CPU_PE2_RX_PCIE_P_5_"
+!IPG: node "CPU_PE2_RX_PCIE_P_7_"
+!IPG: node "HSD_MRVL_CPU_SGMII_AC_DN"
+!IPG: node "CPU_PE2_RX_PCIE_P_2_"
+!IPG: node "HSD_PCIE_NIC_CPU_DP"
+!IPG: node "CPU_PE2_RX_PCIE_P_6_"
+!IPG: node "CPU_PE2_RX_PCIE_N_1_"
+!IPG: node "CPU_PE2_RX_PCIE_N_3_"
+!IPG: node "CPU_PE2_RX_PCIE_N_5_"
+!IPG: node "CPU_PE2_RX_PCIE_N_7_"
+!IPG: node "HSD_MRVL_CPU_SGMII_AC_DP"
+!IPG: node "CPU_PE2_RX_PCIE_N_2_"
+!IPG: node "HSD_PCIE_NIC_CPU_DN"
+!IPG: node "CPU_PE2_RX_PCIE_N_6_"
+!IPG: node "UNCONNECTED_144"
+!IPG: node "UNCONNECTED_115"
+
+!IPG: Family information could not be found for node CPU_ADR_COMPLETE_1V
+!IPG: Family information could not be found for node CPU_ADR_IN_1V
+!IPG: Family information could not be found for node CPU_ERR0_1V_L
+!IPG: Family information could not be found for node CPU_ERR1_1V_L
+!IPG: Family information could not be found for node CPU_PROCHOT_1V_L
+!IPG: Family information could not be found for node FM_BDXDE_THERMTRIP_N
+!IPG: Family information could not be found for node PCH_UART0_RXD_1V
+!IPG: Family information could not be found for node PCH_UART0_TXD_1V_ST_C
+!IPG: Family information could not be found for node PCH_UART1_RXD_1V
+!IPG: Family information could not be found for node PCH_UART1_TXD_1V_ST_C
+!IPG: Family information could not be found for node PECI_ID1_C
+!IPG: Family information could not be found for node PU_CPU_BMCINIT_C
+!IPG: Family information could not be found for node PU_CPU_EAR_L_C
+!IPG: Family information could not be found for node PU_CPU_SAFE_MODE_BOOT_C
+!IPG: Family information could not be found for node PU_CPU_WAKELAN_L_C
+!IPG: Family information could not be found for node SERIRQ_DATA_1V_ST_C
+!IPG: Family information could not be found for node SERIRQ_DIR_1V_ST_C
+!IPG: Family information could not be found for node SPI1_10GE_FLSH_CLK_1V_ST_C
+!IPG: Family information could not be found for node SPI1_10GE_FLSH_CS_L_1V_ST_C
+!IPG: Family information could not be found for node SVID_CLK_C
+!IPG: Family information could not be found for node SVID_DATA_C
+end connect
+

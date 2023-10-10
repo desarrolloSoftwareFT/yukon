@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600513059  V28f4                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:14 2020
+disconnect all
+connect s to "GND"
+connect i to "FAN01_EN"
+connect g to "FAN01_PRSNT_L_CON_ZL"
+connect g to "A2_5V"
+connect g to "P12V"
+!B!resistor 4.99k, 25, 20, re4, wb, ar200m, wa1.03
+resistor 4.99k,25,20,re4,wb,ar200m,ed

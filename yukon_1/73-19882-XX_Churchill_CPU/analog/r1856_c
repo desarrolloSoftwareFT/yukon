@@ -1,0 +1,7 @@
+!!!!    2    0    1 1681768387   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:59 2020
+disconnect all
+connect i to "PD_LAN1_MDIO0_LED0_0_C"
+connect s to "GND"
+resistor 4.75k, 25, 22, re4, wb, ar150m, en , ed,am50m
+! "r1856_c" test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513043  Ve41c                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:34 2020
+disconnect all
+connect s to "DDR4_VTT"
+connect i to "ADC0_0V6_BM_DDR4_CH13"
+connect g to "GND"
+!B!resistor 1k, 25, 20, re3, ar100m, wa93.3m
+resistor 1k,25,20,re3,ar100m,ed

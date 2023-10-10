@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594175998   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:59 2020
+on failure
+   report parallel devices
+   report "c1357_c 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "RST_PCH_SYSRST_N"
+jumper 2.21k, re4, wb, ar500m, op
+! "r1848_c" test.
+off failure

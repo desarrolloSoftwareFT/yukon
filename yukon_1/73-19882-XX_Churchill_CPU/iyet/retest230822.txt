@@ -1,0 +1,217 @@
+----------------------------------------
+73-19882-04
+Tue Aug 22 17:21:08 2023
+----------------------------------------
+p45_50%presence HAS FAILED
+Measured:   -19.127k
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Check for P45_50 presence.
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM2728037U
+----------------------------------------
+73-19882-04
+Tue Aug 22 17:21:15 2023
+----------------------------------------
+p45_50%presence HAS FAILED
+Measured:   -25.505k
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Check for P45_50 presence.
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM2728037U
+----------------------------------------
+TestJet Report for "testjet".
+Tue Aug 22 18:55:32 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u49
+  Pin 7  Node con_txd_r
+  Measured 6.4              (BRC 216142)
+15-100012-01 IC-LIN,INTFC DRVR, XCVR, RS
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM27140A67
+----------------------------------------
+TestJet Report for "testjet".
+Tue Aug 22 18:55:42 2023
+73-19882-04
+----------------------------------------
+Open #1  Device u49
+  Pin 7  Node con_txd_r
+  Measured 8.4              (BRC 216142)
+15-100012-01 IC-LIN,INTFC DRVR, XCVR, RS
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM27140A67
+----------------------------------------
+73-19882-04
+Tue Aug 22 18:56:06 2023
+----------------------------------------
+dma1_c8 HAS FAILED
+11-3495-01 CAP,CE,8.2nF,25.0 V,10%,X7R,S
+Measured:   0.012896u
+Nominal:    8200.0p
+High Limit: 0.011480u
+Low Limit:  4920.0p
+Capacitance in FARADS
+----------------------------------------
+DEVICES IN PARALLEL
+dma1_r8 2.00k
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Aug 22 18:56:11 2023
+----------------------------------------
+r87 HAS FAILED
+12-2775-02 RES,TKF,0 ohm,0.063W,5%,SM,04
+Measured:   24.671
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+----------------------------------------
+73-19882-04
+Tue Aug 22 18:56:39 2023
+----------------------------------------
+x_r64 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   15.577k
+Nominal:    10.000k
+High Limit: 12.600k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r806 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   55.944
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+r470 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   30.967
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+cr20%cr2 HAS FAILED
+
+REPLACE DEVICE: cr20
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 3.6000
+Low Limit:  2.8000
+Forward VOLTAGE drop
+Status:  cH
+Moa Voltage/Current Compliance
+Detector Over Range
+----------------------------------------
+DEVICES IN PARALLEL
+cr20 cr20%cr4
+----------------------------------------
+cr20%cr4 HAS FAILED
+
+REPLACE DEVICE: cr20
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+DEVICES IN PARALLEL
+cr20 cr20%cr2
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM27140A67
+----------------------------------------
+73-19882-04
+Tue Aug 22 18:57:21 2023
+----------------------------------------
+x_r64 HAS FAILED
+12-4533-01 RES,TNF,10 k ohm,0.063W,0.1%,
+Measured:   12.662k
+Nominal:    10.000k
+High Limit: 12.600k
+Low Limit:  8.0000k
+Resistance in OHMS
+----------------------------------------
+r806 HAS FAILED
+12-3792-02 RES,TKF,33 ohm,0.063W,5%,SM,0
+Measured:   50.232
+Nominal:    33.000
+High Limit: 46.200
+Low Limit:  26.400
+Resistance in OHMS
+----------------------------------------
+cr20%cr2 HAS FAILED
+
+REPLACE DEVICE: cr20
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 3.6000
+Low Limit:  2.8000
+Forward VOLTAGE drop
+Status:  cH
+Moa Voltage/Current Compliance
+Detector Over Range
+----------------------------------------
+DEVICES IN PARALLEL
+cr20 cr20%cr4
+----------------------------------------
+cr20%cr4 HAS FAILED
+
+REPLACE DEVICE: cr20
+25-100401-01 LED,1.6mm D,ST,TRI,Y/G/B,, 
+High Limit: 990.00m
+Low Limit:  500.00m
+Forward VOLTAGE drop
+Status:  2cH
+Moa Voltage/Current Compliance
+Detector Over Range
+Integrator Over Voltage
+----------------------------------------
+DEVICES IN PARALLEL
+cr20 cr20%cr2
+----------------------------------------
+Board:73-20559-02
+Version:A0
+S/N:FLM27140A67
+----------------------------------------
+Shorts Report for "shorts".
+Tue Aug 22 19:58:02 2023
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_srst               219132   26
+                 p9.15
+                 r87.1
+                 r190.2
+                 r536.2
+                 r709.2
+                 u8.U18
+To:     v                     22151   26 
+unnamed_4188_ast2520_i1_extrst          
+                 r87.2
+                 u8.V18
+Common Devices:
+                  r87
+                   u8
+Message is:
+Check r87
+------End, 1 Problem Reported-----------
+Board:73-20559-02
+Version:A0
+S/N:FLM27140A67

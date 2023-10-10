@@ -1,0 +1,28 @@
+!!!!    2    0    1 1594175932   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:53 2020
+on failure
+   report parallel devices
+   report "bma3_c5 47.0u"
+   report "bma3_c6 10.0u"
+   report "bma3_c11 47.0u"
+   report "bma3_c13 47.0u"
+   report "bma3_c14 47.0u"
+   report "c147_c 100n"
+   report "c150_c 100n"
+   report "c153_c 100n"
+   report "c157_c 1.00u"
+   report "c811_c 1.00u"
+   report "c1075_c 4.70u"
+   report "c1128_c 4.70u"
+   report "c1265_c 1.00u"
+   report "c1352_c 1.00u"
+   report "c1355_c 1.00u"
+   report "e_c682 10.0u"
+   report "bma3_c7 100p"
+end on failure
+disconnect all
+connect s to "P3V3"
+connect i to "GND"
+jumper 626, re3, wb, ar100m, op
+! "bma3_c16" test.
+off failure

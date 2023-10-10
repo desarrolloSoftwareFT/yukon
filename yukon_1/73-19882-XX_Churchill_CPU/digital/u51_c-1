@@ -1,0 +1,140 @@
+!!!!    6    0    1 1594176834  Vdfcb                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:55 2020
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         TS3A44159
+! Alias:             TS3A44159
+! Part Type:         VLSI
+! Description:       SPDT Analog Switch
+! Manufacturer:      Fairchild, Pericom
+! Package Style:     6 pin TDFN
+! Created:           Nov 04, 2005
+! Updated:           Jan 08, 2008. Added Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-8031-01,15-101996-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+default device "u51_c"
+set terminators to on
+assign VCC to pins *
+assign GND to pins *
+
+assign IN1_2  to pins 14
+assign IN3_4  to pins 6
+assign COM1_4 to pins 12,16,4,8
+assign NC1_4  to pins 13,1,5,9
+assign NO1_4  to pins 11,15,3,7
+
+power  VCC,GND
+inputs IN1_2, IN3_4
+bidirectional COM1_4, NC1_4, NO1_4
+
+family LVT
+
+!IPG: Add defaults or loads to floating inputs and bidirs.
+set load on pins 3,4,7,11,12,15 to pull up
+
+assign Disablegroup to nodes "BUF_SPI_FLSH_SEL_C" default "0"
+inputs Disablegroup
+
+assign DisableFamilyLVT to nodes "BUF_SPI_FLSH_SEL_C"
+family LVT on DisableFamilyLVT
+inputs DisableFamilyLVT
+
+!IPG: User must manually insert disable information for u36_c.2
+!IPG: User must manually insert disable information for u34_c.2
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u33_c" pins 1,4
+!IPG: with pin 6 on node "BUF_SPI_FLSH_SEL_C"
+
+!***************************************
+vector COM_NC_0
+ drive COM1_4
+ receive NC1_4
+ set IN1_2  to "0"
+ set IN3_4  to "0"
+ set COM1_4 to "0000"
+ set NC1_4  to "0000"
+end vector
+
+vector COM_NC_1
+ drive COM1_4
+ receive NC1_4
+ set IN1_2  to "0"
+ set IN3_4  to "0" 
+ set COM1_4 to "1111"
+ set NC1_4  to "1111"
+end vector
+
+vector COM_NC_disable
+ drive COM1_4
+ receive NC1_4
+ set IN1_2  to "1"
+ set IN3_4  to "1" 
+ set COM1_4 to "0000"
+ set NC1_4  to "1111"
+end vector
+
+vector COM_NO_0
+ drive COM1_4
+ receive NO1_4
+ set IN1_2  to "1"
+ set IN3_4  to "1"
+ set COM1_4 to "0000"
+ set NO1_4  to "0000"
+end vector
+
+vector COM_NO_1
+ drive COM1_4
+ receive NO1_4
+ set IN1_2  to "1"
+ set IN3_4  to "1" 
+ set COM1_4 to "1111"
+ set NO1_4  to "1111"
+end vector
+
+vector COM_NO_disable
+ drive COM1_4
+ receive NO1_4
+ set IN1_2  to "0"
+ set IN3_4  to "0" 
+ set COM1_4 to "0000"
+ set NO1_4  to "1111"
+end vector
+
+! *************************************************************************
+
+
+sub DisableSub
+  execute DisableVector
+end sub
+
+unit "DisableUnit"
+  call DisableSub
+end unit
+
+unit "test"
+  execute COM_NC_0
+  execute COM_NC_1
+  execute COM_NC_disable
+  execute COM_NO_0
+  execute COM_NO_1
+  execute COM_NO_disable
+end unit
+

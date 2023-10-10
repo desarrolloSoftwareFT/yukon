@@ -1,0 +1,176 @@
+!This program helps users set up the correct board version 
+!and/or test board on a panel. Board information is extracted 
+!from the file 'board.o'.
+
+on error goto Error_Trap
+on break goto Error_Trap
+
+assign @Board , Err to "board.f";read
+if Err = 0 then
+   assign @Board to * 
+   unlink "board.f", Err
+end if
+if Err <> 0 and Err <> 100009 then goto Error_Trap
+
+! check if multiple board versions is enabled in the config file
+assign @Config , Err to "config.f";read
+if Err = 0 then
+   assign @Config to * 
+   unlink "config.f", Err
+end if
+if Err <> 0 and Err <> 100009 then goto Error_Trap
+
+execute "qlist config.o config.f", Err
+
+print "------------------------------------------------"
+print "  Extracting Board Information, Please Wait..."
+print "------------------------------------------------"
+list object "board.o" to "board.f"
+assign @Board to "board.f";read
+
+dim Inputline$[416]
+enter @Board,, Err using "416a"; Inputline$
+Found = 0
+
+dim Bd$(1:417)[417]
+loop
+  Inputline$ = trim$(Inputline$)
+  Inputline$ = upc$(Inputline$)
+  if Inputline$ = "VERSIONS" then Found = 1
+  exit if Found = 1 or Err = 101007
+  enter @Board,, Err using "416a"; Inputline$ 
+end loop
+
+if Found = 1 then
+   I = 1 
+   print "-------------------------------------------------"
+   print "   This board has multiple versions:"
+   print "   ";I;"   Base Board"  
+   Bd$(I) = ""
+   loop
+     enter @Board using "416a";Inputline$
+     Inputline$ = trim$(Inputline$)
+     Slen = len(Inputline$)
+     exit if Slen = 0  
+     I = I+1
+     if Inputline$[1;1] = '"' or Inputline$[1;1] = "'" then
+        Bd$(I) = Inputline$[2;Slen-3]
+     else | Bd$(I) = Inputline$[1;Slen-1]
+     end if
+     print "   ";I;"   ";Bd$(I)
+   end loop
+   print " please select the BOARD VERSION to grade (1-";I;"):"
+   loop
+       input Cnt
+       exit if Cnt<=I and Cnt>=1
+       print " Your selection is out of range."
+       print " Please try again:"
+   end loop 
+   board version is Bd$(Cnt), Err
+   if Err <> 0 then
+      if Err = 388 then
+	 load board
+	 board version is Bd$(Cnt), Err
+      end if
+      if Err<>0 then goto Error_Trap
+   end if
+   if Cnt = 1 then
+      Bd$(1) = "Base"
+   end if
+   print "------------------------------------------------"
+   print "   Board Version is set to ";Bd$(Cnt)
+   print "------------------------------------------------"
+else
+   ! check to see if multiple board versions are enabled in the config file
+   assign @Config , Err to "config.f";read
+   if Err = 0 then
+      enter @Config,, Err using "416a"; Inputline$ 
+      loop
+         Inputline$ = trim$(Inputline$)
+         Inputline$ = upc$(Inputline$)
+         if Inputline$ = "ENABLE MULTIPLE BOARD VERSIONS" then Found = 1
+         exit if Found = 1 or Err = 101007
+         enter @Config,, Err using "416a"; Inputline$ 
+      end loop
+      assign @Config to *
+   end if
+
+   Cnt = 1
+   if Found = 1 then
+      Bd$(Cnt) = "Base"
+   else
+      Bd$(Cnt) = ""
+   end if
+   print "------------------------------------------------"
+   print "   This board has only one version.    "
+   print "------------------------------------------------"
+end if
+
+printer is ".BoardVer"
+print Bd$(Cnt)
+printer is *
+assign @Board to *
+
+!Set test board on panel
+
+assign @Board to "board.f";read
+enter @Board,, Err using "416a"; Inputline$
+Found = 0
+
+loop
+  Inputline$ = trim$(Inputline$)
+  Inputline$ = upc$(Inputline$)
+  if Inputline$ = "BOARDS" then Found = 1
+  exit if Found = 1 or Err = 101007
+  enter @Board,, Err using "416a"; Inputline$ 
+end loop
+
+if Found = 1 then
+   I = 1
+   Bd$(1)= "BOARDS"
+   print "------------------------------------------------"
+   print "   Here are all of the boards in the panel :" 
+   loop
+     enter @Board using "416a";Inputline$
+     Inputline$ = trim$(Inputline$)
+     Slen = len(Inputline$)
+     exit if Slen = 0  
+     I = I+1
+     Bd$(I) = Inputline$[1;Slen-1]
+     print "   ";Bd$(I)
+   end loop
+   print " please select the TEST BOARD to grade (1-";I-1;"):"
+   loop
+       input Cnt
+       exit if Cnt<I and Cnt>=1
+       print " Your selection is out of range." 
+       print " Please try again:"
+   end loop 
+   print "------------------------------------------------"
+   print "   Test board is set to ";Cnt
+   print "------------------------------------------------"
+else
+   I = 1
+   Cnt = 1
+   print "------------------------------------------------"
+   print "   This board is a single board."
+   print "------------------------------------------------"
+end if
+
+printer is ".BoardNum"
+print I-1
+print Cnt
+printer is *
+
+Cleanup:
+   assign @Board, Err to *
+   unlink "board.f", Err
+   unlink "config.f", Err
+   stop
+
+Error_Trap:
+   off error
+   printer is *
+   if errn <> 0 then print "Error: ";errmlong$
+   beep
+   goto Cleanup

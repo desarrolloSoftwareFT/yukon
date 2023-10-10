@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512980  Vd01f                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "UNNAMED_4188_AST2520_I1_USB2AV33"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1328" test.

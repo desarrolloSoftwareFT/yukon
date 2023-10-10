@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512951  Vc713                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:12 2020
+disconnect all
+connect s to "SVID_DATA_R_C"
+connect i to "SVID_DATA_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r861_c" test.

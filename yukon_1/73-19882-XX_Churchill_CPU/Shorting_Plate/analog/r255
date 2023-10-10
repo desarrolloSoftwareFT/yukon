@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BIOS_GOLD_ACTIVE_R P-Pin resistance"
+report "check nodes BIOS_GOLD_ACTIVE P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BIOS_GOLD_ACTIVE_R"
+connect i to "BIOS_GOLD_ACTIVE"
+resistor 10,20,100, re1, ar100m,ed
+off failure

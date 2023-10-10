@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175934   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:55 2020
+disconnect all
+connect s to "UNNAMED_9_CAP_I16_B"
+connect i to "UNNAMED_9_RES_I3_B"
+jumper 10.0k, re4, wb, ar100m, op
+! "bma3_ren" test.

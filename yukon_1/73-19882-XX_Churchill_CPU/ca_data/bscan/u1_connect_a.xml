@@ -1,0 +1,40 @@
+<!-- Created Fri Sep 25 23:20:49 2020 from ITL Source digital/u1_connect_a -->
+<Test name="u1_connect_a"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u1_c_u1"><ChainTCK><node name="LJTAG_TCK_HDR_3V3_MUX" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="LJTAG_TMS_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="LJTAG_TDI_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="LJTAG_TDO_HDR_3V3_MUX" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="LJTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+</Chain>
+<Device name="u1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="A7"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="B8"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="A6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="C6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="D1"><node name="CONSOLE_RXD_DBG_2V5" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C1"><node name="BDXDE_CATERR_GTL_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E1"><node name="CPU_SEC_BOOT_JTAG_TRST" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A15"><node name="R_BMC_UART5_RXD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C13"><node name="CPLD_DONE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A13"><node name="CPLD_INIT_M" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B12"><node name="1GPHY_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C12"><node name="CPU_ADR_IN_3V" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A14"><node name="R_BMC_UART5_TX" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B11"><node name="10GPHY_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D11"><node name="BMC_CPU_MEM_WP_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C11"><node name="BMC_I2C_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B10"><node name="CPLD_PROG_M" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C10"><node name="UNNAMED_90_LCMXO3LF1300_I55_PT20CJTAGENB" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C9"><node name="CPLD_I2C_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D8"><node name="PCH_CONSOLE_RXD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C7"><node name="PCH_CONSOLE_TXD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B7"><node name="PCH_CONSOLE_RXD1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A3"><node name="C33_PLTRST_PROC_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B6"><node name="DRAM_PWR_OK_FPGA_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C5"><node name="CPU_THERMTRIP_3V3_L" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

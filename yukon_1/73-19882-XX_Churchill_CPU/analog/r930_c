@@ -1,0 +1,6 @@
+!!!!    2    0    1 1596106273   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:24 2020
+disconnect all
+connect s to "P3V3_VBAT"
+connect i to "PU_CPU_DSWODVREN_C"
+resistor 330k, 30, 30, re6, wb, ar500m, en, ed

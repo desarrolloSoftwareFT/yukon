@@ -1,0 +1,4269 @@
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:34:51 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   85
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   85 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   85
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   85
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104   29
+                r12_v.2
+To:   xdp_cpu_trst_n         120170   75
+                a_u139.7
+               j2001_c.54
+                 r535.2
+      xdp_cpu_tck0            11671   75
+               a_u139.11
+               j2001_c.57
+                 r533.2
+      PD_DDR_TEST1_C         119138   73
+                r507_c.1
+               u1_c.CM78
+             u1_c_pch.CM78
+      PD_DDR_TEST0_C         113137   73
+                r506_c.1
+               u1_c.CU76
+             u1_c_pch.CU76
+      PD_CPU_RSVD_AA66_C     203108   73
+                r280_c.2
+               u1_c.AA66
+             u1_c_pch.AA66
+      PD_CPU_DDR_RCOMP1_C    203115   63
+                r509_c.2
+               u1_c.CD51
+             u1_c_pch.CD51
+      PD_USB2_RBIAS_C        203107   33
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      clk100m_i210_pe_ac_dp  215113   60
+                 c436.1
+                 r692.1
+                 r694.2
+                u1_i2.26
+      clk100m_i210_pe_ac_dn  215114   61
+                 c439.1
+                 r460.1
+                 r695.2
+                u1_i2.25
+        v                     21613   75 
+clk100m_clkgen_pcie_refclk_ac_dp        
+                 c400.1
+                r3490.1
+                r3491.1
+                 u24.6
+      clk_100m_cpu_ref_ac_dp  11578   76
+                 c398.1
+                 r866.1
+                 r867.1
+                 u24.3
+      clk_100m_cpu_ref_ac_dn 216111   75
+                 c399.1
+                 r863.1
+                 r868.1
+                 u24.4
+        v                    216114   75 
+clk100m_clkgen_pcie_refclk_ac_dn        
+                 c401.1
+                 r828.1
+                r3489.1
+                 u24.7
+      PMOD_PH1_BOOT_R_M1      10556   35
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   35
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146   78
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH2_BOOT_R_M1      10554   29
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   34
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   45
+                c44_m2.1
+                r55_m2.2
+      PMOD_PH2_PH_M2          10552   61
+                r55_m2.1
+                u3_m2.32
+      VP1P8_VCCIN_SNS_CPU_KP 202122   31
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   33
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   31
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   30
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   31
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+        v                     12135   56 
+VP1P05_VCCGBE_SNS_CPU_KP                
+                r47_m2.1
+               u1_c.AR78
+             u1_c_pch.AR78
+      pmod_vob_vsense_k_m2    11736   57
+                c70_m2.1
+                c72_m2.1
+                r41_m2.1
+                r47_m2.2
+                r50_m2.2
+                u5_m2.28
+      vfltp1p05_25m_osc_c     11376   57
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+        v                     11936   57 
+VFLT_P1P05_VCCKRLCPLL_C                 
+                c102_c.1
+                c105_c.1
+                l15_c.2
+               r1085_c.2
+               r1792_c.2
+                u1_c.T56
+              u1_c_pch.T56
+      VFLT_P1P05_VCCSCPLL_C  122143   57
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+      VFLT_P1P05_VCCAXCK_C   122151   57
+                c100_c.1
+                c103_c.1
+                l13_c.2
+               u1_c.AE27
+             u1_c_pch.AE27
+      PMOD_PH2_DIDT_M2       119136   57
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+      p1v05_combined          12251   57
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+      a1_2v                   21646   48
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+      unnamed_4234_cap_i96_b  22345   50
+                 c366.1
+                 c367.1
+                 c368.1
+                 l24.2
+                 u40.R8
+                u40.T10
+        v                    223144   49 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+      PMOD_A1V2_VSENSE       202110   62
+               dma1_c22.1
+               dma1_r4.2
+               dma1_r10.1
+               dma1_r26.1
+               dma1_tp2.1
+      pwr_a1v2_didt          208134   49
+               dma1_c3.1
+               dma1_l1.1
+               dma1_q1.10
+             dma1_q1%pwr1.S
+             dma1_q1%pwr2.D
+             dma1_q1%qf1.S
+             dma1_q1%qf2.D
+               dma1_r2.1
+               dma1_u1.24
+      JTAG_SF_3P3V           223130   44
+                c45_61.1
+                p45_50.6
+                p45_50.7
+                r2098.2
+      ccc_sw_pll_vdda_bmfpga  22327   43
+                 c650.1
+                 c651.1
+                r1509.1
+                 u27.L5
+      ccc_pll_vdda_bmfpga    223126   43
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+        v                     22048   44 
+unnamed_4188_ast2520_i1_usb2av33        
+                 c576.1
+                 c577.1
+                r1328.2
+                 u8.C7
+      UNNAMED_59_CAP_I64_B   216149   43
+                 c302.1
+                  j3.6
+                 r883.2
+      ccc_bmfpga_pll_vdda    223134   44
+                 c685.1
+                 c686.1
+                 r743.1
+                u27.F11
+      ccc_sw_pll_vdda         22329   45
+                 c727.1
+                 c728.1
+                 r171.1
+                 u40.R7
+                 u40.T5
+      ccc_pll_vdda           223128   45
+                 c677.1
+                 c681.1
+                 r170.1
+                 u40.G9
+                 u40.H8
+      mss_hpms_pll_vdda       22328   45
+                 c676.1
+                 c679.1
+                 r169.1
+                u40.H15
+                u40.J17
+      mss_mddr_pll_vdda      223124   46
+                 c169.1
+                 c170.1
+                 r104.1
+                u40.H16
+      pmod_vdd_p3p_m2        223132   46
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+      pmod_vdd_p3p_m1         22248   45
+                c83_m1.1
+                r19_m1.2
+                r24_m1.1
+                u4_m1.8
+                u4_m1.16
+      fltr_dac0_3p3v         222147   44
+                c2648.1
+                c2649.1
+                c2650.1
+                 l230.1
+                u158.13
+      fltr_vp3p3_pcie_buf1   223123   44
+                 c658.1
+                c2162.1
+                c2163.1
+                c2164.1
+                 l94.2
+                 r828.2
+                 r863.2
+                 r866.2
+                r1371.1
+                r3490.2
+Too many to print.
+      fltr_vp3p3_bmcphy_avdd  21648   43
+                 c502.1
+                 c503.1
+                 c504.1
+                 l43.2
+                 u44.20
+                 u44.25
+      adcav33                 21548   44
+                 c315.1
+                 c773.1
+                 c774.1
+                 c775.1
+                 l33.2
+                 u8.J6
+      vpllav33               214148   44
+                 c264.1
+                 c269.1
+                 c280.1
+                 l29.2
+                 u8.H7
+                 u8.J7
+      fltr_dac1_3p3v          22323   44
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+      flter_clkgen_p3v3       21448   44
+                 c376.1
+                 c377.1
+                 c378.1
+                 c380.1
+                 c382.1
+                 c383.1
+                 c384.1
+                 c386.1
+                 l17.2
+                 r849.2
+Too many to print.
+      flter_clkgen_p3v3_vdda 214150   46
+                 c379.1
+                 c381.1
+                 r849.1
+                 u25.5
+      dacavd33                21748   44
+                 c304.1
+                 c769.1
+                 c770.1
+                  l9.2
+                 u8.K5
+                 u8.K6
+      pllav33                216148   43
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+      vflt_nsci_clk_buf      215148   44
+                 c306.1
+                 c307.1
+                  l4.2
+                 r484.1
+                 u111.7
+      PMOD_A3V3_VSENSE       223117   54
+               dma1_c23.1
+               dma1_r11.1
+               dma1_r15.2
+               dma1_r28.1
+               dma1_tp3.1
+      pwr_a3v3_didt           20734   45
+               dma1_c14.1
+               dma1_l2.1
+               dma1_q2.10
+             dma1_q2%pwr1.S
+             dma1_q2%pwr2.D
+             dma1_q2%qf1.S
+             dma1_q2%qf2.D
+               dma1_r23.2
+               dma1_u1.14
+      PMOD_A3V3_ISENN_R      219146   43
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+      pmod_a3v3_isenn         22149   44
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+      A3P3V                  220144   43
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   23
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   25
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   25 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   26
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   24
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   25
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436    6
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    5
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    6
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    6
+               j2003_c.1
+               r1661_c.2
+        v                    209141    6 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    5 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    6 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    6
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    6
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    5
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    5
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    5
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    6
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    6
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    6
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    7
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    5
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    6
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    5
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    5
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    6
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    6
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    5
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    6
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    6
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    5
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    5
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    5
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    5
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    5 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    6
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    7
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    7
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    6 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    6
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    7
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    7
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   15
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   15 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   15
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326    7
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   15
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   15
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126    5
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 117 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:35:18 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   36
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   36 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   35
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   35
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104    3
+                r12_v.2
+To:   xdp_cpu_trst_n         120170   57
+                a_u139.7
+               j2001_c.54
+                 r535.2
+      xdp_cpu_tck0            11671   57
+               a_u139.11
+               j2001_c.57
+                 r533.2
+      PD_DDR_TEST1_C         119138   53
+                r507_c.1
+               u1_c.CM78
+             u1_c_pch.CM78
+      PD_DDR_TEST0_C         113137   55
+                r506_c.1
+               u1_c.CU76
+             u1_c_pch.CU76
+      PD_CPU_RSVD_AA66_C     203108   54
+                r280_c.2
+               u1_c.AA66
+             u1_c_pch.AA66
+      PD_CPU_DDR_RCOMP1_C    203115   44
+                r509_c.2
+               u1_c.CD51
+             u1_c_pch.CD51
+      PD_USB2_RBIAS_C        203107   27
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      clk100m_i210_pe_ac_dp  215113   53
+                 c436.1
+                 r692.1
+                 r694.2
+                u1_i2.26
+      clk100m_i210_pe_ac_dn  215114   53
+                 c439.1
+                 r460.1
+                 r695.2
+                u1_i2.25
+        v                     21613   68 
+clk100m_clkgen_pcie_refclk_ac_dp        
+                 c400.1
+                r3490.1
+                r3491.1
+                 u24.6
+      clk_100m_cpu_ref_ac_dp  11578   68
+                 c398.1
+                 r866.1
+                 r867.1
+                 u24.3
+      clk_100m_cpu_ref_ac_dn 216111   68
+                 c399.1
+                 r863.1
+                 r868.1
+                 u24.4
+        v                    216114   67 
+clk100m_clkgen_pcie_refclk_ac_dn        
+                 c401.1
+                 r828.1
+                r3489.1
+                 u24.7
+      PMOD_PH1_BOOT_R_M1      10556   25
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   25
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146   69
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH2_BOOT_R_M1      10554   18
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   24
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   34
+                c44_m2.1
+                r55_m2.2
+      PMOD_PH2_PH_M2          10552   49
+                r55_m2.1
+                u3_m2.32
+      VP1P8_VCCIN_SNS_CPU_KP 202122   27
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   28
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   26
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   26
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   27
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+        v                     12135   56 
+VP1P05_VCCGBE_SNS_CPU_KP                
+                r47_m2.1
+               u1_c.AR78
+             u1_c_pch.AR78
+      pmod_vob_vsense_k_m2    11736   56
+                c70_m2.1
+                c72_m2.1
+                r41_m2.1
+                r47_m2.2
+                r50_m2.2
+                u5_m2.28
+      vfltp1p05_25m_osc_c     11376   56
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+        v                     11936   56 
+VFLT_P1P05_VCCKRLCPLL_C                 
+                c102_c.1
+                c105_c.1
+                l15_c.2
+               r1085_c.2
+               r1792_c.2
+                u1_c.T56
+              u1_c_pch.T56
+      VFLT_P1P05_VCCSCPLL_C  122143   57
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+      VFLT_P1P05_VCCAXCK_C   122151   57
+                c100_c.1
+                c103_c.1
+                l13_c.2
+               u1_c.AE27
+             u1_c_pch.AE27
+      PMOD_PH2_DIDT_M2       119136   57
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+      p1v05_combined          12251   56
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+      a1_2v                   21646   47
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+      unnamed_4234_cap_i96_b  22345   48
+                 c366.1
+                 c367.1
+                 c368.1
+                 l24.2
+                 u40.R8
+                u40.T10
+        v                    223144   49 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+      PMOD_A1V2_VSENSE       202110   61
+               dma1_c22.1
+               dma1_r4.2
+               dma1_r10.1
+               dma1_r26.1
+               dma1_tp2.1
+      pwr_a1v2_didt          208134   48
+               dma1_c3.1
+               dma1_l1.1
+               dma1_q1.10
+             dma1_q1%pwr1.S
+             dma1_q1%pwr2.D
+             dma1_q1%qf1.S
+             dma1_q1%qf2.D
+               dma1_r2.1
+               dma1_u1.24
+      JTAG_SF_3P3V           223130   43
+                c45_61.1
+                p45_50.6
+                p45_50.7
+                r2098.2
+      ccc_sw_pll_vdda_bmfpga  22327   45
+                 c650.1
+                 c651.1
+                r1509.1
+                 u27.L5
+      ccc_pll_vdda_bmfpga    223126   43
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+        v                     22048   43 
+unnamed_4188_ast2520_i1_usb2av33        
+                 c576.1
+                 c577.1
+                r1328.2
+                 u8.C7
+      UNNAMED_59_CAP_I64_B   216149   42
+                 c302.1
+                  j3.6
+                 r883.2
+      ccc_bmfpga_pll_vdda    223134   44
+                 c685.1
+                 c686.1
+                 r743.1
+                u27.F11
+      ccc_sw_pll_vdda         22329   44
+                 c727.1
+                 c728.1
+                 r171.1
+                 u40.R7
+                 u40.T5
+      ccc_pll_vdda           223128   43
+                 c677.1
+                 c681.1
+                 r170.1
+                 u40.G9
+                 u40.H8
+      mss_hpms_pll_vdda       22328   43
+                 c676.1
+                 c679.1
+                 r169.1
+                u40.H15
+                u40.J17
+      mss_mddr_pll_vdda      223124   44
+                 c169.1
+                 c170.1
+                 r104.1
+                u40.H16
+      pmod_vdd_p3p_m2        223132   46
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+      pmod_vdd_p3p_m1         22248   45
+                c83_m1.1
+                r19_m1.2
+                r24_m1.1
+                u4_m1.8
+                u4_m1.16
+      fltr_dac0_3p3v         222147   44
+                c2648.1
+                c2649.1
+                c2650.1
+                 l230.1
+                u158.13
+      fltr_vp3p3_pcie_buf1   223123   41
+                 c658.1
+                c2162.1
+                c2163.1
+                c2164.1
+                 l94.2
+                 r828.2
+                 r863.2
+                 r866.2
+                r1371.1
+                r3490.2
+Too many to print.
+      fltr_vp3p3_bmcphy_avdd  21648   42
+                 c502.1
+                 c503.1
+                 c504.1
+                 l43.2
+                 u44.20
+                 u44.25
+      adcav33                 21548   43
+                 c315.1
+                 c773.1
+                 c774.1
+                 c775.1
+                 l33.2
+                 u8.J6
+      vpllav33               214148   43
+                 c264.1
+                 c269.1
+                 c280.1
+                 l29.2
+                 u8.H7
+                 u8.J7
+      fltr_dac1_3p3v          22323   43
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+      flter_clkgen_p3v3       21448   43
+                 c376.1
+                 c377.1
+                 c378.1
+                 c380.1
+                 c382.1
+                 c383.1
+                 c384.1
+                 c386.1
+                 l17.2
+                 r849.2
+Too many to print.
+      flter_clkgen_p3v3_vdda 214150   45
+                 c379.1
+                 c381.1
+                 r849.1
+                 u25.5
+      dacavd33                21748   43
+                 c304.1
+                 c769.1
+                 c770.1
+                  l9.2
+                 u8.K5
+                 u8.K6
+      pllav33                216148   43
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+      vflt_nsci_clk_buf      215148   43
+                 c306.1
+                 c307.1
+                  l4.2
+                 r484.1
+                 u111.7
+      PMOD_A3V3_VSENSE       223117   54
+               dma1_c23.1
+               dma1_r11.1
+               dma1_r15.2
+               dma1_r28.1
+               dma1_tp3.1
+      pwr_a3v3_didt           20734   45
+               dma1_c14.1
+               dma1_l2.1
+               dma1_q2.10
+             dma1_q2%pwr1.S
+             dma1_q2%pwr2.D
+             dma1_q2%qf1.S
+             dma1_q2%qf2.D
+               dma1_r23.2
+               dma1_u1.14
+      PMOD_A3V3_ISENN_R      219146   43
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+      pmod_a3v3_isenn         22149   43
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+      A3P3V                  220144   43
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   23
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   24
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   24 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   25
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   23
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   24
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436    5
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    4
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    5
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    5
+               j2003_c.1
+               r1661_c.2
+        v                    209141    5 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    5 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    5 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    5
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    5
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    5
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    5
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    4
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    5
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    5
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    6
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    5
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    5
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    4
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    4
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    5
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    5
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    6
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    6
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    5
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    5
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    5
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    5
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    5
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    5 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    6
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    6
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    7
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    5 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    5
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    6
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    6
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   14
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   15 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   14
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326    6
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   15
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   14
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126    5
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 117 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:35:47 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   33
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   33 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   33
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   33
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104    4
+                r12_v.2
+To:   xdp_cpu_trst_n         120170   57
+                a_u139.7
+               j2001_c.54
+                 r535.2
+      xdp_cpu_tck0            11671   57
+               a_u139.11
+               j2001_c.57
+                 r533.2
+      PD_DDR_TEST1_C         119138   54
+                r507_c.1
+               u1_c.CM78
+             u1_c_pch.CM78
+      PD_DDR_TEST0_C         113137   55
+                r506_c.1
+               u1_c.CU76
+             u1_c_pch.CU76
+      PD_CPU_RSVD_AA66_C     203108   54
+                r280_c.2
+               u1_c.AA66
+             u1_c_pch.AA66
+      PD_CPU_DDR_RCOMP1_C    203115   45
+                r509_c.2
+               u1_c.CD51
+             u1_c_pch.CD51
+      PD_USB2_RBIAS_C        203107   27
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      clk100m_i210_pe_ac_dp  215113   55
+                 c436.1
+                 r692.1
+                 r694.2
+                u1_i2.26
+      clk100m_i210_pe_ac_dn  215114   54
+                 c439.1
+                 r460.1
+                 r695.2
+                u1_i2.25
+        v                     21613   68 
+clk100m_clkgen_pcie_refclk_ac_dp        
+                 c400.1
+                r3490.1
+                r3491.1
+                 u24.6
+      clk_100m_cpu_ref_ac_dp  11578   69
+                 c398.1
+                 r866.1
+                 r867.1
+                 u24.3
+      clk_100m_cpu_ref_ac_dn 216111   67
+                 c399.1
+                 r863.1
+                 r868.1
+                 u24.4
+        v                    216114   68 
+clk100m_clkgen_pcie_refclk_ac_dn        
+                 c401.1
+                 r828.1
+                r3489.1
+                 u24.7
+      PMOD_PH1_BOOT_R_M1      10556   26
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   25
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146   70
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH2_BOOT_R_M1      10554   19
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   24
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   35
+                c44_m2.1
+                r55_m2.2
+      PMOD_PH2_PH_M2          10552   50
+                r55_m2.1
+                u3_m2.32
+      VP1P8_VCCIN_SNS_CPU_KP 202122   27
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   29
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   27
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   27
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   27
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+        v                     12135   56 
+VP1P05_VCCGBE_SNS_CPU_KP                
+                r47_m2.1
+               u1_c.AR78
+             u1_c_pch.AR78
+      pmod_vob_vsense_k_m2    11736   57
+                c70_m2.1
+                c72_m2.1
+                r41_m2.1
+                r47_m2.2
+                r50_m2.2
+                u5_m2.28
+      vfltp1p05_25m_osc_c     11376   56
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+        v                     11936   57 
+VFLT_P1P05_VCCKRLCPLL_C                 
+                c102_c.1
+                c105_c.1
+                l15_c.2
+               r1085_c.2
+               r1792_c.2
+                u1_c.T56
+              u1_c_pch.T56
+      VFLT_P1P05_VCCSCPLL_C  122143   57
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+      VFLT_P1P05_VCCAXCK_C   122151   57
+                c100_c.1
+                c103_c.1
+                l13_c.2
+               u1_c.AE27
+             u1_c_pch.AE27
+      PMOD_PH2_DIDT_M2       119136   56
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+      p1v05_combined          12251   57
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+      a1_2v                   21646   48
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+      unnamed_4234_cap_i96_b  22345   48
+                 c366.1
+                 c367.1
+                 c368.1
+                 l24.2
+                 u40.R8
+                u40.T10
+        v                    223144   49 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+      PMOD_A1V2_VSENSE       202110   61
+               dma1_c22.1
+               dma1_r4.2
+               dma1_r10.1
+               dma1_r26.1
+               dma1_tp2.1
+      pwr_a1v2_didt          208134   48
+               dma1_c3.1
+               dma1_l1.1
+               dma1_q1.10
+             dma1_q1%pwr1.S
+             dma1_q1%pwr2.D
+             dma1_q1%qf1.S
+             dma1_q1%qf2.D
+               dma1_r2.1
+               dma1_u1.24
+      JTAG_SF_3P3V           223130   42
+                c45_61.1
+                p45_50.6
+                p45_50.7
+                r2098.2
+      ccc_sw_pll_vdda_bmfpga  22327   45
+                 c650.1
+                 c651.1
+                r1509.1
+                 u27.L5
+      ccc_pll_vdda_bmfpga    223126   46
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+        v                     22048   43 
+unnamed_4188_ast2520_i1_usb2av33        
+                 c576.1
+                 c577.1
+                r1328.2
+                 u8.C7
+      UNNAMED_59_CAP_I64_B   216149   43
+                 c302.1
+                  j3.6
+                 r883.2
+      ccc_bmfpga_pll_vdda    223134   46
+                 c685.1
+                 c686.1
+                 r743.1
+                u27.F11
+      ccc_sw_pll_vdda         22329   43
+                 c727.1
+                 c728.1
+                 r171.1
+                 u40.R7
+                 u40.T5
+      ccc_pll_vdda           223128   45
+                 c677.1
+                 c681.1
+                 r170.1
+                 u40.G9
+                 u40.H8
+      mss_hpms_pll_vdda       22328   44
+                 c676.1
+                 c679.1
+                 r169.1
+                u40.H15
+                u40.J17
+      mss_mddr_pll_vdda      223124   44
+                 c169.1
+                 c170.1
+                 r104.1
+                u40.H16
+      pmod_vdd_p3p_m2        223132   45
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+      pmod_vdd_p3p_m1         22248   44
+                c83_m1.1
+                r19_m1.2
+                r24_m1.1
+                u4_m1.8
+                u4_m1.16
+      fltr_dac0_3p3v         222147   42
+                c2648.1
+                c2649.1
+                c2650.1
+                 l230.1
+                u158.13
+      fltr_vp3p3_pcie_buf1   223123   43
+                 c658.1
+                c2162.1
+                c2163.1
+                c2164.1
+                 l94.2
+                 r828.2
+                 r863.2
+                 r866.2
+                r1371.1
+                r3490.2
+Too many to print.
+      fltr_vp3p3_bmcphy_avdd  21648   43
+                 c502.1
+                 c503.1
+                 c504.1
+                 l43.2
+                 u44.20
+                 u44.25
+      adcav33                 21548   43
+                 c315.1
+                 c773.1
+                 c774.1
+                 c775.1
+                 l33.2
+                 u8.J6
+      vpllav33               214148   43
+                 c264.1
+                 c269.1
+                 c280.1
+                 l29.2
+                 u8.H7
+                 u8.J7
+      fltr_dac1_3p3v          22323   44
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+      flter_clkgen_p3v3       21448   43
+                 c376.1
+                 c377.1
+                 c378.1
+                 c380.1
+                 c382.1
+                 c383.1
+                 c384.1
+                 c386.1
+                 l17.2
+                 r849.2
+Too many to print.
+      flter_clkgen_p3v3_vdda 214150   45
+                 c379.1
+                 c381.1
+                 r849.1
+                 u25.5
+      dacavd33                21748   43
+                 c304.1
+                 c769.1
+                 c770.1
+                  l9.2
+                 u8.K5
+                 u8.K6
+      pllav33                216148   43
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+      vflt_nsci_clk_buf      215148   43
+                 c306.1
+                 c307.1
+                  l4.2
+                 r484.1
+                 u111.7
+      PMOD_A3V3_VSENSE       223117   53
+               dma1_c23.1
+               dma1_r11.1
+               dma1_r15.2
+               dma1_r28.1
+               dma1_tp3.1
+      pwr_a3v3_didt           20734   44
+               dma1_c14.1
+               dma1_l2.1
+               dma1_q2.10
+             dma1_q2%pwr1.S
+             dma1_q2%pwr2.D
+             dma1_q2%qf1.S
+             dma1_q2%qf2.D
+               dma1_r23.2
+               dma1_u1.14
+      PMOD_A3V3_ISENN_R      219146   43
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+      pmod_a3v3_isenn         22149   44
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+      A3P3V                  220144   43
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   22
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   24
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   25 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   25
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   23
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   24
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436    5
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    5
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    5
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    5
+               j2003_c.1
+               r1661_c.2
+        v                    209141    5 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    5 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    5 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    5
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    5
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    5
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    5
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    5
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    5
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    5
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    5
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138    6
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    5
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    5
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    5
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    4
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    5
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    5
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    4
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    6
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    5
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    5
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    5
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    5
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    5
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    5 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516    6
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444    7
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114    7
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    5 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    5
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125    6
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128    6
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   15
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   15 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   15
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326    6
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   15
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   15
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126    5
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 117 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:36:17 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104   72
+                r12_v.2
+To:   PD_USB2_RBIAS_C        203107   66
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      PMOD_PH1_BOOT_R_M1      10556   63
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   63
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH2_BOOT_R_M1      10554   58
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   60
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   71
+                c44_m2.1
+                r55_m2.2
+      VP1P8_VCCIN_SNS_CPU_KP 202122   65
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   67
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   65
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   64
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   65
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   60
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   62
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   62 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   63
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   61
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   61
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436   42
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136   42
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536   42
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136   42
+               j2003_c.1
+               r1661_c.2
+        v                    209141   42 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124   42 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324   42 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122   42
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321   42
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118   42
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318   41
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117   41
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114   41
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736   42
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132   40
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138   38
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149   36
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348   35
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650   34
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150   34
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750   34
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147   34
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347   34
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314   32
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036   32
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535   31
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426   31
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125   31
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425   30
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144   30 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516   31
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444   32
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114   32
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344   30 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118   30
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125   31
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128   30
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   38
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   38 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   38
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326   30
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   38
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   37
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126   28
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 62 nodes, Message is:  None.
+------End, 1 Problem Reported-----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:36:35 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   46
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   46 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   46
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   46
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104   17
+                r12_v.2
+To:   xdp_cpu_trst_n         120170   69
+                a_u139.7
+               j2001_c.54
+                 r535.2
+      xdp_cpu_tck0            11671   69
+               a_u139.11
+               j2001_c.57
+                 r533.2
+      PD_DDR_TEST1_C         119138   67
+                r507_c.1
+               u1_c.CM78
+             u1_c_pch.CM78
+      PD_DDR_TEST0_C         113137   68
+                r506_c.1
+               u1_c.CU76
+             u1_c_pch.CU76
+      PD_CPU_RSVD_AA66_C     203108   67
+                r280_c.2
+               u1_c.AA66
+             u1_c_pch.AA66
+      PD_CPU_DDR_RCOMP1_C    203115   57
+                r509_c.2
+               u1_c.CD51
+             u1_c_pch.CD51
+      PD_USB2_RBIAS_C        203107   31
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      clk100m_i210_pe_ac_dp  215113   58
+                 c436.1
+                 r692.1
+                 r694.2
+                u1_i2.26
+      clk100m_i210_pe_ac_dn  215114   57
+                 c439.1
+                 r460.1
+                 r695.2
+                u1_i2.25
+        v                     21613   72 
+clk100m_clkgen_pcie_refclk_ac_dp        
+                 c400.1
+                r3490.1
+                r3491.1
+                 u24.6
+      clk_100m_cpu_ref_ac_dp  11578   72
+                 c398.1
+                 r866.1
+                 r867.1
+                 u24.3
+      clk_100m_cpu_ref_ac_dn 216111   71
+                 c399.1
+                 r863.1
+                 r868.1
+                 u24.4
+        v                    216114   71 
+clk100m_clkgen_pcie_refclk_ac_dn        
+                 c401.1
+                 r828.1
+                r3489.1
+                 u24.7
+      PMOD_PH1_BOOT_R_M1      10556   29
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   29
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146   74
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH2_BOOT_R_M1      10554   22
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   28
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   39
+                c44_m2.1
+                r55_m2.2
+      PMOD_PH2_PH_M2          10552   53
+                r55_m2.1
+                u3_m2.32
+      VP1P8_VCCIN_SNS_CPU_KP 202122   31
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   32
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   30
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   30
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   31
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+        v                     12135   59 
+VP1P05_VCCGBE_SNS_CPU_KP                
+                r47_m2.1
+               u1_c.AR78
+             u1_c_pch.AR78
+      pmod_vob_vsense_k_m2    11736   60
+                c70_m2.1
+                c72_m2.1
+                r41_m2.1
+                r47_m2.2
+                r50_m2.2
+                u5_m2.28
+      vfltp1p05_25m_osc_c     11376   60
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+        v                     11936   61 
+VFLT_P1P05_VCCKRLCPLL_C                 
+                c102_c.1
+                c105_c.1
+                l15_c.2
+               r1085_c.2
+               r1792_c.2
+                u1_c.T56
+              u1_c_pch.T56
+      VFLT_P1P05_VCCSCPLL_C  122143   61
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+      VFLT_P1P05_VCCAXCK_C   122151   61
+                c100_c.1
+                c103_c.1
+                l13_c.2
+               u1_c.AE27
+             u1_c_pch.AE27
+      PMOD_PH2_DIDT_M2       119136   60
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+      p1v05_combined          12251   60
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+      a1_2v                   21646   51
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+      unnamed_4234_cap_i96_b  22345   51
+                 c366.1
+                 c367.1
+                 c368.1
+                 l24.2
+                 u40.R8
+                u40.T10
+        v                    223144   53 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+      PMOD_A1V2_VSENSE       202110   64
+               dma1_c22.1
+               dma1_r4.2
+               dma1_r10.1
+               dma1_r26.1
+               dma1_tp2.1
+      pwr_a1v2_didt          208134   51
+               dma1_c3.1
+               dma1_l1.1
+               dma1_q1.10
+             dma1_q1%pwr1.S
+             dma1_q1%pwr2.D
+             dma1_q1%qf1.S
+             dma1_q1%qf2.D
+               dma1_r2.1
+               dma1_u1.24
+      JTAG_SF_3P3V           223130   46
+                c45_61.1
+                p45_50.6
+                p45_50.7
+                r2098.2
+      ccc_sw_pll_vdda_bmfpga  22327   49
+                 c650.1
+                 c651.1
+                r1509.1
+                 u27.L5
+      ccc_pll_vdda_bmfpga    223126   48
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+        v                     22048   46 
+unnamed_4188_ast2520_i1_usb2av33        
+                 c576.1
+                 c577.1
+                r1328.2
+                 u8.C7
+      UNNAMED_59_CAP_I64_B   216149   47
+                 c302.1
+                  j3.6
+                 r883.2
+      ccc_bmfpga_pll_vdda    223134   47
+                 c685.1
+                 c686.1
+                 r743.1
+                u27.F11
+      ccc_sw_pll_vdda         22329   48
+                 c727.1
+                 c728.1
+                 r171.1
+                 u40.R7
+                 u40.T5
+      ccc_pll_vdda           223128   48
+                 c677.1
+                 c681.1
+                 r170.1
+                 u40.G9
+                 u40.H8
+      mss_hpms_pll_vdda       22328   48
+                 c676.1
+                 c679.1
+                 r169.1
+                u40.H15
+                u40.J17
+      mss_mddr_pll_vdda      223124   48
+                 c169.1
+                 c170.1
+                 r104.1
+                u40.H16
+      pmod_vdd_p3p_m2        223132   47
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+      pmod_vdd_p3p_m1         22248   48
+                c83_m1.1
+                r19_m1.2
+                r24_m1.1
+                u4_m1.8
+                u4_m1.16
+      fltr_dac0_3p3v         222147   48
+                c2648.1
+                c2649.1
+                c2650.1
+                 l230.1
+                u158.13
+      fltr_vp3p3_pcie_buf1   223123   47
+                 c658.1
+                c2162.1
+                c2163.1
+                c2164.1
+                 l94.2
+                 r828.2
+                 r863.2
+                 r866.2
+                r1371.1
+                r3490.2
+Too many to print.
+      fltr_vp3p3_bmcphy_avdd  21648   47
+                 c502.1
+                 c503.1
+                 c504.1
+                 l43.2
+                 u44.20
+                 u44.25
+      adcav33                 21548   47
+                 c315.1
+                 c773.1
+                 c774.1
+                 c775.1
+                 l33.2
+                 u8.J6
+      vpllav33               214148   46
+                 c264.1
+                 c269.1
+                 c280.1
+                 l29.2
+                 u8.H7
+                 u8.J7
+      fltr_dac1_3p3v          22323   45
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+      flter_clkgen_p3v3       21448   46
+                 c376.1
+                 c377.1
+                 c378.1
+                 c380.1
+                 c382.1
+                 c383.1
+                 c384.1
+                 c386.1
+                 l17.2
+                 r849.2
+Too many to print.
+      flter_clkgen_p3v3_vdda 214150   49
+                 c379.1
+                 c381.1
+                 r849.1
+                 u25.5
+      dacavd33                21748   47
+                 c304.1
+                 c769.1
+                 c770.1
+                  l9.2
+                 u8.K5
+                 u8.K6
+      pllav33                216148   46
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+      vflt_nsci_clk_buf      215148   47
+                 c306.1
+                 c307.1
+                  l4.2
+                 r484.1
+                 u111.7
+      PMOD_A3V3_VSENSE       223117   58
+               dma1_c23.1
+               dma1_r11.1
+               dma1_r15.2
+               dma1_r28.1
+               dma1_tp3.1
+      pwr_a3v3_didt           20734   48
+               dma1_c14.1
+               dma1_l2.1
+               dma1_q2.10
+             dma1_q2%pwr1.S
+             dma1_q2%pwr2.D
+             dma1_q2%qf1.S
+             dma1_q2%qf2.D
+               dma1_r23.2
+               dma1_u1.14
+      PMOD_A3V3_ISENN_R      219146   46
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+      pmod_a3v3_isenn         22149   47
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+      A3P3V                  220144   46
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   27
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   28
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   29 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   29
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   27
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   28
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436    8
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136    8
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536    9
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136    9
+               j2003_c.1
+               r1661_c.2
+        v                    209141    9 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124    9 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324    9 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122    9
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321    9
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118    8
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318    8
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117    8
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114    9
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736    9
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132    9
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138   10
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149    8
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348    9
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650    8
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150    8
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750    8
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147    9
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347    8
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314    9
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036    9
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535    9
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426    9
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125    8
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425    9
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144    9 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516   10
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444   10
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114   11
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344    9 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118    9
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125   10
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128   10
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   18
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   19 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   18
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326   10
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   19
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   18
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126    8
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 117 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:37:03 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   30
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   30 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   31
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   31
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: PMOD_PVCCIN_VSENSE_P   202104   58
+                r12_v.2
+To:   PD_USB2_RBIAS_C        203107   34
+                r267_c.1
+               u1_c.AG11
+               u1_c.AJ11
+             u1_c_pch.AG11
+             u1_c_pch.AJ11
+      clk100m_i210_pe_ac_dp  215113   61
+                 c436.1
+                 r692.1
+                 r694.2
+                u1_i2.26
+      clk100m_i210_pe_ac_dn  215114   61
+                 c439.1
+                 r460.1
+                 r695.2
+                u1_i2.25
+        v                     21613   75 
+clk100m_clkgen_pcie_refclk_ac_dp        
+                 c400.1
+                r3490.1
+                r3491.1
+                 u24.6
+      clk_100m_cpu_ref_ac_dp  11578   75
+                 c398.1
+                 r866.1
+                 r867.1
+                 u24.3
+      clk_100m_cpu_ref_ac_dn 216111   75
+                 c399.1
+                 r863.1
+                 r868.1
+                 u24.4
+        v                    216114   74 
+clk100m_clkgen_pcie_refclk_ac_dn        
+                 c401.1
+                 r828.1
+                r3489.1
+                 u24.7
+      PMOD_PH1_BOOT_R_M1      10556   32
+              c15_p1_m1.1
+               r1_p1_m1.2
+      PMOD_PH1_PH_M1         105156   32
+               r1_p1_m1.1
+              u1_p1_m1.32
+      PMOD_PH1_BOOT_R_M2     107146   76
+                c43_m2.1
+                r54_m2.2
+      PMOD_PH2_BOOT_R_M1      10554   25
+              c15_p2_m1.1
+               r1_p2_m1.2
+      PMOD_PH2_PH_M1         105154   30
+               r1_p2_m1.1
+              u1_p2_m1.32
+      PMOD_PH2_BOOT_R_M2     105153   42
+                c44_m2.1
+                r55_m2.2
+      PMOD_PH2_PH_M2          10552   56
+                r55_m2.1
+                u3_m2.32
+      VP1P8_VCCIN_SNS_CPU_KP 202122   33
+                r11_m1.1
+               u1_c.AT77
+             u1_c_pch.AT77
+      pmod_voa_vsense_k_m1   203138   35
+                c61_m1.1
+                c66_m1.1
+                r6_m1.2
+                r11_m1.2
+                r26_m1.1
+                u4_m1.2
+      PMOD_PH2_DIDT_M1        20204   33
+              c18_p2_m1.2
+               l1_p2_m1.1
+              u1_p2_m1.10
+              u1_p2_m1.11
+              u1_p2_m1.12
+              u1_p2_m1.13
+              u1_p2_m1.14
+              u1_p2_m1.15
+              u1_p2_m1.16
+              u1_p2_m1.17
+Too many to print.
+      PMOD_PH1_DIDT_M1       202103   33
+              c18_p1_m1.2
+               l1_p1_m1.1
+              u1_p1_m1.10
+              u1_p1_m1.11
+              u1_p1_m1.12
+              u1_p1_m1.13
+              u1_p1_m1.14
+              u1_p1_m1.15
+              u1_p1_m1.16
+              u1_p1_m1.17
+Too many to print.
+      PVCCIN                  21129   33
+                b_c841.1
+                b_c842.1
+                b_c843.1
+                b_c844.1
+                b_c851.1
+                b_c852.1
+                b_c853.1
+                b_c887.1
+                b_c888.1
+                b_c889.1
+Too many to print.
+        v                     12135   63 
+VP1P05_VCCGBE_SNS_CPU_KP                
+                r47_m2.1
+               u1_c.AR78
+             u1_c_pch.AR78
+      pmod_vob_vsense_k_m2    11736   64
+                c70_m2.1
+                c72_m2.1
+                r41_m2.1
+                r47_m2.2
+                r50_m2.2
+                u5_m2.28
+      vfltp1p05_25m_osc_c     11376   63
+                c626_c.1
+                c628_c.1
+                l23_c.2
+               r1892_c.1
+                u50_c.4
+        v                     11936   63 
+VFLT_P1P05_VCCKRLCPLL_C                 
+                c102_c.1
+                c105_c.1
+                l15_c.2
+               r1085_c.2
+               r1792_c.2
+                u1_c.T56
+              u1_c_pch.T56
+      VFLT_P1P05_VCCSCPLL_C  122143   64
+                c101_c.1
+               c1248_c.1
+                l14_c.2
+                u1_c.T46
+              u1_c_pch.T46
+      VFLT_P1P05_VCCAXCK_C   122151   63
+                c100_c.1
+                c103_c.1
+                l13_c.2
+               u1_c.AE27
+             u1_c_pch.AE27
+      PMOD_PH2_DIDT_M2       119136   63
+                c50_m2.2
+                l3_m2.1
+                u3_m2.10
+                u3_m2.11
+                u3_m2.12
+                u3_m2.13
+                u3_m2.14
+                u3_m2.15
+                u3_m2.16
+                u3_m2.17
+Too many to print.
+      p1v05_combined          12251   63
+                a_c880.2
+               a_r1306.2
+               a_r1364.2
+                a_u149.1
+                c19_m2.1
+                c34_m2.1
+                c36_m2.1
+                c38_m2.1
+                c40_m2.1
+                c42_m2.1
+Too many to print.
+      a1_2v                   21646   54
+              bmc_ddr4.A1
+              bmc_ddr4.A9
+              bmc_ddr4.B3
+              bmc_ddr4.B9
+              bmc_ddr4.C1
+              bmc_ddr4.D1
+              bmc_ddr4.D9
+              bmc_ddr4.F2
+              bmc_ddr4.F8
+              bmc_ddr4.G1
+Too many to print.
+      unnamed_4234_cap_i96_b  22345   54
+                 c366.1
+                 c367.1
+                 c368.1
+                 l24.2
+                 u40.R8
+                u40.T10
+        v                    223144   56 
+p1v2_bmfpga_serdes_vddaio_flt           
+                 c579.1
+                 c580.1
+                 c581.1
+                 c582.1
+                 l19.2
+                 u27.M5
+                 u27.N5
+      PMOD_A1V2_VSENSE       202110   68
+               dma1_c22.1
+               dma1_r4.2
+               dma1_r10.1
+               dma1_r26.1
+               dma1_tp2.1
+      pwr_a1v2_didt          208134   55
+               dma1_c3.1
+               dma1_l1.1
+               dma1_q1.10
+             dma1_q1%pwr1.S
+             dma1_q1%pwr2.D
+             dma1_q1%qf1.S
+             dma1_q1%qf2.D
+               dma1_r2.1
+               dma1_u1.24
+      JTAG_SF_3P3V           223130   50
+                c45_61.1
+                p45_50.6
+                p45_50.7
+                r2098.2
+      ccc_sw_pll_vdda_bmfpga  22327   51
+                 c650.1
+                 c651.1
+                r1509.1
+                 u27.L5
+      ccc_pll_vdda_bmfpga    223126   51
+                  c7.1
+                 c649.1
+                r1508.1
+                 u27.E6
+        v                     22048   49 
+unnamed_4188_ast2520_i1_usb2av33        
+                 c576.1
+                 c577.1
+                r1328.2
+                 u8.C7
+      UNNAMED_59_CAP_I64_B   216149   50
+                 c302.1
+                  j3.6
+                 r883.2
+      ccc_bmfpga_pll_vdda    223134   52
+                 c685.1
+                 c686.1
+                 r743.1
+                u27.F11
+      ccc_sw_pll_vdda         22329   51
+                 c727.1
+                 c728.1
+                 r171.1
+                 u40.R7
+                 u40.T5
+      ccc_pll_vdda           223128   50
+                 c677.1
+                 c681.1
+                 r170.1
+                 u40.G9
+                 u40.H8
+      mss_hpms_pll_vdda       22328   49
+                 c676.1
+                 c679.1
+                 r169.1
+                u40.H15
+                u40.J17
+      mss_mddr_pll_vdda      223124   51
+                 c169.1
+                 c170.1
+                 r104.1
+                u40.H16
+      pmod_vdd_p3p_m2        223132   52
+               c111_m2.1
+                r45_m2.2
+                r58_m2.1
+                u5_m2.8
+                u5_m2.16
+      pmod_vdd_p3p_m1         22248   52
+                c83_m1.1
+                r19_m1.2
+                r24_m1.1
+                u4_m1.8
+                u4_m1.16
+      fltr_dac0_3p3v         222147   50
+                c2648.1
+                c2649.1
+                c2650.1
+                 l230.1
+                u158.13
+      fltr_vp3p3_pcie_buf1   223123   49
+                 c658.1
+                c2162.1
+                c2163.1
+                c2164.1
+                 l94.2
+                 r828.2
+                 r863.2
+                 r866.2
+                r1371.1
+                r3490.2
+Too many to print.
+      fltr_vp3p3_bmcphy_avdd  21648   50
+                 c502.1
+                 c503.1
+                 c504.1
+                 l43.2
+                 u44.20
+                 u44.25
+      adcav33                 21548   50
+                 c315.1
+                 c773.1
+                 c774.1
+                 c775.1
+                 l33.2
+                 u8.J6
+      vpllav33               214148   49
+                 c264.1
+                 c269.1
+                 c280.1
+                 l29.2
+                 u8.H7
+                 u8.J7
+      fltr_dac1_3p3v          22323   49
+                 c550.1
+                 c551.1
+                 c552.1
+                 l27.1
+                 u78.13
+      flter_clkgen_p3v3       21448   50
+                 c376.1
+                 c377.1
+                 c378.1
+                 c380.1
+                 c382.1
+                 c383.1
+                 c384.1
+                 c386.1
+                 l17.2
+                 r849.2
+Too many to print.
+      flter_clkgen_p3v3_vdda 214150   52
+                 c379.1
+                 c381.1
+                 r849.1
+                 u25.5
+      dacavd33                21748   50
+                 c304.1
+                 c769.1
+                 c770.1
+                  l9.2
+                 u8.K5
+                 u8.K6
+      pllav33                216148   50
+                 c273.1
+                 c274.1
+                 c282.1
+                  l7.2
+                 u8.T11
+                 u8.W17
+                 u8.Y17
+      vflt_nsci_clk_buf      215148   50
+                 c306.1
+                 c307.1
+                  l4.2
+                 r484.1
+                 u111.7
+      PMOD_A3V3_VSENSE       223117   60
+               dma1_c23.1
+               dma1_r11.1
+               dma1_r15.2
+               dma1_r28.1
+               dma1_tp3.1
+      pwr_a3v3_didt           20734   50
+               dma1_c14.1
+               dma1_l2.1
+               dma1_q2.10
+             dma1_q2%pwr1.S
+             dma1_q2%pwr2.D
+             dma1_q2%qf1.S
+             dma1_q2%qf2.D
+               dma1_r23.2
+               dma1_u1.14
+      PMOD_A3V3_ISENN_R      219146   50
+               dma1_c15.1
+               dma1_r17.1
+               dma1_r21.2
+               dma1_r30.1
+      pmod_a3v3_isenn         22149   50
+               dma1_c13.1
+               dma1_r20.2
+               dma1_r21.1
+               dma1_u1.8
+      A3P3V                  220144   49
+                a_c631.1
+                a_c632.1
+                a_c670.1
+                a_c881.2
+               a_r1299.2
+                a_u85.5
+               a_u139.10
+                a_u149.6
+               bma1_rpg.1
+                  c1.1
+Too many to print.
+      PMOD_PH4_BOOT_R_M1      10551   30
+              c34_p4_m1.1
+               r8_p4_m1.2
+      PMOD_PH4_PH_M1         105151   31
+               r8_p4_m1.1
+              u2_p4_m1.32
+        v                    202123   31 
+VP1P05_VCCSCSUS_SNS_CPU_KP              
+                r3_m1.1
+               u1_c.AR76
+             u1_c_pch.AR76
+      pmod_vob_vsense_k_m1    20207   32
+                c63_m1.1
+                c65_m1.1
+                r3_m1.2
+                r5_m1.1
+                r8_m1.2
+                u4_m1.28
+      PMOD_PH4_DIDT_M1        20443   30
+              c33_p4_m1.2
+               l2_p4_m1.1
+              u2_p4_m1.10
+              u2_p4_m1.11
+              u2_p4_m1.12
+              u2_p4_m1.13
+              u2_p4_m1.14
+              u2_p4_m1.15
+              u2_p4_m1.16
+              u2_p4_m1.17
+Too many to print.
+      P1V05_VCCSUS           205106   30
+                c21_m1.1
+                c22_m1.1
+              c35_p4_m1.1
+              c36_p4_m1.1
+              c37_p4_m1.1
+              c38_p4_m1.1
+              c39_p4_m1.1
+              c40_p4_m1.1
+              c41_p4_m1.1
+                c63_m1.2
+Too many to print.
+      SATA0_CONFIG_2          20436   11
+               j2003_c.75
+               r1664_c.2
+      SATA0_CONFIG_1         205136   12
+               j2003_c.69
+               r1663_c.2
+      SATA0_CONFIG_0          20536   12
+               j2003_c.21
+               r1662_c.2
+      SATA0_CONFIG_3         207136   12
+               j2003_c.1
+               r1661_c.2
+        v                    209141   12 
+UNNAMED_4251_RES_I263_A                 
+                 r605.1
+                 sw3.2
+        v                    203124   12 
+unnamed_4188_ast2520_i1_pecivdd         
+                 r600.2
+                u8.AA17
+        v                     20324   12 
+unnamed_4188_ast2520_i1_perstrsvd       
+                 r597.1
+                 u8.L20
+      UNNAMED_88_RES_I92_A   203122   12
+              fc_u1_hs1.10
+                 r577.1
+      ddr_b_dimm0_sa0         20321   11
+                r504_c.2
+                r527_c.1
+             u1b_skt_c.139
+      ddr_b_dimm0_sa2        203118   12
+                r502_c.2
+                r525_c.1
+             u1b_skt_c.238
+      ddr_a_dimm0_sa1         20318   11
+                r494_c.2
+                r517_c.1
+             u1a_skt_c.140
+      ddr_a_dimm0_sa2        203117   12
+                r493_c.2
+                r516_c.1
+             u1a_skt_c.238
+      ddr_a_dimm0_sa0        203114   11
+                r495_c.1
+                r518_c.2
+             u1a_skt_c.139
+      PD_CPU_RSVD_BT62_C      20736   12
+               r1637_c.2
+               u1_c.BT62
+             u1_c_pch.BT62
+      PD_CPU_RSVD_R1_C       204132   12
+               r1252_c.2
+                u1_c.A76
+              u1_c_pch.A76
+      PD_CPU_RSVD_R2_C       208138   13
+                r256_c.2
+               u1_c.AR71
+             u1_c_pch.AR71
+      mss_hpms_pll_vssa      223149   11
+                 c676.2
+                 c679.2
+                u40.J15
+                u40.J16
+      mss_mddr_pll_vssa       22348   12
+                 c169.2
+                 c170.2
+                u40.H17
+      ccc_pll_vssa            21650   12
+                 c677.2
+                 c681.2
+                 u40.G8
+                 u40.J8
+      ccc_sw_pll_vssa        216150   11
+                 c727.2
+                 c728.2
+                 u40.R6
+                 u40.T7
+      serdes_pll_vssa         21750   12
+                 c678.2
+                 c682.2
+                 u40.T6
+      serdes_l23_refret      223147   12
+                 c33.2
+                 c35.2
+                 r287.2
+                 u40.V9
+      serdes_l01_refret       22347   12
+                 c32.2
+                 c34.2
+                 r277.2
+                 u40.U6
+      pmod_voa_vsense_n_m2    20314   12
+                c69_m2.1
+                c73_m2.2
+                r34_m2.2
+                r46_m2.2
+                r49_m2.2
+                u5_m2.3
+      UNNAMED_4253_RES_I66_A  21036   12
+              fc_r8_hs5.1
+              fc_u1_hs5.10
+      UNNAMED_4253_RES_I60_A  20535   12
+              fc_r8_hs4.1
+              fc_u1_hs4.10
+      UNNAMED_89_RES_I66_A    20426   11
+              fc_r8_hs3.1
+              fc_u1_hs3.10
+      UNNAMED_89_RES_I60_A   204125   11
+              fc_r8_hs2.1
+              fc_u1_hs2.10
+      UNNAMED_88_RES_I82_A    20425   12
+              fc_r8_hs0.1
+              fc_u1_hs0.10
+        v                    204144   12 
+VP1P05_VCCSCSUS_SNS_CPU_KN              
+                r10_m1.1
+               u1_c.AR74
+             u1_c_pch.AR74
+      pmod_vob_vsense_n_m1    20516   12
+                c64_m1.1
+                c65_m1.2
+                r5_m1.2
+                r9_m1.2
+                r10_m1.2
+                u4_m1.29
+      VP1P8_VCCIN_SNS_CPU_KN  20444   13
+                r2_m1.1
+               u1_c.AT75
+             u1_c_pch.AT75
+      pmod_voa_vsense_n_m1   205114   13
+                c62_m1.1
+                c66_m1.2
+                r2_m1.2
+                r7_m1.2
+                r26_m1.2
+                u4_m1.3
+        v                     20344   12 
+VP1P05_VCCGBE_SNS_CPU_KN                
+                r42_m2.1
+               u1_c.AP77
+             u1_c_pch.AP77
+      pmod_vob_vsense_n_m2   205118   12
+                c71_m2.1
+                c72_m2.2
+                r41_m2.2
+                r42_m2.2
+                r51_m2.2
+                u5_m2.29
+      PMOD_PH1_SNU_RC_M2     203125   13
+                c49_m2.1
+                r63_m2.1
+                r68_m2.1
+      PMOD_PH4_SNU_RC_M1     203128   13
+              c33_p4_m1.1
+               r9_p4_m1.1
+              r10_p4_m1.1
+      PMOD_P2V5_SW_SN        205105   22
+               bma5_c7.2
+               bma5_r4.1
+        v                    209128   21 
+PMOD_PVCCSCFUSESUS_SW_SN                
+               bma4_c7.2
+               bma4_r4.1
+      PMOD_5V0_SW_SN          21027   21
+               bma2_c7.2
+               bma2_r4.1
+      PMOD_PH2_SNU_RC_M2      20326   13
+                c50_m2.1
+                r64_m2.1
+                r69_m2.1
+      PMOD_P3V3_SW_SN         20727   22
+               bma3_c7.2
+               bma3_r4.1
+      PMOD_A2V5_SW_SN        207125   21
+               bma1_c7.2
+               bma1_r4.1
+      GND                     21126   12
+                a_c631.2
+                a_c632.2
+                a_c670.2
+                a_c827.2
+                a_c828.2
+                a_c833.1
+                a_c834.1
+                a_c880.1
+                a_c881.1
+               a_r1305.1
+Too many to print.
+Common Devices:
+                 r12_v
+Total of 111 nodes, Message is:  None.
+------End, 3 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:37:28 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   45
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   45 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   45
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   45
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+Shorts Report for "shorts".
+Thu Dec 29 13:37:37 2022
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   36
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:     v                    222130   36 
+bmc_bmcfpga_sda_x86fpga                 
+                 r572.1
+                u40.H22
+Common Devices:
+                  r572
+Message is:
+Check r572
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: bmc_bmcfpga_sda         22010   35
+                 r523.1
+                 r569.1
+                 r572.2
+                 u8.B9
+To:   bmc_bmcfpga_sda_bmc    221118   35
+                 r569.2
+                u27.T11
+Common Devices:
+                  r569
+Message is:
+Check r569
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:38:07 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1906.9p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:39:26 2022
+----------------------------------------
+r1612_c HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   101.78k
+Nominal:    158.00k
+High Limit: 197.50k
+Low Limit:  102.70k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:39:36 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2086.9p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+r1612_c HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   98.802k
+Nominal:    158.00k
+High Limit: 197.50k
+Low Limit:  102.70k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:39:43 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2086.9p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+r1612_c HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   84.477k
+Nominal:    158.00k
+High Limit: 197.50k
+Low Limit:  102.70k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:39:51 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2089.8p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+r1612_c HAS FAILED
+12-2478-02 RES,TKF,10 k ohm,0.063W,5%,SM
+Measured:   56.987k
+Nominal:    158.00k
+High Limit: 197.50k
+Low Limit:  102.70k
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GXV
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:44:45 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1983.2p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+fc_c1161 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1941.5p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:46:10 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2160.4p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+fc_c1161 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1935.7p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:46:17 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2156.1p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+fc_c1161 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1935.7p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:46:23 2022
+----------------------------------------
+fc_c1159 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   2150.3p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+fc_c1161 HAS FAILED
+11-1820-02 CAP,CE,1nF,16V,X7R,10%,SM,040
+Measured:   1932.8p
+Nominal:    1400.0p
+High Limit: 1890.0p
+Low Limit:  840.00p
+Capacitance in FARADS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:50:33 2022
+----------------------------------------
+r1403 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   35.634
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:51:10 2022
+----------------------------------------
+r1403 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   33.289
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+73-19882-04
+Thu Dec 29 13:51:16 2022
+----------------------------------------
+r1403 HAS FAILED
+12-2887-02 RES,TKF,22 ohm,0.063W,5%,SM,0
+Measured:   35.218
+Nominal:    22.000
+High Limit: 30.800
+Low Limit:  17.600
+Resistance in OHMS
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 13:55:53 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.8              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 13:56:02 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 13:56:11 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 13:56:19 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 4.0              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:00:23 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:00:32 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.8              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:00:41 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:00:49 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 3.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:03:53 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 1.8              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:21:00 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 1.8              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:21:09 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 1.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:21:17 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 2.0              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:21:26 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 2.0              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2
+----------------------------------------
+TestJet Report for "testjet".
+Thu Dec 29 14:21:34 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u57
+  Pin 19  Node fpga_mux_sclk
+  Measured 1.9              (BRC 215124)
+15-13935-01 IC-LIN,INTFC I2C,QFN,I-TEMP 
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM26500GZ2

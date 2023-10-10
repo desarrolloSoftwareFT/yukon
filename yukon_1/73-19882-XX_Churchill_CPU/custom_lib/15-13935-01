@@ -1,0 +1,864 @@
+!!!!    6    0    1 1517818816  Vfc9e                                         
+! IPG: rev 08.30p  Thu Mar 20 21:56:25 2014
+vector cycle 10u
+receive delay 9u
+
+
+
+assign VDD    to pins 21
+assign GND    to pins 9,25
+
+set terminators to on
+
+assign ABUS  to pins 18,23,22
+assign SCL   to pins 19
+assign SDA   to pins 20
+assign RSTB  to pins 24
+assign SD0   to pins 1
+assign SC0   to pins 2
+assign SD1   to pins 3
+assign SC1   to pins 4
+assign SD2   to pins 5
+assign SC2   to pins 6
+assign SD3   to pins 7
+assign SC3   to pins 8
+assign SD4   to pins 10
+assign SC4   to pins 11
+assign SD5   to pins 12
+assign SC5   to pins 13
+assign SD6   to pins 14
+assign SC6   to pins 15
+assign SD7   to pins 16
+assign SC7   to pins 17
+
+power   VDD,GND
+inputs  ABUS,SCL,RSTB
+outputs SD0,SD1,SD2,SD3
+outputs SD4,SD5,SD6,SD7
+outputs SC0,SC1,SC2,SC3
+outputs SC4,SC5,SC6,SC7
+bidirectional SDA
+
+disable SDA     with SCL     to "T"  16 times
+disable SD0,SC0 with SDA,SCL to "1T" 16 times
+disable SD1,SC1 with SDA,SCL to "1T" 16 times
+disable SD2,SC2 with SDA,SCL to "1T" 16 times
+disable SD3,SC3 with SDA,SCL to "1T" 16 times
+disable SD4,SC4 with SDA,SCL to "1T" 16 times
+disable SD5,SC5 with SDA,SCL to "1T" 16 times
+disable SD6,SC6 with SDA,SCL to "1T" 16 times
+disable SD7,SC7 with SDA,SCL to "1T" 16 times
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector INIT1
+ drive SDA
+ set ABUS  to "xxx"
+ set RSTB  to "1"
+ set SDA   to "1"
+ set SCL   to "1"
+ set SD0   to "x"
+ set SC0   to "x"
+ set SD1   to "x"
+ set SC1   to "x"
+ set SD2   to "x"
+ set SC2   to "x"
+ set SD3   to "x"
+ set SC3   to "x"
+ set SD4   to "x"
+ set SC4   to "x"
+ set SD5   to "x"
+ set SC5   to "x"
+ set SD6   to "x"
+ set SC6   to "x"
+ set SD7   to "x"
+ set SC7   to "x"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS  to "kkk"
+ set RSTB  to "k"
+ set SDA   to "x"
+ set SCL   to "k"
+ set SD0   to "x"
+ set SC0   to "x"
+ set SD1   to "x"
+ set SC1   to "x"
+ set SD2   to "x"
+ set SC2   to "x"
+ set SD3   to "x"
+ set SC3   to "x"
+ set SD4   to "x"
+ set SC4   to "x"
+ set SD5   to "x"
+ set SC5   to "x"
+ set SD6   to "x"
+ set SC6   to "x"
+ set SD7   to "x"
+ set SC7   to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS  to "kkk"
+ set RSTB  to "k"
+ set SDA   to "k"
+ set SCL   to "k"
+ set SD0   to "x"
+ set SC0   to "x"
+ set SD1   to "x"
+ set SC1   to "x"
+ set SD2   to "x"
+ set SC2   to "x"
+ set SD3   to "x"
+ set SC3   to "x"
+ set SD4   to "x"
+ set SC4   to "x"
+ set SD5   to "x"
+ set SC5   to "x"
+ set SD6   to "x"
+ set SC6   to "x"
+ set SD7   to "x"
+ set SC7   to "x"
+end vector
+
+vector RSTB_0
+ initialize to KEEP2
+ set RSTB   to "0"
+end vector
+
+vector RSTB_1
+ initialize to KEEP2
+ set RSTB   to "1"
+end vector
+
+vector A_000
+ initialize to KEEP2
+ set ABUS   to "000"
+end vector
+
+vector A_001
+ initialize to KEEP2
+ set ABUS   to "001"
+end vector
+
+vector A_010
+ initialize to KEEP2
+ set ABUS   to "010"
+end vector
+
+vector A_011
+ initialize to KEEP2
+ set ABUS   to "011"
+end vector
+
+vector A_100
+ initialize to KEEP2
+ set ABUS   to "100"
+end vector
+
+vector A_101
+ initialize to KEEP2
+ set ABUS   to "101"
+end vector
+
+vector A_110
+ initialize to KEEP2
+ set ABUS   to "110"
+end vector
+
+vector A_111
+ initialize to KEEP2
+ set ABUS   to "111"
+end vector
+
+vector SCL_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SCL_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SCL_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector SCL_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector DR0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector DR1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector DRX
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector DW0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector DW1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector SCL_SCOUT_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC0    to "0"
+ set SC1    to "0"
+ set SC2    to "0"
+ set SC3    to "0"
+ set SC4    to "0"
+ set SC5    to "0"
+ set SC6    to "0"
+ set SC7    to "0"
+end vector
+
+vector SCL_SCOUT_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC0    to "1"
+ set SC1    to "1"
+ set SC2    to "1"
+ set SC3    to "1"
+ set SC4    to "1"
+ set SC5    to "1"
+ set SC6    to "1"
+ set SC7    to "1"
+end vector
+
+vector SDA_SDOUT_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD0    to "0"
+ set SD1    to "0"
+ set SD2    to "0"
+ set SD3    to "0"
+ set SD4    to "0"
+ set SD5    to "0"
+ set SD6    to "0"
+ set SD7    to "0"
+end vector
+
+vector SDA_SDOUT_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD0    to "1"
+ set SD1    to "1"
+ set SD2    to "1"
+ set SD3    to "1"
+ set SD4    to "1"
+ set SD5    to "1"
+ set SD6    to "1"
+ set SD7    to "1"
+end vector
+
+vector SCL_SC0_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC0    to "0"
+end vector
+
+vector SCL_SC0_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC0    to "1"
+end vector
+
+vector SDA_SD0_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD0    to "0"
+end vector
+
+vector SDA_SD0_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD0    to "1"
+end vector
+
+vector SCL_SC1_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC1    to "0"
+end vector
+
+vector SCL_SC1_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC1    to "1"
+end vector
+
+vector SDA_SD1_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD1    to "0"
+end vector
+
+vector SDA_SD1_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD1    to "1"
+end vector
+
+vector SCL_SC2_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC2    to "0"
+end vector
+
+vector SCL_SC2_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC2    to "1"
+end vector
+
+vector SDA_SD2_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD2    to "0"
+end vector
+
+vector SDA_SD2_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD2    to "1"
+end vector
+
+vector SCL_SC3_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC3    to "0"
+end vector
+
+vector SCL_SC3_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC3    to "1"
+end vector
+
+vector SDA_SD3_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD3    to "0"
+end vector
+
+vector SDA_SD3_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD3    to "1"
+end vector
+
+vector SCL_SC4_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC4    to "0"
+end vector
+
+vector SCL_SC4_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC4    to "1"
+end vector
+
+vector SDA_SD4_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD4    to "0"
+end vector
+
+vector SDA_SD4_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD4    to "1"
+end vector
+
+vector SCL_SC5_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC5    to "0"
+end vector
+
+vector SCL_SC5_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC5    to "1"
+end vector
+
+vector SDA_SD5_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD5    to "0"
+end vector
+
+vector SDA_SD5_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD5    to "1"
+end vector
+
+vector SCL_SC6_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC6    to "0"
+end vector
+
+vector SCL_SC6_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC6    to "1"
+end vector
+
+vector SDA_SD6_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD6    to "0"
+end vector
+
+vector SDA_SD6_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD6    to "1"
+end vector
+
+vector SCL_SC7_0
+ initialize to KEEP2
+ set SCL    to "0"
+ set SC7    to "0"
+end vector
+
+vector SCL_SC7_1
+ initialize to KEEP2
+ set SCL    to "1"
+ set SC7    to "1"
+end vector
+
+vector SDA_SD7_0
+ initialize to KEEP2
+ set SDA    to "0"
+ set SD7    to "0"
+end vector
+
+vector SDA_SD7_1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SD7    to "1"
+end vector
+
+! *********************************************************************
+
+sub IDLE2
+ repeat 10 times
+  execute KEEP2
+ end repeat
+end sub
+
+sub RST_IC
+ repeat 20 times
+  execute RSTB_0
+ end repeat
+ repeat 20 times
+  execute RSTB_1
+ end repeat
+end sub
+
+sub STRTB
+ execute DW1
+ execute DW1
+ execute SCL_21
+ execute SCL_21
+ execute DW0
+ execute DW0
+ execute SCL_20
+ execute SCL_20
+end sub
+
+sub STOPB
+ execute SCL_10
+ execute SCL_10
+ execute DW0
+ execute DW0
+ execute SCL_21
+ execute SCL_21
+ execute DW1
+ execute DW1
+ execute SCL_20
+ execute SCL_20
+ call IDLE2
+end sub
+
+sub WR(WD7,WD6,WD5,WD4,WD3,WD2,WD1,WD0)  ! I2C Write cycle
+ execute WD7
+ execute SCL_21
+ execute SCL_20
+ execute WD6
+ execute SCL_21
+ execute SCL_20
+ execute WD5
+ execute SCL_21
+ execute SCL_20
+ execute WD4
+ execute SCL_21
+ execute SCL_20
+ execute WD3
+ execute SCL_21
+ execute SCL_20
+ execute WD2
+ execute SCL_21
+ execute SCL_20
+ execute WD1
+ execute SCL_21
+ execute SCL_20
+ execute WD0
+ execute SCL_21
+ execute SCL_10
+ execute SCL_11
+ execute DR0     ! Acknowledge bit
+ execute SCL_10
+end sub
+
+sub RD(RD7,RD6,RD5,RD4,RD3,RD2,RD1,RD0)  ! I2C Read cycle
+ execute RD7
+ execute SCL_11
+ execute SCL_10
+ execute RD6
+ execute SCL_11
+ execute SCL_10
+ execute RD5
+ execute SCL_11
+ execute SCL_10
+ execute RD4
+ execute SCL_11
+ execute SCL_10
+ execute RD3
+ execute SCL_11
+ execute SCL_10
+ execute RD2
+ execute SCL_11
+ execute SCL_10
+ execute RD1
+ execute SCL_11
+ execute SCL_10
+ execute RD0
+ execute SCL_11
+ execute SCL_10
+ execute DW0     ! Acknowledge bit
+ execute SCL_21
+ execute SCL_10
+end sub
+
+! ****************************** A = 000 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_000
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW0,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW0,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 001 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_001
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW1,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW0,DW1,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 010 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_010
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW0,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW0,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 011 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_011
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW1,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW0,DW1,DW1,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 100 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_100
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW0,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW0,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 101 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_101
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW1,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW0,DW1,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 110 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_110
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW0,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW0,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW0,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+
+! ****************************** A = 111 ******************************
+
+unit  "I2C Bus test"
+ execute INIT1
+ execute A_111
+ repeat 4 times
+  call IDLE2
+ end repeat
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW0,DW1,DW0, DW1,DW0,DW1,DW0)
+ call STOPB
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW1,DW1)  ! Read Control Reg
+ call RD(DR1,DR0,DR1,DR0, DR1,DR0,DR1,DR0)
+ call STOPB
+end unit
+
+unit  "Port Output test"
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW1,DW0)  ! Write Control Reg
+ call WR(DW1,DW1,DW1,DW1, DW1,DW1,DW1,DW1)  ! Connect all channels
+ call STOPB
+ execute SDA_SDOUT_0                        ! All port vs main bus
+ execute SDA_SDOUT_1
+ execute SCL_SCOUT_0
+ execute SCL_SCOUT_1
+end unit
+
+unit  "Pin RSTB test"
+ call RST_IC
+ call STRTB
+ call WR(DW1,DW1,DW1,DW0, DW1,DW1,DW1,DW1)  ! Read Default Control Reg
+ call RD(DR0,DR0,DR0,DR0, DR0,DR0,DR0,DR0)
+ call STOPB
+end unit
+

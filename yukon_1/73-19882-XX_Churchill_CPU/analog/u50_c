@@ -1,0 +1,36 @@
+!!!!    2    0    1 1600996416  V53b7                                         
+!* Changed short probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:53:55 2020
+test powered analog
+  disconnect all
+  test "PIN1"
+  test "PIN3"
+  test "PIN4"
+end test
+
+subtest "PIN1"
+  connect i to pins 1
+  connect l to pins 2
+
+  detector dcv, expect 1.05
+  measure 1.15, 1.04
+end subtest
+
+subtest "PIN3"
+  connect rcva to pins 3
+  connect l to pins 2
+
+  detector frequency, expect 25M, threshold 0.7
+  measure 26.25M, 23M
+end subtest
+
+subtest "PIN4"
+  connect i to pins 4
+  connect l to pins 2
+
+  detector dcv, expect 1.05
+  measure 1.15, 1.04
+end subtest
+
+
+

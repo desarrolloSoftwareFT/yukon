@@ -1,0 +1,24 @@
+!!!!   21    1    1 1437458198   0000                                         
+
+diode "cr", 800m, 200m, nr
+
+fet "qf", 200,  50, n, nr
+pin library "pwr", nr, ns, pn"nch_fet_power_off"
+
+external pins 1
+   device "cr" pins "A"
+   device "qf" pins "S"
+   device "pwr" pins "S"
+
+external pins 2; noconnect
+
+external pins 3; noconnect
+
+external pins 4
+   device "qf" pins "G"
+   device "pwr" pins "G"
+
+external pins 8
+   device "cr" pins "C"
+   device "qf" pins "D"
+   device "pwr" pins "D"

@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+AGILENT 3070 BOARD TEST GRADER               Wed Sep 23 19:31:39 2020  page 1  
+
+Pre-Shorts REPORT
+-------------------------------------------------------------------------------
+
+Board Path:              ./
+Board Serial #:          Board1
+Date of Data generation: Sun Sep 20 16:38:37 2020
+
+Number of test runs (in config.bdg): 10
+Number of tests: 15
+
+Report Flags:
+          F = Test failed
+          N = Margin too small 2.00 , 100.00
+
+Designator                     Programmed -----Computed-----    #    # Flg Com
+                                 Thr. OC  Mean StdDev Margin Pass Fail     Ref
+
+j2%presence                      20.0 C   3.94  1.63m   16.1   10    0     ...
+j3%presence                      20.0 C   3.99  1.68m   16.0   10    0     ...
+j8%presence                      20.0 C   3.80  1.83m   16.2   10    0     ...
+j2001_c%presence                 20.0 C   3.68  1.81m   16.3   10    0     ...
+j2003_c%presence                 20.0 C   3.77  1.03m   16.2   10    0     ...
+mb_slvr%presence                 20.0 C   3.86  1.52m   16.1   10    0     ...
+p1%presence                      20.0 C   3.93  1.12m   16.1   10    0     ...
+p2%presence                      20.0 C   4.00   491u   16.0   10    0     ...
+p3%presence                      20.0 C   3.94  1.41m   16.1   10    0     ...
+p4%presence                      20.0 C   3.74   993u   16.3   10    0     ...
+p5%presence                      20.0 C   3.86   937u   16.1   10    0     ...
+p10%presence                     20.0 C   3.75  1.22m   16.2   10    0     ...
+p45_50%presence                  20.0 C   3.76  1.27m   16.2   10    0     ...
+sw3%presence                     20.0 C   3.95  1.07m   16.0   10    0     ...
+p9%presence                     1.00k O -4.03M   942k -5.12M   10    0 N   ...
+
+The columns have the following meaning:
+Designator: This is the main device designator.  If a device test has several
+            test statements (e.g. diode tests on the emitter-base and
+            base-collector junctions of a transistor) a sub-designator is added
+Thr:        The threshold for determining an open or closed result.
+O/C:        Open or closed, depending on the test.
+Nom:        The nominal value in the test statement.
+Low:        The lower limit in the test statement.
+High:       The upper limit in the test statement.
+Mean:       The mean of the values obtained by repeating the test.
+StdDev:     The standard deviation of the obtained by repeating the test.
+Margin:     The difference between the threshold and the closed measurements.
+CPK:        The coefficient of producibility. CPK greater than 10 provides
+            confidence in the producibility and stability of the test.
+CP:         The minimum value where the CPK is determined by the limit 
+	    closest to the mean.  CP is equal to CPK where the mean 
+            is centered.  
+# Bad:      The number of times the test failed. 
+Flg:        These columns will have a warning flag character in the
+            corresponding column (e.g. M if the mean is not centered in the
+            limits band).
+Com Ref:    This will allow the user to enter the comment number specified in
+            the comment files.
+
+
+For more Information, please examine: pre_sho.dat

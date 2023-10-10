@@ -1,0 +1,8 @@
+!!!!    2    0    1 1689152160   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:37 2020
+disconnect all
+connect s to "A1_2V"
+connect i to "PMOD_DDR4_VTT_REFIN"
+connect g to "GND"
+!B!resistor 10k, 25, 20, re4, wb, ar100m, wa1.03
+resistor 10k,26,20,re4,wb,ar100m,ed

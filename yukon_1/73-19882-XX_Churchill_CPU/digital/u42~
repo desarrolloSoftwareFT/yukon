@@ -1,0 +1,138 @@
+!!!!    6    0    1 1600872553  V7796                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:52 2020
+!     LSF0108
+!
+!     combinatorial
+
+vector cycle    500n
+receive delay   400n
+
+default device "u42"
+set terminators to on
+assign VCC to  pins *,*
+assign GND to pins *
+
+assign EN to pins *
+assign B1 to pins 18
+assign B2 to pins 17
+assign B3 to pins 16
+assign B4 to pins *!15
+assign B5 to pins *!14
+assign B6 to pins 13
+assign B7 to pins *!12
+assign B8 to pins *!11
+assign A1 to pins 3
+assign A2 to pins 4
+assign A3 to pins 5
+assign A4 to pins *!6
+assign A5 to pins *!7
+assign A6 to pins 8
+assign A7 to pins *!9
+assign A8 to pins *!10
+
+family LVT
+family LVT_1V05 on A1,A2,A3,A4,A5,A6,A7,A8
+
+power VCC, GND
+
+inputs  EN,B1,B2,B3,B4,B5,B6,B7,B8
+outputs A1,A2,A3,A4,A5,A6,A7,A8
+
+!******************************************************************************
+!                           VECTOR DEFINITON SECTION
+!******************************************************************************
+
+vector B_A_0
+     set En to "1"
+     set B1 to "0"
+     set B2 to "0"
+     set B3 to "0"
+     set B4 to "0"
+     set B5 to "0"
+     set B6 to "0"
+     set B7 to "0"
+     set B8 to "0"
+     set A1 to "0"
+     set A2 to "0"
+     set A3 to "0"
+     set A4 to "0"
+     set A5 to "0"
+     set A6 to "0"
+     set A7 to "0"
+     set A8 to "0"
+end vector
+
+vector B_A_1
+     set En to "1"
+     set B1 to "1"
+     set B2 to "1"
+     set B3 to "1"
+     set B4 to "1"
+     set B5 to "1"
+     set B6 to "1"
+     set B7 to "1"
+     set B8 to "1"
+     set A1 to "1"
+     set A2 to "1"
+     set A3 to "1"
+     set A4 to "1"
+     set A5 to "1"
+     set A6 to "1"
+     set A7 to "1"
+     set A8 to "1"
+end vector
+
+vector B_A_EN_0
+     set En to "0"
+     set B1 to "0"
+     set B2 to "0"
+     set B3 to "0"
+     set B4 to "0"
+     set B5 to "0"
+     set B6 to "0"
+     set B7 to "0"
+     set B8 to "0"
+     set A1 to "1"
+     set A2 to "1"
+     set A3 to "1"
+     set A4 to "1"
+     set A5 to "1"
+     set A6 to "1"
+     set A7 to "1"
+     set A8 to "1"
+end vector
+
+vector B_A_EN_1
+     set En to "0"
+     set B1 to "1"
+     set B2 to "1"
+     set B3 to "1"
+     set B4 to "1"
+     set B5 to "1"
+     set B6 to "1"
+     set B7 to "1"
+     set B8 to "1"
+     set A1 to "1"
+     set A2 to "1"
+     set A3 to "1"
+     set A4 to "1"
+     set A5 to "1"
+     set A6 to "1"
+     set A7 to "1"
+     set A8 to "1"
+end vector
+
+!****************************************************************************!
+!                           VECTOR EXECUTION SECTION                         !
+!****************************************************************************!
+
+!IPG: Unit removed due to conflict in vector B_A_EN_0
+!IPG: Pin 20 tied high.
+
+unit "Test"
+   execute B_A_0
+   execute B_A_1
+!  execute B_A_EN_0
+   execute B_A_EN_1
+end unit
+

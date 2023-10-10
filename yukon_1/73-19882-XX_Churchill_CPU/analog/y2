@@ -1,0 +1,75 @@
+!!!!    2    0    1 1600855931   0000                                         
+!* Changed short probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:54:05 2020
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         XTAL3P768KHZ_2P
+! Alias:             C15782, MC-306-32.7680KA-E, FSR327
+! Part Type:         Power On Analog
+! Description:       32.768 KHz Crystal
+! Manufacturer:      Crystek Corp, Epson, Fox
+! Package Style:     2 pin T4
+! Created:           Jul 11, 2002
+! Programmer:        Silver Creek
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  no
+! JTAG Device:       no
+! Fault coverage:    xx%
+! Constraints:
+! Cisco Part#:       19-1151-01
+
+! ***************************************************************************
+
+!  19-1151-01
+!  XTAL,32.7680K,25PM,6PF,3115
+
+test powered analog
+disconnect all
+! test "Pin1_offset"
+! test "Pin1"
+ test "Pin2_offset"
+ test "Pin2"
+end test
+
+subtest  "Pin1_offset"
+   global Offset
+   connect i to pins  1
+   connect l to ground
+
+   detector dcv, expect 5.0
+   measure 5.5, -3.0, Offset
+end subtest
+
+subtest  "Pin1"
+   global Offset
+   connect rcva to pins 1
+   connect l to ground
+
+   detector frequency, threshold 0.5, expect 25M
+   measure 26.25M , 23.75M
+end subtest
+
+subtest  "Pin2_offset"
+   global Offset
+   connect i to pins  2
+   connect l to ground
+
+   detector dcv, expect 5.0
+   measure 5.5, -3.0, Offset
+end subtest
+
+subtest  "Pin2"
+   global Offset
+   connect rcva to pins 2
+   connect l to ground
+
+   detector frequency, threshold 0.5, expect 25M
+   measure 16.25M , 12.25M
+end subtest
+

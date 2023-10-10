@@ -1,0 +1,13 @@
+!!!!    2    0    1 1600513044  V0e95                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:35 2020
+on failure
+report parallel devices
+report "c537 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "ADC0_0V6_BM_DDR4_CH13"
+connect g to "DDR4_VTT"
+!B!resistor 1k, 25, 20, re3, ar100m, wa93.9m
+resistor 1k,25,20,re3,ar100m,ed
+off failure

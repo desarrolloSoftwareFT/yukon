@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512733  Vb414                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:04 2020
+disconnect all
+connect i to "PMOD_A3V3_ISENN_R"
+connect s to "A3P3V"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "dma1_r17" test.

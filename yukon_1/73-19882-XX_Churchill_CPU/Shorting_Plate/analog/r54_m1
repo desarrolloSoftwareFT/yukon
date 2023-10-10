@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes UNNAMED_25_RES_I19_A P-Pin resistance"
+report "check nodes PMOD_VREF_VCCIN_VCCSCSUS_CSN P-Pin resistance"
+end on failure
+disconnect all
+connect s to "UNNAMED_25_RES_I19_A"
+connect i to "PMOD_VREF_VCCIN_VCCSCSUS_CSN"
+resistor 10,20,100, re1, ar100m,ed
+off failure

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1596686402   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:28 2020
+disconnect all
+connect s to "VFLT_P1P05_VCCKRLCPLL_C"
+connect i to "LAN1_RBIAS_C"
+connect g to "GND"
+!@resistor 1k, 25, 20, re3, ar100m
+jumper 20k, re4, ar200m, wb, op

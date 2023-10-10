@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176624   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:25 2020
+disconnect all
+connect s to "P1V5_PCH_2"
+connect i to "PU_SATA_RCOMP_C"
+resistor 7.5k, 25, 20, re4, wb, ar100m

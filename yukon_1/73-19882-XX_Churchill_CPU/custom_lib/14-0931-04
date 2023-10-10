@@ -1,0 +1,30 @@
+!!!!   21    2    1 1594049716  Vb621                                         
+
+resistor "pin1_8",  4.7k,   5,   5, f, nr
+resistor "pin2_7",  4.7k,   5,   5, f, nr
+resistor "pin3_6",  4.7k,   5,   5, f, nr
+resistor "pin4_5",  4.7k,   5,   5, f, nr
+
+external pins 1
+   device "pin1_8" pins 1
+
+external pins 2
+   device "pin2_7" pins 1
+
+external pins 3
+   device "pin3_6" pins 1
+
+external pins 4
+   device "pin4_5" pins 1
+
+external pins 5
+   device "pin4_5" pins 2
+
+external pins 6
+   device "pin3_6" pins 2
+
+external pins 7
+   device "pin2_7" pins 2
+
+external pins 8
+   device "pin1_8" pins 2

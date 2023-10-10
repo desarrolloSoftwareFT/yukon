@@ -1,0 +1,7 @@
+!!!!    2    0    1 1660653260   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:58 2020
+disconnect all
+connect i to "SPI1_10GE_FLSH_CLK_1V_ST_C"
+connect s to "GND"
+resistor 4.75k, 25, 22, re4, wb, ar200m,am.02
+! "r1803_c" test.

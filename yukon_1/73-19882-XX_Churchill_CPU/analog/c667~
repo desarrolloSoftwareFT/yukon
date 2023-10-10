@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176045   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:46 2020
+on failure
+   report parallel devices
+   report "r958 100k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_108_CAP_I56_B"
+connect g to "P3V3_STBY_ON" 
+capacitor 1u, 35, 40, fr1024, re2, ar100m, nocomp
+! "c667" test.
+off failure

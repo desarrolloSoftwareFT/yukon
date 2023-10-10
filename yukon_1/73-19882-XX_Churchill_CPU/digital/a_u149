@@ -1,0 +1,91 @@
+!!!!    6    0    1 1597754828  Vf515                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:38 2020
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         AVC1T45
+! Alias:             AVC1T45
+! Part Type:         VLSI
+! Description:       SPDT Analog Switch
+! Manufacturer:      Fairchild, Pericom
+! Package Style:     6 pin TDFN
+! Created:           Nov 04, 2005
+! Updated:           Jan 08, 2008. Added Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-11416-01
+
+sequential
+
+vector cycle 10u
+receive delay 8u
+
+default device "a_u149"
+set terminators to on
+assign VCC to pins *,*
+assign GND to pins *
+
+assign A to pins 3
+assign B to pins 4
+assign DIR  to pins 5
+
+power  VCC,GND
+inputs DIR
+bidirectional A,B
+
+family LVT
+family LVT_1V05 on A
+
+!*******************************************
+vector A_B_H
+ drive A
+ receive B
+ set DIR to "1"
+ set A   to "1"
+ set B   to "1"
+end vector
+
+vector A_B_L
+ drive A
+ receive B
+ set DIR to "1"
+ set A   to "0"
+ set B   to "0"
+end vector
+
+vector B_A_H
+ drive B
+ receive A
+ set DIR to "0"
+ set A   to "1"
+ set B   to "1"
+end vector
+
+vector B_A_L
+ drive B
+ receive A
+ set DIR to "0"
+ set A   to "0"
+ set B   to "0"
+end vector
+
+! *************************************************************************
+
+unit "test"
+  execute A_B_H
+  execute A_B_L
+  execute B_A_H
+  execute B_A_L
+end unit
+
+
+

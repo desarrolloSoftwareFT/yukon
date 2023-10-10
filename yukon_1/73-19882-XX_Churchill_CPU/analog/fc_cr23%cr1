@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600754082  V2fa8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:25 2020
+disconnect all
+connect s to "FAN67_AMB_LED_CON"
+connect i to "A3P3V"
+diode 2.35, 1.73, idc20m, co4.5, ar2.35
+! "fc_cr23%cr1" test.

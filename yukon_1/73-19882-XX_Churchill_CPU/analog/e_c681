@@ -1,0 +1,14 @@
+!!!!    2    0    1 1596100970   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:41:40 2020
+on failure
+   report parallel devices
+   report "e_r1008 10.0k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P1V2_VDDQ_VREF_IN"
+!connect gl to "P1V2_VDDQ" 
+capacitor 1n, 35, 35, fr1024, re3, wb, ar50.0m, ed, comp
+warning "excessive minus tolerance or low limit."
+! "e_c681" is a commented test.
+off failure

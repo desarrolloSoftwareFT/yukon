@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175950   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:11 2020
+disconnect all
+connect i to "SPI_X86_OBFL_WP"
+connect s to "A3P3V"
+jumper 10.0k, re4, wb, ar100m, op
+! "r4" test.

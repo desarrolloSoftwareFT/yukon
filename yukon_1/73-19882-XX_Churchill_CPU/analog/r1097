@@ -1,0 +1,10 @@
+!!!!    2    0    1 1604763517   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:49 2020
+disconnect all
+connect s to "SRT_BMC_XGE_RGMII2_TXD2"
+connect i to "BMC_XGE_RGMII2_TXD2"
+!connect a to "SRT_BMC_XGE_RGMII2_TXD2"
+!connect b to "BMC_XGE_RGMII2_TXD2"
+resistor 33+8, 40, 20, re3, ar200m
+!resistor 33+3, 40, 20, re2, ar200m  !original
+! "r1097" test.

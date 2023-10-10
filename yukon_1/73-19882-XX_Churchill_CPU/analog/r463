@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176374   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:15 2020
+disconnect all
+connect s to "CON_TXD"
+connect i to "CON_TXD_R"
+connect a to "CON_TXD"
+connect b to "CON_TXD_R"
+resistor 100, 30, 20, re2, ar100m
+! "r463" test.

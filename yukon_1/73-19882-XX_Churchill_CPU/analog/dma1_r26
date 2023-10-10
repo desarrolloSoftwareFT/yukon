@@ -1,0 +1,14 @@
+!!!!    2    0    1 1605115009   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:06 2020
+on failure
+report parallel devices
+report "dma1_r10 115k"
+report "dma1_c22 15.0n"
+end on failure
+disconnect all
+connect s to "PMOD_A1V2_VSENSE"
+connect i to "UNNAMED_4238_CAP_I129_A"
+connect g to "GND"
+!B!resistor 991.38, 25, 20, re3, ar100m, wa3.03
+resistor 991.38,25,20,re4,ar100m, ed, wa .3
+off failure

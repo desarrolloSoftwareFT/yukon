@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512700  V95c8                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:02 2020
+disconnect all
+connect s to "VR_SMB_DAT"
+connect i to "SRT_PMOD_SDA"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "b_imar19" test.

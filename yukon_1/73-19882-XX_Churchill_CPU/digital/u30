@@ -1,0 +1,1350 @@
+!!!!    6    0    1 1594176829  V3376                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:50 2020
+! NAND Flash memories with MultiMediaCard Interface
+! Part Number: KLMBG8FE3B-A001
+
+! Lib status: Not Verified
+!                                      Modified by Brett
+!                                      Aug 17, 2012
+
+vector cycle 5u   !Max clock speed of 400kHz in Open Drain mode
+receive delay 4u  !Clock set to 100kHz
+default device "u30"
+set terminators to on
+assign NC   to pins *     
+assign NC   to pins *     
+assign Data to pins "A3"     
+assign Data to pins "A4"     
+assign Data to pins "A5"     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign Data to pins "B2"     
+assign Data to pins "B3"     
+assign Data to pins "B4"     
+assign Data to pins "B5"     
+assign Data to pins "B6"     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign NC   to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign RSTN to pins "K5"     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VSS  to pins *     
+assign VDD  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign CMD  to pins "M5"     
+assign CLK  to pins "M6"     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign VDD  to pins *     
+assign VSS  to pins *     
+assign VDD  to pins *     
+assign VSS  to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+assign NC   to pins *     
+
+!assign VDD to pins "M6","N5","U9","T10","W4","AA5","AA3","Y4","K6","K2"
+!assign VSS to pins "K4","M7","AA6","AA4","Y2","Y5","U8","R10","P5"
+!
+!assign CMD to pins "W5"
+!assign CLK to pins "W6"
+!
+!assign Data to pins "J6", "J5","J4","J3","J2","H5","H4","H3"
+!assign RSTN to pins "U5"
+!
+!assign NC to pins "A4"
+!assign NC to pins "A6"
+!assign NC to pins "A9"
+!assign NC to pins "A11"
+!assign NC to pins "AA1"
+!assign NC to pins "AA2"
+!assign NC to pins "AA7"
+!assign NC to pins "AA8"
+!assign NC to pins "AA9"
+!assign NC to pins "AA10"
+!assign NC to pins "AA11"
+!assign NC to pins "AA12"
+!assign NC to pins "AA13"
+!assign NC to pins "AA14"
+!assign NC to pins "AE1"
+!assign NC to pins "AE14"
+!assign NC to pins "AG2"
+!assign NC to pins "AG13"
+!assign NC to pins "AH4"
+!assign NC to pins "AH6"
+!assign NC to pins "AH9"
+!assign NC to pins "AH11"
+!assign NC to pins "B2"
+!assign NC to pins "B13"
+!assign NC to pins "D1"
+!assign NC to pins "D14"
+!assign NC to pins "H1"
+!assign NC to pins "H2"
+!assign NC to pins "H6"
+!assign NC to pins "H7"
+!assign NC to pins "H8"
+!assign NC to pins "H9"
+!assign NC to pins "H10"
+!assign NC to pins "H11"
+!assign NC to pins "H12"
+!assign NC to pins "H13"
+!assign NC to pins "H14"
+!assign NC to pins "J1"
+!assign NC to pins "J7"
+!assign NC to pins "J8"
+!assign NC to pins "J9"
+!assign NC to pins "J10"
+!assign NC to pins "J11"
+!assign NC to pins "J12"
+!assign NC to pins "J13"
+!assign NC to pins "J14"
+!assign NC to pins "K1"
+!assign NC to pins "K3"
+!assign NC to pins "K5"
+!assign NC to pins "K7"
+!assign NC to pins "K8"
+!assign NC to pins "K9"
+!assign NC to pins "K10"
+!assign NC to pins "K11"
+!assign NC to pins "K12"
+!assign NC to pins "K13"
+!assign NC to pins "K14"
+!assign NC to pins "L1"
+!assign NC to pins "L2"
+!assign NC to pins "L3"
+!assign NC to pins "L4"
+!assign NC to pins "L12"
+!assign NC to pins "L13"
+!assign NC to pins "L14"
+!assign NC to pins "M1"
+!assign NC to pins "M2"
+!assign NC to pins "M3"
+!assign NC to pins "M5"
+!assign NC to pins "M8"
+!assign NC to pins "M9"
+!assign NC to pins "M10"
+!assign NC to pins "M12"
+!assign NC to pins "M13"
+!assign NC to pins "M14"
+!assign NC to pins "N1"
+!assign NC to pins "N2"
+!assign NC to pins "N3"
+!assign NC to pins "N10"
+!assign NC to pins "N12"
+!assign NC to pins "N13"
+!assign NC to pins "N14"
+!assign NC to pins "P1"
+!assign NC to pins "P2"
+!assign NC to pins "P3"
+!assign NC to pins "P10"
+!assign NC to pins "P12"
+!assign NC to pins "P13"
+!assign NC to pins "P14"
+!assign NC to pins "R1"
+!assign NC to pins "R2"
+!assign NC to pins "R3"
+!assign NC to pins "R5"
+!assign NC to pins "R12"
+!assign NC to pins "R13"
+!assign NC to pins "R14"
+!assign NC to pins "T1"
+!assign NC to pins "T2"
+!assign NC to pins "T3"
+!assign NC to pins "T5"
+!assign NC to pins "T12"
+!assign NC to pins "T13"
+!assign NC to pins "T14"
+!assign NC to pins "U1"
+!assign NC to pins "U2"
+!assign NC to pins "U3"
+!assign NC to pins "U6"
+!assign NC to pins "U7"
+!assign NC to pins "U10"
+!assign NC to pins "U12"
+!assign NC to pins "U13"
+!assign NC to pins "U14"
+!assign NC to pins "V1"
+!assign NC to pins "V2"
+!assign NC to pins "V3"
+!assign NC to pins "V12"
+!assign NC to pins "V13"
+!assign NC to pins "V14"
+!assign NC to pins "W1"
+!assign NC to pins "W2"
+!assign NC to pins "W3"
+!assign NC to pins "W7"
+!assign NC to pins "W8"
+!assign NC to pins "W9"
+!assign NC to pins "W10"
+!assign NC to pins "W11"
+!assign NC to pins "W12"
+!assign NC to pins "W13"
+!assign NC to pins "W14"
+!assign NC to pins "Y1"
+!assign NC to pins "Y3"
+!assign NC to pins "Y6"
+!assign NC to pins "Y7"
+!assign NC to pins "Y8"
+!assign NC to pins "Y9"
+!assign NC to pins "Y10"
+!assign NC to pins "Y11"
+!assign NC to pins "Y12"
+!assign NC to pins "Y13"
+!assign NC to pins "Y14"
+
+inputs CLK, RSTN
+bidirectional Data, CMD
+nondigital  NC
+power VDD,   VSS
+
+
+family LVT_1V2
+family LVT_1V8 on Data, CMD, CLK, RSTN
+set load on groups CMD to pull up
+
+!IPG: Add defaults or loads to floating inputs and bidirs.
+assign Floating__Inputs to pins "M6" default "0"
+inputs Floating__Inputs
+
+
+vector Initialize
+   drive Cmd
+   set Cmd to "1"
+   set Clk to "0"
+   set RSTN to "1"
+end vector
+
+vector Keep_Control
+   drive Cmd
+   set Cmd to "k"
+   set Clk to "k"
+   set RSTN to "k"
+end vector
+
+vector Reset
+   initialize to Keep_Control
+   set RSTN to "0"
+end vector
+
+vector UnReset
+   initialize to Keep_Control
+   set RSTN to "1"
+end vector
+
+vector Cmd_0_R
+   initialize to Keep_Control
+   receive Cmd
+   set CLK to "1"
+   set Cmd to "0"
+end vector
+
+vector Cmd_1_R
+   initialize to Keep_Control
+   receive Cmd
+   set CLK to "1"
+   set Cmd to "1"
+end vector
+
+vector Cmd_X_R
+   initialize to Keep_Control
+   receive Cmd
+   set CLK to "1"
+   set Cmd to "X"
+end vector
+
+vector Clock_0_R
+   initialize to Keep_Control
+   receive Cmd
+   set CLK to "0"
+   set Cmd to "X"
+end vector
+
+vector Clock_1_R
+   initialize to Keep_Control
+   receive Cmd
+   set CLK to "1"
+   set Cmd to "X"
+end vector
+
+vector Clock_0
+   initialize to Keep_Control
+   drive Cmd
+   set CLK to "0"
+   set Cmd to "k"
+end vector
+
+vector Clock_1
+   initialize to Keep_Control
+   drive Cmd
+   set CLK to "1"
+   set Cmd to "k"
+end vector
+
+vector Cmd_0
+   initialize to Keep_Control
+   drive Cmd
+   set CLK to "0"
+   set Cmd to "0"
+end vector
+
+vector Cmd_1
+   initialize to Keep_Control
+   drive Cmd
+   set CLK to "0"
+   set Cmd to "1"
+end vector
+
+sub CMD0! (01 000000 h00000000 h95 )
+   !Start Bit
+   execute Cmd_0              !Bit 47
+   execute      Clock_1
+   !Transmission bit
+   execute Cmd_1              !Bit 46
+   execute      Clock_1
+   !Command Index
+   execute Cmd_0              !Bit 45
+   execute      Clock_1
+   execute Cmd_0              !Bit 44
+   execute      Clock_1
+   execute Cmd_0              !Bit 43
+   execute      Clock_1
+   execute Cmd_0              !Bit 42
+   execute      Clock_1
+   execute Cmd_0              !Bit 41
+   execute      Clock_1
+   execute Cmd_0              !Bit 40
+   execute      Clock_1
+   !Argument
+   repeat 32 times
+      execute Cmd_0
+      execute      Clock_1
+   end repeat
+   !CRC7
+   execute Cmd_1              !Bit 7
+   execute      Clock_1
+   execute Cmd_0              !Bit 6
+   execute      Clock_1
+   execute Cmd_0              !Bit 5
+   execute      Clock_1
+   execute Cmd_1              !Bit 4
+   execute      Clock_1
+   execute Cmd_0              !Bit 3
+   execute      Clock_1
+   execute Cmd_1              !Bit 2
+   execute      Clock_1
+   execute Cmd_0              !Bit 1
+   execute      Clock_1
+   !End bit
+   execute Cmd_1              !Bit 0
+   execute      Clock_1
+end sub
+
+!Cmd is always sampled on rising edge of clock
+!sub CMD1! (01 000001 h40ff8080 h89 )
+sub CMD1! (01 000001 h00000080 h7B )
+   !Start Bit
+   execute Cmd_0              !Bit 47
+   execute      Clock_1
+   !Transmission bit
+   execute Cmd_1              !Bit 46
+   execute      Clock_1
+   !Command Index
+   execute Cmd_0              !Bit 45
+   execute      Clock_1
+   execute Cmd_0              !Bit 44
+   execute      Clock_1
+   execute Cmd_0              !Bit 43
+   execute      Clock_1
+   execute Cmd_0              !Bit 42
+   execute      Clock_1
+   execute Cmd_0              !Bit 41
+   execute      Clock_1
+   execute Cmd_1              !Bit 40
+   execute      Clock_1
+   !Argument
+   execute Cmd_0              !Bit 39
+   execute      Clock_1
+   execute Cmd_0              !Bit 38
+   execute      Clock_1
+   execute Cmd_0              !Bit 37
+   execute      Clock_1
+   execute Cmd_0              !Bit 36
+   execute      Clock_1
+   execute Cmd_0              !Bit 35
+   execute      Clock_1
+   execute Cmd_0              !Bit 34
+   execute      Clock_1
+   execute Cmd_0              !Bit 33
+   execute      Clock_1
+   execute Cmd_0              !Bit 32
+   execute      Clock_1
+   execute Cmd_0              !Bit 31
+   execute      Clock_1
+   execute Cmd_0              !Bit 30
+   execute      Clock_1
+   execute Cmd_0              !Bit 29
+   execute      Clock_1
+   execute Cmd_0              !Bit 28
+   execute      Clock_1
+   execute Cmd_0              !Bit 27
+   execute      Clock_1
+   execute Cmd_0              !Bit 26
+   execute      Clock_1
+   execute Cmd_0              !Bit 25
+   execute      Clock_1
+   execute Cmd_0              !Bit 24
+   execute      Clock_1
+   execute Cmd_0              !Bit 23
+   execute      Clock_1
+   execute Cmd_0              !Bit 22
+   execute      Clock_1
+   execute Cmd_0              !Bit 21
+   execute      Clock_1
+   execute Cmd_0              !Bit 20
+   execute      Clock_1
+   execute Cmd_0              !Bit 19
+   execute      Clock_1
+   execute Cmd_0              !Bit 18
+   execute      Clock_1
+   execute Cmd_0              !Bit 17
+   execute      Clock_1
+   execute Cmd_0              !Bit 16
+   execute      Clock_1
+   execute Cmd_1              !Bit 15
+   execute      Clock_1
+   execute Cmd_0              !Bit 14
+   execute      Clock_1
+   execute Cmd_0              !Bit 13
+   execute      Clock_1
+   execute Cmd_0              !Bit 12
+   execute      Clock_1
+   execute Cmd_0              !Bit 11
+   execute      Clock_1
+   execute Cmd_0              !Bit 10
+   execute      Clock_1
+   execute Cmd_0              !Bit 9
+   execute      Clock_1
+   execute Cmd_0              !Bit 8
+   execute      Clock_1
+   !CRC7
+   execute Cmd_0              !Bit 7
+   execute      Clock_1
+   execute Cmd_1              !Bit 6
+   execute      Clock_1
+   execute Cmd_1              !Bit 5
+   execute      Clock_1
+   execute Cmd_1              !Bit 4
+   execute      Clock_1
+   execute Cmd_1              !Bit 3
+   execute      Clock_1
+   execute Cmd_0              !Bit 2
+   execute      Clock_1
+   execute Cmd_1              !Bit 1
+   execute      Clock_1
+   !End bit
+   execute Cmd_1              !Bit 0
+   execute      Clock_1
+end sub
+
+!Cmd is always sampled on rising edge of clock
+sub CMD2! (01 000010 h00000000 h4D )
+   !Start Bit
+   execute Cmd_0              !Bit 47
+   execute      Clock_1
+   !Transmission bit
+   execute Cmd_1              !Bit 46
+   execute      Clock_1
+   !Command Index
+   execute Cmd_0              !Bit 45
+   execute      Clock_1
+   execute Cmd_0              !Bit 44
+   execute      Clock_1
+   execute Cmd_0              !Bit 43
+   execute      Clock_1
+   execute Cmd_0              !Bit 42
+   execute      Clock_1
+   execute Cmd_1              !Bit 41
+   execute      Clock_1
+   execute Cmd_0              !Bit 40
+   execute      Clock_1
+   !Argument
+   repeat 32 times
+      execute Cmd_0
+      execute      Clock_1
+   end repeat
+   !CRC7
+   execute Cmd_0              !Bit 7
+   execute      Clock_1
+   execute Cmd_1              !Bit 6
+   execute      Clock_1
+   execute Cmd_0              !Bit 5
+   execute      Clock_1
+   execute Cmd_0              !Bit 4
+   execute      Clock_1
+   execute Cmd_1              !Bit 3
+   execute      Clock_1
+   execute Cmd_1              !Bit 2
+   execute      Clock_1
+   execute Cmd_0              !Bit 1
+   execute      Clock_1
+   !End bit
+   execute Cmd_1              !Bit 0
+   execute      Clock_1
+end sub
+
+sub OCR_response
+   !Start Bit     !OCR reg should be C0FF8080 for a >2G part
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 47
+   !Transmission bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 46
+   !Check bits
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 45
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 44
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 43
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 42
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 41
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 40
+   !OCR Register C0ff 8080
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R          !Bit 39  !This is the busy bit and should be high
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 38
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 37
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 36
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 35
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 34
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 33
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 32
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 31
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 30
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 29
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 28
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 27
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 26
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 25
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 24
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 23
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 22
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 21
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 20
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 19
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 18
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 17
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 16
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 15
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 14
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 13
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 12
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 11
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 10
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 9
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 8
+   !Check bits
+   repeat 7 times
+      execute       Clock_0_R
+      execute       Clock_1_R
+      execute Cmd_1_R
+   end repeat
+   !End bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 0
+end sub
+
+sub Dummy_OCR_response       !read 0x00FF8080
+   !Start Bit     !OCR reg should be C0FF8080 for a >2G part
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 47
+   !Transmission bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 46
+   !Check bits
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 45
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 44
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 43
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 42
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 41
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 40
+   !OCR Register C0ff 8080
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R          !Bit 39  !This is the busy bit and should be high
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 38
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 37
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 36
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 35
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 34
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 33
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 32
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 31
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 30
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 29
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 28
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 27
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 26
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 25
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 24
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 23
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 22
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 21
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 20
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 19
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 18
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 17
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 16
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 15
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 14
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 13
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 12
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 11
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 10
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 9
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 8
+   !Check bits
+   repeat 7 times
+      execute       Clock_0_R
+      execute       Clock_1_R
+      execute Cmd_1_R
+   end repeat
+   !End bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 0
+end sub
+
+sub CID_response !R2 135 bits
+   !Start Bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 135
+   !Transmission bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 134
+   !Check bits
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 133
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 132
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 131
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 130
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 129
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 128
+   !CID Register 127 bits 90 014a 4859 4e49 5820 5d 0000 2ab1 xx c3
+   !CID Register 127 bits 15 xxxx 4D42 4734 4642 xx xxxx xxxx xx xx !KLMBG8FE3B-A001
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 127
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 126
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 125
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 124
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 123
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 122
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 121
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 120
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 119
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 118
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 117
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 116
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 115
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 114
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 113
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 112
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 111
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 110
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 109
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 108
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 107
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 106
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 105
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 104
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 103
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 102
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 101
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 100
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 99
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 98
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 97
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 96
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 95
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 94
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 93
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 92
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 91
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 90
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 89
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 88
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 87
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 86
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 85
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 84
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 83
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 82
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 81
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 80
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 79
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 78
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 77
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 76
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 75
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 74
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 73
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 72
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 71
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 70
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 69
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 68
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 67
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 66
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 65
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 64
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 63
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 62
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 61
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 60
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 59
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 58
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 57
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_0_R            !Bit 56
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 55
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 54
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 53
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 52
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 51
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 50
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 49
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 48
+   execute          Clock_0_R
+   execute          Clock_1_R
+   !Product serial number
+   execute Cmd_X_R            !Bit 47
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 46
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 45
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 44
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 43
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 42
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 41
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 40
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 39
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 38
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 37
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 36
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 35
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 34
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 33
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 32
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 31
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 30
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 29
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 28
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 27
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 26
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 25
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 24
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 23
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 22
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 21
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 20
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 19
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 18
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 17
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 16
+   !Manufacturing date
+   
+   repeat 8 times
+      execute       Clock_0_R
+      execute       Clock_1_R
+      execute Cmd_X_R            !Bit 15-8
+   end repeat
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 7
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 6
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 5
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 4
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 3
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 2
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_X_R            !Bit 1
+   !End bit
+   execute          Clock_0_R
+   execute          Clock_1_R
+   execute Cmd_1_R            !Bit 0
+end sub
+
+
+
+unit "Test"
+   execute Initialize
+   wait 10m
+
+   repeat 74 times
+      execute Clock_0
+      execute Clock_1
+   end repeat
+   call CMD0
+   repeat 101 times
+      execute Clock_0_R
+      execute Clock_1_R
+   end repeat
+
+
+
+   call CMD1
+   repeat 5 times
+      execute Clock_0
+      execute Clock_1
+   end repeat
+   !call Dummy_OCR_Response
+   !repeat 50000 times     !  wait 0.5sec
+   repeat 10000 times
+      execute Clock_0_R
+      execute Clock_1_R
+   end repeat
+wait 500m
+   repeat 10000 times
+      execute Clock_0_R
+      execute Clock_1_R
+   end repeat
+
+
+   call CMD1
+   repeat 5 times
+      execute Clock_0
+      execute Clock_1
+   end repeat
+
+   call OCR_Response
+  !repeat 2 times
+   repeat 8 times
+      execute Clock_0
+      execute Clock_1
+   end repeat
+
+
+   call CMD2
+   repeat 5 times
+      execute Clock_0
+      execute Clock_1
+   end repeat
+   call CID_response
+end unit
+!
+

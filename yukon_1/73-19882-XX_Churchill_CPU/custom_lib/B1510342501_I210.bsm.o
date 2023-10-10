@@ -1,0 +1,291 @@
+  223    0    1 1571368267   0000                                         
+entity I210 is
+
+generic (PHYSICAL_PIN_MAP : string := "I210");
+
+port (
+        JTAG_TCK : in bit;
+        JTAG_TDI : in bit;
+        JTAG_TMS : in bit;
+        JTAG_TDO : out bit;
+  PE_RST : linkage bit;
+  LAN_PWR_GOOD: linkage bit;
+  PECLKN: linkage bit;
+  PECLKP: linkage bit;
+  XTAL1: linkage bit;
+  XTAL2: linkage bit;
+  CBOT: linkage bit;
+  CTOP: linkage bit;
+  RSET: linkage bit;
+  SETN: linkage bit;
+  SETP: linkage bit;
+  SERN: linkage bit;
+  SERP: linkage bit;
+  MDI_0P: linkage bit;
+  EP: linkage bit;
+  NC: linkage bit;
+  VDD0P9_OUT: linkage bit;
+  VDD0P9_4: linkage bit;
+  VDD0P9_3: linkage bit;
+  VDD0P9_2: linkage bit;
+  VDD0P9_1: linkage bit;
+  VDD1P5_2: linkage bit;
+  VDD1P5_1: linkage bit;
+  VDD1P5_OUT: linkage bit;
+  VDD3P3_5: linkage bit;
+  VDD3P3_4: linkage bit;
+  VDD3P3_3: linkage bit;
+  VDD3P3_2: linkage bit;
+  VDD3P3_1: linkage bit;
+  PE_TN: linkage bit;
+  PE_TP: linkage bit;
+  PE_RN: linkage bit;
+  PE_RP: linkage bit;
+ LED : inout bit_vector (0 to 2);
+ SMBCLK : in bit;
+ SMBALRT_N : in bit;
+ SMBD : in bit;
+ NCSI_ARB_IN : inout bit;
+ NCSI_ARB_OUT : inout bit;
+ SRDS_SIG_DET : inout bit;
+ SFP_I2C_CLK : inout bit;
+ SFP_I2C_DATA : inout bit;
+ SDP : inout bit_vector (0 to 3);
+ RMII_CLK_IN : inout bit;
+ RMII_CRS_DV : inout bit;
+ RMII_RXD : inout bit_vector ( 0 to 1);
+ RMII_TX_EN : inout bit;
+ RMII_TXD : inout bit_vector (0 to 1);
+ NVM_SI : inout bit;
+ NVM_SK : inout bit;
+ NVM_SO : inout bit;
+ NVM_CS_N : inout bit;
+ GIO_WAKE_N : in bit;
+ DEVICE_OFF_N : in bit
+ );
+
+  use STD_1149_1_1994.all;  -- Get Std 1149.1-1994 attributes and definitions
+
+  attribute COMPONENT_CONFORMANCE of I210 : entity is "STD_1149_1_1993";
+  -- Package Pin Mapping
+
+  attribute PIN_MAP of I210 : entity is PHYSICAL_PIN_MAP;
+  constant I210 :PIN_MAP_STRING:=
+        "VDD0P9_OUT:38 ,"&
+        "PE_RST :17       ,"&
+  "LAN_PWR_GOOD:1   ,"&
+  "PECLKN:25        ,"&
+  "PECLKP:26        ,"&
+  "XTAL1:46         ,"&
+  "XTAL2:45         ,"&
+  "CBOT:37          ,"&
+  "CTOP:40          ,"&
+  "RSET:48          ,"&
+  "SETN:52          ,"&
+  "SETP:53          ,"&
+  "SERN:49          ,"&
+  "SERP:50          ,"&
+  "MDI_0P:58        ,"&
+  "EP:65            ,"&
+  "NC:22            ,"&
+  "VDD0P9_4:59      ,"&
+  "VDD0P9_3:42      ,"&
+  "VDD0P9_2:32      ,"&
+  "VDD0P9_1:11      ,"&
+  "VDD1P5_2:56      ,"&
+  "VDD1P5_1:47      ,"&
+  "VDD1P5_OUT:39    ,"&
+  "VDD3P3_5:64      ,"&
+  "VDD3P3_4:51      ,"&
+  "VDD3P3_3: 41     ,"&
+  "VDD3P3_2:27      ,"&
+  "VDD3P3_1:10      ,"&
+  "PE_TN:20         ,"&
+  "PE_TP:21         ,"&
+  "PE_RN:23         ,"&
+  "PE_RP:24         ,"&
+        "JTAG_TCK : 19," &
+        "JTAG_TDI : 29," &
+        "JTAG_TMS : 18," &
+        "JTAG_TDO : 4," &
+        "LED : ( 31, 30, 33 )," &
+        "SMBCLK : 34," &
+        "SMBALRT_N : 35," &
+        "SMBD : 36," &
+        "NCSI_ARB_IN : 43," &
+        "NCSI_ARB_OUT : 44," &
+        "SRDS_SIG_DET : 54," &
+        "SFP_I2C_CLK : 55," &
+        "SFP_I2C_DATA : 57," &
+        "SDP : ( 63, 62, 61, 60)," &
+        "RMII_CLK_IN : 2," &
+        "RMII_CRS_DV : 3," &
+        "RMII_RXD : ( 6, 5 )," &
+        "RMII_TX_EN : 7," &
+        "RMII_TXD : ( 9, 8 )," &
+        "NVM_SI : 12," &
+        "NVM_SK : 13," &
+        "NVM_SO : 14," &
+        "NVM_CS_N : 15," &
+        "GIO_WAKE_N : 16," &
+        "DEVICE_OFF_N : 28";
+
+-- Scan Port Identification
+--
+attribute TAP_SCAN_CLOCK of JTAG_TCK : signal is (20.0e+06, LOW);
+attribute TAP_SCAN_IN    of JTAG_TDI : signal is true;
+attribute TAP_SCAN_MODE  of JTAG_TMS : signal is true;
+attribute TAP_SCAN_OUT   of JTAG_TDO : signal is true;
+--attribute TAP_SCAN_RESET of nTRST : signal is true;
+--
+-- TAP Instruction Description
+--
+attribute INSTRUCTION_LENGTH of I210 : entity is 8;
+attribute INSTRUCTION_OPCODE of I210 : entity is
+ "USERCODE ( 00001001), " &
+ "BYPASS         ( 11111111 ), " &
+ "CLAMP           ( 00001000 ), " &
+ "EXTEST          ( 00000001 ), " &
+ "HIGHZ           ( 00000100 ), " &
+ "IDCODE          ( 00000111 ), " &
+ "PRELOAD         ( 00000011 ), " &
+ "SAMPLE          ( 00000010 )";
+
+attribute INSTRUCTION_CAPTURE of I210 : entity is "xxxxxx01";
+attribute IDCODE_REGISTER of I210 : entity is
+--"0001" &              -- 4-bit version number, A0:0000, A1 0001
+"xxxx" &              -- 4-bit version number, A0:0000, A1 0001
+--"0001010100011111" &  -- 16-bit part number
+--"0001010100110001" &  -- 16-bit part number , changed on Aug 17 netlist
+"xxxxxxxxxxxxxxxx" &  -- 16-bit part number , changed on Aug 17 netlist
+"00000001001" &       -- 11-bit manufacturer's number
+"1";                  -- mandatory LSB of 1
+
+attribute USERCODE_REGISTER of I210 : entity is
+--"0000"             & -- version
+"xxxx"             & -- version
+"0001010100110110" & -- part number 0x1536
+"00000001001"      & -- manufacturer's identity
+"1 ";                   -- required by 1149.1
+--
+-- "0000"             & -- version
+-- "0001010100110111" & -- part number 0x1537
+-- "00000001001"      & -- manufacturer's identity
+-- "1, "                   -- required by 1149.1
+--
+-- "0000"             & -- version
+-- "0001010100111000" & -- part number 0x1538
+-- "00000001001"      & -- manufacturer's identity
+-- "1";                   -- required by 1149.1
+
+attribute REGISTER_ACCESS of I210 : entity is
+
+ "DEVICE_ID ( IDCODE ), " &
+ "DEVICE_ID ( USERCODE), " &
+ "BOUNDARY(EXTEST ), " &
+ "BOUNDARY(SAMPLE ), " &
+ "BOUNDARY(PRELOAD ), " &
+ "BYPASS (BYPASS ), " &
+ "BYPASS (HIGHZ), " &
+ "BYPASS (CLAMP)";
+
+attribute BOUNDARY_LENGTH of I210 : entity is 82;
+attribute BOUNDARY_REGISTER of I210 : entity is
+
+-- num   cell         port            function       safe [ccell disval rslt]
+" 0 ( BC_4 , DEVICE_OFF_N , input , 0 ) , " & -- TyPe:single_ended na padISj
+--" 1 ( BC_1 , * , control , 0 ) , " &
+--" 2 ( BC_1 , GIO_WAKE_N , output3 , X , 1 , 0 , Z ) , " &
+--" 3 ( BC_4 , GIO_WAKE_N , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 1 ( BC_1 , * , internal , 0 ) , " &
+" 2 ( BC_1 , * , internal , 0 ) , " &
+" 3 ( BC_4 , GIO_WAKE_N , observe_only , X ) , " & -- TyPe:single_ended na padBLj
+" 4 ( BC_1 , * , control , 0 ) , " &
+" 5 ( BC_1 , NVM_CS_N , output3 , X , 4 , 0 , Z ) , " &
+" 6 ( BC_4 , NVM_CS_N , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 7 ( BC_1 , * , control , 0 ) , " &
+" 8 ( BC_1 , NVM_SO , output3 , X , 7 , 0 , Z ) , " &
+" 9 ( BC_4 , NVM_SO , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 10 ( BC_1 , * , control , 0 ) , " &
+" 11 ( BC_1 , NVM_SK , output3 , X , 10 , 0 , Z ) , " &
+" 12 ( BC_4 , NVM_SK , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 13 ( BC_1 , * , control , 0 ) , " &
+" 14 ( BC_1 , NVM_SI , output3 , X , 13 , 0 , Z ) , " &
+" 15 ( BC_4 , NVM_SI , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 16 ( BC_1 , * , control , 0 ) , " &
+" 17 ( BC_1 , RMII_TXD(0) , output3 , X , 16 , 0 , Z ) , " &
+" 18 ( BC_4 , RMII_TXD(0) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 19 ( BC_1 , * , control , 0 ) , " &
+" 20 ( BC_1 , RMII_TXD(1) , output3 , X , 19 , 0 , Z ) , " &
+" 21 ( BC_4 , RMII_TXD(1) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 22 ( BC_1 , * , control , 0 ) , " &
+" 23 ( BC_1 , RMII_TX_EN , output3 , X , 22 , 0 , Z ) , " &
+" 24 ( BC_4 , RMII_TX_EN , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 25 ( BC_1 , * , control , 0 ) , " &
+" 26 ( BC_1 , RMII_RXD(0) , output3 , X , 25 , 0 , Z ) , " &
+" 27 ( BC_4 , RMII_RXD(0) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 28 ( BC_1 , * , control , 0 ) , " &
+" 29 ( BC_1 , RMII_RXD(1) , output3 , X , 28 , 0 , Z ) , " &
+" 30 ( BC_4 , RMII_RXD(1) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 31 ( BC_1 , * , control , 0 ) , " &
+" 32 ( BC_1 , RMII_CRS_DV , output3 , X , 31 , 0 , Z ) , " &
+" 33 ( BC_4 , RMII_CRS_DV , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 34 ( BC_1 , * , control , 0 ) , " &
+" 35 ( BC_1 , RMII_CLK_IN , output3 , X , 34 , 0 , Z ) , " &
+" 36 ( BC_4 , RMII_CLK_IN , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 37 ( BC_1 , * , control , 0 ) , " &
+" 38 ( BC_1 , SDP(0) , output3 , X , 37 , 0 , Z ) , " &
+" 39 ( BC_4 , SDP(0) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 40 ( BC_1 , * , control , 0 ) , " &
+" 41 ( BC_1 , SDP(2) , output3 , X , 40 , 0 , Z ) , " &
+" 42 ( BC_4 , SDP(2) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 43 ( BC_1 , * , control , 0 ) , " &
+" 44 ( BC_1 , SDP(1) , output3 , X , 43 , 0 , Z ) , " &
+" 45 ( BC_4 , SDP(1) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 46 ( BC_1 , * , control , 0 ) , " &
+" 47 ( BC_1 , SDP(3) , output3 , X , 46 , 0 , Z ) , " &
+" 48 ( BC_4 , SDP(3) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 49 ( BC_1 , * , control , 0 ) , " &
+" 50 ( BC_1 , SFP_I2C_DATA , output3 , X , 49 , 0 , Z ) , " &
+" 51 ( BC_4 , SFP_I2C_DATA , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 52 ( BC_1 , * , control , 0 ) , " &
+" 53 ( BC_1 , SFP_I2C_CLK , output3 , X , 52 , 0 , Z ) , " &
+" 54 ( BC_4 , SFP_I2C_CLK , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 55 ( BC_1 , * , control , 0 ) , " &
+" 56 ( BC_1 , SRDS_SIG_DET , output3 , X , 55 , 0 , Z ) , " &
+" 57 ( BC_4 , SRDS_SIG_DET , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 58 ( BC_1 , * , control , 0 ) , " &
+" 59 ( BC_1 , NCSI_ARB_OUT , output3 , X , 58 , 0 , Z ) , " &
+" 60 ( BC_4 , NCSI_ARB_OUT , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 61 ( BC_1 , * , control , 0 ) , " &
+" 62 ( BC_1 , NCSI_ARB_IN , output3 , X , 61 , 0 , Z ) , " &
+" 63 ( BC_4 , NCSI_ARB_IN , input , 0 ) , " & -- TyPe:single_ended na padBLj
+--" 64 ( BC_1 , * , control , 0 ) , " &
+--" 65 ( BC_1 , SMBD , output3 , X , 64 , 0 , Z ) , " &
+--" 66 ( BC_4 , SMBD , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 64 ( BC_1 , * , internal , 0 ) , " &
+" 65 ( BC_1 , * , internal , 0 ) , " &
+" 66 ( BC_4 , SMBD , observe_only , X ) , " & -- TyPe:single_ended na padBLj
+--" 67 ( BC_1 , * , control , 0 ) , " &
+--" 68 ( BC_1 , SMBALRT_N , output3 , X , 67 , 0 , Z ) , " &
+--" 69 ( BC_4 , SMBALRT_N , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 67 ( BC_1 , * , internal , 0 ) , " &
+" 68 ( BC_1 , * , internal , 0 ) , " &
+" 69 ( BC_4 , SMBALRT_N , observe_only , X ) , " & -- TyPe:single_ended na padBLj
+--" 70 ( BC_1 , * , control , 0 ) , " &
+--" 71 ( BC_1 , SMBCLK , output3 , X , 70 , 0 , Z ) , " &
+--" 72 ( BC_4 , SMBCLK , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 70 ( BC_1 , * , internal , 0 ) , " &
+" 71 ( BC_1 , * , internal , 0 ) , " &
+" 72 ( BC_4 , SMBCLK , observe_only , X ) , " & -- TyPe:single_ended na padBLj
+" 73 ( BC_1 , * , control , 0 ) , " &
+" 74 ( BC_1 , LED(2) , output3 , X , 73 , 0 , Z ) , " &
+" 75 ( BC_4 , LED(2) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 76 ( BC_1 , * , control , 0 ) , " &
+" 77 ( BC_1 , LED(0) , output3 , X , 76 , 0 , Z ) , " &
+" 78 ( BC_4 , LED(0) , input , 0 ) , " & -- TyPe:single_ended na padBLj
+" 79 ( BC_1 , * , control , 0 ) , " &
+" 80 ( BC_1 , LED(1) , output3 , X , 79 , 0 , Z ) , " &
+" 81 ( BC_4 , LED(1) , input , 0 )  " ; -- TyPe:single_ended na padBLj
+
+end I210;

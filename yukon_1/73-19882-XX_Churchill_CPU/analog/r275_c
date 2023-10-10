@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176592   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect s to "SPI_FLSH_MOSI_ST_C"
+connect i to "SPI_PCH_MOSI_C"
+connect a to "SPI_FLSH_MOSI_ST_C"
+connect b to "SPI_PCH_MOSI_C"
+resistor 33.2, 40, 20, re2, ar200m
+! "r275_c" test.

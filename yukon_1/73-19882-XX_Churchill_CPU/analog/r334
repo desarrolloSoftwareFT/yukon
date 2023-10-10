@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176626   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "FPGA2_SPIFLASH_MISO"
+connect i to "FPGA2_SPIFLASH_MISO_ST"
+connect a to "FPGA2_SPIFLASH_MISO"
+connect b to "FPGA2_SPIFLASH_MISO_ST"
+resistor 22.1, 40, 20, re2, ar500m
+! "r334" test.

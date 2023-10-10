@@ -1,0 +1,6 @@
+!!!!    2    0    1 1681779335   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:54 2020
+disconnect all
+connect s to "GND"
+connect i to "FM_CPU2PCH_THROT"
+resistor 5.1k, 25, 25, re4, wb, ar200m,am50m

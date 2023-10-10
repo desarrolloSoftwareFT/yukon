@@ -1,0 +1,10 @@
+!!!!    2    0    1 1613845979   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:27 2020
+disconnect all
+connect s to "PECI_PCH_CPU"
+connect i to "PECI_PCH_CPU_ST_C"
+connect a to "PECI_PCH_CPU"
+connect b to "PECI_PCH_CPU_ST_C"
+connect g to "GND"
+resistor 22.1 +3, 40, 20, re1, ar500m,en,ed,wb,wa 60m
+! "r893_c" test.

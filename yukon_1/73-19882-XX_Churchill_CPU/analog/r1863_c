@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175998   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:59 2020
+disconnect all
+connect i to "FM_CPU2PCH_THROT_LVT3"
+connect s to "GND"
+jumper 5.03k, re4, wb, ar200m, op
+! "r1863_c" test.

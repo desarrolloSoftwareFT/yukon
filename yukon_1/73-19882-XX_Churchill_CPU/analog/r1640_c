@@ -1,0 +1,7 @@
+!!!!    2    0    1 1612041064   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:31 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PU_PE_HP_SCL_C"
+connect g to "GND"
+resistor 10k, 25, 20, re2, wb, ar200m, en, ed, wa 60m

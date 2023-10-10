@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513047  V25d0                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:40 2020
+disconnect all
+connect s to "A2_5V"
+connect i to "VREF1_P1V25"
+connect g to "GND"
+!B!resistor 1k, 25, 20, re3, ar100m, wa177m
+resistor 1k,25,20,re3,ar100m,ed

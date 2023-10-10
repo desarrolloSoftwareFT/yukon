@@ -1,0 +1,12 @@
+!!!!    2    0    1 1600564368  V0754                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:09 2020
+on failure
+   report parallel devices
+   report "fc_cr8 fc_cr8%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN6_TACH"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr8%cr" test.
+off failure

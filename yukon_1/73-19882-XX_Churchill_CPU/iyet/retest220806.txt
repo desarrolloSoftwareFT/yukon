@@ -1,0 +1,58 @@
+----------------------------------------
+TestJet Report for "testjet".
+Sat Aug 06 14:26:16 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 0.9              (BRC 11752)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2630079K
+----------------------------------------
+TestJet Report for "testjet".
+Sat Aug 06 14:26:31 2022
+73-19882-04
+----------------------------------------
+Open #1  Device u1a_skt_c
+  Pin 163  Node m_a_dqs_dn<1>
+  Measured 1.0              (BRC 11752)
+26-100324-01 SKT,MMRY,DIMM,DDR4,162.0 Lx
+----------------------------------------
+Board #: 0 
+Version:
+S/N:FLM2630079K
+----------------------------------------
+Shorts Report for "shorts".
+Sat Aug 06 14:40:05 2022
+73-19882-04
+----------------------------------------
+Short #1, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdc             214124   35
+               mb_slvr.26
+                 u66.7
+To:   i210_mdc_1g_phy         21541   45
+                 r713.1
+                u1_i2.55
+                 u66.6
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+----------------------------------------
+Short #2, Thresh 80, Delay 50ms     Ohms
+From: 1g_phy_mdio             21424   45
+               mb_slvr.27
+                 u66.9
+To:   i210_mdio_1g_phy        21535   63
+                 r720.1
+                u1_i2.57
+                 u66.10
+Common Devices:
+                  u66
+Total of 2 nodes, Message is:  None.
+------End, 2 Problems Reported----------
+Board #: 0 
+Version:
+S/N:FLM2630079K

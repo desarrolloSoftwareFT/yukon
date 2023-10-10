@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175974   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:35 2020
+disconnect all
+connect i to "PU_CPU_GPIO51"
+connect s to "GND"
+jumper 3.60k, re4, wb, ar200m, op
+! "r1036_c" test.

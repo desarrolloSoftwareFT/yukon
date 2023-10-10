@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513003  Vc023                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "PWRGOOD_CPU_C"
+connect i to "UNNAMED_61_RES_I147_B_C"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1511_c" test.

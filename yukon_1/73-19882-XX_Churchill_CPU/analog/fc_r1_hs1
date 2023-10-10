@@ -1,0 +1,11 @@
+!!!!    2    0    1 1594176360   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:01 2020
+disconnect all
+connect s to "UNNAMED_88_NMOSFET_I74_G"
+connect i to "FAN23_PRSNT_L"
+connect g to "A2_5V" 
+connect g to "GND" 
+connect a to "UNNAMED_88_NMOSFET_I74_G"
+connect b to "FAN23_PRSNT_L"
+resistor 100, 30, 20, re2, ar100m
+! "fc_r1_hs1" test.

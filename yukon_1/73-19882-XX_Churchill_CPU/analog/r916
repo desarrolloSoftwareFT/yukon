@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512957  V42cc                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "PCHGP_PMB_FORCE_PWRDN_2V5"
+connect i to "PCHGP_PWRDN_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r916" test.

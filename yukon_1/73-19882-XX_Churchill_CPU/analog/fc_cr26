@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600571143  V5c84                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:12 2020
+disconnect all
+connect s to "FAN3_EEPROM"
+connect i to "GND"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "fc_cr26" test.

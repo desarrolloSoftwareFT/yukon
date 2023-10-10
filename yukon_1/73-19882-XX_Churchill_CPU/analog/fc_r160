@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176540   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:01 2020
+disconnect all
+connect s to "FAN1_TACH"
+connect i to "FAN0_TACH_ZL"
+resistor 220, 30, 20, re3, ar500m

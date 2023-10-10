@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175961   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:22 2020
+disconnect all
+connect i to "SF_JTAG_TCK"
+connect s to "GND"
+jumper 3.13k, re4, wb, ar500m, op
+! "r500" test.

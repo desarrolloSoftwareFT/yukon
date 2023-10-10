@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176375   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:16 2020
+disconnect all
+connect s to "FAN1011_ISENSE"
+connect i to "ADC1_FAN1011_ISENSE_CH5"
+connect g to "GND" 
+connect a to "FAN1011_ISENSE"
+connect b to "ADC1_FAN1011_ISENSE_CH5"
+resistor 100, 30, 20, re2, ar100m
+! "r886" test.

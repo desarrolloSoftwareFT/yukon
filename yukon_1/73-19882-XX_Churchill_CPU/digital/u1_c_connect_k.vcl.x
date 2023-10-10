@@ -1,0 +1,25 @@
+! Connect Test Dictionary created Sat Jun 17 20:26:12 2023
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! Chain:  U1_C_U1
+! Source: digital/u1_c_connect_k
+! Output: digital/u1_c_connect_k.vcl.x
+!
+U1_C
+662
+!FrCell DvCell Dev Pin  Node               Signature
+  416 414     U1_C T26  HSD_PCIE_NIC_CPU_DN LH
+  417 415     U1_C P26  HSD_PCIE_NIC_CPU_DP LH
+  525 523     U1_C U72  PU_LAN0_I2C_SDA0_C LH
+  527 525     U1_C R72  PU_LAN0_I2C_SCL0_C LH
+  529 527     U1_C T71  PU_LAN0_I2C_SDA1_C LH
+  531 529     U1_C P71  PU_LAN0_I2C_SCL1_C LH
+  535 533     U1_C U69  SRT_LAN0_MDC0_LED0_1_C LH
+  539 537     U1_C V67  SRT_LAN0_MDC1_LED1_1_C LH
+  543 541     U1_C N72  LAN0_SEL1_C      LH
+  573 571     U1_C L72  PD_LAN1_MDIO0_LED0_0_C LH
+  614 612     U1_C L76  CPU_RESET_1V_L   LH
+  627 625     U1_C K75  XDP_CPU_BPM6_L_C LH
+  630 628     U1_C M75  XDP_CPU_BPM3_L_C LH
+  631 629     U1_C N78  XDP_CPU_BPM2_L_C LH
+  634 632     U1_C K77  XDP_CPU_PREQ_L_C LH
+  658 656     U1_C U77  CPU_PWR_DEBUG_L_C LH

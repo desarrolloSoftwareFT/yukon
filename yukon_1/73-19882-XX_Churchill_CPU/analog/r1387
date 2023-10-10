@@ -1,0 +1,12 @@
+!!!!    2    0    1 1594176611   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:12 2020
+on failure
+   report parallel devices
+   report "a_c827 100n"
+end on failure
+disconnect all
+connect i to "PMOD_P3V3_PCH_EN_IN"
+connect s to "GND"
+connect g to "PMOD_P3V3_PCH_EN_R" 
+resistor 100k, 25, 25, re5, wb, ar100m, wa26.5m
+off failure

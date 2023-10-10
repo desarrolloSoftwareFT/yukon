@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175993   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:54 2020
+disconnect all
+connect s to "PMOD_P1V5_PCH_PG_3V"
+connect i to "CPU_APWROK_BUF"
+jumper 5.85k, re4, wb, ar200m, op
+! "r1641_c" test.

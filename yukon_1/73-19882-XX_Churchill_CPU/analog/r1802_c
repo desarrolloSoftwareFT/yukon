@@ -1,0 +1,9 @@
+!!!!    2    0    1 1596686674   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:34 2020
+disconnect all
+connect i to "SPI1_10GE_FLSH_CS_L_1V_ST_C"
+connect s to "P1V05_COMBINED"
+connect g to "SPI1_10GE_FLSH_CS_L_1V_C" 
+connect g to "GND"
+!@resistor 10k, 25, 20, re4, wb, ar100m, en, ed
+jumper 12k, re4, ar200m, wb, en, ed, op, wa50m

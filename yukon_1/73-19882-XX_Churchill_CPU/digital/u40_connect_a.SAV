@@ -1,0 +1,196 @@
+!!!!   24    0    1 1594176856  Vf8ad                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Wed Jul 08 10:54:17 2020
+
+connect "u40"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+!IPG  family "???"
+!IPG: Family information could not be found for any node; TTL will be assumed
+
+!IPG: Connect test generated with CONNECTMAX value of 50
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u40.Y22
+!IPG:    u27.N13
+!IPG:
+!IPG: TDI was moved to the end of the chain.
+!IPG: TDO was moved to the end of the chain.
+
+chain "u40_u27"
+  tdi "SF_JTAG_TDI"
+  tdo "SF_JTAG_TDO"
+  tms "SF_JTAG_TMS"
+  tck "SF_JTAG_TCK"
+  trst "SF_JTAG_TRST"
+  devices
+    "u40", "custom_lib/16-101031-01.bsm_noidcode", "fg484", no
+    "u27", "custom_lib/m2s025ts-vf256.bsd_noidcode", "vf256", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node SF_JTAG_TDI
+!IPG: Family information could not be found for node SF_JTAG_TDO
+!IPG: Family information could not be found for node SF_JTAG_TMS
+!IPG: Family information could not be found for node SF_JTAG_TCK
+!IPG: Family information could not be found for node SF_JTAG_TRST
+
+disables "disable vector"
+  node "BMC_FAN_I2C_SCL" family "LVT" hybrid default "1"
+  node "BUF_SPI_FLSH_SEL_C" family "LVT" hybrid default "0"
+  node "FPGA_MUX_DATA" family "LVT" hybrid default "1"
+  node "FPGA_MUX_SCLK" family "LVT" hybrid default "T"
+  node "JTAG_BDX_TCK" family "LVT" hybrid default "1"
+  node "UNNAMED_76_LTC2497_I65_SCL" family "LVT" hybrid default "1"
+  node "UNNAMED_598_PI5A3157_I509_S" family "LVT" hybrid default "0"
+  node "UNNAMED_598_PI5A3157_I520_S" family "LVT" hybrid default "0"
+
+  pcf order is nodes "BMC_FAN_I2C_SCL","BUF_SPI_FLSH_SEL_C"
+  pcf order is nodes "FPGA_MUX_DATA","FPGA_MUX_SCLK","JTAG_BDX_TCK"
+  pcf order is nodes "UNNAMED_76_LTC2497_I65_SCL"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I509_S"
+  pcf order is nodes "UNNAMED_598_PI5A3157_I520_S"
+  unit "disable_1"
+  pcf
+  repeat 8 times
+  "10101100"
+  "10111100"
+  end repeat
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   fc_u4.1  u22.4  u33_c.1  u33_c.4  u57.1  u57.10  u57.11  u57.12  u57.13  u57.14  u57.15  u57.16  u57.17  u57.2  u57.20  u57.3  u57.4  u57.5  u57.6  u57.7  u57.8  u69.1  u69.4  u72.1  u72.4  u74.3
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "fc_u4" pins 1
+!IPG: with pin 2 on node "BMC_FAN_I2C_SCL"
+disabled device "u22" pins 4
+!IPG: with pin 1 on node "JTAG_BDX_TCK"
+disabled device "u33_c" pins 1,4
+!IPG: with pin 6 on node "BUF_SPI_FLSH_SEL_C"
+disabled device "u57" pins 1,10,11,12,13,14,15,16,17,2,20,3,4,5,6,7,8
+!IPG: with pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 19 on node "FPGA_MUX_SCLK"
+!IPG:      pin 20 on node "FPGA_MUX_DATA"
+disabled device "u69" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I520_S"
+disabled device "u72" pins 1,4
+!IPG: with pin 6 on node "UNNAMED_598_PI5A3157_I509_S"
+disabled device "u74" pins 3
+!IPG: with pin 2 on node "UNNAMED_76_LTC2497_I65_SCL"
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+  node "1GPHY_RST_L" hybrid test "u40.A2"
+  node "10GPHY_INTR_2V5" hybrid test "u40.A19"
+  node "BDXDE_CATERR_GTL_R" hybrid test "u40.A7"
+  node "BIOS_GOLDEN_WP_R" hybrid test "u40.B3"
+  node "BMC_FAN_I2C_SDA" hybrid test "u40.AB15"
+  node "BMC_I2C_RST_L_R" hybrid test "u40.A17"
+  node "BOARD_ID_SPARE2" hybrid test "u40.B15"
+  node "BOARD_ID_SPARE3" hybrid test "u40.A20"
+  node "CPLD_P2PM_RX" hybrid test "u40.B1"
+  node "CPU_ADR_IN_3V" hybrid test "u40.AB17"
+  node "CPU_SEC_BOOT_JTAG_TRST" hybrid test "u40.B6"
+  node "FAB_REV1" hybrid test "u40.A15"
+  node "FAB_REV2" hybrid test "u40.A3"
+  node "FAB_REV3" hybrid test "u40.B5"
+  node "FAN23_AMB_LED" hybrid test "u40.AB14"
+  node "FAN23_BLU_LED" hybrid test "u40.AB13"
+  node "FAN23_GRN_LED" hybrid test "u40.AA12"
+  node "FAN45_AMB_LED" hybrid test "u40.AA13"
+  node "FAN1011_BLU_LED" hybrid test "u40.AB10"
+  node "FM_BDXDE_ERR2_LVT2V5_N" hybrid test "u40.B21"
+  node "FPGA_CPU_HRST_L" hybrid test "u40.AA16"
+  node "FPGA_CPU_SRST_L" hybrid test "u40.AA17"
+!IPG used for disable:   node "FPGA_SPI_GOLD_SEL" hybrid test "u40.B22"
+  node "LED_CPU_FPGA_HEARTBEAT_L" hybrid test "u40.A8"
+  node "LED_SB_L<1>" hybrid test "u40.B11"
+  node "P2PM_BMC_FPGA_CPU_FPGA1" hybrid test "u40.A6"
+  node "PCH_CONSOLE_RXD1_X86FPGA" hybrid test "u40.AB18"
+  node "PCH_CONSOLE_TXD1_X86FPGA" hybrid test "u40.AB19"
+  node "PCH_LPC_FRAME_L" hybrid test "u40.AA11"
+  node "PCHGP_PWRDN_R" hybrid test "u40.A16"
+  node "PMOD_P0V6_VTT_PG" hybrid test "u40.A10"
+  node "PMOD_P1V5_PCH_PG_3V" hybrid test "u40.AA18"
+  node "PMOD_P1V05_COMBINED_EN" hybrid test "u40.B13"
+  node "PMOD_P1V05_COMBINED_PG" hybrid test "u40.A14"
+  node "PMOD_P1V05_VCCSCSUS_EN" hybrid test "u40.B9"
+  node "PMOD_P1V05_VCCSCSUS_PG" hybrid test "u40.B17"
+  node "PMOD_P2V5_VPP_PG" hybrid test "u40.A4"
+  node "PMOD_P3V3_EN" hybrid test "u40.A12"
+  node "PMOD_P3V3_PCH_PG" hybrid test "u40.A21"
+  node "PMOD_PVCCIN_EN" hybrid test "u40.A11"
+  node "PMOD_PVCCSCFUSESUS_EN" hybrid test "u40.A13"
+  node "PMOD_PVCCSCFUSESUS_PG" hybrid test "u40.A5"
+  node "R_X86_INTR_BMC" hybrid test "u40.A9"
+  node "SPARE_1" hybrid test "u40.A18"
+  node "SRT_FPGA_BMC_UART5_TXD" hybrid test "u40.B19"
+  node "SRT_FPGA_LPC_LAD<3>" hybrid test "u40.AA15"
+  node "SRT_P2PM_CPU_FPGA_BMC_FPGA1" hybrid test "u40.B7"
+
+!IPG: Disable problems, the following nodes retained for fixture wiring.
+  node "CLK_33M_LPC_FPGA" hybrid test "u40.AA10" !Not disabled
+  node "PCH_SERIRQ" hybrid test "u40.AB11" !Not disabled
+  node "X86_FPGA_MDC_1G_PHY" hybrid test "u40.B2" !Not disabled
+end nodes
+
+!IPG: Family information could not be found for node 1GPHY_RST_L
+!IPG: Family information could not be found for node 10GPHY_INTR_2V5
+!IPG: Family information could not be found for node BDXDE_CATERR_GTL_R
+!IPG: Family information could not be found for node BIOS_GOLDEN_WP_R
+!IPG: Family information could not be found for node BMC_FAN_I2C_SDA
+!IPG: Family information could not be found for node BMC_I2C_RST_L_R
+!IPG: Family information could not be found for node BOARD_ID_SPARE2
+!IPG: Family information could not be found for node BOARD_ID_SPARE3
+!IPG: Family information could not be found for node CPLD_P2PM_RX
+!IPG: Family information could not be found for node CPU_ADR_IN_3V
+!IPG: Family information could not be found for node CPU_SEC_BOOT_JTAG_TRST
+!IPG: Family information could not be found for node FAB_REV1
+!IPG: Family information could not be found for node FAB_REV2
+!IPG: Family information could not be found for node FAB_REV3
+!IPG: Family information could not be found for node FAN23_AMB_LED
+!IPG: Family information could not be found for node FAN23_BLU_LED
+!IPG: Family information could not be found for node FAN23_GRN_LED
+!IPG: Family information could not be found for node FAN45_AMB_LED
+!IPG: Family information could not be found for node FAN1011_BLU_LED
+!IPG: Family information could not be found for node FM_BDXDE_ERR2_LVT2V5_N
+!IPG: Family information could not be found for node FPGA_CPU_HRST_L
+!IPG: Family information could not be found for node FPGA_CPU_SRST_L
+!IPG: Family information could not be found for node FPGA_SPI_GOLD_SEL
+!IPG: Family information could not be found for node LED_CPU_FPGA_HEARTBEAT_L
+!IPG: Family information could not be found for node LED_SB_L<1>
+!IPG: Family information could not be found for node P2PM_BMC_FPGA_CPU_FPGA1
+!IPG: Family information could not be found for node PCH_CONSOLE_RXD1_X86FPGA
+!IPG: Family information could not be found for node PCH_CONSOLE_TXD1_X86FPGA
+!IPG: Family information could not be found for node PCH_LPC_FRAME_L
+!IPG: Family information could not be found for node PCHGP_PWRDN_R
+!IPG: Family information could not be found for node PMOD_P0V6_VTT_PG
+!IPG: Family information could not be found for node PMOD_P1V5_PCH_PG_3V
+!IPG: Family information could not be found for node PMOD_P1V05_COMBINED_EN
+!IPG: Family information could not be found for node PMOD_P1V05_COMBINED_PG
+!IPG: Family information could not be found for node PMOD_P1V05_VCCSCSUS_EN
+!IPG: Family information could not be found for node PMOD_P1V05_VCCSCSUS_PG
+!IPG: Family information could not be found for node PMOD_P2V5_VPP_PG
+!IPG: Family information could not be found for node PMOD_P3V3_EN
+!IPG: Family information could not be found for node PMOD_P3V3_PCH_PG
+!IPG: Family information could not be found for node PMOD_PVCCIN_EN
+!IPG: Family information could not be found for node PMOD_PVCCSCFUSESUS_EN
+!IPG: Family information could not be found for node PMOD_PVCCSCFUSESUS_PG
+!IPG: Family information could not be found for node R_X86_INTR_BMC
+!IPG: Family information could not be found for node SPARE_1
+!IPG: Family information could not be found for node SRT_FPGA_BMC_UART5_TXD
+!IPG: Family information could not be found for node SRT_FPGA_LPC_LAD<3>
+!IPG: Family information could not be found for node SRT_P2PM_CPU_FPGA_BMC_FPGA1
+!IPG: Family information could not be found for node CLK_33M_LPC_FPGA
+!IPG: Family information could not be found for node PCH_SERIRQ
+!IPG: Family information could not be found for node X86_FPGA_MDC_1G_PHY
+end connect
+

@@ -1,0 +1,26 @@
+!!!!   21    2    1 1571240275   0000                                         
+
+diode "cr1", 900m, 500m, nr, pn"13-1307-02"
+diode "cr2", 900m, 500m, nr, pn"13-1307-02"
+diode "cr3", 900m, 500m, nr, pn"13-1307-02"
+diode "cr4", 900m, 500m, nr, pn"13-1307-02"
+
+zener "ds1",     5,   5,   5, nr, pn"13-1307-02"
+
+external pins 1
+   device "cr1" pins "A"
+   device "cr2" pins "A"
+   device "ds1" pins "C"
+
+external pins 2
+   device "cr1" pins "C"
+   device "cr3" pins "A"
+
+external pins 3
+   device "cr2" pins "C"
+   device "cr4" pins "A"
+
+external pins 4
+   device "cr3" pins "C"
+   device "cr4" pins "C"
+   device "ds1" pins "A"

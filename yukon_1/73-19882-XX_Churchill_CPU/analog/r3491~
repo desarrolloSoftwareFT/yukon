@@ -1,0 +1,8 @@
+!!!!    2    0    1 1594176741   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:22 2020
+disconnect all
+connect s to "GND"
+connect i to "CLK100M_CLKGEN_PCIE_REFCLK_AC_DP"
+connect g to "A3P3V" 
+connect g to "CLK100M_CLKGEN_PCIE_REFCLK_DP" 
+resistor 127, 30, 20, re3, ar1.00, wa487m

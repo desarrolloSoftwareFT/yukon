@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176617   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:18 2020
+disconnect all
+connect s to "UNNAMED_46_NMOSFET_I92_D_C"
+connect i to "RST_RTCRST_L"
+connect g to "GND" 
+connect a to "UNNAMED_46_NMOSFET_I92_D_C"
+connect b to "RST_RTCRST_L"
+resistor 49.9, 30, 20, re2, ar200m, wa1.23u
+! "r1920_c" test.

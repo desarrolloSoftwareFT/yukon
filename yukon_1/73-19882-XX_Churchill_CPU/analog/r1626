@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175992   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:53 2020
+disconnect all
+connect s to "R_CPU_IDPROM_WP"
+connect i to "CPU_IDPROM_WP"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1626" test.

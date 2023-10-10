@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600753653  Vcccc                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:20 2020
+disconnect all
+connect s to "FAN89_AMB_LED_CON"
+connect i to "A3P3V"
+diode 2.35, 1.73, idc20m, co4.5, ar2.35
+! "fc_cr20%cr1" test.

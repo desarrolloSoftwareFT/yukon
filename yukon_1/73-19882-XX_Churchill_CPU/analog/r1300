@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512977  V41aa                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:13 2020
+disconnect all
+connect s to "SRT_BMC_BMCPHY_MDIO2"
+connect i to "BMCPHY_MDIO2"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1300" test.

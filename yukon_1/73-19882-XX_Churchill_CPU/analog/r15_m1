@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175951   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:12 2020
+disconnect all
+connect s to "P5V"
+connect i to "PVCCIN_EN_ST"
+jumper 5.67k, re4, wb, ar200m, op
+! "r15_m1" test.

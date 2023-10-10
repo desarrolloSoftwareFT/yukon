@@ -1,0 +1,7 @@
+!!!!    2    0    1 1604774112   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:30 2020
+disconnect all
+connect s to "GND"
+connect i to "FAN89_ISENSE"
+!resistor 634, 25, 20, re3, ar200m
+resistor 374, 25, 20, re3, ar200m   !rev 9

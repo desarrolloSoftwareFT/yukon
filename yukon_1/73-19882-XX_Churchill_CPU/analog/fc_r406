@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176512   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:48:33 2020
+disconnect all
+connect s to "FAN1011_AMB_LED_CON"
+connect i to "FAN1011_AMB_LED"
+resistor 240, 30, 20, re3, ar500m

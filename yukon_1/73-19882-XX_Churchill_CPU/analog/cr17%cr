@@ -1,0 +1,12 @@
+!!!!    2    0    1 1601051986  Vcec1                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:04 2020
+on failure
+   report parallel devices
+   report "cr17 cr17%ds"
+end on failure
+disconnect all
+connect i to "GND"
+connect s to "FAN12_TACH"
+diode 990m, 500m, idc10m, co3.0, ar845m
+! "cr17%cr" test.
+off failure

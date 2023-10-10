@@ -1,0 +1,8 @@
+!!!!    2    0    1 1623857377   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:03 2020
+disconnect all
+connect i to "PMOD_P3V3_SW_SN"
+connect s to "GND"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re2,ar200m,ed,en, wa 20m
+! "bma3_r4" test.

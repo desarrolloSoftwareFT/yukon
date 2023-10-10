@@ -1,0 +1,15 @@
+!!!!    2    0    1 1632334877   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:00 2020
+on failure
+   report parallel devices
+   report "dma1_r10 115k"
+   report "dma1_r26 1.00k"
+end on failure
+disconnect all
+connect s to "PMOD_A1V2_VSENSE"
+connect i to "UNNAMED_4238_CAP_I129_A"
+!@connect gl to "GND" 
+capacitor 15n, 50, 50, fr1024, re1, ar20.0m, ed, nocomp
+warning "excessive minus tolerance or low limit."
+! "dma1_c22" is a commented test.
+off failure

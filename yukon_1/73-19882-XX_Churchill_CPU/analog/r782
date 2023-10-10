@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176281   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:42 2020
+disconnect all
+connect s to "SRT_CLK50M_CPLD"
+connect i to "CLK50M_CPLD"
+connect a to "SRT_CLK50M_CPLD"
+connect b to "CLK50M_CPLD"
+resistor 33, 40, 20, re2, ar200m
+! "r782" test.

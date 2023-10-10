@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512997  V7190                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:14 2020
+disconnect all
+connect s to "X86_BMFPGA_SPARE2"
+connect i to "SPARE_2"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r1478" test.

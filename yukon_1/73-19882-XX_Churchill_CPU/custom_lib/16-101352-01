@@ -1,0 +1,306 @@
+!!!!    6    0    1  861993327  Vf7b8                                         
+!
+!***  All contents copyright 2006 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         N25Q128
+! Alias:             
+! Part Type:         VLSI
+! Description:       128K Bit Serial EEPROM
+! Manufacturer:      Atmel, ST Electronics
+! Package Style:     8 pin DIP/SOC
+! Created:           Jul 12, 2006
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    83%, Read only test. Pin WPB not tested.
+! Constraints:       Pin WPB tied high
+! Cisco Part #:      16-2415-01
+
+sequential
+
+vector cycle 10u
+receive delay 8u
+
+assign CSB  to pins 1
+assign SCK  to pins 6
+assign SI   to pins 5
+assign SO   to pins 2
+assign WPB  to pins 3
+assign HLDB to pins 7
+
+assign VCC  to pins 8
+assign GND  to pins 4
+ 
+
+power   VCC,GND
+inputs  CSB,SCK,SI,WPB,HLDB
+outputs SO
+ 
+family LVT
+
+set load on pins 2 to pull up
+
+vector INIT1
+ set CSB   to "1"
+ set SCK   to "0"
+ set HLDB  to "1"
+ set WPB   to "1"
+ set SI    to "x"
+ set SO    to "x"
+end vector
+
+vector KEEP1
+ set CSB   to "k"
+ set SCK   to "0"
+ set HLDB  to "k"
+ set WPB   to "k"
+ set SI    to "x"
+ set SO    to "x"
+end vector
+
+vector KEEP2
+ set CSB   to "k"
+ set SCK   to "0"
+ set HLDB  to "k"
+ set WPB   to "k"
+ set SI    to "k"
+ set SO    to "x"
+end vector
+
+vector CSB_0
+ initialize to KEEP1
+ set CSB    to "0"
+end vector
+
+vector CSB_1
+ initialize to KEEP1
+ set CSB    to "1"
+end vector
+
+vector SCK_10
+ initialize to KEEP1
+ set SCK    to "0"
+end vector
+
+vector SCK_11
+ initialize to KEEP1
+ set SCK    to "1"
+end vector
+
+vector SCK_20
+ initialize to KEEP2
+ set SCK    to "0"
+end vector
+
+vector SCK_21
+ initialize to KEEP2
+ set SCK    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SI     to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SI     to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SO     to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SO     to "1"
+end vector
+
+vector R_X
+ initialize to KEEP1
+ set SO     to "x"
+end vector
+
+vector WPB_0
+ initialize to KEEP1
+ set WPB    to "0"
+end vector
+
+vector WPB_1
+ initialize to KEEP1
+ set WPB    to "1"
+end vector
+
+vector HLDB_0
+ initialize to KEEP1
+ set HLDB   to "0"
+end vector
+
+vector HLDB_1
+ initialize to KEEP1
+ set HLDB   to "1"
+end vector
+
+! *************************************************
+
+sub IDLE1
+ repeat 20 times
+  execute INIT1
+  execute SCK_11
+ end repeat
+end sub
+
+sub WBYTE(WD7,WD6,WD5,WD4,WD3,WD2,WD1,WD0)
+ execute WD7
+ execute SCK_21
+ execute WD6
+ execute SCK_21
+ execute WD5
+ execute SCK_21
+ execute WD4
+ execute SCK_21
+ execute WD3
+ execute SCK_21
+ execute WD2
+ execute SCK_21
+ execute WD1
+ execute SCK_21
+ execute WD0
+ execute SCK_21
+ execute SCK_10
+end sub
+
+sub RBYTE(RD7,RD6,RD5,RD4,RD3,RD2,RD1,RD0)
+ execute RD7
+ execute SCK_11
+ execute RD6
+ execute SCK_11
+ execute RD5
+ execute SCK_11
+ execute RD4
+ execute SCK_11
+ execute RD3
+ execute SCK_11
+ execute RD2
+ execute SCK_11
+ execute RD1
+ execute SCK_11
+ execute RD0
+ execute SCK_11
+ execute SCK_10
+end sub
+
+! ********************************************************************
+
+unit "WREN, Write Enable command"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_1,D_0)
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+!wait 10m
+end unit
+
+unit "RDSR, Read Status Register"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_1)  ! Read Status
+ call RBYTE(R_X,R_X,R_X,R_X, R_X,R_X,R_1,R_X)
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+end unit
+
+unit "WRDI, Write Disable command"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_0)
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+!wait 10m
+end unit
+
+unit "RDSR, Read Status Register"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_1)  ! Read Status
+ call RBYTE(R_X,R_X,R_X,R_X, R_X,R_X,R_0,R_X)
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+end unit
+
+unit "HLDB test"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_1)  ! RDSR, Read Status
+ execute HLDB_0
+ call RBYTE(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)
+ execute HLDB_1
+ call RBYTE(R_X,R_X,R_X,R_X, R_X,R_X,R_0,R_X)
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+end unit
+
+! unit "WPB test"
+!  call IDLE1
+!  execute CSB_0
+!  call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  ! WRSR, write Status Reg
+!  call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Set WPEN
+!  repeat 10 times
+!   execute CSB_1
+!   execute SCK_11
+!  end repeat
+!  wait 10m
+!  execute CSB_0
+!  call WBYTE(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_1)  ! Read Status
+!  call RBYTE(R_0,R_X,R_X,R_X, R_X,R_X,R_X,R_X)
+!  repeat 10 times
+!   execute CSB_1
+!   execute SCK_11
+!  end repeat
+! end unit
+
+unit "Read Data"
+ call IDLE1
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_1) ! READ
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0) ! Addr = $000
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 4096 times
+  execute R_0 compress
+  execute SCK_11
+ end repeat
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+ execute CSB_0
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_1) ! READ
+ call WBYTE(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0) ! Addr = $400
+ call WBYTE(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 4096 times
+  execute R_0 compress
+  execute SCK_11
+ end repeat
+ repeat 10 times
+  execute CSB_1
+  execute SCK_11
+ end repeat
+end unit
+

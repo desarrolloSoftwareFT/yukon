@@ -1,0 +1,9 @@
+!!!!    2    0    1 1687473077   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:30 2020
+disconnect all
+connect s to "SPI1_10GE_FLSH_CS_L_1V_C"
+connect i to "P1V05_COMBINED"
+connect g to "SPI1_10GE_FLSH_CS_L_1V_ST_C" 
+!resistor 10k, 25, 20, re4, wb, ar100m, en, ed
+resistor 158k, 35, 45, re5, wb, ar100m, en, wa 600m, ed   ! Rev 9
+!resistor 60k, 25, 35, re3, wb, ar100m, en, wa 600m, ed   ! cambio de provedor, C0

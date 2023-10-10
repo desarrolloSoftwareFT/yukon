@@ -1,0 +1,7 @@
+!!!!    2    0    1 1597632216   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:43:28 2020
+disconnect all
+connect s to "VBATT_P3V3_2"
+connect i to "UNNAMED_5_RES_I6_A"
+!connect g to "GND"
+resistor 1k, 25, 20, re1, ar200m, en, ed, wa20m

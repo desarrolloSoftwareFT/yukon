@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175982   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:43 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "CPU_ADR_IN_1V"
+jumper 3.69k, re4, wb, ar200m, op
+! "r1322_c" test.

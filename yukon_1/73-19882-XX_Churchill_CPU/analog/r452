@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176292   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:53 2020
+disconnect all
+connect s to "BMC_FAN_I2C_SCL"
+connect i to "SRT_BMC_FAN_I2C_SCL"
+connect a to "BMC_FAN_I2C_SCL"
+connect b to "SRT_BMC_FAN_I2C_SCL"
+resistor 22, 40, 20, re2, ar500m
+! "r452" test.

@@ -1,0 +1,27 @@
+!!!!    2    0    1 1623448693   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:43 2020
+on failure
+   report parallel devices
+   report "bma5_c11 100u"
+   report "bma5_c13 100u"
+   report "bma5_c14 100u"
+   report "bma5_c6 10.0u"
+   report "c403_c 10.0u"
+   report "c459_c 10.0u"
+   report "c401_c 1.00u"
+   report "c406_c 1.00u"
+   report "c408_c 1.00u"
+   report "c457_c 1.00u"
+   report "c462_c 1.00u"
+   report "c464_c 1.00u"
+   report "c788_c 100n"
+   report "bma5_c7 100p"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P2V5_VPP_2"
+connect g to "ADC0_2V5_VPP_CH3" 
+connect g to "UNNAMED_7_CAP_I36_B" 
+capacitor 436.1u -50u, 35, 40, fr128, re1, ar400m, ed, sm, nocomp
+! "bma5_c5" test.
+off failure

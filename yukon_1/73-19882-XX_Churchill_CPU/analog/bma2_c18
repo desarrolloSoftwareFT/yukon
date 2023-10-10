@@ -1,0 +1,23 @@
+!!!!    2    0    1 1594175931   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:38:52 2020
+on failure
+   report parallel devices
+   report "bma1_c1 4.70u"
+   report "bma1_c3 100n"
+   report "bma1_c4 4.70u"
+   report "bma2_c1 10.0u"
+   report "bma2_c3 100n"
+   report "bma2_c4 10.0u"
+   report "c633 22.0u"
+   report "c4274 100n"
+   report "c4275 100n"
+   report "dma1_c1 10.0u"
+   report "dma1_c19 10.0u"
+   report "dma1_c9 100n"
+end on failure
+disconnect all
+connect s to "P12V_STBY"
+connect i to "GND"
+jumper 59.4, re2, ar100m, op
+! "bma2_c18" test.
+off failure

@@ -1,0 +1,438 @@
+
+digital/a_u149
+ !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+APPLIED= family LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4] on A
+    VOLTAGE_FR_BD   = [1.05V;3.3V;GND]
+
+digital/bmc_ddr4
+SIG=BMC_ENTEST_R !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V0[dh=1;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=BMC_TRST_L !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V0[dh=1;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=GPIOA0_JTSCAN !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V0[dh=1;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=GPIOA1_JTSCAN !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V0[dh=1;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=LAN_PWRGOOD_C !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+SIG=WP_R !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V0[dh=1;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+    VOLTAGE_FR_BD   = [1.215V;2.5V;GND]
+
+digital/u1_c_connect_a
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_b
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_c
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_d
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_e
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_f
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_g
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_h
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_i
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_j
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_k
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_connect_l
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_u1
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_u1_aio
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_c_u1_dis
+SIG=JTAG_BDX_TCK" !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=JTAG_BDX_TDI" !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=JTAG_BDX_TDO" !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=JTAG_BDX_TMS" !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=JTAG_BDX_TRST_N" !!!CHECK
+    APPLIED_VOLTAGE = LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4]
+    VOLTAGE_FR_BD   = [???;GND]
+
+digital/u1_c_u8_dis
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_connect_a
+SIG=10GPHY_RST_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=1GPHY_RST_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BDXDE_CATERR_GTL_N !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMC_CPU_MEM_WP_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMC_I2C_RST_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=C33_PLTRST_PROC_N !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CONSOLE_RXD_DBG_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_DONE !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_I2C_SDA !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_INIT_M !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_PROG_M !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_ADR_IN_3V !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_SEC_BOOT_JTAG_TRST !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_THERMTRIP_3V3_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=DRAM_PWR_OK_FPGA_R !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PCH_CONSOLE_RXD !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PCH_CONSOLE_RXD1 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PCH_CONSOLE_TXD !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=R_BMC_UART5_RXD !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=R_BMC_UART5_TX !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE1_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE2_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE3_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE5_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE6_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=UNNAMED_90_LCMXO3LF1300_I55_PT20CJTAGENB !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_connect_b
+SIG=10GPHY_INTR_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=1GPHY_INTR_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=ADR_COMPLETE_3V !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMCPHY_INT_M_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_HOST_RST_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPLD_P2PM_RX !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=FM_BDXDE_ERR1_LVT2V5_N !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=FM_BDXDE_ERR2_LVT2V5_N !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=FPGA_BMC_UART5_TX !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=FPGA_PRIMARY_WP_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PCHGP_PMB_FORCE_PWRDN_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PWRGD_P1V5_PCH_1V !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SPARE4_P1V05 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SRT_P2PM_TX !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SYNC_CPU_TO_FPGA_INTR_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_connect_c
+SIG=BMC_I2C_RST_L_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMC_SEC_BOOT_JTAG_TMS !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_1588_SYNC_MB !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_SEC_BOOT_JTAG_TCK !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_SEC_BOOT_JTAG_TDI !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=FPGA_BMC_LPC_RST_2V5 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=JTAG_BMC_TDO_R !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=SRT_FPGA_BMC_UART5_RXD !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_connect_d
+SIG=BMC_SEC_BOOT_JTAG_TCK !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMC_SEC_BOOT_JTAG_TDI !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=BMC_SEC_BOOT_JTAG_TDO !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CLK50M_CPLD !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=CPU_SEC_BOOT_JTAG_TMS !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=JTAG_BMC_TDI_R !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_connect_e
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+
+digital/u1_i2_connect_a
+SIG=BDXDE_DRAM_PWROK !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+SIG=BMC_ENTEST_R !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=BMC_I210_RESET_L !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=BMC_NCSI_TXD0 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=BMC_NCSI_TXD1 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=BMC_NCSI_TXEN !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=GPIOA0_JTSCAN !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=GPIOA1_JTSCAN !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+SIG=I210_SRDS_SIG_DET !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=LAN_PWRGOOD_C !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+SIG=LJTAG_TRST_L_HDR_3V3 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [2.5V;3.3V;GND]
+SIG=PWRGOOD_CPU_C !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+SIG=UNNAMED_30_I210_I39_LED1 !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=UNNAMED_30_I210_I39_PEWAKE !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [0.9V;1.5V;3.3V;GND]
+SIG=WP_R !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [1.215V;3.3V;GND;VPLLAV11]
+
+digital/u40_u27_dis
+SIG=JTAG_BDX_TCK !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = A_U139[3.3V;GND]
+                      U1_C[1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+                      U1_C_PCH[1.05V;1.21V;1.36V;1.525V;1.765V;3.3V;5V;GND]
+                      U22[1.05V;GND]
+SIG=SF_JTAG_TCK !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=SF_JTAG_TDI !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=SF_JTAG_TMS !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [???;GND]
+SIG=SF_JTAG_TRST !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+    VOLTAGE_FR_BD   = [???;GND]
+
+digital/u42
+ !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+APPLIED= family LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4] on A1,A2,A3,A4,A5,A6,A7,A8
+    VOLTAGE_FR_BD   = [1.05V;GND;UNNAMED_4249_CAP_I45_A]
+
+digital/u46
+ !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+APPLIED= set ref on pins 10 to dh 1.2, dl -1.0 ! AIN2
+APPLIED= set ref on pins 11 to dh 1.2, dl -1.0 ! AIN3
+APPLIED= set ref on pins 12 to dh 1.2, dl -1.0 ! AIN4
+APPLIED= set ref on pins 13 to dh 1.2, dl -1.0 ! AIN5
+APPLIED= set ref on pins 15 to dh 1.2, dl -1.0 ! AIN7
+APPLIED= set ref on pins 16 to dh 1.2, dl -1.0 ! AIN8
+APPLIED= set ref on pins 17 to dh 1.2, dl -1.0 ! AIN9
+APPLIED= set ref on pins 18 to dh 1.2, dl -1.0 ! AIN10
+APPLIED= set ref on pins 19 to dh 1.2, dl -1.0 ! AIN11
+APPLIED= set ref on pins 20 to dh 1.2, dl -1.0 ! AIN12
+APPLIED= set ref on pins 21 to dh 1.2, dl -1.0 ! AIN13
+APPLIED= set ref on pins 22 to dh 1.2, dl -1.0 ! AIN14
+APPLIED= set ref on pins 8 to dh 1.2, dl -1.0 ! AIN0
+APPLIED= set ref on pins 9 to dh 1.2, dl -1.0 ! AIN1
+    VOLTAGE_FR_BD   = [3.3V;GND]
+
+digital/u49
+ !!!CHECK
+    APPLIED_VOLTAGE = TTL[dh=3.3;dl=0.2;rh=2;rl=0.8]
+APPLIED= set ref on pins 10,* to dh 5.0, dl 0.0 ! T1IN, T2IN
+APPLIED= set ref on pins 13,8 to dh 5.0, dl 0.0 ! R1IN, R2IN
+    VOLTAGE_FR_BD   = [3.3V;GND]
+
+digital/u74
+ !!!CHECK
+    APPLIED_VOLTAGE = LVT[dh=3.3;dl=0.1;rh=1.8;rl=1]
+APPLIED= set ref on pins 10 to dh 1.2, dl -1.0 ! AIN2
+APPLIED= set ref on pins 11 to dh 1.2, dl -1.0 ! AIN3
+APPLIED= set ref on pins 12 to dh 1.2, dl -1.0 ! AIN4
+APPLIED= set ref on pins 13 to dh 1.2, dl -1.0 ! AIN5
+APPLIED= set ref on pins 15 to dh 1.2, dl -1.0 ! AIN7
+APPLIED= set ref on pins 16 to dh 1.2, dl -1.0 ! AIN8
+APPLIED= set ref on pins 17 to dh 1.2, dl -1.0 ! AIN9
+APPLIED= set ref on pins 18 to dh 1.2, dl -1.0 ! AIN10
+APPLIED= set ref on pins 19 to dh 1.2, dl -1.0 ! AIN11
+APPLIED= set ref on pins 20 to dh 1.2, dl -1.0 ! AIN12
+APPLIED= set ref on pins 21 to dh 1.2, dl -1.0 ! AIN13
+APPLIED= set ref on pins 22 to dh 1.2, dl -1.0 ! AIN14
+APPLIED= set ref on pins 8 to dh 1.2, dl -1.0 ! AIN0
+APPLIED= set ref on pins 9 to dh 1.2, dl -1.0 ! AIN1
+    VOLTAGE_FR_BD   = [3.3V;GND]
+
+digital/u83_c
+ !!!CHECK
+    APPLIED_VOLTAGE = ???
+APPLIED= family LVT_1V05[dh=1.05;dl=0;rh=0.6;rl=0.4] on SDAI,SCLI
+APPLIED= family LVT_2V5[dh=2.5;dl=0;rh=1.4;rl=1] on SDAO,SCLO
+    VOLTAGE_FR_BD   = [1.05V;2.5V;GND]
+
+FILE SUMMARY:
+There is(are) 81 unique signals in 24 bscan test(s)
+There is(are) 6 digital test(s)

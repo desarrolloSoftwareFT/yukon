@@ -1,0 +1,36 @@
+!!!!    2    0    1 1594193140  V325c                                         
+! IPG: rev 09.00p  Fri Oct 18 17:15:25 2019
+test powered analog
+  disconnect all
+ ! test "IN"
+ ! test "EN"
+  test "OUT"
+ ! test "PG"
+end test
+
+
+subtest "EN"
+  connect i to pins 14
+  connect l to ground
+
+  detector dcv, expect 3.3
+  measure 3.5, 3.0
+end subtest
+
+subtest "OUT"
+  connect i to "PVCCIN"
+  connect l to ground
+
+  detector dcv, expect 1.8
+  measure  1.89, 1.74
+end subtest
+
+subtest "PG"
+  connect i to pins 4
+  connect l to ground
+
+  detector dcv, expect 3
+  measure 3, 2.0
+end subtest
+
+

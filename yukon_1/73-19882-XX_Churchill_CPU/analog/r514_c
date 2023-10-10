@@ -1,0 +1,8 @@
+!!!!    2    0    1 1596106038   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:42:31 2020
+disconnect all
+connect s to "P1V2_VDDQ"
+connect i to "M_AB_VREF_R"
+connect g to "P1V2_VDDQ_VREF_IN" 
+connect g to "GND"
+resistor 1k, 25, 20, re3, ar100m, en, ed

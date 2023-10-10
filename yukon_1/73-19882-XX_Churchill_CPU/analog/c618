@@ -1,0 +1,15 @@
+!!!!    2    0    1 1594176044   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:45 2020
+on failure
+   report parallel devices
+   report "c622 1.00u"
+   report "x_c96 1.00u"
+   report "c708 100n"
+   report "x_c418 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "DDR4_VREF"
+capacitor 3.2u, 35, 40, fr1024, re1, ar20.0m, nocomp
+! "c618" test.
+off failure

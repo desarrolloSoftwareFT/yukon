@@ -1,0 +1,9 @@
+!!!!    2    0    1 1605051679   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:17 2020
+disconnect all
+connect i to "A3P3V"
+connect s to "BMFPGA_SERDES_PLL_VDDA"
+!connect a to "A3P3V"
+!connect b to "BMFPGA_SERDES_PLL_VDDA"
+resistor 49.9, 30, 20, re3, ar500m
+! "r1331" test.

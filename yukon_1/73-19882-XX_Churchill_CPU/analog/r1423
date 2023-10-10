@@ -1,0 +1,10 @@
+!!!!    2    0    1 1600568621  V9351                                         
+!* Removed top probe for JTAG test
+! IPG: rev 09.20p  Wed Jul 08 10:44:57 2020
+disconnect all
+connect s to "SRT_BMC_SEC_BOOT_JTAG_TCK"
+connect i to "BMC_SEC_BOOT_JTAG_TCK"
+connect a to "SRT_BMC_SEC_BOOT_JTAG_TCK"
+connect b to "BMC_SEC_BOOT_JTAG_TCK"
+resistor 22, 40, 20, re2, ar500m,sa,sb
+! "r1423" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1596106390   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:57 2020
+disconnect all
+connect s to "P3V3_PCH_2"
+connect i to "PU_SUSWARN_L_C"
+connect g to "GND"
+resistor 5.1k, 25, 20, re4, wb, ar200m, en, ed

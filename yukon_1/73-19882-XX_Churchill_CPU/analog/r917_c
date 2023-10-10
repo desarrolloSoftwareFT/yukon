@@ -1,0 +1,7 @@
+!!!!    2    0    1 1596106213   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:04 2020
+disconnect all
+connect s to "XTAL_CPU_RTC_32K_OUT"
+connect i to "XTAL_CPU_RTC_32K_IN"
+connect g to "GND" 
+resistor 10M, 30, 30, re6, wb, ar20.0m, en, ed

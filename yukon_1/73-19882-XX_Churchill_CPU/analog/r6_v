@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600997772  V2341                                         
+!* Removed top probe for power up
+! IPG: rev 09.20p  Wed Jul 08 10:40:07 2020
+disconnect all
+connect s to "P3V3_PCH_2"
+connect i to "PMOD_P3V3_PCH_VSENSE_P"
+jumper  20.0,  re1, ar200m,ed
+! "r6_v" test.

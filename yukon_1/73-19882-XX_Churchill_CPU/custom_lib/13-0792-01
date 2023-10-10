@@ -1,0 +1,15 @@
+!!!!   21    2    1 1505461055   0000                                         
+
+diode "cr", 800m, 400m, nr
+
+zener "ds",    10,   5,   5, nr
+
+external pins 1
+   device "cr" pins "C"
+   device "ds" pins "A"
+
+external pins 3
+   device "cr" pins "A"
+   device "ds" pins "C"
+
+external pins 2;noconnect

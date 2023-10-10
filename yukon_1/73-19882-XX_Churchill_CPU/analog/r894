@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176379   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:46:20 2020
+disconnect all
+connect s to "FAN45_ISENSE"
+connect i to "ADC1_FAN45_ISENSE_CH2"
+connect g to "GND" 
+connect a to "FAN45_ISENSE"
+connect b to "ADC1_FAN45_ISENSE_CH2"
+resistor 100, 30, 20, re2, ar100m
+! "r894" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1600600782   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:45:44 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "ADC0_A3V3_CH6"
+connect gl to "GND" 
+resistor 1.37k, 25, 20, re4, wb, ar1.00, ed, wa20m

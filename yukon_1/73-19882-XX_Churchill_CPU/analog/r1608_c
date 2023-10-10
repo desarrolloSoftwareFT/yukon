@@ -1,0 +1,6 @@
+!!!!    2    0    1 1594176664   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:51:05 2020
+disconnect all
+connect s to "GND"
+connect i to "FPGA_CPU_SRST_L"
+resistor 5.1k, 25, 20, re4, wb, ar200m

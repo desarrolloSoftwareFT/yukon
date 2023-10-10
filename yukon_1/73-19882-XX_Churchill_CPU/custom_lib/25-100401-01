@@ -1,0 +1,25 @@
+!!!!   21    2    1 1594043574  V97c9                                         
+
+diode "cr1", 2.3, 1.7, nr
+diode "cr2", 2.3, 1.7, nr
+diode "cr3", 2.3, 1.7, nr
+diode "cr4", 2.3, 1.7, nr
+diode "cr5", 2.3, 1.7, nr
+
+external pins "C1"
+   device "cr1" pins "C"
+
+external pins "C2"
+   device "cr2" pins "C"
+   device "cr4" pins "A"
+
+external pins "C3"
+   device "cr3" pins "C"
+   device "cr5" pins "A"
+
+external pins "A"
+   device "cr1" pins "A"
+   device "cr2" pins "A"
+   device "cr3" pins "A"
+   device "cr4" pins "C"
+   device "cr5" pins "C"

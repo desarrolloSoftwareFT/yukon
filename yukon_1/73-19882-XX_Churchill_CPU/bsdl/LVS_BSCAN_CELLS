@@ -1,0 +1,32 @@
+--
+-- Information contained herein is proprietary to and constitutes valuable
+-- confidential trade secrets of LogicVision, Inc.,  or its licensors, and
+-- is subject to restrictions on use and disclosure.
+--
+-- (c) LogicVision, Inc 1993-1998 
+--
+-- Technology Release: 2.10
+
+-- use STD_1149_1_1994.all;
+-- attribute COMPONENT_CONFORMANCE of astro_top: entity is "STD_1149_1_1993";
+
+
+package LVS_BSCAN_CELLS is
+
+-- put back use STD for Asset.
+ use STD_1149_1_1994.all;
+ constant LV_BC_7  : CELL_INFO;
+
+end LVS_BSCAN_CELLS;
+
+
+package body LVS_BSCAN_CELLS is
+
+-- put back use STD for Asset.
+use STD_1149_1_1994.all;
+constant LV_BC_7 : CELL_INFO :=
+ ((BIDIR_IN, EXTEST,  PI),  (BIDIR_OUT, EXTEST,  PO),
+  (BIDIR_IN, SAMPLE,  PI),  (BIDIR_OUT, SAMPLE,  PI),
+  (BIDIR_IN, INTEST,  PO),  (BIDIR_OUT, INTEST,  PI));
+
+end LVS_BSCAN_CELLS;

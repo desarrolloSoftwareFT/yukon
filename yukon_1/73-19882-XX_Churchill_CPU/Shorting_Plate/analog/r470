@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BMC_SPI2_MUX_CS0 P-Pin resistance"
+report "check nodes SRT_BMC_SPI2_MUX_CS P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BMC_SPI2_MUX_CS0"
+connect i to "SRT_BMC_SPI2_MUX_CS"
+resistor 10,20,100, re1, ar100m,ed
+off failure

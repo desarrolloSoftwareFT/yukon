@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes BIOS_GOLDEN_WP_R P-Pin resistance"
+report "check nodes FPGA_GOLDEN_WP_L P-Pin resistance"
+end on failure
+disconnect all
+connect s to "BIOS_GOLDEN_WP_R"
+connect i to "FPGA_GOLDEN_WP_L"
+resistor 10,20,100, re1, ar100m,ed
+off failure

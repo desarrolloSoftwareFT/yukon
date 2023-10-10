@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176288   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:49 2020
+disconnect all
+connect s to "CLK_BMCPHY_BMC_RGMII_ST"
+connect i to "CLK_XGE_BMC_RGMII2"
+connect a to "CLK_BMCPHY_BMC_RGMII_ST"
+connect b to "CLK_XGE_BMC_RGMII2"
+resistor 33, 40, 20, re2, ar200m
+! "r1089" test.

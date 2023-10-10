@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600513029  V95b6                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:15 2020
+disconnect all
+connect s to "BMC_I2C1_SDA"
+connect i to "DAC0_SDA"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r2006" test.

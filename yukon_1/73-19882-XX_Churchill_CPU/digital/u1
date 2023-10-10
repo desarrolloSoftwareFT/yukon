@@ -1,0 +1,35 @@
+!!!!    6    0    1 1596708977   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:37 2020
+
+combinatorial
+
+vector cycle 10u
+receive delay 9u
+
+default device "u1"
+set terminators to on
+
+assign IN  to pins "N10"
+assign OUT  to pins "G14"
+
+inputs IN
+outputs OUT
+
+family LVT on IN
+family LVT_1V05 on OUT
+
+vector IN_H
+ set IN  to "1"
+ set OUT to "1"
+end vector
+
+vector IN_L
+ set IN  to "0"
+ set OUT to "0"
+end vector
+
+!############################################
+unit "test"
+ execute IN_H
+ execute IN_L
+end unit

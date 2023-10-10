@@ -1,0 +1,9 @@
+!!!!    2    0    1 1594176296   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:57 2020
+disconnect all
+connect s to "SRT_CPU_SEC_BOOT_JTAG_TCK"
+connect i to "CPU_SEC_BOOT_JTAG_TCK"
+connect a to "SRT_CPU_SEC_BOOT_JTAG_TCK"
+connect b to "CPU_SEC_BOOT_JTAG_TCK"
+resistor 22, 40, 20, re2, ar500m
+! "r1403" test.

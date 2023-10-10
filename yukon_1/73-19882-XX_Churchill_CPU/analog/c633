@@ -1,0 +1,28 @@
+!!!!    2    0    1 1596099391   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:50 2020
+on failure
+   report parallel devices
+   report "bma2_c1 10.0u"
+   report "bma2_c4 10.0u"
+   report "dma1_c1 10.0u"
+   report "dma1_c19 10.0u"
+   report "bma1_c1 4.70u"
+   report "bma1_c4 4.70u"
+   report "bma1_c3 100n"
+   report "bma2_c3 100n"
+   report "c4274 100n"
+   report "c4275 100n"
+   report "dma1_c9 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "P12V_STBY"
+!connect gl to "A1_2V" 
+!connect g to "A3P3V" 
+!connect g to "P3V3_STBY_ON" 
+!connect g to "REF_IN_P1_2V" 
+!connect g to "UNNAMED_4156_CAP_I169_B" 
+capacitor 71.9u, 35, 40, fr128, re1, ar100m, ed, sm, nocomp
+warning "excessive minus tolerance or low limit."
+! "c633" is a commented test.
+off failure

@@ -1,0 +1,25 @@
+!!!!    2    0    1 1676401443   0000                                         
+ ! IPG: rev 07.20p  Thu Apr 23 19:21:04 2020
+on failure
+report parallel devices
+report "e_r923 2.49k"
+report "c653 2.20n"
+report "c296_c 22.0u"
+report "e_c633 100n"
+report "e_c634 1.00u"
+report "e_c635 1.00u"
+report "e_c636 22.0u"
+report "e_c637 22.0u"
+end on failure
+disconnect all
+connect s to "P1V5_PCH_2"
+connect i to "GND"
+connect g to "ADC0_P1V5_CH10"
+!connect g to "GND"
+!connect g to "UNNAMED_6_CAP_I17_B"
+!connect g to "A2_5V"
+!connect g to "PMOD_P1V5_PCH_VSENSE_P"
+resistor 310,30,30,re2,ar200m, wa50m,wb,ed
+! "e_r956" test.
+off failure
+

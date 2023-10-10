@@ -1,0 +1,10 @@
+!!!!    2    0    1 1645136211   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:49:53 2020
+disconnect all
+connect i to "SPI0_10GE_FLSH_CLK_1V_ST_C"
+connect s to "SPI0_10GE_FLSH_CLK_1V_C"
+connect a to "SPI0_10GE_FLSH_CLK_1V_ST_C"
+connect b to "SPI0_10GE_FLSH_CLK_1V_C"
+connect g to "GND"
+resistor 33.2 +9, 40, 32, re2, ar200m, en, ed, wb
+! "r1146_c" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1594175962   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:39:23 2020
+disconnect all
+connect s to "VBATT_P3V3_VSENSE_P"
+connect i to "ADC0_3V3_VBAT_CH14"
+jumper 10.0k, re4, wb, ar100m, op
+! "r614" test.

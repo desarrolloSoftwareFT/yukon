@@ -1,0 +1,12 @@
+!!!!    2    0    1 1626990629   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:53:14 2020
+on failure
+   report parallel devices
+   report "fc_cr37 fc_cr37%ds"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FAN4_TACH"
+zener 4.3, 11.4, 9.23, idc18m, co5.8, ar3.68 ,wa20m
+! "fc_cr37%cr" test.
+off failure

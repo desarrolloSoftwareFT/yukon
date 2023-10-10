@@ -1,0 +1,107 @@
+----------------------------------------
+73-19882-04
+Sat Dec 26 11:52:18 2020
+----------------------------------------
+p3%presence HAS FAILED
+Measured:   15.197k
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Check for P3 presence.
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM245201DU
+----------------------------------------
+73-19882-04
+Sat Dec 26 11:52:24 2020
+----------------------------------------
+p3%presence HAS FAILED
+Measured:   18.997k
+Threshold: 20.000
+Jumper Resistance in OHMS
+----------------------------------------
+Check for P3 presence.
+----------------------------------------
+Board #: 2 
+Version:
+S/N:FLM245201DU
+----------------------------------------
+Shorts Report for "shorts".
+Sat Dec 26 12:50:06 2020
+73-19882-04
+----------------------------------------
+Open #1 Thresh 25, Delay 50us       Ohms
+From: spi_flsh_mosi           12076 Open
+                r330_c.2
+                r759_c.1
+                u34_c.5
+                u36_c.5
+To:   spi_fpga_mosi          121158
+                r759_c.2
+                u40.G19
+Common Devices:
+                 r759_c
+Message is:
+Check r759_c
+----------------------------------------
+Open #2 Thresh 25, Delay 50ms       Ohms
+From: UNNAMED_13_RES_I3_B    209127 Open
+               bma2_r11.2
+               bma2_ren.2
+             bma2_ren_pd.1
+               bma2_u1.7
+To:   pmod_p5v_en            211123
+               bma2_r11.1
+                u40.G13
+Common Devices:
+                bma2_r11
+Message is:
+Check bma2_r11
+----------------------------------------
+Open #3 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   SPI_MB_MOSI            216151
+               mb_slvr.55
+                 r100.2
+Common Devices:
+                  r100
+Message is:
+Check r100
+----------------------------------------
+Open #4 Thresh 25, Delay 50ms       Ohms
+From: bmc_spi2_mux_mosi      219109 Open
+                 r36.1
+                 r100.1
+                 r468.1
+                r1261.1
+                 u27.R9
+To:   bmc_cpu_spi0_mux_mosi   22230
+                 r36.2
+                u51_c.13
+Common Devices:
+                  r36
+Message is:
+Check r36
+----------------------------------------
+Short #1, Thresh 8, Delay 50ms      Ohms
+From: PCH_LPC_AD0_ST_C       121148    3
+                r38_c.2
+                u1_c.AF3
+              u1_c_pch.AF3
+To:   PCH_LPC_LAD<0>         216152    6
+                r38_c.1
+                 r788.1
+                 r792.1
+Common Devices:
+                 r38_c
+Total of 2 nodes, Message is:  None.
+------End, 5 Problems Reported----------
+Board #: 2 
+Version:
+S/N:FLM245201DU

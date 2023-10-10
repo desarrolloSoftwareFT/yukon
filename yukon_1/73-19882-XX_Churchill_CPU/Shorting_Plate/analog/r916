@@ -1,0 +1,11 @@
+!!!!    2    0    1 1487059933  V6729                                         
+!*CISCO P-PIN check test automation tool
+on failure
+report "check nodes PCHGP_PMB_FORCE_PWRDN_2V5 P-Pin resistance"
+report "check nodes PCHGP_PWRDN_R P-Pin resistance"
+end on failure
+disconnect all
+connect s to "PCHGP_PMB_FORCE_PWRDN_2V5"
+connect i to "PCHGP_PWRDN_R"
+resistor 10,20,100, re1, ar100m,ed
+off failure

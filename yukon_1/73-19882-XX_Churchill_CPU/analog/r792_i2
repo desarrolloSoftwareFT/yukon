@@ -1,0 +1,6 @@
+!!!!    2    0    1 1656425316   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:08 2020
+disconnect all
+connect s to "A3P3V"
+connect i to "PCH_I210_PERST_L"
+resistor 100k, 25, 45, re5, wb, ar100m

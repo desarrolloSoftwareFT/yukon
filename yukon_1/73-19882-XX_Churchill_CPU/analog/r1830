@@ -1,0 +1,13 @@
+!!!!    2    0    1 1594176754   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:52:35 2020
+on failure
+   report parallel devices
+   report "c4457 100n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_4221_CAP_I6_B"
+connect g to "A3P3V" 
+connect g to "P12V" 
+resistor 237, 30, 20, re3, ar500m, wa1.38
+off failure

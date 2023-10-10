@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512899  V4d51                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:11 2020
+disconnect all
+connect s to "BMC_OBFL_SPI1_MISO"
+connect i to "BMC_SPI1_FPGA_MISO_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r471" test.

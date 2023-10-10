@@ -1,0 +1,8 @@
+!!!!    2    0    1 1600512860  V2fb2                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:09 2020
+disconnect all
+connect s to "BDXDE_CATERR_GTL_N"
+connect i to "BDXDE_CATERR_GTL_R"
+!B!jumper  20.0,  re1, ar200m
+jumper 20.0,re1,ar200m,ed
+! "r236" test.

@@ -1,0 +1,11 @@
+!!!!    2    0    1 1596686707   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:50:17 2020
+disconnect all
+connect s to "P1V05_COMBINED"
+connect i to "PU_CPU_RSVD102_C"
+connect a to "P1V05_COMBINED"
+connect b to "PU_CPU_RSVD102_C"
+connect g to "GND"
+!@resistor 49.9, 30, 20, re2, ar200m
+jumper 20k, re4, ar200m, wb, op
+! "r1806_c" test.

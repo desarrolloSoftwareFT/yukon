@@ -1,0 +1,8 @@
+!!!!    2    0    1 1612031346   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:40:23 2020
+disconnect all
+connect s to "PMOD_P3V3_VOSEN"
+connect i to "UNNAMED_9_CAP_I36_A"
+connect g to "UNNAMED_9_CAP_I36_B" 
+capacitor 10n, 35, 40, fr1024, re4, wb, ar100m, nocomp, en
+! "bma3_c17" test.

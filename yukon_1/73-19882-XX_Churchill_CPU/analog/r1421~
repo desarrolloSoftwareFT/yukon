@@ -1,0 +1,9 @@
+!!!!    2    0    1 1604687922   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:57 2020
+disconnect all
+connect s to "BMC_TDO"
+connect i to "SRT_BMC_TDO"
+connect a to "BMC_TDO"
+connect b to "SRT_BMC_TDO"
+resistor 22, 40, 20, re1, ar190m
+! "r1421" test.

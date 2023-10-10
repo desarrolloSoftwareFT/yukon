@@ -1,0 +1,10 @@
+!!!!    2    0    1 1594176285   0000                                         
+! IPG: rev 09.20p  Wed Jul 08 10:44:46 2020
+disconnect all
+connect s to "SRT_CLK100M_IOFPGA_PE_AC_DN"
+connect i to "CLK100M_IOFPGA_PE_DN"
+connect g to "GND" 
+connect a to "SRT_CLK100M_IOFPGA_PE_AC_DN"
+connect b to "CLK100M_IOFPGA_PE_DN"
+resistor 33, 40, 20, re2, ar200m
+! "r967" test.
