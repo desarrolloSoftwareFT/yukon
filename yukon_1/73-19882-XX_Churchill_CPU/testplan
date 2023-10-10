@@ -14567,7 +14567,7 @@ sub Get_Version
   input " ",Assembly$
   beep
   Ens = 0
-  if Assembly$ = "73-20559-02 A0" or Assembly$ = "73-19882-06 A0" then   !put here correct Assembly and Rev
+  if Assembly$ = "73-20559-10 A0" or Assembly$ = "73-19882-06 A0" then   !put here correct Assembly and Rev
     Assembly$ = trim$(Assembly$) !! Elimina espacios en blanco inicio y fin
     A=len(Assembly$)   !!Captura valor del ensamble en numero de caracteres
     Board$ = Assembly$[1;A-3]
