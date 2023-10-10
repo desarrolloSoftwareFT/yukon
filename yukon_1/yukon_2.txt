@@ -3,3 +3,82 @@ nueva informacion a este archivo
 segunda linea
 
 se probara nuevamente el metodo de comparacion
+
+apartir de aqui nueva informacion:
+
+Break_Detected    = False
+InvOn$     = chr$(27)&"&dB"&chr$(7)  ! chr$(7) rings bell
+InvOff$    = chr$(27)&"&d@"
+Passed     = 0
+Failed     = 1
+Failed_Pin_Test          = 2
+Failed_Long_Pin_Test     = 2
+Failed_In_Learn          = 3
+Failed_In_Shorts         = 4
+Failed_In_Analog         = 6
+Failed_In_Power_Supplies = 7
+Failed_In_Digital        = 8
+Failed_In_Functional     = 9
+Failed_In_Preshorts      = 10
+! Status codes 11, 12 reserved for use by EFS
+Failed_In_BScan          = 8      ! Equate to Failed_In_Digital
+Failed_In_VectorlessTest = 14
+Failed_In_Polarity_Check = 15
+Failed_In_ConnectCheck   = 16
+Failed_In_Analog_Cluster = 17
+Failed_In_Flash          = 18
+Failed_In_BScan_SiNails  = 19
+Failed_In_SW_Testing     = 8      ! Equate to Failed_In_Digital
+Failed_In_SW_Programming = 20
+Failed_In_SW_Flash       = 21
+Failed_In_Pre_Powered    = 6
+Failed_In_Ir35215        = 23
+Error_Code               = 80
+Break_Code               = 82
+Directory_Exists  = 100312
+Log_Path$  = btgetenv$("AGILENT3070_ROOT")&"/qm/logdata/testerq/"&Board$&"/"
+if Log_Path$ = "" then Pass_File$ = btgetenv$("I3070_ICT_ROOT")&"/qm/logdata/testerq/"&Board$&"/"
+enter "uname -n |";System$! gets hostname (without domain)
+System$ = lwc$(System$)
+Max_Times_To_Fix_Contact = 4     ! MUST BE >= 1
+Pin_Msg$   = "FIXTURE CONTACT PROBLEM"
+O$  = InvOn$&"Press YES"&InvOff$
+O$  = O$&" to retry Pins Test, "&InvOn$&"NO"&InvOff$
+Retry_PinTest$    = O$&" to test a new board."
+O$  = InvOn$&"Press YES"&InvOff$&" to cycle vacuum, "
+Cycle_Vacuum$     = O$&InvOn$&"NO"&InvOff$&" Otherwise."
+O$  = InvOn$&"Press YES"&InvOff$
+Recycle_Vacuum$   = O$&" to turn vacuum on and continue testing."
+Queue_Error_Msg$  = "Cannot create directory to queue up log data.  Error is:"
+But$= "Board Under Test: "
+Serial_Prompt$    = InvOn$&"Enter"&InvOff$&" Board Identifier: "
+O$  = "/,""Identifier has wrong length ("",dd,""), must be "
+Bad_Serial_Image$ = O$&""",dd,""."",/"
+Oper_Id_Prompt$   = InvOn$&"Enter"&InvOff$&" Operator Identifier: "
+Known_Good_Prompt$= InvOn$&"Enter"&InvOff$&" Verification Board Identifier: "
+Rep_Test$  = "Repeating test of this board!"
+First_Run$ = "Please stand by -- doing first-run initializations"
+No_Init_Warning$  = "** WARNING: FIRST RUN INITIALIZATIONS NOT COMPLETED --"
+No_Init_Warning$  = No_Init_Warning$ & " CLEARING NRUN **"
+O$  = "** WARNING: VERSION CHANGE INITIALIZATIONS NOT"
+No_Version_Init_Warning$ = O$ & " COMPLETED -- CLEARING NRUN **"
+Pass_File$               = btgetenv$("AGILENT3070_ROOT")
+Fail_File$               = btgetenv$("AGILENT3070_ROOT")
+if Pass_File$ = "" then Pass_File$ = btgetenv$("I3070_ICT_ROOT")
+if Fail_File$ = "" then Fail_File$ = btgetenv$("I3070_ICT_ROOT")
+Pass_File$               = Pass_File$ & "/util/pass"
+Fail_File$               = Fail_File$ & "/util/fail"
+!Pass_File$ = btgetenv$("AGILENT3070_ROOT")&"/util/pass"
+!Fail_File$ = btgetenv$("AGILENT3070_ROOT")&"/util/fail"
+!Fail_File$ = "C:\I3070_ICT\util\fail"
+!Pass_File$ = "C:\I3070_ICT\util\pass"
+Board_Not_Tested$ = "Board not tested."
+Pass_Msg$  = "P A S S E D"
+Fail_Msg$  = "F A I L E D"
+Stop_Msg$  = "P R O G R A M   S T O P P E D"
+Break_Msg$ = "Break/Stop detected."
+Place_Board_Prompt$      = "Place board on fixture and "&InvOn$&"press START"
+Board_Rev_Prompt$ = InvOn$&"Enter"&InvOff$&" Board Revision: "
+Confirming$= "Confirming diagnosis..."
+Confirm_Failed$   = "Confirm failed; restarting at node """
+Learning_Off_Msg$ = "Learning turned off"
