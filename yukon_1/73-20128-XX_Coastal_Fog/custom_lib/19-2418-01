@@ -1,0 +1,52 @@
+!!!!    2    0    1 1451268476  V1f76                                         
+
+!  100  MHz
+!  19-2418-01 OSC,HCSL,100.0000MHz,100PPM
+
+test powered analog
+   power pins 3, 6
+   nonanalog pins 2
+
+   test "Enable"
+   test "Out_4"
+   test "Out_5"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 3
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_4"
+!   connect s to pins 1
+   connect rcva to pins 4
+   connect l to pins 3
+
+!   source dcv, am3.3, ico1, on
+   detector frequency, expect 25.00M         !Divided 4 Clock Divider
+   measure 25.00M * 1.05, 25.00M * 0.95
+end subtest
+
+
+
+subtest  "Out_5"
+!   connect s to pins 1
+   connect rcva to pins 5
+   connect l to pins 3
+
+!   source dcv, am3.3, ico1, on
+   detector frequency, expect 25.00M         !Divided 4 Clock Divider
+   measure 25.00M * 1.05, 25.00M * 0.95
+end subtest
+
+
+!
+!  End test
+!

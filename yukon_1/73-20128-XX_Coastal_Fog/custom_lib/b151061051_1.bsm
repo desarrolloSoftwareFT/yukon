@@ -1,0 +1,409 @@
+!!!!   22    0    1 1553842297  Vc52b                                         
+-- BSDL Version 2001
+
+--
+entity IN115025_1 is
+    generic (PHYSICAL_PIN_MAP : string := "FCBGA");
+
+    port (
+        -- Port List
+        RESET_N_1            : in       bit;
+        I2CSEL               : in       bit;
+        MDIO_1               : inout    bit;
+        MDC_SCLK             : in       bit;
+        PHYADR0              : in       bit;
+        PHYADR1              : in       bit;
+        PHYADR2              : in       bit;
+        PHYADR3              : in       bit;
+        PHYADR4_1            : in       bit;
+        SCK_1                : inout    bit;
+        SS_N_1               : inout    bit;
+        MOSI_1               : out      bit;
+        MISO_1               : in       bit;
+        WP_N_1               : out      bit;
+        SELF_INIT_1          : in       bit;
+        TRST_N_1             : in       bit;
+        TCK                  : in       bit;
+        TMS                  : in       bit;
+        TDI_1                : in       bit;
+        TDO_1                : out      bit;
+        INTR_N_1             : inout    bit;
+        LOL_N_1              : inout    bit;
+        GPIO_0_1             : inout    bit;
+        GPIO_1_1             : inout    bit;
+        GPIO_2_1             : inout    bit;
+        GPIO_3_1             : inout    bit;
+        CLK_OUT_SE2          : inout    bit;
+        GPIO_5_1             : inout    bit;
+        GPIO_6_1             : inout    bit;
+        HRX_7N_1             : in       bit;
+        HRX_7P_1             : in       bit;
+        HRX_6N_1             : in       bit;
+        HRX_6P_1             : in       bit;
+        HRX_5N_1             : in       bit;
+        HRX_5P_1             : in       bit;
+        HRX_4N_1             : in       bit;
+        HRX_4P_1             : in       bit;
+        MRX_8N               : in       bit;
+        MRX_8P               : in       bit;
+        MRX_9N               : in       bit;
+        MRX_9P               : in       bit;
+        MRX_10N               : in       bit;
+        MRX_10P               : in       bit;
+        MRX_11N               : in       bit;
+        MRX_11P               : in       bit;
+        MRX_12N               : in       bit;
+        MRX_12P               : in       bit;
+        MRX_13N               : in       bit;
+        MRX_13P               : in       bit;
+        MRX_14N               : in       bit;
+        MRX_14P               : in       bit;
+        MRX_15N               : in       bit;
+        MRX_15P               : in       bit;
+        MTX_8N               : out      bit;
+        MTX_8P               : out      bit;
+        MTX_9N               : out      bit;
+        MTX_9P               : out      bit;
+        MTX_10N               : out      bit;
+        MTX_10P               : out      bit;
+        MTX_11N               : out      bit;
+        MTX_11P               : out      bit;
+        MTX_12N               : out      bit;
+        MTX_12P               : out      bit;
+        MTX_13N               : out      bit;
+        MTX_13P               : out      bit;
+        MTX_14N               : out      bit;
+        MTX_14P               : out      bit;
+        MTX_15N               : out      bit;
+        MTX_15P               : out      bit;
+        HTX_5N_1             : out      bit;
+        HTX_5P_1             : out      bit;
+        HTX_4N_1             : out      bit;
+        HTX_4P_1             : out      bit;
+        HTX_7N_1             : out      bit;
+        HTX_7P_1             : out      bit;
+        HTX_6N_1             : out      bit;
+        HTX_6P_1             : out      bit;
+        REF_CLK_N            : linkage  bit;
+        REF_CLK_P            : linkage  bit;
+        ATB_P_1              : linkage  bit;
+        ATB_N_1              : linkage  bit;
+        CLK_OUT_DIFF1_N      : linkage  bit;
+        CLK_OUT_DIFF1_P      : linkage  bit;
+        VDD                  : linkage  bit_vector(0 to 39);
+        VSS                  : linkage  bit_vector(0 to 330);
+        AVDD                 : linkage  bit_vector(0 to 38);
+        AVDD_PLL             : linkage  bit_vector(0 to 17);
+        VDD_MDIO              : linkage  bit_vector(0 to 1);
+        VDDIO                : linkage  bit_vector(0 to 1);
+        VQPS                 : linkage bit);
+
+    use STD_1149_1_2001.all;
+    use STD_1149_6_2003.all;
+    use TS_BSCAN_CELLS.all;
+
+    attribute COMPONENT_CONFORMANCE of IN115025_1: entity is "STD_1149_1_2001";
+
+    --Pin mappings
+
+    attribute PIN_MAP of IN115025_1: entity is PHYSICAL_PIN_MAP;
+
+    constant FCBGA: PIN_MAP_STRING :=
+"ATB_N_1        : N6    ,       "       &
+"ATB_P_1        : M6    ,       "       &
+"CLK_OUT_DIFF1_N        : H30   ,       "       &
+"CLK_OUT_DIFF1_P        : H31   ,       "       &
+"CLK_OUT_SE2    : G1    ,       "       &
+"GPIO_0_1       : N4    ,       "       &
+"GPIO_1_1       : L6    ,       "       &
+"GPIO_2_1       : K6    ,       "       &
+"GPIO_3_1       : H6    ,       "       &
+"GPIO_5_1       : G6    ,       "       &
+"GPIO_6_1       : L5    ,       "       &
+"HRX_4N_1       : C1    ,       "       &
+"HRX_4P_1       : B1    ,       "       &
+"HRX_5N_1       : E2    ,       "       &
+"HRX_5P_1       : E1    ,       "       &
+"HRX_6N_1       : B5    ,       "       &
+"HRX_6P_1       : A5    ,       "       &
+"HRX_7N_1       : B3    ,       "       &
+"HRX_7P_1       : A3    ,       "       &
+"HTX_4N_1       : A8    ,       "       &
+"HTX_4P_1       : B8    ,       "       &
+"HTX_5N_1       : A10   ,       "       &
+"HTX_5P_1       : B10   ,       "       &
+"HTX_6N_1       : A12   ,       "       &
+"HTX_6P_1       : B12   ,       "       &
+"HTX_7N_1       : A14   ,       "       &
+"HTX_7P_1       : B14   ,       "       &
+"I2CSEL         : K28   ,       "       &
+"INTR_N_1       : M5    ,       "       &
+"LOL_N_1        : L28   ,       "       &
+"MDC_SCLK       : D4    ,       "       &
+"MDIO_1         : E4    ,       "       &
+"MISO_1         : F4    ,       "       &
+"MOSI_1         : F5    ,       "       &
+"MRX_10N        : W10   ,       "       &
+"MRX_10P        : V10   ,       "       &
+"MRX_11N        : T11   ,       "       &
+"MRX_11P        : R11   ,       "       &
+"MRX_12N        : W12   ,       "       &
+"MRX_12P        : V12   ,       "       &
+"MRX_13N        : T13   ,       "       &
+"MRX_13P        : R13   ,       "       &
+"MRX_14N        : W14   ,       "       &
+"MRX_14P        : V14   ,       "       &
+"MRX_15N        : T15   ,       "       &
+"MRX_15P        : R15   ,       "       &
+"MRX_8N         : W8    ,       "       &
+"MRX_8P         : V8    ,       "       &
+"MRX_9N         : T9    ,       "       &
+"MRX_9P         : R9    ,       "       &
+"MTX_10N        : V1    ,       "       &
+"MTX_10P        : U1    ,       "       &
+"MTX_11N        : R1    ,       "       &
+"MTX_11P        : R2    ,       "       &
+"MTX_12N        : T4    ,       "       &
+"MTX_12P        : R4    ,       "       &
+"MTX_13N        : W3    ,       "       &
+"MTX_13P        : V3    ,       "       &
+"MTX_14N        : T6    ,       "       &
+"MTX_14P        : R6    ,       "       &
+"MTX_15N        : W5    ,       "       &
+"MTX_15P        : V5    ,       "       &
+"MTX_8N         : N1    ,       "       &
+"MTX_8P         : N2    ,       "       &
+"MTX_9N         : L1    ,       "       &
+"MTX_9P         : L2    ,       "       &
+"PHYADR0        : K5    ,       "       &
+"PHYADR1        : J4    ,       "       &
+"PHYADR2        : H4    ,       "       &
+"PHYADR3        : G4    ,       "       &
+"PHYADR4_1      : H5    ,       "       &
+"REF_CLK_N      : J2    ,       "       &
+"REF_CLK_P      : J1    ,       "       &
+"RESET_N_1      : L4    ,       "       &
+"SCK_1          : G3    ,       "       &
+"SELF_INIT_1    : F6    ,       "       &
+"SS_N_1         : G5    ,       "       &
+"TCK            : G27   ,       "       &
+"TDI_1          : L26   ,       "       &
+"TDO_1          : M27   ,       "       &
+"TMS            : F26   ,       "       &
+"TRST_N_1       : J27   ,       "       &
+"WP_N_1 : D5    ,       "       &
+"VDD    : ( D6, E7, N7, M8, G11, J11, H12, K12, G13, J13, L13, F14, H14, "&
+" K14, G15, J15, L15, F16, H16, K16, G17, J17, L17, F18, H18, K18, G19, J19, "&
+" L19, H20, K20, G21, J21, L21, H22, K22, E25, N25, D26, M26 ), "&
+"VDD_MDIO       : ( J7  ,K7 ),  "       &
+"VDDIO  : ( J26 ,K26 ), "       &
+"VQPS   : M28   ,       "       &
+"VSS    : ( A1, D1, F1, H1, K1, M1, P1, T1, W1, A2, B2, C2, D2, F2, G2, H2, "&
+" K2, M2, P2, T2, U2, V2, W2, C3, D3, E3, F3, H3, J3, K3, L3, M3, N3, P3, R3,"&
+" T3, U3, A4, B4, C4, P4, U4, V4, W4, C5, P5, R5, T5, U5, A6, B6, C6, E6, P6,"&
+" U6, V6, W6, A7, B7, C7, D7, F7, H7, M7, P7, R7, T7, U7, V7, W7, C8, E8, G8,"&
+" J8, L8, N8, P8, R8, T8, U8, A9, B9, C9, D9, F9, H9, K9, M9, P9, U9, V9, W9, "&
+" C10, E10, G10, J10, L10, N10, P10, R10, T10, U10, A11, B11, C11, D11, " &
+" F11, H11, K11, M11, P11, U11, V11, W11, C12, E12, G12, J12, L12, N12, "&
+" P12, R12, T12, U12, A13, B13, C13, D13, F13, H13, K13, M13, P13, U13, "&
+" V13, W13, C14, E14, G14, J14, L14, N14, P14, R14, T14, U14, A15, B15, "&
+" C15, D15, F15, H15, K15, M15, P15, U15, V15, W15, A16, B16, C16, E16, "&
+" G16, J16, L16, N16, P16, R16, T16, U16, V16, W16, C17, D17, F17, H17, "&
+" K17, M17, P17, R17, T17, U17, A18, B18, C18, E18, G18, J18, L18, N18, "&
+" P18, U18, V18, W18, C19, D19, F19, H19, K19, M19, P19, R19, T19, U19, "&
+" A20, B20, C20, E20, G20, J20, L20, N20, P20, U20, V20, W20, C21, D21, "&
+" F21, H21, K21, M21, P21, R21, T21, U21, A22, B22, C22, E22, G22, J22, "&
+" L22, N22, P22, U22, V22, W22, C23, D23, F23, H23, K23, M23, P23, R23, "&
+" T23, U23, A24, B24, C24, E24, G24, J24, L24, N24, P24, U24, V24, W24, "&
+" A25, B25, C25, D25, F25, H25, K25, M25, P25, R25, T25, U25, V25, W25, "&
+" C26, E26, H26, N26, P26, R26, T26, U26, A27, B27, C27, P27, U27, V27, "&
+" W27, C28, P28, R28, T28, U28, A29, B29, C29, D29, E29, F29, H29, K29, "&
+" L29, M29, N29, P29, U29, V29, W29, C30, E30, G30, J30, K30, M30, P30, R30, "&
+" T30, U30, A31, B31, C31, E31, G31, J31, K31, M31, P31, U31, V31, W31), "&
+"AVDD   : ( G7, L7, D8, F8, H8, K8, E9, G9, J9, L9, N9, D10, F10, H10, "&
+" K10, M10, E11, L11, N11, M12, D20, E21, N21, D22, F22, M22, E23, G23, "&
+" J23, L23, N23, D24, F24, H24, K24, M24, G25, J25, L25 ), "&
+"AVDD_PLL       : ( D12, F12, E13, N13, D14, M14, E15, N15, D16, "&
+" M16, E17, N17, D18, M18, E19, N19, F20, M20) ";
+
+
+
+    attribute PORT_GROUPING of IN115025_1 : entity is
+        "Differential_Voltage ( (HRX_4P_1, HRX_4N_1), " &
+                                "(HRX_5P_1, HRX_5N_1), " &
+                                "(HRX_6P_1, HRX_6N_1), " &
+                                "(HRX_7P_1, HRX_7N_1), " &
+                                "(MRX_8P, MRX_8N), " &
+                                "(MRX_9P, MRX_9N), " &
+                                "(MRX_10P, MRX_10N), " &
+                                "(MRX_11P, MRX_11N), " &
+                                "(MRX_12P, MRX_12N), " &
+                                "(MRX_13P, MRX_13N), " &
+                                "(MRX_14P, MRX_14N), " &
+                                "(MRX_15P, MRX_15N), " &
+                                "(MTX_8P, MTX_8N), " &
+                                "(MTX_9P, MTX_9N), " &
+                                "(MTX_10N, MTX_10P), " &
+                                "(MTX_11P, MTX_11N), " &
+                                "(MTX_12N, MTX_12P), " &
+                                "(MTX_13N, MTX_13P), " &
+                                "(MTX_14N, MTX_14P), " &
+                                "(MTX_15N, MTX_15P), " &
+                                "(HTX_4P_1, HTX_4N_1), " &
+                                "(HTX_5P_1, HTX_5N_1), " &
+                                "(HTX_6P_1, HTX_6N_1), " &
+                                "(HTX_7P_1, HTX_7N_1)) " ;
+   attribute TAP_SCAN_RESET of TRST_N_1                     : signal is true;
+   attribute TAP_SCAN_IN    of TDI_1                        : signal is true;
+   attribute TAP_SCAN_MODE  of TMS                          : signal is true;
+   attribute TAP_SCAN_OUT   of TDO_1                        : signal is true;
+   attribute TAP_SCAN_CLOCK of TCK                          : signal is (4.0000000000000000000e+01, BOTH);
+
+   attribute INSTRUCTION_LENGTH of IN115025_1: entity is 4;
+
+   attribute INSTRUCTION_OPCODE of IN115025_1: entity is
+      "IDCODE       (1000)," &
+      "BYPASS       (1111)," &
+      "EXTEST       (0001)," &
+      "EXTEST_PULSE (0010)," &
+      "EXTEST_TRAIN (0011)," &
+      "SAMPLE       (0101)," &
+      "PRELOAD      (0101)," &
+      "HIGHZ        (0110)," &
+      "CLAMP        (0000) " ;
+
+   attribute INSTRUCTION_CAPTURE of IN115025_1: entity is "0001";
+
+   attribute IDCODE_REGISTER of IN115025_1: entity is
+      "0001"             & -- version
+      "0000000000000110" & -- part number
+      "01000110011"      & -- manufacturer's identity
+      "1";                 -- required by 1149.1
+
+   attribute REGISTER_ACCESS of IN115025_1: entity is
+      "DEVICE_ID    ( IDCODE )," &
+      "BOUNDARY     ( SAMPLE, PRELOAD, EXTEST, EXTEST_PULSE, EXTEST_TRAIN )," &
+      "BYPASS       ( HIGHZ, CLAMP, BYPASS ) " ;
+
+
+    --Boundary scan definition
+    attribute BOUNDARY_LENGTH of IN115025_1: entity is 86;
+
+    attribute BOUNDARY_REGISTER of IN115025_1: entity is
+    -- num  cell         port               function       safe     [ccell disval  rslt]
+    "  85   (BC_4       , RESET_N_1        , observe_only , X   )                          ,"&
+    "  84   (BC_2       , I2CSEL           , input        , X   )                          ,"&
+    "  83   (BC_2       , *                , control      , 1   )                          ,"&
+    "  82   (TS_BC_7    , MDIO_1           , bidir        , X    ,   83     , 1     , pull1),"&
+    "  81   (BC_2       , MDC_SCLK         , input        , X   )                          ,"&
+    "  80   (BC_2       , PHYADR0          , input        , X   )                          ,"&
+    "  79   (BC_2       , PHYADR1          , input        , X   )                          ,"&
+    "  78   (BC_2       , PHYADR2          , input        , X   )                          ,"&
+    "  77   (BC_2       , PHYADR3          , input        , X   )                          ,"&
+    "  76   (BC_2       , PHYADR4_1        , input        , X   )                          ,"&
+    "  75   (BC_2       , *                , control      , 1   )                          ,"&
+    "  74   (TS_BC_7    , SCK_1            , bidir        , X    ,   75     , 1     , pull0),"&
+    "  73   (BC_2       , *                , control      , 1   )                          ,"&
+    "  72   (TS_BC_7    , SS_N_1           , bidir        , X    ,   73     , 1     , pull1),"&
+    "  71   (BC_2       , *                , control      , 1   )                          ,"&
+    "  70   (BC_2       , MOSI_1           , output3      , X    ,   71     , 1     , pull0),"&
+    "  69   (BC_2       , MISO_1           , input        , X   )                          ,"&
+    "  68   (BC_2       , *                , control      , 1   )                          ,"&
+    "  67   (BC_2       , WP_N_1           , output3      , X    ,   68     , 1     , pull0),"&
+    "  66   (BC_2       , SELF_INIT_1      , input        , X   )                          ,"&
+    "  65   (BC_2       , *                , control      , 1   )                          ,"&
+    "  64   (TS_BC_7    , INTR_N_1        , bidir        , X    ,   65     , 1     , pull1),"&
+    "  63   (BC_2       , *                , control      , 1   )                          ,"&
+    "  62   (TS_BC_7    , LOL_N_1          , bidir        , X    ,   63     , 1     , pull1),"&
+    "  61   (BC_2       , *                , control      , 1   )                          ,"&
+    "  60   (TS_BC_7    , GPIO_0_1         , bidir        , X    ,   61     , 1     , pull0),"&
+    "  59   (BC_2       , *                , control      , 1   )                          ,"&
+    "  58   (TS_BC_7    , GPIO_1_1         , bidir        , X    ,   59     , 1     , pull0),"&
+    "  57   (BC_2       , *                , control      , 1   )                          ,"&
+    "  56   (TS_BC_7    , GPIO_2_1         , bidir        , X    ,   57     , 1     , pull0),"&
+    "  55   (BC_2       , *                , control      , 1   )                          ,"&
+    "  54   (TS_BC_7    , GPIO_3_1         , bidir        , X    ,   55     , 1     , pull0),"&
+    "  53   (BC_2       , *                , control      , 1   )                          ,"&
+    "  52   (TS_BC_7    , CLK_OUT_SE2      , bidir        , X    ,   53     , 1     , pull0),"&
+    "  51   (BC_2       , *                , control      , 1   )                          ,"&
+    "  50   (TS_BC_7    , GPIO_5_1         , bidir        , X    ,   51     , 1     , pull0),"&
+    "  49   (BC_2       , *                , control      , 1   )                          ,"&
+    "  48   (TS_BC_7    , GPIO_6_1         , bidir        , X    ,   49     , 1     , pull0),"&
+    "  47   (BC_4       , HRX_7N_1         , observe_only , X   )                          ,"&
+    "  46   (BC_4       , HRX_7P_1         , observe_only , X   )                          ,"&
+    "  45   (BC_4       , HRX_6N_1         , observe_only , X   )                          ,"&
+    "  44   (BC_4       , HRX_6P_1         , observe_only , X   )                          ,"&
+    "  43   (BC_4       , HRX_5N_1         , observe_only , X   )                          ,"&
+    "  42   (BC_4       , HRX_5P_1         , observe_only , X   )                          ,"&
+    "  41   (BC_4       , HRX_4N_1         , observe_only , X   )                          ,"&
+    "  40   (BC_4       , HRX_4P_1         , observe_only , X   )                          ,"&
+    "  39   (BC_4       , *                , internal , X   )                          ,"&
+    "  38   (BC_4       , *                , internal , X   )                          ,"&
+    "  37   (BC_4       , *                , internal , X   )                          ,"&
+    "  36   (BC_4       , *                , internal , X   )                          ,"&
+    "  35   (BC_4       , *                , internal , X   )                          ,"&
+    "  34   (BC_4       , *                , internal , X   )                          ,"&
+    "  33   (BC_4       , *                , internal , X   )                          ,"&
+    "  32   (BC_4       , *                , internal , X   )                          ,"&
+    "  31   (BC_4       , MRX_9N         , observe_only , X   )                      ,"&
+    "  30   (BC_4       , MRX_9P         , observe_only , X   )                      ,"&
+    "  29   (BC_4       , MRX_8N         , observe_only , X   )                      ,"&
+    "  28   (BC_4       , MRX_8P         , observe_only , X   )                      ,"&
+    "  27   (BC_4       , MRX_11N         , observe_only , X   )                      ,"&
+    "  26   (BC_4       , MRX_11P         , observe_only , X   )                      ,"&
+    "  25   (BC_4       , MRX_10N         , observe_only , X   )                      ,"&
+    "  24   (BC_4       , MRX_10P         , observe_only , X   )                      ,"&
+    "  23   (BC_4       , MRX_13N         , observe_only , X   )                      ,"&
+    "  22   (BC_4       , MRX_13P         , observe_only , X   )                      ,"&
+    "  21   (BC_4       , MRX_12N         , observe_only , X   )                      ,"&
+    "  20   (BC_4       , MRX_12P         , observe_only , X   )                      ,"&
+    "  19   (BC_4       , MRX_15N         , observe_only , X   )                      ,"&
+    "  18   (BC_4       , MRX_15P         , observe_only , X   )                      ,"&
+    "  17   (BC_4       , MRX_14N         , observe_only , X   )                      ,"&
+    "  16   (BC_4       , MRX_14P         , observe_only , X   )                      ,"&
+    "  15   (AC_2       , MTX_8P         , output2      , X   )                      ,"&
+    "  14   (AC_2       , MTX_9P         , output2      , X   )                      ,"&
+    "  13   (AC_2       , MTX_10P         , output2      , X   )                      ,"&
+    "  12   (AC_2       , MTX_11P         , output2      , X   )                      ,"&
+    "  11   (AC_2       , MTX_12P         , output2      , X   )                      ,"&
+    "  10   (AC_2       , MTX_13P         , output2      , X   )                      ,"&
+    "  9    (AC_2       , MTX_14P         , output2      , X   )                      ,"&
+    "  8    (AC_2       , MTX_15P         , output2      , X   )                      ,"&
+    "  7    (BC_0       , *                , internal      , X   )                     ,"&
+    "  6    (BC_0       , *                , internal      , X   )                     ,"&
+    "  5    (BC_0       , *                , internal      , X   )                     ,"&
+    "  4    (BC_0       , *                , internal      , X   )                     ,"&
+    "  3    (AC_2       , HTX_5P_1         , output2      , X   )                      ,"&
+    "  2    (AC_2       , HTX_4P_1         , output2      , X   )                      ,"&
+    "  1    (AC_2       , HTX_7P_1         , output2      , X   )                      ,"&
+    "  0    (AC_2       , HTX_6P_1         , output2      , X   )                           ";
+
+    attribute AIO_COMPONENT_CONFORMANCE of IN115025_1: entity is "STD_1149_6_2003";
+
+
+    attribute AIO_Pin_Behavior of IN115025_1: entity is
+        "HRX_4P_1[40]             : HP_Time=1.14e-09  On_Chip ;"&
+        "HRX_5P_1[42]             : HP_Time=1.14e-09  On_Chip ;"&
+        "HRX_6P_1[44]             : HP_Time=1.14e-09  On_Chip ;"&
+        "HRX_7P_1[46]             : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_8P[28]               : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_9P[30]               : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_10P[24]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_11P[26]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_12P[20]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_13P[22]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_14P[16]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MRX_15P[18]              : HP_Time=1.14e-09  On_Chip ;"&
+        "MTX_8P                   ;"&
+        "MTX_9P                   ;"&
+        "MTX_10N                  ;"&
+        "MTX_11P                  ;"&
+        "MTX_12N                  ;"&
+        "MTX_13N                  ;"&
+        "MTX_14N                  ;"&
+        "MTX_15N                  ;"&
+        "HTX_4P_1                 ;"&
+        "HTX_5P_1                 ;"&
+        "HTX_6P_1                 ;"&
+        "HTX_7P_1                 ";
+end IN115025_1;

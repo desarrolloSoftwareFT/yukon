@@ -1,0 +1,223 @@
+!!!!    6    0    1 1451291476  Vc334                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         ICS8531-01
+! Alias:
+! Part Type:         VLSI
+! Description:       1 to 9 Differential Clock Buffer
+! Manufacturer:      Integrated Circuit Systems
+! Package Style:     32 pin QFP
+! Created:           Feb 27, 2007
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    92%. The following pins are not fully tested
+!                         due to the differential pairs.
+!                         assign CCLK  to pins 2,3
+!                         assign PCLK  to pins 5,6
+! Constraints:
+! Cisco Part #:      15-8718-01
+
+sequential
+
+vector cycle 200n
+receive delay 160n
+
+assign VCC   to pins 1,9,16,17,24,25,32
+assign VEE   to pins 7
+
+assign EN    to pins 8
+assign SEL   to pins 4
+assign CCLK  to pins 2,3
+assign PCLK  to pins 5,6
+assign Q0    to pins 31,30
+assign Q1    to pins 29,28
+assign Q2    to pins 27,26
+assign Q3    to pins 23,22
+assign Q4    to pins 21,20
+assign Q5    to pins 19,18
+assign Q6    to pins 15,14
+assign Q7    to pins 13,12
+assign Q8    to pins 11,10
+
+power   VCC,VEE
+inputs  EN,SEL,CCLK,PCLK
+outputs Q0,Q1,Q2,Q3,Q4
+outputs Q5,Q6,Q7,Q8
+
+disable Q0,Q1,Q2,Q3,Q4,Q5,Q6,Q7,Q8 with EN to "0"
+
+family LVT
+
+set ref  on pins 8     to dh 3.0, dl 1.0  ! EN
+set ref  on pins 4     to dh 3.0, dl 1.0  ! SEL
+set ref  on pins 31,30 to rh 1.5, rl 1.5  ! Q0
+set ref  on pins 29,28 to rh 1.5, rl 1.5  ! Q1
+set ref  on pins 27,26 to rh 1.5, rl 1.5  ! Q2
+set ref  on pins 23,22 to rh 1.5, rl 1.5  ! Q3
+set ref  on pins 21,20 to rh 1.5, rl 1.5  ! Q4
+set ref  on pins 19,18 to rh 1.5, rl 1.5  ! Q5
+set ref  on pins 15,14 to rh 1.5, rl 1.5  ! Q6
+set ref  on pins 13,12 to rh 1.5, rl 1.5  ! Q7
+set ref  on pins 11,10 to rh 1.5, rl 1.5  ! Q8
+set load on pins 31,30 to pull down
+set load on pins 29,28 to pull down
+set load on pins 27,26 to pull down
+set load on pins 23,22 to pull down
+set load on pins 21,20 to pull down
+set load on pins 19,18 to pull down
+set load on pins 15,14 to pull down
+set load on pins 13,12 to pull down
+set load on pins 11,10 to pull down
+
+vector INIT1
+ set EN   to "1"
+ set SEL  to "x"
+ set CCLK to "01"
+ set PCLK to "01"
+ set Q0   to "xx"
+ set Q1   to "xx"
+ set Q2   to "xx"
+ set Q3   to "xx"
+ set Q4   to "xx"
+ set Q5   to "xx"
+ set Q6   to "xx"
+ set Q7   to "xx"
+ set Q8   to "xx"
+end vector
+
+vector KEEP1
+ set EN   to "k"
+ set SEL  to "k"
+ set CCLK to "kk"
+ set PCLK to "kk"
+ set Q0   to "xx"
+ set Q1   to "xx"
+ set Q2   to "xx"
+ set Q3   to "xx"
+ set Q4   to "xx"
+ set Q5   to "xx"
+ set Q6   to "xx"
+ set Q7   to "xx"
+ set Q8   to "xx"
+end vector
+
+vector EN_0
+ initialize to KEEP1
+ set EN     to "0"
+end vector
+
+vector EN_1
+ initialize to KEEP1
+ set EN     to "1"
+end vector
+
+vector SEL_0
+ initialize to KEEP1
+ set SEL    to "0"
+end vector
+
+vector SEL_1
+ initialize to KEEP1
+ set SEL    to "1"
+end vector
+
+vector CCLK_TT
+ initialize to KEEP1
+ set CCLK    to "tt"
+end vector
+
+vector PCLK_TT
+ initialize to KEEP1
+ set PCLK    to "tt"
+end vector
+
+vector Q_01
+ initialize to KEEP1
+ set Q0     to "01"
+ set Q1     to "01"
+ set Q2     to "01"
+ set Q3     to "01"
+ set Q4     to "01"
+ set Q5     to "01"
+ set Q6     to "01"
+ set Q7     to "01"
+ set Q8     to "01"
+end vector
+
+vector Q_10
+ initialize to KEEP1
+ set Q0     to "10"
+ set Q1     to "10"
+ set Q2     to "10"
+ set Q3     to "10"
+ set Q4     to "10"
+ set Q5     to "10"
+ set Q6     to "10"
+ set Q7     to "10"
+ set Q8     to "10"
+end vector
+
+! ************************ SEL = 0, CCLK Selected ************************
+
+unit "Q vs CCLK"
+ execute INIT1
+ execute SEL_0
+ repeat 10 times
+  execute CCLK_TT
+ end repeat
+ repeat 10 times
+  execute CCLK_TT
+  execute Q_10
+  execute CCLK_TT
+  execute Q_01
+ end repeat
+end unit
+
+unit "Pin EN test"
+ execute INIT1
+ execute SEL_0
+ execute EN_0
+ repeat 10 times
+  execute CCLK_TT
+  execute Q_01
+  execute CCLK_TT
+  execute Q_01
+ end repeat
+end unit
+
+! ************************ SEL = 1, PCLK Selected ************************
+
+unit "Q vs PCLK"
+ execute INIT1
+ execute SEL_1
+ repeat 10 times
+  execute PCLK_TT
+ end repeat
+ repeat 10 times
+  execute PCLK_TT
+  execute Q_10
+  execute PCLK_TT
+  execute Q_01
+ end repeat
+end unit
+
+unit "Pin EN test"
+ execute INIT1
+ execute SEL_0
+ execute EN_0
+ repeat 10 times
+  execute PCLK_TT
+  execute Q_01
+  execute PCLK_TT
+  execute Q_01
+ end repeat
+end unit
+

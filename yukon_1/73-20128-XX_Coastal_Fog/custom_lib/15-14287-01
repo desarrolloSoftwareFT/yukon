@@ -1,0 +1,52 @@
+!!!!    2    0    1 1390966512  V37eb                                         
+! TPS7A7100RGTR
+! 15-14287-01
+! Nestor
+
+test powered analog
+  power pins     4,5,6,7,8,9,13,14,17
+  nonanalog pins 1,2,10,11,16
+
+   disconnect all
+   test "VOLT_IN"
+   test "VOLT_EN"
+   test "VOLT_PG"
+   test "VOLT_OUT"
+end test
+
+!*****************************************!
+
+subtest "VOLT_IN"
+  disconnect all
+  connect i to pins 14
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+subtest "VOLT_EN"
+  disconnect all
+  connect i to pins 12
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+subtest "VOLT_PG"
+  disconnect all
+  connect i to pins 3
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+
+subtest "VOLT_OUT"
+  disconnect all
+  connect i to pins 15
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+!*****************************************!

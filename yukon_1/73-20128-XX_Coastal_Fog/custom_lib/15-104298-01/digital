@@ -1,0 +1,58 @@
+!!!!    6    0    1 1451111942  Vcd95                                         
+!***  All contents copyright 2003 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!-----------------------------------------------------------------------
+! Part Name:         TPS2559
+! Alias:
+! Part Type:         Mixed
+! Manufacturer:      Texas Instruments
+! Package Style:     11 pin unknown
+! Created:           Dec 8, 2015
+! Programmer:        FangJi Zhu
+! Tester:            HP3070
+! Processor:
+! Testjet Testable:  no
+! JTAG Device:       no
+! Fault coverage:    mixed
+! Constraints:
+
+sequential
+
+assign  GND to pins 1
+assign  VCC to pins 2, 3, 4
+
+assign  EN to pins 5
+assign  EP  to pins 11
+assign  ILIM to pins 6
+assign  FAULT to pins 10
+
+family LVT
+
+power GND,  VCC
+
+inputs  EN
+nondigital EP, ILIM, FAULT
+
+!*****************************************************************************
+vector Output_Enable
+  set EN      to "1"
+end vector
+
+vector Output_Disable
+  set EN      to "0"
+end vector
+
+!*****************************************************************************
+
+unit "Operation"
+  execute Output_Enable
+  continue analog
+  execute Output_Disable
+  continue analog
+end unit
+
+!
+!    End of Test
+!

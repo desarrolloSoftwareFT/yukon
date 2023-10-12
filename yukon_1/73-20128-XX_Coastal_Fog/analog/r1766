@@ -1,0 +1,8 @@
+!!!!    2    0    1 1627521384  Vf6cf                                         
+!* Skip the test due to shorted out by U1_SA internal low impedance
+! IPG: rev 09.20p  Mon Jun 28 12:02:50 2021
+disconnect all
+connect s to "GND"
+connect i to "SRT_WDVDD_SENSE_N"
+resistor 100, 11.00, 6.00, re2, ar100m
+! "r1766" is a limited test.

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608513751   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:24:19 2020
+disconnect all
+connect i to "VINSEN_QD"
+connect s to "P12V"
+connect g to "GND"; l to "GND"
+resistor 13k,20.00,20.00,re5,wb,ar1.00,sl,ed,wa60m
+! "r3_qd" is a limited test.

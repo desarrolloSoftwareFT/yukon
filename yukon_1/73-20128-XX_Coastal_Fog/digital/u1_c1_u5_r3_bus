@@ -1,0 +1,145 @@
+!!!!   24    0    1 1624853847  V4ced                                         
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+!IPG: rev 09.20p  Mon Jun 28 12:17:28 2021
+
+buswire "u1_c1_u5_r3_bus"
+
+!IPG: User may add option statements here if needed.
+
+ground bounce suppression   on
+family "LVT"
+
+
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_sa%m.AU51
+!IPG:    u1_sa%c0.BW21
+!IPG:    u1_sa%c1.W20
+!IPG:    u1_sa%c2.W57
+!IPG:    u1_sa%c3.BW61
+!IPG:    u5_r0.R24
+!IPG:    u5_r1.R24
+!IPG:    u5_r2.R24
+!IPG:    u5_r3.R24
+!IPG:
+!IPG: Warning: TAP Reset Pin has been overridden. The following
+!IPG:          TRST pin(s) will not be included in the disable section:
+!IPG:
+!IPG:    u1_sa%m.AU51
+!IPG:    u1_sa%c0.BW21
+!IPG:    u1_sa%c1.W20
+!IPG:    u1_sa%c2.W57
+!IPG:    u1_sa%c3.BW61
+!IPG:    u5_r0.R24
+!IPG:    u5_r1.R24
+!IPG:    u5_r2.R24
+!IPG:    u5_r3.R24
+!IPG:
+
+chain "u1_c1_u5_r3"
+  tdi "JTAG_TDI_CPLD1"
+  tdo "JTAG_TDO_HDR_3V3"
+  tms "JTAG_TMS_HDR_3V3"
+  tck "SRT_JTAG_TCK_HDR_3V3"
+  trst "JTAG_TRST_L_HDR_3V3"
+  devices
+    "u1_c1", "custom_lib/lcmxo2_b1643421.bsm", "tqfp144", no
+    "u1_c2", "custom_lib/lcmxo2_b1643421.bsm", "tqfp144", no
+    "u1_c4", "custom_lib/lcmxo2_b1643421.bsm", "tqfp144", no
+    "u1_c3", "custom_lib/lcmxo2_b1643421.bsm", "tqfp144", no
+    "u1_sa%m", "custom_lib/main.12p8t.bsdl", "all_pkg", no
+    "u1_sa%c0", "custom_lib/chiplet.12p8t.pdie0.bsdl", "all_pkg", no
+    "u1_sa%c1", "custom_lib/chiplet.12p8t.pdie1.bsdl", "all_pkg", no
+    "u1_sa%c2", "custom_lib/chiplet.12p8t.pdie2.bsdl", "all_pkg", no
+    "u1_sa%c3", "custom_lib/chiplet.12p8t.pdie3.bsdl", "all_pkg", no
+    "u5_r0", "custom_lib/mt3722_acjtag.bsm", "all_pkg", no
+    "u5_r1", "custom_lib/mt3722_acjtag.bsm", "all_pkg", no
+    "u5_r2", "custom_lib/mt3722_acjtag.bsm", "all_pkg", no
+    "u5_r3", "custom_lib/mt3722_acjtag.bsm", "all_pkg", no
+  end devices
+end chain
+
+!IPG: Family information could not be found for node JTAG_TDI_CPLD1
+
+disables "disable vector"
+  node "I2C_XLATR_EN_SA" hybrid default "0"
+  node "RT0_RESET_L_1V8" hybrid default "1"
+  node "RT1_RESET_L_1V8" hybrid default "1"
+  node "RT2_RESET_L_1V8" hybrid default "1"
+  node "RT3_RESET_L_1V8" hybrid default "1"
+
+  pcf order is nodes "I2C_XLATR_EN_SA","RT0_RESET_L_1V8"
+  pcf order is nodes "RT1_RESET_L_1V8","RT2_RESET_L_1V8"
+  pcf order is nodes "RT3_RESET_L_1V8"
+  unit "disable_1"
+  pcf
+  "01111"
+  end pcf
+  end unit
+end disables
+
+!IPG: The disable section above disables or conditions the following pins:
+!IPG:   u2_sa.3  u2_sa.4  u2_sa.5  u2_sa.6
+
+!IPG: The following pins are disabled by Boundary-Scan:
+!IPG:   u36.D6  u36.M9  u36.L9  u36.E6  u36.H10  u36.B11  u36.B20  u36.G10  u36.D7  u36.C13  u36.M11  u36.L11  u36.C12  u36.E13  u36.F18  u36.Y8  u36.D13  u36.D11  u36.T11  u36.AC10  u36.AC8  u36.V13  u36.AB11
+!IPG:   u36.AC9  u36.AB10  u36.W11  u36.R11  u36.AA26  u36.T26  u36.P21  u36.AB26  u36.W25  u36.N25  u36.Y26  u36.P20  u36.Y25  u36.E21  u36.C25  u36.J20  u36.M25  u36.H25  u36.F23  u36.H22  u36.K21  u36.B25  u36.F24
+!IPG:   u36.M24  u36.H24  u36.L24  u36.L22  u36.G22  u36.K24  u36.F26  u36.H23  u36.L23  u36.E24  u36.E26  u36.E25  u36.N24  u36.M26  u36.D26  u36.G24  u36.K23  u36.K26  u36.J26
+
+!IPG: Safeguard will ignore disabled outputs
+disabled device "u2_sa" pins 3,4,5,6
+!IPG: with pin 8 on node "I2C_XLATR_EN_SA"
+disabled device "u36" pins "AA26","AB10","AB11","AB26","AC10","AC8"
+disabled device "u36" pins "AC9","B11","B20","B25","C12","C13","C25"
+disabled device "u36" pins "D11","D13","D26","D6","D7","E13","E21"
+disabled device "u36" pins "E24","E25","E26","E6","F18","F23","F24"
+disabled device "u36" pins "F26","G10","G22","G24","H10","H22","H23"
+disabled device "u36" pins "H24","H25","J20","J26","K21","K23","K24"
+disabled device "u36" pins "K26","L11","L22","L23","L24","L9","M11"
+disabled device "u36" pins "M24","M25","M26","M9","N24","N25","P20"
+disabled device "u36" pins "P21","R11","T11","T26","V13","W11","W25"
+disabled device "u36" pins "Y25","Y26","Y8"
+!IPG: with boundary scan disabling
+
+!IPG: User may add VCL pass-through statements here if needed.
+
+nodes
+!IPG connect tested:   silicon node "HOST_SCL_1V8_SA" test "u1_sa%m.V58"
+!IPG connect tested:   silicon node "HOST_SCL_1V8_SA" test "u1_sa%c3.V58"
+!IPG connect tested:   silicon node "HOST_SCL_1V8_SA" test "u1_sa%c2.V58"
+!IPG connect tested:   silicon node "HOST_SCL_1V8_SA" test "u1_sa%c1.V58"
+!IPG connect tested:   silicon node "HOST_SCL_1V8_SA" test "u1_sa%c0.V58"
+!IPG connect tested:   silicon node "HOST_SDA_1V8_SA" test "u1_sa%m.M60"
+!IPG connect tested:   silicon node "HOST_SDA_1V8_SA" test "u1_sa%c3.M60"
+!IPG connect tested:   silicon node "HOST_SDA_1V8_SA" test "u1_sa%c2.M60"
+!IPG connect tested:   silicon node "HOST_SDA_1V8_SA" test "u1_sa%c1.M60"
+!IPG connect tested:   silicon node "HOST_SDA_1V8_SA" test "u1_sa%c0.M60"
+!IPG: Node "FPGA_SA_SYNC_MASTER_1V8" is aliased to "SRT_FPGA_SA_SYNC_MASTER_1V8"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_MASTER_1V8" test "u1_sa%m.CA65"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_MASTER_1V8" test "u1_sa%c3.CA63"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_MASTER_1V8" test "u1_sa%c2.AB56"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_MASTER_1V8" test "u1_sa%c1.V15"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_MASTER_1V8" test "u1_sa%c0.BT22"
+!IPG: Node "FPGA_SA_SYNC_SLAVE_1V8" is aliased to "SRT_FPGA_SA_SYNC_SLAVE_1V8"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_SLAVE_1V8" test "u1_sa%m.CA61"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_SLAVE_1V8" test "u1_sa%c3.CD59"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_SLAVE_1V8" test "u1_sa%c2.AB57"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_SLAVE_1V8" test "u1_sa%c1.W18"
+!IPG connect tested:   silicon node "SRT_FPGA_SA_SYNC_SLAVE_1V8" test "u1_sa%c0.BT21"
+!IPG: Node "SA_I2C_SCL_1V8" is aliased to "SRT_SA_I2C_SCL_1V8"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SCL_1V8" test "u1_sa%m.P23"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SCL_1V8" test "u1_sa%c3.P23"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SCL_1V8" test "u1_sa%c2.P23"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SCL_1V8" test "u1_sa%c1.P23"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SCL_1V8" test "u1_sa%c0.P23"
+!IPG: Node "SA_I2C_SDA_1V8" is aliased to "SRT_SA_I2C_SDA_1V8"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SDA_1V8" test "u1_sa%m.R22"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SDA_1V8" test "u1_sa%c3.R22"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SDA_1V8" test "u1_sa%c2.R22"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SDA_1V8" test "u1_sa%c1.R22"
+!IPG connect tested:   silicon node "SRT_SA_I2C_SDA_1V8" test "u1_sa%c0.R22"
+end nodes
+
+end buswire
+

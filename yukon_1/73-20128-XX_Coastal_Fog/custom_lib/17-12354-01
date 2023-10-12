@@ -1,0 +1,122 @@
+!!!!    2    0    1 1366968637  V91f9                                         
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         PX7299
+! Alias:             V48SR12005NMFA
+! Part Type:         Power On Analog
+! Description:       48V to 1.2V-12V DC to DC Converter
+! Manufacturer:      Bel Fuse, Delta
+! Package Style:     8 pin MOD
+! Created:           Jan 11, 2008
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    Analog Functional
+! Constraints:       This is a functional test of the device with
+!                    external components on board.
+!                    Measurements vary with the circuit design. They
+!                    need to be modified as required.
+! Cisco Part #:      34-2449-01
+
+test powered analog
+  power     pins 13,14,37,38,44,49
+  nonanalog pins   7,8,9,11
+  nonanalog pins 12, 15,16,17,18,19,20
+  nonanalog pins 21,22,23,24 ,25,26,27,28,29
+  nonanalog pins 30,31,32,33 ,34,35,36
+  nonanalog pins 39,40,41,42 ,43,45,46,47,48
+
+
+
+  test "vr_en"
+  test "vr_ready"
+  test "bvr_ready"
+  test "pwm1"
+  test "pwm2"
+  test "pwm3"
+  test "Bpwm2"
+  test "Bpwm1"
+
+
+end test
+
+! **********************************************************
+
+subtest "vr_en"
+
+ connect i to pins 10
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "vr_ready"
+
+ connect i to pins 9
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "bvr_ready"
+
+ connect i to pins 1
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "pwm1"
+
+ connect i to pins 4
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "pwm2"
+
+ connect i to pins 5
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "pwm3"
+
+ connect i to pins 6
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "bpwm2"
+
+ connect i to pins 3
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+
+subtest "bpwm1"
+
+ connect i to pins 2
+ connect l to ground  ! GND
+
+ detector dcv, expect 12.0
+ measure 12.5, 11.5
+end subtest
+

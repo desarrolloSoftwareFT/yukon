@@ -1,0 +1,8 @@
+!!!!    2    0    1 1627713888  V8e78                                         
+!* VDD_PH_4 TOP Probe removed for power up stable ready
+! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
+disconnect all
+connect s to "VDD_PH_4"
+connect i to "VDD_BOOT_R_4"
+jumper 6.01, re1, ar200m
+! "r4_97_q3v3r" test.

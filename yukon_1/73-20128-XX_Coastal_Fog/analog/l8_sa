@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852454   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:15 2021
+disconnect all
+connect s to "PWR_SA_AVDD08"
+connect i to "FLT_AVDD08_TRX2_SA"
+jumper 6.01, re1, ar200m
+! "l8_sa" test.

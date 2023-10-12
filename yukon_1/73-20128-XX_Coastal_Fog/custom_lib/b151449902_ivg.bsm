@@ -1,0 +1,1979 @@
+!!!!   22    0    1 1455791698  Vcf41                                         
+-- ***************************************************************************
+-- Boundary Scan Descriptor Language (BSDL) file
+-- Manufacturer: Intel Corporation
+-- Component   :  Ivy Bridge (IVB) Processor
+-- Package(s)  : GLDN_FCBGA1284
+-- Version     : 0.5
+-- Entity name : IVG_BGA
+-- ***************************************************************************
+-- Information in this document is provided in connection with Intel products.
+-- No license, express or implied, by estoppel or otherwise, to any
+-- intellectual property rights is granted by this document. Except as
+-- provided in Intel's Terms and Conditions of Sale for such products,
+-- Intel assumes no liability whatsoever, and Intel disclaims any express or
+-- implied warranty, relating to sale and/or use of Intel products including
+-- liability or warranties relating to fitness for a particular purpose,
+-- merchantability, or infringement of any patent, copyright or other
+-- intellectual property right. Intel products are not intended for use in
+-- medical, life saving, or life sustaining applications.
+--
+-- Intel may make changes to specifications and product descriptions at any
+-- time, without notice.
+--
+-- The IVG_BGA processor may contain design defects or errors
+-- known as errata which may cause the product to deviate from published
+-- specifications. Current characterized errata are available on request.
+--
+-- Contact your local Intel sales office or your distributor to obtain the
+-- latest specifications and before placing your product order.
+--
+-- Copyright (c) Intel Corporation 2013. Third-party brands and names are the
+-- property of their respective owners.
+-- ***************************************************************************
+--
+
+entity IVG_BGA is
+
+   generic(PHYSICAL_PIN_MAP : string := "IVG_BGA" );
+
+   port (
+        SA_CKB_0         :      out     bit ;   -- DDR   -- Clock
+        SA_CKB_1         :      out     bit ;   -- DDR   -- Clock
+        SA_CKB_2         :      out     bit ;   -- DDR   -- Clock
+        SA_CKB_3         :      out     bit ;   -- DDR   -- Clock
+        SA_CK_0  :      out     bit ;   -- DDR   -- Clock
+        SA_CK_1  :      out     bit ;   -- DDR   -- Clock
+        SA_CK_2  :      out     bit ;   -- DDR   -- Clock
+        SA_CK_3  :      out     bit ;   -- DDR   -- Clock
+        SA_CKE_0         :      out     bit ;   -- DDR   -- Clock Enable
+        SA_CKE_1         :      out     bit ;   -- DDR   -- Clock Enable
+        SA_CKE_2         :      out     bit ;   -- DDR   -- Clock Enable
+        SA_CKE_3         :      out     bit ;   -- DDR   -- Clock Enable
+        SA_CSB_0         :      out     bit ;   -- DDR   -- Chip Select
+        SA_CSB_1         :      out     bit ;   -- DDR   -- Chip Select
+        SA_CSB_2         :      out     bit ;   -- DDR   -- Chip Select
+        SA_CSB_3         :      out     bit ;   -- DDR   -- Chip Select
+        SA_RASB  :      out     bit ;   -- DDR   -- RAS
+        SA_CASB  :      out     bit ;   -- DDR   -- CAS
+        SA_WEB   :      out     bit ;   -- DDR   -- Write Enable
+        SA_MA_0  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_1  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_2  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_3  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_4  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_5  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_6  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_7  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_8  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_9  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_10         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_11         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_12         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_13         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_14         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_MA_15         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SA_BS_0  :      out     bit ;   -- DDR   -- Bank Address
+        SA_BS_1  :      out     bit ;   -- DDR   -- Bank Address
+        SA_BS_2  :      out     bit ;   -- DDR   -- Bank Address
+        SA_DQ_0  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_1  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_2  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_3  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_4  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_5  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_6  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_7  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_8  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_9  :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_10         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_11         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_12         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_13         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_14         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_15         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_16         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_17         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_18         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_19         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_20         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_21         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_22         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_23         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_24         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_25         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_26         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_27         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_28         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_29         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_30         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_31         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_32         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_33         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_34         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_35         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_36         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_37         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_38         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_39         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_40         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_41         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_42         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_43         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_44         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_45         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_46         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_47         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_48         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_49         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_50         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_51         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_52         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_53         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_54         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_55         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_56         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_57         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_58         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_59         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_60         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_61         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_62         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQ_63         :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQS_0         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_1         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_2         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_3         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_4         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_5         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_6         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQS_7         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_0        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_1        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_2        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_3        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_4        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_5        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_6        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_7        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_ECC_CB_0      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_1      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_2      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_3      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_4      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_5      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_6      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_ECC_CB_7      :      inout   bit ;   -- DDR   -- Data Bits
+        SA_DQS_8         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_DQSB_8        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SA_ODT_0         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SA_ODT_1         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SA_ODT_2         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SA_ODT_3         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SB_CKB_0         :      out     bit ;   -- DDR   -- Clock
+        SB_CKB_1         :      out     bit ;   -- DDR   -- Clock
+        SB_CKB_2         :      out     bit ;   -- DDR   -- Clock
+        SB_CKB_3         :      out     bit ;   -- DDR   -- Clock
+        SB_CK_0  :      out     bit ;   -- DDR   -- Clock
+        SB_CK_1  :      out     bit ;   -- DDR   -- Clock
+        SB_CK_2  :      out     bit ;   -- DDR   -- Clock
+        SB_CK_3  :      out     bit ;   -- DDR   -- Clock
+        SB_CKE_0         :      out     bit ;   -- DDR   -- Clock Enable
+        SB_CKE_1         :      out     bit ;   -- DDR   -- Clock Enable
+        SB_CKE_2         :      out     bit ;   -- DDR   -- Clock Enable
+        SB_CKE_3         :      out     bit ;   -- DDR   -- Clock Enable
+        SB_CSB_0         :      out     bit ;   -- DDR   -- Chip Select
+        SB_CSB_1         :      out     bit ;   -- DDR   -- Chip Select
+        SB_CSB_2         :      out     bit ;   -- DDR   -- Chip Select
+        SB_CSB_3         :      out     bit ;   -- DDR   -- Chip Select
+        SB_RASB  :      out     bit ;   -- DDR   -- RAS
+        SB_CASB  :      out     bit ;   -- DDR   -- CAS
+        SB_WEB   :      out     bit ;   -- DDR   -- Write Enable
+        SB_MA_0  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_1  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_2  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_3  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_4  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_5  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_6  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_7  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_8  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_9  :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_10         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_11         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_12         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_13         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_14         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_MA_15         :      out     bit ;   -- DDR   -- Memory Address Bits
+        SB_BS_0  :      out     bit ;   -- DDR   -- Bank Address
+        SB_BS_1  :      out     bit ;   -- DDR   -- Bank Address
+        SB_BS_2  :      out     bit ;   -- DDR   -- Bank Address
+        SB_DQ_0  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_1  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_2  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_3  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_4  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_5  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_6  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_7  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_8  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_9  :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_10         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_11         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_12         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_13         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_14         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_15         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_16         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_17         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_18         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_19         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_20         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_21         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_22         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_23         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_24         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_25         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_26         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_27         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_28         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_29         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_30         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_31         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_32         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_33         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_34         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_35         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_36         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_37         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_38         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_39         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_40         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_41         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_42         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_43         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_44         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_45         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_46         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_47         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_48         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_49         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_50         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_51         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_52         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_53         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_54         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_55         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_56         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_57         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_58         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_59         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_60         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_61         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_62         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQ_63         :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQS_0         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_1         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_2         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_3         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_4         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_5         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_6         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQS_7         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_0        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_1        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_2        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_3        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_4        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_5        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_6        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_7        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_ECC_CB_0      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_1      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_2      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_3      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_4      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_5      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_6      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_ECC_CB_7      :      inout   bit ;   -- DDR   -- Data Bits
+        SB_DQS_8         :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_DQSB_8        :      out     bit ;   -- DDR   -- Data Strobe x8
+        SB_ODT_0         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SB_ODT_1         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SB_ODT_2         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SB_ODT_3         :      out     bit ;   -- DDR   -- On Die Termination Control
+        SM_DRAMRSTB      :      out     bit ;   -- DDR   -- Memory RESET
+        SM_DRAMPWROK     :      in      bit ;   -- DDR   -- PWR OK signal to DDR3 DIMM
+        Added_power  : linkage bit_vector(0 to 2);
+        SM_RCOMP_0       :      linkage bit ;   -- DDR   -- Comp Resistor (see comp tab for values)
+        SM_RCOMP_1       :      linkage bit ;   -- DDR   -- Comp Resistor (see comp tab for values)
+        SM_RCOMP_2       :      linkage bit ;   -- DDR   -- Comp Resistor (see comp tab for values)
+        SA_DIMM_VREFDQ :        linkage bit ;   -- DDR   -- IO Reference Voltage
+        PCIE1_TX_0       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_1       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_2       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_3       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_4       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_5       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_6       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_7       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_8       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_9       :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_10      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_11      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_12      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_13      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_14      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TX_15      :      out     bit ;   -- PEG   -- peg positive data out
+        PCIE1_TXB_0      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_1      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_2      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_3      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_4      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_5      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_6      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_7      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_8      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_9      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_10     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_11     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_12     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_13     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_14     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_TXB_15     :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE1_RX_0       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_1       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_2       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_3       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_4       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_5       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_6       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_7       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_8       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_9       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_10      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_11      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_12      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_13      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_14      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RX_15      :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE1_RXB_0      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_1      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_2      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_3      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_4      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_5      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_6      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_7      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_8      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_9      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_10     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_11     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_12     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_13     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_14     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE1_RXB_15     :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE2_TX_0       :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TX_1       :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TX_2       :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TX_3       :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TXB_0      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TXB_1      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TXB_2      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_TXB_3      :      out     bit ;   -- PEG   -- peg negative data out
+        PCIE2_RX_0       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE2_RX_1       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE2_RX_2       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE2_RX_3       :      in      bit ;   -- PEG   -- peg positive data in
+        PCIE2_RXB_0      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE2_RXB_1      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE2_RXB_2      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE2_RXB_3      :      in      bit ;   -- PEG   -- peg negative data in
+        PCIE_ICOMPO      :      linkage bit ;   -- PEG   -- external reference for compensation unit
+        PCIE_RCOMPO      :      linkage bit ;   -- PEG   -- external reference for compensation unit
+        PCIE_ICOMPI      :      linkage bit ;   -- PEG   -- external reference for compensation unit
+        BCLK             :      in      bit ;   -- PEG   -- external reference clock for pci PLL
+        BCLKB            :      in      bit ;   -- PEG   -- external reference clock for pci PLL
+        DMI_TX_0         :      out     bit ;   -- DMI   -- Downstrem data bits
+        DMI_TX_1         :      out     bit ;   -- DMI   -- Downstrem data bits
+        DMI_TX_2         :      out     bit ;   -- DMI   -- Downstrem data bits
+        DMI_TX_3         :      out     bit ;   -- DMI   -- Downstrem data bits
+        DMI_TXB_0        :      out     bit ;   -- DMI   -- Downstreem strobe
+        DMI_TXB_1        :      out     bit ;   -- DMI   -- Downstreem strobe
+        DMI_TXB_2        :      out     bit ;   -- DMI   -- Downstreem strobe
+        DMI_TXB_3        :      out     bit ;   -- DMI   -- Downstreem strobe
+        DMI_RX_0         :      in      bit ;   -- DMI   -- Downstreem strobe
+        DMI_RX_1         :      in      bit ;   -- DMI   -- Downstreem strobe
+        DMI_RX_2         :      in      bit ;   -- DMI   -- Downstreem strobe
+        DMI_RX_3         :      in      bit ;   -- DMI   -- Downstreem strobe
+        DMI_RXB_0        :      in      bit ;   -- DMI   -- upstreem data
+        DMI_RXB_1        :      in      bit ;   -- DMI   -- upstreem data
+        DMI_RXB_2        :      in      bit ;   -- DMI   -- upstreem data
+        DMI_RXB_3        :      in      bit ;   -- DMI   -- upstreem data
+        UNCOREPWRGOOD    :      in      bit ;   -- Side Band   -- VCC voltage within spec
+        PECI     :      in      bit ;   -- Side Band   -- peci
+        RESETB   :      in      bit ;   -- Side Band   -- Global reset signal
+        PROCHOTB         :      inout   bit ;   -- Side Band   -- Processor too hot, this is bi-directional
+        CATERRB  :      out     bit ;   -- Side Band   -- Catastrophic Error has occurred
+        THERMTRIPB       :      out     bit ;   -- Side Band   -- Processor is way too hot. Shutdown.
+        PM_SYNC  :      in      bit ;   -- Side Band   -- DMI power/interrupt side band signal
+        CFG_0    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_1    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_2    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_3    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_4    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_5    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_6    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_7    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_8    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_9    :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_10   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_11   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_12   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_13   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_14   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_15   :      inout   bit ;   -- PCU Debug   -- Debug port / programming of PCU
+        CFG_16   :      inout   bit ;   -- PCU Debug   -- PCUDEBUG strobe
+        CFG_17   :      inout   bit ;   -- PCU Debug   -- PCUDEBUG strobe
+        VIDSOUT  :      inout   bit ;   -- VR   -- Seriel vid data out
+        VIDSCLK  :      out     bit ;   -- VR   -- Seriel VID clock
+        VIDALERTB        :      in      bit ;   -- VR   -- Seriel VID alert#
+        BPMB_0   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_1   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_2   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_3   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_4   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_5   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_6   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        BPMB_7   :      inout   bit ;   -- ITP   -- breakpoint and performance monitoring
+        TCK      :      in      bit ;   -- ITP   -- TAP clk
+        TMS      :      in      bit ;   -- ITP   -- TAP state machine control
+        TDI      :      in      bit ;   -- ITP   -- TAP data input
+        TDO      :      out     bit ;   -- ITP   -- TAP Data output
+        TRSTB    :      in      bit ;   -- ITP   -- TAP reset
+        PREQB    :      inout   bit ;   -- ITP   -- Probe Mode Request
+        PRDYB    :      inout   bit ;   -- ITP   -- Probe Mode Ready
+        RSVD     :      linkage bit_vector (56 downto 0) ;      -- Internal testability
+        VCCIO    :      linkage bit_vector (93 downto 0) ;      -- Power   -- 1.05 power supply for the north IO side (PEG, Geneseo, DMI,Display and side band)
+        VSS      :      linkage bit_vector (446 downto 0) ;     -- Power   -- GND supply for the north IO side (PEG, Geneseo, DMI,Display and side band)
+        VSS1     :      linkage bit_vector (6 downto 0) ;
+        VCCPLL   :      linkage bit_vector (3 downto 0) ;       -- Power   -- PCIe PLL/DLL analog power supply 1.8V
+        VDDQ     :      linkage bit_vector (46 downto 0) ;      -- Power   -- 1.5V power supply for the DDR IO
+        VCC      :      linkage bit_vector (185 downto 0) ;     -- VR   -- VCCUSA parallel VID pin
+        VCCSA    :      linkage bit_vector (15 downto 0) ;      -- VR   -- VCCUSA parallel VID pin
+        VCCIO_SENSE      :      linkage bit ;   -- Internal Testabilty
+        VCC_SENSE        :      linkage bit ;   -- VR   -- on die core power sense line - DFT only
+        SNB_IVBB         :      linkage bit ;   -- Internal Testabilty
+        PROC_DETECTB     :      linkage bit ;   -- Internal Testabilty
+        VCCSA_VID        :      linkage bit ;   -- Internal Testabilty
+        VSS_SENSE_VCCIO  :      linkage bit ;   -- Internal Testabilty
+        VCCSA_VCCSENSE   :      linkage bit ;   -- Internal Testabilty
+        VCCSA_VSSSENSE   :      linkage bit ;   -- Internal Testabilty
+        VSS_SENSE        :      linkage bit     -- Internal Testabilty
+         );
+
+   use STD_1149_1_2001.all; -- Refer to BSDL definitions
+   use STD_1149_6_2003.all; -- BSDL Extension for AIO
+
+   attribute COMPONENT_CONFORMANCE of IVG_BGA : entity is "STD_1149_1_2001" ;
+
+   attribute PIN_MAP of IVG_BGA : entity is PHYSICAL_PIN_MAP;
+   constant IVG_BGA : PIN_MAP_STRING :=        -- Define PinOut
+
+        "SA_CKB_0      :        AL22,   " &
+        "SA_CKB_1      :        AN22,   " &
+        "SA_CKB_2      :        AP24,   " &
+        "SA_CKB_3      :        AM24,   " &
+        "SA_CK_0      : AM22,   " &
+        "SA_CK_1      : AN21,   " &
+        "SA_CK_2      : AN24,   " &
+        "SA_CK_3      : AL24,   " &
+        "SA_CKE_0      :        AR18,   " &
+        "SA_CKE_1      :        AP18,   " &
+        "SA_CKE_2      :        AK18,   " &
+        "SA_CKE_3      :        AM16,   " &
+        "SA_CSB_0      :        AK25,   " &
+        "SA_CSB_1      :        AN28,   " &
+        "SA_CSB_2      :        AP28,   " &
+        "SA_CSB_3      :        AK27,   " &
+        "SA_RASB      : AP27,   " &
+        "SA_CASB      : AN27,   " &
+        "SA_WEB      :  AK24,   " &
+        "SA_MA_0      : AN25,   " &
+        "SA_MA_1      : AM21,   " &
+        "SA_MA_2      : AF22,   " &
+        "SA_MA_3      : AP22,   " &
+        "SA_MA_4      : AF21,   " &
+        "SA_MA_5      : AR21,   " &
+        "SA_MA_6      : AP21,   " &
+        "SA_MA_7      : AN19,   " &
+        "SA_MA_8      : AL19,   " &
+        "SA_MA_9      : AM19,   " &
+        "SA_MA_10      :        AL25,   " &
+        "SA_MA_11      :        AK19,   " &
+        "SA_MA_12      :        AN18,   " &
+        "SA_MA_13      :        AM28,   " &
+        "SA_MA_14      :        AL18,   " &
+        "SA_MA_15      :        AP19,   " &
+        "SA_BS_0      : AR27,   " &
+        "SA_BS_1      : AM25,   " &
+        "SA_BS_2      : AM18,   " &
+        "SA_DQ_0      : AF3,    " &
+        "SA_DQ_1      : AF1,    " &
+        "SA_DQ_2      : AG3,    " &
+        "SA_DQ_3      : AG4,    " &
+        "SA_DQ_4      : AF4,    " &
+        "SA_DQ_5      : AF2,    " &
+        "SA_DQ_6      : AG1,    " &
+        "SA_DQ_7      : AG2,    " &
+        "SA_DQ_8      : AJ2,    " &
+        "SA_DQ_9      : AJ1,    " &
+        "SA_DQ_10      :        AK3,    " &
+        "SA_DQ_11      :        AK4,    " &
+        "SA_DQ_12      :        AJ4,    " &
+        "SA_DQ_13      :        AJ3,    " &
+        "SA_DQ_14      :        AK1,    " &
+        "SA_DQ_15      :        AK2,    " &
+        "SA_DQ_16      :        AG10,   " &
+        "SA_DQ_17      :        AG11,   " &
+        "SA_DQ_18      :        AK10,   " &
+        "SA_DQ_19      :        AK11,   " &
+        "SA_DQ_20      :        AF10,   " &
+        "SA_DQ_21      :        AF11,   " &
+        "SA_DQ_22      :        AJ10,   " &
+        "SA_DQ_23      :        AJ11,   " &
+        "SA_DQ_24      :        AR10,   " &
+        "SA_DQ_25      :        AT10,   " &
+        "SA_DQ_26      :        AP11,   " &
+        "SA_DQ_27      :        AN11,   " &
+        "SA_DQ_28      :        AN10,   " &
+        "SA_DQ_29      :        AP10,   " &
+        "SA_DQ_30      :        AT11,   " &
+        "SA_DQ_31      :        AR11,   " &
+        "SA_DQ_32      :        AK30,   " &
+        "SA_DQ_33      :        AJ30,   " &
+        "SA_DQ_34      :        AF30,   " &
+        "SA_DQ_35      :        AF31,   " &
+        "SA_DQ_36      :        AK31,   " &
+        "SA_DQ_37      :        AJ31,   " &
+        "SA_DQ_38      :        AG30,   " &
+        "SA_DQ_39      :        AG31,   " &
+        "SA_DQ_40      :        AB36,   " &
+        "SA_DQ_41      :        AB35,   " &
+        "SA_DQ_42      :        AA34,   " &
+        "SA_DQ_43      :        AA33,   " &
+        "SA_DQ_44      :        AB33,   " &
+        "SA_DQ_45      :        AB34,   " &
+        "SA_DQ_46      :        AA35,   " &
+        "SA_DQ_47      :        AA36,   " &
+        "SA_DQ_48      :        W36,    " &
+        "SA_DQ_49      :        W35,    " &
+        "SA_DQ_50      :        V34,    " &
+        "SA_DQ_51      :        V33,    " &
+        "SA_DQ_52      :        W33,    " &
+        "SA_DQ_53      :        W34,    " &
+        "SA_DQ_54      :        V35,    " &
+        "SA_DQ_55      :        V36,    " &
+        "SA_DQ_56      :        T36,    " &
+        "SA_DQ_57      :        T35,    " &
+        "SA_DQ_58      :        R34,    " &
+        "SA_DQ_59      :        R33,    " &
+        "SA_DQ_60      :        T33,    " &
+        "SA_DQ_61      :        T34,    " &
+        "SA_DQ_62      :        R35,    " &
+        "SA_DQ_63      :        R36,    " &
+        "SA_DQS_0      :        AG5,    " &
+        "SA_DQS_1      :        AK5,    " &
+        "SA_DQS_2      :        AH11,   " &
+        "SA_DQS_3      :        AM11,   " &
+        "SA_DQS_4      :        AH31,   " &
+        "SA_DQS_5      :        AA32,   " &
+        "SA_DQS_6      :        V32,    " &
+        "SA_DQS_7      :        R32,    " &
+        "SA_DQSB_0      :       AF5,    " &
+        "SA_DQSB_1      :       AJ5,    " &
+        "SA_DQSB_2      :       AH10,   " &
+        "SA_DQSB_3      :       AM10,   " &
+        "SA_DQSB_4      :       AH30,   " &
+        "SA_DQSB_5      :       AB32,   " &
+        "SA_DQSB_6      :       W32,    " &
+        "SA_DQSB_7      :       T32,    " &
+        "SA_ECC_CB_0      :     AR13,   " &
+        "SA_ECC_CB_1      :     AT13,   " &
+        "SA_ECC_CB_2      :     AP14,   " &
+        "SA_ECC_CB_3      :     AN14,   " &
+        "SA_ECC_CB_4      :     AN13,   " &
+        "SA_ECC_CB_5      :     AP13,   " &
+        "SA_ECC_CB_6      :     AT14,   " &
+        "SA_ECC_CB_7      :     AR14,   " &
+        "SA_DQS_8      :        AM14,   " &
+        "SA_DQSB_8      :       AM13,   " &
+        "SA_ODT_0      :        AL27,   " &
+        "SA_ODT_1      :        AL28,   " &
+        "SA_ODT_2      :        AM27,   " &
+        "SA_ODT_3      :        AK28,   " &
+        "SB_CKB_0      :        AH22,   " &
+        "SB_CKB_1      :        AK21,   " &
+        "SB_CKB_2      :        AJ22,   " &
+        "SB_CKB_3      :        AG22,   " &
+        "SB_CK_0      : AH21,   " &
+        "SB_CK_1      : AJ21,   " &
+        "SB_CK_2      : AK22,   " &
+        "SB_CK_3      : AG21,   " &
+        "SB_CKE_0      :        AL15,   " &
+        "SB_CKE_1      :        AG16,   " &
+        "SB_CKE_2      :        AF16,   " &
+        "SB_CKE_3      :        AT16,   " &
+        "SB_CSB_0      :        AG25,   " &
+        "SB_CSB_1      :        AH27,   " &
+        "SB_CSB_2      :        AT27,   " &
+        "SB_CSB_3      :        AH28,   " &
+        "SB_RASB      : AH25,   " &
+        "SB_CASB      : AT28,   " &
+        "SB_WEB      :  AG24,   " &
+        "SB_MA_0      : AR24,   " &
+        "SB_MA_1      : AR22,   " &
+        "SB_MA_2      : AT22,   " &
+        "SB_MA_3      : AT21,   " &
+        "SB_MA_4      : AH19,   " &
+        "SB_MA_5      : AJ19,   " &
+        "SB_MA_6      : AH18,   " &
+        "SB_MA_7      : AG19,   " &
+        "SB_MA_8      : AJ18,   " &
+        "SB_MA_9      : AR19,   " &
+        "SB_MA_10      :        AH24,   " &
+        "SB_MA_11      :        AG18,   " &
+        "SB_MA_12      :        AT19,   " &
+        "SB_MA_13      :        AJ28,   " &
+        "SB_MA_14      :        AT18,   " &
+        "SB_MA_15      :        AJ16,   " &
+        "SB_BS_0      : AJ25,   " &
+        "SB_BS_1      : AJ24,   " &
+        "SB_BS_2      : AH16,   " &
+        "SB_DQ_0      : AC3,    " &
+        "SB_DQ_1      : AC1,    " &
+        "SB_DQ_2      : AD3,    " &
+        "SB_DQ_3      : AD4,    " &
+        "SB_DQ_4      : AC4,    " &
+        "SB_DQ_5      : AC2,    " &
+        "SB_DQ_6      : AD1,    " &
+        "SB_DQ_7      : AD2,    " &
+        "SB_DQ_8      : AG7,    " &
+        "SB_DQ_9      : AG8,    " &
+        "SB_DQ_10      :        AK8,    " &
+        "SB_DQ_11      :        AK7,    " &
+        "SB_DQ_12      :        AF7,    " &
+        "SB_DQ_13      :        AF8,    " &
+        "SB_DQ_14      :        AJ8,    " &
+        "SB_DQ_15      :        AJ7,    " &
+        "SB_DQ_16      :        AM3,    " &
+        "SB_DQ_17      :        AM2,    " &
+        "SB_DQ_18      :        AP3,    " &
+        "SB_DQ_19      :        AN5,    " &
+        "SB_DQ_20      :        AM1,    " &
+        "SB_DQ_21      :        AM5,    " &
+        "SB_DQ_22      :        AN2,    " &
+        "SB_DQ_23      :        AN3,    " &
+        "SB_DQ_24      :        AR7,    " &
+        "SB_DQ_25      :        AT7,    " &
+        "SB_DQ_26      :        AP8,    " &
+        "SB_DQ_27      :        AN8,    " &
+        "SB_DQ_28      :        AN7,    " &
+        "SB_DQ_29      :        AP7,    " &
+        "SB_DQ_30      :        AT8,    " &
+        "SB_DQ_31      :        AR8,    " &
+        "SB_DQ_32      :        AP31,   " &
+        "SB_DQ_33      :        AR31,   " &
+        "SB_DQ_34      :        AP32,   " &
+        "SB_DQ_35      :        AN32,   " &
+        "SB_DQ_36      :        AN31,   " &
+        "SB_DQ_37      :        AT31,   " &
+        "SB_DQ_38      :        AR32,   " &
+        "SB_DQ_39      :        AT32,   " &
+        "SB_DQ_40      :        AN35,   " &
+        "SB_DQ_41      :        AL35,   " &
+        "SB_DQ_42      :        AK34,   " &
+        "SB_DQ_43      :        AK33,   " &
+        "SB_DQ_44      :        AN34,   " &
+        "SB_DQ_45      :        AL34,   " &
+        "SB_DQ_46      :        AL33,   " &
+        "SB_DQ_47      :        AK35,   " &
+        "SB_DQ_48      :        AH35,   " &
+        "SB_DQ_49      :        AH36,   " &
+        "SB_DQ_50      :        AG34,   " &
+        "SB_DQ_51      :        AF36,   " &
+        "SB_DQ_52      :        AJ36,   " &
+        "SB_DQ_53      :        AH34,   " &
+        "SB_DQ_54      :        AG36,   " &
+        "SB_DQ_55      :        AG35,   " &
+        "SB_DQ_56      :        AE34,   " &
+        "SB_DQ_57      :        AE35,   " &
+        "SB_DQ_58      :        AD34,   " &
+        "SB_DQ_59      :        AD33,   " &
+        "SB_DQ_60      :        AD31,   " &
+        "SB_DQ_61      :        AE33,   " &
+        "SB_DQ_62      :        AD35,   " &
+        "SB_DQ_63      :        AD36,   " &
+        "SB_DQS_0      :        AD5,    " &
+        "SB_DQS_1      :        AH8,    " &
+        "SB_DQS_2      :        AN4,    " &
+        "SB_DQS_3      :        AM8,    " &
+        "SB_DQS_4      :        AM32,   " &
+        "SB_DQS_5      :        AL36,   " &
+        "SB_DQS_6      :        AG33,   " &
+        "SB_DQS_7      :        AD32,   " &
+        "SB_DQSB_0      :       AC5,    " &
+        "SB_DQSB_1      :       AH7,    " &
+        "SB_DQSB_2      :       AM4,    " &
+        "SB_DQSB_3      :       AM7,    " &
+        "SB_DQSB_4      :       AM31,   " &
+        "SB_DQSB_5      :       AM36,   " &
+        "SB_DQSB_6      :       AH33,   " &
+        "SB_DQSB_7      :       AE32,   " &
+        "SB_ECC_CB_0      :     AG13,   " &
+        "SB_ECC_CB_1      :     AG14,   " &
+        "SB_ECC_CB_2      :     AK13,   " &
+        "SB_ECC_CB_3      :     AK14,   " &
+        "SB_ECC_CB_4      :     AF13,   " &
+        "SB_ECC_CB_5      :     AF14,   " &
+        "SB_ECC_CB_6      :     AJ13,   " &
+        "SB_ECC_CB_7      :     AJ14,   " &
+        "SB_DQS_8      :        AH14,   " &
+        "SB_DQSB_8      :       AH13,   " &
+        "SB_ODT_0      :        AJ27,   " &
+        "SB_ODT_1      :        AG27,   " &
+        "SB_ODT_2      :        AR28,   " &
+        "SB_ODT_3      :        AG28,   " &
+        "SM_DRAMRSTB      :     AN16,   " &
+        "SM_DRAMPWROK      :    AF19,   " &
+        "Added_power     : (AR16, AD25, AD21),  " &
+        "SM_RCOMP_0      :      AT29,   " &
+        "SM_RCOMP_1      :      AT24,   " &
+        "SM_RCOMP_2      :      AT30,   " &
+        "SA_DIMM_VREFDQ  :      AP16,   " &
+        "PCIE1_TX_0      :      G12,    " &
+        "PCIE1_TX_1      :      H10,    " &
+        "PCIE1_TX_2      :      J10,    " &
+        "PCIE1_TX_3      :      K9,     " &
+        "PCIE1_TX_4      :      G9,     " &
+        "PCIE1_TX_5      :      H8,     " &
+        "PCIE1_TX_6      :      J7,     " &
+        "PCIE1_TX_7      :      G6,     " &
+        "PCIE1_TX_8      :      J5,     " &
+        "PCIE1_TX_9      :      K6,     " &
+        "PCIE1_TX_10      :     J3,     " &
+        "PCIE1_TX_11      :     L5,     " &
+        "PCIE1_TX_12      :     N5,     " &
+        "PCIE1_TX_13      :     K2,     " &
+        "PCIE1_TX_14      :     M1,     " &
+        "PCIE1_TX_15      :     M3,     " &
+        "PCIE1_TXB_0      :     G11,    " &
+        "PCIE1_TXB_1      :     H11,    " &
+        "PCIE1_TXB_2      :     J9,     " &
+        "PCIE1_TXB_3      :     K8,     " &
+        "PCIE1_TXB_4      :     G8,     " &
+        "PCIE1_TXB_5      :     H7,     " &
+        "PCIE1_TXB_6      :     J6,     " &
+        "PCIE1_TXB_7      :     H5,     " &
+        "PCIE1_TXB_8      :     J4,     " &
+        "PCIE1_TXB_9      :     K5,     " &
+        "PCIE1_TXB_10      :    K3,     " &
+        "PCIE1_TXB_11      :    L4,     " &
+        "PCIE1_TXB_12      :    N4,     " &
+        "PCIE1_TXB_13      :    L2,     " &
+        "PCIE1_TXB_14      :    L1,     " &
+        "PCIE1_TXB_15      :    N3,     " &
+        "PCIE1_RX_0      :      C9,     " &
+        "PCIE1_RX_1      :      A9,     " &
+        "PCIE1_RX_2      :      D9,     " &
+        "PCIE1_RX_3      :      E7,     " &
+        "PCIE1_RX_4      :      B7,     " &
+        "PCIE1_RX_5      :      C6,     " &
+        "PCIE1_RX_6      :      A5,     " &
+        "PCIE1_RX_7      :      D5,     " &
+        "PCIE1_RX_8      :      E4,     " &
+        "PCIE1_RX_9      :      B4,     " &
+        "PCIE1_RX_10      :     C4,     " &
+        "PCIE1_RX_11      :     D3,     " &
+        "PCIE1_RX_12      :     E2,     " &
+        "PCIE1_RX_13      :     F4,     " &
+        "PCIE1_RX_14      :     G3,     " &
+        "PCIE1_RX_15      :     G1,     " &
+        "PCIE1_RXB_0      :     C10,    " &
+        "PCIE1_RXB_1      :     A8,     " &
+        "PCIE1_RXB_2      :     D8,     " &
+        "PCIE1_RXB_3      :     E8,     " &
+        "PCIE1_RXB_4      :     B8,     " &
+        "PCIE1_RXB_5      :     C7,     " &
+        "PCIE1_RXB_6      :     A6,     " &
+        "PCIE1_RXB_7      :     D6,     " &
+        "PCIE1_RXB_8      :     E5,     " &
+        "PCIE1_RXB_9      :     B5,     " &
+        "PCIE1_RXB_10      :    C3,     " &
+        "PCIE1_RXB_11      :    D2,     " &
+        "PCIE1_RXB_12      :    E1,     " &
+        "PCIE1_RXB_13      :    F3,     " &
+        "PCIE1_RXB_14      :    G2,     " &
+        "PCIE1_RXB_15      :    H1,     " &
+        "PCIE2_TX_0      :      M6,     " &
+        "PCIE2_TX_1      :      L7,     " &
+        "PCIE2_TX_2      :      L11,    " &
+        "PCIE2_TX_3      :      K12,    " &
+        "PCIE2_TXB_0      :     M7,     " &
+        "PCIE2_TXB_1      :     L8,     " &
+        "PCIE2_TXB_2      :     L10,    " &
+        "PCIE2_TXB_3      :     K11,    " &
+        "PCIE2_RX_0      :      E11,    " &
+        "PCIE2_RX_1      :      D12,    " &
+        "PCIE2_RX_2      :      B11,    " &
+        "PCIE2_RX_3      :      A12,    " &
+        "PCIE2_RXB_0      :     D10,    " &
+        "PCIE2_RXB_1      :     D11,    " &
+        "PCIE2_RXB_2      :     B10,    " &
+        "PCIE2_RXB_3      :     A11,    " &
+        "PCIE_ICOMPO      :     F1,     " &
+        "PCIE_RCOMPO      :     C12,    " &
+        "PCIE_ICOMPI      :     J1,     " &
+        "BCLK      :    P6,     " &
+        "BCLKB      :   P7,     " &
+        "DMI_TXB_0      :       R1,     " &
+        "DMI_TXB_1      :       T1,     " &
+        "DMI_TXB_2      :       V2,     " &
+        "DMI_TXB_3      :       V1,     " &
+        "DMI_TX_0      :        P1,     " &
+        "DMI_TX_1      :        U1,     " &
+        "DMI_TX_2      :        U2,     " &
+        "DMI_TX_3      :        W1,     " &
+        "DMI_RXB_0      :       T3,     " &
+        "DMI_RXB_1      :       T4,     " &
+        "DMI_RXB_2      :       V4,     " &
+        "DMI_RXB_3      :       W5,     " &
+        "DMI_RX_0      :        R3,     " &
+        "DMI_RX_1      :        R4,     " &
+        "DMI_RX_2      :        U4,     " &
+        "DMI_RX_3      :        V5,     " &
+        "UNCOREPWRGOOD      :   H29,    " &
+        "PECI      :    J33,    " &
+        "RESETB      :  H31,    " &
+        "PROCHOTB      :        H32,    " &
+        "CATERRB      : H28,    " &
+        "THERMTRIPB      :      G31,    " &
+        "PM_SYNC      : E28,    " &
+        "CFG_0      :   K30,    " &
+        "CFG_1      :   L30,    " &
+        "CFG_2      :   N34,    " &
+        "CFG_3      :   N31,    " &
+        "CFG_4      :   L31,    " &
+        "CFG_5      :   L32,    " &
+        "CFG_6      :   N32,    " &
+        "CFG_7      :   K32,    " &
+        "CFG_8      :   N33,    " &
+        "CFG_9      :   L34,    " &
+        "CFG_10      :  K34,    " &
+        "CFG_11      :  M34,    " &
+        "CFG_12      :  N35,    " &
+        "CFG_13      :  L35,    " &
+        "CFG_14      :  M36,    " &
+        "CFG_15      :  N36,    " &
+        "CFG_16      :  L33,    " &
+        "CFG_17      :  M32,    " &
+        "VIDSOUT      : G26,    " &
+        "VIDSCLK      : E29,    " &
+        "VIDALERTB      :       E31,    " &
+        "BPMB_0      :  D28,    " &
+        "BPMB_1      :  C27,    " &
+        "BPMB_2      :  C26,    " &
+        "BPMB_3      :  D26,    " &
+        "BPMB_4      :  A26,    " &
+        "BPMB_5      :  B26,    " &
+        "BPMB_6      :  E26,    " &
+        "BPMB_7      :  F26,    " &
+        "TCK      :     D30,    " &
+        "TMS      :     F30,    " &
+        "TDI      :     E30,    " &
+        "TDO      :     L29,    " &
+        "TRSTB      :   H26,    " &
+        "PREQB      :   G29,    " &
+        "PRDYB      :   K26,    " &
+        "RSVD      :    (AF18, AL16, AK16, AR33, AR30, G30, B27, A33, D29, J36, H35, B35, B32, A34, B30, A30, A28, H34, F33, F36, E35, F32, D34, C33, C36, K36, J35, C35, C32, B34, C31, A31, A29, G34, G33, G36, F35, E32, E34, D33, D36, E27, C28, F27, J31, K28, J29, J27, L28, N2, J12, L12, R6, T6, L26, L27, J30),        " &
+        "VCCIO      :   ( AA28, AA29, AA30, AB12, AB14, AB15, AB17, AB18, AB20, AB21, AB23, AB24, AB26, AB27, AB28, AB29, AB30, AC10, AC11, AC12, AC13, AC14, AC15, AC16, AC17, AC18, AC19, AC20, AC21, AC22, AC23, AC24, AC25, AC26, AC27, AC28, AC29, AC30, AC9, N28, N29, P28, P29, R27, R29, T27, T29, U28, U29, V28, V29, V30, W27, W29, W30, Y27, Y29, Y30, AA1, AA2, AA3, AA4, AA5, AA6, AA7, AB10, AB7, AB8, AC7, AC8, N10, N8, R7, R8, T10, T7, U7, U8, V7, V8, W10, W7, Y1, Y2, Y3, Y4, Y5, Y6, Y7, Y8, AD10, AD11, M11, M12 ),       " &
+        "VSS      :     ( A10, A13, A16, A19, A22, A25, A27, A3, A32, A4, A7, AA10, AA11, AA13, AA16, AA19, AA22, AA25, AA27, AA31, AA8, AB1, AB11, AB13, AB16, AB19, AB2, AB22, AB25, AB3, AB31, AB4, AB5, AB6, AC31, AC32, AC33, AC34, AC35, AC36, AC6, AD12, AD16, AD19, AD20, AD22, AD23, AD24, AD26, AD27, AD30, AD6, AD7, AD8, AD9, AE1, AE10, AE11, AE12, AE13, AE14, AE2, AE29, AE3, AE30, AE31, AE36, AE4, AE5, AE6, AE7, AE8, AE9, AF12, AF15, AF25, AF27, AF28, AF29, AF32, AF33, AF34, AF35, AF6, AF9, AG12, AG15, AG17, AG20, AG23, AG26, AG29, AG32, AG6, AG9, AH1, AH12, AH15, AH2, AH29, AH3, AH32, AH4, AH5, AH6, AH9, AJ12, AJ15, AJ17, AJ20, AJ23, AJ26, AJ29, AJ32, AJ33, AJ34, AJ35, AJ6, AJ9, AK12, AK15, AK29, AK32, AK36, AK6, AK9, AL1, AL10, AL11, AL12, AL13, AL14, AL17, AL2, AL20, AL21, AL23, AL26, AL29, AL3, AL30, AL31, AL32, AL4, AL5, AL6, AL7, AL8, AL9, AM12, AM15, AM30, AM33, AM34, AM35, AM6, AM9, AN1, AN12, AN15, AN17, AN20, AN23, AN26, AN29, AN30, AN33, AN36, AN6, AN9, AP1, AP12, AP15, AP2, AP25, AP30, AP33, AP34, AP35, AP36, AP4, AP5, AP6, AP9, AR12, AR15, AR17, AR2, AR20, AR23, AR25, AR26, AR29, AR3, AR34, AR35, AR6, AR9, AT12, AT15, AT3, AT33, AT34, AT6, AT9, B12, B13, B16, B19, B2, B22, B25, B28, B29, B3, B31, B33, B6, B9, C1, C11, C13, C16, C19, C2, C22, C25, C29, C30, C34, C5, C8, D1, D13, D16, D19, D22, D25, D27, D31, D32, D35, D4, D7, E10, E12, E13, E16, E19, E22, E25, E3, E33, E36, E6, E9, F10, F11, F12, F13, F16, F19, F2, F22, F25, F29, F31, F34, F5, F6, F7, F8, F9, G10, G13, G16, G19, G22, G25, G27, G28, G32, G35, G4, G5, G7, H12, H13, H16, H19, H2, H22, H25, H3, H30, H33, H36, H4, H6, H9, J11, J13, J16, J19, J2, J22, J25, J28, J32, J34, J8, K1, K10, K13, K16, K19, K22, K25, K27, K29, K31, K33, K35, K4, K7, L13, L16, L19, L22, L25, L3, L36, L6, L9, M13, M16, M19, M2, M22, M25, M28, M29, M30, M31, M33, M35, M4, M5, M8, N1, N11, N13, N16, N19, N22, N25, N27, N30, N6, N7, P10, P13, P16, P19, P2, P22, P25, P27, P3, P30, P31, P32, P33, P34, P35, P36, P4, P5, P8, R10, R13, R16 ), " &
+        "VSS1   :  (R19, R2, R22, R25, R28, R30, R31 ), " &
+        "VCCPLL      :  ( AR4, AR5, AT4, AT5 ), " &
+        "VDDQ      :    ( AD15, AD17, AD18, AE15, AE16, AE17, AE18, AE19, AE20, AE21, AE22, AE23, AE24, AE25, AE26, AE27, AE28, AF17, AF20, AF23, AF24, AF26, AH17, AH20, AH23, AH26, AK17, AK20, AK23, AK26, AM17, AM20, AM23, AM26, AM29, AP17, AP20, AP23, AP26, AP29, AT17, AT20, AT23, AT25, AT26, AD13, AD14 ),   " &
+        "VCC      :     ( A14, A15, A17, A18, A20, A21, A23, A24, AA12, AA14, AA15, AA17, AA18, AA20, AA21, AA23, AA24, AA26, B14, B15, B17, B18, B20, B21, B23, B24, C14, C15, C17, C18, C20, C21, C23, C24, D14, D15, D17, D18, D20, D21, D23, D24, E14, E15, E17, E18, E20, E21, E23, E24, F14, F15, F17, F18, F20, F21, F23, F24, G14, G15, G17, G18, G20, G21, G23, G24, H14, H15, H17, H18, H20, H21, H23, H24, J14, J15, J17, J18, J20, J21, J23, J24, K14, K15, K17, K18, K20, K21, K23, K24, L14, L15, L17, L18, L20, L21, L23, L24, M14, M15, M17, M18, M20, M21, M23, M24, N12, N14, N15, N17, N18, N20, N21, N23, N24, N26, P12, P14, P15, P17, P18, P20, P21, P23, P24, P26, R12, R14, R15, R17, R18, R20, R21, R23, R24, R26, T12, T14, T15, T17, T18, T20, T21, T23, T24, T26, U12, U14, U15, U17, U18, U20, U21, U23, U24, U26, V12, V14, V15, V17, V18, V20, V21, V23, V24, V26, W12, W14, W15, W17, W18, W20, W21, W23, W24, W26, Y12, Y14, Y15, Y17, Y18, Y20, Y21, Y23, Y24, Y26 ), " &
+        "VCCSA      :   ( AA9, AB9, N9, P11, P9, R11, R9, T11, T8, U9, V11, V9, W11, W8, Y11, Y9 ),     " &
+        "VCCIO_SENSE      :     AD28,   " &
+        "VCC_SENSE      :       M26,    " &
+        "SNB_IVBB      :        H27,    " &
+        "PROC_DETECTB      :    F28,    " &
+        "VCCSA_VID      :       J26,    " &
+        "VSS_SENSE_VCCIO      : AD29,   " &
+        "VCCSA_VCCSENSE      :  M10,    " &
+        "VCCSA_VSSSENSE      :  M9,     " &
+        "VSS_SENSE      :       M27     " ;
+
+
+   attribute PORT_GROUPING of IVG_BGA : entity is
+           "Differential_Current ((     DMI_TX_0,       DMI_TXB_0       )),"&
+           "Differential_Current ((     DMI_TX_1,       DMI_TXB_1       )),"&
+           "Differential_Current ((     DMI_TX_2,       DMI_TXB_2       )),"&
+           "Differential_Current ((     DMI_TX_3,       DMI_TXB_3       )),"&
+           "Differential_Current ((     PCIE1_TX_0,     PCIE1_TXB_0     )),"&
+           "Differential_Current ((     PCIE1_TX_1,     PCIE1_TXB_1     )),"&
+           "Differential_Current ((     PCIE1_TX_2,     PCIE1_TXB_2     )),"&
+           "Differential_Current ((     PCIE1_TX_3,     PCIE1_TXB_3     )),"&
+           "Differential_Current ((     PCIE1_TX_4,     PCIE1_TXB_4     )),"&
+           "Differential_Current ((     PCIE1_TX_5,     PCIE1_TXB_5     )),"&
+           "Differential_Current ((     PCIE1_TX_6,     PCIE1_TXB_6     )),"&
+           "Differential_Current ((     PCIE1_TX_7,     PCIE1_TXB_7     )),"&
+           "Differential_Current ((     PCIE1_TX_8,     PCIE1_TXB_8     )),"&
+           "Differential_Current ((     PCIE1_TX_9,     PCIE1_TXB_9     )),"&
+           "Differential_Current ((     PCIE1_TX_10,    PCIE1_TXB_10    )),"&
+           "Differential_Current ((     PCIE1_TX_11,    PCIE1_TXB_11    )),"&
+           "Differential_Current ((     PCIE1_TX_12,    PCIE1_TXB_12    )),"&
+           "Differential_Current ((     PCIE1_TX_13,    PCIE1_TXB_13    )),"&
+           "Differential_Current ((     PCIE1_TX_14,    PCIE1_TXB_14    )),"&
+           "Differential_Current ((     PCIE1_TX_15,    PCIE1_TXB_15    )),"&
+           "Differential_Current ((     PCIE2_TX_0,     PCIE2_TXB_0     )),"&
+           "Differential_Current ((     PCIE2_TX_1,     PCIE2_TXB_1     )),"&
+           "Differential_Current ((     PCIE2_TX_2,     PCIE2_TXB_2     )),"&
+           "Differential_Current ((     PCIE2_TX_3,     PCIE2_TXB_3     ))";
+
+
+
+--
+-- Scan Port Identification
+--
+
+   attribute Tap_Scan_In    of  TDI   : signal is true;
+   attribute Tap_Scan_Mode  of  TMS   : signal is true;
+   attribute Tap_Scan_Out   of  TDO   : signal is true;
+   attribute Tap_Scan_Reset of  TRSTB : signal is true;
+   attribute Tap_Scan_Clock of  TCK   : signal is (16.0e6, both);
+   attribute Instruction_Length of IVG_BGA : entity is 8;
+
+   attribute Instruction_Opcode of IVG_BGA : entity is
+
+
+      " EXTEST          ( 00000000 ),                              " &
+      " SAMPLE          ( 00000001 ),                              " &
+      " PRELOAD         ( 00000001 ),                              " &
+      " IDCODE          ( 00000010 ),                              " &
+      " CLAMP           ( 00000100 ),                              " &
+      " EXTEST_TRAIN    ( 00000101 ),                              " &
+      " EXTEST_PULSE    ( 00000110 ),                              " &
+      " HIGHZ           ( 00001000 ),                              " &
+      " EXTEST_TOGGLE   ( 00001001 ),                              " &
+      " BYPASS          ( 11111111 ),                              " &
+      " Reserved        ( 00000011, 00001010, 00001011, 00001100,  " &
+      "                   00001101, 00001110, 00001111, 00010000,  " &
+      "                   00010001, 00010010, 00010011, 00010100,  " &
+      "                   00010101, 00010110, 00010111, 00011000,  " &
+      "                   00011001, 00011010, 00011011, 00011100,  " &
+      "                   00011101, 00011110, 00011111, 00100000,  " &
+      "                   00100001, 00100010, 00100011, 00100100,  " &
+      "                   00100101, 00100110, 00100111, 00101000,  " &
+      "                   00101001, 00101010, 00101011, 00101100,  " &
+      "                   00101101, 00101110, 00101111, 00110000,  " &
+      "                   00110001, 00110010, 00110011, 00110100,  " &
+      "                   00110101, 00110110, 00110111, 00111000,  " &
+      "                   00111001, 00111010, 00111011, 00111100,  " &
+      "                   00111101, 00111110, 00111111, 01000000,  " &
+      "                   01000001, 01000010, 01000011, 01000100,  " &
+      "                   01000101, 01000110, 01000111, 01001000,  " &
+      "                   01001001, 01001010, 01001011, 01001100,  " &
+      "                   01001101, 01001110, 01001111, 01010000,  " &
+      "                   01010001, 01010010, 01010011, 01010100,  " &
+      "                   01010101, 01010110, 01010111, 01011000,  " &
+      "                   01011001, 01011010, 01011011, 01011100,  " &
+      "                   01011101, 01011110, 01011111, 01100000,  " &
+      "                   01100001, 01100010, 01100011, 01100100,  " &
+      "                   01100101, 01100110, 01100111, 01101000,  " &
+      "                   01101001, 01101010, 01101011, 01101100,  " &
+      "                   01101101, 01101110, 01101111, 01110000,  " &
+      "                   01110001, 01110010, 01110011, 01110100,  " &
+      "                   01110101, 01110110, 01110111, 01111000,  " &
+      "                   01111001, 01111010, 01111011, 01111100,  " &
+      "                   01111101, 01111110, 01111111, 10000000,  " &
+      "                   10000001, 10000010, 10000011, 10000100,  " &
+      "                   10000101, 10000110, 10000111, 10001000,  " &
+      "                   10001001, 10001010, 10001011, 10001100,  " &
+      "                   10001101, 10001110, 10001111, 10010000,  " &
+      "                   10010001, 10010010, 10010011, 10010100,  " &
+      "                   10010101, 10010110, 10010111, 10011000,  " &
+      "                   10011001, 10011010, 10011011, 10011100,  " &
+      "                   10011101, 10011110, 10011111, 10100000,  " &
+      "                   10100001, 10100010, 10100011, 10100100,  " &
+      "                   10100101, 10100110, 10100111, 10101000,  " &
+      "                   10101001, 10101010, 10101011, 10101100,  " &
+      "                   10101101, 10101110, 10101111, 10110000,  " &
+      "                   10110001, 10110010, 10110011, 10110100,  " &
+      "                   10110101, 10110110, 10110111, 10111000,  " &
+      "                   10111001, 10111010, 10111011, 10111100,  " &
+      "                   10111101, 10111110, 10111111, 11000000,  " &
+      "                   11000001, 11000010, 11000011, 11000100,  " &
+      "                   11000101, 11000110, 11000111, 11001000,  " &
+      "                   11001001, 11001010, 11001011, 11001100,  " &
+      "                   11001101, 11001110, 11001111, 11010000,  " &
+      "                   11010001, 11010010, 11010011, 11010100,  " &
+      "                   11010101, 11010110, 11010111, 11011000,  " &
+      "                   11011001, 11011010, 11011011, 11011100,  " &
+      "                   11011101, 11011110, 11011111, 11100000,  " &
+      "                   11100001, 11100010, 11100011, 11100100,  " &
+      "                   11100101, 11100110, 11100111, 11101000,  " &
+      "                   11101001, 11101010, 11101011, 11101100,  " &
+      "                   11101101, 11101110, 11101111, 11110000,  " &
+      "                   11110001, 11110010, 11110011, 11110100,  " &
+      "                   11110101, 11110110, 11110111, 11111000,  " &
+      "                   11111001, 11111010, 11111011, 11111100,  " &
+      "                   11111101, 11111110, 00000111)                      " ;
+
+
+  attribute Instruction_Capture of IVG_BGA: entity is   "00000001";
+  attribute Instruction_Private of IVG_BGA : entity is  "Reserved";
+
+--
+-- IVG_BGA C-0 IDCODE Register
+--
+
+  attribute Idcode_Register of IVG_BGA: entity is
+ "1001" &  --version,
+          "1010011010001100"    &  --part number
+          "00000001001" &  --manufacturers identity
+          "1";  --required by The standard
+
+--
+-- IVG_BGA Data Register Access
+--
+
+ attribute Register_Access of IVG_BGA: entity is
+
+            "BOUNDARY   (EXTEST, SAMPLE, EXTEST_TOGGLE, EXTEST_TRAIN, EXTEST_PULSE),       " &
+            "DEVICE_ID  (IDCODE),               " &
+            "BYPASS     (CLAMP, HIGHZ, BYPASS)";
+--
+--  IVG_BGA - Boundary Scan cells
+--
+--
+--
+--    IVG_BGA Boundary Register Description
+--    Cell 0 is closest to TDO
+--
+
+   attribute BOUNDARY_LENGTH of IVG_BGA: entity is 412;
+   attribute BOUNDARY_REGISTER of IVG_BGA : entity is
+
+--       num    cell    port            function        safe            [ccell          disval          rslt]
+"0      (BC_1,  *       ,       internal,       x                                                       ), " &
+"1      (BC_1,  *       ,       internal,       x                                                       ), " &
+"2      (BC_1,  *       ,       internal,       x                                                       ), " &
+"3      (BC_1,  DMI_RXB_2       ,       input,  x                                                       ), " &
+"4      (BC_1,  DMI_RX_2        ,       input,  x                                                       ), " &
+"5      (AC_1,  DMI_TX_2        ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"6      (BC_1,  DMI_RXB_3       ,       input,  x                                                       ), " &
+"7      (BC_1,  DMI_RX_3        ,       input,  x                                                       ), " &
+"8      (AC_1,  DMI_TX_3        ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"9      (BC_1,  DMI_RXB_0       ,       input,  x                                                       ), " &
+"10     (BC_1,  DMI_RX_0        ,       input,  x                                                       ), " &
+"11     (AC_1,  DMI_TX_0        ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"12     (BC_1,  DMI_RXB_1       ,       input,  x                                                       ), " &
+"13     (BC_1,  DMI_RX_1        ,       input,  x                                                       ), " &
+"14     (AC_1,  DMI_TX_1        ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"15     (BC_1,  PCIE2_RXB_2     ,       input,  x                                                       ), " &
+"16     (BC_1,  PCIE2_RX_2      ,       input,  x                                                       ), " &
+"17     (AC_1,  PCIE2_TX_2      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"18     (BC_1,  PCIE2_RXB_3     ,       input,  x                                                       ), " &
+"19     (BC_1,  PCIE2_RX_3      ,       input,  x                                                       ), " &
+"20     (AC_1,  PCIE2_TX_3      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"21     (BC_1,  PCIE2_RXB_0     ,       input,  x                                                       ), " &
+"22     (BC_1,  PCIE2_RX_0      ,       input,  x                                                       ), " &
+"23     (AC_1,  PCIE2_TX_0      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"24     (BC_1,  PCIE2_RXB_1     ,       input,  x                                                       ), " &
+"25     (BC_1,  PCIE2_RX_1      ,       input,  x                                                       ), " &
+"26     (AC_1,  PCIE2_TX_1      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"27     (BC_1,  PCIE1_RXB_14    ,       input,  x                                                       ), " &
+"28     (BC_1,  PCIE1_RX_14     ,       input,  x                                                       ), " &
+"29     (AC_1,  PCIE1_TX_14     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"30     (BC_1,  PCIE1_RXB_15    ,       input,  x                                                       ), " &
+"31     (BC_1,  PCIE1_RX_15     ,       input,  x                                                       ), " &
+"32     (AC_1,  PCIE1_TX_15     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"33     (BC_1,  PCIE1_RXB_12    ,       input,  x                                                       ), " &
+"34     (BC_1,  PCIE1_RX_12     ,       input,  x                                                       ), " &
+"35     (AC_1,  PCIE1_TX_12     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"36     (BC_1,  PCIE1_RXB_13    ,       input,  x                                                       ), " &
+"37     (BC_1,  PCIE1_RX_13     ,       input,  x                                                       ), " &
+"38     (AC_1,  PCIE1_TX_13     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"39     (BC_1,  PCIE1_RXB_10    ,       input,  x                                                       ), " &
+"40     (BC_1,  PCIE1_RX_10     ,       input,  x                                                       ), " &
+"41     (AC_1,  PCIE1_TX_10     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"42     (BC_1,  PCIE1_RXB_11    ,       input,  x                                                       ), " &
+"43     (BC_1,  PCIE1_RX_11     ,       input,  x                                                       ), " &
+"44     (AC_1,  PCIE1_TX_11     ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"45     (BC_1,  PCIE1_RXB_0     ,       input,  x                                                       ), " &
+"46     (BC_1,  PCIE1_RX_0      ,       input,  x                                                       ), " &
+"47     (AC_1,  PCIE1_TX_0      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"48     (BC_1,  PCIE1_RXB_1     ,       input,  x                                                       ), " &
+"49     (BC_1,  PCIE1_RX_1      ,       input,  x                                                       ), " &
+"50     (AC_1,  PCIE1_TX_1      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"51     (BC_1,  PCIE1_RXB_2     ,       input,  x                                                       ), " &
+"52     (BC_1,  PCIE1_RX_2      ,       input,  x                                                       ), " &
+"53     (AC_1,  PCIE1_TX_2      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"54     (BC_1,  PCIE1_RXB_3     ,       input,  x                                                       ), " &
+"55     (BC_1,  PCIE1_RX_3      ,       input,  x                                                       ), " &
+"56     (AC_1,  PCIE1_TX_3      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"57     (BC_1,  PCIE1_RXB_4     ,       input,  x                                                       ), " &
+"58     (BC_1,  PCIE1_RX_4      ,       input,  x                                                       ), " &
+"59     (AC_1,  PCIE1_TX_4      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"60     (BC_1,  PCIE1_RXB_5     ,       input,  x                                                       ), " &
+"61     (BC_1,  PCIE1_RX_5      ,       input,  x                                                       ), " &
+"62     (AC_1,  PCIE1_TX_5      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"63     (BC_1,  PCIE1_RXB_6     ,       input,  x                                                       ), " &
+"64     (BC_1,  PCIE1_RX_6      ,       input,  x                                                       ), " &
+"65     (AC_1,  PCIE1_TX_6      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"66     (BC_1,  PCIE1_RXB_7     ,       input,  x                                                       ), " &
+"67     (BC_1,  PCIE1_RX_7      ,       input,  x                                                       ), " &
+"68     (AC_1,  PCIE1_TX_7      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"69     (BC_1,  PCIE1_RXB_8     ,       input,  x                                                       ), " &
+"70     (BC_1,  PCIE1_RX_8      ,       input,  x                                                       ), " &
+"71     (AC_1,  PCIE1_TX_8      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"72     (BC_1,  PCIE1_RXB_9     ,       input,  x                                                       ), " &
+"73     (BC_1,  PCIE1_RX_9      ,       input,  x                                                       ), " &
+"74     (AC_1,  PCIE1_TX_9      ,       output3,        x       ,       75      ,       1       ,       z       ), " &
+"75     (BC_1,  *       ,       control,        1                                                       ), " &
+"76     (BC_1,  *       ,       internal,       x                                                       ), " &
+"77     (BC_1,  *       ,       internal,       x                                                       ), " &
+"78     (BC_1,  *       ,       internal,       x                                                       ), " &
+"79     (BC_1,  *       ,       internal,       x                                                       ), " &
+"80     (BC_1,  *       ,       internal,       x                                                       ), " &
+"81     (BC_1,  *       ,       internal,       x                                                       ), " &
+"82     (BC_1,  *       ,       internal,       x                                                       ), " &
+"83     (BC_1,  *       ,       internal,       x                                                       ), " &
+"84     (BC_1,  *       ,       internal,       x                                                       ), " &
+"85     (BC_1,  *       ,       internal,       x                                                       ), " &
+"86     (BC_1,  *       ,       internal,       x                                                       ), " &
+"87     (BC_1,  *       ,       internal,       x                                                       ), " &
+"88     (BC_1,  *       ,       internal,       x                                                       ), " &
+"89     (BC_1,  *       ,       internal,       x                                                       ), " &
+"90     (BC_1,  *       ,       internal,       x                                                       ), " &
+"91     (BC_1,  *       ,       internal,       x                                                       ), " &
+"92     (BC_1,  *       ,       internal,       x                                                       ), " &
+"93     (BC_1,  *       ,       internal,       x                                                       ), " &
+"94     (BC_1,  *       ,       internal,       x                                                       ), " &
+"95     (BC_1,  *       ,       internal,       x                                                       ), " &
+"96     (BC_1,  *       ,       internal,       x                                                       ), " &
+"97     (BC_1,  *       ,       internal,       x                                                       ), " &
+"98     (BC_1,  *       ,       internal,       x                                                       ), " &
+"99     (BC_1,  *       ,       internal,       x                                                       ), " &
+"100    (BC_1,  *       ,       control,        1                                                       ), " &
+"101    (BC_1,  *       ,       control,        1                                                       ), " &
+"102    (BC_0,  SB_DQS_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"103    (BC_8,  SB_DQ_2 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"104    (BC_8,  SB_DQ_6 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"105    (BC_8,  SB_DQ_7 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"106    (BC_8,  SB_DQ_3 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"107    (BC_0,  SB_DQSB_0       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"108    (BC_8,  SB_DQ_1 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"109    (BC_8,  SB_DQ_4 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"110    (BC_8,  SB_DQ_5 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"111    (BC_8,  SB_DQ_0 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"112    (BC_0,  SA_DQS_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"113    (BC_8,  SA_DQ_6 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"114    (BC_8,  SA_DQ_3 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"115    (BC_8,  SA_DQ_2 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"116    (BC_8,  SA_DQ_7 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"117    (BC_0,  SA_DQSB_0       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"118    (BC_8,  SA_DQ_1 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"119    (BC_8,  SA_DQ_5 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"120    (BC_8,  SA_DQ_0 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"121    (BC_8,  SA_DQ_4 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"122    (BC_0,  SB_DQS_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"123    (BC_8,  SB_DQ_14        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"124    (BC_8,  SB_DQ_11        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"125    (BC_8,  SB_DQ_15        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"126    (BC_8,  SB_DQ_10        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"127    (BC_0,  SB_DQSB_1       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"128    (BC_8,  SB_DQ_9 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"129    (BC_8,  SB_DQ_12        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"130    (BC_8,  SB_DQ_13        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"131    (BC_8,  SB_DQ_8 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"132    (BC_0,  SA_DQS_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"133    (BC_8,  SA_DQ_14        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"134    (BC_8,  SA_DQ_10        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"135    (BC_8,  SA_DQ_11        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"136    (BC_8,  SA_DQ_15        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"137    (BC_0,  SA_DQSB_1       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"138    (BC_8,  SA_DQ_9 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"139    (BC_8,  SA_DQ_8 ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"140    (BC_8,  SA_DQ_12        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"141    (BC_8,  SA_DQ_13        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"142    (BC_0,  SB_DQS_2        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"143    (BC_8,  SB_DQ_22        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"144    (BC_8,  SB_DQ_19        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"145    (BC_8,  SB_DQ_23        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"146    (BC_8,  SB_DQ_18        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"147    (BC_0,  SB_DQSB_2       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"148    (BC_8,  SB_DQ_17        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"149    (BC_8,  SB_DQ_21        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"150    (BC_8,  SB_DQ_20        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"151    (BC_8,  SB_DQ_16        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"152    (BC_0,  SA_DQS_2        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"153    (BC_8,  SA_DQ_19        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"154    (BC_8,  SA_DQ_18        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"155    (BC_8,  SA_DQ_23        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"156    (BC_8,  SA_DQ_17        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"157    (BC_0,  SA_DQSB_2       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"158    (BC_8,  SA_DQ_16        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"159    (BC_8,  SA_DQ_20        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"160    (BC_8,  SA_DQ_21        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"161    (BC_8,  SA_DQ_22        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"162    (BC_0,  SB_DQS_3        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"163    (BC_8,  SB_DQ_26        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"164    (BC_8,  SB_DQ_25        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"165    (BC_8,  SB_DQ_29        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"166    (BC_8,  SB_DQ_27        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"167    (BC_0,  SB_DQSB_3       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"168    (BC_8,  SB_DQ_31        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"169    (BC_8,  SB_DQ_28        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"170    (BC_8,  SB_DQ_24        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"171    (BC_8,  SB_DQ_30        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"172    (BC_0,  SA_DQS_3        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"173    (BC_8,  SA_DQ_31        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"174    (BC_8,  SA_DQ_26        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"175    (BC_8,  SA_DQ_27        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"176    (BC_8,  SA_DQ_30        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"177    (BC_0,  SA_DQSB_3       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"178    (BC_8,  SA_DQ_29        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"179    (BC_8,  SA_DQ_28        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"180    (BC_8,  SA_DQ_25        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"181    (BC_8,  SA_DQ_24        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"182    (BC_0,  SB_DQS_8        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"183    (BC_8,  SB_ECC_CB_6     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"184    (BC_8,  SB_ECC_CB_1     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"185    (BC_8,  SB_ECC_CB_0     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"186    (BC_8,  SB_ECC_CB_2     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"187    (BC_0,  SB_DQSB_8       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"188    (BC_8,  SB_ECC_CB_7     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"189    (BC_8,  SB_ECC_CB_4     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"190    (BC_8,  SB_ECC_CB_5     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"191    (BC_8,  SB_ECC_CB_3     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"192    (BC_0,  SA_DQS_8        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"193    (BC_8,  SA_ECC_CB_1     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"194    (BC_8,  SA_ECC_CB_7     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"195    (BC_8,  SA_ECC_CB_3     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"196    (BC_8,  SA_ECC_CB_2     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"197    (BC_0,  SA_DQSB_8       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"198    (BC_8,  SA_ECC_CB_5     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"199    (BC_8,  SA_ECC_CB_0     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"200    (BC_8,  SA_ECC_CB_4     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"201    (BC_8,  SA_ECC_CB_6     ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"202    (BC_1,  SB_MA_2         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"203    (BC_1,  SB_MA_3         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"204    (BC_1,  SB_MA_5         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"205    (BC_1,  SB_MA_6         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"206    (BC_1,  SB_MA_1         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"207    (BC_1,  SB_MA_7         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"208    (BC_1,  SB_MA_12        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"209    (BC_1,  SB_MA_4         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"210    (BC_1,  SB_MA_11        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"211    (BC_1,  SB_MA_9         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"212    (BC_1,  SB_MA_14        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"213    (BC_1,  SB_MA_8         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"214    (BC_1,  SB_BS_2         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"215    (BC_1,  SB_MA_15        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"216    (BC_1,  SB_CKE_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"217    (BC_1,  SB_CKE_2        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"218    (BC_1,  SB_CKE_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"219    (BC_1,  SB_CKE_3        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"220    (BC_1,  SA_CKE_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"221    (BC_1,  SA_CKE_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"222    (BC_1,  SA_CKE_2        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"223    (BC_1,  SA_CKE_3        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"224    (BC_1,  SA_MA_15        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"225    (BC_1,  SA_BS_2         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"226    (BC_1,  SA_MA_5         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"227    (BC_1,  SA_MA_8         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"228    (BC_1,  SA_MA_9         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"229    (BC_1,  SA_MA_11        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"230    (BC_1,  SA_MA_7         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"231    (BC_1,  SA_MA_12        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"232    (BC_1,  SA_MA_14        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"233    (BC_1,  SA_MA_1         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"234    (BC_1,  SA_MA_2         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"235    (BC_1,  SA_MA_3         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"236    (BC_1,  SA_MA_6         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"237    (BC_1,  SA_MA_4         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"238    (BC_1,  SM_DRAMRSTB     ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"239    (BC_1,  SA_CKB_1        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"240    (BC_1,  SA_CKB_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"241    (BC_1,  SA_CK_3         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"242    (BC_1,  SA_CK_0         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"243    (BC_1,  SA_CKB_0        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"244    (BC_1,  SA_CKB_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"245    (BC_1,  SA_CK_2         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"246    (BC_1,  SA_CK_1         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"247    (BC_1,  SB_CKB_1        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"248    (BC_1,  SB_CK_1 ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"249    (BC_1,  SB_CKB_0                ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"250    (BC_1,  SB_CK_0         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"251    (BC_1,  SB_CKB_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"252    (BC_1,  SB_CK_3         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"253    (BC_1,  SB_CKB_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"254    (BC_1,  SB_CK_2         ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"255    (BC_1,  SB_MA_13        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"256    (BC_1,  SB_ODT_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"257    (BC_1,  SB_ODT_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"258    (BC_1,  SB_CSB_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"259    (BC_1,  SB_CSB_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"260    (BC_1,  SB_CSB_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"261    (BC_1,  SB_ODT_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"262    (BC_1,  SB_WEB          ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"263    (BC_1,  SB_ODT_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"264    (BC_1,  SB_CSB_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"265    (BC_1,  SB_BS_1         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"266    (BC_1,  SB_CASB         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"267    (BC_1,  SB_RASB         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"268    (BC_1,  SB_BS_0         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"269    (BC_1,  SB_MA_10        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"270    (BC_1,  SB_MA_0         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"271    (BC_1,  SA_MA_0         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"272    (BC_1,  SA_MA_10        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"273    (BC_1,  SA_BS_1         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"274    (BC_1,  SA_BS_0         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"275    (BC_1,  SA_WEB          ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"276    (BC_1,  SA_RASB         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"277    (BC_1,  SA_CSB_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"278    (BC_1,  SA_CSB_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"279    (BC_1,  SA_CASB         ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"280    (BC_1,  SA_ODT_0        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"281    (BC_1,  SA_ODT_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"282    (BC_1,  SA_ODT_2        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"283    (BC_1,  SA_CSB_1        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"284    (BC_1,  SA_MA_13        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"285    (BC_1,  SA_CSB_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"286    (BC_1,  SA_ODT_3        ,       output3,        x       ,       100     ,       1       ,       z       ), " &
+"287    (BC_0,  SB_DQS_4        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"288    (BC_8,  SB_DQ_37        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"289    (BC_8,  SB_DQ_33        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"290    (BC_8,  SB_DQ_36        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"291    (BC_8,  SB_DQ_32        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"292    (BC_0,  SB_DQSB_4       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"293    (BC_8,  SB_DQ_34        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"294    (BC_8,  SB_DQ_39        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"295    (BC_8,  SB_DQ_38        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"296    (BC_8,  SB_DQ_35        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"297    (BC_0,  SA_DQS_4        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"298    (BC_8,  SA_DQ_39        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"299    (BC_8,  SA_DQ_34        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"300    (BC_8,  SA_DQ_35        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"301    (BC_8,  SA_DQ_37        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"302    (BC_0,  SA_DQSB_4       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"303    (BC_8,  SA_DQ_38        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"304    (BC_8,  SA_DQ_33        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"305    (BC_8,  SA_DQ_36        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"306    (BC_8,  SA_DQ_32        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"307    (BC_0,  SB_DQS_5        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"308    (BC_8,  SB_DQ_46        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"309    (BC_8,  SB_DQ_43        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"310    (BC_8,  SB_DQ_42        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"311    (BC_8,  SB_DQ_40        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"312    (BC_0,  SB_DQSB_5       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"313    (BC_8,  SB_DQ_45        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"314    (BC_8,  SB_DQ_44        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"315    (BC_8,  SB_DQ_47        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"316    (BC_8,  SB_DQ_41        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"317    (BC_0,  SA_DQS_5        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"318    (BC_8,  SA_DQ_47        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"319    (BC_8,  SA_DQ_46        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"320    (BC_8,  SA_DQ_43        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"321    (BC_8,  SA_DQ_42        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"322    (BC_0,  SA_DQSB_5       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"323    (BC_8,  SA_DQ_40        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"324    (BC_8,  SA_DQ_45        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"325    (BC_8,  SA_DQ_44        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"326    (BC_8,  SA_DQ_41        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"327    (BC_0,  SB_DQS_6        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"328    (BC_8,  SB_DQ_52        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"329    (BC_8,  SB_DQ_55        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"330    (BC_8,  SB_DQ_54        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"331    (BC_8,  SB_DQ_50        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"332    (BC_0,  SB_DQSB_6       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"333    (BC_8,  SB_DQ_53        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"334    (BC_8,  SB_DQ_51        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"335    (BC_8,  SB_DQ_49        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"336    (BC_8,  SB_DQ_48        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"337    (BC_0,  SA_DQS_6        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"338    (BC_8,  SA_DQ_50        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"339    (BC_8,  SA_DQ_54        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"340    (BC_8,  SA_DQ_55        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"341    (BC_8,  SA_DQ_51        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"342    (BC_0,  SA_DQSB_6       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"343    (BC_8,  SA_DQ_49        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"344    (BC_8,  SA_DQ_53        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"345    (BC_8,  SA_DQ_52        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"346    (BC_8,  SA_DQ_48        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"347    (BC_0,  SB_DQS_7        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"348    (BC_8,  SB_DQ_58        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"349    (BC_8,  SB_DQ_59        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"350    (BC_8,  SB_DQ_62        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"351    (BC_8,  SB_DQ_63        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"352    (BC_0,  SB_DQSB_7       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"353    (BC_8,  SB_DQ_57        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"354    (BC_8,  SB_DQ_56        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"355    (BC_8,  SB_DQ_60        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"356    (BC_8,  SB_DQ_61        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"357    (BC_0,  SA_DQS_7        ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"358    (BC_8,  SA_DQ_59        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"359    (BC_8,  SA_DQ_63        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"360    (BC_8,  SA_DQ_62        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"361    (BC_8,  SA_DQ_58        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"362    (BC_0,  SA_DQSB_7       ,       output3,        x       ,       101     ,       1       ,       z       ), " &
+"363    (BC_8,  SA_DQ_56        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"364    (BC_8,  SA_DQ_57        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"365    (BC_8,  SA_DQ_60        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"366    (BC_8,  SA_DQ_61        ,       bidir,  x       ,       101     ,       1       ,       z       ), " &
+"367    (BC_1,  *       ,       internal,       x                                                       ), " &
+"368    (BC_8,  VIDSOUT ,       bidir,  x       ,       410     ,       1       ,       WEAK1   ), " &
+"369    (BC_1,  VIDALERTB       ,       input,  x                                                       ), " &
+"370    (BC_1,  *       ,       internal,       x                                                       ), " &
+"371    (BC_1,  VIDSCLK ,       output3,        x       ,       410     ,       1       ,       WEAK1   ), " &
+"372    (BC_1,  *       ,       internal,       x                                                       ), " &
+"373    (BC_1,  *       ,       internal,       x                                                       ), " &
+"374    (BC_1,  *       ,       internal,       x                                                       ), " &
+"375    (BC_1,  PM_SYNC ,       input,  x                                                       ), " &
+"376    (BC_1,  CATERRB ,       output3,        x       ,       410     ,       1       ,       z       ), " &
+"377    (BC_1,  RESETB  ,       input,  x                                                       ), " &
+"378    (BC_8,  PROCHOTB        ,       bidir,  x       ,       410     ,       1       ,       WEAK1   ), " &
+"379    (BC_1,  THERMTRIPB      ,       output3,        x       ,       410     ,       1       ,       z       ), " &
+"380    (BC_1,  PECI    ,       input,  x                                                     ), " &
+"381    (BC_8,  CFG_4   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"382    (BC_8,  CFG_0   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"383    (BC_8,  CFG_1   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"384    (BC_8,  CFG_3   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"385    (BC_8,  CFG_16  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"386    (BC_8,  CFG_2   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"387    (BC_8,  CFG_5   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"388    (BC_8,  CFG_6   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"389    (BC_8,  CFG_7   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"390    (BC_8,  CFG_8   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"391    (BC_8,  CFG_11  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"392    (BC_8,  CFG_9   ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"393    (BC_8,  CFG_10  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"394    (BC_8,  CFG_17  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"395    (BC_8,  CFG_13  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"396    (BC_8,  CFG_12  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"397    (BC_8,  CFG_15  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"398    (BC_8,  CFG_14  ,       bidir,  x       ,       410     ,       1       ,       PULL1   ), " &
+"399    (BC_8,  BPMB_6  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"400    (BC_8,  BPMB_7  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"401    (BC_8,  BPMB_5  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"402    (BC_8,  BPMB_4  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"403    (BC_8,  BPMB_2  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"404    (BC_8,  BPMB_3  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"405    (BC_8,  BPMB_1  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"406    (BC_8,  BPMB_0  ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"407    (BC_1,  *       ,       internal,       x                                                       ), " &
+"408    (BC_8,  PRDYB   ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"409    (BC_8,  PREQB   ,       bidir,  x       ,       410     ,       1       ,       z       ), " &
+"410    (BC_1,  *       ,       control,        1                                                       ), " &
+"411    (BC_1,  *       ,       internal,       x                                                       ) " ;
+
+-- Advanced I/O Description for 1149.6 AC-coupled and differential pins
+   attribute AIO_COMPONENT_CONFORMANCE of IVG_BGA : entity is "STD_1149_6_2003" ;
+
+-- 1149.6 7.5.2 Define optional Pulse width timing requirements for EXTEST_PULSE
+--              (specify minimum wait time in RUTI, in seconds)
+   attribute AIO_EXTEST_Pulse_Execution of IVG_BGA : entity is "wait_duration 10.0e-6" ;
+
+-- 1149.6 7.5.3 Define optional requirements for EXTEST_TRAIN
+--              (5.4.2 permission: specify min # of pulses produced during extest_train)
+   attribute AIO_EXTEST_Train_Execution of IVG_BGA : entity is "train 10" ;
+
+-- Define charactistics of any AC pins
+   attribute AIO_Pin_Behavior of IVG_BGA : entity is
+
+"DMI_RXB_2              [3]     :       HP_time=2.0e-9  ; " &
+"DMI_RX_2               [4]     :       HP_time=2.0e-9  ; " &
+"DMI_TX_2                                       ; " &
+"DMI_RXB_3              [6]     :       HP_time=2.0e-9  ; " &
+"DMI_RX_3               [7]     :       HP_time=2.0e-9  ; " &
+"DMI_TX_3                                       ; " &
+"DMI_RXB_0              [9]     :       HP_time=2.0e-9  ; " &
+"DMI_RX_0               [10]    :       HP_time=2.0e-9  ; " &
+"DMI_TX_0                                       ; " &
+"DMI_RXB_1              [12]    :       HP_time=2.0e-9  ; " &
+"DMI_RX_1               [13]    :       HP_time=2.0e-9  ; " &
+"DMI_TX_1                                       ; " &
+"PCIE2_RXB_2            [15]    :       HP_time=2.0e-9  ; " &
+"PCIE2_RX_2             [16]    :       HP_time=2.0e-9  ; " &
+"PCIE2_TX_2                                     ; " &
+"PCIE2_RXB_3            [18]    :       HP_time=2.0e-9  ; " &
+"PCIE2_RX_3             [19]    :       HP_time=2.0e-9  ; " &
+"PCIE2_TX_3                                     ; " &
+"PCIE2_RXB_0            [21]    :       HP_time=2.0e-9  ; " &
+"PCIE2_RX_0             [22]    :       HP_time=2.0e-9  ; " &
+"PCIE2_TX_0                                     ; " &
+"PCIE2_RXB_1            [24]    :       HP_time=2.0e-9  ; " &
+"PCIE2_RX_1             [25]    :       HP_time=2.0e-9  ; " &
+"PCIE2_TX_1                                     ; " &
+"PCIE1_RXB_14           [27]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_14            [28]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_14                                    ; " &
+"PCIE1_RXB_15           [30]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_15            [31]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_15                                    ; " &
+"PCIE1_RXB_12           [33]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_12            [34]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_12                                    ; " &
+"PCIE1_RXB_13           [36]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_13            [37]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_13                                    ; " &
+"PCIE1_RXB_10           [39]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_10            [40]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_10                                    ; " &
+"PCIE1_RXB_11           [42]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_11            [43]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_11                                    ; " &
+"PCIE1_RXB_0            [45]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_0             [46]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_0                                     ; " &
+"PCIE1_RXB_1            [48]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_1             [49]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_1                                     ; " &
+"PCIE1_RXB_2            [51]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_2             [52]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_2                                     ; " &
+"PCIE1_RXB_3            [54]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_3             [55]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_3                                     ; " &
+"PCIE1_RXB_4            [57]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_4             [58]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_4                                     ; " &
+"PCIE1_RXB_5            [60]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_5             [61]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_5                                     ; " &
+"PCIE1_RXB_6            [63]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_6             [64]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_6                                     ; " &
+"PCIE1_RXB_7            [66]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_7             [67]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_7                                     ; " &
+"PCIE1_RXB_8            [69]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_8             [70]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_8                                     ; " &
+"PCIE1_RXB_9            [72]    :       HP_time=2.0e-9  ; " &
+"PCIE1_RX_9             [73]    :       HP_time=2.0e-9  ; " &
+"PCIE1_TX_9                                      ";
+
+
+attribute EXTEST_TOGGLE_CELLS : BSDL_EXTENSION;
+----Extest Toggle Extension----
+
+-- Tcell:
+-- The boundary register cell number that allows the associated "Signal"(s)
+-- output(s) to toggle at ?the TCK frequency when the "Tcell" contains the
+-- "Tval" value, the EXTEST_TOGGLE command is active and the TAP state machine
+-- is in Run-Test-Idle.
+
+-- Tval:
+-- The value required in the "Tcell" of the boundary register that allows the
+-- associated "Signal"(s) output(s) to toggle at ?the TCK frequency when the
+-- "Tcell" contains the "Tval" value, the EXTEST_TOGGLE command is active and
+-- The TAP state machine is in Run-Test-Idle.
+
+--   Options: 0 = Output toggles when "Tcell" is set to zero
+--            1 = Output toggles when "Tcell" is set to one
+
+-- DI/PS/SE:
+-- Differential/Pseudo Single Ended/Single Ended. "Tcell" will enable toggling
+-- one output if Pseudo Single Ended or Single Ended, and enable toggling two
+-- outputs if differential.
+
+-- Note: Pseudo Single Ended is one output leg of a Differential pair output
+--       that will be configured to toggle. "PS" looks much like "SE" mode
+--       other than there could be more "Treq" parameters for proper operation.
+
+--   Options: DI = Differential (two differential output legs toggle
+--                 simultaneously)
+--            PS = Pseudo Single Ended (one leg of a differential can toggle
+--                 independent of the other)
+--            SE = Single Ended (one output will Toggle)
+
+-- Signal:
+-- Associates the signal name to the "Tcell" number for the EXTEST_TOGGLE
+-- instruction and also represents The positive output of a Differential pair.
+-- a Signal name defined in The PHYSICAL_PIN_MAP area of The BSDL file is
+-- required for this field.
+
+-- DiffNeg:
+-- When both legs of the differential pair are controlled by the same "Tcell",
+-- "DiffNeg" identifies the negative leg of the differential pair. A signal
+-- name defined in The PHYSICAL_PIN_MAP area of The BSDL file is required for
+-- this field.
+
+-- DiffMode:
+-- Describes if The Differential pair outputs are simultaneously driven to The
+-- same logic state or to opposite logic states.
+
+--   Options: OPPO = Simultaneous 1/0 or 0/1 logic levels.
+--           SAME = Simultaneous 1/1 or 0/0 logic levels.
+
+-- Treq:
+-- The field contains values required in other boundary register cells that
+-- enable the described "Signal" to toggle. The field originated to support
+-- pseudo single ended but is not limited to that use. 'cell# = value'
+
+--   Example: '510=1, 511=0'
+
+-- Single quotes Define The field with commas defining each entry. there is no
+-- limit to The number of entries.
+
+-- The following would typically follow what has already been defined through IEEE 1149.1 and
+-- 1149.6 syntax in the BSDL file.
+
+-- Ccell:
+-- The control cell number that enables The output Signal(s) to Drive out.
+
+-- Disval:
+-- The logic value placed into The control cell that disables The Signal(s)
+-- output(s) from driving.
+
+--   Options: 0 = Output(s) not driven when zero
+--            1 = output(s) not driven when one
+
+-- Rslt:
+-- The resulting state The output(s) maintains when disabled.
+
+--   Options:     Z = High Impedance
+--                WEAK0 = External pull down
+--                WEAK1 = External pull up
+--                PULL0 = internal pull down
+--                PULL1 = internal pull up
+
+
+   attribute EXTEST_TOGGLE_CELLS  of IVG_BGA : entity is
+
+--  {Tcell,     Tval,   DI/DP/SE,       Signal, DiffNeg,        DiffMode,       Treq,   Ccell,  Disval, Rslt}
+"{ 102,         1,      SE,     SB_DQS_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 103,         1,      SE,     SB_DQ_2 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 104,         1,      SE,     SB_DQ_6 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 105,         1,      SE,     SB_DQ_7 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 106,         1,      SE,     SB_DQ_3 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 107,         1,      SE,     SB_DQSB_0       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 108,         1,      SE,     SB_DQ_1 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 109,         1,      SE,     SB_DQ_4 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 110,         1,      SE,     SB_DQ_5 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 111,         1,      SE,     SB_DQ_0 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 112,         1,      SE,     SA_DQS_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 113,         1,      SE,     SA_DQ_6 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 114,         1,      SE,     SA_DQ_3 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 115,         1,      SE,     SA_DQ_2 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 116,         1,      SE,     SA_DQ_7 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 117,         1,      SE,     SA_DQSB_0       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 118,         1,      SE,     SA_DQ_1 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 119,         1,      SE,     SA_DQ_5 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 120,         1,      SE,     SA_DQ_0 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 121,         1,      SE,     SA_DQ_4 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 122,         1,      SE,     SB_DQS_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 123,         1,      SE,     SB_DQ_14        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 124,         1,      SE,     SB_DQ_11        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 125,         1,      SE,     SB_DQ_15        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 126,         1,      SE,     SB_DQ_10        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 127,         1,      SE,     SB_DQSB_1       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 128,         1,      SE,     SB_DQ_9 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 129,         1,      SE,     SB_DQ_12        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 130,         1,      SE,     SB_DQ_13        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 131,         1,      SE,     SB_DQ_8 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 132,         1,      SE,     SA_DQS_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 133,         1,      SE,     SA_DQ_14        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 134,         1,      SE,     SA_DQ_10        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 135,         1,      SE,     SA_DQ_11        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 136,         1,      SE,     SA_DQ_15        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 137,         1,      SE,     SA_DQSB_1       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 138,         1,      SE,     SA_DQ_9 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 139,         1,      SE,     SA_DQ_8 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 140,         1,      SE,     SA_DQ_12        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 141,         1,      SE,     SA_DQ_13        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 142,         1,      SE,     SB_DQS_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 143,         1,      SE,     SB_DQ_22        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 144,         1,      SE,     SB_DQ_19        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 145,         1,      SE,     SB_DQ_23        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 146,         1,      SE,     SB_DQ_18        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 147,         1,      SE,     SB_DQSB_2       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 148,         1,      SE,     SB_DQ_17        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 149,         1,      SE,     SB_DQ_21        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 150,         1,      SE,     SB_DQ_20        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 151,         1,      SE,     SB_DQ_16        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 152,         1,      SE,     SA_DQS_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 153,         1,      SE,     SA_DQ_19        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 154,         1,      SE,     SA_DQ_18        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 155,         1,      SE,     SA_DQ_23        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 156,         1,      SE,     SA_DQ_17        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 157,         1,      SE,     SA_DQSB_2       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 158,         1,      SE,     SA_DQ_16        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 159,         1,      SE,     SA_DQ_20        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 160,         1,      SE,     SA_DQ_21        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 161,         1,      SE,     SA_DQ_22        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 162,         1,      SE,     SB_DQS_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 163,         1,      SE,     SB_DQ_26        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 164,         1,      SE,     SB_DQ_25        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 165,         1,      SE,     SB_DQ_29        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 166,         1,      SE,     SB_DQ_27        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 167,         1,      SE,     SB_DQSB_3       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 168,         1,      SE,     SB_DQ_31        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 169,         1,      SE,     SB_DQ_28        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 170,         1,      SE,     SB_DQ_24        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 171,         1,      SE,     SB_DQ_30        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 172,         1,      SE,     SA_DQS_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 173,         1,      SE,     SA_DQ_31        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 174,         1,      SE,     SA_DQ_26        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 175,         1,      SE,     SA_DQ_27        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 176,         1,      SE,     SA_DQ_30        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 177,         1,      SE,     SA_DQSB_3       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 178,         1,      SE,     SA_DQ_29        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 179,         1,      SE,     SA_DQ_28        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 180,         1,      SE,     SA_DQ_25        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 181,         1,      SE,     SA_DQ_24        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 182,         1,      SE,     SB_DQS_8        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 183,         1,      SE,     SB_ECC_CB_6     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 184,         1,      SE,     SB_ECC_CB_1     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 185,         1,      SE,     SB_ECC_CB_0     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 186,         1,      SE,     SB_ECC_CB_2     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 187,         1,      SE,     SB_DQSB_8       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 188,         1,      SE,     SB_ECC_CB_7     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 189,         1,      SE,     SB_ECC_CB_4     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 190,         1,      SE,     SB_ECC_CB_5     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 191,         1,      SE,     SB_ECC_CB_3     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 192,         1,      SE,     SA_DQS_8        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 193,         1,      SE,     SA_ECC_CB_1     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 194,         1,      SE,     SA_ECC_CB_7     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 195,         1,      SE,     SA_ECC_CB_3     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 196,         1,      SE,     SA_ECC_CB_2     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 197,         1,      SE,     SA_DQSB_8       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 198,         1,      SE,     SA_ECC_CB_5     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 199,         1,      SE,     SA_ECC_CB_0     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 200,         1,      SE,     SA_ECC_CB_4     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 201,         1,      SE,     SA_ECC_CB_6     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 202,         1,      SE,     SB_MA_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 203,         1,      SE,     SB_MA_3         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 204,         1,      SE,     SB_MA_5         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 205,         1,      SE,     SB_MA_6         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 206,         1,      SE,     SB_MA_1         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 207,         1,      SE,     SB_MA_7         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 208,         1,      SE,     SB_MA_12        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 209,         1,      SE,     SB_MA_4         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 210,         1,      SE,     SB_MA_11        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 211,         1,      SE,     SB_MA_9         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 212,         1,      SE,     SB_MA_14        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 213,         1,      SE,     SB_MA_8         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 214,         1,      SE,     SB_BS_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 215,         1,      SE,     SB_MA_15        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 216,         1,      SE,     SB_CKE_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 217,         1,      SE,     SB_CKE_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 218,         1,      SE,     SB_CKE_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 219,         1,      SE,     SB_CKE_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 220,         1,      SE,     SA_CKE_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 221,         1,      SE,     SA_CKE_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 222,         1,      SE,     SA_CKE_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 223,         1,      SE,     SA_CKE_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 224,         1,      SE,     SA_MA_15        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 225,         1,      SE,     SA_BS_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 226,         1,      SE,     SA_MA_5         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 227,         1,      SE,     SA_MA_8         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 228,         1,      SE,     SA_MA_9         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 229,         1,      SE,     SA_MA_11        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 230,         1,      SE,     SA_MA_7         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 231,         1,      SE,     SA_MA_12        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 232,         1,      SE,     SA_MA_14        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 233,         1,      SE,     SA_MA_1         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 234,         1,      SE,     SA_MA_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 235,         1,      SE,     SA_MA_3         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 236,         1,      SE,     SA_MA_6         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 237,         1,      SE,     SA_MA_4         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 238,         1,      SE,     SM_DRAMRSTB     ,        ,       ,       ,      100,    1,      z } , " &
+"{ 239,         1,      SE,     SA_CKB_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 240,         1,      SE,     SA_CKB_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 241,         1,      SE,     SA_CK_3         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 242,         1,      SE,     SA_CK_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 243,         1,      SE,     SA_CKB_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 244,         1,      SE,     SA_CKB_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 245,         1,      SE,     SA_CK_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 246,         1,      SE,     SA_CK_1         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 247,         1,      SE,     SB_CKB_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 248,         1,      SE,     SB_CK_1 ,        ,       ,       ,      100,    1,      z } , " &
+"{ 249,         1,      SE,     SB_CKB_0                ,        ,       ,       ,      100,    1,      z } , " &
+"{ 250,         1,      SE,     SB_CK_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 251,         1,      SE,     SB_CKB_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 252,         1,      SE,     SB_CK_3         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 253,         1,      SE,     SB_CKB_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 254,         1,      SE,     SB_CK_2         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 255,         1,      SE,     SB_MA_13        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 256,         1,      SE,     SB_ODT_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 257,         1,      SE,     SB_ODT_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 258,         1,      SE,     SB_CSB_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 259,         1,      SE,     SB_CSB_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 260,         1,      SE,     SB_CSB_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 261,         1,      SE,     SB_ODT_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 262,         1,      SE,     SB_WEB          ,        ,       ,       ,      100,    1,      z } , " &
+"{ 263,         1,      SE,     SB_ODT_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 264,         1,      SE,     SB_CSB_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 265,         1,      SE,     SB_BS_1         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 266,         1,      SE,     SB_CASB         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 267,         1,      SE,     SB_RASB         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 268,         1,      SE,     SB_BS_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 269,         1,      SE,     SB_MA_10        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 270,         1,      SE,     SB_MA_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 271,         1,      SE,     SA_MA_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 272,         1,      SE,     SA_MA_10        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 273,         1,      SE,     SA_BS_1         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 274,         1,      SE,     SA_BS_0         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 275,         1,      SE,     SA_WEB          ,        ,       ,       ,      100,    1,      z } , " &
+"{ 276,         1,      SE,     SA_RASB         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 277,         1,      SE,     SA_CSB_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 278,         1,      SE,     SA_CSB_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 279,         1,      SE,     SA_CASB         ,        ,       ,       ,      100,    1,      z } , " &
+"{ 280,         1,      SE,     SA_ODT_0        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 281,         1,      SE,     SA_ODT_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 282,         1,      SE,     SA_ODT_2        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 283,         1,      SE,     SA_CSB_1        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 284,         1,      SE,     SA_MA_13        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 285,         1,      SE,     SA_CSB_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 286,         1,      SE,     SA_ODT_3        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 287,         1,      SE,     SB_DQS_4        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 288,         1,      SE,     SB_DQ_37        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 289,         1,      SE,     SB_DQ_33        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 290,         1,      SE,     SB_DQ_36        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 291,         1,      SE,     SB_DQ_32        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 292,         1,      SE,     SB_DQSB_4       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 293,         1,      SE,     SB_DQ_34        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 294,         1,      SE,     SB_DQ_39        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 295,         1,      SE,     SB_DQ_38        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 296,         1,      SE,     SB_DQ_35        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 297,         1,      SE,     SA_DQS_4        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 298,         1,      SE,     SA_DQ_39        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 299,         1,      SE,     SA_DQ_34        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 300,         1,      SE,     SA_DQ_35        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 301,         1,      SE,     SA_DQ_37        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 302,         1,      SE,     SA_DQSB_4       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 303,         1,      SE,     SA_DQ_38        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 304,         1,      SE,     SA_DQ_33        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 305,         1,      SE,     SA_DQ_36        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 306,         1,      SE,     SA_DQ_32        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 307,         1,      SE,     SB_DQS_5        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 308,         1,      SE,     SB_DQ_46        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 309,         1,      SE,     SB_DQ_43        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 310,         1,      SE,     SB_DQ_42        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 311,         1,      SE,     SB_DQ_40        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 312,         1,      SE,     SB_DQSB_5       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 313,         1,      SE,     SB_DQ_45        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 314,         1,      SE,     SB_DQ_44        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 315,         1,      SE,     SB_DQ_47        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 316,         1,      SE,     SB_DQ_41        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 317,         1,      SE,     SA_DQS_5        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 318,         1,      SE,     SA_DQ_47        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 319,         1,      SE,     SA_DQ_46        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 320,         1,      SE,     SA_DQ_43        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 321,         1,      SE,     SA_DQ_42        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 322,         1,      SE,     SA_DQSB_5       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 323,         1,      SE,     SA_DQ_40        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 324,         1,      SE,     SA_DQ_45        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 325,         1,      SE,     SA_DQ_44        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 326,         1,      SE,     SA_DQ_41        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 327,         1,      SE,     SB_DQS_6        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 328,         1,      SE,     SB_DQ_52        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 329,         1,      SE,     SB_DQ_55        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 330,         1,      SE,     SB_DQ_54        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 331,         1,      SE,     SB_DQ_50        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 332,         1,      SE,     SB_DQSB_6       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 333,         1,      SE,     SB_DQ_53        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 334,         1,      SE,     SB_DQ_51        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 335,         1,      SE,     SB_DQ_49        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 336,         1,      SE,     SB_DQ_48        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 337,         1,      SE,     SA_DQS_6        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 338,         1,      SE,     SA_DQ_50        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 339,         1,      SE,     SA_DQ_54        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 340,         1,      SE,     SA_DQ_55        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 341,         1,      SE,     SA_DQ_51        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 342,         1,      SE,     SA_DQSB_6       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 343,         1,      SE,     SA_DQ_49        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 344,         1,      SE,     SA_DQ_53        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 345,         1,      SE,     SA_DQ_52        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 346,         1,      SE,     SA_DQ_48        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 347,         1,      SE,     SB_DQS_7        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 348,         1,      SE,     SB_DQ_58        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 349,         1,      SE,     SB_DQ_59        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 350,         1,      SE,     SB_DQ_62        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 351,         1,      SE,     SB_DQ_63        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 352,         1,      SE,     SB_DQSB_7       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 353,         1,      SE,     SB_DQ_57        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 354,         1,      SE,     SB_DQ_56        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 355,         1,      SE,     SB_DQ_60        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 356,         1,      SE,     SB_DQ_61        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 357,         1,      SE,     SA_DQS_7        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 358,         1,      SE,     SA_DQ_59        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 359,         1,      SE,     SA_DQ_63        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 360,         1,      SE,     SA_DQ_62        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 361,         1,      SE,     SA_DQ_58        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 362,         1,      SE,     SA_DQSB_7       ,        ,       ,       ,      100,    1,      z } , " &
+"{ 363,         1,      SE,     SA_DQ_56        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 364,         1,      SE,     SA_DQ_57        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 365,         1,      SE,     SA_DQ_60        ,        ,       ,       ,      100,    1,      z } , " &
+"{ 366,         1,      SE,     SA_DQ_61        ,        ,       ,       ,      100,    1,      z } " ;
+
+
+   attribute DESIGN_WARNING  of IVG_BGA : entity is
+
+"       ---- DESIGN WARNING ----        " &
+"       1. Boundary-scan initialization requirement:    " &
+"          After applying voltage to power pins, the following initialization sequence  " &
+"          must be completed PRIOR to first TAP accesses during application of the      " &
+"          boundary-scan test patterns: " &
+"               " &
+"          a. SM_DRAMPWROK pin must be driven HIGH and remain driven HIGH during        " &
+"              the boundary-scan test patterns execution        " &
+"          b. UNCOREPWRGOOD pin must be driven HIGH and remain driven HIGH during       " &
+"              the boundary-scan test patterns execution        " &
+"          c. The BCLK pins must be clocked at least 1 usec beforre and 1 msec after    " &
+"              UNCOREPWRGOOD is asserted. Afrterwards the BCLK pins may be      " &
+"              clocked or stopped during boundary-scan test execution.  " &
+"               " &
+"       2. Other Notes: " &
+"          a. VIDSOUT, VIDSCLK and PROCHOTB pins are open-drain and must have   " &
+"              pullup for it to read as weak 1. " &
+"          b. Data captured into Boundary-scan during SAMPLE may be invalid for some    " &
+"              pins.    " &
+"               " &
+"       3. Notes regarding HIGHZ:       " &
+"          a. The Active-low System-Memory Reset output pin (SM_DRAMRSTB) does  " &
+"              not enter High-impedance state during HIGHZ.     " &
+"               " &
+"       5. After entry into EXTEST*, SAMPLE-PRELOAD, CLAMP, or HIGHZ,  full     " &
+"           power-cycle of component is required before returning to Functional mode of " &
+"           operation.  " &
+"               " &
+"       6. 1149.6 Test Receiver parameters, documented per 1149.6 Rule 7.2.1(e).        " &
+"          ---------------------------------------------------------------------        " &
+"          Nominal values (applies to all test receivers):      " &
+"          1) DeltaVMin          150 mV " &
+"          2) Ttrans                100 ps      " &
+"          3) DeltaVMax         250 mV  " &
+"          4) Vthreshold         350 mV " &
+"          5) VHyst_Level      50 mV    " &
+"          6) Thyst                  0.5 ns     " &
+"          7) VHyst_Edge       90 mV    " &
+"          8) THP                     2 ns      " &
+"          9) TLP                     N/A       " &
+"               " &
+"       **************************************  " &
+"       ***** ISSUES WITH THIS COMPONENT: ****  " &
+"       **************************************  " &
+"               " &
+"       7. PCIE1_RX* , PCIE2_RX* and DMI_RX* pins 1149.6 Test Receivers " &
+"          are NOT FULLY FUNCTIONAL. Captured values will show invalid response         " &
+"          during EXTEST* instructions. For more details read attachted BSDL    " &
+"          disclaimer document. " &
+"               " &
+"               " ;
+   end IVG_BGA;
+
+

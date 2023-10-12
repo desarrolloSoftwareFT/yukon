@@ -1,0 +1,27 @@
+!!!!    2    0    1 1451292559  V4e3b                                         
+
+!  32.768kHz
+!  XTAL,32.768kHz,25.0 ppm,SMD
+
+test powered analog
+   power pins 2,4
+   nonanalog pins 1
+
+   test "Out"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out"
+   connect rcva to pins 3
+
+   detector frequency, expect 25.00M, gate 1
+   measure 25.0M * 1.05, 25.0M * 0.95
+end subtest
+
+
+!
+!  End test
+!

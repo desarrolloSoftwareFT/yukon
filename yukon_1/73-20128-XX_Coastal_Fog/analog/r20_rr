@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538512  V491a                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:51 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "SRT_PMBUS_RT_VDD_AVDD_SDA"
+resistor 4.75k,20.00,20.00,re4,wb,ar200m,ed
+! "r20_rr" test.

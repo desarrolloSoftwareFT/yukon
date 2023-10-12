@@ -1,0 +1,20 @@
+!!!!   21    2    1 1007586002   0000                                         
+
+! 25-1119-01 LED,1210,SM,SING,BICO,R/G
+! Dual LED
+
+diode "pin_1_2", 2.40, 1.40, nr
+diode "pin_3_4", 2.40, 1.40, nr
+
+external pins 1
+   device "pin_1_2" pins "C"
+
+external pins 2
+   device "pin_1_2" pins "A"
+
+external pins 3
+   device "pin_3_4" pins "C"
+
+external pins 4
+   device "pin_3_4" pins "A"
+

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539254  Vcc8b                                         
+! IPG: rev 09.20p  Mon Jun 28 12:01:25 2021
+disconnect all
+connect s to "P3_3V"
+connect i to "HOST_SCL_3V3_SRT_SA"
+resistor 1k,20.00,20.00,re3,ar100m,ed
+! "r233_sa" test.

@@ -1,0 +1,16 @@
+!!!!   21    2    1 1368170955  Ve72d                                         
+
+diode "cr1_3", 860m, 400m, nr
+diode "cr3_2", 860m, 400m, nr
+
+external pins 1
+   device "cr1_3" pins "C"
+
+external pins 2
+   device "cr3_2" pins "C"
+
+external pins 3
+   device "cr1_3" pins "A"
+   device "cr3_2" pins "A"
+
+

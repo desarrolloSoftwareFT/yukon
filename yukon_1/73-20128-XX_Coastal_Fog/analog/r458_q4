@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626157599  V3976                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:08 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "QSFP_SCL<9>"; a to "QSFP_SCL<9>"
+connect i to "UNNAMED_6_RES_I550_B_Q4"; b to "UNNAMED_6_RES_I550_B_Q4"
+resistor 33.2,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "r458_q4" is a limited test.
+! DUT: nominal 33.2, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 33.532, low 32.868
+! TEST: high limit 33.854, low limit 32.718
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

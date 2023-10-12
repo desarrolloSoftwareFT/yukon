@@ -1,0 +1,306 @@
+!!!!    6    0    1 1643009993  V6a7e                                         
+!######################################################
+! Part Name ir35215
+! Cisco PN: xx-xxxxx-xx
+! Tester: Agilent 3070
+! NOTES: change default device desinator
+! TRANSLATED FROM: 17-15793-03-00_RT_MTK_3+2_120A_OCP08042021.txt
+!######################################################
+
+test digital; CAP_DATA(*)
+
+vector cycle 2u
+receive delay 1.9u
+
+default device "u1_rr"
+assign SDA to pins 9
+assign SCL to pins 10
+
+assign PROG_EN to pins 34 default "1"
+family LVT
+
+inputs SCL
+inputs PROG_EN
+bidirectional SDA
+capture SDA
+
+!######################################################
+
+vector INIT1
+ drive SDA
+ set SCL   to "1"
+ set SDA   to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SCL   to "k"
+ set SDA   to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SCL   to "k"
+ set SDA   to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+ vector R_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+!######################################################
+
+sub STRT
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ execute D_1
+ execute D_1
+end sub
+
+ sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WR_NACKED(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1    ! Nacknowledge bit
+ execute SK_11
+ execute SK_10
+ end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SK_11
+ execute D7
+ execute SK_10
+ execute SK_11
+ execute D6
+ execute SK_10
+ execute SK_11
+ execute D5
+ execute SK_10
+ execute SK_11
+ execute D4
+ execute SK_10
+ execute SK_11
+ execute D3
+ execute SK_10
+ execute SK_11
+ execute D2
+ execute SK_10
+ execute SK_11
+ execute D1
+ execute SK_10
+ execute SK_11
+ execute D0
+ execute SK_10
+ execute SK_21
+ execute D_0    ! Acknowledge bit
+ execute SK_20
+ execute SK_10
+end sub
+
+sub IC_ADDR(ADD7,ADD6,ADD5,ADD4,ADD3,ADD2,ADD1)
+ call STRT
+ execute ADD7
+ execute SK_21
+ execute SK_20
+ execute ADD6
+ execute SK_21
+ execute SK_20
+ execute ADD5
+ execute SK_21
+ execute SK_20
+ execute ADD4
+ execute SK_21
+ execute SK_20
+ execute ADD3
+ execute SK_21
+ execute SK_20
+ execute ADD2
+ execute SK_21
+ execute SK_20
+ execute ADD1
+ execute SK_21
+ execute SK_20
+end sub
+
+sub WR_COM
+ call IC_ADDR(D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ execute D_0 ! Write operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub RD_COM
+ call IC_ADDR(D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ execute D_1    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+!######################################################
+
+unit "Synchronize I2C Bus"
+ repeat 80 times
+  execute INIT1
+ end repeat
+ execute R_1
+ call STRT
+ call STOP
+ call STRT
+ call STOP
+ call STRT
+ call STOP
+end unit
+
+unit "Read Data from Reg x62"
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xff reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_0) ! x00 page0
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_0,D_0,D_1,D_0) ! x62
+ call STOP
+ call RD_COM
+ execute SK_11
+ execute R_X
+ execute SK_10
+ execute SK_11
+ execute R_X
+ execute SK_10
+ execute SK_11
+ execute R_X
+ execute SK_10
+ execute SK_11
+ execute R_X capture
+ execute SK_10
+ execute SK_11
+ execute R_X capture
+ execute SK_10
+ execute SK_11
+ execute R_X capture
+ execute SK_10
+ execute SK_11
+ execute R_X capture
+ execute SK_10
+ execute SK_11
+ execute R_X capture
+ execute SK_10
+ execute SK_21
+ execute D_0    ! Acknowledge bit
+ execute SK_20
+ execute SK_10
+ call STOP
+ fetch CAP_DATA(*)
+end unit

@@ -1,0 +1,31 @@
+
+<Test name = "u1_qa_config_capture">
+<FileList>
+<File name = "u1_qa_config_capture">
+<FilePath>C:/Agilent_ICT/boards/Coastal_Fog_73-20128-04_A1/digital/u1_qa_config_capture</FilePath>
+<LastModified>Mon Jan 24, 2022   3:44 pm</LastModified>
+</File>
+</FileList>
+<DeviceList>
+<Device name="u1_qa">
+<TestablePinList>
+<Pin name="9">
+<Type>Bidir</Type>
+<DriveLow value="true"/>
+<DriveHigh value="true"/>
+<ReceiveLow value="true"/>
+<ReceiveHigh value="true"/>
+</Pin>
+<Pin name="10">
+<Type>Input</Type>
+<DriveLow value="true"/>
+<DriveHigh value="true"/>
+</Pin>
+<Pin name="34">
+<Type>Input</Type>
+<DriveHigh value="true"/>
+</Pin>
+</TestablePinList>
+</Device>
+</DeviceList>
+</Test>

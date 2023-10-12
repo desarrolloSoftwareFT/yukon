@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852332   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:13 2021
+on failure
+   report parallel devices
+   report "r938"
+end on failure
+disconnect all
+connect i to "FPGA_SA_CORE_FREQ_SEL_1V8<1>"
+connect s to "GND"
+jumper 5.00k, re4, wb, ar200m, op
+! "r80_sa" test.
+off failure

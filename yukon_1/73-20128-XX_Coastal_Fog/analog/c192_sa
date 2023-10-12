@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538122  V2af8                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:02 2021
+disconnect all
+connect s to "CLK156P25M_MMPLL1_REFCLK_AC_N_SA"
+connect i to "CLK156M_SA_MMPLL1_N"
+capacitor 100n,30.00,30.00,fr1024,re3,wb,ar100m,nocomp,ed
+! "c192_sa" test.

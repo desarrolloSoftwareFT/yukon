@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539108  Va2f8                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:38 2021
+disconnect all
+connect s to "GND"
+connect i to "JTAG_TCK_SA_HDR_3V3"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r1198" test.

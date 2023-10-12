@@ -1,0 +1,219 @@
+!!!!    6    0    1 1031617975  Veb7f                                         
+!
+!***  All contents copyright 2006 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         N25Q032A13ESE40
+! Alias:             AT25DF321A-SH
+! Part Type:         VLSI
+! Description:       64M Bit Serial Flash Memory, SPI-bus
+! Manufacturer:      Micron, Adesto
+! Package Style:     8 pins SO
+! Created:           Oct 22, 2013 
+! Programmer:        SC Toh
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:     
+! Constraints:       
+! Cisco Part #:      16-4193-01, 17-11922-03
+
+sequential
+
+vector cycle 1u
+receive delay 800n
+
+assign VCC  to pins 8
+assign GND  to pins 4
+
+assign CSB  to pins 1
+assign WPB  to pins 3
+assign HLDB to pins 7 
+assign CLK  to pins 6
+assign DI   to pins 5
+assign DO   to pins 2
+
+power      VCC,GND
+inputs     CSB,DI,WPB,HLDB,CLK
+outputs    DO
+
+disable DO with CSB  to "1"
+
+family LVT
+
+set load on groups DO to pull up
+
+vector INIT1
+ set WPB  to "1"
+ set HLDB to "1"
+ set CSB  to "1"
+ set DI   to "0"
+ set CLK  to "0"
+ set DO   to "x"
+end vector
+
+vector KEEP1
+ set WPB  to "k"
+ set HLDB to "k"
+ set CSB  to "k"
+ set DI   to "k"
+ set CLK  to "0"
+ set DO   to "x"
+end vector
+
+vector CSB_0
+ initialize to KEEP1
+ set CSB    to "0"
+end vector
+
+vector CSB_1
+ initialize to KEEP1
+ set CSB    to "1"
+end vector
+
+vector WPB_0
+ initialize to KEEP1
+ set WPB    to "0"
+end vector
+
+vector WPB_1
+ initialize to KEEP1
+ set WPB    to "1"
+end vector
+
+vector HLDB_0
+ initialize to KEEP1
+ set HLDB   to "0"
+end vector
+
+vector HLDB_1
+ initialize to KEEP1
+ set HLDB   to "1"
+end vector
+
+vector CLK_0
+ initialize to KEEP1
+ set CLK    to "0"
+end vector
+
+vector CLK_1
+ initialize to KEEP1
+ set CLK    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP1
+ set DI     to "0"
+end vector
+
+vector D_1
+ initialize to KEEP1
+ set DI     to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set DO     to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set DO     to "1"
+end vector
+
+! *************************************************************************
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute CLK_1
+ execute D6
+ execute CLK_1
+ execute D5
+ execute CLK_1
+ execute D4
+ execute CLK_1
+ execute D3
+ execute CLK_1
+ execute D2
+ execute CLK_1
+ execute D1
+ execute CLK_1
+ execute D0
+ execute CLK_1
+end sub
+ 
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute CLK_1
+ execute D7
+ execute CLK_1
+ execute D6
+ execute CLK_1
+ execute D5
+ execute CLK_1
+ execute D4
+ execute CLK_1
+ execute D3
+ execute CLK_1
+ execute D2
+ execute CLK_1
+ execute D1
+ execute CLK_1
+ execute D0
+end sub
+
+! *************************************************************************
+
+unit "Read Status Register"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ execute R_1
+ execute CSB_0
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_1)  ! Read Bytes command
+ call RD(R_0,R_0,R_1,R_0, R_0,R_0,R_0,R_0)  ! Manufacturer
+ call RD(R_1,R_0,R_1,R_1, R_1,R_0,R_1,R_0)  ! Memory Type
+ call RD(R_0,R_0,R_0,R_1, R_0,R_1,R_1,R_0)  ! Memory Capacity
+ execute CSB_1
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)  ! Test CSB Stuck low
+end unit
+
+unit "Pin HLDB test"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ execute CSB_0
+ execute CSB_0
+ call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_1,D_1)  ! RDID, Read Device ID
+ call RD(R_0,R_0,R_1,R_0, R_0,R_0,R_0,R_0)  ! Manufacturer
+ execute HLDB_0
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)  ! DO HighZ
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)
+ execute HLDB_1
+ call RD(R_1,R_0,R_1,R_1, R_1,R_0,R_1,R_0)  ! Memory Type
+ call RD(R_0,R_0,R_0,R_1, R_0,R_1,R_1,R_0)  ! Memory Capacity
+ execute CSB_1
+end unit
+
+unit "Read Memory"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ execute CSB_0
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_1)  ! READ, Read Data
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Starting address $000
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ repeat 32 times
+  repeat 1024 times
+   execute CLK_1
+   execute R_0 compress   !read crc value
+  end repeat
+ end repeat
+ execute CSB_1
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)  ! Test CSB Stuck low
+end unit
+

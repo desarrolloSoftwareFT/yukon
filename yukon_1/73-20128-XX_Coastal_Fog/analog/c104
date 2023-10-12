@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852294   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:35 2021
+on failure
+   report parallel devices
+   report "c236"
+end on failure
+disconnect all
+connect i to "FIL_CLK125M_P3V3"
+connect s to "GND"
+jumper 5.00k, re4, wb, ar200m, op
+! "c104" test.
+off failure

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852400   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:21 2021
+disconnect all
+connect s to "JTAG_TMS_SES_1V8"
+connect i to "PWR_SA_P1V8"
+jumper 10.0k, re4, wb, ar100m, op
+! "r419_sa" test.

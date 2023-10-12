@@ -1,0 +1,45 @@
+!!!!    2    0    1 1279611796  Vd844                                         
+! IPG: rev 09.20p  Mon Jun 28 12:15:37 2021
+!IPG : Node NC_4765 is not accessible.
+!IPG : Node NC_4764 is not accessible.
+!IPG : Node NC_4766 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+!IPG : Node VDD_SW_01 is not accessible.
+test powered analog
+power pins 29,28,27,26,25,40,24,23,22,21,20,9,8,7,5,2
+nonanalog pins 37,34,35,39,1,31,3,4,38,36,6,41,33,32,19,18
+nonanalog pins 17,16,15,14,13,12,11,10
+
+ test "VIN"
+ test "VOUT"
+
+end test
+
+subtest "VIN"
+     connect i to pins 30
+     connect l to pins 5
+
+   detector dcv, expect 12.0
+   measure 12.0 * 1.05, 12.0 * 0.95
+end subtest
+
+
+subtest "VOUT"
+     connect i to nodes "PWR_SA_DVDD" !pins 19
+     connect l to pins 5
+
+   detector dcv, expect 0.765
+   measure 0.765 * 1.07, 0.765 * 0.93
+end subtest
+
+
+
+

@@ -1,0 +1,37 @@
+! Connect Test Dictionary created Thu Sep 30 16:29:01 2021
+! Copyright (c) Agilent Technologies, Inc. 1995-1996, 1998-2000, 2002-2003, 2006-2008
+! Chain:  U1_C1_U5_R3
+! Source: digital/u1_c1_connect_e
+! Output: digital/u1_c1_connect_e.vcl.x
+!
+U1_C1
+220
+!FrCell DvCell Dev Pin  Node               Signature
+   13   1    U1_C1 1    QSFP_LED_YEL_L<3> LH
+   27  15    U1_C1 10   QSFP_LED_GRN_L<3> LH
+   31  19    U1_C1 12   QSFP_LED_GRN_L<2> LH
+   33  21    U1_C1 13   QSFP_LED_YEL_L<2> LH
+   37  25    U1_C1 19   QSFP_LED_YEL_L<1> LH
+   51  39    U1_C1 26   QSFP_LED_GRN_L<1> LH
+   53  41    U1_C1 27   QSFP_LED_YEL_L<0> LH
+   63  51    U1_C1 35   QSFP_LED_GRN_L<0> LH
+   67  55    U1_C1 39   QSFP_LED_GRN_L<6> LH
+   69  57    U1_C1 40   QSFP_LED_YEL_L<6> LH
+   81  69    U1_C1 47   QSFP_LED_YEL_L<5> LH
+   87  75    U1_C1 50   QSFP_LED_GRN_L<5> LH
+   99  87    U1_C1 58   QSFP_LED_GRN_L<4> LH
+  101  89    U1_C1 59   QSFP_LED_YEL_L<4> LH
+  121 109    U1_C1 73   QSFP_LED_GRN_L<7> LH
+  135 123    U1_C1 82   QSFP_LED_YEL_L<7> LH
+  139 127    U1_C1 84   QSFP_LED_YEL_L<8> LH
+  141 129    U1_C1 85   QSFP_LED_GRN_L<8> LH
+  145 133    U1_C1 91   QSFP_LED_GRN_L<9> LH
+  159 147    U1_C1 98   QSFP_LED_YEL_L<9> LH
+  161 149    U1_C1 99   QSFP_LED_GRN_L<10> LH
+  171 159    U1_C1 107  QSFP_LED_YEL_L<10> LH
+  183 171    U1_C1 114  QSFP_LED_YEL_L<11> LH
+  185 173    U1_C1 115  QSFP_LED_GRN_L<11> LH
+  199 187    U1_C1 126  QSFP_LED_YEL_L<12> LH
+  201 189    U1_C1 127  QSFP_LED_GRN_L<12> LH
+  209 197    U1_C1 138  QSFP_LED_GRN_L<13> LH
+  219 207    U1_C1 143  QSFP_LED_YEL_L<13> LH

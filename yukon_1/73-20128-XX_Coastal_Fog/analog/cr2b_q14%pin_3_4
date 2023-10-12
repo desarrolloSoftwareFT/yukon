@@ -1,0 +1,7 @@
+!!!!    2    0    1 1631949017  Va593                                         
+! IPG: rev 09.20p  Mon Jun 28 12:13:07 2021
+disconnect all
+connect s to "QSFPB_GRN_LED_R_L_Q14"
+connect i to "P3_3VA"
+diode 2.60,1.53,idc20m,co4.4,ar2.25,ed,wa20m
+! "cr2b_q14%pin_3_4" test.

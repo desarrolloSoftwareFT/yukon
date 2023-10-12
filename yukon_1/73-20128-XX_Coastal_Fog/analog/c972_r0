@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538196  V2562                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:06 2021
+disconnect all
+connect s to "CLK_156M25_REF_AC_P_R0"
+connect i to "CLK156P25M_RT0_REFCLK_P"
+capacitor 100n,30.00,30.00,fr1024,re3,wb,ar100m,nocomp,ed
+! "c972_r0" test.

@@ -1,0 +1,35 @@
+!!!!   21    1    1 1375972015  V1597                                         
+
+diode "cr1", 800m, 400m, nr
+pin library "q1",  pn"nmosfet"
+diode "cr2", 800m, 400m, nr
+pin library "q2",  pn"nmosfet"
+
+
+external pins 1
+   device "q1" pins "D"
+   device "cr1" pins "C"
+
+external pins 2; noconnect
+
+external pins 3
+   device "q1" pins "G"
+
+external pins 4
+   device "q1" pins "S"
+   device "cr1" pins "A"
+
+external pins 6
+   device "q2" pins "D"
+   device "cr2" pins "C"
+
+external pins 7; noconnect
+external pins 8; noconnect
+
+external pins 5
+   device "q2" pins "G"
+
+external pins 9
+   device "q2" pins "S"
+   device "cr2" pins "A"
+

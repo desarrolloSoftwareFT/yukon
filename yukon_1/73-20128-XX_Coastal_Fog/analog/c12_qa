@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852287   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:28 2021
+on failure
+   report parallel devices
+   report "r12_qa"
+end on failure
+disconnect all
+connect s to "ISENRTN_QA"
+connect i to "ISEN2_QA"
+jumper 5.00k, re4, wb, ar200m, op
+! "c12_qa" test.
+off failure

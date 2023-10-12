@@ -1,0 +1,12 @@
+!!!!    2    0    1 1631929367   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:13:15 2021
+on failure
+report parallel devices
+report "r146"
+end on failure
+disconnect all
+connect s to "MIFPGA_LED_CTRL"
+connect i to "LED_BY_BMC_L"
+diode 550m,225m,idc10m,co3.2,ar997m,ed,wa20m
+! "cr12%cr" test.
+off failure

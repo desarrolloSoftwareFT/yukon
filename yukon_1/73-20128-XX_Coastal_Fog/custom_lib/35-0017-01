@@ -1,0 +1,12 @@
+!!!!    2    0    1 1005603530  V998f                                         
+test powered analog
+   test "VBAT"
+end test
+
+subtest  "VBAT"
+   connect i to pins  1
+   connect l to pins  2
+
+   detector dcv, expect -48.0
+   measure -44.5, -48.2
+end subtest

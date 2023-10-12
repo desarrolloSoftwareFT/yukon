@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852460   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:21 2021
+disconnect all
+connect s to "UNNAMED_1_RES_I132_A_3V3B"
+connect i to "UNNAMED_1_CAP_I133_A_3V3B"
+jumper 6.01, re1, ar200m
+! "r3_3v3b" test.

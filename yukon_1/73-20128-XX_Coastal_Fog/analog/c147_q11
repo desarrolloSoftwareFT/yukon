@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627538466  Vab22                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:12 2021
+on failure
+report parallel devices
+report "r54_q11 2.20k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_QSFP_PWR_EN<22>"
+capacitor 220n,30.00,30.00,fr1024,re2,ar20.0m,nocomp,ed
+! "c147_q11" test.
+off failure

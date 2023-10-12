@@ -1,0 +1,13 @@
+!!!!   21    2    1 1451367003  Va5f0                                         
+
+
+zener "cr", 3.3, 5, 5, nr
+
+external pins 3
+   device "cr" pins "C"
+
+external pins 2; noconnect
+
+external pins 1
+   device "cr" pins "A"
+

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538360  V9463                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:49 2021
+disconnect all
+connect s to "VDD_BOOT_R_93"
+connect i to "VDD_BOOT_93"
+capacitor 470n,30.00,30.00,fr1024,re2,ar50.0m,nocomp,ed
+! "c06_93_rr" test.

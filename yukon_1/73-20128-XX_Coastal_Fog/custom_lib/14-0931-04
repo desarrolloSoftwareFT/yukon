@@ -1,0 +1,37 @@
+!!!!   21    2    1 1608964054  V9840                                         
+! Part Type:            Power Off Analog
+! Description:          4.7 KOhms X 4 Isolated Resistor Pack
+! Manufacturer:         KOA, CTS, Beckman, Panasonic
+! Package Style:        8 pin CRA
+! Created:              20-Nov-2008
+! Programmer:           FangJi
+! Tester:               HP3070
+! Cisco Part #:         14-1007-01
+
+
+resistor "pin_2_7",  4.7k,  5,  5, f, nr
+resistor "pin_3_6",  4.7k,  5,  5, f, nr
+resistor "pin_4_5",  4.7k,  5,  5, f, nr
+
+external pins 1;noconnect
+
+external pins 2
+   device "pin_2_7" pins 1
+
+external pins 3
+   device "pin_3_6" pins 1
+
+external pins 4
+   device "pin_4_5" pins 1
+
+external pins 8;noconnect
+
+external pins 7
+   device "pin_2_7" pins 2
+
+external pins 6
+   device "pin_3_6" pins 2
+
+external pins 5
+   device "pin_4_5" pins 2
+

@@ -1,0 +1,446 @@
+!!!!    6    0    1  867438609  V74e2                                         
+!
+! Part Name:         LM75
+! Alias:             LM75CIM
+! Part Type:         VLSI
+! Description:       Digital Thermomter and Thermostat
+! Manufacturer:      National Semiconductor
+! Package Style:     8 pin DIP
+! Created:           May 24, 1998
+! Updated:           Dec 18, 2001, improved coverage
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-2649-01
+
+sequential
+
+vector cycle  10u
+receive delay 9u
+
+assign SDA to pins 1
+assign SCL to pins 2
+assign OSO to pins 3
+assign A2  to pins 5
+assign A1  to pins 6
+assign A0  to pins 7
+
+assign GND to pins 4
+assign VCC to pins 8
+
+power   VCC,GND
+inputs  SCL,A2,A1,A0
+outputs OSO
+bidirectional SDA
+
+disable SDA with SCL to "0"
+
+family LVT
+
+set load on groups SDA to pull up
+set load on groups OSO to pull up
+
+vector A_000
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "0"
+ set A1  to "0"
+ set A0  to "0"
+end vector
+
+vector A_001
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "0"
+ set A1  to "0"
+ set A0  to "1"
+end vector
+
+vector A_010
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "0"
+ set A1  to "1"
+ set A0  to "0"
+end vector
+
+vector A_011
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "0"
+ set A1  to "1"
+ set A0  to "1"
+end vector
+
+vector A_100
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "1"
+ set A1  to "0"
+ set A0  to "0"
+end vector
+
+vector A_101
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "1"
+ set A1  to "0"
+ set A0  to "1"
+end vector
+
+vector A_110
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "1"
+ set A1  to "1"
+ set A0  to "0"
+end vector
+
+vector A_111
+ set SDA to "1"
+ set SCL to "1"
+ set OSO to "x"
+ set A2  to "1"
+ set A1  to "1"
+ set A0  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SDA to "x"
+ set SCL to "k"
+ set OSO to "x"
+ set A2  to "k"
+ set A1  to "k"
+ set A0  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SDA to "k"
+ set SCL to "k"
+ set OSO to "x"
+ set A2  to "k"
+ set A1  to "k"
+ set A0  to "k"
+end vector
+
+vector SCL_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SCL_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SCL_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SCL_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector OSO_0
+ initialize to KEEP1
+ set OSO    to "0"
+end vector
+
+vector OSO_1
+ initialize to KEEP1
+ set OSO    to "1"
+end vector
+
+! ***********************************************************************
+
+vector DW0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector DW1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector DR0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector DR1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+! ***********************************************************************
+
+sub IDLE1
+ repeat 10 times
+  execute KEEP1
+ end repeat
+end sub
+
+sub STRTB
+ execute DW0
+ execute SCL_20
+end sub
+
+sub STOPB
+ execute SCL_21
+ execute DW0
+ execute DW1
+end sub
+
+sub WR(WD7,WD6,WD5,WD4,WD3,WD2,WD1,WD0) ! Write a byte
+ execute WD7
+ execute SCL_21
+ execute SCL_20
+ execute WD6
+ execute SCL_21
+ execute SCL_20
+ execute WD5
+ execute SCL_21
+ execute SCL_20
+ execute WD4
+ execute SCL_21
+ execute SCL_20
+ execute WD3
+ execute SCL_21
+ execute SCL_20
+ execute WD2
+ execute SCL_21
+ execute SCL_20
+ execute WD1
+ execute SCL_21
+ execute SCL_20
+ execute WD0
+ execute SCL_21
+ execute SCL_10
+ execute SCL_11
+ execute DR0     ! Acknowledge bit
+ execute SCL_10
+end sub
+
+! ***********************************************************************
+
+unit "Address = 000"
+ repeat 40 times
+  execute A_000
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW0,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW0,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 001"
+ repeat 40 times
+  execute A_001
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW0,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW0,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 010"
+ repeat 40 times
+  execute A_010
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW1,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW1,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 011"
+ repeat 40 times
+  execute A_011
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW1,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW0,DW1,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 100"
+ repeat 40 times
+  execute A_100
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW0,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW0,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 101"
+ repeat 40 times
+  execute A_101
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW0,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW0,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 110"
+ repeat 40 times
+  execute A_110
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW1,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW1,DW0,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+
+! ***********************************************************************
+
+unit "Address = 111"
+ repeat 40 times
+  execute A_111
+ end repeat
+ execute DR1
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW1,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW1,DW0,DW0) ! Polarity = 1, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_0                             ! OSO = 0, below limit
+
+ call STRTB                                ! Write Pointer, sel Conf Reg
+ call WR(DW1,DW0,DW0,DW1, DW1,DW1,DW1,DW0)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW1)
+ call WR(DW0,DW0,DW0,DW0, DW0,DW0,DW0,DW0) ! Polarity = 0, Comparator mode
+ call STOPB
+ call IDLE1
+ wait 10m
+ execute OSO_1                             ! OSO change polariry
+end unit
+

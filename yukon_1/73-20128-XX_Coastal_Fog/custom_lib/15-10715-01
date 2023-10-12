@@ -1,0 +1,363 @@
+!!!!    6    0    1 1607414805  V04cc                                         
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!
+!   Part Name:         PCA9538
+!   Alias:
+!   Part Type:         VLSI
+!   Description:       16 Bit I2C and SMBus I/O Expander
+!   Manufacturer:      Philips Semiconductor
+!   Package Style:     24 pin SOP
+!   Last Modified on:  Dec 02, 2008
+!   Updated:           Jul 25, 2007
+!
+!   Tester:            HP3070
+!
+!   Vector Format:     VCL
+!   Testjet Testable:  yes
+!   JTAG Device:       yes
+!   Fault coverage:    100%
+!   Constraints:
+!
+
+vector cycle 10u
+receive delay 9u
+
+assign VCC  to pins 16
+assign GND  to pins 8
+
+assign ABUS to pins 2,1
+assign SCL  to pins 14
+assign SDA  to pins 15
+assign RSTB to pins 3
+assign INTB to pins 13
+assign P00  to pins 4
+assign P01  to pins 5
+assign P02  to pins 6
+assign P03  to pins 7
+assign P04  to pins 9
+assign P05  to pins 10
+assign P06  to pins 11
+assign P07  to pins 12
+
+power   VCC,GND
+inputs  ABUS,SCL,RSTB
+inputs  P00,P01,P02,P03,P04,P05,P06,P07
+outputs INTB
+bidirectional SDA
+
+disable SDA with RSTB to "0"
+
+family LVT
+
+set load on groups SDA  to pull up
+set load on groups INTB to pull up
+
+vector INIT1
+ drive SDA
+ set ABUS to "xx"
+ set SCL  to "1"
+ set SDA  to "1"
+ set RSTB to "0"
+ set INTB to "x"
+ set P00  to "0"
+ set P01  to "0"
+ set P02  to "0"
+ set P03  to "0"
+ set P04  to "0"
+ set P05  to "0"
+ set P06  to "0"
+ set P07  to "0"
+end vector
+
+vector KEEP1
+ receive SDA
+ set ABUS to "kk"
+ set SCL  to "k"
+ set SDA  to "x"
+ set RSTB to "k"
+ set INTB to "x"
+ set P00  to "k"
+ set P01  to "k"
+ set P02  to "k"
+ set P03  to "k"
+ set P04  to "k"
+ set P05  to "k"
+ set P06  to "k"
+ set P07  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set ABUS to "kk"
+ set SCL  to "k"
+ set SDA  to "k"
+ set RSTB to "k"
+ set INTB to "x"
+ set P00  to "k"
+ set P01  to "k"
+ set P02  to "k"
+ set P03  to "k"
+ set P04  to "k"
+ set P05  to "k"
+ set P06  to "k"
+ set P07  to "k"
+end vector
+
+vector RSTB_0
+ initialize to KEEP2
+ set RSTB   to "0"
+end vector
+
+vector RSTB_1
+ initialize to KEEP2
+ set RSTB   to "1"
+end vector
+
+vector INTB_0
+ initialize to KEEP2
+ set INTB   to "0"
+end vector
+
+vector INTB_1
+ initialize to KEEP2
+ set INTB   to "1"
+end vector
+
+vector A_00
+ initialize to KEEP2
+ set ABUS   to "00"
+end vector
+
+vector A_01
+ initialize to KEEP2
+ set ABUS   to "01"
+end vector
+
+vector A_10
+ initialize to KEEP2
+ set ABUS   to "10"
+end vector
+
+vector A_11
+ initialize to KEEP2
+ set ABUS   to "11"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector PIN_0
+ initialize to KEEP2
+ set P00    to "0"
+ set P01    to "0"
+ set P02    to "0"
+ set P03    to "0"
+ set P04    to "0"
+ set P05    to "0"
+ set P06    to "0"
+ set P07    to "0"
+end vector
+
+vector PIN_1
+ initialize to KEEP2
+ set P00    to "1"
+ set P01    to "1"
+ set P02    to "1"
+ set P03    to "1"
+ set P04    to "1"
+ set P05    to "1"
+ set P06    to "1"
+ set P07    to "1"
+end vector
+
+!   *********************************************************************
+
+sub IDLE2
+ repeat 10 times
+  execute KEEP2
+ end repeat
+end sub
+
+sub RST_IC
+ repeat 20 times
+  execute RSTB_0
+ end repeat
+ repeat 20 times
+  execute RSTB_1
+ end repeat
+ execute INTB_0
+end sub
+
+sub STRTB
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOPB
+ execute SK_10
+ execute SK_10
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ execute D_1
+ execute D_1
+ execute SK_20
+ execute SK_20
+ call IDLE2
+end sub
+
+sub WR(WD7,WD6,WD5,WD4,WD3,WD2,WD1,WD0)  !!! I2C Write cycle
+ execute WD7
+ execute SK_21
+ execute SK_20
+ execute WD6
+ execute SK_21
+ execute SK_20
+ execute WD5
+ execute SK_21
+ execute SK_20
+ execute WD4
+ execute SK_21
+ execute SK_20
+ execute WD3
+ execute SK_21
+ execute SK_20
+ execute WD2
+ execute SK_21
+ execute SK_20
+ execute WD1
+ execute SK_21
+ execute SK_20
+ execute WD0
+ execute SK_21
+ execute SK_10
+ execute SK_11
+ execute R_0     !!! Acknowledge bit
+ execute SK_10
+end sub
+
+sub RD(RD7,RD6,RD5,RD4,RD3,RD2,RD1,RD0)  !!! I2C Read cycle
+ execute RD7
+ execute SK_11
+ execute SK_10
+ execute RD6
+ execute SK_11
+ execute SK_10
+ execute RD5
+ execute SK_11
+ execute SK_10
+ execute RD4
+ execute SK_11
+ execute SK_10
+ execute RD3
+ execute SK_11
+ execute SK_10
+ execute RD2
+ execute SK_11
+ execute SK_10
+ execute RD1
+ execute SK_11
+ execute SK_10
+ execute RD0
+ execute SK_11
+ execute SK_10
+ execute D_0     !!! Acknowledge bit
+ execute SK_21
+ execute SK_10
+end sub
+
+!   ******************************** A = 00 ********************************
+
+unit  "Device Address = 00 test"
+ execute INIT1
+ execute A_00
+ call RST_IC
+ call STRTB                                 !!! Write Configuration Reg
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_1,D_1,D_0)  !!! Reg Addr = $06 and $07
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  !!! All I/O are outputs
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STOPB
+ execute INTB_1
+ call RST_IC                                !!! Test pin RSTB, all I/O
+                                            !!! reset to input mode
+ execute PIN_0
+ call STRTB                                 !!! Read Port 0 Input Reg
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  !!! Reg Addr = $00
+ call STRTB
+ call WR(D_1,D_1,D_1,D_0, D_1,D_0,D_0,D_1)
+ call RD(R_0,R_0,R_0,R_0, R_0,R_0,R_0,R_0)  !!! Data
+ call STOPB
+ call STRTB                                 !!! Read Port 1 Input Reg
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  !!! Reg Addr = $01
+ call STRTB
+ call WR(D_1,D_1,D_1,D_0, D_1,D_0,D_0,D_1)
+ call RD(R_0,R_0,R_0,R_0, R_0,R_0,R_0,R_0)  !!! Data
+ call STOPB
+ execute PIN_1
+ call STRTB                                 !!! Read Port 0 Input Reg
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  !!! Reg Addr = $00
+ call STRTB
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_1)
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)  !!! Data
+ call STOPB
+ call STRTB                                 !!! Read Port 1 Input Reg
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_0)
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_1)  !!! Reg Addr = $01
+ call STRTB
+ call WR(D_1,D_1,D_1,D_0, D_0,D_0,D_0,D_1)
+ call RD(R_1,R_1,R_1,R_1, R_1,R_1,R_1,R_1)  !!! Data
+ call STOPB
+end unit
+

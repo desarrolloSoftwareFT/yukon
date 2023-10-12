@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538807  V4b64                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:58 2021
+disconnect all
+connect s to "GND"
+connect i to "JTAG_TCK_TNX_1V8"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r229_sa" test.

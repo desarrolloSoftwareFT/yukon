@@ -1,0 +1,30 @@
+!!!!    2    0    1 1451013142  Vdf47                                         
+test powered analog
+power pins 8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,37,38,41
+nonanalog pins 1,2,3,4,5,6,7,27,28,29,30,31,32,33,34,35,36,39,40
+
+ test "VIN"
+ test "VOUT"
+
+end test
+
+subtest "VIN"
+     connect i to pins 21
+     connect l to pins 14
+
+   detector dcv, expect 12.0
+   measure 12.0 * 12.05, 12.0 * 0.95
+end subtest
+
+
+subtest "VOUT"
+     connect i to pins 12
+     connect l to pins 14
+
+   detector dcv, expect 1.0
+   measure 1.0 * 1.05, 1.0 * 0.95
+end subtest
+
+
+
+

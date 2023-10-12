@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627540596  Va983                                         
+! IPG: rev 09.20p  Mon Jun 28 12:11:00 2021
+on failure
+report parallel devices
+report "c7_qd 10.0n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_101_RES_I145_B"
+resistor 845,20.00,20.00,re3,ar100m,ed
+! "r785" test.
+off failure

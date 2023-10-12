@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626157489  V7965                                         
+! IPG: rev 09.20p  Mon Jun 28 12:09:40 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "PWR_SA_AVDD12"; a to "PWR_SA_AVDD12"
+connect i to "TDIE1_IFOPLL_OBS_P_SA"; b to "TDIE1_IFOPLL_OBS_P_SA"
+resistor 49.9,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "r431_sa" is a limited test.
+! DUT: nominal 49.9, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 50.399, low 49.401
+! TEST: high limit 50.729, low limit 49.245
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

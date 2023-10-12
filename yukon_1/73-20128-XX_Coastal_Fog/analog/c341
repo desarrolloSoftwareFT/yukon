@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538296  V5935                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:48 2021
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "P5V_CPUMP"; b to "P5V_CPUMP"
+capacitor 2.2u,30.00,30.00,fr1024,re1,ar20.0m,sa,sb,ed,nocomp
+! "c341" test.

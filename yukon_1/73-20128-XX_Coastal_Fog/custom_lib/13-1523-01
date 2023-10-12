@@ -1,0 +1,20 @@
+!!!!   21    2    1 1606903418   0000                                         
+
+diode "cr13", 800m, 400m, nr
+diode "cr23", 800m, 400m, nr
+
+external pins 1
+   device "cr13" pins "C"
+
+external pins 2
+   device "cr23" pins "C"
+
+external pins 3
+   device "cr13" pins "A"
+   device "cr23" pins "A"
+
+external pins 4; noconnect
+
+external pins 5; noconnect
+
+external pins 6; noconnect

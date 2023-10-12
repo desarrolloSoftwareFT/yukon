@@ -1,0 +1,1461 @@
+!!!!   22    0    1 1542642170  Vcb63                                         
+-- *****************************************************************************
+
+--   BSDL file for design wol_top
+
+--   Created by Synopsys Version M-2016.12-SP5-1 (Aug 31, 2017)
+
+--   Designer: 
+--   Company:  MediaTek Incorporation
+
+--   Date: Wed Jul  4 10:46:48 2018
+
+-- *****************************************************************************
+
+
+ entity wol_top is
+   
+-- This section identifies the default device package selected.
+   
+   generic (PHYSICAL_PIN_MAP: string:= "all_pkg");
+   
+-- This section declares all the ports in the design.
+   
+   port ( 
+          I_CLK1_OBS_EN             : in       bit;
+          I_CORE_FREQ_SEL_0        : in bit;
+          I_CORE_FREQ_SEL_1        : in bit;
+          I_CORE1_PLL_BYP           : in       bit;
+          I_CORE1_PLL_RST_N         : in       bit;
+          I_HS8_L0_RX0_S10_SD64_N   : in       bit;
+          I_HS8_L0_RX0_S10_SD64_P   : in       bit;
+          I_HS8_L1_RX1_S10_SD65_N   : in       bit;
+          I_HS8_L1_RX1_S10_SD65_P   : in       bit;
+          I_HS8_L2_RX2_S10_SD66_N   : in       bit;
+          I_HS8_L2_RX2_S10_SD66_P   : in       bit;
+          I_HS8_L3_RX3_S10_SD67_N   : in       bit;
+          I_HS8_L3_RX3_S10_SD67_P   : in       bit;
+          I_HS8_L4_RX4_S10_SD68_N   : in       bit;
+          I_HS8_L4_RX4_S10_SD68_P   : in       bit;
+          I_HS8_L5_RX5_S10_SD69_N   : in       bit;
+          I_HS8_L5_RX5_S10_SD69_P   : in       bit;
+          I_HS8_L6_RX6_S10_SD70_N   : in       bit;
+          I_HS8_L6_RX6_S10_SD70_P   : in       bit;
+          I_HS8_L7_RX7_S10_SD71_N   : in       bit;
+          I_HS8_L7_RX7_S10_SD71_P   : in       bit;
+          I_HS9_L0_RX8_S10_SD72_N   : in       bit;
+          I_HS9_L0_RX8_S10_SD72_P   : in       bit;
+          I_HS9_L1_RX9_S10_SD73_N   : in       bit;
+          I_HS9_L1_RX9_S10_SD73_P   : in       bit;
+          I_HS9_L2_RX10_S10_SD74_N : in       bit;
+          I_HS9_L2_RX10_S10_SD74_P : in       bit;
+          I_HS9_L3_RX11_S10_SD75_N : in       bit;
+          I_HS9_L3_RX11_S10_SD75_P : in       bit;
+          I_HS9_L4_RX12_S10_SD76_N : in       bit;
+          I_HS9_L4_RX12_S10_SD76_P : in       bit;
+          I_HS9_L5_RX13_S10_SD77_N : in       bit;
+          I_HS9_L5_RX13_S10_SD77_P : in       bit;
+          I_HS9_L6_RX14_S10_SD78_N : in       bit;
+          I_HS9_L6_RX14_S10_SD78_P : in       bit;
+          I_HS9_L7_RX15_S10_SD79_N : in       bit;
+          I_HS9_L7_RX15_S10_SD79_P : in       bit;
+          I_HS10_L0_RX16_S10_SD80_N : in       bit;
+          I_HS10_L0_RX16_S10_SD80_P : in       bit;
+          I_HS10_L1_RX17_S10_SD81_N : in       bit;
+          I_HS10_L1_RX17_S10_SD81_P : in       bit;
+          I_HS10_L2_RX18_S10_SD82_N : in       bit;
+          I_HS10_L2_RX18_S10_SD82_P : in       bit;
+          I_HS10_L3_RX19_S10_SD83_N : in       bit;
+          I_HS10_L3_RX19_S10_SD83_P : in       bit;
+          I_HS10_L4_RX20_S10_SD84_N : in       bit;
+          I_HS10_L4_RX20_S10_SD84_P : in       bit;
+          I_HS10_L5_RX21_S10_SD85_N : in       bit;
+          I_HS10_L5_RX21_S10_SD85_P : in       bit;
+          I_HS10_L6_RX22_S10_SD86_N : in       bit;
+          I_HS10_L6_RX22_S10_SD86_P : in       bit;
+          I_HS10_L7_RX23_S10_SD87_N : in       bit;
+          I_HS10_L7_RX23_S10_SD87_P : in       bit;
+          I_HS11_L0_RX24_S10_SD88_N : in       bit;
+          I_HS11_L0_RX24_S10_SD88_P : in       bit;
+          I_HS11_L1_RX25_S10_SD89_N : in       bit;
+          I_HS11_L1_RX25_S10_SD89_P : in       bit;
+          I_HS11_L2_RX26_S10_SD90_N : in       bit;
+          I_HS11_L2_RX26_S10_SD90_P : in       bit;
+          I_HS11_L3_RX27_S10_SD91_N : in       bit;
+          I_HS11_L3_RX27_S10_SD91_P : in       bit;
+          I_HS11_L4_RX28_S10_SD92_N : in       bit;
+          I_HS11_L4_RX28_S10_SD92_P : in       bit;
+          I_HS11_L5_RX29_S10_SD93_N : in       bit;
+          I_HS11_L5_RX29_S10_SD93_P : in       bit;
+          I_HS11_L6_RX30_S10_SD94_N : in       bit;
+          I_HS11_L6_RX30_S10_SD94_P : in       bit;
+          I_HS11_L7_RX31_S10_SD95_N : in       bit;
+          I_HS11_L7_RX31_S10_SD95_P : in       bit;
+          I_HS12_L0_RX0_S11_SD96_N  : in       bit;
+          I_HS12_L0_RX0_S11_SD96_P  : in       bit;
+          I_HS12_L1_RX1_S11_SD97_N  : in       bit;
+          I_HS12_L1_RX1_S11_SD97_P  : in       bit;
+          I_HS12_L2_RX2_S11_SD98_N  : in       bit;
+          I_HS12_L2_RX2_S11_SD98_P  : in       bit;
+          I_HS12_L3_RX3_S11_SD99_N  : in       bit;
+          I_HS12_L3_RX3_S11_SD99_P  : in       bit;
+          I_HS12_L4_RX4_S11_SD100_N  : in       bit;
+          I_HS12_L4_RX4_S11_SD100_P  : in       bit;
+          I_HS12_L5_RX5_S11_SD101_N  : in       bit;
+          I_HS12_L5_RX5_S11_SD101_P  : in       bit;
+          I_HS12_L6_RX6_S11_SD102_N  : in       bit;
+          I_HS12_L6_RX6_S11_SD102_P  : in       bit;
+          I_HS12_L7_RX7_S11_SD103_N  : in       bit;
+          I_HS12_L7_RX7_S11_SD103_P  : in       bit;
+          I_HS13_L0_RX8_S11_SD104_N  : in       bit;
+          I_HS13_L0_RX8_S11_SD104_P  : in       bit;
+          I_HS13_L1_RX9_S11_SD105_N  : in       bit;
+          I_HS13_L1_RX9_S11_SD105_P  : in       bit;
+          I_HS13_L2_RX10_S11_SD106_N : in       bit;
+          I_HS13_L2_RX10_S11_SD106_P : in       bit;
+          I_HS13_L3_RX11_S11_SD107_N : in       bit;
+          I_HS13_L3_RX11_S11_SD107_P : in       bit;
+          I_HS13_L4_RX12_S11_SD108_N : in       bit;
+          I_HS13_L4_RX12_S11_SD108_P : in       bit;
+          I_HS13_L5_RX13_S11_SD109_N : in       bit;
+          I_HS13_L5_RX13_S11_SD109_P : in       bit;
+          I_HS13_L6_RX14_S11_SD110_N : in       bit;
+          I_HS13_L6_RX14_S11_SD110_P : in       bit;
+          I_HS13_L7_RX15_S11_SD111_N : in       bit;
+          I_HS13_L7_RX15_S11_SD111_P : in       bit;
+          I_HS14_L0_RX16_S11_SD112_N : in       bit;
+          I_HS14_L0_RX16_S11_SD112_P : in       bit;
+          I_HS14_L1_RX17_S11_SD113_N : in       bit;
+          I_HS14_L1_RX17_S11_SD113_P : in       bit;
+          I_HS14_L2_RX18_S11_SD114_N : in       bit;
+          I_HS14_L2_RX18_S11_SD114_P : in       bit;
+          I_HS14_L3_RX19_S11_SD115_N : in       bit;
+          I_HS14_L3_RX19_S11_SD115_P : in       bit;
+          I_HS14_L4_RX20_S11_SD116_N : in       bit;
+          I_HS14_L4_RX20_S11_SD116_P : in       bit;
+          I_HS14_L5_RX21_S11_SD117_N : in       bit;
+          I_HS14_L5_RX21_S11_SD117_P : in       bit;
+          I_HS14_L6_RX22_S11_SD118_N : in       bit;
+          I_HS14_L6_RX22_S11_SD118_P : in       bit;
+          I_HS14_L7_RX23_S11_SD119_N : in       bit;
+          I_HS14_L7_RX23_S11_SD119_P : in       bit;
+          I_HS15_L0_RX24_S11_SD120_N : in       bit;
+          I_HS15_L0_RX24_S11_SD120_P : in       bit;
+          I_HS15_L1_RX25_S11_SD121_N : in       bit;
+          I_HS15_L1_RX25_S11_SD121_P : in       bit;
+          I_HS15_L2_RX26_S11_SD122_N : in       bit;
+          I_HS15_L2_RX26_S11_SD122_P : in       bit;
+          I_HS15_L3_RX27_S11_SD123_N : in       bit;
+          I_HS15_L3_RX27_S11_SD123_P : in       bit;
+          I_HS15_L4_RX28_S11_SD124_N : in       bit;
+          I_HS15_L4_RX28_S11_SD124_P : in       bit;
+          I_HS15_L5_RX29_S11_SD125_N : in       bit;
+          I_HS15_L5_RX29_S11_SD125_P : in       bit;
+          I_HS15_L6_RX30_S11_SD126_N : in       bit;
+          I_HS15_L6_RX30_S11_SD126_P : in       bit;
+          I_HS15_L7_RX31_S11_SD127_N : in       bit;
+          I_HS15_L7_RX31_S11_SD127_P : in       bit;
+          I_LS1_L0_RX0_S10_SD2_N    : in       bit;
+          I_LS1_L0_RX0_S10_SD2_P    : in       bit;
+          I_LS1_L1_RX1_S10_SD3_N    : in       bit;
+          I_LS1_L1_RX1_S10_SD3_P    : in       bit;
+          I_PCIE1_PLL_BYP           : in       bit;
+          I_PCIE1_PLL_RST_N         : in       bit;
+          I_PCIE1_RX_N              : in       bit;
+          I_PCIE1_RX_P              : in       bit;
+          I_PLL1_OBS_EN             : in       bit;
+          B_I2C1_CLK                : inout    bit;
+          B_I2C1_DATA               : inout    bit;
+          B_PTP1_SYNC_MASTER        : inout    bit;
+          GPIO_08                  : inout    bit;
+          GPIO_09                  : inout    bit;
+          GPIO_10                  : inout    bit;
+          GPIO_11                  : inout    bit;
+          GPIO_12                  : inout    bit;
+          GPIO_13                  : inout    bit;
+          HOST_SCL                 : inout bit;
+          HOST_SDA                 : inout bit;
+          I_PTP1_SYNC_SLAVE         : inout    bit;
+          O_HS8_L0_TX0_S10_SD64_N   : buffer   bit;
+          O_HS8_L0_TX0_S10_SD64_P   : buffer   bit;
+          O_HS8_L1_TX1_S10_SD65_N   : buffer   bit;
+          O_HS8_L1_TX1_S10_SD65_P   : buffer   bit;
+          O_HS8_L2_TX2_S10_SD66_N   : buffer   bit;
+          O_HS8_L2_TX2_S10_SD66_P   : buffer   bit;
+          O_HS8_L3_TX3_S10_SD67_N   : buffer   bit;
+          O_HS8_L3_TX3_S10_SD67_P   : buffer   bit;
+          O_HS8_L4_TX4_S10_SD68_N   : buffer   bit;
+          O_HS8_L4_TX4_S10_SD68_P   : buffer   bit;
+          O_HS8_L5_TX5_S10_SD69_N   : buffer   bit;
+          O_HS8_L5_TX5_S10_SD69_P   : buffer   bit;
+          O_HS8_L6_TX6_S10_SD70_N   : buffer   bit;
+          O_HS8_L6_TX6_S10_SD70_P   : buffer   bit;
+          O_HS8_L7_TX7_S10_SD71_N   : buffer   bit;
+          O_HS8_L7_TX7_S10_SD71_P   : buffer   bit;
+          O_HS9_L0_TX8_S10_SD72_N   : buffer   bit;
+          O_HS9_L0_TX8_S10_SD72_P   : buffer   bit;
+          O_HS9_L1_TX9_S10_SD73_N   : buffer   bit;
+          O_HS9_L1_TX9_S10_SD73_P   : buffer   bit;
+          O_HS9_L2_TX10_S10_SD74_N : buffer   bit;
+          O_HS9_L2_TX10_S10_SD74_P : buffer   bit;
+          O_HS9_L3_TX11_S10_SD75_N : buffer   bit;
+          O_HS9_L3_TX11_S10_SD75_P : buffer   bit;
+          O_HS9_L4_TX12_S10_SD76_N : buffer   bit;
+          O_HS9_L4_TX12_S10_SD76_P : buffer   bit;
+          O_HS9_L5_TX13_S10_SD77_N : buffer   bit;
+          O_HS9_L5_TX13_S10_SD77_P : buffer   bit;
+          O_HS9_L6_TX14_S10_SD78_N : buffer   bit;
+          O_HS9_L6_TX14_S10_SD78_P : buffer   bit;
+          O_HS9_L7_TX15_S10_SD79_N : buffer   bit;
+          O_HS9_L7_TX15_S10_SD79_P : buffer   bit;
+          O_HS10_L0_TX16_S10_SD80_N : buffer   bit;
+          O_HS10_L0_TX16_S10_SD80_P : buffer   bit;
+          O_HS10_L1_TX17_S10_SD81_N : buffer   bit;
+          O_HS10_L1_TX17_S10_SD81_P : buffer   bit;
+          O_HS10_L2_TX18_S10_SD82_N : buffer   bit;
+          O_HS10_L2_TX18_S10_SD82_P : buffer   bit;
+          O_HS10_L3_TX19_S10_SD83_N : buffer   bit;
+          O_HS10_L3_TX19_S10_SD83_P : buffer   bit;
+          O_HS10_L4_TX20_S10_SD84_N : buffer   bit;
+          O_HS10_L4_TX20_S10_SD84_P : buffer   bit;
+          O_HS10_L5_TX21_S10_SD85_N : buffer   bit;
+          O_HS10_L5_TX21_S10_SD85_P : buffer   bit;
+          O_HS10_L6_TX22_S10_SD86_N : buffer   bit;
+          O_HS10_L6_TX22_S10_SD86_P : buffer   bit;
+          O_HS10_L7_TX23_S10_SD87_N : buffer   bit;
+          O_HS10_L7_TX23_S10_SD87_P : buffer   bit;
+          O_HS11_L0_TX24_S10_SD88_N : buffer   bit;
+          O_HS11_L0_TX24_S10_SD88_P : buffer   bit;
+          O_HS11_L1_TX25_S10_SD89_N : buffer   bit;
+          O_HS11_L1_TX25_S10_SD89_P : buffer   bit;
+          O_HS11_L2_TX26_S10_SD90_N : buffer   bit;
+          O_HS11_L2_TX26_S10_SD90_P : buffer   bit;
+          O_HS11_L3_TX27_S10_SD91_N : buffer   bit;
+          O_HS11_L3_TX27_S10_SD91_P : buffer   bit;
+          O_HS11_L4_TX28_S10_SD92_N : buffer   bit;
+          O_HS11_L4_TX28_S10_SD92_P : buffer   bit;
+          O_HS11_L5_TX29_S10_SD93_N : buffer   bit;
+          O_HS11_L5_TX29_S10_SD93_P : buffer   bit;
+          O_HS11_L6_TX30_S10_SD94_N : buffer   bit;
+          O_HS11_L6_TX30_S10_SD94_P : buffer   bit;
+          O_HS11_L7_TX31_S10_SD95_N : buffer   bit;
+          O_HS11_L7_TX31_S10_SD95_P : buffer   bit;
+          O_HS12_L0_TX0_S11_SD96_N  : buffer   bit;
+          O_HS12_L0_TX0_S11_SD96_P  : buffer   bit;
+          O_HS12_L1_TX1_S11_SD97_N  : buffer   bit;
+          O_HS12_L1_TX1_S11_SD97_P  : buffer   bit;
+          O_HS12_L2_TX2_S11_SD98_N  : buffer   bit;
+          O_HS12_L2_TX2_S11_SD98_P  : buffer   bit;
+          O_HS12_L3_TX3_S11_SD99_N  : buffer   bit;
+          O_HS12_L3_TX3_S11_SD99_P  : buffer   bit;
+          O_HS12_L4_TX4_S11_SD100_N  : buffer   bit;
+          O_HS12_L4_TX4_S11_SD100_P  : buffer   bit;
+          O_HS12_L5_TX5_S11_SD101_N  : buffer   bit;
+          O_HS12_L5_TX5_S11_SD101_P  : buffer   bit;
+          O_HS12_L6_TX6_S11_SD102_N  : buffer   bit;
+          O_HS12_L6_TX6_S11_SD102_P  : buffer   bit;
+          O_HS12_L7_TX7_S11_SD103_N  : buffer   bit;
+          O_HS12_L7_TX7_S11_SD103_P  : buffer   bit;
+          O_HS13_L0_TX8_S11_SD104_N  : buffer   bit;
+          O_HS13_L0_TX8_S11_SD104_P  : buffer   bit;
+          O_HS13_L1_TX9_S11_SD105_N  : buffer   bit;
+          O_HS13_L1_TX9_S11_SD105_P  : buffer   bit;
+          O_HS13_L2_TX10_S11_SD106_N : buffer   bit;
+          O_HS13_L2_TX10_S11_SD106_P : buffer   bit;
+          O_HS13_L3_TX11_S11_SD107_N : buffer   bit;
+          O_HS13_L3_TX11_S11_SD107_P : buffer   bit;
+          O_HS13_L4_TX12_S11_SD108_N : buffer   bit;
+          O_HS13_L4_TX12_S11_SD108_P : buffer   bit;
+          O_HS13_L5_TX13_S11_SD109_N : buffer   bit;
+          O_HS13_L5_TX13_S11_SD109_P : buffer   bit;
+          O_HS13_L6_TX14_S11_SD110_N : buffer   bit;
+          O_HS13_L6_TX14_S11_SD110_P : buffer   bit;
+          O_HS13_L7_TX15_S11_SD111_N : buffer   bit;
+          O_HS13_L7_TX15_S11_SD111_P : buffer   bit;
+          O_HS14_L0_TX16_S11_SD112_N : buffer   bit;
+          O_HS14_L0_TX16_S11_SD112_P : buffer   bit;
+          O_HS14_L1_TX17_S11_SD113_N : buffer   bit;
+          O_HS14_L1_TX17_S11_SD113_P : buffer   bit;
+          O_HS14_L2_TX18_S11_SD114_N : buffer   bit;
+          O_HS14_L2_TX18_S11_SD114_P : buffer   bit;
+          O_HS14_L3_TX19_S11_SD115_N : buffer   bit;
+          O_HS14_L3_TX19_S11_SD115_P : buffer   bit;
+          O_HS14_L4_TX20_S11_SD116_N : buffer   bit;
+          O_HS14_L4_TX20_S11_SD116_P : buffer   bit;
+          O_HS14_L5_TX21_S11_SD117_N : buffer   bit;
+          O_HS14_L5_TX21_S11_SD117_P : buffer   bit;
+          O_HS14_L6_TX22_S11_SD118_N : buffer   bit;
+          O_HS14_L6_TX22_S11_SD118_P : buffer   bit;
+          O_HS14_L7_TX23_S11_SD119_N : buffer   bit;
+          O_HS14_L7_TX23_S11_SD119_P : buffer   bit;
+          O_HS15_L0_TX24_S11_SD120_N : buffer   bit;
+          O_HS15_L0_TX24_S11_SD120_P : buffer   bit;
+          O_HS15_L1_TX25_S11_SD121_N : buffer   bit;
+          O_HS15_L1_TX25_S11_SD121_P : buffer   bit;
+          O_HS15_L2_TX26_S11_SD122_N : buffer   bit;
+          O_HS15_L2_TX26_S11_SD122_P : buffer   bit;
+          O_HS15_L3_TX27_S11_SD123_N : buffer   bit;
+          O_HS15_L3_TX27_S11_SD123_P : buffer   bit;
+          O_HS15_L4_TX28_S11_SD124_N : buffer   bit;
+          O_HS15_L4_TX28_S11_SD124_P : buffer   bit;
+          O_HS15_L5_TX29_S11_SD125_N : buffer   bit;
+          O_HS15_L5_TX29_S11_SD125_P : buffer   bit;
+          O_HS15_L6_TX30_S11_SD126_N : buffer   bit;
+          O_HS15_L6_TX30_S11_SD126_P : buffer   bit;
+          O_HS15_L7_TX31_S11_SD127_N : buffer   bit;
+          O_HS15_L7_TX31_S11_SD127_P : buffer   bit;
+          O_LS1_L0_TX0_S10_SD2_N    : buffer   bit;
+          O_LS1_L0_TX0_S10_SD2_P    : buffer   bit;
+          O_LS1_L1_TX1_S10_SD3_N    : buffer   bit;
+          O_LS1_L1_TX1_S10_SD3_P    : buffer   bit;
+          O_PCIE1_TX_N              : buffer   bit;
+          O_PCIE1_TX_P              : buffer   bit;
+          CPU2JTAG1_EN              : in bit;
+          I_CORE1_RST_N             : in bit;
+          JTAG2ECPU1_EN             : in bit;
+          PAD_TCK                      : in bit;  -- NC(No Connect) Port
+          TST_TDI                      : in bit;  -- NC Port
+          TDO                      : out bit;  -- NC Port
+          PAD_TMS                      : in bit;  -- NC Port
+          PAD_TRI_EN                   : in bit;
+          PAD_TRST_L                   : in bit  -- NC Port
+   );
+   
+   use STD_1149_1_2001.all;
+   use STD_1149_6_2003.all;
+   
+   attribute COMPONENT_CONFORMANCE of wol_top: entity is "STD_1149_1_2001";
+   
+   attribute PIN_MAP of wol_top: entity is PHYSICAL_PIN_MAP;
+   
+-- This section specifies the pin map for each port. This information is 
+-- extracted from the port-to-pin map file that was read in using the 
+-- "read_pin_map" command.
+   
+     constant all_pkg: PIN_MAP_STRING := 
+        "TST_TDI                      : R46," &
+        "PAD_TCK                      : T45," &
+        "PAD_TMS                      : T46," &
+        "PAD_TRST_L                   : R45," &
+        "TDO                      : P45," &
+        "CPU2JTAG1_EN              : BF47," &
+        "JTAG2ECPU1_EN             : BF48," &
+        "I_CORE1_RST_N             : BH44," &
+        "PAD_TRI_EN                   : BJ45," &
+        "HOST_SCL                 : T18," &
+        "HOST_SDA                 : R18," &
+        "I_CORE_FREQ_SEL_0        : R17," &
+        "I_CORE_FREQ_SEL_1        : T16," &
+        "I_CLK1_OBS_EN             : BH48," &
+        "I_CORE1_PLL_BYP           : BG48," &
+        "I_CORE1_PLL_RST_N         : BH47," &
+        "I_HS8_L0_RX0_S10_SD64_N   : AM6," &
+        "I_HS8_L0_RX0_S10_SD64_P   : AM7," &
+        "I_HS8_L1_RX1_S10_SD65_N   : AM10," &
+        "I_HS8_L1_RX1_S10_SD65_P   : AM9," &
+        "I_HS8_L2_RX2_S10_SD66_N   : AP6," &
+        "I_HS8_L2_RX2_S10_SD66_P   : AP7," &
+        "I_HS8_L3_RX3_S10_SD67_N   : AP10," &
+        "I_HS8_L3_RX3_S10_SD67_P   : AP9," &
+        "I_HS8_L4_RX4_S10_SD68_N   : AV10," &
+        "I_HS8_L4_RX4_S10_SD68_P   : AV9," &
+        "I_HS8_L5_RX5_S10_SD69_N   : AT9," &
+        "I_HS8_L5_RX5_S10_SD69_P   : AT10," &
+        "I_HS8_L6_RX6_S10_SD70_N   : AV7," &
+        "I_HS8_L6_RX6_S10_SD70_P   : AV6," &
+        "I_HS8_L7_RX7_S10_SD71_N   : AT6," &
+        "I_HS8_L7_RX7_S10_SD71_P   : AT7," &
+        "I_HS9_L0_RX8_S10_SD72_N   : AY6," &
+        "I_HS9_L0_RX8_S10_SD72_P   : AY7," &
+        "I_HS9_L1_RX9_S10_SD73_N   : BB7," &
+        "I_HS9_L1_RX9_S10_SD73_P   : BB6," &
+        "I_HS9_L2_RX10_S10_SD74_N : AY9," &
+        "I_HS9_L2_RX10_S10_SD74_P : AY10," &
+        "I_HS9_L3_RX11_S10_SD75_N : BB10," &
+        "I_HS9_L3_RX11_S10_SD75_P : BB9," &
+        "I_HS9_L4_RX12_S10_SD76_N : BF10," &
+        "I_HS9_L4_RX12_S10_SD76_P : BF9," &
+        "I_HS9_L5_RX13_S10_SD77_N : BD9," &
+        "I_HS9_L5_RX13_S10_SD77_P : BD10," &
+        "I_HS9_L6_RX14_S10_SD78_N : BF7," &
+        "I_HS9_L6_RX14_S10_SD78_P : BF6," &
+        "I_HS9_L7_RX15_S10_SD79_N : BD6," &
+        "I_HS9_L7_RX15_S10_SD79_P : BD7," &
+        "I_HS10_L0_RX16_S10_SD80_N : BH6," &
+        "I_HS10_L0_RX16_S10_SD80_P : BH7," &
+        "I_HS10_L1_RX17_S10_SD81_N : BK7," &
+        "I_HS10_L1_RX17_S10_SD81_P : BK6," &
+        "I_HS10_L2_RX18_S10_SD82_N : BH9," &
+        "I_HS10_L2_RX18_S10_SD82_P : BH10," &
+        "I_HS10_L3_RX19_S10_SD83_N : BK10," &
+        "I_HS10_L3_RX19_S10_SD83_P : BK9," &
+        "I_HS10_L4_RX20_S10_SD84_N : BT6," &
+        "I_HS10_L4_RX20_S10_SD84_P : BR6," &
+        "I_HS10_L5_RX21_S10_SD85_N : BR4," &
+        "I_HS10_L5_RX21_S10_SD85_P : BT4," &
+        "I_HS10_L6_RX22_S10_SD86_N : BN6," &
+        "I_HS10_L6_RX22_S10_SD86_P : BM6," &
+        "I_HS10_L7_RX23_S10_SD87_N : BM4," &
+        "I_HS10_L7_RX23_S10_SD87_P : BN4," &
+        "I_HS11_L0_RX24_S10_SD88_N : BM8," &
+        "I_HS11_L0_RX24_S10_SD88_P : BN8," &
+        "I_HS11_L1_RX25_S10_SD89_N : BN10," &
+        "I_HS11_L1_RX25_S10_SD89_P : BM10," &
+        "I_HS11_L2_RX26_S10_SD90_N : BR8," &
+        "I_HS11_L2_RX26_S10_SD90_P : BT8," &
+        "I_HS11_L3_RX27_S10_SD91_N : BT10," &
+        "I_HS11_L3_RX27_S10_SD91_P : BR10," &
+        "I_HS11_L4_RX28_S10_SD92_N : BT14," &
+        "I_HS11_L4_RX28_S10_SD92_P : BR14," &
+        "I_HS11_L5_RX29_S10_SD93_N : BR12," &
+        "I_HS11_L5_RX29_S10_SD93_P : BT12," &
+        "I_HS11_L6_RX30_S10_SD94_N : BN14," &
+        "I_HS11_L6_RX30_S10_SD94_P : BM14," &
+        "I_HS11_L7_RX31_S10_SD95_N : BM12," &
+        "I_HS11_L7_RX31_S10_SD95_P : BN12," &
+        "I_HS12_L0_RX0_S11_SD96_N  : AM56," &
+        "I_HS12_L0_RX0_S11_SD96_P  : AM55," &
+        "I_HS12_L1_RX1_S11_SD97_N  : AM52," &
+        "I_HS12_L1_RX1_S11_SD97_P  : AM53," &
+        "I_HS12_L2_RX2_S11_SD98_N  : AP56," &
+        "I_HS12_L2_RX2_S11_SD98_P  : AP55," &
+        "I_HS12_L3_RX3_S11_SD99_N  : AP52," &
+        "I_HS12_L3_RX3_S11_SD99_P  : AP53," &
+        "I_HS12_L4_RX4_S11_SD100_N  : AV52," &
+        "I_HS12_L4_RX4_S11_SD100_P  : AV53," &
+        "I_HS12_L5_RX5_S11_SD101_N  : AT53," &
+        "I_HS12_L5_RX5_S11_SD101_P  : AT52," &
+        "I_HS12_L6_RX6_S11_SD102_N  : AV55," &
+        "I_HS12_L6_RX6_S11_SD102_P  : AV56," &
+        "I_HS12_L7_RX7_S11_SD103_N  : AT56," &
+        "I_HS12_L7_RX7_S11_SD103_P  : AT55," &
+        "I_HS13_L0_RX8_S11_SD104_N  : AY56," &
+        "I_HS13_L0_RX8_S11_SD104_P  : AY55," &
+        "I_HS13_L1_RX9_S11_SD105_N  : BB55," &
+        "I_HS13_L1_RX9_S11_SD105_P  : BB56," &
+        "I_HS13_L2_RX10_S11_SD106_N : AY53," &
+        "I_HS13_L2_RX10_S11_SD106_P : AY52," &
+        "I_HS13_L3_RX11_S11_SD107_N : BB52," &
+        "I_HS13_L3_RX11_S11_SD107_P : BB53," &
+        "I_HS13_L4_RX12_S11_SD108_N : BF52," &
+        "I_HS13_L4_RX12_S11_SD108_P : BF53," &
+        "I_HS13_L5_RX13_S11_SD109_N : BD53," &
+        "I_HS13_L5_RX13_S11_SD109_P : BD52," &
+        "I_HS13_L6_RX14_S11_SD110_N : BF55," &
+        "I_HS13_L6_RX14_S11_SD110_P : BF56," &
+        "I_HS13_L7_RX15_S11_SD111_N : BD56," &
+        "I_HS13_L7_RX15_S11_SD111_P : BD55," &
+        "I_HS14_L0_RX16_S11_SD112_N : BH56," &
+        "I_HS14_L0_RX16_S11_SD112_P : BH55," &
+        "I_HS14_L1_RX17_S11_SD113_N : BK55," &
+        "I_HS14_L1_RX17_S11_SD113_P : BK56," &
+        "I_HS14_L2_RX18_S11_SD114_N : BH53," &
+        "I_HS14_L2_RX18_S11_SD114_P : BH52," &
+        "I_HS14_L3_RX19_S11_SD115_N : BK52," &
+        "I_HS14_L3_RX19_S11_SD115_P : BK53," &
+        "I_HS14_L4_RX20_S11_SD116_N : BT56," &
+        "I_HS14_L4_RX20_S11_SD116_P : BR56," &
+        "I_HS14_L5_RX21_S11_SD117_N : BR58," &
+        "I_HS14_L5_RX21_S11_SD117_P : BT58," &
+        "I_HS14_L6_RX22_S11_SD118_N : BN56," &
+        "I_HS14_L6_RX22_S11_SD118_P : BM56," &
+        "I_HS14_L7_RX23_S11_SD119_N : BM58," &
+        "I_HS14_L7_RX23_S11_SD119_P : BN58," &
+        "I_HS15_L0_RX24_S11_SD120_N : BM54," &
+        "I_HS15_L0_RX24_S11_SD120_P : BN54," &
+        "I_HS15_L1_RX25_S11_SD121_N : BN52," &
+        "I_HS15_L1_RX25_S11_SD121_P : BM52," &
+        "I_HS15_L2_RX26_S11_SD122_N : BR54," &
+        "I_HS15_L2_RX26_S11_SD122_P : BT54," &
+        "I_HS15_L3_RX27_S11_SD123_N : BT52," &
+        "I_HS15_L3_RX27_S11_SD123_P : BR52," &
+        "I_HS15_L4_RX28_S11_SD124_N : BT48," &
+        "I_HS15_L4_RX28_S11_SD124_P : BR48," &
+        "I_HS15_L5_RX29_S11_SD125_N : BR50," &
+        "I_HS15_L5_RX29_S11_SD125_P : BT50," &
+        "I_HS15_L6_RX30_S11_SD126_N : BN48," &
+        "I_HS15_L6_RX30_S11_SD126_P : BM48," &
+        "I_HS15_L7_RX31_S11_SD127_N : BM50," &
+        "I_HS15_L7_RX31_S11_SD127_P : BN50," &
+        "I_LS1_L0_RX0_S10_SD2_N    : BU33," &
+        "I_LS1_L0_RX0_S10_SD2_P    : BV33," &
+        "I_LS1_L1_RX1_S10_SD3_N    : BU31," &
+        "I_LS1_L1_RX1_S10_SD3_P    : BV31," &
+        "I_PCIE1_PLL_BYP           : BG47," &
+        "I_PCIE1_PLL_RST_N         : BF45," &
+        "I_PCIE1_RX_N              : BY29," &
+        "I_PCIE1_RX_P              : CA29," &
+        "I_PLL1_OBS_EN             : BJ47," &
+        "B_I2C1_CLK                : BE17," &
+        "B_I2C1_DATA               : BE16," &
+        "B_PTP1_SYNC_MASTER        : BE45," &
+        "GPIO_08                  : BG45," &
+        "GPIO_09                  : BF44," &
+        "GPIO_10                  : BG44," &
+        "GPIO_11                  : BF46," &
+        "GPIO_12                  : BG46," &
+        "GPIO_13                  : BH46," &
+        "I_PTP1_SYNC_SLAVE         : BE46," &
+        "O_HS8_L0_TX0_S10_SD64_N   : AM3," &
+        "O_HS8_L0_TX0_S10_SD64_P   : AM4," &
+        "O_HS8_L1_TX1_S10_SD65_N   : AN2," &
+        "O_HS8_L1_TX1_S10_SD65_P   : AN1," &
+        "O_HS8_L2_TX2_S10_SD66_N   : AR1," &
+        "O_HS8_L2_TX2_S10_SD66_P   : AR2," &
+        "O_HS8_L3_TX3_S10_SD67_N   : AP4," &
+        "O_HS8_L3_TX3_S10_SD67_P   : AP3," &
+        "O_HS8_L4_TX4_S10_SD68_N   : AW2," &
+        "O_HS8_L4_TX4_S10_SD68_P   : AW1," &
+        "O_HS8_L5_TX5_S10_SD69_N   : AV3," &
+        "O_HS8_L5_TX5_S10_SD69_P   : AV4," &
+        "O_HS8_L6_TX6_S10_SD70_N   : AU2," &
+        "O_HS8_L6_TX6_S10_SD70_P   : AU1," &
+        "O_HS8_L7_TX7_S10_SD71_N   : AT3," &
+        "O_HS8_L7_TX7_S10_SD71_P   : AT4," &
+        "O_HS9_L0_TX8_S10_SD72_N   : AY3," &
+        "O_HS9_L0_TX8_S10_SD72_P   : AY4," &
+        "O_HS9_L1_TX9_S10_SD73_N   : BA2," &
+        "O_HS9_L1_TX9_S10_SD73_P   : BA1," &
+        "O_HS9_L2_TX10_S10_SD74_N : BB3," &
+        "O_HS9_L2_TX10_S10_SD74_P : BB4," &
+        "O_HS9_L3_TX11_S10_SD75_N : BC2," &
+        "O_HS9_L3_TX11_S10_SD75_P : BC1," &
+        "O_HS9_L4_TX12_S10_SD76_N : BG2," &
+        "O_HS9_L4_TX12_S10_SD76_P : BG1," &
+        "O_HS9_L5_TX13_S10_SD77_N : BF3," &
+        "O_HS9_L5_TX13_S10_SD77_P : BF4," &
+        "O_HS9_L6_TX14_S10_SD78_N : BE2," &
+        "O_HS9_L6_TX14_S10_SD78_P : BE1," &
+        "O_HS9_L7_TX15_S10_SD79_N : BD3," &
+        "O_HS9_L7_TX15_S10_SD79_P : BD4," &
+        "O_HS10_L0_TX16_S10_SD80_N : BH3," &
+        "O_HS10_L0_TX16_S10_SD80_P : BH4," &
+        "O_HS10_L1_TX17_S10_SD81_N : BJ2," &
+        "O_HS10_L1_TX17_S10_SD81_P : BJ1," &
+        "O_HS10_L2_TX18_S10_SD82_N : BK3," &
+        "O_HS10_L2_TX18_S10_SD82_P : BK4," &
+        "O_HS10_L3_TX19_S10_SD83_N : BL2," &
+        "O_HS10_L3_TX19_S10_SD83_P : BL1," &
+        "O_HS10_L4_TX20_S10_SD84_N : BY8," &
+        "O_HS10_L4_TX20_S10_SD84_P : CA8," &
+        "O_HS10_L5_TX21_S10_SD85_N : BW7," &
+        "O_HS10_L5_TX21_S10_SD85_P : BV7," &
+        "O_HS10_L6_TX22_S10_SD86_N : BY6," &
+        "O_HS10_L6_TX22_S10_SD86_P : CA6," &
+        "O_HS10_L7_TX23_S10_SD87_N : BW5," &
+        "O_HS10_L7_TX23_S10_SD87_P : BV5," &
+        "O_HS11_L0_TX24_S10_SD88_N : BW9," &
+        "O_HS11_L0_TX24_S10_SD88_P : BV9," &
+        "O_HS11_L1_TX25_S10_SD89_N : BY10," &
+        "O_HS11_L1_TX25_S10_SD89_P : CA10," &
+        "O_HS11_L2_TX26_S10_SD90_N : BW11," &
+        "O_HS11_L2_TX26_S10_SD90_P : BV11," &
+        "O_HS11_L3_TX27_S10_SD91_N : BY12," &
+        "O_HS11_L3_TX27_S10_SD91_P : CA12," &
+        "O_HS11_L4_TX28_S10_SD92_N : BY16," &
+        "O_HS11_L4_TX28_S10_SD92_P : CA16," &
+        "O_HS11_L5_TX29_S10_SD93_N : BW15," &
+        "O_HS11_L5_TX29_S10_SD93_P : BV15," &
+        "O_HS11_L6_TX30_S10_SD94_N : BY14," &
+        "O_HS11_L6_TX30_S10_SD94_P : CA14," &
+        "O_HS11_L7_TX31_S10_SD95_N : BW13," &
+        "O_HS11_L7_TX31_S10_SD95_P : BV13," &
+        "O_HS12_L0_TX0_S11_SD96_N  : AM59," &
+        "O_HS12_L0_TX0_S11_SD96_P  : AM58," &
+        "O_HS12_L1_TX1_S11_SD97_N  : AN60," &
+        "O_HS12_L1_TX1_S11_SD97_P  : AN61," &
+        "O_HS12_L2_TX2_S11_SD98_N  : AR61," &
+        "O_HS12_L2_TX2_S11_SD98_P  : AR60," &
+        "O_HS12_L3_TX3_S11_SD99_N  : AP58," &
+        "O_HS12_L3_TX3_S11_SD99_P  : AP59," &
+        "O_HS12_L4_TX4_S11_SD100_N  : AW60," &
+        "O_HS12_L4_TX4_S11_SD100_P  : AW61," &
+        "O_HS12_L5_TX5_S11_SD101_N  : AV59," &
+        "O_HS12_L5_TX5_S11_SD101_P  : AV58," &
+        "O_HS12_L6_TX6_S11_SD102_N  : AU60," &
+        "O_HS12_L6_TX6_S11_SD102_P  : AU61," &
+        "O_HS12_L7_TX7_S11_SD103_N  : AT59," &
+        "O_HS12_L7_TX7_S11_SD103_P  : AT58," &
+        "O_HS13_L0_TX8_S11_SD104_N  : AY59," &
+        "O_HS13_L0_TX8_S11_SD104_P  : AY58," &
+        "O_HS13_L1_TX9_S11_SD105_N  : BA60," &
+        "O_HS13_L1_TX9_S11_SD105_P  : BA61," &
+        "O_HS13_L2_TX10_S11_SD106_N : BB59," &
+        "O_HS13_L2_TX10_S11_SD106_P : BB58," &
+        "O_HS13_L3_TX11_S11_SD107_N : BC60," &
+        "O_HS13_L3_TX11_S11_SD107_P : BC61," &
+        "O_HS13_L4_TX12_S11_SD108_N : BG60," &
+        "O_HS13_L4_TX12_S11_SD108_P : BG61," &
+        "O_HS13_L5_TX13_S11_SD109_N : BF59," &
+        "O_HS13_L5_TX13_S11_SD109_P : BF58," &
+        "O_HS13_L6_TX14_S11_SD110_N : BE60," &
+        "O_HS13_L6_TX14_S11_SD110_P : BE61," &
+        "O_HS13_L7_TX15_S11_SD111_N : BD59," &
+        "O_HS13_L7_TX15_S11_SD111_P : BD58," &
+        "O_HS14_L0_TX16_S11_SD112_N : BH59," &
+        "O_HS14_L0_TX16_S11_SD112_P : BH58," &
+        "O_HS14_L1_TX17_S11_SD113_N : BJ60," &
+        "O_HS14_L1_TX17_S11_SD113_P : BJ61," &
+        "O_HS14_L2_TX18_S11_SD114_N : BK59," &
+        "O_HS14_L2_TX18_S11_SD114_P : BK58," &
+        "O_HS14_L3_TX19_S11_SD115_N : BL60," &
+        "O_HS14_L3_TX19_S11_SD115_P : BL61," &
+        "O_HS14_L4_TX20_S11_SD116_N : BY54," &
+        "O_HS14_L4_TX20_S11_SD116_P : CA54," &
+        "O_HS14_L5_TX21_S11_SD117_N : BW55," &
+        "O_HS14_L5_TX21_S11_SD117_P : BV55," &
+        "O_HS14_L6_TX22_S11_SD118_N : BY56," &
+        "O_HS14_L6_TX22_S11_SD118_P : CA56," &
+        "O_HS14_L7_TX23_S11_SD119_N : BW57," &
+        "O_HS14_L7_TX23_S11_SD119_P : BV57," &
+        "O_HS15_L0_TX24_S11_SD120_N : BW53," &
+        "O_HS15_L0_TX24_S11_SD120_P : BV53," &
+        "O_HS15_L1_TX25_S11_SD121_N : BY52," &
+        "O_HS15_L1_TX25_S11_SD121_P : CA52," &
+        "O_HS15_L2_TX26_S11_SD122_N : BW51," &
+        "O_HS15_L2_TX26_S11_SD122_P : BV51," &
+        "O_HS15_L3_TX27_S11_SD123_N : BY50," &
+        "O_HS15_L3_TX27_S11_SD123_P : CA50," &
+        "O_HS15_L4_TX28_S11_SD124_N : BY46," &
+        "O_HS15_L4_TX28_S11_SD124_P : CA46," &
+        "O_HS15_L5_TX29_S11_SD125_N : BW47," &
+        "O_HS15_L5_TX29_S11_SD125_P : BV47," &
+        "O_HS15_L6_TX30_S11_SD126_N : BY48," &
+        "O_HS15_L6_TX30_S11_SD126_P : CA48," &
+        "O_HS15_L7_TX31_S11_SD127_N : BW49," &
+        "O_HS15_L7_TX31_S11_SD127_P : BV49," &
+        "O_LS1_L0_TX0_S10_SD2_N    : BY31," &
+        "O_LS1_L0_TX0_S10_SD2_P    : CA31," &
+        "O_LS1_L1_TX1_S10_SD3_N    : BY33," &
+        "O_LS1_L1_TX1_S10_SD3_P    : CA33," &
+        "O_PCIE1_TX_N              : BV29," &
+        "O_PCIE1_TX_P              : BU29";
+   
+-- This section specifies the differential IO port groupings.
+   
+   attribute PORT_GROUPING of wol_top: entity is 
+      "Differential_Voltage ( " &
+          "(I_HS8_L0_RX0_S10_SD64_P,I_HS8_L0_RX0_S10_SD64_N)," &
+          "(I_HS8_L1_RX1_S10_SD65_P,I_HS8_L1_RX1_S10_SD65_N)," &
+          "(I_HS8_L2_RX2_S10_SD66_P,I_HS8_L2_RX2_S10_SD66_N)," &
+          "(I_HS8_L3_RX3_S10_SD67_P,I_HS8_L3_RX3_S10_SD67_N)," &
+          "(I_HS8_L4_RX4_S10_SD68_P,I_HS8_L4_RX4_S10_SD68_N)," &
+          "(I_HS8_L5_RX5_S10_SD69_P,I_HS8_L5_RX5_S10_SD69_N)," &
+          "(I_HS8_L6_RX6_S10_SD70_P,I_HS8_L6_RX6_S10_SD70_N)," &
+          "(I_HS8_L7_RX7_S10_SD71_P,I_HS8_L7_RX7_S10_SD71_N)," &
+          "(I_HS9_L0_RX8_S10_SD72_P,I_HS9_L0_RX8_S10_SD72_N)," &
+          "(I_HS9_L1_RX9_S10_SD73_P,I_HS9_L1_RX9_S10_SD73_N)," &
+          "(I_HS9_L2_RX10_S10_SD74_P,I_HS9_L2_RX10_S10_SD74_N)," &
+          "(I_HS9_L3_RX11_S10_SD75_P,I_HS9_L3_RX11_S10_SD75_N)," &
+          "(I_HS9_L4_RX12_S10_SD76_P,I_HS9_L4_RX12_S10_SD76_N)," &
+          "(I_HS9_L5_RX13_S10_SD77_P,I_HS9_L5_RX13_S10_SD77_N)," &
+          "(I_HS9_L6_RX14_S10_SD78_P,I_HS9_L6_RX14_S10_SD78_N)," &
+          "(I_HS9_L7_RX15_S10_SD79_P,I_HS9_L7_RX15_S10_SD79_N)," &
+          "(I_HS10_L0_RX16_S10_SD80_P,I_HS10_L0_RX16_S10_SD80_N)," &
+          "(I_HS10_L1_RX17_S10_SD81_P,I_HS10_L1_RX17_S10_SD81_N)," &
+          "(I_HS10_L2_RX18_S10_SD82_P,I_HS10_L2_RX18_S10_SD82_N)," &
+          "(I_HS10_L3_RX19_S10_SD83_P,I_HS10_L3_RX19_S10_SD83_N)," &
+          "(I_HS10_L4_RX20_S10_SD84_P,I_HS10_L4_RX20_S10_SD84_N)," &
+          "(I_HS10_L5_RX21_S10_SD85_P,I_HS10_L5_RX21_S10_SD85_N)," &
+          "(I_HS10_L6_RX22_S10_SD86_P,I_HS10_L6_RX22_S10_SD86_N)," &
+          "(I_HS10_L7_RX23_S10_SD87_P,I_HS10_L7_RX23_S10_SD87_N)," &
+          "(I_HS11_L0_RX24_S10_SD88_P,I_HS11_L0_RX24_S10_SD88_N)," &
+          "(I_HS11_L1_RX25_S10_SD89_P,I_HS11_L1_RX25_S10_SD89_N)," &
+          "(I_HS11_L2_RX26_S10_SD90_P,I_HS11_L2_RX26_S10_SD90_N)," &
+          "(I_HS11_L3_RX27_S10_SD91_P,I_HS11_L3_RX27_S10_SD91_N)," &
+          "(I_HS11_L4_RX28_S10_SD92_P,I_HS11_L4_RX28_S10_SD92_N)," &
+          "(I_HS11_L5_RX29_S10_SD93_P,I_HS11_L5_RX29_S10_SD93_N)," &
+          "(I_HS11_L6_RX30_S10_SD94_P,I_HS11_L6_RX30_S10_SD94_N)," &
+          "(I_HS11_L7_RX31_S10_SD95_P,I_HS11_L7_RX31_S10_SD95_N)," &
+          "(I_HS12_L0_RX0_S11_SD96_P,I_HS12_L0_RX0_S11_SD96_N)," &
+          "(I_HS12_L1_RX1_S11_SD97_P,I_HS12_L1_RX1_S11_SD97_N)," &
+          "(I_HS12_L2_RX2_S11_SD98_P,I_HS12_L2_RX2_S11_SD98_N)," &
+          "(I_HS12_L3_RX3_S11_SD99_P,I_HS12_L3_RX3_S11_SD99_N)," &
+          "(I_HS12_L4_RX4_S11_SD100_P,I_HS12_L4_RX4_S11_SD100_N)," &
+          "(I_HS12_L5_RX5_S11_SD101_P,I_HS12_L5_RX5_S11_SD101_N)," &
+          "(I_HS12_L6_RX6_S11_SD102_P,I_HS12_L6_RX6_S11_SD102_N)," &
+          "(I_HS12_L7_RX7_S11_SD103_P,I_HS12_L7_RX7_S11_SD103_N)," &
+          "(I_HS13_L0_RX8_S11_SD104_P,I_HS13_L0_RX8_S11_SD104_N)," &
+          "(I_HS13_L1_RX9_S11_SD105_P,I_HS13_L1_RX9_S11_SD105_N)," &
+          "(I_HS13_L2_RX10_S11_SD106_P,I_HS13_L2_RX10_S11_SD106_N)," &
+          "(I_HS13_L3_RX11_S11_SD107_P,I_HS13_L3_RX11_S11_SD107_N)," &
+          "(I_HS13_L4_RX12_S11_SD108_P,I_HS13_L4_RX12_S11_SD108_N)," &
+          "(I_HS13_L5_RX13_S11_SD109_P,I_HS13_L5_RX13_S11_SD109_N)," &
+          "(I_HS13_L6_RX14_S11_SD110_P,I_HS13_L6_RX14_S11_SD110_N)," &
+          "(I_HS13_L7_RX15_S11_SD111_P,I_HS13_L7_RX15_S11_SD111_N)," &
+          "(I_HS14_L0_RX16_S11_SD112_P,I_HS14_L0_RX16_S11_SD112_N)," &
+          "(I_HS14_L1_RX17_S11_SD113_P,I_HS14_L1_RX17_S11_SD113_N)," &
+          "(I_HS14_L2_RX18_S11_SD114_P,I_HS14_L2_RX18_S11_SD114_N)," &
+          "(I_HS14_L3_RX19_S11_SD115_P,I_HS14_L3_RX19_S11_SD115_N)," &
+          "(I_HS14_L4_RX20_S11_SD116_P,I_HS14_L4_RX20_S11_SD116_N)," &
+          "(I_HS14_L5_RX21_S11_SD117_P,I_HS14_L5_RX21_S11_SD117_N)," &
+          "(I_HS14_L6_RX22_S11_SD118_P,I_HS14_L6_RX22_S11_SD118_N)," &
+          "(I_HS14_L7_RX23_S11_SD119_P,I_HS14_L7_RX23_S11_SD119_N)," &
+          "(I_HS15_L0_RX24_S11_SD120_P,I_HS15_L0_RX24_S11_SD120_N)," &
+          "(I_HS15_L1_RX25_S11_SD121_P,I_HS15_L1_RX25_S11_SD121_N)," &
+          "(I_HS15_L2_RX26_S11_SD122_P,I_HS15_L2_RX26_S11_SD122_N)," &
+          "(I_HS15_L3_RX27_S11_SD123_P,I_HS15_L3_RX27_S11_SD123_N)," &
+          "(I_HS15_L4_RX28_S11_SD124_P,I_HS15_L4_RX28_S11_SD124_N)," &
+          "(I_HS15_L5_RX29_S11_SD125_P,I_HS15_L5_RX29_S11_SD125_N)," &
+          "(I_HS15_L6_RX30_S11_SD126_P,I_HS15_L6_RX30_S11_SD126_N)," &
+          "(I_HS15_L7_RX31_S11_SD127_P,I_HS15_L7_RX31_S11_SD127_N)," &
+          "(I_LS1_L0_RX0_S10_SD2_P,I_LS1_L0_RX0_S10_SD2_N)," &
+          "(I_LS1_L1_RX1_S10_SD3_P,I_LS1_L1_RX1_S10_SD3_N)," &
+          "(I_PCIE1_RX_P,I_PCIE1_RX_N)," &
+          "(O_HS8_L0_TX0_S10_SD64_P,O_HS8_L0_TX0_S10_SD64_N)," &
+          "(O_HS8_L1_TX1_S10_SD65_P,O_HS8_L1_TX1_S10_SD65_N)," &
+          "(O_HS8_L2_TX2_S10_SD66_P,O_HS8_L2_TX2_S10_SD66_N)," &
+          "(O_HS8_L3_TX3_S10_SD67_P,O_HS8_L3_TX3_S10_SD67_N)," &
+          "(O_HS8_L4_TX4_S10_SD68_P,O_HS8_L4_TX4_S10_SD68_N)," &
+          "(O_HS8_L5_TX5_S10_SD69_P,O_HS8_L5_TX5_S10_SD69_N)," &
+          "(O_HS8_L6_TX6_S10_SD70_P,O_HS8_L6_TX6_S10_SD70_N)," &
+          "(O_HS8_L7_TX7_S10_SD71_P,O_HS8_L7_TX7_S10_SD71_N)," &
+          "(O_HS9_L0_TX8_S10_SD72_P,O_HS9_L0_TX8_S10_SD72_N)," &
+          "(O_HS9_L1_TX9_S10_SD73_P,O_HS9_L1_TX9_S10_SD73_N)," &
+          "(O_HS9_L2_TX10_S10_SD74_P,O_HS9_L2_TX10_S10_SD74_N)," &
+          "(O_HS9_L3_TX11_S10_SD75_P,O_HS9_L3_TX11_S10_SD75_N)," &
+          "(O_HS9_L4_TX12_S10_SD76_P,O_HS9_L4_TX12_S10_SD76_N)," &
+          "(O_HS9_L5_TX13_S10_SD77_P,O_HS9_L5_TX13_S10_SD77_N)," &
+          "(O_HS9_L6_TX14_S10_SD78_P,O_HS9_L6_TX14_S10_SD78_N)," &
+          "(O_HS9_L7_TX15_S10_SD79_P,O_HS9_L7_TX15_S10_SD79_N)," &
+          "(O_HS10_L0_TX16_S10_SD80_P,O_HS10_L0_TX16_S10_SD80_N)," &
+          "(O_HS10_L1_TX17_S10_SD81_P,O_HS10_L1_TX17_S10_SD81_N)," &
+          "(O_HS10_L2_TX18_S10_SD82_P,O_HS10_L2_TX18_S10_SD82_N)," &
+          "(O_HS10_L3_TX19_S10_SD83_P,O_HS10_L3_TX19_S10_SD83_N)," &
+          "(O_HS10_L4_TX20_S10_SD84_P,O_HS10_L4_TX20_S10_SD84_N)," &
+          "(O_HS10_L5_TX21_S10_SD85_P,O_HS10_L5_TX21_S10_SD85_N)," &
+          "(O_HS10_L6_TX22_S10_SD86_P,O_HS10_L6_TX22_S10_SD86_N)," &
+          "(O_HS10_L7_TX23_S10_SD87_P,O_HS10_L7_TX23_S10_SD87_N)," &
+          "(O_HS11_L0_TX24_S10_SD88_P,O_HS11_L0_TX24_S10_SD88_N)," &
+          "(O_HS11_L1_TX25_S10_SD89_P,O_HS11_L1_TX25_S10_SD89_N)," &
+          "(O_HS11_L2_TX26_S10_SD90_P,O_HS11_L2_TX26_S10_SD90_N)," &
+          "(O_HS11_L3_TX27_S10_SD91_P,O_HS11_L3_TX27_S10_SD91_N)," &
+          "(O_HS11_L4_TX28_S10_SD92_P,O_HS11_L4_TX28_S10_SD92_N)," &
+          "(O_HS11_L5_TX29_S10_SD93_P,O_HS11_L5_TX29_S10_SD93_N)," &
+          "(O_HS11_L6_TX30_S10_SD94_P,O_HS11_L6_TX30_S10_SD94_N)," &
+          "(O_HS11_L7_TX31_S10_SD95_P,O_HS11_L7_TX31_S10_SD95_N)," &
+          "(O_HS12_L0_TX0_S11_SD96_P,O_HS12_L0_TX0_S11_SD96_N)," &
+          "(O_HS12_L1_TX1_S11_SD97_P,O_HS12_L1_TX1_S11_SD97_N)," &
+          "(O_HS12_L2_TX2_S11_SD98_P,O_HS12_L2_TX2_S11_SD98_N)," &
+          "(O_HS12_L3_TX3_S11_SD99_P,O_HS12_L3_TX3_S11_SD99_N)," &
+          "(O_HS12_L4_TX4_S11_SD100_P,O_HS12_L4_TX4_S11_SD100_N)," &
+          "(O_HS12_L5_TX5_S11_SD101_P,O_HS12_L5_TX5_S11_SD101_N)," &
+          "(O_HS12_L6_TX6_S11_SD102_P,O_HS12_L6_TX6_S11_SD102_N)," &
+          "(O_HS12_L7_TX7_S11_SD103_P,O_HS12_L7_TX7_S11_SD103_N)," &
+          "(O_HS13_L0_TX8_S11_SD104_P,O_HS13_L0_TX8_S11_SD104_N)," &
+          "(O_HS13_L1_TX9_S11_SD105_P,O_HS13_L1_TX9_S11_SD105_N)," &
+          "(O_HS13_L2_TX10_S11_SD106_P,O_HS13_L2_TX10_S11_SD106_N)," &
+          "(O_HS13_L3_TX11_S11_SD107_P,O_HS13_L3_TX11_S11_SD107_N)," &
+          "(O_HS13_L4_TX12_S11_SD108_P,O_HS13_L4_TX12_S11_SD108_N)," &
+          "(O_HS13_L5_TX13_S11_SD109_P,O_HS13_L5_TX13_S11_SD109_N)," &
+          "(O_HS13_L6_TX14_S11_SD110_P,O_HS13_L6_TX14_S11_SD110_N)," &
+          "(O_HS13_L7_TX15_S11_SD111_P,O_HS13_L7_TX15_S11_SD111_N)," &
+          "(O_HS14_L0_TX16_S11_SD112_P,O_HS14_L0_TX16_S11_SD112_N)," &
+          "(O_HS14_L1_TX17_S11_SD113_P,O_HS14_L1_TX17_S11_SD113_N)," &
+          "(O_HS14_L2_TX18_S11_SD114_P,O_HS14_L2_TX18_S11_SD114_N)," &
+          "(O_HS14_L3_TX19_S11_SD115_P,O_HS14_L3_TX19_S11_SD115_N)," &
+          "(O_HS14_L4_TX20_S11_SD116_P,O_HS14_L4_TX20_S11_SD116_N)," &
+          "(O_HS14_L5_TX21_S11_SD117_P,O_HS14_L5_TX21_S11_SD117_N)," &
+          "(O_HS14_L6_TX22_S11_SD118_P,O_HS14_L6_TX22_S11_SD118_N)," &
+          "(O_HS14_L7_TX23_S11_SD119_P,O_HS14_L7_TX23_S11_SD119_N)," &
+          "(O_HS15_L0_TX24_S11_SD120_P,O_HS15_L0_TX24_S11_SD120_N)," &
+          "(O_HS15_L1_TX25_S11_SD121_P,O_HS15_L1_TX25_S11_SD121_N)," &
+          "(O_HS15_L2_TX26_S11_SD122_P,O_HS15_L2_TX26_S11_SD122_N)," &
+          "(O_HS15_L3_TX27_S11_SD123_P,O_HS15_L3_TX27_S11_SD123_N)," &
+          "(O_HS15_L4_TX28_S11_SD124_P,O_HS15_L4_TX28_S11_SD124_N)," &
+          "(O_HS15_L5_TX29_S11_SD125_P,O_HS15_L5_TX29_S11_SD125_N)," &
+          "(O_HS15_L6_TX30_S11_SD126_P,O_HS15_L6_TX30_S11_SD126_N)," &
+          "(O_HS15_L7_TX31_S11_SD127_P,O_HS15_L7_TX31_S11_SD127_N)," &
+          "(O_LS1_L0_TX0_S10_SD2_P,O_LS1_L0_TX0_S10_SD2_N)," &
+          "(O_LS1_L1_TX1_S10_SD3_P,O_LS1_L1_TX1_S10_SD3_N)," &
+          "(O_PCIE1_TX_P,O_PCIE1_TX_N))";
+
+-- This section specifies the TAP ports. For the TAP TCK port, the parameters in 
+-- the brackets are:
+--        First Field : Maximum  TCK frequency.
+--        Second Field: Allowable states TCK may be stopped in.
+   
+   attribute TAP_SCAN_CLOCK of PAD_TCK   : signal is (5.000000e+06, BOTH);
+   attribute TAP_SCAN_IN    of TST_TDI   : signal is true;
+   attribute TAP_SCAN_MODE  of PAD_TMS   : signal is true;
+   attribute TAP_SCAN_OUT   of TDO   : signal is true;
+   attribute TAP_SCAN_RESET of PAD_TRST_L: signal is true;
+   
+-- Specifies the compliance enable patterns for the design. It lists a set of 
+-- design ports and the values that they should be set to, in order to enable 
+-- compliance to IEEE Std 1149.1
+   
+   attribute COMPLIANCE_PATTERNS of wol_top: entity is 
+        "(CPU2JTAG1_EN, I_CORE1_RST_N, JTAG2ECPU1_EN, PAD_TRI_EN) (" &
+        "0100)";
+   
+-- Specifies the number of bits in the instruction register.
+   
+   attribute INSTRUCTION_LENGTH of wol_top: entity is 6;
+   
+-- Specifies the boundary-scan instructions implemented in the design and their 
+-- opcodes.
+   
+   attribute INSTRUCTION_OPCODE of wol_top: entity is 
+     "BYPASS       (111111)," &
+     "EXTEST       (100100)," &
+     "SAMPLE       (100101)," &
+     "PRELOAD      (100101)," &
+     "EXTEST_PULSE (100111)," &
+     "EXTEST_TRAIN (100110)," &
+     "IDCODE       (111110)";
+   
+-- Specifies the bit pattern that is loaded into the instruction register when 
+-- the TAP controller passes through the Capture-IR state. The standard mandates 
+-- that the two LSBs must be "01". The remaining bits are design specific.
+   
+   attribute INSTRUCTION_CAPTURE of wol_top: entity is "000001";
+   
+-- Specifies the bit pattern that is loaded into the DEVICE_ID register during 
+-- the IDCODE instruction when the TAP controller passes through the Capture-DR 
+-- state.
+   
+   attribute IDCODE_REGISTER of wol_top: entity is 
+     "0001" &                  
+ -- 4-bit version number
+     "0000010001110101" &      
+ -- 16-bit part number
+     "01000100110" &           
+ -- 11-bit identity of the manufacturer
+     "1";                      
+ -- Required by IEEE Std 1149.1
+   
+-- This section specifies the test data register placed between TDI and TDO for 
+-- each implemented instruction.
+   
+   attribute REGISTER_ACCESS of wol_top: entity is 
+        "BYPASS    (BYPASS)," &
+        "BOUNDARY  (EXTEST, SAMPLE, PRELOAD, EXTEST_PULSE, EXTEST_TRAIN)," &
+        "DEVICE_ID (IDCODE)";
+   
+-- Specifies the length of the boundary scan register.
+   
+   attribute BOUNDARY_LENGTH of wol_top: entity is 251;
+   
+-- The following list specifies the characteristics of each cell in the boundary 
+-- scan register from TDI to TDO. The following is a description of the label 
+-- fields:
+--      num     : Is the cell number.
+--      cell    : Is the cell type as defined by the standard.
+--      port    : Is the design port name. Control cells do not have a port 
+--                name.
+--      function: Is the function of the cell as defined by the standard. Is one 
+--                of input, output2, output3, bidir, control or controlr.
+--      safe    : Specifies the value that the BSR cell should be loaded with 
+--                for safe operation when the software might otherwise choose a 
+--                random value.
+--      ccell   : The control cell number. Specifies the control cell that 
+--                drives the output enable for this port.
+--      disval  : Specifies the value that is loaded into the control cell to 
+--                disable the output enable for the corresponding port.
+--      rslt    : Resulting state. Shows the state of the driver when it is 
+--                disabled.
+   
+   attribute BOUNDARY_REGISTER of wol_top: entity is 
+--     
+--    num   cell   port                          function      safe  [ccell  
+--    disval  rslt]
+--     
+     "250  (AC_1,  O_HS15_L4_TX28_S11_SD124_P, output2,      " &
+     "X),                        " &
+     "249  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "248  (AC_1,  O_HS15_L5_TX29_S11_SD125_P, output2,      " &
+     "X),                        " &
+     "247  (BC_4,  I_HS15_L4_RX28_S11_SD124_N, observe_only, " &
+     "X),                        " &
+     "246  (BC_4,  I_HS15_L4_RX28_S11_SD124_P, observe_only, " &
+     "X),                        " &
+     "245  (BC_4,  I_HS15_L5_RX29_S11_SD125_P, observe_only, " &
+     "X),                        " &
+     "244  (BC_4,  I_HS15_L5_RX29_S11_SD125_N, observe_only, " &
+     "X),                        " &
+     "243  (AC_1,  O_HS15_L6_TX30_S11_SD126_P, output2,      " &
+     "X),                        " &
+     "242  (AC_1,  O_HS15_L7_TX31_S11_SD127_P, output2,      " &
+     "X),                        " &
+     "241  (BC_4,  I_HS15_L6_RX30_S11_SD126_N, observe_only, " &
+     "X),                        " &
+     "240  (BC_4,  I_HS15_L6_RX30_S11_SD126_P, observe_only, " &
+     "X),                        " &
+     "239  (BC_4,  I_HS15_L7_RX31_S11_SD127_P, observe_only, " &
+     "X),                        " &
+     "238  (BC_4,  I_HS15_L7_RX31_S11_SD127_N, observe_only, " &
+     "X),                        " &
+     "237  (AC_1,  O_HS15_L0_TX24_S11_SD120_P, output2,      " &
+     "X),                        " &
+     "236  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "235  (AC_1,  O_HS15_L1_TX25_S11_SD121_P, output2,      " &
+     "X),                        " &
+     "234  (BC_4,  I_HS15_L0_RX24_S11_SD120_N, observe_only, " &
+     "X),                        " &
+     "233  (BC_4,  I_HS15_L0_RX24_S11_SD120_P, observe_only, " &
+     "X),                        " &
+     "232  (BC_4,  I_HS15_L1_RX25_S11_SD121_P, observe_only, " &
+     "X),                        " &
+     "231  (BC_4,  I_HS15_L1_RX25_S11_SD121_N, observe_only, " &
+     "X),                        " &
+     "230  (AC_1,  O_HS15_L2_TX26_S11_SD122_P, output2,      " &
+     "X),                        " &
+     "229  (AC_1,  O_HS15_L3_TX27_S11_SD123_P, output2,      " &
+     "X),                        " &
+     "228  (BC_4,  I_HS15_L2_RX26_S11_SD122_N, observe_only, " &
+     "X),                        " &
+     "227  (BC_4,  I_HS15_L2_RX26_S11_SD122_P, observe_only, " &
+     "X),                        " &
+     "226  (BC_4,  I_HS15_L3_RX27_S11_SD123_P, observe_only, " &
+     "X),                        " &
+     "225  (BC_4,  I_HS15_L3_RX27_S11_SD123_N, observe_only, " &
+     "X),                        " &
+     "224  (AC_1,  O_HS14_L4_TX20_S11_SD116_P, output2,      " &
+     "X),                        " &
+     "223  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "222  (AC_1,  O_HS14_L5_TX21_S11_SD117_P, output2,      " &
+     "X),                        " &
+     "221  (BC_4,  I_HS14_L4_RX20_S11_SD116_N, observe_only, " &
+     "X),                        " &
+     "220  (BC_4,  I_HS14_L4_RX20_S11_SD116_P, observe_only, " &
+     "X),                        " &
+     "219  (BC_4,  I_HS14_L5_RX21_S11_SD117_P, observe_only, " &
+     "X),                        " &
+     "218  (BC_4,  I_HS14_L5_RX21_S11_SD117_N, observe_only, " &
+     "X),                        " &
+     "217  (AC_1,  O_HS14_L6_TX22_S11_SD118_P, output2,      " &
+     "X),                        " &
+     "216  (AC_1,  O_HS14_L7_TX23_S11_SD119_P, output2,      " &
+     "X),                        " &
+     "215  (BC_4,  I_HS14_L6_RX22_S11_SD118_N, observe_only, " &
+     "X),                        " &
+     "214  (BC_4,  I_HS14_L6_RX22_S11_SD118_P, observe_only, " &
+     "X),                        " &
+     "213  (BC_4,  I_HS14_L7_RX23_S11_SD119_P, observe_only, " &
+     "X),                        " &
+     "212  (BC_4,  I_HS14_L7_RX23_S11_SD119_N, observe_only, " &
+     "X),                        " &
+     "211  (AC_1,  O_HS14_L0_TX16_S11_SD112_P, output2,      " &
+     "X),                        " &
+     "210  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "209  (AC_1,  O_HS14_L1_TX17_S11_SD113_P, output2,      " &
+     "X),                        " &
+     "208  (BC_4,  I_HS14_L0_RX16_S11_SD112_N, observe_only, " &
+     "X),                        " &
+     "207  (BC_4,  I_HS14_L0_RX16_S11_SD112_P, observe_only, " &
+     "X),                        " &
+     "206  (BC_4,  I_HS14_L1_RX17_S11_SD113_P, observe_only, " &
+     "X),                        " &
+     "205  (BC_4,  I_HS14_L1_RX17_S11_SD113_N, observe_only, " &
+     "X),                        " &
+     "204  (AC_1,  O_HS14_L2_TX18_S11_SD114_P, output2,      " &
+     "X),                        " &
+     "203  (AC_1,  O_HS14_L3_TX19_S11_SD115_P, output2,      " &
+     "X),                        " &
+     "202  (BC_4,  I_HS14_L2_RX18_S11_SD114_N, observe_only, " &
+     "X),                        " &
+     "201  (BC_4,  I_HS14_L2_RX18_S11_SD114_P, observe_only, " &
+     "X),                        " &
+     "200  (BC_4,  I_HS14_L3_RX19_S11_SD115_P, observe_only, " &
+     "X),                        " &
+     "199  (BC_4,  I_HS14_L3_RX19_S11_SD115_N, observe_only, " &
+     "X),                        " &
+     "198  (AC_1,  O_HS13_L4_TX12_S11_SD108_P, output2,      " &
+     "X),                        " &
+     "197  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "196  (AC_1,  O_HS13_L5_TX13_S11_SD109_P, output2,      " &
+     "X),                        " &
+     "195  (BC_4,  I_HS13_L4_RX12_S11_SD108_N, observe_only, " &
+     "X),                        " &
+     "194  (BC_4,  I_HS13_L4_RX12_S11_SD108_P, observe_only, " &
+     "X),                        " &
+     "193  (BC_4,  I_HS13_L5_RX13_S11_SD109_P, observe_only, " &
+     "X),                        " &
+     "192  (BC_4,  I_HS13_L5_RX13_S11_SD109_N, observe_only, " &
+     "X),                        " &
+     "191  (AC_1,  O_HS13_L6_TX14_S11_SD110_P, output2,      " &
+     "X),                        " &
+     "190  (AC_1,  O_HS13_L7_TX15_S11_SD111_P, output2,      " &
+     "X),                        " &
+     "189  (BC_4,  I_HS13_L6_RX14_S11_SD110_N, observe_only, " &
+     "X),                        " &
+     "188  (BC_4,  I_HS13_L6_RX14_S11_SD110_P, observe_only, " &
+     "X),                        " &
+     "187  (BC_4,  I_HS13_L7_RX15_S11_SD111_P, observe_only, " &
+     "X),                        " &
+     "186  (BC_4,  I_HS13_L7_RX15_S11_SD111_N, observe_only, " &
+     "X),                        " &
+     "185  (AC_1,  O_HS13_L0_TX8_S11_SD104_P,  output2,      " &
+     "X),                        " &
+     "184  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "183  (AC_1,  O_HS13_L1_TX9_S11_SD105_P,  output2,      " &
+     "X),                        " &
+     "182  (BC_4,  I_HS13_L0_RX8_S11_SD104_N,  observe_only, " &
+     "X),                        " &
+     "181  (BC_4,  I_HS13_L0_RX8_S11_SD104_P,  observe_only, " &
+     "X),                        " &
+     "180  (BC_4,  I_HS13_L1_RX9_S11_SD105_P,  observe_only, " &
+     "X),                        " &
+     "179  (BC_4,  I_HS13_L1_RX9_S11_SD105_N,  observe_only, " &
+     "X),                        " &
+     "178  (AC_1,  O_HS13_L2_TX10_S11_SD106_P, output2,      " &
+     "X),                        " &
+     "177  (AC_1,  O_HS13_L3_TX11_S11_SD107_P, output2,      " &
+     "X),                        " &
+     "176  (BC_4,  I_HS13_L2_RX10_S11_SD106_N, observe_only, " &
+     "X),                        " &
+     "175  (BC_4,  I_HS13_L2_RX10_S11_SD106_P, observe_only, " &
+     "X),                        " &
+     "174  (BC_4,  I_HS13_L3_RX11_S11_SD107_P, observe_only, " &
+     "X),                        " &
+     "173  (BC_4,  I_HS13_L3_RX11_S11_SD107_N, observe_only, " &
+     "X),                        " &
+     "172  (AC_1,  O_HS12_L4_TX4_S11_SD100_P,  output2,      " &
+     "X),                        " &
+     "171  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "170  (AC_1,  O_HS12_L5_TX5_S11_SD101_P,  output2,      " &
+     "X),                        " &
+     "169  (BC_4,  I_HS12_L4_RX4_S11_SD100_N,  observe_only, " &
+     "X),                        " &
+     "168  (BC_4,  I_HS12_L4_RX4_S11_SD100_P,  observe_only, " &
+     "X),                        " &
+     "167  (BC_4,  I_HS12_L5_RX5_S11_SD101_P,  observe_only, " &
+     "X),                        " &
+     "166  (BC_4,  I_HS12_L5_RX5_S11_SD101_N,  observe_only, " &
+     "X),                        " &
+     "165  (AC_1,  O_HS12_L6_TX6_S11_SD102_P,  output2,      " &
+     "X),                        " &
+     "164  (AC_1,  O_HS12_L7_TX7_S11_SD103_P,  output2,      " &
+     "X),                        " &
+     "163  (BC_4,  I_HS12_L6_RX6_S11_SD102_N,  observe_only, " &
+     "X),                        " &
+     "162  (BC_4,  I_HS12_L6_RX6_S11_SD102_P,  observe_only, " &
+     "X),                        " &
+     "161  (BC_4,  I_HS12_L7_RX7_S11_SD103_P,  observe_only, " &
+     "X),                        " &
+     "160  (BC_4,  I_HS12_L7_RX7_S11_SD103_N,  observe_only, " &
+     "X),                        " &
+     "159  (AC_1,  O_HS12_L0_TX0_S11_SD96_P,  output2,      " &
+     "X),                        " &
+     "158  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "157  (AC_1,  O_HS12_L1_TX1_S11_SD97_P,  output2,      " &
+     "X),                        " &
+     "156  (BC_4,  I_HS12_L0_RX0_S11_SD96_N,  observe_only, " &
+     "X),                        " &
+     "155  (BC_4,  I_HS12_L0_RX0_S11_SD96_P,  observe_only, " &
+     "X),                        " &
+     "154  (BC_4,  I_HS12_L1_RX1_S11_SD97_P,  observe_only, " &
+     "X),                        " &
+     "153  (BC_4,  I_HS12_L1_RX1_S11_SD97_N,  observe_only, " &
+     "X),                        " &
+     "152  (AC_1,  O_HS12_L2_TX2_S11_SD98_P,  output2,      " &
+     "X),                        " &
+     "151  (AC_1,  O_HS12_L3_TX3_S11_SD99_P,  output2,      " &
+     "X),                        " &
+     "150  (BC_4,  I_HS12_L2_RX2_S11_SD98_N,  observe_only, " &
+     "X),                        " &
+     "149  (BC_4,  I_HS12_L2_RX2_S11_SD98_P,  observe_only, " &
+     "X),                        " &
+     "148  (BC_4,  I_HS12_L3_RX3_S11_SD99_P,  observe_only, " &
+     "X),                        " &
+     "147  (BC_4,  I_HS12_L3_RX3_S11_SD99_N,  observe_only, " &
+     "X),                        " &
+     "146  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "145  (BC_7,  HOST_SDA,                 bidir,        X,    " &
+     "146,    0,      Z),  " &
+     "144  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "143  (BC_7,  HOST_SCL,                 bidir,        X,    " &
+     "144,    0,      Z),  " &
+     "142  (BC_2,  I_CLK1_OBS_EN,             input,        " &
+     "X),                        " &
+     "141  (BC_2,  I_PCIE1_PLL_BYP,           input,        " &
+     "X),                        " &
+     "140  (BC_2,  I_PCIE1_PLL_RST_N,         input,        " &
+     "X),                        " &
+     "139  (BC_2,  I_PLL1_OBS_EN,             input,        " &
+     "X),                        " &
+     "138  (BC_2,  I_CORE_FREQ_SEL_0,        input,        " &
+     "X),                        " &
+     "137  (BC_2,  I_CORE_FREQ_SEL_1,        input,        " &
+     "X),                        " &
+     "136  (BC_2,  I_CORE1_PLL_BYP,           input,        " &
+     "X),                        " &
+     "135  (BC_2,  I_CORE1_PLL_RST_N,         input,        " &
+     "X),                        " &
+     "134  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "133  (BC_7,  B_PTP1_SYNC_MASTER,        bidir,        X,    " &
+     "134,    0,      Z),  " &
+     "132  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "131  (BC_7,  I_PTP1_SYNC_SLAVE,         bidir,        X,    " &
+     "132,    0,      Z),  " &
+     "130  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "129  (BC_7,  GPIO_08,                  bidir,        X,    " &
+     "130,    0,      Z),  " &
+     "128  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "127  (BC_7,  GPIO_09,                  bidir,        X,    " &
+     "128,    0,      Z),  " &
+     "126  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "125  (BC_7,  GPIO_10,                  bidir,        X,    " &
+     "126,    0,      Z),  " &
+     "124  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "123  (BC_7,  GPIO_11,                  bidir,        X,    " &
+     "124,    0,      Z),  " &
+     "122  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "121  (BC_7,  GPIO_12,                  bidir,        X,    " &
+     "122,    0,      Z),  " &
+     "120  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "119  (BC_7,  GPIO_13,                  bidir,        X,    " &
+     "120,    0,      Z),  " &
+     "118  (AC_1,  O_LS1_L0_TX0_S10_SD2_P,    output2,      " &
+     "X),                        " &
+     "117  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "116  (AC_1,  O_LS1_L1_TX1_S10_SD3_P,    output2,      " &
+     "X),                        " &
+     "115  (BC_4,  I_LS1_L0_RX0_S10_SD2_N,    observe_only, " &
+     "X),                        " &
+     "114  (BC_4,  I_LS1_L0_RX0_S10_SD2_P,    observe_only, " &
+     "X),                        " &
+     "113  (BC_4,  I_LS1_L1_RX1_S10_SD3_P,    observe_only, " &
+     "X),                        " &
+     "112  (BC_4,  I_LS1_L1_RX1_S10_SD3_N,    observe_only, " &
+     "X),                        " &
+     "111  (AC_1,  O_PCIE1_TX_P,              output2,      " &
+     "X),                        " &
+     "110  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "109  (BC_4,  I_PCIE1_RX_P,              observe_only, " &
+     "X),                        " &
+     "108  (BC_4,  I_PCIE1_RX_N,              observe_only, " &
+     "X),                        " &
+     "107  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "106  (BC_7,  B_I2C1_DATA,               bidir,        X,    " &
+     "107,    0,      Z),  " &
+     "105  (BC_2,  *,                            control,      " &
+     "0),                        " &
+     "104  (BC_7,  B_I2C1_CLK,                bidir,        X,    " &
+     "105,    0,      Z),  " &
+     "103  (AC_1,  O_HS11_L4_TX28_S10_SD92_P, output2,      " &
+     "X),                        " &
+     "102  (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "101  (AC_1,  O_HS11_L5_TX29_S10_SD93_P, output2,      " &
+     "X),                        " &
+     "100  (BC_4,  I_HS11_L4_RX28_S10_SD92_N, observe_only, " &
+     "X),                        " &
+     "99   (BC_4,  I_HS11_L4_RX28_S10_SD92_P, observe_only, " &
+     "X),                        " &
+     "98   (BC_4,  I_HS11_L5_RX29_S10_SD93_P, observe_only, " &
+     "X),                        " &
+     "97   (BC_4,  I_HS11_L5_RX29_S10_SD93_N, observe_only, " &
+     "X),                        " &
+     "96   (AC_1,  O_HS11_L6_TX30_S10_SD94_P, output2,      " &
+     "X),                        " &
+     "95   (AC_1,  O_HS11_L7_TX31_S10_SD95_P, output2,      " &
+     "X),                        " &
+     "94   (BC_4,  I_HS11_L6_RX30_S10_SD94_N, observe_only, " &
+     "X),                        " &
+     "93   (BC_4,  I_HS11_L6_RX30_S10_SD94_P, observe_only, " &
+     "X),                        " &
+     "92   (BC_4,  I_HS11_L7_RX31_S10_SD95_P, observe_only, " &
+     "X),                        " &
+     "91   (BC_4,  I_HS11_L7_RX31_S10_SD95_N, observe_only, " &
+     "X),                        " &
+     "90   (AC_1,  O_HS11_L0_TX24_S10_SD88_P, output2,      " &
+     "X),                        " &
+     "89   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "88   (AC_1,  O_HS11_L1_TX25_S10_SD89_P, output2,      " &
+     "X),                        " &
+     "87   (BC_4,  I_HS11_L0_RX24_S10_SD88_N, observe_only, " &
+     "X),                        " &
+     "86   (BC_4,  I_HS11_L0_RX24_S10_SD88_P, observe_only, " &
+     "X),                        " &
+     "85   (BC_4,  I_HS11_L1_RX25_S10_SD89_P, observe_only, " &
+     "X),                        " &
+     "84   (BC_4,  I_HS11_L1_RX25_S10_SD89_N, observe_only, " &
+     "X),                        " &
+     "83   (AC_1,  O_HS11_L2_TX26_S10_SD90_P, output2,      " &
+     "X),                        " &
+     "82   (AC_1,  O_HS11_L3_TX27_S10_SD91_P, output2,      " &
+     "X),                        " &
+     "81   (BC_4,  I_HS11_L2_RX26_S10_SD90_N, observe_only, " &
+     "X),                        " &
+     "80   (BC_4,  I_HS11_L2_RX26_S10_SD90_P, observe_only, " &
+     "X),                        " &
+     "79   (BC_4,  I_HS11_L3_RX27_S10_SD91_P, observe_only, " &
+     "X),                        " &
+     "78   (BC_4,  I_HS11_L3_RX27_S10_SD91_N, observe_only, " &
+     "X),                        " &
+     "77   (AC_1,  O_HS10_L4_TX20_S10_SD84_P, output2,      " &
+     "X),                        " &
+     "76   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "75   (AC_1,  O_HS10_L5_TX21_S10_SD85_P, output2,      " &
+     "X),                        " &
+     "74   (BC_4,  I_HS10_L4_RX20_S10_SD84_N, observe_only, " &
+     "X),                        " &
+     "73   (BC_4,  I_HS10_L4_RX20_S10_SD84_P, observe_only, " &
+     "X),                        " &
+     "72   (BC_4,  I_HS10_L5_RX21_S10_SD85_P, observe_only, " &
+     "X),                        " &
+     "71   (BC_4,  I_HS10_L5_RX21_S10_SD85_N, observe_only, " &
+     "X),                        " &
+     "70   (AC_1,  O_HS10_L6_TX22_S10_SD86_P, output2,      " &
+     "X),                        " &
+     "69   (AC_1,  O_HS10_L7_TX23_S10_SD87_P, output2,      " &
+     "X),                        " &
+     "68   (BC_4,  I_HS10_L6_RX22_S10_SD86_N, observe_only, " &
+     "X),                        " &
+     "67   (BC_4,  I_HS10_L6_RX22_S10_SD86_P, observe_only, " &
+     "X),                        " &
+     "66   (BC_4,  I_HS10_L7_RX23_S10_SD87_P, observe_only, " &
+     "X),                        " &
+     "65   (BC_4,  I_HS10_L7_RX23_S10_SD87_N, observe_only, " &
+     "X),                        " &
+     "64   (AC_1,  O_HS10_L0_TX16_S10_SD80_P, output2,      " &
+     "X),                        " &
+     "63   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "62   (AC_1,  O_HS10_L1_TX17_S10_SD81_P, output2,      " &
+     "X),                        " &
+     "61   (BC_4,  I_HS10_L0_RX16_S10_SD80_N, observe_only, " &
+     "X),                        " &
+     "60   (BC_4,  I_HS10_L0_RX16_S10_SD80_P, observe_only, " &
+     "X),                        " &
+     "59   (BC_4,  I_HS10_L1_RX17_S10_SD81_P, observe_only, " &
+     "X),                        " &
+     "58   (BC_4,  I_HS10_L1_RX17_S10_SD81_N, observe_only, " &
+     "X),                        " &
+     "57   (AC_1,  O_HS10_L2_TX18_S10_SD82_P, output2,      " &
+     "X),                        " &
+     "56   (AC_1,  O_HS10_L3_TX19_S10_SD83_P, output2,      " &
+     "X),                        " &
+     "55   (BC_4,  I_HS10_L2_RX18_S10_SD82_N, observe_only, " &
+     "X),                        " &
+     "54   (BC_4,  I_HS10_L2_RX18_S10_SD82_P, observe_only, " &
+     "X),                        " &
+     "53   (BC_4,  I_HS10_L3_RX19_S10_SD83_P, observe_only, " &
+     "X),                        " &
+     "52   (BC_4,  I_HS10_L3_RX19_S10_SD83_N, observe_only, " &
+     "X),                        " &
+     "51   (AC_1,  O_HS9_L4_TX12_S10_SD76_P, output2,      " &
+     "X),                        " &
+     "50   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "49   (AC_1,  O_HS9_L5_TX13_S10_SD77_P, output2,      " &
+     "X),                        " &
+     "48   (BC_4,  I_HS9_L4_RX12_S10_SD76_N, observe_only, " &
+     "X),                        " &
+     "47   (BC_4,  I_HS9_L4_RX12_S10_SD76_P, observe_only, " &
+     "X),                        " &
+     "46   (BC_4,  I_HS9_L5_RX13_S10_SD77_P, observe_only, " &
+     "X),                        " &
+     "45   (BC_4,  I_HS9_L5_RX13_S10_SD77_N, observe_only, " &
+     "X),                        " &
+     "44   (AC_1,  O_HS9_L6_TX14_S10_SD78_P, output2,      " &
+     "X),                        " &
+     "43   (AC_1,  O_HS9_L7_TX15_S10_SD79_P, output2,      " &
+     "X),                        " &
+     "42   (BC_4,  I_HS9_L6_RX14_S10_SD78_N, observe_only, " &
+     "X),                        " &
+     "41   (BC_4,  I_HS9_L6_RX14_S10_SD78_P, observe_only, " &
+     "X),                        " &
+     "40   (BC_4,  I_HS9_L7_RX15_S10_SD79_P, observe_only, " &
+     "X),                        " &
+     "39   (BC_4,  I_HS9_L7_RX15_S10_SD79_N, observe_only, " &
+     "X),                        " &
+     "38   (AC_1,  O_HS9_L0_TX8_S10_SD72_P,   output2,      " &
+     "X),                        " &
+     "37   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "36   (AC_1,  O_HS9_L1_TX9_S10_SD73_P,   output2,      " &
+     "X),                        " &
+     "35   (BC_4,  I_HS9_L0_RX8_S10_SD72_N,   observe_only, " &
+     "X),                        " &
+     "34   (BC_4,  I_HS9_L0_RX8_S10_SD72_P,   observe_only, " &
+     "X),                        " &
+     "33   (BC_4,  I_HS9_L1_RX9_S10_SD73_P,   observe_only, " &
+     "X),                        " &
+     "32   (BC_4,  I_HS9_L1_RX9_S10_SD73_N,   observe_only, " &
+     "X),                        " &
+     "31   (AC_1,  O_HS9_L2_TX10_S10_SD74_P, output2,      " &
+     "X),                        " &
+     "30   (AC_1,  O_HS9_L3_TX11_S10_SD75_P, output2,      " &
+     "X),                        " &
+     "29   (BC_4,  I_HS9_L2_RX10_S10_SD74_N, observe_only, " &
+     "X),                        " &
+     "28   (BC_4,  I_HS9_L2_RX10_S10_SD74_P, observe_only, " &
+     "X),                        " &
+     "27   (BC_4,  I_HS9_L3_RX11_S10_SD75_P, observe_only, " &
+     "X),                        " &
+     "26   (BC_4,  I_HS9_L3_RX11_S10_SD75_N, observe_only, " &
+     "X),                        " &
+     "25   (AC_1,  O_HS8_L4_TX4_S10_SD68_P,   output2,      " &
+     "X),                        " &
+     "24   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "23   (AC_1,  O_HS8_L5_TX5_S10_SD69_P,   output2,      " &
+     "X),                        " &
+     "22   (BC_4,  I_HS8_L4_RX4_S10_SD68_N,   observe_only, " &
+     "X),                        " &
+     "21   (BC_4,  I_HS8_L4_RX4_S10_SD68_P,   observe_only, " &
+     "X),                        " &
+     "20   (BC_4,  I_HS8_L5_RX5_S10_SD69_P,   observe_only, " &
+     "X),                        " &
+     "19   (BC_4,  I_HS8_L5_RX5_S10_SD69_N,   observe_only, " &
+     "X),                        " &
+     "18   (AC_1,  O_HS8_L6_TX6_S10_SD70_P,   output2,      " &
+     "X),                        " &
+     "17   (AC_1,  O_HS8_L7_TX7_S10_SD71_P,   output2,      " &
+     "X),                        " &
+     "16   (BC_4,  I_HS8_L6_RX6_S10_SD70_N,   observe_only, " &
+     "X),                        " &
+     "15   (BC_4,  I_HS8_L6_RX6_S10_SD70_P,   observe_only, " &
+     "X),                        " &
+     "14   (BC_4,  I_HS8_L7_RX7_S10_SD71_P,   observe_only, " &
+     "X),                        " &
+     "13   (BC_4,  I_HS8_L7_RX7_S10_SD71_N,   observe_only, " &
+     "X),                        " &
+     "12   (AC_1,  O_HS8_L0_TX0_S10_SD64_P,   output2,      " &
+     "X),                        " &
+     "11   (AC_SELU,*,                            internal,     " &
+     "0),                        " &
+     "10   (AC_1,  O_HS8_L1_TX1_S10_SD65_P,   output2,      " &
+     "X),                        " &
+     "9    (BC_4,  I_HS8_L0_RX0_S10_SD64_N,   observe_only, " &
+     "X),                        " &
+     "8    (BC_4,  I_HS8_L0_RX0_S10_SD64_P,   observe_only, " &
+     "X),                        " &
+     "7    (BC_4,  I_HS8_L1_RX1_S10_SD65_P,   observe_only, " &
+     "X),                        " &
+     "6    (BC_4,  I_HS8_L1_RX1_S10_SD65_N,   observe_only, " &
+     "X),                        " &
+     "5    (AC_1,  O_HS8_L2_TX2_S10_SD66_P,   output2,      " &
+     "X),                        " &
+     "4    (AC_1,  O_HS8_L3_TX3_S10_SD67_P,   output2,      " &
+     "X),                        " &
+     "3    (BC_4,  I_HS8_L2_RX2_S10_SD66_N,   observe_only, " &
+     "X),                        " &
+     "2    (BC_4,  I_HS8_L2_RX2_S10_SD66_P,   observe_only, " &
+     "X),                        " &
+     "1    (BC_4,  I_HS8_L3_RX3_S10_SD67_P,   observe_only, " &
+     "X),                        " &
+     "0    (BC_4,  I_HS8_L3_RX3_S10_SD67_N,   observe_only, " &
+     "X)                         ";
+   
+-- Advanced I/O Description
+   
+   attribute AIO_COMPONENT_CONFORMANCE of wol_top: entity is "STD_1149_6_2003";
+   
+   attribute AIO_EXTEST_Pulse_Execution of wol_top: entity is 
+   "Wait_Duration 5000.000000e-9";
+   
+   attribute AIO_EXTEST_Train_Execution of wol_top: entity is 
+   "train 100, maximum_time 5000.000000e-9";
+   
+   attribute AIO_Pin_Behavior of wol_top: entity is 
+   "I_HS8_L3_RX3_S10_SD67_P, I_HS8_L2_RX2_S10_SD66_P, " &
+   "I_HS8_L1_RX1_S10_SD65_P, I_HS8_L0_RX0_S10_SD64_P, " &
+   "I_HS8_L7_RX7_S10_SD71_P, I_HS8_L6_RX6_S10_SD70_P, " &
+   "I_HS8_L5_RX5_S10_SD69_P, I_HS8_L4_RX4_S10_SD68_P, " &
+   "I_HS9_L3_RX11_S10_SD75_P, I_HS9_L2_RX10_S10_SD74_P, " &
+   "I_HS9_L1_RX9_S10_SD73_P, I_HS9_L0_RX8_S10_SD72_P, " &
+   "I_HS9_L7_RX15_S10_SD79_P, I_HS9_L6_RX14_S10_SD78_P, " &
+   "I_HS9_L5_RX13_S10_SD77_P, I_HS9_L4_RX12_S10_SD76_P, " &
+   "I_HS10_L3_RX19_S10_SD83_P, I_HS10_L2_RX18_S10_SD82_P, " &
+   "I_HS10_L1_RX17_S10_SD81_P, I_HS10_L0_RX16_S10_SD80_P, " &
+   "I_HS10_L7_RX23_S10_SD87_P, I_HS10_L6_RX22_S10_SD86_P, " &
+   "I_HS10_L5_RX21_S10_SD85_P, I_HS10_L4_RX20_S10_SD84_P, " &
+   "I_HS11_L3_RX27_S10_SD91_P, I_HS11_L2_RX26_S10_SD90_P, " &
+   "I_HS11_L1_RX25_S10_SD89_P, I_HS11_L0_RX24_S10_SD88_P, " &
+   "I_HS11_L7_RX31_S10_SD95_P, I_HS11_L6_RX30_S10_SD94_P, " &
+   "I_HS11_L5_RX29_S10_SD93_P, I_HS11_L4_RX28_S10_SD92_P, " &
+   "I_LS1_L1_RX1_S10_SD3_P, I_LS1_L0_RX0_S10_SD2_P, " &
+   "I_HS12_L3_RX3_S11_SD99_P, I_HS12_L2_RX2_S11_SD98_P, " &
+   "I_HS12_L1_RX1_S11_SD97_P, I_HS12_L0_RX0_S11_SD96_P, " &
+   "I_HS12_L7_RX7_S11_SD103_P, I_HS12_L6_RX6_S11_SD102_P, " &
+   "I_HS12_L5_RX5_S11_SD101_P, I_HS12_L4_RX4_S11_SD100_P, " &
+   "I_HS13_L3_RX11_S11_SD107_P, I_HS13_L2_RX10_S11_SD106_P, " &
+   "I_HS13_L1_RX9_S11_SD105_P, I_HS13_L0_RX8_S11_SD104_P, " &
+   "I_HS13_L7_RX15_S11_SD111_P, I_HS13_L6_RX14_S11_SD110_P, " &
+   "I_HS13_L5_RX13_S11_SD109_P, I_HS13_L4_RX12_S11_SD108_P, " &
+   "I_HS14_L3_RX19_S11_SD115_P, I_HS14_L2_RX18_S11_SD114_P, " &
+   "I_HS14_L1_RX17_S11_SD113_P, I_HS14_L0_RX16_S11_SD112_P, " &
+   "I_HS14_L7_RX23_S11_SD119_P, I_HS14_L6_RX22_S11_SD118_P, " &
+   "I_HS14_L5_RX21_S11_SD117_P, I_HS14_L4_RX20_S11_SD116_P, " &
+   "I_HS15_L3_RX27_S11_SD123_P, I_HS15_L2_RX26_S11_SD122_P, " &
+   "I_HS15_L1_RX25_S11_SD121_P, I_HS15_L0_RX24_S11_SD120_P, " &
+   "I_HS15_L7_RX31_S11_SD127_P, I_HS15_L6_RX30_S11_SD126_P, " &
+   "I_HS15_L5_RX29_S11_SD125_P, I_HS15_L4_RX28_S11_SD124_P : " &
+   "HP_time=50.000000e-9 On_Chip ;" &
+   "I_PCIE1_RX_P : HP_time=50.000000e-9 ;" &
+   "O_HS8_L3_TX3_S10_SD67_P, O_HS8_L2_TX2_S10_SD66_P, " &
+   "O_HS8_L1_TX1_S10_SD65_P, O_HS8_L0_TX0_S10_SD64_P : AC_Select=11 ;" &
+   "O_HS8_L7_TX7_S10_SD71_P, O_HS8_L6_TX6_S10_SD70_P, " &
+   "O_HS8_L5_TX5_S10_SD69_P, O_HS8_L4_TX4_S10_SD68_P : AC_Select=24 ;" &
+   "O_HS9_L3_TX11_S10_SD75_P, O_HS9_L2_TX10_S10_SD74_P, " &
+   "O_HS9_L1_TX9_S10_SD73_P, O_HS9_L0_TX8_S10_SD72_P : AC_Select=37 ;" &
+   "O_HS9_L7_TX15_S10_SD79_P, O_HS9_L6_TX14_S10_SD78_P, " &
+   "O_HS9_L5_TX13_S10_SD77_P, O_HS9_L4_TX12_S10_SD76_P : " &
+   "AC_Select=50 ;" &
+   "O_HS10_L3_TX19_S10_SD83_P, O_HS10_L2_TX18_S10_SD82_P, " &
+   "O_HS10_L1_TX17_S10_SD81_P, O_HS10_L0_TX16_S10_SD80_P : " &
+   "AC_Select=63 ;" &
+   "O_HS10_L7_TX23_S10_SD87_P, O_HS10_L6_TX22_S10_SD86_P, " &
+   "O_HS10_L5_TX21_S10_SD85_P, O_HS10_L4_TX20_S10_SD84_P : " &
+   "AC_Select=76 ;" &
+   "O_HS11_L3_TX27_S10_SD91_P, O_HS11_L2_TX26_S10_SD90_P, " &
+   "O_HS11_L1_TX25_S10_SD89_P, O_HS11_L0_TX24_S10_SD88_P : " &
+   "AC_Select=89 ;" &
+   "O_HS11_L7_TX31_S10_SD95_P, O_HS11_L6_TX30_S10_SD94_P, " &
+   "O_HS11_L5_TX29_S10_SD93_P, O_HS11_L4_TX28_S10_SD92_P : " &
+   "AC_Select=102 ;" &
+   "O_PCIE1_TX_P : AC_Select=110 ;" &
+   "O_LS1_L1_TX1_S10_SD3_P, O_LS1_L0_TX0_S10_SD2_P : AC_Select=117 ;" &
+   "O_HS12_L3_TX3_S11_SD99_P, O_HS12_L2_TX2_S11_SD98_P, " &
+   "O_HS12_L1_TX1_S11_SD97_P, O_HS12_L0_TX0_S11_SD96_P : AC_Select=158" &
+   " ;" &
+   "O_HS12_L7_TX7_S11_SD103_P, O_HS12_L6_TX6_S11_SD102_P, " &
+   "O_HS12_L5_TX5_S11_SD101_P, O_HS12_L4_TX4_S11_SD100_P : AC_Select=171" &
+   " ;" &
+   "O_HS13_L3_TX11_S11_SD107_P, O_HS13_L2_TX10_S11_SD106_P, " &
+   "O_HS13_L1_TX9_S11_SD105_P, O_HS13_L0_TX8_S11_SD104_P : AC_Select=184" &
+   " ;" &
+   "O_HS13_L7_TX15_S11_SD111_P, O_HS13_L6_TX14_S11_SD110_P, " &
+   "O_HS13_L5_TX13_S11_SD109_P, O_HS13_L4_TX12_S11_SD108_P : " &
+   "AC_Select=197 ;" &
+   "O_HS14_L3_TX19_S11_SD115_P, O_HS14_L2_TX18_S11_SD114_P, " &
+   "O_HS14_L1_TX17_S11_SD113_P, O_HS14_L0_TX16_S11_SD112_P : " &
+   "AC_Select=210 ;" &
+   "O_HS14_L7_TX23_S11_SD119_P, O_HS14_L6_TX22_S11_SD118_P, " &
+   "O_HS14_L5_TX21_S11_SD117_P, O_HS14_L4_TX20_S11_SD116_P : " &
+   "AC_Select=223 ;" &
+   "O_HS15_L3_TX27_S11_SD123_P, O_HS15_L2_TX26_S11_SD122_P, " &
+   "O_HS15_L1_TX25_S11_SD121_P, O_HS15_L0_TX24_S11_SD120_P : " &
+   "AC_Select=236 ;" &
+   "O_HS15_L7_TX31_S11_SD127_P, O_HS15_L6_TX30_S11_SD126_P, " &
+   "O_HS15_L5_TX29_S11_SD125_P, O_HS15_L4_TX28_S11_SD124_P : " &
+   "AC_Select=249  ";
+ 
+ end wol_top;

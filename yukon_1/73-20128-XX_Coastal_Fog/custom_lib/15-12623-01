@@ -1,0 +1,341 @@
+!!!!    6    0    1 1451313109  V9c18                                         
+ !!!!    6    0    1 1252915849  V4ef0
+!    Function:
+!    Revision:
+!    Author:
+
+sequential
+
+vector cycle 5000n
+receive delay 4950n
+
+assign CLK_100M_CPU1_PE_R_DN to pins 42
+assign CLK_100M_CPU1_PE_R_DP to pins 41
+assign CLK_100M_CPU1_QPI_R_DN to pins 47
+assign CLK_100M_CPU1_QPI_R_DP to pins 46
+assign CLK_100M_CPU2_PE_R_DN to pins 36
+assign CLK_100M_CPU2_PE_R_DP to pins 35
+assign CLK_100M_CPU2_QPI_R_DN to pins 33
+assign CLK_100M_CPU2_QPI_R_DP to pins 32
+assign CLK_100M_DB1900_DN to pins 10
+assign CLK_100M_DB1900_DP to pins 9
+assign CLK_100M_DB1900Z_FB_DN to pins 17
+assign CLK_100M_DB1900Z_FB_DP to pins 18
+assign CLK_100M_DB1900Z_FB_R_DN to pins 16
+assign CLK_100M_DB1900Z_FB_R_DP to pins 15
+assign CLK_100M_IBMC_PE_R_DN to pins 70
+assign CLK_100M_IBMC_PE_R_DP to pins 69
+assign CLK_100M_LOM_R_DN to pins 23
+assign CLK_100M_LOM_R_DP to pins 22
+assign CLK_100M_MEZZ_R_DN to pins 20
+assign CLK_100M_MEZZ_R_DP to pins 19
+assign CLK_100M_PE_DRV1_R_DN to pins 50
+assign CLK_100M_PE_DRV1_R_DP to pins 49
+assign CLK_100M_PE_DRV2_R_DN to pins 56
+assign CLK_100M_PE_DRV2_R_DP to pins 55
+assign CLK_100M_SAS_PE_R_DN to pins 53
+assign CLK_100M_SAS_PE_R_DP to pins 52
+assign CLK_100M_SSB_DMI_R_DN to pins 67
+assign CLK_100M_SSB_DMI_R_DP to pins 66
+assign CLK_100M_SSB_PE_R_DN to pins 65
+assign CLK_100M_SSB_PE_R_DP to pins 64
+assign CLK_100M_SSB_SAS1_R_DN to pins 62
+assign CLK_100M_SSB_SAS1_R_DP to pins 61
+assign CLK_100M_SSB_SAS_R_DN to pins 60
+assign CLK_100M_SSB_SAS_R_DP to pins 59
+assign CLK_100M_XDP_R_DN to pins 39
+assign CLK_100M_XDP_R_DP to pins 38
+assign CLK_COMP_DB1900Z to pins 3
+assign GND to pins 63
+assign GND to pins 26
+assign GND to pins 2
+assign GND to pins 44
+assign GND to pins 7
+assign GND to pins 73
+assign NC to pins 29
+assign NC to pins 24
+assign NC to pins 71
+assign NC to pins 27
+assign NC to pins 30
+assign NC to pins 28
+assign NC to pins 72
+assign NC to pins 25
+assign P3V3_DB1900 to pins 68
+assign P3V3_DB1900 to pins 58
+assign P3V3_DB1900 to pins 45
+assign P3V3_DB1900 to pins 21
+assign P3V3_DB1900 to pins 31
+assign PD_CLK_OE_EN_L to pins 40
+assign PD_CLK_OE_EN_L to pins 54
+assign PD_DB1900Z_SMB_SA0 to pins 11
+assign PD_DB1900Z_SMB_SA1 to pins 14
+assign PE_DRV1_CLK_EN_N to pins 51
+assign PE_DRV2_CLK_EN_N to pins 57
+assign PU_DB1900Z_100M to pins 4
+assign PU_DB1900Z_HI_BW to pins 5
+assign PWRGD_DB1900Z to pins 6
+assign PWRGD_PVTT_CPU1_CLK_OE_N to pins 43
+assign PWRGD_PVTT_CPU1_CLK_OE_N to pins 34
+assign PWRGD_PVTT_CPU1_CLK_OE_N to pins 37
+assign PWRGD_PVTT_CPU1_CLK_OE_N to pins 48
+assign SMB_HOST_3V3_CLK_R2 to pins 13
+assign SMB_HOST_3V3_DAT_R2 to pins 12
+assign VDDR_DB1900 to pins 8
+
+assign SCL to pins 1
+assign SDA to pins 64
+
+inputs PD_CLK_OE_EN_L,PD_DB1900Z_SMB_SA0,PD_DB1900Z_SMB_SA1,PE_DRV1_CLK_EN_N,PE_DRV2_CLK_EN_N,PWRGD_PVTT_CPU1_CLK_OE_N,SMB_HOST_3V3_CLK_R2,SCL
+outputs CLK_100M_CPU1_PE_R_DN,CLK_100M_CPU1_PE_R_DP,CLK_100M_CPU1_QPI_R_DN,CLK_100M_CPU1_QPI_R_DP,CLK_100M_CPU2_PE_R_DN,CLK_100M_CPU2_PE_R_DP,CLK_100M_CPU2_QPI_R_DN,CLK_100M_CPU2_QPI_R_DP,CLK_100M_DB1900_DN,CLK_100M_DB1900_DP,CLK_100M_DB1900Z_FB_DN,CLK_100M_DB1900Z_FB_DP,CLK_100M_DB1900Z_FB_R_DN,CLK_100M_DB1900Z_FB_R_DP,CLK_100M_IBMC_PE_R_DN,CLK_100M_IBMC_PE_R_DP,CLK_100M_LOM_R_DN,CLK_100M_LOM_R_DP,CLK_100M_MEZZ_R_DN,CLK_100M_MEZZ_R_DP,CLK_100M_PE_DRV1_R_DN,CLK_100M_PE_DRV1_R_DP,CLK_100M_PE_DRV2_R_DN,CLK_100M_PE_DRV2_R_DP,CLK_100M_SAS_PE_R_DN,CLK_100M_SAS_PE_R_DP,CLK_100M_SSB_DMI_R_DN,CLK_100M_SSB_DMI_R_DP,CLK_100M_SSB_PE_R_DN,CLK_100M_SSB_PE_R_DP,CLK_100M_SSB_SAS1_R_DN,CLK_100M_SSB_SAS1_R_DP,CLK_100M_SSB_SAS_R_DN,CLK_100M_SSB_SAS_R_DP,CLK_100M_XDP_R_DN,CLK_100M_XDP_R_DP
+power CLK_COMP_DB1900Z,GND,P3V3_DB1900,VDDR_DB1900
+bidirectional SMB_HOST_3V3_DAT_R2, SDA
+nondigital NC,PU_DB1900Z_100M,PU_DB1900Z_HI_BW,PWRGD_DB1900Z
+
+family TTL
+
+disable CLK_100M_CPU1_PE_R_DN,CLK_100M_CPU1_PE_R_DP,CLK_100M_CPU1_QPI_R_DN,CLK_100M_CPU1_QPI_R_DP,CLK_100M_CPU2_PE_R_DN,CLK_100M_CPU2_PE_R_DP,CLK_100M_CPU2_QPI_R_DN,CLK_100M_CPU2_QPI_R_DP,CLK_100M_DB1900_DN,CLK_100M_DB1900_DP,CLK_100M_DB1900Z_FB_DN,CLK_100M_DB1900Z_FB_DP,CLK_100M_DB1900Z_FB_R_DN,CLK_100M_DB1900Z_FB_R_DP,CLK_100M_IBMC_PE_R_DN,CLK_100M_IBMC_PE_R_DP,CLK_100M_LOM_R_DN,CLK_100M_LOM_R_DP,CLK_100M_MEZZ_R_DN,CLK_100M_MEZZ_R_DP,CLK_100M_PE_DRV1_R_DN,CLK_100M_PE_DRV1_R_DP,CLK_100M_PE_DRV2_R_DN,CLK_100M_PE_DRV2_R_DP,CLK_100M_SAS_PE_R_DN,CLK_100M_SAS_PE_R_DP,CLK_100M_SSB_DMI_R_DN,CLK_100M_SSB_DMI_R_DP,CLK_100M_SSB_PE_R_DN,CLK_100M_SSB_PE_R_DP,CLK_100M_SSB_SAS1_R_DN,CLK_100M_SSB_SAS1_R_DP,CLK_100M_SSB_SAS_R_DN,CLK_100M_SSB_SAS_R_DP,CLK_100M_XDP_R_DN,CLK_100M_XDP_R_DP with  PD_CLK_OE_EN_L,PWRGD_PVTT_CPU1_CLK_OE_N to "111111"
+
+set load on groups SDA to pull up
+
+!****************************************************************************
+vector INIT1
+ drive SDA
+ set SDA  to "1"
+ set SCL  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SDA  to "x"
+ set SCL  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SDA  to "k"
+ set SCL  to "k"
+end vector
+
+vector SCL_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SCL_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SCL_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SCL_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector RD_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector RD_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector RD_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector WD_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector WD_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+
+! ***********************************************************************
+
+sub STRT
+ execute WD_0
+ execute SCL_20
+end sub
+
+sub STOP
+ execute WD_0
+ execute SCL_21
+ execute WD_1
+ repeat 20 times
+  execute SCL_21
+ end repeat
+end sub
+
+sub R_0
+ execute RD_0
+ execute SCL_11
+ execute SCL_10
+end sub
+sub R_0_D
+ execute RD_1
+ execute SCL_11
+ execute SCL_10
+end sub
+sub R_1
+ execute RD_1
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub D_0
+ execute WD_0
+ execute SCL_21
+ execute SCL_10
+end sub
+
+sub D_1
+ execute WD_1
+ execute SCL_21
+ execute SCL_10
+end sub
+
+sub IC_ADDR
+ call D_0    ! Address bit A2, Change to match pin A2 if tied
+ call D_0    ! Address bit A1, Change to match pin A1 if tied
+ call D_0    ! Address bit A0, Change to match pin A0 if tied
+end sub
+
+sub WR_CMD
+ call STRT
+ call D_1
+ call D_0
+ call D_0
+ call D_1
+ call IC_ADDR
+ call D_0      ! Write
+ call R_0
+end sub
+
+sub RD_CMD
+ call STRT
+ call D_1
+ call D_0
+ call D_0
+ call D_1
+ call IC_ADDR
+ call D_1      ! Read
+ call R_0
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SCL_21
+ execute SCL_20
+ execute D6
+ execute SCL_21
+ execute SCL_20
+ execute D5
+ execute SCL_21
+ execute SCL_20
+ execute D4
+ execute SCL_21
+ execute SCL_20
+ execute D3
+ execute SCL_21
+ execute SCL_20
+ execute D2
+ execute SCL_21
+ execute SCL_20
+ execute D1
+ execute SCL_21
+ execute SCL_20
+ execute D0
+ execute SCL_21
+ execute SCL_20
+ execute SCL_10
+ execute RD_0  ! Acknowledge bit
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SCL_11
+ execute D7
+ execute SCL_10
+ execute SCL_11
+ execute D6
+ execute SCL_10
+ execute SCL_11
+ execute D5
+ execute SCL_10
+ execute SCL_11
+ execute D4
+ execute SCL_10
+ execute SCL_11
+ execute D3
+ execute SCL_10
+ execute SCL_11
+ execute D2
+ execute SCL_10
+ execute SCL_11
+ execute D1
+ execute SCL_10
+ execute SCL_11
+ execute D0
+ execute SCL_10
+ execute WD_0  ! Acknowledge bit
+ execute SCL_21
+ execute SCL_20
+ execute SCL_10
+end sub
+
+! ***********************************************************************
+
+unit "Initialize I2C Bus"
+ execute INIT1
+ repeat 40 times
+  execute SCL_21
+ end repeat
+ execute RD_1
+end unit
+
+
+! ************************ Testing Address Bits *************************
+
+ unit "A = 10"
+  execute RD_1
+  call STRT
+  call D_1
+  call D_1
+  call D_0
+  call D_1
+  call D_1  ! Address bits match
+  call D_0
+  call D_0
+  call D_0
+  call R_0  ! Acknowlege bit active
+  call STOP
+ end unit
+
+unit "A = 10_Dis"
+ execute RD_1
+ call STRT
+ call D_1
+ call D_1
+ call D_0
+ call D_1
+ call D_1  ! Address bits match
+ call D_1
+ call D_0
+ call D_1
+ call R_0_D  ! Acknowlege bit active
+ call STOP
+end unit
+

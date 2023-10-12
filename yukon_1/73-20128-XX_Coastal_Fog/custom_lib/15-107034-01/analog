@@ -1,0 +1,39 @@
+!!!!    2    0    1 1609728086  Vb849                                         
+
+test powered mixed
+   power pins 1,2,3,16,25,6,17,18,19,20,21,22,23,24,12,14,5,4,26
+   nonanalog pins 10,15,9,7,11,8,13
+   wait 100m
+   test "OUT_Disable"
+
+   continue digital
+   wait 100m
+   test "OUT_Enable"
+
+   continue digital
+
+end test
+
+!----------------------------------------------------------
+
+
+
+
+subtest "OUT_Disable"
+   clear connect i to pins 17
+   connect l to ground
+
+   detector dcv, expect 3.3
+   measure 0.3, -0.3
+end subtest
+
+subtest "OUT_Enable"
+
+   clear connect i to pins 17
+   connect l to ground
+   detector dcv, expect 0.9
+   measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+
+

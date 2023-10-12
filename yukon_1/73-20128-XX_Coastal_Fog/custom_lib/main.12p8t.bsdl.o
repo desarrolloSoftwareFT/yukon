@@ -1,0 +1,373 @@
+  223    0    1 1627436842   0000                                         
+-- *****************************************************************************
+
+--   BSDL file for design qua_main_die
+
+--   Created by Synopsys Version M-2016.12-SP5-5 (Mar 08, 2018)
+
+--   Designer:
+--   Company:  MediaTek Incorporation
+
+--   Date: Tue Nov 12 03:30:28 2019
+
+-- *****************************************************************************
+
+
+ entity qua_main_die is
+
+-- This section identifies the default device package selected.
+
+   generic (PHYSICAL_PIN_MAP: string:= "all_pkg");
+
+-- This section declares all the ports in the design.
+
+   port (
+          I_CLK_OBS_EN            : in       bit;
+          I_CORE_FREQ_SEL_0       : in       bit;
+          I_CORE_FREQ_SEL_1       : in       bit;
+          I_CORE_PLL_BYP          : in       bit;
+          I_CORE_PLL_RST_N        : in       bit;
+          ETHL_RXN2      : in       bit;
+          ETHL_RXP2      : in       bit;
+          ETHL_RXN3      : in       bit;
+          ETHL_RXP3      : in       bit;
+          I_PLL_OBS_EN            : in       bit;
+          XTP_LN0_RXN             : in       bit;
+          XTP_LN0_RXP             : in       bit;
+          XTP_LN1_RXN             : in       bit;
+          XTP_LN1_RXP             : in       bit;
+          XTP_LN2_RXN             : in       bit;
+          XTP_LN2_RXP             : in       bit;
+          XTP_LN3_RXN             : in       bit;
+          XTP_LN3_RXP             : in       bit;
+          B_I2C_CLK               : inout    bit;
+          B_I2C_DATA              : inout    bit;
+          TDIE_B_PTP_SYNC_MASTER       : inout    bit;
+          TDIE_GPIO00                 : inout    bit;
+          TDIE_GPIO01                 : inout    bit;
+          TDIE_GPIO02                 : inout    bit;
+          TDIE_GPIO03                 : inout    bit;
+          TDIE_GPIO04                 : inout    bit;
+          TDIE_GPIO05                 : inout    bit;
+          HOST_SCL                : inout    bit;
+          HOST_SDA                : inout    bit;
+          TDIE_I_PTP_SYNC_SLAVE        : inout    bit;
+          ETHL_TXN2      : buffer   bit;
+          ETHL_TXP2      : buffer   bit;
+          ETHL_TXN3      : buffer   bit;
+          ETHL_TXP3      : buffer   bit;
+          XTP_LN0_TXN             : buffer   bit;
+          XTP_LN0_TXP             : buffer   bit;
+          XTP_LN1_TXN             : buffer   bit;
+          XTP_LN1_TXP             : buffer   bit;
+          XTP_LN2_TXN             : buffer   bit;
+          XTP_LN2_TXP             : buffer   bit;
+          XTP_LN3_TXN             : buffer   bit;
+          XTP_LN3_TXP             : buffer   bit;
+          TCK                     : in    bit;
+          TDIE_TDI                     : in    bit;
+          TDIE_TDO                     : out    bit;
+          TMS                     : in    bit;
+          TDIE_TRI_EN                  : inout    bit;
+          TDIE_TRST_L                  : in    bit
+   );
+
+   use STD_1149_1_2001.all;
+   use STD_1149_6_2003.all;
+
+   attribute COMPONENT_CONFORMANCE of qua_main_die: entity is "STD_1149_1_2001";
+
+   attribute PIN_MAP of qua_main_die: entity is PHYSICAL_PIN_MAP;
+
+-- This section specifies the pin map for each port. This information is
+-- extracted from the port-to-pin map file that was read in using the
+-- "read_pin_map" command.
+
+     constant all_pkg: PIN_MAP_STRING :=
+        "I_CLK_OBS_EN            : BW59," &
+        "I_CORE_FREQ_SEL_0       : T22," &
+        "I_CORE_FREQ_SEL_1       : U22," &
+        "I_CORE_PLL_BYP          : AA57," &
+        "I_CORE_PLL_RST_N        : BV21," &
+        "ETHL_RXN2      : BD19," &
+        "ETHL_RXP2      : BD20," &
+        "ETHL_RXN3      : BF20," &
+        "ETHL_RXP3      : BF19," &
+        "I_PLL_OBS_EN            : BY57," &
+        "XTP_LN0_RXN             : AH59," &
+        "XTP_LN0_RXP             : AH60," &
+        "XTP_LN1_RXN             : AP59," &
+        "XTP_LN1_RXP             : AP60," &
+        "XTP_LN2_RXN             : AK63," &
+        "XTP_LN2_RXP             : AK62," &
+        "XTP_LN3_RXN             : AK60," &
+        "XTP_LN3_RXP             : AK59," &
+        "B_I2C_CLK               : P23," &
+        "B_I2C_DATA              : R22," &
+        "TDIE_B_PTP_SYNC_MASTER       : CA65," &
+        "TDIE_GPIO00                 : CA12," &
+        "TDIE_GPIO01                 : CC12," &
+        "TDIE_GPIO02                 : R16," &
+        "TDIE_GPIO03                 : U17," &
+        "TDIE_GPIO04                 : V65," &
+        "TDIE_GPIO05                 : W63," &
+        "HOST_SCL                : V58," &
+        "HOST_SDA                : M60," &
+        "TDIE_I_PTP_SYNC_SLAVE        : CA61," &
+        "ETHL_TXN2      : BD16," &
+        "ETHL_TXP2      : BD17," &
+        "ETHL_TXN3      : BE15," &
+        "ETHL_TXP3      : BE14," &
+        "XTP_LN0_TXN             : AM59," &
+        "XTP_LN0_TXP             : AM60," &
+        "XTP_LN1_TXN             : AP62," &
+        "XTP_LN1_TXP             : AP63," &
+        "XTP_LN2_TXN             : AM63," &
+        "XTP_LN2_TXP             : AM62," &
+        "XTP_LN3_TXN             : AH63," &
+        "XTP_LN3_TXP             : AH62," &
+        "TCK                     : CE55," &
+        "TDIE_TDI                : AT51," &
+        "TDIE_TDO                : AT52," &
+        "TMS                     : BV22," &
+        "TDIE_TRI_EN             : BW15," &
+        "TDIE_TRST_L             : AU51";
+
+-- This section specifies the differential IO port groupings.
+
+   attribute PORT_GROUPING of qua_main_die: entity is
+      "Differential_Voltage ( " &
+          "(ETHL_RXP2,ETHL_RXN2)," &
+          "(ETHL_RXP3,ETHL_RXN3)," &
+          "(ETHL_TXP2,ETHL_TXN2)," &
+          "(ETHL_TXP3,ETHL_TXN3)," &
+          "(XTP_LN0_RXP,XTP_LN0_RXN)," &
+          "(XTP_LN0_TXP,XTP_LN0_TXN)," &
+          "(XTP_LN1_RXP,XTP_LN1_RXN)," &
+          "(XTP_LN1_TXP,XTP_LN1_TXN)," &
+          "(XTP_LN2_RXP,XTP_LN2_RXN)," &
+          "(XTP_LN2_TXP,XTP_LN2_TXN)," &
+          "(XTP_LN3_RXP,XTP_LN3_RXN)," &
+          "(XTP_LN3_TXP,XTP_LN3_TXN))";
+
+-- This section specifies the TAP ports. For the TAP TCK port, the parameters in
+-- the brackets are:
+--        First Field : Maximum  TCK frequency.
+--        Second Field: Allowable states TCK may be stopped in.
+
+   attribute TAP_SCAN_CLOCK of TCK   : signal is (5.000000e+06, BOTH);
+   attribute TAP_SCAN_IN    of TDIE_TDI   : signal is true;
+   attribute TAP_SCAN_MODE  of TMS   : signal is true;
+   attribute TAP_SCAN_OUT   of TDIE_TDO   : signal is true;
+   attribute TAP_SCAN_RESET of TDIE_TRST_L: signal is true;
+
+-- Specifies the compliance enable patterns for the design. It lists a set of
+-- design ports and the values that they should be set to, in order to enable
+-- compliance to IEEE Std 1149.1
+
+--YW--   attribute COMPLIANCE_PATTERNS of qua_main_die: entity is
+--YW--        "(CPU2JTAG_EN, I_CORE_RST_N, JTAG2ECPU_EN, TDIE_TRI_EN) (" &
+--YW--        "0100)";
+
+-- Specifies the number of bits in the instruction register.
+
+   attribute INSTRUCTION_LENGTH of qua_main_die: entity is 6;
+
+-- Specifies the boundary-scan instructions implemented in the design and their
+-- opcodes.
+
+   attribute INSTRUCTION_OPCODE of qua_main_die: entity is
+     "BYPASS       (111111)," &
+     "EXTEST       (100100)," &
+     "SAMPLE       (100101)," &
+     "PRELOAD      (100101)," &
+     "EXTEST_PULSE (100111)," &
+     "EXTEST_TRAIN (100110)," &
+     "IDCODE       (111110)";
+
+-- Specifies the bit pattern that is loaded into the instruction register when
+-- the TAP controller passes through the Capture-IR state. The standard mandates
+-- that the two LSBs must be "01". The remaining bits are design specific.
+
+   attribute INSTRUCTION_CAPTURE of qua_main_die: entity is "000001";
+
+-- Specifies the bit pattern that is loaded into the DEVICE_ID register during
+-- the IDCODE instruction when the TAP controller passes through the Capture-DR
+-- state.
+
+   attribute IDCODE_REGISTER of qua_main_die: entity is
+     "0010" &
+ -- 4-bit version number
+     "0000010001100100" &
+ -- 16-bit part number
+     "01000100110" &
+ -- 11-bit identity of the manufacturer
+     "1";
+ -- Required by IEEE Std 1149.1
+
+-- This section specifies the test data register placed between TDI and TDO for
+-- each implemented instruction.
+
+   attribute REGISTER_ACCESS of qua_main_die: entity is
+        "BYPASS    (BYPASS)," &
+        "BOUNDARY  (EXTEST, SAMPLE, PRELOAD, EXTEST_PULSE, EXTEST_TRAIN)," &
+        "DEVICE_ID (IDCODE)";
+
+-- Specifies the length of the boundary scan register.
+
+   attribute BOUNDARY_LENGTH of qua_main_die: entity is 53;
+
+-- The following list specifies the characteristics of each cell in the boundary
+-- scan register from TDI to TDO. The following is a description of the label
+-- fields:
+--      num     : Is the cell number.
+--      cell    : Is the cell type as defined by the standard.
+--      port    : Is the design port name. Control cells do not have a port
+--                name.
+--      function: Is the function of the cell as defined by the standard. Is one
+--                of input, output2, output3, bidir, control or controlr.
+--      safe    : Specifies the value that the BSR cell should be loaded with
+--                for safe operation when the software might otherwise choose a
+--                random value.
+--      ccell   : The control cell number. Specifies the control cell that
+--                drives the output enable for this port.
+--      disval  : Specifies the value that is loaded into the control cell to
+--                disable the output enable for the corresponding port.
+--      rslt    : Resulting state. Shows the state of the driver when it is
+--                disabled.
+
+   attribute BOUNDARY_REGISTER of qua_main_die: entity is
+--
+--    num   cell   port                    function      safe  [ccell  disval
+--    rslt]
+--
+     "52   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "51   (BC_7,  TDIE_GPIO04,            bidir,        X,    52,     " &
+     "0,      Z),  " &
+     "50   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "49   (BC_7,  TDIE_GPIO05,            bidir,        X,    50,     " &
+     "0,      Z),  " &
+     "48   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "47   (BC_7,  HOST_SDA,           bidir,        X,    48,     " &
+     "0,      Z),  " &
+     "46   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "45   (BC_7,  HOST_SCL,           bidir,        X,    46,     " &
+     "0,      Z),  " &
+     "44   (AC_1,  XTP_LN0_TXP,        output2,      " &
+     "X),                        " &
+     "43   (AC_SELU,*,                      internal,     " &
+     "0),                        " &
+     "42   (BC_4,  XTP_LN0_RXN,        observe_only, " &
+     "X),                        " &
+     "41   (BC_4,  XTP_LN0_RXP,        observe_only, " &
+     "X),                        " &
+     "40   (AC_1,  XTP_LN1_TXP,        output2,      " &
+     "X),                        " &
+     "39   (AC_SELU,*,                      internal,     " &
+     "0),                        " &
+     "38   (BC_4,  XTP_LN1_RXN,        observe_only, " &
+     "X),                        " &
+     "37   (BC_4,  XTP_LN1_RXP,        observe_only, " &
+     "X),                        " &
+     "36   (AC_1,  XTP_LN2_TXP,        output2,      " &
+     "X),                        " &
+     "35   (AC_SELU,*,                      internal,     " &
+     "0),                        " &
+     "34   (BC_4,  XTP_LN2_RXN,        observe_only, " &
+     "X),                        " &
+     "33   (BC_4,  XTP_LN2_RXP,        observe_only, " &
+     "X),                        " &
+     "32   (AC_1,  XTP_LN3_TXP,        output2,      " &
+     "X),                        " &
+     "31   (AC_SELU,*,                      internal,     " &
+     "0),                        " &
+     "30   (BC_4,  XTP_LN3_RXN,        observe_only, " &
+     "X),                        " &
+     "29   (BC_4,  XTP_LN3_RXP,        observe_only, " &
+     "X),                        " &
+     "28   (BC_2,  I_CLK_OBS_EN,       input,        " &
+     "X),                        " &
+     "27   (BC_2,  I_CORE_PLL_BYP,     input,        " &
+     "X),                        " &
+     "26   (BC_2,  I_CORE_PLL_RST_N,   input,        " &
+     "X),                        " &
+     "25   (BC_2,  I_PLL_OBS_EN,       input,        " &
+     "X),                        " &
+     "24   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "23   (BC_7,  TDIE_B_PTP_SYNC_MASTER,  bidir,        X,    24,     " &
+     "0,      Z),  " &
+     "22   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "21   (BC_7,  TDIE_I_PTP_SYNC_SLAVE,   bidir,        X,    22,     " &
+     "0,      Z),  " &
+     "20   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "19   (BC_7,  TDIE_GPIO00,            bidir,        X,    20,     " &
+     "0,      Z),  " &
+     "18   (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "17   (BC_7,  TDIE_GPIO01,            bidir,        X,    18,     " &
+     "0,      Z),  " &
+     "16   (AC_1,  ETHL_TXP2, output2,      " &
+     "X),                        " &
+     "15   (AC_SELU,*,                      internal,     " &
+     "0),                        " &
+     "14   (AC_1,  ETHL_TXP3, output2,      " &
+     "X),                        " &
+     "13   (BC_4,  ETHL_RXN2, observe_only, " &
+     "X),                        " &
+     "12   (BC_4,  ETHL_RXP2, observe_only, " &
+     "X),                        " &
+     "11   (BC_4,  ETHL_RXP3, observe_only, " &
+     "X),                        " &
+     "10   (BC_4,  ETHL_RXN3, observe_only, " &
+     "X),                        " &
+     "9    (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "8    (BC_7,  B_I2C_DATA,         bidir,        X,    9,      " &
+     "0,      Z),  " &
+     "7    (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "6    (BC_7,  B_I2C_CLK,          bidir,        X,    7,      " &
+     "0,      Z),  " &
+     "5    (BC_2,  I_CORE_FREQ_SEL_0,  input,        " &
+     "X),                        " &
+     "4    (BC_2,  I_CORE_FREQ_SEL_1,  input,        " &
+     "X),                        " &
+     "3    (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "2    (BC_7,  TDIE_GPIO02,            bidir,        X,    3,      " &
+     "0,      Z),  " &
+     "1    (BC_2,  *,                      control,      " &
+     "0),                        " &
+     "0    (BC_7,  TDIE_GPIO03,            bidir,        X,    1,      " &
+     "0,      Z)   ";
+
+-- Advanced I/O Description
+
+   attribute AIO_COMPONENT_CONFORMANCE of qua_main_die: entity is
+   "STD_1149_6_2003";
+
+   attribute AIO_EXTEST_Pulse_Execution of qua_main_die: entity is
+   "Wait_Duration 5000.000000e-9";
+
+   attribute AIO_EXTEST_Train_Execution of qua_main_die: entity is
+   "train 100, maximum_time 5000.000000e-9";
+
+   attribute AIO_Pin_Behavior of qua_main_die: entity is
+   "ETHL_RXP3, ETHL_RXP2 : HP_time=50.000000e-9 " &
+   "On_Chip ;" &
+   "XTP_LN3_RXP, XTP_LN2_RXP, XTP_LN1_RXP, XTP_LN0_RXP : " &
+   "HP_time=50.000000e-9 ;" &
+   "ETHL_TXP3, ETHL_TXP2 : AC_Select=15 ;" &
+   "XTP_LN3_TXP : AC_Select=31 ;" &
+   "XTP_LN2_TXP : AC_Select=35 ;" &
+   "XTP_LN1_TXP : AC_Select=39 ;" &
+   "XTP_LN0_TXP : AC_Select=43  ";
+
+ end qua_main_die;

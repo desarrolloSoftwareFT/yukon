@@ -1,0 +1,107 @@
+!!!!    6    0    1 1541580423  V9e51                                         
+
+!    CDCLVP1204RGT
+!    High-Performance Clock Buffer
+!
+combinatorial
+
+assign VCC    to pins 5
+assign GND    to pins 1,17
+
+assign IN1_P      to pins 3
+assign IN1_N      to pins 4
+assign IN0_P      to pins 6
+assign IN0_N      to pins 7
+assign IN_SEL     to pins 2
+
+assign OUT3_P     to pins 15
+assign OUT3_N     to pins 16
+assign OUT2_P     to pins 13
+assign OUT2_N     to pins 14
+assign OUT1_P     to pins 11
+assign OUT1_N     to pins 12
+assign OUT0_P     to pins 9
+assign OUT0_N     to pins 10
+
+assign VAC_REF   to pins 8
+
+power  VCC, GND
+
+family  TTL
+
+inputs IN1_P,IN1_N,IN0_P,IN0_N,IN_SEL
+outputs  OUT3_P,OUT3_N,OUT2_P,OUT2_N,OUT1_P,OUT1_N,OUT0_P,OUT0_N
+nondigital VAC_REF
+
+!***************************************************************************
+!***************************************************************************
+
+vector IN1_P_0
+     set IN_SEL    to "1"
+     set IN1_P     to "0"
+     set IN1_N     to "1"
+     set OUT3_P    to "0"
+     set OUT3_N    to "1"
+     set OUT2_P    to "0"
+     set OUT2_N    to "1"
+     set OUT1_P    to "0"
+     set OUT1_N    to "1"
+     set OUT0_P    to "0"
+     set OUT0_N    to "1"
+end vector
+
+vector IN1_P_1
+     set IN_SEL    to "1"
+     set IN1_P     to "1"
+     set IN1_N     to "0"
+     set OUT3_P    to "1"
+     set OUT3_N    to "0"
+     set OUT2_P    to "1"
+     set OUT2_N    to "0"
+     set OUT1_P    to "1"
+     set OUT1_N    to "0"
+     set OUT0_P    to "1"
+     set OUT0_N    to "0"
+end vector
+
+vector IN0_P_0
+     set IN_SEL    to "0"
+     set IN0_P     to "0"
+     set IN0_N     to "1"
+     set OUT3_P    to "0"
+     set OUT3_N    to "1"
+     set OUT2_P    to "0"
+     set OUT2_N    to "1"
+     set OUT1_P    to "0"
+     set OUT1_N    to "1"
+     set OUT0_P    to "0"
+     set OUT0_N    to "1"
+end vector
+
+vector IN0_P_1
+     set IN_SEL    to "0"
+     set IN0_P     to "1"
+     set IN0_N     to "0"
+     set OUT3_P    to "1"
+     set OUT3_N    to "0"
+     set OUT2_P    to "1"
+     set OUT2_N    to "0"
+     set OUT1_P    to "1"
+     set OUT1_N    to "0"
+     set OUT0_P    to "1"
+     set OUT0_N    to "0"
+end vector
+
+!**************************************************************************
+!**************************************************************************
+
+unit  "OUTPUT Test"
+
+     execute IN0_P_1
+     execute IN0_P_0
+     execute IN1_P_1
+     execute IN1_P_0
+end unit
+
+!    End of Test
+

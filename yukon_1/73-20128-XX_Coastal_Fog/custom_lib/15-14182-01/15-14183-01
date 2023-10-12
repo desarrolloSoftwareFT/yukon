@@ -1,0 +1,46 @@
+!!!!    6    0    1 1369360444   0000                                         
+!    Function:
+!    Revision:
+!    Author:
+
+warning "This is a SETUP-ONLY Test."
+
+sequential
+
+assign  GND to pins 7, 17
+assign  VCC to pins  8
+ 
+assign  ALL_OUTPUTS to pins 5, 10, 11, 12, 13, 15
+assign  FPGA_P3V3_QSFP1_PMB_SDA to pins 2
+assign  FPGA_P3V3_QSFP1_PMB_SCL to pins 1 
+! The following group was connected to a Fixed Node on the board:
+assign  P3V3_QSFP1 to pins 5
+assign  P3V3_QSFP1_FB to pins 6
+assign  P3V3_QSFP1_DRVL to pins 10
+assign  P3V3_QSFP1_DRVH to pins 11
+assign  P3V3_QSFP1_SW to pins 12
+assign  P3V3_QSFP1_VBST to pins 13
+assign  FPGA_P3V3_QSFP1_EN to pins 14
+assign  P3V3_QSFP1_PG_FPGA to pins 15
+
+! The following groups have no input/output type defined:
+assign  P3V3_QSFP1_FPGA_PMB_ALERT_L to pins 3
+assign  P3V3_QSFP1_TRIP to pins 4
+assign  P3V3_QSFP1_VREG to pins 9
+assign  P3V3_QSFP1_ADDR to pins 16
+
+family TTL
+
+
+power GND,  VCC
+
+inputs  FPGA_P3V3_QSFP1_PMB_SCL, P3V3_QSFP1_FB, FPGA_P3V3_QSFP1_EN,P3V3_QSFP1_ADDR
+
+outputs ALL_OUTPUTS, P3V3_QSFP1, P3V3_QSFP1_DRVL, P3V3_QSFP1_DRVH,P3V3_QSFP1_TRIP
+outputs P3V3_QSFP1_SW, P3V3_QSFP1_VBST, P3V3_QSFP1_PG_FPGA,P3V3_QSFP1_VREG,P3V3_QSFP1_FPGA_PMB_ALERT_L
+
+bidirectional FPGA_P3V3_QSFP1_PMB_SDA
+
+!
+!    End of Test
+!

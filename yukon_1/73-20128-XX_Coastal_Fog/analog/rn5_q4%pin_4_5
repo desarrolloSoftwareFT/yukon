@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627465803  V4607                                         
+! IPG: rev 09.20p  Mon Jun 28 12:12:18 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "TERM_QSFPA_49_Q4"; b to "TERM_QSFPA_49_Q4"
+resistor 49.9,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "rn5_q4%pin_4_5" test.
+! DUT: nominal 49.9, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 52.395, low 47.405
+! TEST: high limit 52.725, low limit 47.249
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

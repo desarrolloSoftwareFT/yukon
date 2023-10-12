@@ -1,0 +1,13 @@
+!!!!    2    0    1 1626506126   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:07 2021
+on failure
+report parallel devices
+report "r1113 1.00k"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "UNNAMED_107_CAP_I25_B"
+!connect g to "P3_3VA"; l to "P3_3VA"
+capacitor 100n,35.00,35.00,fr1024,re2,ar50.0m,ed,nocomp,en
+! "c1206" is a limited test.
+off failure

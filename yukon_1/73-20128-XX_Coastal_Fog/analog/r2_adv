@@ -1,0 +1,9 @@
+!!!!    2    0    1 1627538555  Vf879                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:23 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "UNNAMED_2_RES_I472_B_ADV"
+connect g to "GND"; l to "GND"
+connect g to "CLK25M_AC"
+resistor 33.2k,20.00,20.00,re5,wb,ar200m,ed,sl,en
+! "r2_adv" is a limited test.

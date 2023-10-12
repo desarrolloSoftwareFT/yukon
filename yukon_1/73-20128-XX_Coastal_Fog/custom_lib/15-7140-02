@@ -1,0 +1,50 @@
+!!!!    6    0    1 1337574637  Vba80                                         
+!  15-7140-01
+!  IC,74LVC1G04,INVR,SING,PSOP5-
+!  03/10/03
+
+combinatorial
+vector cycle 500n
+receive delay 450n
+
+assign   VCC       to pins  5
+assign   GND       to pins  3
+
+assign   E1_Input  to pins  2
+assign   E1_Output to pins  4
+
+assign   NC        to pins  1
+
+power    VCC, GND
+
+family   LVT
+
+inputs   E1_Input
+outputs  E1_Output
+nondigital  NC
+trace E1_Output   to E1_Input
+
+
+!***************************************************************************
+
+vector  E1_Input_0
+   set   E1_Input    to "0"
+   set   E1_Output   to "1"
+end vector
+
+vector  E1_Input_1
+   set   E1_Input    to "1"
+   set   E1_Output   to "0"
+end vector
+
+!*****************************************************************************
+
+!    Each element tested separately.
+
+unit  "Element number 1"
+   execute  E1_Input_0
+   execute  E1_Input_1
+end unit
+
+!    End of Test
+

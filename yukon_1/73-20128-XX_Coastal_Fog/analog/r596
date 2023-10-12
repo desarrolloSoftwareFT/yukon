@@ -1,0 +1,13 @@
+!!!!    2    0    1 1624852409   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:30 2021
+on failure
+   report parallel devices
+   report "r757"
+   report "r686 10.0k"
+end on failure
+disconnect all
+connect s to "P3_3VA"
+connect i to "UNNAMED_22_CV5CGXFC4CFG672_I108_CONFIG"
+jumper 3.32k, re4, wb, ar200m, op
+! "r596" test.
+off failure

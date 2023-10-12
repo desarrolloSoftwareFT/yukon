@@ -1,0 +1,18 @@
+!!!!    2    0    1 1627552158  V67b6                                         
+! IPG: rev 09.20p  Mon Jun 28 12:17:08 2021
+test powered analog
+  power pins 2,4
+  nonanalog pins 1
+
+  test "Freq_out"
+
+end test
+
+subtest "Freq_out"
+
+  connect rcva to nodes "UNNAMED_58_LMK05318_I573_XOP" !pins 3
+  detector frequency, expect  24M, gate 1
+  measure   24M * 1.05,  24M * .95
+end subtest
+
+

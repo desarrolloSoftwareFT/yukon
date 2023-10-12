@@ -1,0 +1,42 @@
+!!!!    2    0    1 1607321040  Vc194                                         
+test powered analog
+   power pins 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+   power pins 16,17,18,19,20,21,22,23,24,25,26,29
+   nonanalog pins 27,28
+
+   test "IN"
+
+   test "OUT_OFF"
+   test "OUT_ON"
+end test
+
+subtest "IN"
+   disconnect all
+   connect i to pins 15
+   connect l to pins 22
+
+   detector dcv, expect 12.0
+   measure 12.0 * 1.05, 12.0 * 0.95
+end subtest
+
+
+subtest "OUT_OFF"
+   disconnect all
+   connect s to pins 3
+   connect i to pins 5
+   connect l to pins 22
+
+   source dcv, am0.0,terminated50,ico1,on
+   detector dcv, expect 0
+   measure 0.5,-0.5
+end subtest
+
+subtest "OUT_ON"
+   disconnect all
+   connect i to pins 5
+   connect l to pins 22
+
+   detector dcv, expect 1.8
+   measure 1.8 * 1.08, 1.8 * 0.92        !change to fit value
+end subtest
+

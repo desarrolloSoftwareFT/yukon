@@ -1,0 +1,12 @@
+!!!!    2    0    1 1631931128   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:13:15 2021
+on failure
+  report "CR20 BLUE 3.2V diode measured"
+  report "Target Tol is (3.8, 2.8)"
+end on failure
+disconnect all
+connect s to "UNNAMED_85_LED3AN1C3_I74_L4"
+connect i to "P5V_BCN"
+connect g to "GND"
+diode 3.65,2.83,idc20m,co4.8,ar2.65,ed,wa20m
+! "cr20%blue" test.

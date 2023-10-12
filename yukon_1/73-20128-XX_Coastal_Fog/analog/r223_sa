@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538795  V9c0b                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:53 2021
+disconnect all
+connect s to "GND"
+connect i to "FPGA_SA_PDIE_TRI_EN_1V8"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r223_sa" test.

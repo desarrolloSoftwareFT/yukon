@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852311   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:52 2021
+on failure
+   report parallel devices
+   report "r229 2.00k"
+end on failure
+disconnect all
+connect s to "PWR_SA_P1V8_PVOUT"
+connect i to "SA_P1V8_ALT_VFB"
+jumper 1.16k, re4, wb, ar1.00, op
+! "r21_1v8b" test.
+off failure

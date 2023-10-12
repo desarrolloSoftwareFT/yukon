@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852348   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:29 2021
+disconnect all
+connect s to "CLK_TCXO_25M_LVCMOS"
+connect i to "CLK_LMK_PRIREF_25M_P"
+jumper 10.0k, re4, wb, ar100m, op
+! "r131" test.

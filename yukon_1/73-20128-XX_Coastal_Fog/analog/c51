@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852291   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:32 2021
+on failure
+   report parallel devices
+   report "r187_r0"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_RT0_TOD_ONE_PPS"
+jumper 5.00k, re4, wb, ar200m, op
+! "c51" test.
+off failure

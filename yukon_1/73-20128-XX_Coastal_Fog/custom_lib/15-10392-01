@@ -1,0 +1,1515 @@
+!!!!    6    0    1  957374295  Vbe8a                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         CIS00-21114-013
+! Alias:             SG572288FG8RDG
+! Part Type:         VLSI
+! Description:       32M X 72 X 4 DDR DRAM with PLL Clocks
+! Manufacturer:      Smart Modular, Simple Tech
+! Package Style:     244 pin SIMM
+! Created:           Sep 06, 2006
+! Updated:           Apr 18, 2007. Updated Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    00%. Not working because of PLL clock.....
+! Constraints:       No
+! Cisco Part #:      15-9928-01,15-10392-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VSS   to pins 2,5,8,11,14
+assign VSS   to pins 17,20,23,26,29
+assign VSS   to pins 32,35,38,41,44
+assign VSS   to pins 47,50,66,67,81
+assign VSS   to pins 84,87,90,93,96
+assign VSS   to pins 99,102,105,108,111
+assign VSS   to pins 114,117,120,123,126
+assign VSS   to pins 129,132,135,138,141
+assign VSS   to pins 144,147,150,153,156
+assign VSS   to pins 159,162,165,168,171
+assign VSS   to pins 202,205,208,211,214
+assign VSS   to pins 217,220,223,226,229
+assign VSS   to pins 232,235,238,241
+assign VDDQ  to pins 52,57,63,74,76
+assign VDDQ  to pins 79,173,178,184,195
+assign VDDQ  to pins 197
+assign VDD   to pins 54,60,65,69,72
+assign VDD   to pins 175,181,187,190,193
+assign VDD   to pins 200
+assign VDDSP to pins 244
+
+assign VREF  to pins 1
+
+assign NC    to pins 19,51,56,68,104
+assign NC    to pins 128,137,149,158,167
+assign NC    to pins 172,201,207,216,228
+assign NC    to pins 237,80
+assign RFU   to pins 139,140,224,225
+assign NU    to pins 77,78,174,176,177
+
+assign SDA   to pins 242
+assign SCL   to pins 243
+assign SADDR to pins 103,122,121
+
+assign ODT0  to pins 198
+assign RSTB  to pins 18
+assign CKE   to pins 53
+assign CLK0  to pins 189,188
+assign CSB   to pins 196
+assign RASB  to pins 194
+assign CASB  to pins 75
+assign WEB   to pins 73
+assign BSEL  to pins 55,192,71
+assign ABUS  to pins 199,179,58,70,180,182
+assign ABUS  to pins 59,183,61,62,185,64,186,191
+
+assign DBUS  to pins 170,169,164,163,49,48,43,42
+assign DBUS  to pins 240,239,234,233,119,118,113,112
+assign DBUS  to pins 231,230,222,221,110,109,101,100
+assign DBUS  to pins 219,218,213,212,98,97,92,91
+assign DBUS  to pins 210,209,204,203,89,88,83,82
+assign DBUS  to pins 161,160,155,154,40,39,34,33
+assign DBUS  to pins 152,151,146,145,31,30,25,24
+assign DBUS  to pins 143,142,134,133,22,21,13,12
+assign DBUS  to pins 131,130,125,124,10,9,4,3
+
+assign DBUS8 to pins 170,169,164,163,49,48,43,42
+assign DBUS7 to pins 240,239,234,233,119,118,113,112
+assign DBUS6 to pins 231,230,222,221,110,109,101,100
+assign DBUS5 to pins 219,218,213,212,98,97,92,91
+assign DBUS4 to pins 210,209,204,203,89,88,83,82
+assign DBUS3 to pins 161,160,155,154,40,39,34,33
+assign DBUS2 to pins 152,151,146,145,31,30,25,24
+assign DBUS1 to pins 143,142,134,133,22,21,13,12
+assign DBUS0 to pins 131,130,125,124,10,9,4,3
+assign DQM   to pins 166
+assign DQM   to pins 236,227,215,206,157,148,136,127
+assign DQM8  to pins 166
+assign DQM7  to pins 236
+assign DQM6  to pins 227
+assign DQM5  to pins 215
+assign DQM4  to pins 206
+assign DQM3  to pins 157
+assign DQM2  to pins 148
+assign DQM1  to pins 136
+assign DQM0  to pins 127
+assign DQS8  to pins 46,45
+assign DQS7  to pins 116,115
+assign DQS6  to pins 107,106
+assign DQS5  to pins 95,94
+assign DQS4  to pins 86,85
+assign DQS3  to pins 37,36
+assign DQS2  to pins 28,27
+assign DQS1  to pins 16,15
+assign DQS0  to pins 7,6
+
+power   VSS,VDDQ,VDD,VDDSP
+inputs  ODT0,RSTB,CKE,CLK0,CSB
+inputs  RASB,CASB,WEB,BSEL,ABUS
+inputs  DQM,DQM8,DQM7,DQM6,DQM5,DQM4,DQM3,DQM2,DQM1,DQM0
+inputs  DQS8,DQS7,DQS6,DQS5,DQS4,DQS3,DQS2,DQS1,DQS0
+inputs  SCL,SADDR
+bidirectional DBUS,SDA
+bidirectional DBUS8,DBUS7,DBUS6,DBUS5,DBUS4,DBUS3,DBUS2,DBUS1,DBUS0
+nondigital VREF,NC,RFU,NU
+
+format hexadecimal ABUS,DBUS
+format hexadecimal DBUS8,DBUS7,DBUS6,DBUS5,DBUS4,DBUS3,DBUS2,DBUS1,DBUS0
+
+disable SDA   with RSTB,SCL                    to "01"
+disable DBUS8 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS7 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS6 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS5 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS4 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS3 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS2 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS1 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+disable DBUS0 with RSTB,CSB,RASB,CASB,WEB,CLK0 to "01111tt" 20 times
+
+family LVT_1V8
+
+set load      on groups SDA   to pull up
+set load      on groups DBUS8 to pull up
+set load      on groups DBUS7 to pull up
+set load      on groups DBUS6 to pull up
+set load      on groups DBUS5 to pull up
+set load      on groups DBUS4 to pull up
+set load      on groups DBUS3 to pull up
+set load      on groups DBUS2 to pull up
+set load      on groups DBUS1 to pull up
+set load      on groups DBUS0 to pull up
+set slew rate on groups CLK0  to 250
+
+vector INIT1
+ receive DBUS
+ drive SDA
+ set ODT0  to "1"
+ set RSTB  to "1"
+ set DBUS  to "xxxxxxxxxxxxxxxxxx"
+ set ABUS  to "0000"
+ set BSEL  to "000"
+ set CLK0  to "01"
+ set DQM   to "000000000"
+ set DQS8  to "xx"
+ set DQS7  to "xx"
+ set DQS6  to "xx"
+ set DQS5  to "xx"
+ set DQS4  to "xx"
+ set DQS3  to "xx"
+ set DQS2  to "xx"
+ set DQS1  to "xx"
+ set DQS0  to "xx"
+ set CSB   to "0"  ! NOP
+ set RASB  to "1"
+ set CASB  to "1"
+ set WEB   to "1"
+ set CKE   to "1"
+ set SADDR to "000"
+ set SDA   to "1"
+ set SCL   to "1"
+end vector
+
+vector KEEP1
+ receive DBUS
+ receive SDA
+ set ODT0  to "k"
+ set RSTB  to "k"
+ set DBUS  to "xxxxxxxxxxxxxxxxxx"
+ set ABUS  to "kkkk"
+ set BSEL  to "kkk"
+ set CKE   to "k"
+ set CLK0  to "01"
+ set CSB   to "k"
+ set RASB  to "k"
+ set CASB  to "k"
+ set WEB   to "k"
+ set DQM   to "kkkkkkkkk"
+ set DQS8  to "xx"
+ set DQS7  to "xx"
+ set DQS6  to "xx"
+ set DQS5  to "xx"
+ set DQS4  to "xx"
+ set DQS3  to "xx"
+ set DQS2  to "xx"
+ set DQS1  to "xx"
+ set DQS0  to "xx"
+ set SADDR to "kkk"
+ set SCL   to "k"
+ set SDA   to "x"
+end vector
+
+vector KEEP2
+ drive DBUS
+ drive SDA
+ set ODT0  to "k"
+ set RSTB  to "k"
+ set DBUS  to "kkkkkkkkkkkkkkkkkk"
+ set ABUS  to "kkkk"
+ set BSEL  to "kkk"
+ set CKE   to "k"
+ set CLK0  to "01"
+ set CSB   to "k"
+ set RASB  to "k"
+ set CASB  to "k"
+ set WEB   to "k"
+ set DQM   to "kkkkkkkkk"
+ set DQS8  to "kk"
+ set DQS7  to "kk"
+ set DQS6  to "kk"
+ set DQS5  to "kk"
+ set DQS4  to "kk"
+ set DQS3  to "kk"
+ set DQS2  to "kk"
+ set DQS1  to "kk"
+ set DQS0  to "kk"
+ set SADDR to "kkk"
+ set SCL   to "k"
+ set SDA   to "k"
+end vector
+
+vector RSTB_0
+ initialize to KEEP1
+ set RSTB   to "0"
+end vector
+
+vector RSTB_1
+ initialize to KEEP1
+ set RSTB   to "1"
+end vector
+
+vector CKE_0
+ initialize to KEEP1
+ set CKE    to "0"
+end vector
+
+vector CKE_1
+ initialize to KEEP1
+ set CKE    to "1"
+end vector
+
+vector CLK_10
+ initialize to KEEP1
+ set CLK0   to "01"
+end vector
+
+vector CLK_11
+ initialize to KEEP1
+ set CLK0   to "10"
+end vector
+
+vector CLK_20
+ initialize to KEEP2
+ set CLK0   to "01"
+end vector
+
+vector CLK_21
+ initialize to KEEP2
+ set CLK0   to "10"
+end vector
+
+vector CSB_20
+ initialize to KEEP2
+ set CSB    to "0"
+end vector
+
+vector CSB_21
+ initialize to KEEP2
+ set CSB    to "1"
+end vector
+
+vector RASB_0
+ initialize to KEEP1
+ set RASB   to "0"
+end vector
+
+vector RASB_1
+ initialize to KEEP1
+ set RASB   to "1"
+end vector
+
+vector CASB_0
+ initialize to KEEP1
+ set CASB   to "0"
+end vector
+
+vector CASB_1
+ initialize to KEEP1
+ set CASB   to "1"
+end vector
+
+vector WEB_0
+ initialize to KEEP1
+ set WEB    to "0"
+end vector
+
+vector WEB_1
+ initialize to KEEP1
+ set WEB    to "1"
+end vector
+
+vector DQM_0
+ initialize to KEEP1
+ set DQM    to "000000000"
+end vector
+
+vector DQM_1
+ initialize to KEEP1
+ set DQM    to "111111111"
+end vector
+
+vector DQS_20
+ initialize to KEEP2
+ set CLK0   to "01"
+ set DQS8   to "01"
+ set DQS7   to "01"
+ set DQS6   to "01"
+ set DQS5   to "01"
+ set DQS4   to "01"
+ set DQS3   to "01"
+ set DQS2   to "01"
+ set DQS1   to "01"
+ set DQS0   to "01"
+end vector
+
+vector DQS_21
+ initialize to KEEP2
+ set CLK0   to "10"
+ set DQS8   to "10"
+ set DQS7   to "10"
+ set DQS6   to "10"
+ set DQS5   to "10"
+ set DQS4   to "10"
+ set DQS3   to "10"
+ set DQS2   to "10"
+ set DQS1   to "10"
+ set DQS0   to "10"
+end vector
+
+vector BSEL_000
+ initialize to KEEP1
+ set BSEL   to "000"
+end vector
+
+vector BSEL_001
+ initialize to KEEP1
+ set BSEL   to "001"
+end vector
+
+vector BSEL_010
+ initialize to KEEP1
+ set BSEL   to "010"
+end vector
+
+vector BSEL_011
+ initialize to KEEP1
+ set BSEL   to "011"
+end vector
+
+vector BSEL_100
+ initialize to KEEP1
+ set BSEL   to "100"
+end vector
+
+vector BSEL_101
+ initialize to KEEP1
+ set BSEL   to "101"
+end vector
+
+vector BSEL_110
+ initialize to KEEP1
+ set BSEL   to "110"
+end vector
+
+vector BSEL_111
+ initialize to KEEP1
+ set BSEL   to "111"
+end vector
+
+! ***************************************************************************
+
+vector PRECHRG
+ initialize to KEEP1
+ set ABUS to "0400"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "0"
+end vector
+
+vector WR_MODE1
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "001"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "0"
+end vector
+
+vector WR_MODE2
+ initialize to KEEP1
+ set ABUS to "0121"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "0"
+end vector
+
+vector WR_MODE3
+ initialize to KEEP1
+ set ABUS to "0021"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "0"
+end vector
+
+vector BNK_ACT_A0000_B000
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0200_B000
+ initialize to KEEP1
+ set ABUS to "0200"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0400_B000
+ initialize to KEEP1
+ set ABUS to "0400"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0800_B000
+ initialize to KEEP1
+ set ABUS to "0800"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A1000_B000
+ initialize to KEEP1
+ set ABUS to "1000"
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0000_B001
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "001"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0000_B010
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "010"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0000_B011
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "011"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector BNK_ACT_A0000_B100
+ initialize to KEEP1
+ set ABUS to "0000"
+ set BSEL to "100"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector CBR_B000
+ initialize to KEEP1
+ set BSEL to "000"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector CBR_B001
+ initialize to KEEP1
+ set BSEL to "001"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector CBR_B010
+ initialize to KEEP1
+ set BSEL to "010"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector CBR_B011
+ initialize to KEEP1
+ set BSEL to "011"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector CBR_B100
+ initialize to KEEP1
+ set BSEL to "100"
+ set CSB  to "0"
+ set RASB to "0"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector WR_DATA
+ initialize to KEEP1
+ set CSB  to "0"
+ set RASB to "1"
+ set CASB to "0"
+ set WEB  to "0"
+ set DQS8 to "01"
+ set DQS7 to "01"
+ set DQS6 to "01"
+ set DQS5 to "01"
+ set DQS4 to "01"
+ set DQS3 to "01"
+ set DQS2 to "01"
+ set DQS1 to "01"
+ set DQS0 to "01"
+end vector
+
+vector RD_DATA
+ initialize to KEEP1
+ set CSB  to "0"
+ set RASB to "1"
+ set CASB to "0"
+ set WEB  to "1"
+end vector
+
+vector IDLE1
+ initialize to KEEP1
+ set CSB  to "1"
+ set RASB to "1"
+ set CASB to "1"
+ set WEB  to "1"
+end vector
+
+vector IDLE2
+ initialize to KEEP2
+ set ABUS to "00F0"
+ set CSB  to "1"
+ set RASB to "1"
+ set CASB to "1"
+ set WEB  to "1"
+ set DQS8 to "01"
+ set DQS7 to "01"
+ set DQS6 to "01"
+ set DQS5 to "01"
+ set DQS4 to "01"
+ set DQS3 to "01"
+ set DQS2 to "01"
+ set DQS1 to "01"
+ set DQS0 to "01"
+end vector
+
+! ***************************************************************************
+
+vector WA_0000
+ initialize to WR_DATA
+ set ABUS   to "0000"
+end vector
+
+vector WA_0001
+ initialize to WR_DATA
+ set ABUS   to "0001"
+end vector
+
+vector WA_0002
+ initialize to WR_DATA
+ set ABUS   to "0002"
+end vector
+
+vector WA_0004
+ initialize to WR_DATA
+ set ABUS   to "0004"
+end vector
+
+vector WA_0008
+ initialize to WR_DATA
+ set ABUS   to "0008"
+end vector
+
+vector WA_0010
+ initialize to WR_DATA
+ set ABUS   to "0010"
+end vector
+
+vector WA_0020
+ initialize to WR_DATA
+ set ABUS   to "0020"
+end vector
+
+vector WA_0040
+ initialize to WR_DATA
+ set ABUS   to "0040"
+end vector
+
+vector WA_0080
+ initialize to WR_DATA
+ set ABUS   to "0080"
+end vector
+
+vector WA_0100
+ initialize to WR_DATA
+ set ABUS   to "0100"
+end vector
+
+vector WA_0110
+ initialize to WR_DATA
+ set ABUS   to "0110"
+end vector
+
+! ***************************************************************************
+
+vector RA_0000
+ initialize to RD_DATA
+ set ABUS   to "0000"
+end vector
+
+vector RA_0001
+ initialize to RD_DATA
+ set ABUS   to "0001"
+end vector
+
+vector RA_0002
+ initialize to RD_DATA
+ set ABUS   to "0002"
+end vector
+
+vector RA_0004
+ initialize to RD_DATA
+ set ABUS   to "0004"
+end vector
+
+vector RA_0008
+ initialize to RD_DATA
+ set ABUS   to "0008"
+end vector
+
+vector RA_0010
+ initialize to RD_DATA
+ set ABUS   to "0010"
+end vector
+
+vector RA_0020
+ initialize to RD_DATA
+ set ABUS   to "0020"
+end vector
+
+vector RA_0040
+ initialize to RD_DATA
+ set ABUS   to "0040"
+end vector
+
+vector RA_0080
+ initialize to RD_DATA
+ set ABUS   to "0080"
+end vector
+
+vector RA_0100
+ initialize to RD_DATA
+ set ABUS   to "0100"
+end vector
+
+vector RA_0110
+ initialize to RD_DATA
+ set ABUS   to "0110"
+end vector
+
+! ***************************************************************************
+
+vector WD_0000
+ initialize to IDLE2
+ set DBUS   to "000000000000000000"
+end vector
+
+vector WD_5555
+ initialize to IDLE2
+ set DBUS   to "555555555555555555"
+end vector
+
+vector WD_AAAA
+ initialize to IDLE2
+ set DBUS   to "AAAAAAAAAAAAAAAAAA"
+end vector
+
+vector WD_0101
+ initialize to IDLE2
+ set DBUS   to "0F0101010101010101"
+end vector
+
+vector WD_0202
+ initialize to IDLE2
+ set DBUS   to "3C0202020202020202"
+end vector
+
+vector WD_0404
+ initialize to IDLE2
+ set DBUS   to "960404040404040404"
+end vector
+
+vector WD_0808
+ initialize to IDLE2
+ set DBUS   to "080808080808080808"
+end vector
+
+vector WD_1010
+ initialize to IDLE2
+ set DBUS   to "101010101010101010"
+end vector
+
+vector WD_2020
+ initialize to IDLE2
+ set DBUS   to "202020202020202020"
+end vector
+
+vector WD_4040
+ initialize to IDLE2
+ set DBUS   to "404040404040404040"
+end vector
+
+vector WD_8080
+ initialize to IDLE2
+ set DBUS   to "808080808080808080"
+end vector
+
+! ***************************************************************************
+
+vector RD_5555
+ initialize to KEEP1
+ set DBUS   to "555555555555555555"
+end vector
+
+vector RD_AAAA
+ initialize to KEEP1
+ set DBUS   to "AAAAAAAAAAAAAAAAAA"
+end vector
+
+vector RD_0101
+ initialize to KEEP1
+ set DBUS   to "0F0101010101010101"
+end vector
+
+vector RD_0202
+ initialize to KEEP1
+ set DBUS   to "3C0202020202020202"
+end vector
+
+vector RD_0404
+ initialize to KEEP1
+ set DBUS   to "960404040404040404"
+end vector
+
+vector RD_0808
+ initialize to KEEP1
+ set DBUS   to "xx0808080808080808"
+end vector
+
+vector RD_1010
+ initialize to KEEP1
+ set DBUS   to "xx1010101010101010"
+end vector
+
+vector RD_2020
+ initialize to KEEP1
+ set DBUS   to "xx2020202020202020"
+end vector
+
+vector RD_4040
+ initialize to KEEP1
+ set DBUS   to "xx4040404040404040"
+end vector
+
+vector RD_8080
+ initialize to KEEP1
+ set DBUS   to "xx8080808080808080"
+end vector
+
+! ***************************************************************************
+
+vector SA_000
+ initialize to KEEP2
+ set SADDR  to "000"
+end vector
+
+vector SA_001
+ initialize to KEEP2
+ set SADDR  to "001"
+end vector
+
+vector SA_010
+ initialize to KEEP2
+ set SADDR  to "010"
+end vector
+
+vector SA_011
+ initialize to KEEP2
+ set SADDR  to "011"
+end vector
+
+vector SA_100
+ initialize to KEEP2
+ set SADDR  to "100"
+end vector
+
+vector SA_101
+ initialize to KEEP2
+ set SADDR  to "101"
+end vector
+
+vector SA_110
+ initialize to KEEP2
+ set SADDR  to "110"
+end vector
+
+vector SA_111
+ initialize to KEEP2
+ set SADDR  to "111"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector IDLEX
+ initialize to KEEP2
+ set SDA    to "1"
+ set SCL    to "1"
+end vector
+
+! ***************************************************************************
+
+sub RST_IC
+ repeat 40 times
+  execute RSTB_0
+  execute CLK_11
+ end repeat
+ repeat 40 times
+  execute RSTB_1
+  execute CLK_11
+ end repeat
+end sub
+
+sub CLK4
+ repeat 4 times
+  execute CLK_10
+  execute CLK_11
+ end repeat
+end sub
+
+sub PRECHG        ! Precharge all banks
+ execute PRECHRG
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+end sub
+
+sub WR(WADDR,WDATA)
+ execute WADDR
+ execute CLK_11
+ execute WDATA    ! Also A = $0F0, DQS = 20, IDLE2
+ execute DQS_21
+ execute DQS_20
+ execute DQS_21
+end sub
+
+sub RD(RADDR,RDATA)
+ execute RADDR
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ execute RDATA    ! CLK_11
+ execute CLK_11
+end sub
+
+! ***************************************************************************
+
+sub STRT
+ repeat 40 times
+  execute D_1
+ end repeat
+ repeat 40 times
+  execute SK_21
+ end repeat
+ repeat 40 times
+  execute D_0
+ end repeat
+ repeat 40 times
+  execute SK_20
+ end repeat
+end sub
+
+sub STOP
+ repeat 40 times
+  execute SK_10
+ end repeat
+ repeat 40 times
+  execute D_0
+ end repeat
+ repeat 40 times
+  execute SK_21
+ end repeat
+ repeat 40 times
+  execute D_1
+ end repeat
+ repeat 40 times
+  execute SK_20
+ end repeat
+ repeat 40 times
+  execute SK_21
+ end repeat
+end sub
+
+sub SCLK_1X
+!repeat 6 times
+  execute SK_10
+!end repeat
+!repeat 12 times
+  execute SK_11
+!end repeat
+!repeat 6 times
+  execute SK_10
+!end repeat
+end sub
+
+sub SCLK_2X
+!repeat 6 times
+  execute SK_20
+!end repeat
+!repeat 12 times
+  execute SK_21
+!end repeat
+!repeat 6 times
+  execute SK_20
+!end repeat
+end sub
+
+sub SWR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Serial Write
+ execute D7
+ call SCLK_2X
+ execute D6
+ call SCLK_2X
+ execute D5
+ call SCLK_2X
+ execute D4
+ call SCLK_2X
+ execute D3
+ call SCLK_2X
+ execute D2
+ call SCLK_2X
+ execute D1
+ call SCLK_2X
+ execute D0
+ execute SK_21
+ execute SK_11
+ execute SK_10
+ execute R_0
+ execute SK_11
+ execute SK_10
+end sub
+
+sub SRD(D7,D6,D5,D4,D3,D2,D1,D0)  ! Serial Read
+ call SCLK_1X
+ execute D7
+ call SCLK_1X
+ execute D6
+ call SCLK_1X
+ execute D5
+ call SCLK_1X
+ execute D4
+ call SCLK_1X
+ execute D3
+ call SCLK_1X
+ execute D2
+ call SCLK_1X
+ execute D1
+ call SCLK_1X
+ execute D0
+ execute D_0    ! Acknowledge bit
+ call SCLK_2X
+end sub
+
+! ***************************************************************************
+
+unit "Power Up and Initialize"
+ execute INIT1
+ repeat 2400 times  ! 2400 times
+  execute CLK_10
+  execute CLK_11
+ end repeat
+ execute WR_MODE1   ! EMRS, Extended Mode Register, enable DLL
+ execute CLK_11     ! ABUS = $0000, BSEL = 01
+ execute IDLE1
+ execute CLK_11
+ execute WR_MODE2   ! MRS, Mode Register Set, ABUS = $0121, BSEL = 00
+ execute CLK_11     ! CAS latency = 2, Sequential, Burst length = 2
+ execute IDLE1      ! Reset DLL
+ repeat 200 times
+  execute CLK_10
+  execute CLK_11
+ end repeat
+ call PRECHG        ! Precharge all banks
+ repeat 4 times     ! Auto Refresh
+  execute CBR_B000  ! Bank A
+  execute CLK_11
+  execute IDLE1
+  execute CLK_11
+  execute CBR_B001  ! Bank B
+  execute CLK_11
+  execute IDLE1
+  execute CLK_11
+  execute CBR_B010  ! Bank C
+  execute CLK_11
+  execute IDLE1
+  execute CLK_11
+  execute CBR_B011  ! Bank D
+  execute CLK_11
+  execute IDLE1
+  execute CLK_11
+  execute CBR_B100  ! Bank E
+  execute CLK_11
+  execute IDLE1
+  execute CLK_11
+ end repeat
+ call PRECHG
+ execute WR_MODE3  ! MRS, Mode Register Set, ABUS = $0021, BSEL = 00
+ execute CLK_11    ! Release DLL Reset
+ execute IDLE1
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+end unit
+
+unit "Write Bank A, Row $0000"
+ call PRECHG
+ execute BNK_ACT_A0000_B000  ! Activate Bank
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+ call WR(WA_0000,WD_5555)
+ call WR(WA_0002,WD_AAAA)
+ call WR(WA_0004,WD_0101)
+ call WR(WA_0008,WD_0202)
+ call WR(WA_0010,WD_0404)
+ call WR(WA_0020,WD_0808)
+ call WR(WA_0040,WD_1010)
+ call WR(WA_0080,WD_2020)
+ call WR(WA_0100,WD_4040)
+ call WR(WA_0110,WD_8080)
+end unit
+
+unit "DQM test"
+ execute DQM_1
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+ execute DQM_0
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+end unit
+
+unit "CKE In-active test"
+ execute CKE_0
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+ execute CKE_1
+ execute CLK_11
+ execute CLK_10
+ execute CLK_11
+end unit
+
+unit "Write Bank A, Row $0200"
+ call PRECHG
+ execute BNK_ACT_A0200_B000
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank A, Row $0400"
+ call PRECHG
+ execute BNK_ACT_A0400_B000
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank A, Row $0800"
+ call PRECHG
+ execute BNK_ACT_A0800_B000
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank A, Row $1000"
+ call PRECHG
+ execute BNK_ACT_A1000_B000
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank B, Row $000"
+ call PRECHG
+ execute BNK_ACT_A0000_B001
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank C, Row $000"
+ call PRECHG
+ execute BNK_ACT_A0000_B010
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank D, Row $000"
+ call PRECHG
+ execute BNK_ACT_A0000_B011
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+unit "Write Bank E, Row $000"
+ call PRECHG
+ execute BNK_ACT_A0000_B100
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call WR(WA_0002,WD_0000)
+ call WR(WA_0110,WD_0000)
+end unit
+
+! ***************************************************************************
+
+unit "Read Bank A, Row $000"
+ call PRECHG
+ execute BNK_ACT_A0000_B000
+ execute CLK_11
+ execute IDLE1
+ execute CLK_11
+ call RD(RA_0000,KEEP1)
+ call RD(RA_0001,RD_5555)
+ call RD(RA_0002,RD_5555)
+ call RD(RA_0004,RD_AAAA)
+ call RD(RA_0008,RD_0101)
+ call RD(RA_0010,RD_0202)
+ call RD(RA_0020,RD_0404)
+ call RD(RA_0040,RD_0808)
+ call RD(RA_0080,RD_1010)
+ call RD(RA_0100,RD_2020)
+ call RD(RA_0110,RD_4040)
+ call RD(RA_0110,RD_8080)
+end unit
+
+! ****************************** I2C Bus test *******************************
+
+unit "SADDR = 000"
+ repeat 40 times
+  execute SA_000
+ end repeat
+ execute D_1
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_0,D_0,D_1)
+ call STOP
+end unit
+
+unit "SADDR = 111"
+ repeat 40 times
+  execute SA_111
+ end repeat
+ execute D_1
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_1)
+ call STOP
+end unit
+
+unit "SADDR = 001"
+ repeat 40 times
+  execute SA_001
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_0,D_1,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 010"
+ repeat 40 times
+  execute SA_010
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_1,D_0,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 011"
+ repeat 40 times
+  execute SA_011
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_0,D_1,D_1,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 100"
+ repeat 40 times
+  execute SA_100
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_0,D_0,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 101"
+ repeat 40 times
+  execute SA_101
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_0,D_1,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 110"
+ repeat 40 times
+  execute SA_110
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_1,D_0,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+
+unit "SADDR = 111"
+ repeat 40 times
+  execute SA_111
+ end repeat
+ call STRT                                   ! Sequential Read from $00
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_1)
+ call SWR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)
+ call STRT
+ call SWR(D_1,D_0,D_1,D_0, D_1,D_1,D_1,D_0)
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_0 exit if pass
+ end homingloop
+ homingloop 20 times
+  repeat 40 times
+   execute SK_11
+  end repeat
+  repeat 40 times
+   execute SK_10
+  end repeat
+  execute R_1 exit if pass
+ end homingloop
+end unit
+

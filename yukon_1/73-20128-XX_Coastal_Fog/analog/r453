@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626156809  Vf286                                         
+! IPG: rev 09.20p  Mon Jun 28 12:03:53 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "MIFPGA_DCLK"; a to "MIFPGA_DCLK"
+connect i to "SRT_MIFPGA_DCLK"; b to "SRT_MIFPGA_DCLK"
+resistor 33,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "r453" is a limited test.
+! DUT: nominal 33, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 33.33, low 32.67
+! TEST: high limit 33.652, low limit 32.520
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

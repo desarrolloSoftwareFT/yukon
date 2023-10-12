@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852456   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:17 2021
+disconnect all
+connect s to "AVDD12_HMP1_CMN_R3"
+connect i to "PWR_AVDD_RT"
+jumper 6.01, re1, ar200m
+! "l19_r3" test.

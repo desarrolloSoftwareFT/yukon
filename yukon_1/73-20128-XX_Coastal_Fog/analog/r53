@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852322   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:03 2021
+disconnect all
+connect i to "LM03328_CLK100M_LVPECL_N"
+connect s to "GND"
+jumper 10.0k, re4, wb, ar100m, op
+! "r53" test.

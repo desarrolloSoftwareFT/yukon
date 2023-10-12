@@ -1,0 +1,8 @@
+!!!!    2    0    1 1627538153  V1452                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:03 2021
+disconnect all
+connect s to "CLK25M_TCXO_FPGA1_AC_P"; a to "CLK25M_TCXO_FPGA1_AC_P"
+connect i to "CLK25M_TCXO_FPGA1_P"; b to "CLK25M_TCXO_FPGA1_P"
+connect g to "GND"; l to "GND"
+capacitor 100n,30.00,30.00,fr1024,re1,ar20.0m,sa,sb,sl,ed,nocomp
+! "c329" is a limited test.

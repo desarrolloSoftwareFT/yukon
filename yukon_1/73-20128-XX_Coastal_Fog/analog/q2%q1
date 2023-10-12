@@ -1,0 +1,21 @@
+!!!!    2    0    1 1626149976  V1d1d                                         
+! IPG: rev 08.40p  Fri Nov 27 14:37:13 2020
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_64_NMOSFET_I185_D"
+!B!diode "B-E", 986m, 594m, idc10m, co3.0, ar986m, wa30m
+diode "B-E",986m,480m,idc10m,co3.0,ar986m,wa30m
+! "q2%q1 B-E" test.
+disconnect all
+connect s to "UNNAMED_64_NPN_I191_C"
+connect i to "UNNAMED_64_NMOSFET_I185_D"
+!B!diode "B-C", 955m, 603m, idc10m, co3.0, ar985m, wa30m
+diode "B-C",955m,480m,idc10m,co3.0,ar985m,wa30m
+! "q2%q1 B-C" test.
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_64_NMOSFET_I185_D"
+connect g to "UNNAMED_64_NPN_I191_C"
+! npn "BETA", 0.00, 0.00, idc1.7m, idelta10, co10
+npn "BETA", 800, 20, idc20m, idelta10, co10, wa20m
+warning "MOA voltage limit exceeded."

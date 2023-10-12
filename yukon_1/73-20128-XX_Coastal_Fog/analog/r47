@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852320   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:01 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "FPGA_OSC_SDA"
+jumper 1.71k, re4, wb, ar500m, op
+! "r47" test.

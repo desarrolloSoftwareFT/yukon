@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626158316  V1542                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:47 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "SRT_SA_1OOM_PCIE_REFCLK_N"; a to "SRT_SA_1OOM_PCIE_REFCLK_N"
+connect i to "SRT_SA_1OOM_PCIE_REFCLK_P"; b to "SRT_SA_1OOM_PCIE_REFCLK_P"
+resistor 100,25.00,20.00,re2,ar100m,sa,sb,en,ed
+! "r430_sa" test.
+! DUT: nominal 100, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 105, low 95
+! TEST: high limit 105.36, low limit 94.811
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

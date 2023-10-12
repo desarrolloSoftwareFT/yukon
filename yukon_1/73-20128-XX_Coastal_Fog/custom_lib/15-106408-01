@@ -1,0 +1,27 @@
+!!!!    2    0    1 1622872068  V40ca                                         
+test powered analog
+   power pins 1,2,3,5,7,8
+   nonanalog pins 4,9
+
+   test "IN"
+   test "OUT"
+end test
+
+subtest "IN"
+   disconnect all
+   connect i to pins 1
+   connect l to pins 5
+
+   detector dcv, expect 1.8
+   measure 1.8 * 1.05, 1.8 * 0.95
+end subtest
+
+subtest "OUT"
+   disconnect all
+   connect i to pins 6
+   connect l to pins 5
+
+   detector dcv, expect 1.8
+   measure 1.8 * 1.05, 1.8 * 0.95        !change to fit value
+end subtest
+

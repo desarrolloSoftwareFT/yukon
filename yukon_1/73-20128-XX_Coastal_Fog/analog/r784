@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852413   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:34 2021
+on failure
+   report parallel devices
+   report "r31_qd 4.75k"
+end on failure
+disconnect all
+connect s to "P3_3VA"
+connect i to "SRT_PMBUS_SA_DVDD_SDA"
+jumper 3.20k, re4, wb, ar200m, op
+! "r784" test.
+off failure

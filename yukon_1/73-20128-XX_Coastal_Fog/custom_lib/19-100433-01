@@ -1,0 +1,29 @@
+!!!!    2    0    1 1542642562  Vb1db                                         
+
+!  50.0 MHZ Osciallator
+
+!  32.768kHz
+!  XTAL,32.768kHz,25.0 ppm,SMD
+
+test powered analog
+   nonanalog pins 3
+   power pins 2 ,4
+
+   test "Out"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out"
+   connect rcvc to pins 1
+
+   detector frequency, expect 50.0M, gate 1
+   measure 50.0M * 1.05, 50.0M * 0.95
+end subtest
+
+
+!
+!  End test
+!

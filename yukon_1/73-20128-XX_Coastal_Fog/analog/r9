@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852308   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:49 2021
+disconnect all
+connect s to "SRT_CLK156M25_BUF3_N"
+connect i to "P3_3V"
+jumper 175, re3, wb, ar500m, op
+! "r9" test.

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1624852284   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:25 2021
+on failure
+   report parallel devices
+   report "c10_p1 100u"
+   report "c11_p1 220u"
+   report "c09_p1 470p"
+end on failure
+disconnect all
+connect i to "PWR_SA_P1V8_PVOUT"
+connect s to "GND"
+jumper 1.27k, re4, wb, ar1.00, op
+! "c10_1v8b" test.
+off failure

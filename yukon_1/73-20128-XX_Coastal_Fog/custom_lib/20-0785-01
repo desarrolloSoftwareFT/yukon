@@ -1,0 +1,45 @@
+!!!!    2    0    1 1451380379  V310b                                         
+!
+! Cisco Part#:          20-0785-01
+!
+! Note:                 Pin  4    = Gate
+!                       Pin  8    = Drain
+!                       Pin 1,2,3 = Source
+!
+! ***************************************************************************
+
+test powered analog
+  nonanalog pins 2,3
+
+ test "FET_OFF"
+ test "FET_ON"
+
+end test
+
+! ***************************************************************************
+
+subtest "FET_OFF"
+ connect s to pins   8    ! Drain
+ connect i to pins   8    ! Drain
+ connect l to pins   1    ! Source
+ connect a to pins   4    ! Gate
+
+ source dcv, am1.8, terminated 50, on
+ auxiliary dcv, am0.0, on
+ detector dcv, expect 3.5
+ measure  2.0,  1.15      ! Measurement taken at Drain
+end subtest
+
+subtest "FET_ON"
+ connect s to pins   8    ! Drain
+ connect i to pins   8    ! Drain
+ connect l to pins   1    ! Source
+ connect a to pins   4    ! Gate
+
+ source dcv, am2.5, terminated 50, on
+ auxiliary dcv, am2.5, on, ico1
+ detector dcv, expect 3.5
+ measure  0.2, -0.2       ! Measurement taken at Drain
+end subtest
+
+

@@ -1,0 +1,493 @@
+!!!!    6    0    1  591688800   0000                                         
+
+! Device           : 74c164
+! Function         : shift_register totem 8-bit_parallel_output
+! revision         : B.01.00
+! safeguard        : 74c_cmos
+! Modifications    : Modified for AwareTest xi
+!
+  warning           "This library has not been verified with hardware."
+
+sequential
+
+vector cycle 1u
+receive delay 900n
+
+assign  VDD         to pins 14
+assign  VSS         to pins 7
+
+assign  Serial_inputs  to pins 1,2
+
+assign  Outputs     to pins 3,4,5,6,10,11,12,13
+assign  D0          to pins 13         !AT Added for minimum pin test.
+assign  D1          to pins 12         !AT Added for minimum pin test.
+assign  D2          to pins 11         !AT Added for minimum pin test.
+assign  D3          to pins 10         !AT Added for minimum pin test.
+assign  D4          to pins  6         !AT Added for minimum pin test.
+assign  D5          to pins  5         !AT Added for minimum pin test.
+assign  D6          to pins  4         !AT Added for minimum pin test.
+assign  D7          to pins  3         !AT Added for minimum pin test.
+
+assign  Clock       to pins 8
+assign  Clear_bar   to pins 9
+
+family  CMOS
+
+power   VDD, VSS
+
+inputs  Serial_inputs, Clock, Clear_bar
+
+outputs Outputs
+outputs  D0, D1, D2, D3          !AT Added for minimum pin test.
+outputs  D4, D5, D6, D7          !AT Added for minimum pin test.
+
+trace  Outputs to  Serial_inputs, Clock, Clear_bar
+
+!*********************************************************************
+!*********************************************************************
+
+vector    Clear_low
+     set  Clock               to "0"
+     set  Clear_bar           to "0"
+     set  Outputs             to "00000000"
+end vector
+
+vector    Clock_high__A
+     set  Clear_bar           to "1"
+     set  Serial_inputs       to "kx"
+     set  Clock               to "1"
+end vector
+
+vector    Clock_high__AB
+     set  Clear_bar           to "1"
+     set  Serial_inputs       to "kk"
+     set  Clock               to "1"
+end vector
+
+vector    Clock_high__B
+     set  Clear_bar           to "1"
+     set  Serial_inputs       to "xk"
+     set  Clock               to "1"
+end vector
+
+vector    Clock_low
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+end vector
+
+vector    Input_A_low
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+     set  Serial_inputs       to "0X"
+end vector
+
+vector    Input_B_low
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+     set  Serial_inputs       to "X0"
+end vector
+
+vector    Inputs_high
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+     set  Serial_inputs       to "11"
+end vector
+
+vector    Outputs_00000000
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+     set  Outputs             to "00000000"
+end vector
+
+vector    Outputs_11111111
+     set  Clear_bar           to "1"
+     set  Clock               to "0"
+     set  Outputs             to "11111111"
+end vector
+
+!AT The following vectors have been added for a minimum pins test. Any
+!AT vectors that references the data bus was copied and modified to reference
+!AT only a single pin of the data bus.
+
+vector  D0_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D0             to "0"
+end vector
+
+vector  D0_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D0             to "1"
+end vector
+
+vector  D1_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D1             to "0"
+end vector
+
+vector  D1_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D1             to "1"
+end vector
+
+vector  D2_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D2             to "0"
+end vector
+
+vector  D2_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D2             to "1"
+end vector
+
+vector  D3_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D3             to "0"
+end vector
+
+vector  D3_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D3             to "1"
+end vector
+
+vector  D4_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D4             to "0"
+end vector
+
+vector  D4_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D4             to "1"
+end vector
+
+vector  D5_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D5             to "0"
+end vector
+
+vector  D5_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D5             to "1"
+end vector
+
+vector  D6_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D6             to "0"
+end vector
+
+vector  D6_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D6             to "1"
+end vector
+
+vector  D7_0
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D7             to "0"
+end vector
+
+vector  D7_1
+   set   Clear_bar      to "1"
+   set   Clock          to "0"
+   set   D7             to "1"
+end vector
+
+!*********************************************************************
+!*********************************************************************
+
+sub  Clock_cycle (Clock_high)
+     execute   Clock_high
+     execute   Clock_low
+end sub
+
+!**********************************************************************
+
+!AT The following AwareTest units have been added for minimum pins tests. Each
+!AT unit tests a separate data pin starting with D0.
+
+unit "awaretest D0 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D0_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D0_1
+end unit
+
+unit "awaretest D1 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D1_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D1_1
+end unit
+
+unit "awaretest D2 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D2_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D2_1
+end unit
+
+unit "awaretest D3 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D3_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D3_1
+end unit
+
+unit "awaretest D4 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D4_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D4_1
+end unit
+
+unit "awaretest D5 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D5_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D5_1
+end unit
+
+unit "awaretest D6 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D6_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D6_1
+end unit
+
+unit "awaretest D7 serial input A Test"
+   repeat   8 times
+      execute  Input_A_low
+      call  Clock_cycle (Clock_high__A)
+   end repeat
+   execute  D7_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D7_1
+end unit
+
+unit "awaretest D0 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D0_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D0_1
+end unit
+
+unit "awaretest D1 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D1_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D1_1
+end unit
+
+unit "awaretest D2 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D2_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D2_1
+end unit
+
+unit "awaretest D3 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D3_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D3_1
+end unit
+
+unit "awaretest D4 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D4_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D4_1
+end unit
+
+unit "awaretest D5 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D5_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D5_1
+end unit
+
+unit "awaretest D6 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D6_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D6_1
+end unit
+
+unit "awaretest D7 serial input B Test"
+   repeat   8 times
+      execute  Input_B_low
+      call  Clock_cycle (Clock_high__B)
+   end repeat
+   execute  D7_0
+
+   repeat   8 times
+      execute  Inputs_high
+      call  Clock_cycle (Clock_high__AB)
+   end repeat
+   execute  D7_1
+end unit
+
+!**********************************************************************
+
+unit "test serial input A"
+     repeat    8 times
+          execute   Input_A_low
+          call      Clock_cycle (Clock_high__A)
+     end repeat
+     execute   Outputs_00000000
+     repeat    8 times
+          execute   Inputs_high
+          call      Clock_cycle (Clock_high__AB)
+     end repeat
+     execute   Outputs_11111111
+     repeat    8 times
+          execute   Input_A_low
+          call      Clock_cycle (Clock_high__A)
+     end repeat
+     execute   Outputs_00000000
+end unit
+
+unit "test serial input B"
+     repeat    8 times
+          execute   Input_B_low
+          call      Clock_cycle (Clock_high__B)
+     end repeat
+     execute   Outputs_00000000
+     repeat    8 times
+          execute   Inputs_high
+          call      Clock_cycle (Clock_high__AB)
+     end repeat
+     execute   Outputs_11111111
+     repeat    8 times
+          execute   Input_B_low
+          call      Clock_cycle (Clock_high__B)
+     end repeat
+     execute   Outputs_00000000
+end unit
+
+unit "test clear"
+     execute   Clear_low
+     repeat    8 times
+          execute   Inputs_high
+          call      Clock_cycle (Clock_high__AB)
+     end repeat
+     execute   Outputs_11111111
+     execute   Clear_low
+end unit
+
+!    End of test

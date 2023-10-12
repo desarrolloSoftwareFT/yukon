@@ -1,0 +1,7 @@
+!!!!    2    0    1 1631948945  Ve656                                         
+! IPG: rev 09.20p  Mon Jun 28 12:12:57 2021
+disconnect all
+connect s to "QSFPB_YEL_LED_R_L_Q3"
+connect i to "P3_3VA"
+diode 2.60,1.53,idc20m,co4.4,ar2.25,ed,wa20m
+! "cr2b_q3%pin_1_2" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852314   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:55 2021
+on failure
+   report parallel devices
+   report "r934"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_SA_CORE_PLL_BYP_1V8"
+jumper 5.00k, re4, wb, ar200m, op
+! "r29_sa" test.
+off failure

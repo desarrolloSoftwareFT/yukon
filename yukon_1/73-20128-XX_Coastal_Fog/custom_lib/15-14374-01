@@ -1,0 +1,65 @@
+!!!!    2    0    1 1380982971  Ve5b9                                         
+
+
+test powered analog
+  power     pins 22,23,33,30
+  nonanalog pins 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,24,25,26,27,28,29,31,32
+ 
+  test "vin" 
+  test "vout"
+  test "gate"
+  test "csout"
+  test "sda"
+  test "en"
+end test
+
+! ***************************************************************************
+
+subtest "vout"
+ connect i to pins 20       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 12*1.05, 12*0.95
+end subtest 
+
+subtest "vin"
+ connect i to pins 30       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 13.2, 10.8
+end subtest 
+
+subtest "gate"
+ connect i to pins 24       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 4,2
+end subtest 
+
+subtest "csout"
+ connect i to pins 19       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 4,2
+end subtest 
+
+subtest "sda"
+ connect i to pins 15       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 4,2
+end subtest 
+
+subtest "en"
+ connect i to pins 12       ! Change to the output node during debug
+ connect l to pins 22
+
+ detector dcv, expect 12 ! Modify during debug
+ measure 4,2
+end subtest 
+

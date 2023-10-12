@@ -1,0 +1,196 @@
+!!!!    6    0    1 1605940532  V8119                                         
+sequential
+vector cycle 1000n
+receive delay 900n
+
+set terminators to on
+
+assign  VCC to pins 54
+assign  GND to pins 45,46,47,57
+
+
+assign NC to pins 43,44,55,56
+assign NODIG to pins 1,2,3,4,5,6,7,8,9,10,11,12,13,14,17,18
+assign NODIG to pins 19,20,21,22,23,24,25,26,27,28,29,30,31,32,33
+assign NODIG to pins 34,35,36,37,38,39,40,41,42,48,50,51,52,53
+
+assign  SDA to pins 15
+assign  SCL to pins 16
+assign  ADDR   to pins 49 default "1"
+
+family LVT
+
+
+power GND, VCC
+
+bidirectional SDA
+inputs SCL
+inputs ADDR
+nondigital NC, NODIG
+
+set load on groups SDA to pull up
+
+!***************************************************************************
+vector INIT
+ drive SDA
+ set SCL  to "0"
+ set SDA  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SCL  to "k"
+ set SDA  to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SCL  to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute SK_20
+ execute SK_20
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ execute D_1
+ execute D_1
+ execute SK_20
+ execute SK_20
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      !  with Acknowledge bit active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+! ***************************************************************************
+
+unit "I2C test"
+ execute INIT
+ call STRT                                  ! Start bit
+ call WR(D_1,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! ACK Bit Reading  !Slave ADDR = 40
+ call STOP                                  ! Stop bit
+
+ call STRT                                  ! Start bit
+ call WX(D_1,D_0,D_0,D_0, D_1,D_1,D_1,D_0)  ! Wrong Address Reading
+ call STOP                                  ! Stop bit
+
+end unit
+
+!
+!    End of Test
+!
+

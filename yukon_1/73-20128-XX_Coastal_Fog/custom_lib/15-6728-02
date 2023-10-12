@@ -1,0 +1,57 @@
+!!!!    6    0    1 1094771331  V4454                                         
+!74ahc1g08, Single AND Gate
+
+
+combinatorial
+
+assign VCC to pins 5
+assign GND to pins 3
+
+assign Inputs  to  pins 1,2
+assign Output to  pins 4
+
+
+family TTL
+
+power VCC,GND
+
+inputs Inputs
+outputs Output
+
+trace Output to Inputs
+
+!*******************************************************************************
+
+
+vector Inputs_00
+set Inputs to "00"
+set Output to "0"
+end vector
+
+vector Inputs_01
+set Inputs to "01"
+set Output to "0"
+end vector
+
+vector Inputs_10
+set Inputs to "10"
+set Output to "0"
+end vector
+
+vector Inputs_11
+set Inputs to "11"
+set Output to "1"
+end vector
+
+!*******************************************************************************
+
+unit
+execute Inputs_00
+execute Inputs_01
+execute Inputs_10
+execute Inputs_11
+end unit
+
+
+!End Test
+

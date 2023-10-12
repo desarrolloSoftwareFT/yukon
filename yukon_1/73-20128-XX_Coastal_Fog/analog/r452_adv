@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608521636   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:20:07 2020
+disconnect all
+connect s to "GND"
+connect i to "1V1_PWRGD_ADV"
+connect g to "P12V" 
+resistor 10k, 20.00, 20.00, re4, wb, ar100m, wa60m, ed
+! "r452_adv" test.

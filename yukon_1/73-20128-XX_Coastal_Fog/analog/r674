@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608022105   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:25:53 2020
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "CLK25M_AC"
+connect g to "P3_3VA"; l to "P3_3VA" 
+resistor 1k, 20.00, 20.00, re3, ar100m, wa5m, sl, sa, ed, en
+! "r674" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852402   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:23 2021
+disconnect all
+connect s to "RT0_PHYAD2"
+connect i to "P1_8V"
+jumper 6.69k, re4, wb, ar100m, op
+! "r436" test.

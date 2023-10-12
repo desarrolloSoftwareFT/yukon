@@ -1,0 +1,51 @@
+!!!!    2    0    1 1273399979  V2a4b                                         
+! LIB NAME:              nmosfet
+! LIB TYPE:              analog
+! CATEGORY:              base_elements
+! DESCRIPTION:           Standard n-channel mosfet
+! PACKAGE:               3-pin unknown
+! SYSTEM:                hp3070
+
+test powered analog
+  disconnect all
+  test "NMOSFET_DRAIN_LOAD_ON"
+  test "NMOSFET_DRAIN_LOAD_OFF"
+
+  test "VGS_THRESHOLD"
+end test
+
+subtest "NMOSFET_DRAIN_LOAD_ON"
+  connect i to pins "D"
+  connect s to pins "D"
+  connect a to pins "G"
+  connect l to pins "S"
+
+  source dcv, am5, terminated 500, on
+  auxiliary dcv, am5, ico1, on
+  detector dcv, expect 0
+  measure 0.2, -0.2
+end subtest
+
+subtest "NMOSFET_DRAIN_LOAD_OFF"
+  connect i to pins "D"
+  connect s to pins "D"
+  connect a to pins "G"
+  connect l to pins "S"
+
+  source dcv, am5, terminated 500, on
+  auxiliary dcv, am0, ico1, on
+  detector dcv, expect 5
+  wait 10m
+  measure 5.2, 4.8
+end subtest
+
+subtest "VGS_THRESHOLD"
+  connect i to pins "G"
+  connect l to pins "S"
+  connect a to pins "G"
+
+  auxiliary dcv, am5, ico1, on
+  detector dcv, expect 5
+  measure 5.2, 4.8
+end subtest
+

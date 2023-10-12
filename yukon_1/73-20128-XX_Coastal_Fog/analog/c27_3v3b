@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852289   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:30 2021
+disconnect all
+connect s to "P3_3V"
+connect i to "UNNAMED_1_CAP_I149_A_3V3B"
+jumper 10.0k, re4, wb, ar100m, op
+! "c27_3v3b" test.

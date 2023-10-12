@@ -1,0 +1,45 @@
+!!!!    2    0    1 1605945590  V5d59                                         
+test powered analog
+
+nonanalog pins 13,9,10,7,2,3,4,5
+
+
+ test "VIN"
+ test "VEN"
+ test "VPG"
+ test "VOUT"
+end test
+
+subtest "VIN"
+  clear connect i to pins 12
+  connect l to pins 6
+
+  detector dcv, expect 3.3
+  measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+subtest "VEN"
+  clear connect i to pins 11
+  connect l to pins 6
+
+  detector dcv, expect 3.3
+  measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+subtest "VPG"
+  clear connect i to pins 8
+  connect l to pins 6
+
+  detector dcv, expect 3.3
+  measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+subtest "VOUT"
+  clear connect i to pins 1
+  connect l to pins 6
+
+  detector dcv, expect 3.3
+  measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+

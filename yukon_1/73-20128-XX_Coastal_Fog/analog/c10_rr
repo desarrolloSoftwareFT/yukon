@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627538265  V805a                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:42 2021
+on failure
+report parallel devices
+report "r2605 845"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_28_ACADIAMPPS32LV_I80_PMBADDR"
+capacitor 10n,30.00,30.00,fr8192,re3,ar20.0m,nocomp,ed,en
+! "c10_rr" is a limited test.
+off failure

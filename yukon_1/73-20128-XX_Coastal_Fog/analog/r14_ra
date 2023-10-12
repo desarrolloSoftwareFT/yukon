@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852464   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:25 2021
+disconnect all
+connect i to "PWR_P12V_IBV_RA"
+connect s to "P12V"
+jumper 6.01, re1, ar200m
+! "r14_ra" test.

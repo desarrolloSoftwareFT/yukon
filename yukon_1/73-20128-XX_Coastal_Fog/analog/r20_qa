@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538509  V6552                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:50 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "SRT_SA_PMB2_AVDD_SDA"
+resistor 4.75k,20.00,20.00,re4,wb,ar200m,ed
+! "r20_qa" test.

@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627539171  V9a16                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:51 2021
+on failure
+report parallel devices
+report "r4385_r1 4.70k"
+report "r4385_r2 4.70k"
+report "r4385_r3 4.70k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "JTAG_TRST_L_1V8"
+resistor 1.175k,20.00,20.00,re4,wb,ar1.00,ed
+! "r4385_r0" test.
+off failure

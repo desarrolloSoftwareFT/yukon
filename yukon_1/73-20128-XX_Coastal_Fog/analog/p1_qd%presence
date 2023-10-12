@@ -1,0 +1,9 @@
+!!!!    2    0    1  990065614   0000                                         
+on failure
+   report "Check for P1_QD presence."
+end on failure
+disconnect all
+connect s to ground
+connect i to "P1_QD_PRESENCE_SWITCH_PIN_2"
+jumper 15, re1, ar200m
+off failure

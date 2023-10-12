@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627611946   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:21:07 2020
+on failure
+report parallel devices
+report "c02_q3v3r 3.30n"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "AVDD_SENSE_R_Q3V3R"; b to "AVDD_SENSE_R_Q3V3R"
+connect gl to "PWR_P3V3_Q1"
+resistor 100,25.00,20.00,re2,ar20.0m,ed,wa25m,sa,en,sl
+!#resistor 100, 10.10, 5.10, re1, ar20.0m, ed, wa1.39m, sa, sb
+! "r89_q3v3r" is a limited test.
+off failure

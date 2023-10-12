@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852438   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:59 2021
+disconnect all
+connect s to "RT0_SEL_2X_3V3"
+connect i to "RT0_SEL_2X_1V8"
+jumper 10.0k, re4, wb, ar100m, op
+! "r1015" test.

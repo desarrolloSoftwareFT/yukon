@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852372   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:53 2021
+disconnect all
+connect s to "JTAG_TDI_RT2_1V8"
+connect i to "JTAG_TDI_RT3_1V8"
+jumper 4.76k, re4, wb, ar200m, op
+! "r185_r2" test.

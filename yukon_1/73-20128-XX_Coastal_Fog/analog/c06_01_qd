@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538302  V3357                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:49 2021
+disconnect all
+connect s to "VDD_BOOT_R_01"
+connect i to "VDD_BOOT_01"
+capacitor 470n,30.00,30.00,fr1024,re2,ar50.0m,nocomp,ed
+! "c06_01_qd" test.

@@ -1,0 +1,53 @@
+!!!!    6    0    1 1336377095  V04ad                                         
+
+!    741G07
+!    Buffer/driver, hex,open-collector
+!    revision A.01.00
+
+combinatorial
+
+
+vector cycle 2u
+receive delay 1.9u
+
+assign VCC       to pins 5
+assign GND       to pins 3
+
+assign E1_Input  to pins  2
+assign E1_Output to pins  4
+assign NC to pins 1
+
+power   VCC, GND
+nondigital NC
+
+family  LVT
+
+inputs   E1_Input
+outputs  E1_Output
+
+trace E1_output   to E1_input
+
+disable E1_output  with   E1_input    to    "1"
+
+set load on groups  E1_Output to pull up
+
+!***************************************************************************
+!***************************************************************************
+
+vector   E1_Input_0
+     set  E1_Input to "0"
+     set  E1_Output to "0"
+end vector
+
+vector   E1_Input_1
+     set  E1_Input to "1"
+     set  E1_Output to "1"
+end vector
+
+
+unit    "Element number 1"
+     execute   E1_Input_0
+     execute   E1_Input_1
+end unit
+
+!    End of Test

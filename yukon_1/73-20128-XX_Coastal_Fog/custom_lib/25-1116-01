@@ -1,0 +1,21 @@
+!!!!   21    2    1 1120622076  V9d48                                         
+!Diode
+!1 - A
+!2 - NC
+!3 - C
+
+
+diode "cr1", 2.6, 1.6
+diode "cr2", 2.6, 1.6
+
+external pins 1
+   device "cr1" pins "A"
+   device "cr2" pins "A"
+
+external pins 2
+   device "cr1" pins "C"
+
+external pins 3
+   device "cr2" pins "C"
+
+

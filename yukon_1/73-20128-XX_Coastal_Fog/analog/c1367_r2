@@ -1,0 +1,12 @@
+!!!!    2    0    1 1608109731  V7fb5                                         
+! IPG: rev 08.40p  Fri Nov 27 14:19:28 2020
+on failure
+report parallel devices
+report "r167_r2 4.70k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FSOURCE_R2"
+capacitor 100n,30.00,35.00,fr1024,re4,wb,ar100m,nocomp
+! "c1367_r2" test.
+off failure

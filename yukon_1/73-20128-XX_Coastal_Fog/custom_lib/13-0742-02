@@ -1,0 +1,13 @@
+!!!!   21    2    1  794100162   0000                                         
+
+
+zener "cr", 18, 5, 5, nr
+
+external pins 3
+   device "cr" pins "C"
+
+external pins 2; noconnect
+   
+external pins 1
+   device "cr" pins "A"
+

@@ -1,0 +1,499 @@
+!!!!    6    0    1 1555641838  V25e8                                         
+! Part Name:         LSF0108PWR
+! Alias:             NVT2008PW
+! Part Type:         VLSI
+! Description:       IC-LOGIC,TRANSLATOR
+! Manufacturer:
+! Package Style:     20 pin SOIC, QSOP
+! Created:           May 22, 1998
+! Programmer:        FangJi Zhu
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet TestaAle:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-102870-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC to pins 2, 19
+assign GND to pins 1
+
+assign EN  to pins 20
+assign A1  to pins 3
+assign A2  to pins 4
+assign A3  to pins 5
+assign A4  to pins 6
+assign A5  to pins 7
+assign A6  to pins 8
+assign A7  to pins 9
+assign A8  to pins 10
+
+assign B1  to pins 18
+assign B2  to pins 17
+assign B3  to pins 16
+assign B4  to pins 15
+assign B5  to pins 14
+assign B6  to pins 13
+assign B7  to pins 12
+assign B8  to pins 11
+
+power  VCC,GND
+inputs EN
+
+
+family LVT
+
+bidirectional A1,A2,A3,A4,A5,A6,A7,A8
+bidirectional B1,B2,B3,B4,B5,B6,B7,B8
+
+disable A1,A2,A3,A4,A5,A6,A6,A8 with EN to "0"
+disable B1,B2,B3,B4,B5,B6,B6,B8 with EN to "0"
+
+set load on groups B1,B2,B3,B4,B5,B6,B6,B8 to pull up
+
+
+
+! ******** A to B ********
+
+vector A1B1_0
+ drive A1
+ receive B1
+ set EN  to "1"
+ set A1  to "0"
+ set B1  to "0"
+end vector
+
+vector A1B1_1
+ drive A1
+ receive B1
+ set EN  to "1"
+ set A1  to "1"
+ set B1  to "1"
+end vector
+
+vector A2B2_0
+ drive A2
+ receive B2
+ set EN  to "1"
+ set A2  to "0"
+ set B2  to "0"
+end vector
+
+vector A2B2_1
+ drive A2
+ receive B2
+ set EN  to "1"
+ set A2  to "1"
+ set B2  to "1"
+end vector
+
+vector A3B3_0
+ drive A3
+ receive B3
+ set EN  to "1"
+ set A3  to "0"
+ set B3  to "0"
+end vector
+
+vector A3B3_1
+ drive A3
+ receive B3
+ set EN  to "1"
+ set A3  to "1"
+ set B3  to "1"
+end vector
+
+vector A4B4_0
+ drive A4
+ receive B4
+ set EN  to "1"
+ set A4  to "0"
+ set B4  to "0"
+end vector
+
+vector A4B4_1
+ drive A4
+ receive B4
+ set EN  to "1"
+ set A4  to "1"
+ set B4  to "1"
+end vector
+
+vector A5B5_0
+ drive A5
+ receive B5
+ set EN  to "1"
+ set A5  to "0"
+ set B5  to "0"
+end vector
+
+vector A5B5_1
+ drive A5
+ receive B5
+ set EN  to "1"
+ set A5  to "1"
+ set B5  to "1"
+end vector
+
+vector A6B6_0
+ drive A6
+ receive B6
+ set EN  to "1"
+ set A6  to "0"
+ set B6  to "0"
+end vector
+
+vector A6B6_1
+ drive A6
+ receive B6
+ set EN  to "1"
+ set A6  to "1"
+ set B6  to "1"
+end vector
+
+vector A7B7_0
+ drive A7
+ receive B7
+ set EN  to "1"
+ set A7  to "0"
+ set B7  to "0"
+end vector
+
+vector A7B7_1
+ drive A7
+ receive B7
+ set EN  to "1"
+ set A7  to "1"
+ set B7  to "1"
+end vector
+
+vector A8B8_0
+ drive A8
+ receive B8
+ set EN  to "1"
+ set A8  to "0"
+ set B8  to "0"
+end vector
+
+vector A8B8_1
+ drive A8
+ receive B8
+ set EN  to "1"
+ set A8  to "1"
+ set B8  to "1"
+end vector
+
+! ******** B to A ********
+
+vector B1A1_0
+ receive A1
+ drive B1
+ set EN  to "1"
+ set A1  to "0"
+ set B1  to "0"
+end vector
+
+vector B1A1_1
+ receive A1
+ drive B1
+ set EN  to "1"
+ set A1  to "1"
+ set B1  to "1"
+end vector
+
+vector B2A2_0
+ receive A2
+ drive B2
+ set EN  to "1"
+ set A2  to "0"
+ set B2  to "0"
+end vector
+
+vector B2A2_1
+ receive A2
+ drive B2
+ set EN  to "1"
+ set A2  to "1"
+ set B2  to "1"
+end vector
+
+vector B3A3_0
+ receive A3
+ drive B3
+ set EN  to "1"
+ set A3  to "0"
+ set B3  to "0"
+end vector
+
+vector B3A3_1
+ receive A3
+ drive B3
+ set EN  to "1"
+ set A3  to "1"
+ set B3  to "1"
+end vector
+
+vector B4A4_0
+ receive A4
+ drive B4
+ set EN  to "1"
+ set A4  to "0"
+ set B4  to "0"
+end vector
+
+vector B4A4_1
+ receive A4
+ drive B4
+ set EN  to "1"
+ set A4  to "1"
+ set B4  to "1"
+end vector
+
+vector B5A5_0
+ receive A5
+ drive B5
+ set EN  to "1"
+ set A5  to "0"
+ set B5  to "0"
+end vector
+
+vector B5A5_1
+ receive A5
+ drive B5
+ set EN  to "1"
+ set A5  to "1"
+ set B5  to "1"
+end vector
+
+vector B6A6_0
+ receive A6
+ drive B6
+ set EN  to "1"
+ set A6  to "0"
+ set B6  to "0"
+end vector
+
+vector B6A6_1
+ receive A6
+ drive B6
+ set EN  to "1"
+ set A6  to "1"
+ set B6  to "1"
+end vector
+
+vector B7A7_0
+ receive A7
+ drive B7
+ set EN  to "1"
+ set A7  to "0"
+ set B7  to "0"
+end vector
+
+vector B7A7_1
+ receive A7
+ drive B7
+ set EN  to "1"
+ set A7  to "1"
+ set B7  to "1"
+end vector
+
+vector B8A8_0
+ receive A8
+ drive B8
+ set EN  to "1"
+ set A8  to "0"
+ set B8  to "0"
+end vector
+
+vector B8A8_1
+ receive A8
+ drive B8
+ set EN  to "1"
+ set A8  to "1"
+ set B8  to "1"
+end vector
+
+!****************Disable Test*****************
+
+vector AX0BX_Z
+ drive A1
+ drive A2
+ drive A3
+ drive A4
+ drive A5
+ drive A6
+ drive A7
+ drive A8
+ receive B1
+ receive B2
+ receive B3
+ receive B4
+ receive B5
+ receive B6
+ receive B7
+ receive B8
+ set EN  to "0"
+ set A1  to "0"
+ set A2  to "0"
+ set A3  to "0"
+ set A4  to "0"
+ set A5  to "0"
+ set A6  to "0"
+ set A7  to "0"
+ set A8  to "0"
+ set B1  to "1"
+ set B2  to "1"
+ set B3  to "1"
+ set B4  to "1"
+ set B5  to "1"
+ set B6  to "1"
+ set B7  to "1"
+ set B8  to "1"
+end vector
+
+! **************************************************************************
+
+!************** Test A TO B *****************
+
+unit "A1 to B1, low"
+ execute A1B1_0
+end unit
+
+unit "A1 to B1, high"
+ execute A1B1_1
+end unit
+
+unit "A2 to B2, low"
+ execute A2B2_0
+end unit
+
+unit "A2 to B2, high"
+ execute A2B2_1
+end unit
+
+unit "A3 to B3, low"
+ execute A3B3_0
+end unit
+
+unit "A3 to B3, high"
+ execute A3B3_1
+end unit
+
+unit "A4 to B4, low"
+ execute A4B4_0
+end unit
+
+unit "A4 to B4, high"
+ execute A4B4_1
+end unit
+
+unit "A5 to B5, low"
+ execute A5B5_0
+end unit
+
+unit "A5 to B5, high"
+ execute A5B5_1
+end unit
+
+unit "A6 to B6, low"
+ execute A6B6_0
+end unit
+
+unit "A6 to B6, high"
+ execute A6B6_1
+end unit
+
+unit "A7 to B7, low"
+ execute A7B7_0
+end unit
+
+unit "A7 to B7, high"
+ execute A7B7_1
+end unit
+
+unit "A8 to B8, low"
+ execute A8B8_0
+end unit
+
+unit "A8 to B8, high"
+ execute A8B8_1
+end unit
+
+!************** Test B TO A *****************
+
+unit "B1 to A1, low"
+ execute B1A1_0
+end unit
+
+unit "B1 to A1, high"
+ execute B1A1_1
+end unit
+
+unit "B2 to A2, low"
+ execute B2A2_0
+end unit
+
+unit "B2 to A2, high"
+ execute B2A2_1
+end unit
+
+unit "B3 to A3, low"
+ execute B3A3_0
+end unit
+
+unit "B3 to A3, high"
+ execute B3A3_1
+end unit
+
+unit "B4 to A4, low"
+ execute B4A4_0
+end unit
+
+unit "B4 to A4, high"
+ execute B4A4_1
+end unit
+
+unit "B5 to A5, low"
+ execute B5A5_0
+end unit
+
+unit "B5 to A5, high"
+ execute B5A5_1
+end unit
+
+unit "B6 to A6, low"
+ execute B6A6_0
+end unit
+
+unit "B6 to A6, high"
+ execute B6A6_1
+end unit
+
+unit "B7 to A7, low"
+ execute B7A7_0
+end unit
+
+unit "B7 to A7, high"
+ execute B7A7_1
+end unit
+
+unit "B8 to A8, low"
+ execute B8A8_0
+end unit
+
+unit "B8 to A8, high"
+ execute B8A8_1
+end unit
+
+!*********************DISABLE TEST ******************
+unit "B8 to A8, low"
+ execute AX0BX_Z
+end unit
+
+!**********************END UNIT*********************************************

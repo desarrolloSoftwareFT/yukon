@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627537982  V64d8                                         
+! IPG: rev 09.20p  Mon Jun 28 11:55:04 2021
+disconnect all
+connect s to "UNNAMED_2_CAP_I487_B_ADV"
+connect i to "UNNAMED_2_CAP_I487_A_ADV"
+capacitor 100n,30.00,30.00,fr1024,re3,wb,ar100m,nocomp,ed
+! "c2_adv" test.

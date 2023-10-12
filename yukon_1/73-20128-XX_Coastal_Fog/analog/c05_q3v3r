@@ -1,0 +1,9 @@
+!!!!    2    0    1 1631952602   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:30 2021
+disconnect all
+connect s to "GND"
+connect i to "TSEN1_R_Q3V3R"
+!connect gl to "PWR_P3V3_Q2"
+connect gl to "P3_3VA"
+capacitor 220p,35.00,35.00,fr8192,re4,ar20.0m,comp,ed,wb,wa50m,en
+! "c05_q3v3r" test.

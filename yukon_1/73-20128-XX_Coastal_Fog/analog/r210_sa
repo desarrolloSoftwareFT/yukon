@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852384   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:05 2021
+disconnect all
+connect s to "PDIE7_DFT10_SA"
+connect i to "PWR_SA_P1V8"
+jumper 10.0k, re4, wb, ar100m, op
+! "r210_sa" test.

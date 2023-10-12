@@ -1,0 +1,8 @@
+!!!!    2    0    1 1626505699   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:18 2021
+disconnect all
+connect i to "PWR_HV_DIDT_3V3B"
+connect s to "HV_SNUB_3V3B"
+connect gl to "UNNAMED_1_CAP_I149_A_3V3B"
+capacitor 470p,35.00,35.00,fr8192,re5,ar50.0m,comp,ed,en,wb
+! "c09_3v3b" test.

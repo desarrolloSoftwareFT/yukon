@@ -1,0 +1,66 @@
+!!!!    6    0    1  852247350  V65b7                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         74FCT3807
+! Alias:             49FCT3807,49FCT807,CY2CC810,49FCT20807,74FCT3811
+! Part Type:         VLSI
+! Description:       3.3V 1 to 10 Clock Driver
+! Manufacturer:      IDT, Cypress Semiconductor, Pericom
+! Package Style:     20 pin SOP
+! Created:           Jul 02, 1999
+! Updated:           Sep 14, 2001. Added Cisco part number 15-5685-01
+! Updated:           Nov 07, 2001. Added alias and Cisco PN.
+! Updated:           Jun 09, 2006. Added alias and Cisco PN.
+! Updated:           Dec 28, 2007. Added alias and Cisco PN.
+! Updated:           Jan 15, 2007. Added alias and Cisco PN.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-2030-01,15-2072-01,15-3200-01,15-216719,15-5685-01
+! Cisco Part #:      15-1752-01,15-7648-01,15-7978-01,15-5186-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC  to pins 4,8,15,20
+assign GND  to pins 2,6,10,13,17
+
+assign IN   to pins 1
+assign OUT  to pins 19,18,16,14,12,11,9,7,5,3
+
+power   VCC,GND
+inputs  IN
+outputs OUT
+
+family LVT
+
+vector OUT_0
+ set IN  to "0"
+ set OUT to "0000000000"
+end vector
+
+vector OUT_1
+ set IN  to "1"
+ set OUT to "1111111111"
+end vector
+
+! ********************************************
+
+unit "OUT vs IN"
+ repeat 10 times
+  execute OUT_0
+  execute OUT_1
+ end repeat
+end unit
+

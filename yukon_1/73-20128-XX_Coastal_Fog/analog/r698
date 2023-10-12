@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608533699   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:20:22 2020
+disconnect all
+connect s to "GND"
+connect i to "MIFPGA_LED_CTRL"
+connect g to "P3_3VA"
+resistor 10k, 20.00, 20.00, re4, wb, ar20m, ed, en, wa5m
+! "r698" test.

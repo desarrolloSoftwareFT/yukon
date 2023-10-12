@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626157692  Vfba1                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:37 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "SRT_CLK125M_PTP4_N"; a to "SRT_CLK125M_PTP4_N"
+connect i to "CLK125M_RT3_PTP_CLK_N"; b to "CLK125M_RT3_PTP_CLK_N"
+resistor 33,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "r1078" is a limited test.
+! DUT: nominal 33, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 34.65, low 31.35
+! TEST: high limit 34.972, low limit 31.200
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

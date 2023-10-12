@@ -1,0 +1,19 @@
+!!!!   21    2    1 1606387465  V521e                                         
+
+diode "BLUE", 2.6, 1.8, nr
+diode "GRN", 2.6, 1.8, nr
+diode "RED", 2.6, 1.8, nr
+
+external pins 4
+   device "BLUE" pins "A"
+   device "GRN" pins "A"
+   device "RED" pins "A"
+
+external pins 1
+   device "RED" pins "C"
+
+external pins 2
+   device "GRN" pins "C"
+
+external pins 3
+   device "BLUE" pins "C"

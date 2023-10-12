@@ -1,0 +1,92 @@
+!!!!    2    0    1 1451115201  V13fd                                         
+test powered analog
+power pins 2,3,4,5,6,7,8,37,44,48,49
+nonanalog pins 1,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28
+nonanalog pins 29,30,31,32,33,34,35,36,38,39,40,41,42,43,45,46,47
+
+ test "VIN"
+ test "BPWM_LV"
+ test "PWM1_LV"
+ test "PWM2_LV"
+ test "PWM3_LV"
+ test "PWM4_LV"
+ test "PWM5_LV"
+ test "PWM6_LV"
+ test "VRM"
+
+end test
+
+subtest "VIN"
+     connect i to pins 37
+     connect l to pins 44
+
+   detector dcv, expect 3.3
+   measure 3.3 * 3.35, 3.3 * 0.95
+end subtest
+
+
+subtest "VRM"
+     connect i to pins 48
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "BPWM_LV"
+     connect i to pins 2
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM1_LV"
+     connect i to pins 3
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM2_LV"
+     connect i to pins 4
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM3_LV"
+     connect i to pins 5
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM4_LV"
+     connect i to pins 6
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM5_LV"
+     connect i to pins 7
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+subtest "PWM6_LV"
+     connect i to pins 8
+     connect l to pins 44
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+

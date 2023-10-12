@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627525841  Vf86b                                         
+! IPG: rev 09.20p  Mon Jun 28 12:04:59 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "UNNAMED_65_LVC2244_I171_A0_1"; b to "UNNAMED_65_LVC2244_I171_A0_1"
+resistor 220,25.00,20.00,re3,wb,ar500m,sa,sb,ed,en
+! "r1057" test.
+! DUT: nominal 220, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 231, low 209
+! TEST: high limit 231.36, low limit 208.85
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

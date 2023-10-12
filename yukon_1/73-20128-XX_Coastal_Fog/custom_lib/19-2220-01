@@ -1,0 +1,40 @@
+!!!!    2    0    1 1550031774  V478a                                         
+
+!  125  MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 2, 4
+
+   test "Enable"
+   test "Out_3"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 2
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_3"
+   connect s to pins 1
+   connect rcva to pins 3
+   connect l to pins 3
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 7.81M       !clock divider divide 16
+   measure 7.81M * 1.05, 7.81M * 0.95
+end subtest
+
+
+
+
+!
+!  End test
+!

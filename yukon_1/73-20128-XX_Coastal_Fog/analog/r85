@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538598  Vb51d                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:32 2021
+disconnect all
+connect s to "P3_3V"
+connect i to "LM03328_GPIO0"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r85" test.

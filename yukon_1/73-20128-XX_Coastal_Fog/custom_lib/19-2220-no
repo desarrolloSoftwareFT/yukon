@@ -1,0 +1,40 @@
+!!!!    2    0    1 1541644830  Vb199                                         
+
+!  311  MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 2, 4
+
+   test "Enable"
+   test "Out_3"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 2
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_3"
+!   connect s to pins 1
+   connect rcva to pins 3
+   connect l to pins 2
+
+!   source dcv, am3.3, ico1, on
+   detector frequency, expect 31.25M       !125M/4
+   measure 31.25M * 1.05, 31.25M * 0.95
+end subtest
+
+
+
+
+!
+!  End test
+!

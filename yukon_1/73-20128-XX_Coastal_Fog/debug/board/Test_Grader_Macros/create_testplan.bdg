@@ -1,0 +1,18 @@
+open (BOARDVER, ".BoardVer");
+@Boardver = (<BOARDVER>);
+close (BOARDVER);
+chomp ($Boardver[0]);
+if ( $Boardver[0] ne ""){ 
+   if ($Boardver[0] eq "Base"){
+      $Command = "bdg -t -V \"\"";
+      $Error = system ("$Command");
+   }
+   else {  
+      $Error = system ("bdg -t -V $Boardver[0]");
+   }
+}
+else {
+   $Error = system ("bdg -t");
+}
+exit 1 if $Error != 0;
+

@@ -1,0 +1,63 @@
+!!!!    6    0    1 1622876187  V3c48                                         
+! Part Name:         SI5394D
+! Alias:             SI5394D
+! Part Type:         VLSI
+! Description:       Clock Muliplier/Regenerator
+! Manufacturer:      Silicon Laboratory
+! Package Style:     45 pin PLCC
+! Created:           Oct 15, 2002
+! Programmer:        FangJi
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    Setup library only
+! Constraints:
+! Cisco Part #:      15-108004-01
+
+sequential
+
+vector cycle  300n
+receive delay 200n
+
+assign VDD                to pins 21,32,39,40,26,18,23,29,34,8,9
+assign GND                to pins 45
+
+
+assign INSEL              to pins 37,3
+assign IN0                to pins 43,44
+assign IN1                to pins 1,2
+assign IN2                to pins 10,11
+assign IN3                to pins 41,42
+assign CLKOUT0            to pins 20,19
+assign CLKOUT1            to pins 25,24
+assign CLKOUT2            to pins 31,30
+assign CLKOUT3            to pins 36,35
+
+assign I2C_SEL            to pins 38
+assign SCL                to pins 14
+assign SDA                to pins 13
+assign ADDR               to pins 15,16
+
+assign RST                to pins 17
+assign OE                 to pins 12
+assign XTAL1              to pins 7
+assign XTAL2              to pins 4
+assign XTAL3              to pins 5
+assign XTAL4              to pins 6
+assign INTR               to pins 33
+assign LOL                to pins 27
+assign LOS                to pins 28
+assign NC                 to pins 22
+
+power   VDD,GND
+inputs  SCL,OE,RST,I2C_SEL,ADDR,INSEL,IN0,IN1,IN2,IN3
+outputs INTR, LOL, LOS
+outputs CLKOUT0,CLKOUT1,CLKOUT2,CLKOUT3
+bidirectional SDA
+nondigital NC,XTAL1,XTAL2,XTAL3,XTAL4
+
+family LVT
+
+!################Setup Library Only#################

@@ -1,0 +1,30 @@
+!!!!    2    0    1 1605939003  V4b93                                         
+test powered analog
+power pins 3, 8
+nonanalog pins 2, 9, 1, 10, 5
+
+ test "VOUT_EN"
+ test "VOUT_DIS"
+end test
+
+subtest "VOUT_EN"
+   clear connect i to pins 4
+   connect l to pins 7
+   connect s to pins 6
+
+   source dcv, am 3.3, terminated500, ico1, on
+   detector dcv, expect 2.0
+   measure 2.0 * 1.05, 2.0 * 0.95
+end subtest
+
+subtest "VOUT_DIS"
+   clear connect i to pins 4
+   connect l to pins 7
+   connect s to pins 6
+
+   source dcv, am 0.1, terminated500, ico1, on
+   detector dcv, expect 2.0
+   measure 2.0 * 1.05, 2.0 * 0.95
+end subtest
+
+

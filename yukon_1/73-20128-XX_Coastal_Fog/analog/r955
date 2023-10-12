@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539091  Vbf70                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:35 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "SA_FPGA_ROV_3V3<2>"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r955" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852393   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:14 2021
+on failure
+   report parallel devices
+   report "r162_c2 2.00k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_CPLD2_RST_L"
+jumper 1.66k, re4, wb, ar500m, op
+! "r299" test.
+off failure

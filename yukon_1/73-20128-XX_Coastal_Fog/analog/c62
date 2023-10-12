@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538271  Va7f8                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:42 2021
+disconnect all
+connect s to "LM03328_CLK156M25_LVPECL1_P"
+connect i to "UNNAMED_58_CAP_I607_A"
+capacitor 10n,30.00,30.00,fr8192,re3,wb,ar100m,nocomp,ed
+! "c62" test.

@@ -1,0 +1,39 @@
+!!!!    2    0    1 1542674536  V4fb5                                         
+
+!  25   MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 3, 6
+   nonanalog pins 5,1,2
+
+
+   test "VCC"
+   test "Out_4"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "VCC"
+   connect i to pins 6
+   connect l to pins 3
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_4"
+   connect rcva to pins 4
+   connect l to pins 3
+
+   detector frequency, expect 25.00M
+   measure 25.0M * 1.05, 25.0M * 0.95
+end subtest
+
+
+
+!
+!  End test
+!

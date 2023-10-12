@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852438   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:59 2021
+on failure
+   report parallel devices
+   report "r4417_r3 1.00k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "RT3_RESET_L_1V8"
+jumper 897, re3, wb, ar100m, op
+! "r1012" test.
+off failure

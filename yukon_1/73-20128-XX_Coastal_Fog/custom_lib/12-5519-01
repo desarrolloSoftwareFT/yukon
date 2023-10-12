@@ -1,0 +1,22 @@
+!!!!   21    2    1 1606899540  Vfc8f                                         
+
+!K! 12-5519-01 RES,MF,0.0005 ohm,2W,1%,SM,25
+
+jumper "jp12", closed
+jumper "jp13", closed
+jumper "jp14", closed
+
+external pins 1
+   device "jp12" pins 1
+   device "jp13" pins 1
+   device "jp14" pins 1
+
+external pins 2
+   device "jp12" pins 2
+
+external pins 3
+   device "jp13" pins 2
+
+external pins 4
+   device "jp14" pins 2
+

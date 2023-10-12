@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539211  V6426                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:56 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "JTAG_TMS_HDR_3V3"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "rn1%pin_3_6" test.

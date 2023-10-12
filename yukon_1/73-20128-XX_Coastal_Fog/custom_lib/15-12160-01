@@ -1,0 +1,457 @@
+!!!!    6    0    1 1489980097  V5b0a                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         MAX1617
+! Alias:
+! Part Type:         VLSI
+! Description:       Temperature Sensor
+! Manufacturer:      Maxim
+! Package Style:     16 pin SOP
+! Created:           Nov 19, 2002
+! Updated:           Feb 28, 2005. Added test for pin STBYB.
+! Updated:           Jun 28, 2005. Re-wrote test.
+!                                  Deleted DX input test, not reliable.
+! Updated:           Jun 22, 2007. Added Cisco part number 15-4317-01.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    75%. Pins 3,4, DX and pin 15, STBYB, not tested.
+! Constraints:
+! Cisco Part #:      15-7608-01,15-4317-01
+
+sequential
+
+vector cycle 5u
+receive delay 4u
+
+assign VDD   to pins 2
+assign GND   to pins 7,8
+
+assign NC    to pins 1,5,9,13,16
+
+assign DX    to pins 3,4   ! DXP = pin 3, DXN = pin 4
+assign ABUS  to pins 6,10  ! A1  = pin 6, A0  = pin 10
+assign SDA   to pins 12
+assign SCL   to pins 14
+assign ALRTB to pins 11
+assign STBYB to pins 15
+
+power   VDD,GND
+inputs  ABUS,SCL,STBYB,DX
+outputs ALRTB
+bidirectional SDA
+nondigital NC
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on pins 12 to pull up  ! SDA
+set load on pins 11 to pull up  ! ALRTB
+
+vector INIT1
+ drive SDA
+ set STBYB to "1"
+ set ABUS  to "xx"
+ set SDA   to "1"
+ set SCL   to "1"
+ set ALRTB to "x"
+end vector
+
+vector KEEP1
+ receive SDA
+ set STBYB to "k"
+ set ABUS  to "xx"
+ set SDA   to "x"
+ set SCL   to "k"
+ set ALRTB to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set STBYB to "k"
+ set ABUS  to "xx"
+ set SDA   to "k"
+ set SCL   to "k"
+ set ALRTB to "x"
+end vector
+
+vector SCL_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SCL_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SCL_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SCL_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector STBYB_0
+ initialize to KEEP1
+ set STBYB  to "0"
+end vector
+
+vector STBYB_1
+ initialize to KEEP1
+ set STBYB  to "1"
+end vector
+
+vector ALRTB_0
+ initialize to KEEP1
+ set ALRTB  to "0"
+end vector
+
+vector ALRTB_1
+ initialize to KEEP1
+ set ALRTB  to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute D_0
+ execute SCL_20
+end sub
+
+sub STOP
+ execute D_0
+ execute SCL_21
+ execute D_1
+ repeat 20 times
+  execute SCL_21
+ end repeat
+end sub
+
+sub RD_0
+ execute R_0
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub RD_1
+ execute R_1
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub WD_0
+ execute D_0
+ execute SCL_21
+ execute SCL_20
+end sub
+
+sub WD_1
+ execute D_1
+ execute SCL_21
+ execute SCL_20
+end sub
+
+sub ADDR_00  ! Address bit pattern for A1 = 0 and A0 = 0  !Addr = 0011 000X
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_0
+end sub
+
+sub ADDR_Z0  ! Address bit pattern for A1 = Z and A0 = 0
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_1
+end sub
+
+sub ADDR_10  ! Address bit pattern for A1 = 1 and A0 = 0
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_0
+end sub
+
+sub ADDR_0Z  ! Address bit pattern for A1 = 0 and A0 = Z
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_1
+end sub
+
+sub ADDR_ZZ  ! Address bit pattern for A1 = Z and A0 = Z
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_0
+end sub
+
+sub ADDR_1Z  ! Address bit pattern for A1 = 1 and A0 = Z
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_0
+ call WD_1
+ call WD_1
+end sub
+
+sub ADDR_01  ! Address bit pattern for A1 = 0 and A0 = 1
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_0
+ call WD_0
+end sub
+
+sub ADDR_Z1  ! Address bit pattern for A1 = Z and A0 = 1
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_0
+ call WD_1
+end sub
+
+sub ADDR_11  ! Address bit pattern for A1 = 1 and A0 = 1
+ call WD_1
+ call WD_0
+ call WD_0
+ call WD_1
+ call WD_1
+ call WD_1
+ call WD_0
+end sub
+
+sub IC_ADDR    ! Choose only one of the sub routine calls below to
+               ! match the logic levels of A1 and A0 during power up
+
+ call ADDR_00  ! A1 = 0, A0 = 0
+!call ADDR_01  ! A1 = 0, A0 = 1
+!call ADDR_10  ! A1 = 1, A0 = 0
+!call ADDR_11  ! A1 = 1, A0 = 1
+!call ADDR_1Z  ! A1 = 1, A0 = Z
+!call ADDR_0Z  ! A1 = 0, A0 = Z
+!call ADDR_Z1  ! A1 = Z, A0 = 1
+!call ADDR_Z0  ! A1 = Z, A0 = 0
+!call ADDR_ZZ  ! A1 = Z, A0 = Z
+end sub
+
+sub WR_CMD
+ call STRT
+ call IC_ADDR
+ call WD_0      ! Write
+ call RD_0      ! Acknowledge bit
+end sub
+
+sub RD_CMD
+ call STRT
+ call IC_ADDR
+ call WD_1      ! Read
+ call RD_0      ! Acknowledge bit
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SCL_21
+ execute SCL_20
+ execute D6
+ execute SCL_21
+ execute SCL_20
+ execute D5
+ execute SCL_21
+ execute SCL_20
+ execute D4
+ execute SCL_21
+ execute SCL_20
+ execute D3
+ execute SCL_21
+ execute SCL_20
+ execute D2
+ execute SCL_21
+ execute SCL_20
+ execute D1
+ execute SCL_21
+ execute SCL_20
+ execute D0
+ execute SCL_21
+ execute SCL_10
+ execute R_0  ! Acknowledge bit
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SCL_11
+ execute D7
+ execute SCL_10
+ execute SCL_11
+ execute D6
+ execute SCL_10
+ execute SCL_11
+ execute D5
+ execute SCL_10
+ execute SCL_11
+ execute D4
+ execute SCL_10
+ execute SCL_11
+ execute D3
+ execute SCL_10
+ execute SCL_11
+ execute D2
+ execute SCL_10
+ execute SCL_11
+ execute D1
+ execute SCL_10
+ execute SCL_11
+ execute D0
+ execute SCL_10
+ execute D_0  ! Acknowledge bit
+ execute SCL_21
+ execute SCL_20
+ execute SCL_10
+end sub
+
+sub PGM_IC
+ call WR_CMD                                ! Write Local THI Limit
+ call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_1,D_1)  ! $0B
+ call WR(D_0,D_1,D_1,D_1, D_1,D_1,D_1,D_1)  ! +127 degree
+ call STOP
+ call WR_CMD                                ! Write Local TLOW Limit
+ call WR(D_0,D_0,D_0,D_0, D_1,D_1,D_0,D_0)  ! $0C
+ call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_1,D_1)  ! -70 degree
+ call STOP
+ call WR_CMD                                ! Write Remote THI Limit
+ call WR(D_0,D_0,D_0,D_0, D_1,D_1,D_0,D_1)  ! $0D
+ call WR(D_0,D_1,D_1,D_1, D_1,D_1,D_1,D_1)  ! +127 degree
+ call STOP
+ call WR_CMD                                ! Write Remote TLOW Limit
+ call WR(D_0,D_0,D_0,D_0, D_1,D_1,D_1,D_0)  ! $0E
+ call WR(D_1,D_0,D_1,D_1, D_1,D_1,D_1,D_1)  ! -70 degree
+ call STOP
+ call WR_CMD                                ! Write Config Reg
+ call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_0,D_1)  ! $09
+ call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Unmask ALERTB
+ call STOP                                  ! One-shot / Timer mode
+end sub
+
+! ***************************************************************************
+
+unit "I2C Bus test"
+ repeat 40 times
+  execute INIT1
+ end repeat
+ call WR_CMD                                ! Soft POR
+ call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_0,D_0)  ! $FC
+ call STOP
+ call WR_CMD                                ! Read Convertion Rate
+ call WR(D_0,D_0,D_0,D_0, D_0,D_1,D_0,D_0)  ! $04
+ call STOP
+ call RD_CMD
+ call RD(R_0,R_0,R_0,R_0, R_0,R_0,R_1,R_0)  ! Default = $02
+ call STOP
+ call WR_CMD                                ! Write Config Reg
+ call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_0,D_1)  ! $09
+ call WR(D_1,D_1,D_0,D_0, D_0,D_0,D_0,D_0)  ! Mask ALERTB, One-Shot mode
+ call STOP
+ execute ALRTB_1
+end unit
+
+unit "ALRTB Output test"
+ call WR_CMD                                ! Write Local THI Limit
+ call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_1,D_1)
+ call WR(D_1,D_1,D_1,D_0, D_0,D_1,D_1,D_0)  ! -25 degree
+ call STOP
+ call WR_CMD                                ! Write Config Reg
+ call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_0,D_1)  ! $09
+ call WR(D_0,D_1,D_0,D_0, D_0,D_0,D_0,D_0)  ! Un-mask ALERTB, One-Shot mode
+ call STOP
+ call WR_CMD                                ! One Shot command, $0F
+ call WR(D_0,D_0,D_0,D_0, D_1,D_1,D_1,D_1)
+ call STOP
+ wait 200m
+ execute ALRTB_0
+end unit
+
+! unit "Pin STBYB test"
+!  call WR_CMD                                ! Soft POR
+!  call WR(D_1,D_1,D_1,D_1, D_1,D_1,D_0,D_0)  ! $FC
+!  call STOP
+!  execute STBYB_0                            ! Activate Stand-by mode
+!  call WR_CMD                                ! Write Local THI Limit
+!  call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_1,D_1)
+!  call WR(D_1,D_1,D_1,D_0, D_0,D_1,D_1,D_0)  ! -25 degree
+!  call STOP
+!  call WR_CMD                                ! Write Config Reg
+!  call WR(D_0,D_0,D_0,D_0, D_1,D_0,D_0,D_1)  ! $09
+!  call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_0,D_0)  ! Un-mask ALERTB, Timer Mode
+!  call STOP
+!  wait 200m
+!  execute ALRTB_0
+!  call WR_CMD                                ! Dummy Read Status, $02
+!  call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)  ! clear status
+!  call RD_CMD
+!  call RD(R_X,R_1,R_X,R_X, R_X,R_X,R_X,R_X)
+!  call STOP
+!  wait 200m
+!  call WR_CMD                                ! Read Status, $02
+!  call WR(D_0,D_0,D_0,D_0, D_0,D_0,D_1,D_0)
+!  call RD_CMD
+!  call RD(R_X,R_1,R_X,R_X, R_X,R_X,R_X,R_X)  ! Should be no Alarm
+! end unit
+!

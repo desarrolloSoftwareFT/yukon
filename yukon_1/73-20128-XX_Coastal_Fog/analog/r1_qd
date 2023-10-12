@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608109819  V9338                                         
+! IPG: rev 08.40p  Fri Nov 27 14:20:37 2020
+disconnect all
+connect s to "P5V"
+connect i to "PS_EN_QD"
+connect g to "GND"
+resistor 4.75k,20.00,20.00,re4,wb,ar200m,ed,en
+! "r1_qd" test.

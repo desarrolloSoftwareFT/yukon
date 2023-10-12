@@ -1,0 +1,41 @@
+!!!!    2    0    1 1473258984  Vdf51                                         
+
+!  156  MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 3, 6
+   nonanalog pins 2,5,7,8
+
+   test "Enable"
+   test "Out_4"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 3
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_4"
+   connect s to pins 1
+   connect rcva to pins 4
+   connect l to pins 4
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 53.0M       !212M/4
+   measure 53.0M * 1.05, 53.0M * 0.95
+end subtest
+
+
+
+
+!
+!  End test
+!

@@ -1,0 +1,30 @@
+!!!!    2    0    1 1626156076  Vffaf                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:11 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+on failure
+report parallel devices
+report "c01_q3v3r 3.30n"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "DVDD_SENSE_R_Q3V3R"; b to "DVDD_SENSE_R_Q3V3R"
+connect g to "PWR_P3V3_Q2" ! 36 ! IPG recommended
+!gg! connect g to "FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "TSEN1_Q3V3R" ! 688982438
+!gg! connect g to "TSEN1_RR" ! 688982438
+!gg! connect g to "TSEN2_Q3V3R" ! 688982438
+!gg! connect g to "TSEN2_RR" ! 688982438
+!gg! connect g to "UNNAMED_2_CAP_I478_A_ADV" ! 688983369
+!gg! connect g to "UNNAMED_64_CAP_I257_A" ! 688984345
+resistor 100,25.00,20.00,re1,ar20.0m,ed,wa10m,sa,sb,en
+! "r88_q3v3r" is a limited test.
+! DUT: nominal 100, plus tol 0.100 %, minus tol 0.100 %
+! DUT: high 100.1, low 99.9
+! TEST: high limit 100.61, low limit 99.661
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed
+off failure

@@ -1,0 +1,95 @@
+<!-- Created Wed Jun 30 08:26:55 2021 from ITL Source digital/u36_u36_ps -->
+<Test name="u36_u36_ps"><Type>"Boundary-Scan Powered Shorts Test"</Type>
+<Chain name="u36_u36"><ChainTCK><node name="SRT_JTAG_TCK_MIFPGA_3V3" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="JTAG_TMS_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="JTAG_TDI_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="JTAG_TDO_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainEnable><node name="FPGA_ACT2_RESET_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;0&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;1&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;2&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;3&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_108_QS3VH257_I46_E" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_11_LVC244A_I10_OE" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u36"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="Y5"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R6"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="T6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="V7"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="K9"><node name="_D_U36_K9" /></Pin>
+<Pin name="K9"><node name="_D_U36_K9" /></Pin>
+<Pin name="H12"><node name="_D_U36_H12" /></Pin>
+<Pin name="H12"><node name="_D_U36_H12" /></Pin>
+<Pin name="E10"><node name="_D_U36_E10" /></Pin>
+<Pin name="E10"><node name="_D_U36_E10" /></Pin>
+<Pin name="K25"><node name="_D_U36_K25" /></Pin>
+<Pin name="K25"><node name="_D_U36_K25" /></Pin>
+<Pin name="J25"><node name="_D_U36_J25" /></Pin>
+<Pin name="J25"><node name="_D_U36_J25" /></Pin>
+<Pin name="T21"><node name="_D_U36_T21" /></Pin>
+<Pin name="T21"><node name="_D_U36_T21" /></Pin>
+<Pin name="U20"><node name="PWR_VDD_RTL_EN" /></Pin>
+<Pin name="U20"><node name="PWR_VDD_RTL_EN" /></Pin>
+<Pin name="Y23"><node name="_D_U36_Y23" /></Pin>
+<Pin name="Y23"><node name="_D_U36_Y23" /></Pin>
+<Pin name="W20"><node name="_D_U36_W20" /></Pin>
+<Pin name="W20"><node name="_D_U36_W20" /></Pin>
+<Pin name="AF13"><node name="_D_U36_AF13" /></Pin>
+<Pin name="AF13"><node name="_D_U36_AF13" /></Pin>
+<Pin name="AE13"><node name="_D_U36_AE13" /></Pin>
+<Pin name="AE13"><node name="_D_U36_AE13" /></Pin>
+<Pin name="U14"><node name="_D_U36_U14" /></Pin>
+<Pin name="U14"><node name="_D_U36_U14" /></Pin>
+<Pin name="AC15"><node name="_D_U36_AC15" /></Pin>
+<Pin name="AC15"><node name="_D_U36_AC15" /></Pin>
+<Pin name="AA14"><node name="_D_U36_AA14" /></Pin>
+<Pin name="AA14"><node name="_D_U36_AA14" /></Pin>
+<Pin name="Y11"><node name="_D_U36_Y11" /></Pin>
+<Pin name="Y11"><node name="_D_U36_Y11" /></Pin>
+<Pin name="U7"><node name="_D_U36_U7" /></Pin>
+<Pin name="U7"><node name="_D_U36_U7" /></Pin>
+</Device>
+<NodePair><Node name="PWR_VDD_RTL_EN" /><Node name="SRT_CRCERR" /></NodePair>
+<NodePair><Node name="PWR_VDD_RTL_EN" /><Node name="INIT_DONE" /></NodePair>
+<NodePair><Node name="_D_U36_AA14" /><Node name="FLTR_FPGA_VCC_AUX" /></NodePair>
+<NodePair><Node name="_D_U36_AA14" /><Node name="RT3_SEL_2X_3V3" /></NodePair>
+<NodePair><Node name="_D_U36_AC15" /><Node name="SRT_MI1_IO_DATA" /></NodePair>
+<NodePair><Node name="_D_U36_AC15" /><Node name="IO_MI1_DATA" /></NodePair>
+<NodePair><Node name="_D_U36_AE13" /><Node name="P0V9_SA_PLL_VDD_PGOOD" /></NodePair>
+<NodePair><Node name="_D_U36_AF13" /><Node name="FPGA_SA_I2C_SEL0_3V3" /></NodePair>
+<NodePair><Node name="_D_U36_AF13" /><Node name="RT3_RESET_L_3V3" /></NodePair>
+<NodePair><Node name="_D_U36_E10" /><Node name="SRT_MIFPGA_SER_DATA" /></NodePair>
+<NodePair><Node name="_D_U36_E10" /><Node name="MI_SPARE_PU1" /></NodePair>
+<NodePair><Node name="_D_U36_E10" /><Node name="PSU0_PRSNT_L" /></NodePair>
+<NodePair><Node name="_D_U36_H12" /><Node name="MIFPGA_DBG_LED3_L" /></NodePair>
+<NodePair><Node name="_D_U36_J25" /><Node name="SRT_FPGA_RT3_TOD_ONE_PPS" /></NodePair>
+<NodePair><Node name="_D_U36_J25" /><Node name="PWR_VCCIO_BANK6_P1V8" /></NodePair>
+<NodePair><Node name="_D_U36_J25" /><Node name="SRT_SA_I2C_SDA_1V8" /></NodePair>
+<NodePair><Node name="_D_U36_K25" /><Node name="RT3_FPGA_TOD_ONE_PPS" /></NodePair>
+<NodePair><Node name="_D_U36_K25" /><Node name="RT1_FPGA_TOD_ONE_PPS" /></NodePair>
+<NodePair><Node name="_D_U36_K9" /><Node name="PSU1_DC_OK" /></NodePair>
+<NodePair><Node name="_D_U36_K9" /><Node name="SRT_FPGA_CPLD1_CLK" /></NodePair>
+<NodePair><Node name="_D_U36_K9" /><Node name="HS_FPGA_ALERT_L" /></NodePair>
+<NodePair><Node name="_D_U36_T21" /><Node name="FPGA_SA_CORE_PLL_BYP_3V3" /></NodePair>
+<NodePair><Node name="_D_U36_U14" /><Node name="IO_MI1_STROBE_R" /></NodePair>
+<NodePair><Node name="_D_U36_U14" /><Node name="QSFP_SDA&lt;8&gt;" /></NodePair>
+<NodePair><Node name="_D_U36_U14" /><Node name="P1_1VA" /></NodePair>
+<NodePair><Node name="_D_U36_U7" /><Node name="SA_VDD18_IMON_ALERT_L" /></NodePair>
+<NodePair><Node name="_D_U36_U7" /><Node name="NC_AS_DATA3" /></NodePair>
+<NodePair><Node name="_D_U36_W20" /><Node name="QSFP_SCL&lt;2&gt;" /></NodePair>
+<NodePair><Node name="_D_U36_W20" /><Node name="SRT_CRCERR" /></NodePair>
+<NodePair><Node name="_D_U36_Y11" /><Node name="QSFP_SDA&lt;30&gt;" /></NodePair>
+<NodePair><Node name="_D_U36_Y11" /><Node name="FPGA_CPLD4_SPI_CS_L" /></NodePair>
+<NodePair><Node name="_D_U36_Y23" /><Node name="SRT_MIFPGA_SPARE1" /></NodePair>
+<NodePair><Node name="_D_U36_Y23" /><Node name="MIFPGA_CVP_CONFDONE" /></NodePair>
+</Test>

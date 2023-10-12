@@ -1,0 +1,251 @@
+!!!!    6    0    1 1366906766  Vd041                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         BQ4802LYPW
+! Alias:             74ABT823,74F823,74ALVC823,74LVC823
+! Part Type:         VLSI
+! Description:       9 Bit Bus Interface Flip-Flop
+! Manufacturer:
+! Package Style:     24 pin SOP
+! Created:           Nov 16, 1999
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-1066-01,15-1167-01,15-1186-01,15-1592-01
+! Cisco Part #:      15-0742,15-0601,15-1081-01,15-1407-01,
+! Cisco Part #:      15-2524-01,15-214271,15-220152
+
+sequential
+
+assign VCC  to pins 28
+assign GND  to pins 14,20
+
+assign DQ0   to pins 11
+assign DQ1   to pins 12
+assign DQ2   to pins 13
+assign DQ3   to pins 15
+assign DQ4   to pins 16
+assign DQ5   to pins 17
+assign DQ6   to pins 18
+assign DQ7   to pins 19
+assign Data  to pins 19,18,17,16,15,13,12,11
+
+assign WE  to pins 27
+assign OE  to pins 22
+assign CS  to pins 21
+assign CEIN to pins 26
+
+assign INT  to pins 5
+assign WDO  to pins 4
+assign CEOUT to pins 25
+
+assign BC  to pins 24
+assign WDI to pins 23
+
+assign RST to pins 6
+assign X1  to pins 2
+assign X2  to pins 3
+
+assign VOUT to pins 1
+
+assign Addr  to pins 10,9,8,7
+power   VCC,GND
+
+bidirectional DQ0,DQ1,DQ2,DQ3,DQ4,DQ5,DQ6,DQ7,Data
+
+inputs  WE,OE,CS,CEIN,INT,Addr
+inputs  BC,WDI,RST,X1,X2
+outputs WDO,CEOUT,VOUT
+
+
+family TTL
+
+set load on groups Data to pull up
+
+vector Initial
+ drive Data
+ set Data to "00000000"
+ set Addr to "0000"
+ set CEIN to "0"
+ set OE   to "1"
+ set WE   to "1"
+ set CS   to "1"
+end vector
+
+vector Keep
+ drive Data
+ set Data to "kkkkkkkk"
+ set Addr to "kkkk"
+ set CEIN to "k"
+ set OE   to "k"
+ set WE   to "k"
+ set CS   to "k"
+end vector  
+
+vector Keep2
+ receive Data
+ set Addr to "kkkk"
+ set CEIN to "k"
+ set OE   to "k"
+ set WE   to "k"
+ set CS   to "k"
+end vector  
+
+vector WE_0
+initialize to Keep
+ set WE    to "0"
+end vector 
+
+vector WE_1
+initialize to Keep
+ set WE    to "1"
+end vector 
+
+vector OE_0
+initialize to Keep
+ set OE    to "0"
+end vector 
+
+vector OE_1
+initialize to Keep
+ set OE    to "1"
+end vector 
+
+vector CS_0
+initialize to Keep
+ set CS    to "0"
+end vector 
+
+vector CS_1
+initialize to Keep
+ set CS    to "1"
+end vector 
+
+vector Addr_8
+initialize to Keep
+  set Addr to "1000"
+end vector
+
+vector Addr_C
+initialize to Keep
+  set Addr to "1100"
+end vector
+
+vector Addr_B
+initialize to Keep
+  set Addr to "1011"
+end vector
+
+vector DataOut_0000xxxx
+ initialize to Keep2
+  set Data to "0000xxxx"
+end vector
+
+vector DataOut_1111xxxx
+ initialize to Keep2
+  set Data to "1111xxxx"
+end vector
+
+vector DataOut_00000000
+ initialize to Keep2
+  set Data to "00000000"
+end vector 
+
+vector DataOut_01010101
+ initialize to Keep2
+  set Data to "01010101"
+end vector 
+
+vector DataOut_00101010
+ initialize to Keep2
+  set Data to "10101010"
+end vector 
+
+vector DataIn_01010101
+ initialize to Keep
+  set Data to "01010101"
+end vector 
+
+vector DataIn_00101010
+ initialize to Keep
+  set Data to "00101010"
+end vector 
+
+vector DataIn_00000000
+ initialize to Keep
+  set Data to "00000000"
+end vector 
+
+
+unit "Read Addr 8"
+ execute CS_0
+ execute Addr_8
+ execute OE_0
+ execute DataOut_0000xxxx
+ execute OE_1
+ execute CS_1
+end unit
+
+unit "Read Addr C"
+ execute CS_0
+ execute Addr_C
+ execute OE_0
+ execute DataOut_1111xxxx
+ execute OE_1
+ execute CS_1
+end unit
+
+unit "Read Addr B 00000000"
+ execute CS_0
+ execute Addr_B
+ execute OE_0
+ execute DataOut_00000000
+ execute OE_1
+ execute CS_1
+end unit
+
+unit "Write Addr B 01010101"
+ execute CS_0
+ execute Addr_B
+ execute DataOut_01010101
+ execute WE_0
+ execute WE_1
+ execute CS_1
+end unit
+
+unit "Read Addr B 01010101"
+ execute CS_0
+ execute Addr_B
+ execute OE_0
+ execute DataOut_01010101
+ execute OE_1
+ execute CS_1
+end unit
+
+unit "Write Addr B 00101010"
+ execute CS_0
+ execute Addr_B
+ execute DataOut_00101010
+ execute WE_0
+ execute WE_1
+ execute CS_1
+end unit
+
+unit "Read Addr B 00101010"
+ execute CS_0
+ execute Addr_B
+ execute OE_0
+ execute DataOut_00101010
+ execute OE_1
+ execute CS_1
+end unit
+

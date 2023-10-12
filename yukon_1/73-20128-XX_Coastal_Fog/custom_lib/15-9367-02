@@ -1,0 +1,500 @@
+!!!!    6    0    1  591688800   0000                                         
+
+!     74LS244
+!     Buffer  3-state low_true_enable  octal
+!    revision A.01.00
+
+combinatorial
+
+assign   VCC      to pins 20
+assign   GND      to pins 10
+
+assign   E1_Input       to pins 2
+assign   E2_Input       to pins 4
+assign   E3_Input       to pins 6
+assign   E4_Input       to pins 8
+
+assign   E1_4_Enable_bar  to pins 1
+
+assign   E1_Output      to pins 18
+assign   E2_Output      to pins 16
+assign   E3_Output      to pins 14
+assign   E4_Output      to pins 12
+
+assign   E5_Input       to pins 17
+assign   E6_Input       to pins 15
+assign   E7_Input       to pins 13
+assign   E8_Input       to pins 11
+
+assign   E5_8_Enable_bar  to pins 19
+
+assign   E5_Output      to pins 3
+assign   E6_Output      to pins 5
+assign   E7_Output      to pins 7
+assign   E8_Output      to pins 9
+
+power    VCC, GND
+
+family   TTL
+
+inputs   E1_Input, E2_Input, E3_Input, E4_Input, E1_4_Enable_bar
+inputs   E5_Input, E6_Input, E7_Input, E8_Input, E5_8_Enable_bar
+
+outputs  E1_Output, E2_Output, E3_Output, E4_Output
+outputs  E5_Output, E6_Output, E7_Output, E8_Output
+
+disable E1_Output  with  E1_4_Enable_bar  to  "1"
+disable E2_Output  with  E1_4_Enable_bar  to  "1"
+disable E3_Output  with  E1_4_Enable_bar  to  "1"
+disable E4_Output  with  E1_4_Enable_bar  to  "1"
+
+disable E5_Output  with  E5_8_Enable_bar  to  "1"
+disable E6_Output  with  E5_8_Enable_bar  to  "1"
+disable E7_Output  with  E5_8_Enable_bar  to  "1"
+disable E8_Output  with  E5_8_Enable_bar  to  "1"
+
+when E1_4_Enable_bar is "1"   inactive E1_Output, E2_Output
+when E1_4_Enable_bar is "1"   inactive E3_Output, E4_Output
+when E5_8_Enable_bar is "1"   inactive E5_Output, E6_Output
+when E5_8_Enable_bar is "1"   inactive E7_Output, E8_Output
+
+trace E1_Output   to E1_Input
+trace E2_Output   to E2_Input
+trace E3_Output   to E3_Input
+trace E4_Output   to E4_Input
+trace E5_Output   to E5_Input
+trace E6_Output   to E6_Input
+trace E7_Output   to E7_Input
+trace E8_Output   to E8_Input
+trace E1_Output, E2_Output, E3_Output, E4_Output   to E1_4_Enable_bar
+trace E5_Output, E6_Output, E7_Output, E8_Output   to E5_8_Enable_bar
+
+!***************************************************************************
+!***************************************************************************
+
+vector  E1_Low__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E1_Input          to "0"
+   set   E1_Output         to "0"
+end vector
+
+vector  E1_High__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E1_Input          to "1"
+   set   E1_Output         to "1"
+end vector
+
+vector  E1_Low__I
+   set   E1_4_Enable_bar   to "0"
+   set   E1_Input          to "0"
+   set   E1_Output         to "0"
+end vector
+
+vector  E1_High__I
+   set   E1_4_Enable_bar   to "0"
+   set   E1_Input          to "1"
+   set   E1_Output         to "1"
+end vector
+
+vector  E2_Low__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E2_Input          to "0"
+   set   E2_Output         to "0"
+end vector
+
+vector  E2_High__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E2_Input          to "1"
+   set   E2_Output         to "1"
+end vector
+
+vector  E2_Low__I
+   set   E1_4_Enable_bar   to "0"
+   set   E2_Input          to "0"
+   set   E2_Output         to "0"
+end vector
+
+vector  E2_High__I
+   set   E1_4_Enable_bar   to "0"
+   set   E2_Input          to "1"
+   set   E2_Output         to "1"
+end vector
+
+vector  E3_Low__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E3_Input          to "0"
+   set   E3_Output         to "0"
+end vector
+
+vector  E3_High__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E3_Input          to "1"
+   set   E3_Output         to "1"
+end vector
+
+vector  E3_Low__I
+   set   E1_4_Enable_bar   to "0"
+   set   E3_Input          to "0"
+   set   E3_Output         to "0"
+end vector
+
+vector  E3_High__I
+   set   E1_4_Enable_bar   to "0"
+   set   E3_Input          to "1"
+   set   E3_Output         to "1"
+end vector
+
+vector  E4_Low__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E4_Input          to "0"
+   set   E4_Output         to "0"
+end vector
+
+vector  E4_High__D
+   set   E1_4_Enable_bar   to "0"
+   set   E5_8_Enable_bar   to "1"
+   set   E4_Input          to "1"
+   set   E4_Output         to "1"
+end vector
+
+vector  E4_Low__I
+   set   E1_4_Enable_bar   to "0"
+   set   E4_Input          to "0"
+   set   E4_Output         to "0"
+end vector
+
+vector  E4_High__I
+   set   E1_4_Enable_bar   to "0"
+   set   E4_Input          to "1"
+   set   E4_Output         to "1"
+end vector
+
+vector  E5_Low__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E5_Input          to "0"
+   set   E5_Output         to "0"
+end vector
+
+vector  E5_High__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E5_Input          to "1"
+   set   E5_Output         to "1"
+end vector
+
+vector  E5_Low__I
+   set   E5_8_Enable_bar   to "0"
+   set   E5_Input          to "0"
+   set   E5_Output         to "0"
+end vector
+
+vector  E5_High__I
+   set   E5_8_Enable_bar   to "0"
+   set   E5_Input          to "1"
+   set   E5_Output         to "1"
+end vector
+
+vector  E6_Low__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E6_Input          to "0"
+   set   E6_Output         to "0"
+end vector
+
+vector  E6_High__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E6_Input          to "1"
+   set   E6_Output         to "1"
+end vector
+
+vector  E6_Low__I
+   set   E5_8_Enable_bar   to "0"
+   set   E6_Input          to "0"
+   set   E6_Output         to "0"
+end vector
+
+vector  E6_High__I
+   set   E5_8_Enable_bar   to "0"
+   set   E6_Input          to "1"
+   set   E6_Output         to "1"
+end vector
+
+vector  E7_Low__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E7_Input          to "0"
+   set   E7_Output         to "0"
+end vector
+
+vector  E7_High__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E7_Input          to "1"
+   set   E7_Output         to "1"
+end vector
+
+vector  E7_Low__I
+   set   E5_8_Enable_bar   to "0"
+   set   E7_Input          to "0"
+   set   E7_Output         to "0"
+end vector
+
+vector  E7_High__I
+   set   E5_8_Enable_bar   to "0"
+   set   E7_Input          to "1"
+   set   E7_Output         to "1"
+end vector
+
+vector  E8_Low__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E8_Input          to "0"
+   set   E8_Output         to "0"
+end vector
+
+vector  E8_High__D
+   set   E5_8_Enable_bar   to "0"
+   set   E1_4_Enable_bar   to "1"
+   set   E8_Input          to "1"
+   set   E8_Output         to "1"
+end vector
+
+vector  E8_Low__I
+   set   E5_8_Enable_bar   to "0"
+   set   E8_Input          to "0"
+   set   E8_Output         to "0"
+end vector
+
+vector  E8_High__I
+   set   E5_8_Enable_bar   to "0"
+   set   E8_Input          to "1"
+   set   E8_Output         to "1"
+end vector
+
+!*****VECTORS FOR DISABLE TESTS*****
+
+vector  E1_Low_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E1_Input          to "0"
+   set   E1_Output         to "0"
+end vector
+
+vector  E1_High_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E1_Input          to "1"
+   set   E1_Output         to "1"
+end vector
+
+vector  E2_Low_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E2_Input          to "0"
+   set   E2_Output         to "0"
+end vector
+
+vector  E2_High_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E2_Input          to "1"
+   set   E2_Output         to "1"
+end vector
+
+vector  E3_Low_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E3_Input          to "0"
+   set   E3_Output         to "0"
+end vector
+
+vector  E3_High_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E3_Input          to "1"
+   set   E3_Output         to "1"
+end vector
+
+vector  E4_Low_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E4_Input          to "0"
+   set   E4_Output         to "0"
+end vector
+
+vector  E4_High_Disabled
+   set   E1_4_Enable_bar   to "1"
+   set   E4_Input          to "1"
+   set   E4_Output         to "1"
+end vector
+
+vector  E5_Low_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E5_Input          to "0"
+   set   E5_Output         to "0"
+end vector
+
+vector  E5_High_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E5_Input          to "1"
+   set   E5_Output         to "1"
+end vector
+
+vector  E6_Low_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E6_Input          to "0"
+   set   E6_Output         to "0"
+end vector
+
+vector  E6_High_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E6_Input          to "1"
+   set   E6_Output         to "1"
+end vector
+
+vector  E7_Low_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E7_Input          to "0"
+   set   E7_Output         to "0"
+end vector
+
+vector  E7_High_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E7_Input          to "1"
+   set   E7_Output         to "1"
+end vector
+
+vector  E8_Low_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E8_Input          to "0"
+   set   E8_Output         to "0"
+end vector
+
+vector  E8_High_Disabled
+   set   E5_8_Enable_bar   to "1"
+   set   E8_Input          to "1"
+   set   E8_Output         to "1"
+end vector
+
+!***************************************************************************
+!***************************************************************************
+
+!    Each element tested separately, using two tests.  The first test, tests
+!    the element with the other 'Enable_bar' disabled. The second test,
+!    tests each element ignoring  the other 'Enable_bar'.
+
+unit  "Element 1, with Elements 5_8 disabled"
+   execute  E1_Low__D
+   execute  E1_High__D
+end unit
+
+unit  "Element 1, with Elements 5_8 ignored"
+   execute  E1_Low__I
+   execute  E1_High__I
+end unit
+
+unit  "Element 2, with Elements 5_8 disabled"
+   execute  E2_Low__D
+   execute  E2_High__D
+end unit
+
+unit  "Element 2, with Elements 5_8 ignored"
+   execute  E2_Low__I
+   execute  E2_High__I
+end unit
+
+unit  "Element 3, with Elements 5_8 disabled"
+   execute  E3_Low__D
+   execute  E3_High__D
+end unit
+
+unit  "Element 3, with Elements 5_8 ignored"
+   execute  E3_Low__I
+   execute  E3_High__I
+end unit
+
+unit  "Element 4, with Elements 5_8 disabled"
+   execute  E4_Low__D
+   execute  E4_High__D
+end unit
+
+unit  "Element 4, with Elements 5_8 ignored"
+   execute  E4_Low__I
+   execute  E4_High__I
+end unit
+
+unit  "Element 5, with Elements 1_4 disabled"
+   execute  E5_Low__D
+   execute  E5_High__D
+end unit
+
+unit  "Element 5, with Elements 1_4 ignored"
+   execute  E5_Low__I
+   execute  E5_High__I
+end unit
+
+unit  "Element 6, with Elements 1_4 disabled"
+   execute  E6_Low__D
+   execute  E6_High__D
+end unit
+
+unit  "Element 6, with Elements 1_4 ignored"
+   execute  E6_Low__I
+   execute  E6_High__I
+end unit
+
+unit  "Element 7, with Elements 1_4 disabled"
+   execute  E7_Low__D
+   execute  E7_High__D
+end unit
+
+unit  "Element 7, with Elements 1_4 ignored"
+   execute  E7_Low__I
+   execute  E7_High__I
+end unit
+
+unit  "Element 8, with Elements 1_4 disabled"
+   execute  E8_Low__D
+   execute  E8_High__D
+end unit
+
+unit  "Element 8, with Elements 1_4 ignored"
+   execute  E8_Low__I
+   execute  E8_High__I
+end unit
+
+!*****TESTS FOR DISABLE **************************
+
+unit  disable test "Disable test for Elements 1-4"
+   execute  E1_Low_Disabled
+   execute  E1_High_Disabled
+   execute  E1_Low_Disabled
+   execute  E2_Low_Disabled
+   execute  E2_High_Disabled
+   execute  E2_Low_Disabled
+   execute  E3_Low_Disabled
+   execute  E3_High_Disabled
+   execute  E3_Low_Disabled
+   execute  E4_Low_Disabled
+   execute  E4_High_Disabled
+   execute  E4_Low_Disabled
+end unit
+
+unit  disable test "Disable test for Elements 5-8"
+   execute  E5_Low_Disabled
+   execute  E5_High_Disabled
+   execute  E5_Low_Disabled
+   execute  E6_Low_Disabled
+   execute  E6_High_Disabled
+   execute  E6_Low_Disabled
+   execute  E7_Low_Disabled
+   execute  E7_High_Disabled
+   execute  E7_Low_Disabled
+   execute  E8_Low_Disabled
+   execute  E8_High_Disabled
+   execute  E8_Low_Disabled
+end unit
+
+!    End of Test

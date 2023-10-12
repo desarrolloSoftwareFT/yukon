@@ -1,0 +1,39 @@
+!!!!    2    0    1 1624852288   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:29 2021
+on failure
+   report parallel devices
+   report "c10_adv 22.0u"
+   report "c227 47.0u"
+   report "c245 100n"
+   report "c246 10.0u"
+   report "c249 100n"
+   report "c250 10.0u"
+   report "c259 1.00u"
+   report "c278 100n"
+   report "c279 10.0u"
+   report "c280 100n"
+   report "c281 10.0u"
+   report "c350 1.00u"
+   report "c365 1.00u"
+   report "c217 100n"
+   report "c297 100n"
+   report "c342 1.00u"
+   report "c343 100n"
+   report "c344 10.0u"
+   report "c386 1.00u"
+   report "c210 100n"
+   report "c295 100n"
+   report "c296 1.00u"
+   report "c385 10.0u"
+   report "c292 1.00u"
+   report "c335 100n"
+   report "c336 1.00u"
+   report "c337 10.0u"
+   report "c367 1.00u"
+end on failure
+disconnect all
+connect i to "P2_5VA"
+connect s to "GND"
+jumper 3.28k, re4, wb, ar200m, op
+! "c15_adv" test.
+off failure

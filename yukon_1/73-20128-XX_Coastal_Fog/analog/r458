@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539429  Vc480                                         
+! IPG: rev 09.20p  Mon Jun 28 12:03:24 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "MIFPGA_CONFIG_DONE"
+resistor 10k,20.00,20.00,re4,wb,ar100m,ed
+! "r458" test.

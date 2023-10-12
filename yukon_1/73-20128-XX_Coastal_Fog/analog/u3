@@ -1,0 +1,56 @@
+!!!!    2    0    1 1626684928   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:16:11 2021
+!IPG : Node NC_4647 is not accessible.
+!IPG : Node NC_4646 is not accessible.
+!IPG : Node NC_4645 is not accessible.
+! TPS7A7100RGTR
+! 15-14287-01
+! Nestor
+
+test powered analog
+  power pins     4,5,6,7,8,9,13,14,17
+  nonanalog pins 1,2,10,11,16
+
+   disconnect all
+!  test "VOLT_IN"
+!  test "VOLT_EN"
+!  test "VOLT_PG"
+   test "VOLT_OUT"
+end test
+
+!*****************************************!
+
+subtest "VOLT_IN"
+  disconnect all
+  connect i to pins 14
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+subtest "VOLT_EN"
+  disconnect all
+  connect i to pins 12
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.5, 2.8
+end subtest
+
+subtest "VOLT_PG"
+  disconnect all
+  connect i to pins 3
+  connect l to ground
+  detector dcv, expect 3.3
+  measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+
+subtest "VOLT_OUT"
+  disconnect all
+  connect i to nodes "PWR_SA_AVDD12" !pins 15
+  connect l to ground
+  detector dcv, expect 1.25
+  measure 1.25 * 1.08, 1.25 * 0.92
+end subtest
+
+!*****************************************!

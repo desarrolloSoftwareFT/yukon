@@ -1,0 +1,35 @@
+!!!!    6    0    1 1607066573  V79b9                                         
+
+combinatorial
+
+assign VCC to pins 2,7
+assign GND to pins 1
+
+assign A   to pins 3,4
+assign B   to pins 6,5
+
+assign EN to pins 8
+
+power VCC, GND
+inputs EN
+bidirectional A, B
+
+family LVT_2V5 on A
+family LVT on B
+
+disable A, B with EN to "0"
+
+set load on groups A ,B to pull up
+
+pcf order SCAN is EN, A, B
+
+!***************************************************************************
+unit "Func Test"
+pcf
+  use pcf order SCAN
+   "1 01 LH"
+   "1 10 HL"
+   "0 00 HH"
+end pcf
+end unit
+

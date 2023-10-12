@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627539612  V2799                                         
+! IPG: rev 09.20p  Mon Jun 28 12:04:30 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "P3_3V"; a to "P3_3V"
+connect i to "JTAG_TDO_SA_3V3"; b to "JTAG_TDO_SA_3V3"
+resistor 1k,20.00,20.00,re3,wb,ar100m,ed,sa,sb
+! "r1323" test.
+! DUT: nominal 1k, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 1.01k, low 990
+! TEST: high limit 1.010k, low limit 989.88
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

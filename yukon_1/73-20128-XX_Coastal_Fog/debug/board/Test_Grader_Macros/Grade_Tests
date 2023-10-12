@@ -1,0 +1,22 @@
+get "testplan.bdg" 
+debug end
+run
+if Error_testplan_bdg then
+   print
+   print
+   print "The Board Test Grading testplan DID NOT complete"
+   print "successfully!"
+   print
+else
+   grade tests ; report
+   print "Please review the ""summary.rpt"" report"
+   print "in the Board Test Grader data directory."
+end if
+debug board
+if Error then
+   report
+   report errm$ (Error)
+end if
+print 
+print  "Board Test Grading complete."
+report is *

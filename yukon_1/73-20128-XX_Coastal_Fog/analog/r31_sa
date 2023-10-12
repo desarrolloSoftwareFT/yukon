@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538578  V1f5a                                         
+! IPG: rev 09.20p  Mon Jun 28 11:58:28 2021
+disconnect all
+connect s to "GND"
+connect i to "FPGA_SA_CORE_PLL_RST_L_1V8"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r31_sa" test.

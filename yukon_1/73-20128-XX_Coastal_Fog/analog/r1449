@@ -1,0 +1,25 @@
+!!!!    2    0    1 1626157513  Vfb9b                                         
+! IPG: rev 09.20p  Mon Jun 28 12:09:52 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "SRT_CLK25M_TCXO_FPGA1_N"; a to "SRT_CLK25M_TCXO_FPGA1_N"
+connect i to "CLK25M_TCXO_FPGA1_N"; b to "CLK25M_TCXO_FPGA1_N"
+connect g to "GND" ! 149 ! IPG recommended
+!gg! connect g to "FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "TSEN1_Q3V3R" ! 688982586
+!gg! connect g to "TSEN1_RR" ! 688982586
+!gg! connect g to "TSEN2_Q3V3R" ! 688982586
+!gg! connect g to "TSEN2_RR" ! 688982586
+!gg! connect g to "UNNAMED_2_CAP_I478_A_ADV" ! 688983518
+!gg! connect g to "UNNAMED_64_CAP_I257_A" ! 688984493
+resistor 49.9,25.00,20.00,re2,ar200m,sa,sb,en,ed
+! "r1449" is a limited test.
+! DUT: nominal 49.9, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 50.399, low 49.401
+! TEST: high limit 50.780, low limit 49.223
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

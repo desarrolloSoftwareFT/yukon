@@ -1,0 +1,31 @@
+!!!!   21    2    1  852076857  V11c2                                         
+
+resistor "pin_1_8",  4700,  5,  5, f, nr
+resistor "pin_2_7",  4700,  5,  5, f, nr
+resistor "pin_3_6",  4700,  5,  5, f, nr
+resistor "pin_4_5",  4700,  5,  5, f, nr
+
+external pins 1
+   device "pin_1_8" pins 1
+
+external pins 2
+   device "pin_2_7" pins 1
+
+external pins 3
+   device "pin_3_6" pins 1
+
+external pins 4
+   device "pin_4_5" pins 1
+
+external pins 8
+   device "pin_1_8" pins 2
+
+external pins 7
+   device "pin_2_7" pins 2
+
+external pins 6
+   device "pin_3_6" pins 2
+
+external pins 5
+   device "pin_4_5" pins 2
+

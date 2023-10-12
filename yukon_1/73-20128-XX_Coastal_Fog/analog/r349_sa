@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539005  V8261                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:06 2021
+disconnect all
+connect s to "GND"
+connect i to "SA_FPGA_ROV_1V8<1>"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r349_sa" test.

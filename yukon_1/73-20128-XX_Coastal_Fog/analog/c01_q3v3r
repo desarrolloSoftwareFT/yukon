@@ -1,0 +1,15 @@
+!!!!    2    0    1 1627529414   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:14 2021
+on failure
+report parallel devices
+report "r88_q3v3r 100"
+end on failure
+disconnect all
+connect s to "DGND_SENSE_R_Q3V3R"; a to "DGND_SENSE_R_Q3V3R"
+connect i to "DVDD_SENSE_R_Q3V3R"; b to "DVDD_SENSE_R_Q3V3R"
+connect g to "PWR_P3V3_Q2"; l to "PWR_P3V3_Q2"
+connect g to "GND"
+capacitor 3.3n,35.00,40.00,fr8192,re3,ar50.0m,sa,ed,nocomp,sl,wb,sb
+warning "device under test appears open or excessive noise is present."
+! "c01_q3v3r" is a commented test.
+off failure

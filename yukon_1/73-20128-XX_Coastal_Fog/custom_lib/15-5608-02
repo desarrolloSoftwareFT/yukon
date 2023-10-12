@@ -1,0 +1,25 @@
+!!!!    2    0    1 1622513560  V2ce1                                         
+test powered analog
+   power pins 8,5
+   nonanalog pins 2,3,4,1,6
+
+   test "FREQ_OUT"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "FREQ_OUT"
+   connect rcva to pins 7
+
+   detector frequency, expect 25.00M,threshold 0.8
+   measure 25.0M * 1.05, 25.0M * 0.95
+end subtest
+
+
+
+!
+!  End test
+!
+

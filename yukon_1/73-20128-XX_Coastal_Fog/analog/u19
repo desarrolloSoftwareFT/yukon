@@ -1,0 +1,18 @@
+!!!!    2    0    1 1624853809  V2b63                                         
+! IPG: rev 09.20p  Mon Jun 28 12:16:50 2021
+test powered analog
+  power pins 2,4
+  nonanalog pins 1
+
+  test "Freq_out"
+
+end test
+
+subtest "Freq_out"
+
+  connect rcva to pins 3
+  detector frequency, expect  50.0M, gate 1
+  measure   50.0M * 1.05,  50.0M * .95
+end subtest
+
+

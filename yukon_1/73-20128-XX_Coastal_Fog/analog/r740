@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627540593  Vfaf2                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:58 2021
+on failure
+report parallel devices
+report "c10_q3v3r 10.0n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_62_ACADIAMPPS43_I1_PMBADDR"
+resistor 845,20.00,20.00,re3,ar100m,ed
+! "r740" test.
+off failure

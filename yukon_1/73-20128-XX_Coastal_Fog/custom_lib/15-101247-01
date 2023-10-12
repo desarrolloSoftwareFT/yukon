@@ -1,0 +1,31 @@
+!!!!    2    0    1 1456713543  V3472                                         
+
+test powered analog
+  power     pins 1,2,6,9,10,11
+  nonanalog pins 3,4,5,6,7,8
+
+  test "VIN"
+  test "VOUT"
+
+end test
+
+! **********************************************************
+
+subtest "VIN"
+
+ connect i to pins 1
+ connect l to pins 6
+
+ detector dcv, expect 5.0  ! Modify during debug
+ measure 5*1.05, 5*0.95
+end subtest
+
+subtest "VOUT"
+
+ connect i to pins 10
+ connect l to pins 6
+
+ detector dcv, expect 1.5  ! Modify during debug
+ measure 1.5*1.05, 1.5*0.95
+end subtest
+

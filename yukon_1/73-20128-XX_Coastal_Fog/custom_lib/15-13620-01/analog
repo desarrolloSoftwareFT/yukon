@@ -1,0 +1,99 @@
+!!!!    2    0    1 1384339114  V3e2f                                         
+!***  All contents copyright 2003 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!-----------------------------------------------------------------------
+! Part Name:         max17611
+! Alias:
+! Part Type:         Power On Analog
+! Manufacturer:      Maxim
+! Package Style:     40 pin unknown
+! Created:           Nov 13, 2013
+! Programmer:        sc
+! Tester:            HP3070
+! Processor:
+! Testjet Testable:  no
+! JTAG Device:       no
+! Fault coverage:    mixed
+! Constraints:
+! Cisco part# : 15-13620-01
+
+test powered mixed
+  power     pins 16,22,38,15,17,23
+  nonanalog pins 1,10,11,13,18,2,20,21,25,26,27,28,3,30,31,32,33,34,35,36,37,39,4,40,41,5,6,7,8,9
+
+  test "POKA"
+  test "POKB"
+  test "ALERT"
+  test "DRVPWMB1"
+  test "DRVSKPB"
+  test "DRVPWMB2"
+  test "DRVPWMA3"
+  continue digital
+end test
+
+! **********************************************************
+
+subtest "POKA"
+
+ connect i to pins 21
+ connect l to pins 15
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.3*1.05, 3.3*0.95
+end subtest
+
+subtest "POKB"
+
+ connect i to pins 11
+ connect l to pins 15
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest
+
+subtest "ALERT"
+
+ connect i to pins 19
+ connect l to pins 15
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest
+
+subtest "DRVPWMB1"
+
+ connect i to pins 12
+ connect l to pins 17
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest
+
+subtest "DRVSKPB"
+
+ connect i to pins 13
+ connect l to pins 17
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest
+
+subtest "DRVPWMB2"
+
+ connect i to pins 14
+ connect l to pins 17
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest
+
+subtest "DRVPWMA3"
+
+ connect i to pins 29
+ connect l to pins 17
+
+ detector dcv, expect 3.3   ! Modify during debug
+ measure 3.47, 3.13
+end subtest

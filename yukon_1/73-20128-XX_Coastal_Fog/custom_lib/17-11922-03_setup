@@ -1,0 +1,15 @@
+!!!!    6    0    1              0000                                         
+!Setup Library for 17-11922-03
+warning "Setup Library Only"
+
+sequential
+
+assign PWR to pins 8
+assign GND to pins 4
+
+assign BID to pins 1, 2, 3, 5, 6, 7
+
+family LVT
+
+power PWR, GND
+bidirectional BID

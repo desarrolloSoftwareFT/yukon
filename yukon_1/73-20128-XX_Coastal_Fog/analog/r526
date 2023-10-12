@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539068  V7301                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:34 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "HS_FPGA_PGOOD"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r526" test.

@@ -1,0 +1,1347 @@
+-- *****************************************************************************
+
+--   BSDL file for design qua_dwalin
+
+--   Created by Synopsys Version M-2016.12-SP5-5 (Mar 08, 2018)
+
+--   Designer:
+--   Company:  MediaTek Incorporation
+
+--   Date: Thu Sep  5 21:50:52 2019
+
+-- *****************************************************************************
+
+
+ entity qua_dwalin is
+
+-- This section identifies the default device package selected.
+
+   generic (PHYSICAL_PIN_MAP: string:= "all_pkg");
+
+-- This section declares all the ports in the design.
+
+   port (
+          I_CLK_OBS_EN             : in       bit;
+          I_CORE_FREQ_SEL_0        : in       bit;
+          I_CORE_FREQ_SEL_1        : in       bit;
+          I_CORE_PLL_BYP           : in       bit;
+          I_CORE_PLL_RST_N         : in       bit;
+          ETHL16_RXN0     : in       bit;
+          ETHL16_RXP0     : in       bit;
+          ETHL16_RXN1     : in       bit;
+          ETHL16_RXP1     : in       bit;
+          ETHL16_RXN2     : in       bit;
+          ETHL16_RXP2     : in       bit;
+          ETHL16_RXN3     : in       bit;
+          ETHL16_RXP3     : in       bit;
+          ETHL16_RXN4     : in       bit;
+          ETHL16_RXP4     : in       bit;
+          ETHL16_RXN5     : in       bit;
+          ETHL16_RXP5     : in       bit;
+          ETHL16_RXN6     : in       bit;
+          ETHL16_RXP6     : in       bit;
+          ETHL16_RXN7     : in       bit;
+          ETHL16_RXP7     : in       bit;
+          ETHL17_RXN0     : in       bit;
+          ETHL17_RXP0     : in       bit;
+          ETHL17_RXN1     : in       bit;
+          ETHL17_RXP1     : in       bit;
+          ETHL17_RXN2     : in       bit;
+          ETHL17_RXP2     : in       bit;
+          ETHL17_RXN3     : in       bit;
+          ETHL17_RXP3     : in       bit;
+          ETHL17_RXN4     : in       bit;
+          ETHL17_RXP4     : in       bit;
+          ETHL17_RXN5     : in       bit;
+          ETHL17_RXP5     : in       bit;
+          ETHL17_RXN6     : in       bit;
+          ETHL17_RXP6     : in       bit;
+          ETHL17_RXN7     : in       bit;
+          ETHL17_RXP7     : in       bit;
+          ETHL18_RXN0     : in       bit;
+          ETHL18_RXP0     : in       bit;
+          ETHL18_RXN1     : in       bit;
+          ETHL18_RXP1     : in       bit;
+          ETHL18_RXN2     : in       bit;
+          ETHL18_RXP2     : in       bit;
+          ETHL18_RXN3     : in       bit;
+          ETHL18_RXP3     : in       bit;
+          ETHL18_RXN4     : in       bit;
+          ETHL18_RXP4     : in       bit;
+          ETHL18_RXN5     : in       bit;
+          ETHL18_RXP5     : in       bit;
+          ETHL18_RXN6     : in       bit;
+          ETHL18_RXP6     : in       bit;
+          ETHL18_RXN7     : in       bit;
+          ETHL18_RXP7     : in       bit;
+          ETHL19_RXN0     : in       bit;
+          ETHL19_RXP0     : in       bit;
+          ETHL19_RXN1     : in       bit;
+          ETHL19_RXP1     : in       bit;
+          ETHL19_RXN2     : in       bit;
+          ETHL19_RXP2     : in       bit;
+          ETHL19_RXN3     : in       bit;
+          ETHL19_RXP3     : in       bit;
+          ETHL19_RXN4     : in       bit;
+          ETHL19_RXP4     : in       bit;
+          ETHL19_RXN5     : in       bit;
+          ETHL19_RXP5     : in       bit;
+          ETHL19_RXN6     : in       bit;
+          ETHL19_RXP6     : in       bit;
+          ETHL19_RXN7     : in       bit;
+          ETHL19_RXP7     : in       bit;
+          ETHL20_RXN0     : in       bit;
+          ETHL20_RXP0     : in       bit;
+          ETHL20_RXN1     : in       bit;
+          ETHL20_RXP1     : in       bit;
+          ETHL20_RXN2     : in       bit;
+          ETHL20_RXP2     : in       bit;
+          ETHL20_RXN3     : in       bit;
+          ETHL20_RXP3     : in       bit;
+          ETHL20_RXN4     : in       bit;
+          ETHL20_RXP4     : in       bit;
+          ETHL20_RXN5     : in       bit;
+          ETHL20_RXP5     : in       bit;
+          ETHL20_RXN6     : in       bit;
+          ETHL20_RXP6     : in       bit;
+          ETHL20_RXN7     : in       bit;
+          ETHL20_RXP7     : in       bit;
+          ETHL21_RXN0     : in       bit;
+          ETHL21_RXP0     : in       bit;
+          ETHL21_RXN1     : in       bit;
+          ETHL21_RXP1     : in       bit;
+          ETHL21_RXN2     : in       bit;
+          ETHL21_RXP2     : in       bit;
+          ETHL21_RXN3     : in       bit;
+          ETHL21_RXP3     : in       bit;
+          ETHL21_RXN4     : in       bit;
+          ETHL21_RXP4     : in       bit;
+          ETHL21_RXN5     : in       bit;
+          ETHL21_RXP5     : in       bit;
+          ETHL21_RXN6     : in       bit;
+          ETHL21_RXP6     : in       bit;
+          ETHL21_RXN7     : in       bit;
+          ETHL21_RXP7     : in       bit;
+          ETHL22_RXN0     : in       bit;
+          ETHL22_RXP0     : in       bit;
+          ETHL22_RXN1     : in       bit;
+          ETHL22_RXP1     : in       bit;
+          ETHL22_RXN2     : in       bit;
+          ETHL22_RXP2     : in       bit;
+          ETHL22_RXN3     : in       bit;
+          ETHL22_RXP3     : in       bit;
+          ETHL22_RXN4     : in       bit;
+          ETHL22_RXP4     : in       bit;
+          ETHL22_RXN5     : in       bit;
+          ETHL22_RXP5     : in       bit;
+          ETHL22_RXN6     : in       bit;
+          ETHL22_RXP6     : in       bit;
+          ETHL22_RXN7     : in       bit;
+          ETHL22_RXP7     : in       bit;
+          ETHL23_RXN0     : in       bit;
+          ETHL23_RXP0     : in       bit;
+          ETHL23_RXN1     : in       bit;
+          ETHL23_RXP1     : in       bit;
+          ETHL23_RXN2     : in       bit;
+          ETHL23_RXP2     : in       bit;
+          ETHL23_RXN3     : in       bit;
+          ETHL23_RXP3     : in       bit;
+          ETHL23_RXN4     : in       bit;
+          ETHL23_RXP4     : in       bit;
+          ETHL23_RXN5     : in       bit;
+          ETHL23_RXP5     : in       bit;
+          ETHL23_RXN6     : in       bit;
+          ETHL23_RXP6     : in       bit;
+          ETHL23_RXN7     : in       bit;
+          ETHL23_RXP7     : in       bit;
+          I_PLL_OBS_EN             : in       bit;
+          B_I2C_CLK                : inout    bit;
+          B_I2C_DATA               : inout    bit;
+          PDIE3_B_PTP_SYNC_MASTER        : inout    bit;
+          PDIE3_GPIO00_G_DFT_24                  : inout    bit;
+          PDIE3_GPIO01_G_DFT_25                  : inout    bit;
+          PDIE3_GPIO02_G_DFT_26                  : inout    bit;
+          PDIE3_GPIO03_G_DFT_27                  : inout    bit;
+          PDIE3_GPIO04_G_DFT_28                  : inout    bit;
+          PDIE3_GPIO05_G_DFT_29                  : inout    bit;
+          HOST_SCL                 : inout    bit;
+          HOST_SDA                 : inout    bit;
+          PDIE3_I_PTP_SYNC_SLAVE         : inout    bit;
+          ETHL16_TXN0     : buffer   bit;
+          ETHL16_TXP0     : buffer   bit;
+          ETHL16_TXN1     : buffer   bit;
+          ETHL16_TXP1     : buffer   bit;
+          ETHL16_TXN2     : buffer   bit;
+          ETHL16_TXP2     : buffer   bit;
+          ETHL16_TXN3     : buffer   bit;
+          ETHL16_TXP3     : buffer   bit;
+          ETHL16_TXN4     : buffer   bit;
+          ETHL16_TXP4     : buffer   bit;
+          ETHL16_TXN5     : buffer   bit;
+          ETHL16_TXP5     : buffer   bit;
+          ETHL16_TXN6     : buffer   bit;
+          ETHL16_TXP6     : buffer   bit;
+          ETHL16_TXN7     : buffer   bit;
+          ETHL16_TXP7     : buffer   bit;
+          ETHL17_TXN0     : buffer   bit;
+          ETHL17_TXP0     : buffer   bit;
+          ETHL17_TXN1     : buffer   bit;
+          ETHL17_TXP1     : buffer   bit;
+          ETHL17_TXN2     : buffer   bit;
+          ETHL17_TXP2     : buffer   bit;
+          ETHL17_TXN3     : buffer   bit;
+          ETHL17_TXP3     : buffer   bit;
+          ETHL17_TXN4     : buffer   bit;
+          ETHL17_TXP4     : buffer   bit;
+          ETHL17_TXN5     : buffer   bit;
+          ETHL17_TXP5     : buffer   bit;
+          ETHL17_TXN6     : buffer   bit;
+          ETHL17_TXP6     : buffer   bit;
+          ETHL17_TXN7     : buffer   bit;
+          ETHL17_TXP7     : buffer   bit;
+          ETHL18_TXN0     : buffer   bit;
+          ETHL18_TXP0     : buffer   bit;
+          ETHL18_TXN1     : buffer   bit;
+          ETHL18_TXP1     : buffer   bit;
+          ETHL18_TXN2     : buffer   bit;
+          ETHL18_TXP2     : buffer   bit;
+          ETHL18_TXN3     : buffer   bit;
+          ETHL18_TXP3     : buffer   bit;
+          ETHL18_TXN4     : buffer   bit;
+          ETHL18_TXP4     : buffer   bit;
+          ETHL18_TXN5     : buffer   bit;
+          ETHL18_TXP5     : buffer   bit;
+          ETHL18_TXN6     : buffer   bit;
+          ETHL18_TXP6     : buffer   bit;
+          ETHL18_TXN7     : buffer   bit;
+          ETHL18_TXP7     : buffer   bit;
+          ETHL19_TXN0     : buffer   bit;
+          ETHL19_TXP0     : buffer   bit;
+          ETHL19_TXN1     : buffer   bit;
+          ETHL19_TXP1     : buffer   bit;
+          ETHL19_TXN2     : buffer   bit;
+          ETHL19_TXP2     : buffer   bit;
+          ETHL19_TXN3     : buffer   bit;
+          ETHL19_TXP3     : buffer   bit;
+          ETHL19_TXN4     : buffer   bit;
+          ETHL19_TXP4     : buffer   bit;
+          ETHL19_TXN5     : buffer   bit;
+          ETHL19_TXP5     : buffer   bit;
+          ETHL19_TXN6     : buffer   bit;
+          ETHL19_TXP6     : buffer   bit;
+          ETHL19_TXN7     : buffer   bit;
+          ETHL19_TXP7     : buffer   bit;
+          ETHL20_TXN0     : buffer   bit;
+          ETHL20_TXP0     : buffer   bit;
+          ETHL20_TXN1     : buffer   bit;
+          ETHL20_TXP1     : buffer   bit;
+          ETHL20_TXN2     : buffer   bit;
+          ETHL20_TXP2     : buffer   bit;
+          ETHL20_TXN3     : buffer   bit;
+          ETHL20_TXP3     : buffer   bit;
+          ETHL20_TXN4     : buffer   bit;
+          ETHL20_TXP4     : buffer   bit;
+          ETHL20_TXN5     : buffer   bit;
+          ETHL20_TXP5     : buffer   bit;
+          ETHL20_TXN6     : buffer   bit;
+          ETHL20_TXP6     : buffer   bit;
+          ETHL20_TXN7     : buffer   bit;
+          ETHL20_TXP7     : buffer   bit;
+          ETHL21_TXN0     : buffer   bit;
+          ETHL21_TXP0     : buffer   bit;
+          ETHL21_TXN1     : buffer   bit;
+          ETHL21_TXP1     : buffer   bit;
+          ETHL21_TXN2     : buffer   bit;
+          ETHL21_TXP2     : buffer   bit;
+          ETHL21_TXN3     : buffer   bit;
+          ETHL21_TXP3     : buffer   bit;
+          ETHL21_TXN4     : buffer   bit;
+          ETHL21_TXP4     : buffer   bit;
+          ETHL21_TXN5     : buffer   bit;
+          ETHL21_TXP5     : buffer   bit;
+          ETHL21_TXN6     : buffer   bit;
+          ETHL21_TXP6     : buffer   bit;
+          ETHL21_TXN7     : buffer   bit;
+          ETHL21_TXP7     : buffer   bit;
+          ETHL22_TXN0     : buffer   bit;
+          ETHL22_TXP0     : buffer   bit;
+          ETHL22_TXN1     : buffer   bit;
+          ETHL22_TXP1     : buffer   bit;
+          ETHL22_TXN2     : buffer   bit;
+          ETHL22_TXP2     : buffer   bit;
+          ETHL22_TXN3     : buffer   bit;
+          ETHL22_TXP3     : buffer   bit;
+          ETHL22_TXN4     : buffer   bit;
+          ETHL22_TXP4     : buffer   bit;
+          ETHL22_TXN5     : buffer   bit;
+          ETHL22_TXP5     : buffer   bit;
+          ETHL22_TXN6     : buffer   bit;
+          ETHL22_TXP6     : buffer   bit;
+          ETHL22_TXN7     : buffer   bit;
+          ETHL22_TXP7     : buffer   bit;
+          ETHL23_TXN0     : buffer   bit;
+          ETHL23_TXP0     : buffer   bit;
+          ETHL23_TXN1     : buffer   bit;
+          ETHL23_TXP1     : buffer   bit;
+          ETHL23_TXN2     : buffer   bit;
+          ETHL23_TXP2     : buffer   bit;
+          ETHL23_TXN3     : buffer   bit;
+          ETHL23_TXP3     : buffer   bit;
+          ETHL23_TXN4     : buffer   bit;
+          ETHL23_TXP4     : buffer   bit;
+          ETHL23_TXN5     : buffer   bit;
+          ETHL23_TXP5     : buffer   bit;
+          ETHL23_TXN6     : buffer   bit;
+          ETHL23_TXP6     : buffer   bit;
+          ETHL23_TXN7     : buffer   bit;
+          ETHL23_TXP7     : buffer   bit;
+          TCK                      : in  bit;
+          PDIE3_TDI                      : in  bit;
+          PDIE3_TDO                      : out  bit;
+          TMS                      : in  bit;
+          PDIE_TRI_EN                   : inout  bit;
+          PDIE3_TRST_L                   : in  bit
+   );
+
+   use STD_1149_1_2001.all;
+   use STD_1149_6_2003.all;
+
+   attribute COMPONENT_CONFORMANCE of qua_dwalin: entity is "STD_1149_1_2001";
+
+   attribute PIN_MAP of qua_dwalin: entity is PHYSICAL_PIN_MAP;
+
+-- This section specifies the pin map for each port. This information is
+-- extracted from the port-to-pin map file that was read in using the
+-- "read_pin_map" command.
+
+     constant all_pkg: PIN_MAP_STRING :=
+        "I_CLK_OBS_EN             : BW59," &
+        "I_CORE_FREQ_SEL_0        : T22," &
+        "I_CORE_FREQ_SEL_1        : U22," &
+        "I_CORE_PLL_BYP           : AA57," &
+        "I_CORE_PLL_RST_N         : BV21," &
+        "ETHL16_RXN0     : F16," &
+        "ETHL16_RXP0     : G16," &
+        "ETHL16_RXN1     : G14," &
+        "ETHL16_RXP1     : F14," &
+        "ETHL16_RXN2     : J16," &
+        "ETHL16_RXP2     : K16," &
+        "ETHL16_RXN3     : K14," &
+        "ETHL16_RXP3     : J14," &
+        "ETHL16_RXN4     : J12," &
+        "ETHL16_RXP4     : K12," &
+        "ETHL16_RXN5     : D10," &
+        "ETHL16_RXP5     : D9," &
+        "ETHL16_RXN6     : D6," &
+        "ETHL16_RXP6     : D7," &
+        "ETHL16_RXN7     : G12," &
+        "ETHL16_RXP7     : F12," &
+        "ETHL17_RXN0     : H6," &
+        "ETHL17_RXP0     : H7," &
+        "ETHL17_RXN1     : F9," &
+        "ETHL17_RXP1     : F10," &
+        "ETHL17_RXN2     : H9," &
+        "ETHL17_RXP2     : H10," &
+        "ETHL17_RXN3     : F6," &
+        "ETHL17_RXP3     : F7," &
+        "ETHL17_RXN4     : K10," &
+        "ETHL17_RXP4     : K9," &
+        "ETHL17_RXN5     : K7," &
+        "ETHL17_RXP5     : K6," &
+        "ETHL17_RXN6     : M6," &
+        "ETHL17_RXP6     : M7," &
+        "ETHL17_RXN7     : M9," &
+        "ETHL17_RXP7     : M10," &
+        "ETHL18_RXN0     : T6," &
+        "ETHL18_RXP0     : T7," &
+        "ETHL18_RXN1     : P9," &
+        "ETHL18_RXP1     : P10," &
+        "ETHL18_RXN2     : P6," &
+        "ETHL18_RXP2     : P7," &
+        "ETHL18_RXN3     : T9," &
+        "ETHL18_RXP3     : T10," &
+        "ETHL18_RXN4     : V10," &
+        "ETHL18_RXP4     : V9," &
+        "ETHL18_RXN5     : V7," &
+        "ETHL18_RXP5     : V6," &
+        "ETHL18_RXN6     : Y6," &
+        "ETHL18_RXP6     : Y7," &
+        "ETHL18_RXN7     : Y9," &
+        "ETHL18_RXP7     : Y10," &
+        "ETHL19_RXN0     : AD6," &
+        "ETHL19_RXP0     : AD7," &
+        "ETHL19_RXN1     : AB9," &
+        "ETHL19_RXP1     : AB10," &
+        "ETHL19_RXN2     : AB6," &
+        "ETHL19_RXP2     : AB7," &
+        "ETHL19_RXN3     : AD9," &
+        "ETHL19_RXP3     : AD10," &
+        "ETHL19_RXN4     : AF7," &
+        "ETHL19_RXP4     : AF6," &
+        "ETHL19_RXN5     : AH10," &
+        "ETHL19_RXP5     : AH9," &
+        "ETHL19_RXN6     : AH6," &
+        "ETHL19_RXP6     : AH7," &
+        "ETHL19_RXN7     : AF9," &
+        "ETHL19_RXP7     : AF10," &
+        "ETHL20_RXN0     : AM6," &
+        "ETHL20_RXP0     : AM7," &
+        "ETHL20_RXN1     : AK9," &
+        "ETHL20_RXP1     : AK10," &
+        "ETHL20_RXN2     : AK6," &
+        "ETHL20_RXP2     : AK7," &
+        "ETHL20_RXN3     : AM10," &
+        "ETHL20_RXP3     : AM9," &
+        "ETHL20_RXN4     : AP6," &
+        "ETHL20_RXP4     : AP7," &
+        "ETHL20_RXN5     : AT9," &
+        "ETHL20_RXP5     : AT10," &
+        "ETHL20_RXN6     : AT7," &
+        "ETHL20_RXP6     : AT6," &
+        "ETHL20_RXN7     : AP10," &
+        "ETHL20_RXP7     : AP9," &
+        "ETHL21_RXN0     : AY7," &
+        "ETHL21_RXP0     : AY6," &
+        "ETHL21_RXN1     : AV10," &
+        "ETHL21_RXP1     : AV9," &
+        "ETHL21_RXN2     : AV7," &
+        "ETHL21_RXP2     : AV6," &
+        "ETHL21_RXN3     : AY10," &
+        "ETHL21_RXP3     : AY9," &
+        "ETHL21_RXN4     : BB6," &
+        "ETHL21_RXP4     : BB7," &
+        "ETHL21_RXN5     : BB9," &
+        "ETHL21_RXP5     : BB10," &
+        "ETHL21_RXN6     : BD10," &
+        "ETHL21_RXP6     : BD9," &
+        "ETHL21_RXN7     : BD7," &
+        "ETHL21_RXP7     : BD6," &
+        "ETHL22_RXN0     : BH7," &
+        "ETHL22_RXP0     : BH6," &
+        "ETHL22_RXN1     : BF10," &
+        "ETHL22_RXP1     : BF9," &
+        "ETHL22_RXN2     : BF7," &
+        "ETHL22_RXP2     : BF6," &
+        "ETHL22_RXN3     : BH10," &
+        "ETHL22_RXP3     : BH9," &
+        "ETHL22_RXN4     : BK6," &
+        "ETHL22_RXP4     : BK7," &
+        "ETHL22_RXN5     : BK9," &
+        "ETHL22_RXP5     : BK10," &
+        "ETHL22_RXN6     : BM10," &
+        "ETHL22_RXP6     : BM9," &
+        "ETHL22_RXN7     : BM7," &
+        "ETHL22_RXP7     : BM6," &
+        "ETHL23_RXN0     : BT7," &
+        "ETHL23_RXP0     : BT6," &
+        "ETHL23_RXN1     : BP10," &
+        "ETHL23_RXP1     : BP9," &
+        "ETHL23_RXN2     : BP7," &
+        "ETHL23_RXP2     : BP6," &
+        "ETHL23_RXN3     : BT10," &
+        "ETHL23_RXP3     : BT9," &
+        "ETHL23_RXN4     : BV6," &
+        "ETHL23_RXP4     : BV7," &
+        "ETHL23_RXN5     : BV9," &
+        "ETHL23_RXP5     : BV10," &
+        "ETHL23_RXN6     : BY7," &
+        "ETHL23_RXP6     : BY6," &
+        "ETHL23_RXN7     : BY10," &
+        "ETHL23_RXP7     : BY9," &
+        "I_PLL_OBS_EN             : BY57," &
+        "B_I2C_CLK                : P23," &
+        "B_I2C_DATA               : R22," &
+        "PDIE3_B_PTP_SYNC_MASTER        : V15," &
+        "PDIE3_GPIO00_G_DFT_24                  : T17," &
+        "PDIE3_GPIO01_G_DFT_25                  : V17," &
+        "PDIE3_GPIO02_G_DFT_26                  : T19," &
+        "PDIE3_GPIO03_G_DFT_27                  : P15," &
+        "PDIE3_GPIO04_G_DFT_28                  : U13," &
+        "PDIE3_GPIO05_G_DFT_29                  : V13," &
+        "HOST_SCL                 : V58," &
+        "HOST_SDA                 : M60," &
+        "PDIE3_I_PTP_SYNC_SLAVE         : W18," &
+        "ETHL16_TXN0     : D18," &
+        "ETHL16_TXP0     : C18," &
+        "ETHL16_TXN1     : B17," &
+        "ETHL16_TXP1     : A17," &
+        "ETHL16_TXN2     : B15," &
+        "ETHL16_TXP2     : A15," &
+        "ETHL16_TXN3     : D16," &
+        "ETHL16_TXP3     : C16," &
+        "ETHL16_TXN4     : A13," &
+        "ETHL16_TXP4     : B13," &
+        "ETHL16_TXN5     : D14," &
+        "ETHL16_TXP5     : C14," &
+        "ETHL16_TXN6     : A11," &
+        "ETHL16_TXP6     : B11," &
+        "ETHL16_TXN7     : C12," &
+        "ETHL16_TXP7     : D12," &
+        "ETHL17_TXN0     : A9," &
+        "ETHL17_TXP0     : B9," &
+        "ETHL17_TXN1     : B7," &
+        "ETHL17_TXP1     : A7," &
+        "ETHL17_TXN2     : F3," &
+        "ETHL17_TXP2     : F4," &
+        "ETHL17_TXN3     : G1," &
+        "ETHL17_TXP3     : G2," &
+        "ETHL17_TXN4     : H4," &
+        "ETHL17_TXP4     : H3," &
+        "ETHL17_TXN5     : J2," &
+        "ETHL17_TXP5     : J1," &
+        "ETHL17_TXN6     : K3," &
+        "ETHL17_TXP6     : K4," &
+        "ETHL17_TXN7     : L1," &
+        "ETHL17_TXP7     : L2," &
+        "ETHL18_TXN0     : M4," &
+        "ETHL18_TXP0     : M3," &
+        "ETHL18_TXN1     : N2," &
+        "ETHL18_TXP1     : N1," &
+        "ETHL18_TXN2     : P4," &
+        "ETHL18_TXP2     : P3," &
+        "ETHL18_TXN3     : R2," &
+        "ETHL18_TXP3     : R1," &
+        "ETHL18_TXN4     : T4," &
+        "ETHL18_TXP4     : T3," &
+        "ETHL18_TXN5     : U2," &
+        "ETHL18_TXP5     : U1," &
+        "ETHL18_TXN6     : V3," &
+        "ETHL18_TXP6     : V4," &
+        "ETHL18_TXN7     : W1," &
+        "ETHL18_TXP7     : W2," &
+        "ETHL19_TXN0     : Y4," &
+        "ETHL19_TXP0     : Y3," &
+        "ETHL19_TXN1     : AA2," &
+        "ETHL19_TXP1     : AA1," &
+        "ETHL19_TXN2     : AB4," &
+        "ETHL19_TXP2     : AB3," &
+        "ETHL19_TXN3     : AC2," &
+        "ETHL19_TXP3     : AC1," &
+        "ETHL19_TXN4     : AD4," &
+        "ETHL19_TXP4     : AD3," &
+        "ETHL19_TXN5     : AE2," &
+        "ETHL19_TXP5     : AE1," &
+        "ETHL19_TXN6     : AF3," &
+        "ETHL19_TXP6     : AF4," &
+        "ETHL19_TXN7     : AG1," &
+        "ETHL19_TXP7     : AG2," &
+        "ETHL20_TXN0     : AH4," &
+        "ETHL20_TXP0     : AH3," &
+        "ETHL20_TXN1     : AJ2," &
+        "ETHL20_TXP1     : AJ1," &
+        "ETHL20_TXN2     : AK4," &
+        "ETHL20_TXP2     : AK3," &
+        "ETHL20_TXN3     : AL2," &
+        "ETHL20_TXP3     : AL1," &
+        "ETHL20_TXN4     : AM3," &
+        "ETHL20_TXP4     : AM4," &
+        "ETHL20_TXN5     : AN2," &
+        "ETHL20_TXP5     : AN1," &
+        "ETHL20_TXN6     : AP3," &
+        "ETHL20_TXP6     : AP4," &
+        "ETHL20_TXN7     : AR1," &
+        "ETHL20_TXP7     : AR2," &
+        "ETHL21_TXN0     : AU1," &
+        "ETHL21_TXP0     : AU2," &
+        "ETHL21_TXN1     : AT4," &
+        "ETHL21_TXP1     : AT3," &
+        "ETHL21_TXN2     : AW2," &
+        "ETHL21_TXP2     : AW1," &
+        "ETHL21_TXN3     : AV4," &
+        "ETHL21_TXP3     : AV3," &
+        "ETHL21_TXN4     : BA1," &
+        "ETHL21_TXP4     : BA2," &
+        "ETHL21_TXN5     : AY4," &
+        "ETHL21_TXP5     : AY3," &
+        "ETHL21_TXN6     : BC1," &
+        "ETHL21_TXP6     : BC2," &
+        "ETHL21_TXN7     : BB3," &
+        "ETHL21_TXP7     : BB4," &
+        "ETHL22_TXN0     : BE1," &
+        "ETHL22_TXP0     : BE2," &
+        "ETHL22_TXN1     : BD4," &
+        "ETHL22_TXP1     : BD3," &
+        "ETHL22_TXN2     : BG2," &
+        "ETHL22_TXP2     : BG1," &
+        "ETHL22_TXN3     : BF4," &
+        "ETHL22_TXP3     : BF3," &
+        "ETHL22_TXN4     : BJ1," &
+        "ETHL22_TXP4     : BJ2," &
+        "ETHL22_TXN5     : BH4," &
+        "ETHL22_TXP5     : BH3," &
+        "ETHL22_TXN6     : BL1," &
+        "ETHL22_TXP6     : BL2," &
+        "ETHL22_TXN7     : BK3," &
+        "ETHL22_TXP7     : BK4," &
+        "ETHL23_TXN0     : BN1," &
+        "ETHL23_TXP0     : BN2," &
+        "ETHL23_TXN1     : BM4," &
+        "ETHL23_TXP1     : BM3," &
+        "ETHL23_TXN2     : BR2," &
+        "ETHL23_TXP2     : BR1," &
+        "ETHL23_TXN3     : BP4," &
+        "ETHL23_TXP3     : BP3," &
+        "ETHL23_TXN4     : BU1," &
+        "ETHL23_TXP4     : BU2," &
+        "ETHL23_TXN5     : BT4," &
+        "ETHL23_TXP5     : BT3," &
+        "ETHL23_TXN6     : BW1," &
+        "ETHL23_TXP6     : BW2," &
+        "ETHL23_TXN7     : BV3," &
+        "ETHL23_TXP7     : BV4," &
+        "TCK             : CE55," &
+        "PDIE3_TDI       : W13," &
+        "PDIE3_TDO       : T21," &
+        "TMS             : BV22," &
+        "PDIE_TRI_EN     : P22," &
+        "PDIE3_TRST_L    : W20";
+
+-- This section specifies the differential IO port groupings.
+
+   attribute PORT_GROUPING of qua_dwalin: entity is
+      "Differential_Voltage ( " &
+          "(ETHL16_RXP0,ETHL16_RXN0)," &
+          "(ETHL16_RXP1,ETHL16_RXN1)," &
+          "(ETHL16_RXP2,ETHL16_RXN2)," &
+          "(ETHL16_RXP3,ETHL16_RXN3)," &
+          "(ETHL16_RXP4,ETHL16_RXN4)," &
+          "(ETHL16_RXP5,ETHL16_RXN5)," &
+          "(ETHL16_RXP6,ETHL16_RXN6)," &
+          "(ETHL16_RXP7,ETHL16_RXN7)," &
+          "(ETHL17_RXP0,ETHL17_RXN0)," &
+          "(ETHL17_RXP1,ETHL17_RXN1)," &
+          "(ETHL17_RXP2,ETHL17_RXN2)," &
+          "(ETHL17_RXP3,ETHL17_RXN3)," &
+          "(ETHL17_RXP4,ETHL17_RXN4)," &
+          "(ETHL17_RXP5,ETHL17_RXN5)," &
+          "(ETHL17_RXP6,ETHL17_RXN6)," &
+          "(ETHL17_RXP7,ETHL17_RXN7)," &
+          "(ETHL18_RXP0,ETHL18_RXN0)," &
+          "(ETHL18_RXP1,ETHL18_RXN1)," &
+          "(ETHL18_RXP2,ETHL18_RXN2)," &
+          "(ETHL18_RXP3,ETHL18_RXN3)," &
+          "(ETHL18_RXP4,ETHL18_RXN4)," &
+          "(ETHL18_RXP5,ETHL18_RXN5)," &
+          "(ETHL18_RXP6,ETHL18_RXN6)," &
+          "(ETHL18_RXP7,ETHL18_RXN7)," &
+          "(ETHL19_RXP0,ETHL19_RXN0)," &
+          "(ETHL19_RXP1,ETHL19_RXN1)," &
+          "(ETHL19_RXP2,ETHL19_RXN2)," &
+          "(ETHL19_RXP3,ETHL19_RXN3)," &
+          "(ETHL19_RXP4,ETHL19_RXN4)," &
+          "(ETHL19_RXP5,ETHL19_RXN5)," &
+          "(ETHL19_RXP6,ETHL19_RXN6)," &
+          "(ETHL19_RXP7,ETHL19_RXN7)," &
+          "(ETHL20_RXP0,ETHL20_RXN0)," &
+          "(ETHL20_RXP1,ETHL20_RXN1)," &
+          "(ETHL20_RXP2,ETHL20_RXN2)," &
+          "(ETHL20_RXP3,ETHL20_RXN3)," &
+          "(ETHL20_RXP4,ETHL20_RXN4)," &
+          "(ETHL20_RXP5,ETHL20_RXN5)," &
+          "(ETHL20_RXP6,ETHL20_RXN6)," &
+          "(ETHL20_RXP7,ETHL20_RXN7)," &
+          "(ETHL21_RXP0,ETHL21_RXN0)," &
+          "(ETHL21_RXP1,ETHL21_RXN1)," &
+          "(ETHL21_RXP2,ETHL21_RXN2)," &
+          "(ETHL21_RXP3,ETHL21_RXN3)," &
+          "(ETHL21_RXP4,ETHL21_RXN4)," &
+          "(ETHL21_RXP5,ETHL21_RXN5)," &
+          "(ETHL21_RXP6,ETHL21_RXN6)," &
+          "(ETHL21_RXP7,ETHL21_RXN7)," &
+          "(ETHL22_RXP0,ETHL22_RXN0)," &
+          "(ETHL22_RXP1,ETHL22_RXN1)," &
+          "(ETHL22_RXP2,ETHL22_RXN2)," &
+          "(ETHL22_RXP3,ETHL22_RXN3)," &
+          "(ETHL22_RXP4,ETHL22_RXN4)," &
+          "(ETHL22_RXP5,ETHL22_RXN5)," &
+          "(ETHL22_RXP6,ETHL22_RXN6)," &
+          "(ETHL22_RXP7,ETHL22_RXN7)," &
+          "(ETHL23_RXP0,ETHL23_RXN0)," &
+          "(ETHL23_RXP1,ETHL23_RXN1)," &
+          "(ETHL23_RXP2,ETHL23_RXN2)," &
+          "(ETHL23_RXP3,ETHL23_RXN3)," &
+          "(ETHL23_RXP4,ETHL23_RXN4)," &
+          "(ETHL23_RXP5,ETHL23_RXN5)," &
+          "(ETHL23_RXP6,ETHL23_RXN6)," &
+          "(ETHL23_RXP7,ETHL23_RXN7)," &
+          "(ETHL16_TXP0,ETHL16_TXN0)," &
+          "(ETHL16_TXP1,ETHL16_TXN1)," &
+          "(ETHL16_TXP2,ETHL16_TXN2)," &
+          "(ETHL16_TXP3,ETHL16_TXN3)," &
+          "(ETHL16_TXP4,ETHL16_TXN4)," &
+          "(ETHL16_TXP5,ETHL16_TXN5)," &
+          "(ETHL16_TXP6,ETHL16_TXN6)," &
+          "(ETHL16_TXP7,ETHL16_TXN7)," &
+          "(ETHL17_TXP0,ETHL17_TXN0)," &
+          "(ETHL17_TXP1,ETHL17_TXN1)," &
+          "(ETHL17_TXP2,ETHL17_TXN2)," &
+          "(ETHL17_TXP3,ETHL17_TXN3)," &
+          "(ETHL17_TXP4,ETHL17_TXN4)," &
+          "(ETHL17_TXP5,ETHL17_TXN5)," &
+          "(ETHL17_TXP6,ETHL17_TXN6)," &
+          "(ETHL17_TXP7,ETHL17_TXN7)," &
+          "(ETHL18_TXP0,ETHL18_TXN0)," &
+          "(ETHL18_TXP1,ETHL18_TXN1)," &
+          "(ETHL18_TXP2,ETHL18_TXN2)," &
+          "(ETHL18_TXP3,ETHL18_TXN3)," &
+          "(ETHL18_TXP4,ETHL18_TXN4)," &
+          "(ETHL18_TXP5,ETHL18_TXN5)," &
+          "(ETHL18_TXP6,ETHL18_TXN6)," &
+          "(ETHL18_TXP7,ETHL18_TXN7)," &
+          "(ETHL19_TXP0,ETHL19_TXN0)," &
+          "(ETHL19_TXP1,ETHL19_TXN1)," &
+          "(ETHL19_TXP2,ETHL19_TXN2)," &
+          "(ETHL19_TXP3,ETHL19_TXN3)," &
+          "(ETHL19_TXP4,ETHL19_TXN4)," &
+          "(ETHL19_TXP5,ETHL19_TXN5)," &
+          "(ETHL19_TXP6,ETHL19_TXN6)," &
+          "(ETHL19_TXP7,ETHL19_TXN7)," &
+          "(ETHL20_TXP0,ETHL20_TXN0)," &
+          "(ETHL20_TXP1,ETHL20_TXN1)," &
+          "(ETHL20_TXP2,ETHL20_TXN2)," &
+          "(ETHL20_TXP3,ETHL20_TXN3)," &
+          "(ETHL20_TXP4,ETHL20_TXN4)," &
+          "(ETHL20_TXP5,ETHL20_TXN5)," &
+          "(ETHL20_TXP6,ETHL20_TXN6)," &
+          "(ETHL20_TXP7,ETHL20_TXN7)," &
+          "(ETHL21_TXP0,ETHL21_TXN0)," &
+          "(ETHL21_TXP1,ETHL21_TXN1)," &
+          "(ETHL21_TXP2,ETHL21_TXN2)," &
+          "(ETHL21_TXP3,ETHL21_TXN3)," &
+          "(ETHL21_TXP4,ETHL21_TXN4)," &
+          "(ETHL21_TXP5,ETHL21_TXN5)," &
+          "(ETHL21_TXP6,ETHL21_TXN6)," &
+          "(ETHL21_TXP7,ETHL21_TXN7)," &
+          "(ETHL22_TXP0,ETHL22_TXN0)," &
+          "(ETHL22_TXP1,ETHL22_TXN1)," &
+          "(ETHL22_TXP2,ETHL22_TXN2)," &
+          "(ETHL22_TXP3,ETHL22_TXN3)," &
+          "(ETHL22_TXP4,ETHL22_TXN4)," &
+          "(ETHL22_TXP5,ETHL22_TXN5)," &
+          "(ETHL22_TXP6,ETHL22_TXN6)," &
+          "(ETHL22_TXP7,ETHL22_TXN7)," &
+          "(ETHL23_TXP0,ETHL23_TXN0)," &
+          "(ETHL23_TXP1,ETHL23_TXN1)," &
+          "(ETHL23_TXP2,ETHL23_TXN2)," &
+          "(ETHL23_TXP3,ETHL23_TXN3)," &
+          "(ETHL23_TXP4,ETHL23_TXN4)," &
+          "(ETHL23_TXP5,ETHL23_TXN5)," &
+          "(ETHL23_TXP6,ETHL23_TXN6)," &
+          "(ETHL23_TXP7,ETHL23_TXN7))";
+
+-- This section specifies the TAP ports. For the TAP TCK port, the parameters in
+-- the brackets are:
+--        First Field : Maximum  TCK frequency.
+--        Second Field: Allowable states TCK may be stopped in.
+
+   attribute TAP_SCAN_CLOCK of TCK   : signal is (5.000000e+06, BOTH);
+   attribute TAP_SCAN_IN    of PDIE3_TDI   : signal is true;
+   attribute TAP_SCAN_MODE  of TMS   : signal is true;
+   attribute TAP_SCAN_OUT   of PDIE3_TDO   : signal is true;
+   attribute TAP_SCAN_RESET of PDIE3_TRST_L: signal is true;
+
+-- Specifies the compliance enable patterns for the design. It lists a set of
+-- design ports and the values that they should be set to, in order to enable
+-- compliance to IEEE Std 1149.1
+
+--YW--   attribute COMPLIANCE_PATTERNS of qua_dwalin: entity is
+--YW--        "(CPU2JTAG_EN, I_CORE_RST_N, PDIE_TRI_EN) (010)";
+
+-- Specifies the number of bits in the instruction register.
+
+   attribute INSTRUCTION_LENGTH of qua_dwalin: entity is 6;
+
+-- Specifies the boundary-scan instructions implemented in the design and their
+-- opcodes.
+
+   attribute INSTRUCTION_OPCODE of qua_dwalin: entity is
+     "BYPASS       (111111)," &
+     "EXTEST       (100100)," &
+     "SAMPLE       (100101)," &
+     "PRELOAD      (100101)," &
+     "EXTEST_PULSE (100111)," &
+     "EXTEST_TRAIN (100110)," &
+     "IDCODE       (111110)";
+
+-- Specifies the bit pattern that is loaded into the instruction register when
+-- the TAP controller passes through the Capture-IR state. The standard mandates
+-- that the two LSBs must be "01". The remaining bits are design specific.
+
+   attribute INSTRUCTION_CAPTURE of qua_dwalin: entity is "000001";
+
+-- Specifies the bit pattern that is loaded into the DEVICE_ID register during
+-- the IDCODE instruction when the TAP controller passes through the Capture-DR
+-- state.
+
+   attribute IDCODE_REGISTER of qua_dwalin: entity is
+     "0001" &
+ -- 4-bit version number
+     "0000010001111100" &
+ -- 16-bit part number
+     "01000100110" &
+ -- 11-bit identity of the manufacturer
+     "1";
+ -- Required by IEEE Std 1149.1
+
+-- This section specifies the test data register placed between TDI and TDO for
+-- each implemented instruction.
+
+   attribute REGISTER_ACCESS of qua_dwalin: entity is
+        "BYPASS    (BYPASS)," &
+        "BOUNDARY  (EXTEST, SAMPLE, PRELOAD, EXTEST_PULSE, EXTEST_TRAIN)," &
+        "DEVICE_ID (IDCODE)";
+
+-- Specifies the length of the boundary scan register.
+
+   attribute BOUNDARY_LENGTH of qua_dwalin: entity is 223;
+
+-- The following list specifies the characteristics of each cell in the boundary
+-- scan register from TDI to TDO. The following is a description of the label
+-- fields:
+--      num     : Is the cell number.
+--      cell    : Is the cell type as defined by the standard.
+--      port    : Is the design port name. Control cells do not have a port
+--                name.
+--      function: Is the function of the cell as defined by the standard. Is one
+--                of input, output2, output3, bidir, control or controlr.
+--      safe    : Specifies the value that the BSR cell should be loaded with
+--                for safe operation when the software might otherwise choose a
+--                random value.
+--      ccell   : The control cell number. Specifies the control cell that
+--                drives the output enable for this port.
+--      disval  : Specifies the value that is loaded into the control cell to
+--                disable the output enable for the corresponding port.
+--      rslt    : Resulting state. Shows the state of the driver when it is
+--                disabled.
+
+   attribute BOUNDARY_REGISTER of qua_dwalin: entity is
+--
+--    num   cell   port                      function      safe  [ccell  disval
+--     rslt]
+--
+     "222  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "221  (BC_7,  PDIE3_B_PTP_SYNC_MASTER,    bidir,        X,    222,    " &
+     "0,      Z),  " &
+     "220  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "219  (BC_7,  PDIE3_I_PTP_SYNC_SLAVE,     bidir,        X,    220,    " &
+     "0,      Z),  " &
+     "218  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "217  (BC_7,  PDIE3_GPIO00_G_DFT_24,              bidir,        X,    218,    " &
+     "0,      Z),  " &
+     "216  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "215  (BC_7,  PDIE3_GPIO01_G_DFT_25,              bidir,        X,    216,    " &
+     "0,      Z),  " &
+     "214  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "213  (BC_7,  PDIE3_GPIO02_G_DFT_26,              bidir,        X,    214,    " &
+     "0,      Z),  " &
+     "212  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "211  (BC_7,  PDIE3_GPIO03_G_DFT_27,              bidir,        X,    212,    " &
+     "0,      Z),  " &
+     "210  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "209  (BC_7,  PDIE3_GPIO04_G_DFT_28,              bidir,        X,    210,    " &
+     "0,      Z),  " &
+     "208  (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "207  (BC_7,  PDIE3_GPIO05_G_DFT_29,              bidir,        X,    208,    " &
+     "0,      Z),  " &
+     "206  (AC_1,  ETHL16_TXP0, output2,      " &
+     "X),                        " &
+     "205  (AC_SELU,*,                        internal,     " &
+     "0),                        " &
+     "204  (AC_1,  ETHL16_TXP1, output2,      " &
+     "X),                        " &
+     "203  (BC_4,  ETHL16_RXN0, observe_only, " &
+     "X),                        " &
+     "202  (BC_4,  ETHL16_RXP0, observe_only, " &
+     "X),                        " &
+     "201  (BC_4,  ETHL16_RXP1, observe_only, " &
+     "X),                        " &
+     "200  (BC_4,  ETHL16_RXN1, observe_only, " &
+     "X),                        " &
+     "199  (AC_1,  ETHL16_TXP2, output2,      " &
+     "X),                        " &
+     "198  (AC_1,  ETHL16_TXP3, output2,      " &
+     "X),                        " &
+     "197  (BC_4,  ETHL16_RXN2, observe_only, " &
+     "X),                        " &
+     "196  (BC_4,  ETHL16_RXP2, observe_only, " &
+     "X),                        " &
+     "195  (BC_4,  ETHL16_RXP3, observe_only, " &
+     "X),                        " &
+     "194  (BC_4,  ETHL16_RXN3, observe_only, " &
+     "X),                        " &
+     "193  (AC_1,  ETHL16_TXP4, output2,      " &
+     "X),                        " &
+     "192  (AC_1,  ETHL16_TXP5, output2,      " &
+     "X),                        " &
+     "191  (BC_4,  ETHL16_RXN4, observe_only, " &
+     "X),                        " &
+     "190  (BC_4,  ETHL16_RXP4, observe_only, " &
+     "X),                        " &
+     "189  (BC_4,  ETHL16_RXP5, observe_only, " &
+     "X),                        " &
+     "188  (BC_4,  ETHL16_RXN5, observe_only, " &
+     "X),                        " &
+     "187  (AC_1,  ETHL16_TXP6, output2,      " &
+     "X),                        " &
+     "186  (AC_1,  ETHL16_TXP7, output2,      " &
+     "X),                        " &
+     "185  (BC_4,  ETHL16_RXN6, observe_only, " &
+     "X),                        " &
+     "184  (BC_4,  ETHL16_RXP6, observe_only, " &
+     "X),                        " &
+     "183  (BC_4,  ETHL16_RXP7, observe_only, " &
+     "X),                        " &
+     "182  (BC_4,  ETHL16_RXN7, observe_only, " &
+     "X),                        " &
+     "181  (AC_1,  ETHL17_TXP0, output2,      " &
+     "X),                        " &
+     "180  (AC_1,  ETHL17_TXP1, output2,      " &
+     "X),                        " &
+     "179  (BC_4,  ETHL17_RXN0, observe_only, " &
+     "X),                        " &
+     "178  (BC_4,  ETHL17_RXP0, observe_only, " &
+     "X),                        " &
+     "177  (BC_4,  ETHL17_RXP1, observe_only, " &
+     "X),                        " &
+     "176  (BC_4,  ETHL17_RXN1, observe_only, " &
+     "X),                        " &
+     "175  (AC_1,  ETHL17_TXP2, output2,      " &
+     "X),                        " &
+     "174  (AC_1,  ETHL17_TXP3, output2,      " &
+     "X),                        " &
+     "173  (BC_4,  ETHL17_RXN2, observe_only, " &
+     "X),                        " &
+     "172  (BC_4,  ETHL17_RXP2, observe_only, " &
+     "X),                        " &
+     "171  (BC_4,  ETHL17_RXP3, observe_only, " &
+     "X),                        " &
+     "170  (BC_4,  ETHL17_RXN3, observe_only, " &
+     "X),                        " &
+     "169  (AC_1,  ETHL17_TXP4, output2,      " &
+     "X),                        " &
+     "168  (AC_1,  ETHL17_TXP5, output2,      " &
+     "X),                        " &
+     "167  (BC_4,  ETHL17_RXN4, observe_only, " &
+     "X),                        " &
+     "166  (BC_4,  ETHL17_RXP4, observe_only, " &
+     "X),                        " &
+     "165  (BC_4,  ETHL17_RXP5, observe_only, " &
+     "X),                        " &
+     "164  (BC_4,  ETHL17_RXN5, observe_only, " &
+     "X),                        " &
+     "163  (AC_1,  ETHL17_TXP6, output2,      " &
+     "X),                        " &
+     "162  (AC_1,  ETHL17_TXP7, output2,      " &
+     "X),                        " &
+     "161  (BC_4,  ETHL17_RXN6, observe_only, " &
+     "X),                        " &
+     "160  (BC_4,  ETHL17_RXP6, observe_only, " &
+     "X),                        " &
+     "159  (BC_4,  ETHL17_RXP7, observe_only, " &
+     "X),                        " &
+     "158  (BC_4,  ETHL17_RXN7, observe_only, " &
+     "X),                        " &
+     "157  (AC_1,  ETHL18_TXP0, output2,      " &
+     "X),                        " &
+     "156  (AC_1,  ETHL18_TXP1, output2,      " &
+     "X),                        " &
+     "155  (BC_4,  ETHL18_RXN0, observe_only, " &
+     "X),                        " &
+     "154  (BC_4,  ETHL18_RXP0, observe_only, " &
+     "X),                        " &
+     "153  (BC_4,  ETHL18_RXP1, observe_only, " &
+     "X),                        " &
+     "152  (BC_4,  ETHL18_RXN1, observe_only, " &
+     "X),                        " &
+     "151  (AC_1,  ETHL18_TXP2, output2,      " &
+     "X),                        " &
+     "150  (AC_1,  ETHL18_TXP3, output2,      " &
+     "X),                        " &
+     "149  (BC_4,  ETHL18_RXN2, observe_only, " &
+     "X),                        " &
+     "148  (BC_4,  ETHL18_RXP2, observe_only, " &
+     "X),                        " &
+     "147  (BC_4,  ETHL18_RXP3, observe_only, " &
+     "X),                        " &
+     "146  (BC_4,  ETHL18_RXN3, observe_only, " &
+     "X),                        " &
+     "145  (AC_1,  ETHL18_TXP4, output2,      " &
+     "X),                        " &
+     "144  (AC_1,  ETHL18_TXP5, output2,      " &
+     "X),                        " &
+     "143  (BC_4,  ETHL18_RXN4, observe_only, " &
+     "X),                        " &
+     "142  (BC_4,  ETHL18_RXP4, observe_only, " &
+     "X),                        " &
+     "141  (BC_4,  ETHL18_RXP5, observe_only, " &
+     "X),                        " &
+     "140  (BC_4,  ETHL18_RXN5, observe_only, " &
+     "X),                        " &
+     "139  (AC_1,  ETHL18_TXP6, output2,      " &
+     "X),                        " &
+     "138  (AC_1,  ETHL18_TXP7, output2,      " &
+     "X),                        " &
+     "137  (BC_4,  ETHL18_RXN6, observe_only, " &
+     "X),                        " &
+     "136  (BC_4,  ETHL18_RXP6, observe_only, " &
+     "X),                        " &
+     "135  (BC_4,  ETHL18_RXP7, observe_only, " &
+     "X),                        " &
+     "134  (BC_4,  ETHL18_RXN7, observe_only, " &
+     "X),                        " &
+     "133  (AC_1,  ETHL19_TXP0, output2,      " &
+     "X),                        " &
+     "132  (AC_1,  ETHL19_TXP1, output2,      " &
+     "X),                        " &
+     "131  (BC_4,  ETHL19_RXN0, observe_only, " &
+     "X),                        " &
+     "130  (BC_4,  ETHL19_RXP0, observe_only, " &
+     "X),                        " &
+     "129  (BC_4,  ETHL19_RXP1, observe_only, " &
+     "X),                        " &
+     "128  (BC_4,  ETHL19_RXN1, observe_only, " &
+     "X),                        " &
+     "127  (AC_1,  ETHL19_TXP2, output2,      " &
+     "X),                        " &
+     "126  (AC_1,  ETHL19_TXP3, output2,      " &
+     "X),                        " &
+     "125  (BC_4,  ETHL19_RXN2, observe_only, " &
+     "X),                        " &
+     "124  (BC_4,  ETHL19_RXP2, observe_only, " &
+     "X),                        " &
+     "123  (BC_4,  ETHL19_RXP3, observe_only, " &
+     "X),                        " &
+     "122  (BC_4,  ETHL19_RXN3, observe_only, " &
+     "X),                        " &
+     "121  (AC_1,  ETHL19_TXP4, output2,      " &
+     "X),                        " &
+     "120  (AC_1,  ETHL19_TXP5, output2,      " &
+     "X),                        " &
+     "119  (BC_4,  ETHL19_RXN4, observe_only, " &
+     "X),                        " &
+     "118  (BC_4,  ETHL19_RXP4, observe_only, " &
+     "X),                        " &
+     "117  (BC_4,  ETHL19_RXP5, observe_only, " &
+     "X),                        " &
+     "116  (BC_4,  ETHL19_RXN5, observe_only, " &
+     "X),                        " &
+     "115  (AC_1,  ETHL19_TXP6, output2,      " &
+     "X),                        " &
+     "114  (AC_1,  ETHL19_TXP7, output2,      " &
+     "X),                        " &
+     "113  (BC_4,  ETHL19_RXN6, observe_only, " &
+     "X),                        " &
+     "112  (BC_4,  ETHL19_RXP6, observe_only, " &
+     "X),                        " &
+     "111  (BC_4,  ETHL19_RXP7, observe_only, " &
+     "X),                        " &
+     "110  (BC_4,  ETHL19_RXN7, observe_only, " &
+     "X),                        " &
+     "109  (AC_1,  ETHL20_TXP0, output2,      " &
+     "X),                        " &
+     "108  (AC_1,  ETHL20_TXP1, output2,      " &
+     "X),                        " &
+     "107  (BC_4,  ETHL20_RXN0, observe_only, " &
+     "X),                        " &
+     "106  (BC_4,  ETHL20_RXP0, observe_only, " &
+     "X),                        " &
+     "105  (BC_4,  ETHL20_RXP1, observe_only, " &
+     "X),                        " &
+     "104  (BC_4,  ETHL20_RXN1, observe_only, " &
+     "X),                        " &
+     "103  (AC_1,  ETHL20_TXP2, output2,      " &
+     "X),                        " &
+     "102  (AC_1,  ETHL20_TXP3, output2,      " &
+     "X),                        " &
+     "101  (BC_4,  ETHL20_RXN2, observe_only, " &
+     "X),                        " &
+     "100  (BC_4,  ETHL20_RXP2, observe_only, " &
+     "X),                        " &
+     "99   (BC_4,  ETHL20_RXP3, observe_only, " &
+     "X),                        " &
+     "98   (BC_4,  ETHL20_RXN3, observe_only, " &
+     "X),                        " &
+     "97   (AC_1,  ETHL20_TXP4, output2,      " &
+     "X),                        " &
+     "96   (AC_1,  ETHL20_TXP5, output2,      " &
+     "X),                        " &
+     "95   (BC_4,  ETHL20_RXN4, observe_only, " &
+     "X),                        " &
+     "94   (BC_4,  ETHL20_RXP4, observe_only, " &
+     "X),                        " &
+     "93   (BC_4,  ETHL20_RXP5, observe_only, " &
+     "X),                        " &
+     "92   (BC_4,  ETHL20_RXN5, observe_only, " &
+     "X),                        " &
+     "91   (AC_1,  ETHL20_TXP6, output2,      " &
+     "X),                        " &
+     "90   (AC_1,  ETHL20_TXP7, output2,      " &
+     "X),                        " &
+     "89   (BC_4,  ETHL20_RXN6, observe_only, " &
+     "X),                        " &
+     "88   (BC_4,  ETHL20_RXP6, observe_only, " &
+     "X),                        " &
+     "87   (BC_4,  ETHL20_RXP7, observe_only, " &
+     "X),                        " &
+     "86   (BC_4,  ETHL20_RXN7, observe_only, " &
+     "X),                        " &
+     "85   (AC_1,  ETHL21_TXP0, output2,      " &
+     "X),                        " &
+     "84   (AC_1,  ETHL21_TXP1, output2,      " &
+     "X),                        " &
+     "83   (BC_4,  ETHL21_RXN0, observe_only, " &
+     "X),                        " &
+     "82   (BC_4,  ETHL21_RXP0, observe_only, " &
+     "X),                        " &
+     "81   (BC_4,  ETHL21_RXP1, observe_only, " &
+     "X),                        " &
+     "80   (BC_4,  ETHL21_RXN1, observe_only, " &
+     "X),                        " &
+     "79   (AC_1,  ETHL21_TXP2, output2,      " &
+     "X),                        " &
+     "78   (AC_1,  ETHL21_TXP3, output2,      " &
+     "X),                        " &
+     "77   (BC_4,  ETHL21_RXN2, observe_only, " &
+     "X),                        " &
+     "76   (BC_4,  ETHL21_RXP2, observe_only, " &
+     "X),                        " &
+     "75   (BC_4,  ETHL21_RXP3, observe_only, " &
+     "X),                        " &
+     "74   (BC_4,  ETHL21_RXN3, observe_only, " &
+     "X),                        " &
+     "73   (AC_1,  ETHL21_TXP4, output2,      " &
+     "X),                        " &
+     "72   (AC_1,  ETHL21_TXP5, output2,      " &
+     "X),                        " &
+     "71   (BC_4,  ETHL21_RXN4, observe_only, " &
+     "X),                        " &
+     "70   (BC_4,  ETHL21_RXP4, observe_only, " &
+     "X),                        " &
+     "69   (BC_4,  ETHL21_RXP5, observe_only, " &
+     "X),                        " &
+     "68   (BC_4,  ETHL21_RXN5, observe_only, " &
+     "X),                        " &
+     "67   (AC_1,  ETHL21_TXP6, output2,      " &
+     "X),                        " &
+     "66   (AC_1,  ETHL21_TXP7, output2,      " &
+     "X),                        " &
+     "65   (BC_4,  ETHL21_RXN6, observe_only, " &
+     "X),                        " &
+     "64   (BC_4,  ETHL21_RXP6, observe_only, " &
+     "X),                        " &
+     "63   (BC_4,  ETHL21_RXP7, observe_only, " &
+     "X),                        " &
+     "62   (BC_4,  ETHL21_RXN7, observe_only, " &
+     "X),                        " &
+     "61   (AC_1,  ETHL22_TXP0, output2,      " &
+     "X),                        " &
+     "60   (AC_1,  ETHL22_TXP1, output2,      " &
+     "X),                        " &
+     "59   (BC_4,  ETHL22_RXN0, observe_only, " &
+     "X),                        " &
+     "58   (BC_4,  ETHL22_RXP0, observe_only, " &
+     "X),                        " &
+     "57   (BC_4,  ETHL22_RXP1, observe_only, " &
+     "X),                        " &
+     "56   (BC_4,  ETHL22_RXN1, observe_only, " &
+     "X),                        " &
+     "55   (AC_1,  ETHL22_TXP2, output2,      " &
+     "X),                        " &
+     "54   (AC_1,  ETHL22_TXP3, output2,      " &
+     "X),                        " &
+     "53   (BC_4,  ETHL22_RXN2, observe_only, " &
+     "X),                        " &
+     "52   (BC_4,  ETHL22_RXP2, observe_only, " &
+     "X),                        " &
+     "51   (BC_4,  ETHL22_RXP3, observe_only, " &
+     "X),                        " &
+     "50   (BC_4,  ETHL22_RXN3, observe_only, " &
+     "X),                        " &
+     "49   (AC_1,  ETHL22_TXP4, output2,      " &
+     "X),                        " &
+     "48   (AC_1,  ETHL22_TXP5, output2,      " &
+     "X),                        " &
+     "47   (BC_4,  ETHL22_RXN4, observe_only, " &
+     "X),                        " &
+     "46   (BC_4,  ETHL22_RXP4, observe_only, " &
+     "X),                        " &
+     "45   (BC_4,  ETHL22_RXP5, observe_only, " &
+     "X),                        " &
+     "44   (BC_4,  ETHL22_RXN5, observe_only, " &
+     "X),                        " &
+     "43   (AC_1,  ETHL22_TXP6, output2,      " &
+     "X),                        " &
+     "42   (AC_1,  ETHL22_TXP7, output2,      " &
+     "X),                        " &
+     "41   (BC_4,  ETHL22_RXN6, observe_only, " &
+     "X),                        " &
+     "40   (BC_4,  ETHL22_RXP6, observe_only, " &
+     "X),                        " &
+     "39   (BC_4,  ETHL22_RXP7, observe_only, " &
+     "X),                        " &
+     "38   (BC_4,  ETHL22_RXN7, observe_only, " &
+     "X),                        " &
+     "37   (AC_1,  ETHL23_TXP0, output2,      " &
+     "X),                        " &
+     "36   (AC_1,  ETHL23_TXP1, output2,      " &
+     "X),                        " &
+     "35   (BC_4,  ETHL23_RXN0, observe_only, " &
+     "X),                        " &
+     "34   (BC_4,  ETHL23_RXP0, observe_only, " &
+     "X),                        " &
+     "33   (BC_4,  ETHL23_RXP1, observe_only, " &
+     "X),                        " &
+     "32   (BC_4,  ETHL23_RXN1, observe_only, " &
+     "X),                        " &
+     "31   (AC_1,  ETHL23_TXP2, output2,      " &
+     "X),                        " &
+     "30   (AC_1,  ETHL23_TXP3, output2,      " &
+     "X),                        " &
+     "29   (BC_4,  ETHL23_RXN2, observe_only, " &
+     "X),                        " &
+     "28   (BC_4,  ETHL23_RXP2, observe_only, " &
+     "X),                        " &
+     "27   (BC_4,  ETHL23_RXP3, observe_only, " &
+     "X),                        " &
+     "26   (BC_4,  ETHL23_RXN3, observe_only, " &
+     "X),                        " &
+     "25   (AC_1,  ETHL23_TXP4, output2,      " &
+     "X),                        " &
+     "24   (AC_1,  ETHL23_TXP5, output2,      " &
+     "X),                        " &
+     "23   (BC_4,  ETHL23_RXN4, observe_only, " &
+     "X),                        " &
+     "22   (BC_4,  ETHL23_RXP4, observe_only, " &
+     "X),                        " &
+     "21   (BC_4,  ETHL23_RXP5, observe_only, " &
+     "X),                        " &
+     "20   (BC_4,  ETHL23_RXN5, observe_only, " &
+     "X),                        " &
+     "19   (AC_1,  ETHL23_TXP6, output2,      " &
+     "X),                        " &
+     "18   (AC_1,  ETHL23_TXP7, output2,      " &
+     "X),                        " &
+     "17   (BC_4,  ETHL23_RXN6, observe_only, " &
+     "X),                        " &
+     "16   (BC_4,  ETHL23_RXP6, observe_only, " &
+     "X),                        " &
+     "15   (BC_4,  ETHL23_RXP7, observe_only, " &
+     "X),                        " &
+     "14   (BC_4,  ETHL23_RXN7, observe_only, " &
+     "X),                        " &
+     "13   (BC_2,  I_CORE_PLL_RST_N,     input,        " &
+     "X),                        " &
+     "12   (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "11   (BC_7,  HOST_SCL,             bidir,        X,    12,     " &
+     "0,      Z),  " &
+     "10   (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "9    (BC_7,  HOST_SDA,             bidir,        X,    10,     " &
+     "0,      Z),  " &
+     "8    (BC_2,  I_CORE_PLL_BYP,       input,        " &
+     "X),                        " &
+     "7    (BC_2,  I_CORE_FREQ_SEL_0,    input,        " &
+     "X),                        " &
+     "6    (BC_2,  I_CORE_FREQ_SEL_1,    input,        " &
+     "X),                        " &
+     "5    (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "4    (BC_7,  B_I2C_CLK,            bidir,        X,    5,      " &
+     "0,      Z),  " &
+     "3    (BC_2,  *,                        control,      " &
+     "0),                        " &
+     "2    (BC_7,  B_I2C_DATA,           bidir,        X,    3,      " &
+     "0,      Z),  " &
+     "1    (BC_2,  I_PLL_OBS_EN,         input,        " &
+     "X),                        " &
+     "0    (BC_2,  I_CLK_OBS_EN,         input,        " &
+     "X)                         ";
+
+-- Advanced I/O Description
+
+   attribute AIO_COMPONENT_CONFORMANCE of qua_dwalin: entity is
+   "STD_1149_6_2003";
+
+   attribute AIO_EXTEST_Pulse_Execution of qua_dwalin: entity is
+   "Wait_Duration 5000.000000e-9";
+
+   attribute AIO_EXTEST_Train_Execution of qua_dwalin: entity is
+   "train 100, maximum_time 5000.000000e-9";
+
+   attribute AIO_Pin_Behavior of qua_dwalin: entity is
+   "ETHL23_RXP7, ETHL23_RXP6, " &
+   "ETHL23_RXP5, ETHL23_RXP4, " &
+   "ETHL23_RXP3, ETHL23_RXP2, " &
+   "ETHL23_RXP1, ETHL23_RXP0, " &
+   "ETHL22_RXP7, ETHL22_RXP6, " &
+   "ETHL22_RXP5, ETHL22_RXP4, " &
+   "ETHL22_RXP3, ETHL22_RXP2, " &
+   "ETHL22_RXP1, ETHL22_RXP0, " &
+   "ETHL21_RXP7, ETHL21_RXP6, " &
+   "ETHL21_RXP5, ETHL21_RXP4, " &
+   "ETHL21_RXP3, ETHL21_RXP2, " &
+   "ETHL21_RXP1, ETHL21_RXP0, " &
+   "ETHL20_RXP7, ETHL20_RXP6, " &
+   "ETHL20_RXP5, ETHL20_RXP4, " &
+   "ETHL20_RXP3, ETHL20_RXP2, " &
+   "ETHL20_RXP1, ETHL20_RXP0, " &
+   "ETHL19_RXP7, ETHL19_RXP6, " &
+   "ETHL19_RXP5, ETHL19_RXP4, " &
+   "ETHL19_RXP3, ETHL19_RXP2, " &
+   "ETHL19_RXP1, ETHL19_RXP0, " &
+   "ETHL18_RXP7, ETHL18_RXP6, " &
+   "ETHL18_RXP5, ETHL18_RXP4, " &
+   "ETHL18_RXP3, ETHL18_RXP2, " &
+   "ETHL18_RXP1, ETHL18_RXP0, " &
+   "ETHL17_RXP7, ETHL17_RXP6, " &
+   "ETHL17_RXP5, ETHL17_RXP4, " &
+   "ETHL17_RXP3, ETHL17_RXP2, " &
+   "ETHL17_RXP1, ETHL17_RXP0, " &
+   "ETHL16_RXP7, ETHL16_RXP6, " &
+   "ETHL16_RXP5, ETHL16_RXP4, " &
+   "ETHL16_RXP3, ETHL16_RXP2, " &
+   "ETHL16_RXP1, ETHL16_RXP0 : " &
+   "HP_time=50.000000e-9 On_Chip ;" &
+   "ETHL23_TXP7, ETHL23_TXP6, " &
+   "ETHL23_TXP5, ETHL23_TXP4, " &
+   "ETHL23_TXP3, ETHL23_TXP2, " &
+   "ETHL23_TXP1, ETHL23_TXP0, " &
+   "ETHL22_TXP7, ETHL22_TXP6, " &
+   "ETHL22_TXP5, ETHL22_TXP4, " &
+   "ETHL22_TXP3, ETHL22_TXP2, " &
+   "ETHL22_TXP1, ETHL22_TXP0, " &
+   "ETHL21_TXP7, ETHL21_TXP6, " &
+   "ETHL21_TXP5, ETHL21_TXP4, " &
+   "ETHL21_TXP3, ETHL21_TXP2, " &
+   "ETHL21_TXP1, ETHL21_TXP0, " &
+   "ETHL20_TXP7, ETHL20_TXP6, " &
+   "ETHL20_TXP5, ETHL20_TXP4, " &
+   "ETHL20_TXP3, ETHL20_TXP2, " &
+   "ETHL20_TXP1, ETHL20_TXP0, " &
+   "ETHL19_TXP7, ETHL19_TXP6, " &
+   "ETHL19_TXP5, ETHL19_TXP4, " &
+   "ETHL19_TXP3, ETHL19_TXP2, " &
+   "ETHL19_TXP1, ETHL19_TXP0, " &
+   "ETHL18_TXP7, ETHL18_TXP6, " &
+   "ETHL18_TXP5, ETHL18_TXP4, " &
+   "ETHL18_TXP3, ETHL18_TXP2, " &
+   "ETHL18_TXP1, ETHL18_TXP0, " &
+   "ETHL17_TXP7, ETHL17_TXP6, " &
+   "ETHL17_TXP5, ETHL17_TXP4, " &
+   "ETHL17_TXP3, ETHL17_TXP2, " &
+   "ETHL17_TXP1, ETHL17_TXP0, " &
+   "ETHL16_TXP7, ETHL16_TXP6, " &
+   "ETHL16_TXP5, ETHL16_TXP4, " &
+   "ETHL16_TXP3, ETHL16_TXP2, " &
+   "ETHL16_TXP1, ETHL16_TXP0 : AC_Select=205  ";
+
+ end qua_dwalin;

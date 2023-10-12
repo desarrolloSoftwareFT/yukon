@@ -1,0 +1,39 @@
+!!!!    6    0    1 1606894408  Va7b8                                         
+!    Function: SI5391
+!    Revision: 1.0
+!    Author: kaison peng
+
+warning "This is a SETUP-ONLY Test."
+
+sequential
+
+assign  GND to pins 65
+assign  VDD to pins 32, 46, 60
+assign  VDDA to pins 13
+assign  VDDO to pins 22, 26, 29, 33, 36, 40, 43, 49, 52, 57
+
+assign  I2C_SEL to pins 39
+assign  I2C_SCL to pins 16
+assign  I2C_SDA to pins 18
+assign  I2C_ADDR to pins 17, 19
+assign  RST_L to pins 6
+assign  OE_L to pins 11
+
+assign  NC to pins 1, 2, 3, 4, 5, 7, 8, 9, 10, 12, 14, 15, 20, 21, 23, 24, 25
+assign  NC to pins 27, 28, 30, 31, 34, 35, 37, 41, 42, 38, 44, 45, 47, 48, 50
+assign  NC to pins 51, 53, 54, 55, 56, 58, 59, 62, 63, 64, 61
+
+family LVT
+
+
+power GND
+power VDD, VDDA, VDDO
+
+inputs I2C_SEL, I2C_SCL, I2C_ADDR, RST_L, OE_L
+
+bidirectional I2C_SDA
+
+nondigital NC
+!
+!    End of Test
+!

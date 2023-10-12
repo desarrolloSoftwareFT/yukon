@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627540286  V2a61                                         
+! IPG: rev 09.20p  Mon Jun 28 12:08:32 2021
+disconnect all
+connect s to "GND"
+connect i to "FPGA_LM03328_RST_L"
+resistor 2k,20.00,20.00,re4,wb,ar500m,ed
+! "r99" test.

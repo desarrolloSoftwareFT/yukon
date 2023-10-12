@@ -1,0 +1,85 @@
+!!!!    5    0    2 1624521515  Vb815                                         
+! CONFIGURATION FOR DEVELOPING BOARD TESTS
+
+target hp3073 standard
+
+  enable common delimiter
+  enable advanced fixturing
+
+  enable silicon nails
+  enable software revision b
+  enable drivethru
+  enable connect check
+  enable express fixturing
+  enable testjet
+  enable advanced boundary scan
+  enable 1149.6 boundary scan
+! enable magic
+! enable multiple board versions
+! enable flash70
+! enable serial test
+! enable combo test
+! enable paneltest
+! enable throughput multiplier
+! enable dual well shared wiring
+
+   module 0
+      cards 1 asru c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 13 to 16 asru channels 1 to 4
+   end module
+
+   module 1
+      cards 1 asru c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 9 to 12 asru channels 1 to 4
+   end module
+
+   module 2
+      cards 1 asru  c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 5 to 8 asru channels 1 to 4
+   end module
+
+   module 3
+      cards 1 asru  c revision
+      cards 2 hybrid standard double density
+      cards 3 hybrid standard double density
+      cards 4 hybrid standard double density
+      cards 5 hybrid standard double density
+      cards 6 control xt
+      cards 7 hybrid standard double density
+      cards 8 hybrid standard double density
+      cards 9 hybrid standard double density
+      cards 10 hybrid standard double density
+      cards 11 hybrid standard double density
+      supplies hp6624 1 to 4 asru channels 1 to 4
+   end module
+

@@ -1,0 +1,361 @@
+<!-- Created Wed Jun 30 08:27:02 2021 from ITL Source digital/u36_connect -->
+<Test name="u36_connect"><Type>"Boundary-Scan Connect Test"</Type>
+<Chain name="u36_u36"><ChainTCK><node name="SRT_JTAG_TCK_MIFPGA_3V3" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="JTAG_TMS_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="JTAG_TDI_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="JTAG_TDO_MIFPGA_3V3" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainEnable><node name="FPGA_ACT2_RESET_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;0&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;1&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;2&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="SA_FPGA_ROV_1V8&lt;3&gt;" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="TS_I2C_SCL" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_108_QS3VH257_I46_E" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+<ChainEnable><node name="UNNAMED_11_LVC244A_I10_OE" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u36"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="Y5"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="R6"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="T6"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="V7"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="J5"><node name="UNNAMED_22_CV5CGXFC4CFG672_I108_MSEL4" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K5"><node name="UNNAMED_22_CV5CGXFC4CFG672_I108_MSEL3" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A2"><node name="UNNAMED_22_CV5CGXFC4CFG672_I108_MSEL2" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L6"><node name="UNNAMED_22_CV5CGXFC4CFG672_I108_MSEL1" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M7"><node name="UNNAMED_22_CV5CGXFC4CFG672_I108_MSEL0" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K6"><node name="PSU0_AC_OK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E9"><node name="PSU0_PRSNT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D8"><node name="PSU0_DC_OK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L7"><node name="PSU0_DISABLE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J10"><node name="PSU1_PRSNT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J7"><node name="PSU0_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H7"><node name="PSU1_AC_OK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K10"><node name="PSU1_DC_OK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J8"><node name="PSU1_DISABLE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F7"><node name="FPGA_PSU_POWER_CYCLE_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G7"><node name="PSU1_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K8"><node name="HS_FPGA_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G6"><node name="MI_SPARE_PU2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F6"><node name="SRT_PMBUS_HS_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L8"><node name="PMBUS_HS_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G10"><node name="FPGA_CPLD1_SPI_CS_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C7"><node name="UNNAMED_53_CV5CGXFC4CFG672_I213_IO8A16" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D7"><node name="FPGA_CPLD1_SPI_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H10"><node name="CPLD1_FPGA_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L9"><node name="SRT_FPGA_CPLD1_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E6"><node name="FPGA_CPLD1_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D6"><node name="SRT_FPGA_CPLD1_SPI_SCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M9"><node name="CPLD1_FPGA_SPI_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H9"><node name="SA_PMB_AVDD_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B7"><node name="SRT_SA_PMB_AVDD_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A7"><node name="FPGA_DBG2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H8"><node name="FPGA_DBG3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M10"><node name="FPGA_DBG1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B6"><node name="FPGA_DBG0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A5"><node name="PWR_AVDD_RT_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N9"><node name="PWR_VDD_RT_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D13"><node name="FPGA_CPLD2_SPI_CS_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D12"><node name="RZQ_2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D11"><node name="FPGA_CPLD2_SPI_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E13"><node name="CPLD2_FPGA_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L11"><node name="SRT_FPGA_CPLD2_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C12"><node name="FPGA_CPLD2_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C13"><node name="SRT_FPGA_CPLD2_SPI_SCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M11"><node name="CPLD2_FPGA_SPI_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F12"><node name="P3V3_PWR_MOD_PRESENT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B11"><node name="FPGA_CPLD1_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A12"><node name="SA_P1V8_PWR_MOD_PRESENT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G12"><node name="MIFPGA_DBG_LED3_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G11"><node name="MIFPGA_DBG_LED1_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A13"><node name="MIFPGA_DBG_LED2_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B12"><node name="MIFPGA_DBG_LED0_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E15"><node name="SRT_MIFPGA_SER_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E11"><node name="SRT_MIFPGA_SER_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F16"><node name="SRT_PCH_MIFPGA_PERST2_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M12"><node name="SA_FPGA_ROV_3V3&lt;2&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A11"><node name="SA_FPGA_ROV_3V3&lt;3&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B10"><node name="SA_FPGA_ROV_3V3&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N12"><node name="SA_FPGA_ROV_3V3&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D16"><node name="SRT_PMBUS_SA_DVDD_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D10"><node name="MI_SPARE_PU1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E16"><node name="MIFPGA_BOARD_REV&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G14"><node name="MIFPGA_BOARD_ID&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B9"><node name="MIFPGA_BOARD_REV&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C9"><node name="MIFPGA_BOARD_ID&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G15"><node name="PMBUS_RTR_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D15"><node name="TS_I2C_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A9"><node name="SRT_PMBUS_SA_DVDD_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A8"><node name="PMB_SA_DVDD_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C14"><node name="PWR_SA_DVDD_VRM_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K11"><node name="PWR_SA_AVDD_VRM_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C15"><node name="PMB_SA_AVDD_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B15"><node name="PWR_SA_AVDDH_VRM_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L12"><node name="RT3_INTERR2_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F18"><node name="FPGA_CPLD2_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B14"><node name="RT3_INT_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A14"><node name="SRT_I2C_ACT2_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E18"><node name="SRT_I2C_ACT2_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H13"><node name="SRT_PMBUS1_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B17"><node name="SRT_PMBUS1_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C17"><node name="P1V8_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H14"><node name="P1V8_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D17"><node name="FPGA_SA_PLL_DBG_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A16"><node name="UNNAMED_53_CV5CGXFC4CFG672_I213_IO7A32" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A17"><node name="SRT_FPGA_OSC_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D18"><node name="SRT_FPGA_OSC_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J11"><node name="FPGA_SRT_PMBUS_RTR_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A18"><node name="FPGA_SRT_PMBUS_RTR_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A19"><node name="MIFPGA_OSC_OE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E19"><node name="FPGA_LED_ENV_GRN_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C18"><node name="FPGA_LED_BCN_BLUE_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C19"><node name="FPGA_LED_ENV_RED_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E20"><node name="FPGA_LED_STAT_GRN_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G17"><node name="P5V_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B19"><node name="FPGA_LED_STAT_RED_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C20"><node name="P3V3_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G16"><node name="PWR_P3V3_Q2_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D20"><node name="FPGA_P1V8_TRIM_PWM" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B20"><node name="FPGA_CPLD1_STROBE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B21"><node name="FPGA_P5V2_TRIM_PWM" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D21"><node name="JTAG_CABLE_PRSNT_L_SA_HDR" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H17"><node name="PMBUS1_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A21"><node name="PWR_AVDD_RTR_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B22"><node name="RT2_INTERR2_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H18"><node name="RT2_INT_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A24"><node name="FPGA_LED_BMC_RED_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A22"><node name="FPGA_LED_BMC_GRN_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="A23"><node name="RT1_INTERR2_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B24"><node name="RT1_INT_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J16"><node name="FPGA_OSC2_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C22"><node name="FPGA_OSC2_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C23"><node name="RT0_INTERR2_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H15"><node name="RT0_INT_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F21"><node name="FPGA_SA_CORE_RST_L_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F22"><node name="FPGA_SA_PE_RST_L_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E21"><node name="FPGA_SA_CORE_PLL_RST_L_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G20"><node name="FPGA_SA_PDIE_TRI_EN_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J21"><node name="FPGA_SA_CPU2JTAG_EN_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E23"><node name="FPGA_SA_PE_CORE_RST_L_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D22"><node name="FPGA_SA_JTAG2ECPU_EN_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J20"><node name="SRT_FPGA_SA_SYNC_MASTER_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H20"><node name="FPGA_SA_TDIE_TRI_EN_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="C25"><node name="SRT_FPGA_SA_SYNC_SLAVE_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D25"><node name="JTAG_TDI_SES_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H19"><node name="JTAG_TCK_SES_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K21"><node name="SRT_RT0_MDC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B26"><node name="JTAG_TMS_SES_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="B25"><node name="RT0_MDIO_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L22"><node name="SRT_RT1_MDC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J23"><node name="JTAG_TRST_L_SES_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G22"><node name="RT1_MDIO_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F23"><node name="SRT_RT0_MDC2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H22"><node name="RT0_MDIO2_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L24"><node name="RT1_MDIO2_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H24"><node name="SRT_RT1_MDC2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H23"><node name="SRT_RT2_MDC2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="L23"><node name="RT2_MDIO2_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K23"><node name="RT3_MDIO_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G24"><node name="SRT_RT3_MDC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F24"><node name="RT0_FPGA_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K24"><node name="RT1_FPGA_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="K26"><node name="RT3_FPGA_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E25"><node name="RT2_FPGA_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E24"><node name="SRT_RT2_MDC" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M26"><node name="SRT_RT3_MDC2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="E26"><node name="RT2_MDIO_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="D26"><node name="RT3_MDIO2_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M25"><node name="SRT_SA_I2C_SCL_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M22"><node name="JTAG_TDO_SES_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="H25"><node name="SRT_SA_I2C_SDA_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G25"><node name="RTMR_TOD_DATI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N23"><node name="RTMR_TOD_CLKI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M24"><node name="SRT_FPGA_RT0_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="G26"><node name="JTAG_TDO_SA_FPGA_1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="F26"><node name="SRT_FPGA_RT1_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N24"><node name="SRT_FPGA_RT2_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="M21"><node name="CLK25M_TCXO_FPGA2_AC_N" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="J26"><node name="SRT_FPGA_RT3_TOD_ONE_PPS" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N20"><node name="CLK25M_TCXO_FPGA2_AC_P" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P26"><node name="FPGA_SA_CORE_FREQ_SEL_3V3&lt;0&gt;" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U26"><node name="FPGA_SA_CORE_FREQ_SEL_3V3&lt;1&gt;" />
+<opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U25"><node name="HS_FPGA_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N25"><node name="FPGA_CPLD3_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P22"><node name="FPGA_SA_PLL_OBS_EN_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W26"><node name="FPGA_SA_CLK_OBS_EN_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W25"><node name="CPLD3_FPGA_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P21"><node name="SRT_FPGA_CPLD3_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R26"><node name="PMBUS_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y26"><node name="FPGA_CPLD3_STROBE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y25"><node name="FPGA_CPLD3_SPI_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T26"><node name="CPLD3_FPGA_SPI_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P20"><node name="FPGA_CPLD3_SPI_CS_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA26"><node name="SRT_FPGA_CPLD3_SPI_SCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB26"><node name="FPGA_CPLD3_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R20"><node name="TI_CABLE_PRSNT2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R25"><node name="JTAG_TRST_L_FPGA_SA_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V25"><node name="JTAG_TMS_FPGA_SA_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U24"><node name="JTAG_TCK_FPGA_SA_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R24"><node name="JTAG_TDI_FPGA_SA_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P23"><node name="JTAG_SA_FPGA_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC25"><node name="SRT_MI_SPARE0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD25"><node name="SRT_MI_SPARE1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R23"><node name="SA_P1V8_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T24"><node name="SFP_SCL&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB25"><node name="SA_P1V8_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA24"><node name="SFP_SDA&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T23"><node name="SFP_SCL&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T22"><node name="FPGA_SA_CORE_PLL_BYP_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V24"><node name="SFP_SDA&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V23"><node name="SRT_1588_CLKOUT_P1V8" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y24"><node name="SRT_MIFPGA_SPARE1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T19"><node name="SRT_MIFPGA_SPARE2" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB24"><node name="MIFPGA_DEV_CLR_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC24"><node name="MIFPGA_DEV_OE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W21"><node name="PWR_P3V3_Q2_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA23"><node name="MIFPGA_CVP_CONFDONE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA22"><node name="MIFPGA_CEO_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V20"><node name="SRT_CRCERR" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC23"><node name="MIFPGA_PR_REQ" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC22"><node name="RZQ_1" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U19"><node name="INIT_DONE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W18"><node name="QSFP_SDA&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA21"><node name="QSFP_SCL&lt;1&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB22"><node name="QSFP_SCL&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V19"><node name="QSFP_SDA&lt;0&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y19"><node name="QSFP_SCL&lt;3&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC19"><node name="QSFP_SDA&lt;3&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB19"><node name="QSFP_SDA&lt;2&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y20"><node name="QSFP_SCL&lt;2&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V17"><node name="QSFP_SDA&lt;5&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE26"><node name="QSFP_SCL&lt;5&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD26"><node name="QSFP_SCL&lt;4&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V18"><node name="QSFP_SDA&lt;4&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA18"><node name="QSFP_SCL&lt;7&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF24"><node name="QSFP_SDA&lt;7&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE25"><node name="QSFP_SDA&lt;6&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y18"><node name="QSFP_SCL&lt;6&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U16"><node name="QSFP_SDA&lt;9&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF23"><node name="QSFP_SCL&lt;9&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE24"><node name="QSFP_SCL&lt;8&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U15"><node name="QSFP_SDA&lt;8&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF16"><node name="QSFP_SCL&lt;11&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE23"><node name="QSFP_SDA&lt;11&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD23"><node name="QSFP_SDA&lt;10&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF17"><node name="QSFP_SCL&lt;10&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W17"><node name="QSFP_SDA&lt;13&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD21"><node name="QSFP_SCL&lt;13&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD22"><node name="QSFP_SCL&lt;12&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W16"><node name="QSFP_SDA&lt;12&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE15"><node name="QSFP_SCL&lt;15&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD20"><node name="QSFP_SDA&lt;15&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC20"><node name="QSFP_SDA&lt;14&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE16"><node name="QSFP_SCL&lt;14&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U17"><node name="QSFP_SDA&lt;17&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE21"><node name="QSFP_SCL&lt;17&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE20"><node name="QSFP_SCL&lt;16&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T17"><node name="QSFP_SDA&lt;16&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC17"><node name="QSFP_SCL&lt;19&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF22"><node name="QSFP_SDA&lt;19&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF21"><node name="QSFP_SDA&lt;18&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB17"><node name="QSFP_SCL&lt;18&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W15"><node name="QSFP_SDA&lt;21&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF19"><node name="QSFP_SCL&lt;21&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE19"><node name="QSFP_SCL&lt;20&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V15"><node name="QSFP_SDA&lt;20&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD16"><node name="FPGA_SA_I2C_SEL3_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD18"><node name="FPGA_SA_I2C_SEL2_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC18"><node name="P3V3_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD17"><node name="P5V_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y16"><node name="RT0_RESET_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF18"><node name="FPGA_SA_I2C_SEL1_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE18"><node name="PWR_SA_AVDD_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y15"><node name="PWR_SA_DVDD_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB16"><node name="FPGA_POR_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF14"><node name="FPGA_SA_I2C_SEL0_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE14"><node name="PWR_SA_AVDDH_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA16"><node name="RT1_RESET_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V14"><node name="IO_MI1_STROBE_R" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC13"><node name="TI_CABLE_PRSNT" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC14"><node name="SRT_MI1_IO_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB15"><node name="IO_MI1_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V12"><node name="PWR_AVDDH_RT_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF12"><node name="RT3_RESET_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF11"><node name="JTAG_CABLE_PRSNT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U12"><node name="RT2_RESET_L_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y13"><node name="RT1_SEL_2X_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE10"><node name="SA_AVDD12_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD10"><node name="RT0_SEL_2X_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W12"><node name="PWR_AVDDH_RTR_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W13"><node name="RT2_SEL_2X_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD12"><node name="FPGA_LM03328_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD13"><node name="P0V9_SA_PLL_VDD_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V13"><node name="FPGA_CPLD4_RST_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE11"><node name="RZQ_0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD11"><node name="MIFPGA_LED_CTRL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y14"><node name="RT3_SEL_2X_3V3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P12"><node name="QSFP_SDA&lt;23&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF6"><node name="QSFP_SCL&lt;23&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE6"><node name="QSFP_SCL&lt;22&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P11"><node name="QSFP_SDA&lt;22&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U11"><node name="QSFP_SCL&lt;25&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF8"><node name="QSFP_SDA&lt;25&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF7"><node name="QSFP_SDA&lt;24&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U10"><node name="QSFP_SCL&lt;24&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P10"><node name="QSFP_SDA&lt;27&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AF9"><node name="QSFP_SCL&lt;27&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE9"><node name="QSFP_SCL&lt;26&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="N10"><node name="QSFP_SDA&lt;26&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AE8"><node name="QSFP_SCL&lt;29&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V9"><node name="QSFP_SDA&lt;29&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V10"><node name="QSFP_SDA&lt;28&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD8"><node name="QSFP_SCL&lt;28&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T12"><node name="QSFP_SCL&lt;31&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y10"><node name="QSFP_SDA&lt;30&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W10"><node name="QSFP_SCL&lt;30&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T13"><node name="CLK125M_FPGA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB11"><node name="CPLD4_FPGA_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC8"><node name="SRT_FPGA_CPLD4_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC9"><node name="FPGA_CPLD4_DATA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB12"><node name="QSFP_SDA&lt;31&gt;" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T11"><node name="SRT_FPGA_CPLD4_SPI_SCK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AC10"><node name="CPLD4_FPGA_SPI_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB10"><node name="FPGA_CPLD4_STROBE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R11"><node name="FPGA_CPLD4_SPI_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="U9"><node name="SRT_SAS2_SPARE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T9"><node name="TS_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W11"><node name="FPGA_CPLD4_SPI_CS_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R8"><node name="PWR_VDD_RTR_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD6"><node name="PWR_P3V3_Q1_EN" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AD7"><node name="PWR_P3V3_Q1_PGOOD" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="P8"><node name="MI_SPARE_PU3" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R10"><node name="PHY_UCODE_FLASH_CS_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA7"><node name="PHY_UCODE_FLASH_MISO" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y8"><node name="FPGA_CPLD2_STROBE" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="R9"><node name="PHY_UCODE_FLASH_MOSI" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="W8"><node name="PMBUS_SA_P1V8_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AB6"><node name="CLKGEN_STATUS0" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="AA6"><node name="SRT_PHY_UCODE_FLASH_CLK" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="Y9"><node name="SRT_PMBUS_SA_P1V8_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T7"><node name="SA_VDD18_IMON_ALERT_L" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="V8"><node name="PMBUS_SDA" /><opensCoverage>Full</opensCoverage></Pin>
+<Pin name="T8"><node name="SRT_PMBUS_SCL" /><opensCoverage>Full</opensCoverage></Pin>
+</Device>
+</Test>

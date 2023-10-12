@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852464   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:25 2021
+disconnect all
+connect s to "TSEN2_Q3V3R"
+connect i to "TSEN2_R_Q3V3R"
+jumper 6.01, re1, ar200m
+! "r06_q3v3r" test.

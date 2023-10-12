@@ -1,0 +1,139 @@
+!!!!    2    0    1  894478761  Vd099                                         
+!
+! Part Name:         LM358
+! Alias:             CA358
+! Part Type:         Linear
+! Description:       Dual Op-Amp
+! Manufacturer:      National Semiconductor, Motorola, Harris Semiconductor
+! Package Style:     8 pin DIP/SOP
+! Created:           May 18, 2007
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     Power On Ananlog
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    Functional
+! Constraints:       
+! Cisco Part #:      15-3924-01,15-1659-01,15-1457-01
+
+test powered analog
+  power pins 4,8
+
+! Tests for bipolar power supply (+V to pins 8, -V to pin 4)
+
+! Device 1
+
+  test "plus1"      ! Out vs Plus, Minus = 0V
+  test "minus1"     ! Out vs Minus, Plus = 0V
+  test "follower1"  ! Tested as a voltage follower
+
+! Device 2
+
+  test "plus2"      ! Out vs Plus, Minus = 0V
+  test "minus2"     ! Out vs Minus, Plus = 0V
+  test "follower2"  ! Tested as a voltage follower
+
+end test
+
+! *******************************************************
+
+subtest "plus1"
+ connect s to pins 3  ! Plus Input
+ connect a to pins 2  ! Minus Input
+ connect i to pins 1  ! Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude 0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect -10
+ measure -2.0, -10.0
+
+ source dcv, amplitude -0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect 10
+ measure 10.0, 2.0
+end subtest
+
+subtest "minus1"
+ connect s to pins 2  ! Minus Input
+ connect a to pins 3  ! Plus Input
+ connect i to pins 1  ! Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude 0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect 10
+ measure 10.0, 2.0
+
+ source dcv, amplitude -0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect -10
+ measure -2.0, -10.0
+end subtest
+
+subtest "follower1"
+ connect s to pins 3  ! Positive Input
+ connect i to pins 1  ! Minus Input connects to Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude  0.5, icompliance 1, on
+ detector dcv, expect 0.5
+ measure 0.55, 0.45
+
+ source dcv, amplitude  1.0, icompliance 1, on
+ detector dcv, expect 1.0
+ initiate detector
+ measure 1.05, 0.95
+end subtest
+
+subtest "plus2"
+ connect s to pins 5  ! Plus Input
+ connect a to pins 6  ! Minus Input
+ connect i to pins 7  ! Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude 0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect -10
+ measure -2.0, -10.0
+
+ source dcv, amplitude -0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect 10
+ measure 10.0, 2.0
+end subtest
+
+subtest "minus2"
+ connect s to pins 6  ! Minus Input
+ connect a to pins 5  ! Plus Input
+ connect i to pins 7  ! Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude 0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect 10
+ measure 10.0, 2.0
+
+ source dcv, amplitude -0.1, icompliance 1, on
+ auxiliary dcv, amplitude 0.0, icompliance 1, on
+ detector dcv, expect -10
+ measure -2.0, -10.0
+end subtest
+
+subtest "follower2"
+ connect s to pins 5  ! Positive Input
+ connect i to pins 7  ! Minus Input connects to Output
+ connect l to ground  ! Ground
+
+ source dcv, amplitude  0.5, icompliance 1, on
+ detector dcv, expect 0.5
+ measure 0.55, 0.45
+
+ source dcv, amplitude  1.0, icompliance 1, on
+ detector dcv, expect 1.0
+ initiate detector
+ measure 1.05, 0.95
+end subtest
+
+

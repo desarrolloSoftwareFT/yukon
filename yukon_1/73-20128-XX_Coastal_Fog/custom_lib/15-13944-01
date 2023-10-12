@@ -1,0 +1,158 @@
+!!!!    2    0    1 1381216499  V62f6                                         
+!***  All contents copyright 2003 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         FDMF6823B
+! Alias:
+! Part Type:         Power On Analog
+! Manufacturer:      FAIRCHILD SEMICONDUCTOR
+! Package Style:     42 pin SOP
+! Created:           Oct 8, 2013
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:
+! Testjet Testable:  no
+! JTAG Device:       no
+! Fault coverage:    Analog Functional
+! Constraints:
+
+test powered analog
+  power     pins 8,9,10,11,12,13,14,42,5,7,37,41
+  nonanalog pins 1,6,36,38,40
+
+  test "vcin"
+  test "vdrv"
+  test "disb"
+  test "boot"
+  test "vsh1"
+  test "vsh2"
+  test "vsh3"
+  test "vsh4"
+  test "vsh5"
+  test "vsh6"
+  test "vsh7"
+  test "vsh8"
+  test "vsh9"
+end test
+
+! **********************************************************
+
+subtest "vcin"
+
+ connect i to pins 2
+ connect l to pins 16
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 5*1.05, 5*0.95
+end subtest
+
+subtest "vdrv"
+
+ connect i to pins 3
+ connect l to pins 17
+
+ detector dcv, expect 0.75  ! Modify during debug
+ measure 0.75*1.05, 0.75*0.95
+end subtest
+
+subtest "disb"
+
+ connect i to pins 39
+ connect l to pins 18
+
+ detector dcv, expect 0.75  ! Modify during debug
+ measure 0.75*1.05, 0.75*0.95
+end subtest
+
+subtest "boot"
+
+ connect i to pins 4
+ connect l to pins 19
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh1"
+
+ connect i to pins 15
+ connect l to pins 20
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh2"
+
+ connect i to pins 29
+ connect l to pins 21
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh3"
+
+ connect i to pins 30
+ connect l to pins 22
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+
+subtest "vsh4"
+
+ connect i to pins 31
+ connect l to pins 23
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh5"
+
+ connect i to pins 32
+ connect l to pins 24
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh6"
+
+ connect i to pins 33
+ connect l to pins 25
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh7"
+
+ connect i to pins 34
+ connect l to pins 26
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh8"
+
+ connect i to pins 35
+ connect l to pins 27
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest
+
+subtest "vsh9"
+
+ connect i to pins 43
+ connect l to pins 28
+
+ detector dcv, expect 1.0  ! Modify during debug
+ measure 1.25, 0.75
+end subtest

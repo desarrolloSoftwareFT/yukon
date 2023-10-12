@@ -1,0 +1,19 @@
+!!!!    2    0    1 1626147370  V8b1e                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:49 2021
+on failure
+report parallel devices
+report "c141 10.0u"
+report "c239 10.0u"
+report "c287 10.0u"
+report "c238 1.00u"
+report "c333 1.00u"
+report "c345 1.00u"
+report "c363 1.00u"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "P1V8_FPGA"; b to "P1V8_FPGA"
+connect g to "UNNAMED_64_RES_I225_A"
+capacitor 81u,30.00,30.05,fr128,re1,ar100m,ed,sa,sb,nocomp
+! "c316" test.
+off failure

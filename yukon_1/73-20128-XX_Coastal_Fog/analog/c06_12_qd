@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538331  Vd983                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:49 2021
+disconnect all
+connect s to "VDD_BOOT_R_12"
+connect i to "VDD_BOOT_12"
+capacitor 470n,30.00,30.00,fr1024,re2,ar50.0m,nocomp,ed
+! "c06_12_qd" test.

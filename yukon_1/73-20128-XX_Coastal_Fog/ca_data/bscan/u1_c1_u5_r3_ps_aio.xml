@@ -1,0 +1,353 @@
+<!-- Created Wed Jun 30 08:27:45 2021 from ITL Source digital/u1_c1_u5_r3_ps_aio -->
+<Test name="u1_c1_u5_r3_ps_aio"><Type>"Boundary-Scan Powered Shorts Test"</Type>
+<Chain name="u1_c1_u5_r3"><ChainTCK><node name="SRT_JTAG_TCK_HDR_3V3" />
+<opensCoverage>Full</opensCoverage></ChainTCK>
+<ChainTMS><node name="JTAG_TMS_HDR_3V3" /><opensCoverage>Full</opensCoverage></ChainTMS>
+<ChainTDI><node name="JTAG_TDI_CPLD1" /><opensCoverage>Full</opensCoverage></ChainTDI>
+<ChainTDO><node name="JTAG_TDO_HDR_3V3" /><opensCoverage>Full</opensCoverage></ChainTDO>
+<ChainTRST><node name="JTAG_TRST_L_HDR_3V3" /><opensCoverage>Partial</opensCoverage></ChainTRST>
+<ChainEnable><node name="I2C_XLATR_EN_SA" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="RT0_RESET_L_1V8" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="RT1_RESET_L_1V8" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="RT2_RESET_L_1V8" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="RT3_RESET_L_1V8" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="RTMR_TOD_BUF_OE_L" /><opensCoverage>Partial</opensCoverage></ChainEnable>
+<ChainEnable><node name="UNNAMED_52_LVC244A_I234_OE" /><opensCoverage>Partial</opensCoverage>
+</ChainEnable>
+</Chain>
+<Device name="u5_r3"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="N24"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="P24"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="M24"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P25"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="R24"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="T4"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="T23"><node name="_D_U5_R3_T23" /></Pin>
+<Pin name="R23"><node name="_D_U5_R3_R23" /></Pin>
+</Device>
+<Device name="u5_r2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="N24"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="P24"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="M24"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P25"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="R24"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="T4"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="T23"><node name="_D_U5_R2_T23" /></Pin>
+<Pin name="R23"><node name="_D_U5_R2_R23" /></Pin>
+</Device>
+<Device name="u5_r1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="N24"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="P24"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="M24"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P25"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="R24"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="T4"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="T23"><node name="_D_U5_R1_T23" /></Pin>
+<Pin name="R23"><node name="_D_U5_R1_R23" /></Pin>
+</Device>
+<Device name="u5_r0"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="N24"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="P24"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="M24"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="P25"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="R24"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+<DeviceEnable><Pin name="T4"><opensCoverage>Partial</opensCoverage></Pin></DeviceEnable>
+<Pin name="T23"><node name="_D_U5_R0_T23" /></Pin>
+<Pin name="R23"><node name="_D_U5_R0_R23" /></Pin>
+</Device>
+<Device name="u1_sa%c3"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="CE55"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BV22"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BU57"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="BV58"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="BW61"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u1_sa%c2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="CE55"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BV22"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="M58"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="Y57"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="W57"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u1_sa%c1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="CE55"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BV22"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="W13"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="T21"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="W20"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u1_sa%c0"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="CE55"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BV22"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="BW22"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="CF20"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="BW21"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u1_sa%m"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="CE55"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="BV22"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="AT51"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="AT52"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<DeviceTRST><Pin name="AU51"><opensCoverage>Partial</opensCoverage></Pin></DeviceTRST>
+</Device>
+<Device name="u1_c3"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="131"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="130"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="136"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="137"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="38"><node name="QSFP_LPMODE&lt;34&gt;" /></Pin>
+<Pin name="39"><node name="QSFP_LED_GRN_L&lt;34&gt;" /></Pin>
+<Pin name="42"><node name="QSFP_MOD_ABS&lt;34&gt;" /></Pin>
+<Pin name="43"><node name="QSFP_RST_L&lt;34&gt;" /></Pin>
+<Pin name="47"><node name="QSFP_LED_YEL_L&lt;33&gt;" /></Pin>
+<Pin name="49"><node name="QSFP_LPMODE&lt;33&gt;" /></Pin>
+<Pin name="50"><node name="QSFP_LED_GRN_L&lt;33&gt;" /></Pin>
+<Pin name="52"><node name="QSFP_MOD_ABS&lt;33&gt;" /></Pin>
+<Pin name="54"><node name="QSFP_RST_L&lt;33&gt;" /></Pin>
+<Pin name="57"><node name="QSFP_LPMODE&lt;32&gt;" /></Pin>
+<Pin name="58"><node name="QSFP_LED_GRN_L&lt;32&gt;" /></Pin>
+<Pin name="59"><node name="QSFP_LED_YEL_L&lt;32&gt;" /></Pin>
+<Pin name="60"><node name="QSFP_INT_L&lt;32&gt;" /></Pin>
+<Pin name="62"><node name="SFP_MOD_ABS_FPGA&lt;2&gt;" /></Pin>
+<Pin name="65"><node name="QSFP_MOD_ABS&lt;32&gt;" /></Pin>
+<Pin name="67"><node name="QSFP_RST_L&lt;32&gt;" /></Pin>
+<Pin name="77"><node name="QSFP_RST_L&lt;36&gt;" /></Pin>
+<Pin name="78"><node name="QSFP_MOD_ABS&lt;36&gt;" /></Pin>
+<Pin name="81"><node name="QSFP_INT_L&lt;35&gt;" /></Pin>
+<Pin name="86"><node name="QSFP_LPMODE&lt;36&gt;" /></Pin>
+<Pin name="100"><node name="QSFP_LPMODE&lt;38&gt;" /></Pin>
+<Pin name="105"><node name="FPGA_SFP_RATE_SEL&lt;2&gt;" /></Pin>
+<Pin name="106"><node name="QSFP_INT_L&lt;38&gt;" /></Pin>
+<Pin name="107"><node name="QSFP_LED_YEL_L&lt;38&gt;" /></Pin>
+<Pin name="109"><node name="FPGA_SFP_LED_YEL_L&lt;0&gt;" /></Pin>
+<Pin name="111"><node name="QSFP_RST_L&lt;39&gt;" /></Pin>
+<Pin name="114"><node name="QSFP_LED_YEL_L&lt;39&gt;" /></Pin>
+<Pin name="115"><node name="QSFP_LED_GRN_L&lt;39&gt;" /></Pin>
+<Pin name="117"><node name="QSFP_LPMODE&lt;39&gt;" /></Pin>
+<Pin name="119"><node name="FPGA_SFP_LED_GRN_L&lt;0&gt;" /></Pin>
+</Device>
+<Device name="u1_c4"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="131"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="130"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="136"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="137"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="3"><node name="NC_4876" /></Pin>
+<Pin name="4"><node name="NC_4877" /></Pin>
+<Pin name="62"><node name="NC_4881" /></Pin>
+<Pin name="84"><node name="FPGA_QSFP_PWR_EN&lt;36&gt;" /></Pin>
+<Pin name="85"><node name="FPGA_QSFP_PWR_EN&lt;37&gt;" /></Pin>
+<Pin name="86"><node name="QSFP_PWR_FAULT_L&lt;37&gt;" /></Pin>
+<Pin name="97"><node name="QSFP_PWR_FAULT_L&lt;33&gt;" /></Pin>
+<Pin name="98"><node name="FPGA_QSFP_PWR_EN&lt;33&gt;" /></Pin>
+<Pin name="104"><node name="NC_4886" /></Pin>
+<Pin name="105"><node name="NC_4887" /></Pin>
+<Pin name="109"><node name="NC_4888" /></Pin>
+<Pin name="119"><node name="NC_4889" /></Pin>
+<Pin name="140"><node name="NC_4891" /></Pin>
+<Pin name="141"><node name="NC_4892" /></Pin>
+</Device>
+<Device name="u1_c2"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="131"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="130"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="136"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="137"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="3"><node name="NC_4918" /></Pin>
+<Pin name="4"><node name="NC_4919" /></Pin>
+<Pin name="62"><node name="NC_4923" /></Pin>
+<Pin name="104"><node name="NC_4928" /></Pin>
+<Pin name="105"><node name="NC_4929" /></Pin>
+<Pin name="109"><node name="NC_4930" /></Pin>
+<Pin name="119"><node name="NC_4931" /></Pin>
+<Pin name="140"><node name="NC_4933" /></Pin>
+<Pin name="141"><node name="NC_4934" /></Pin>
+</Device>
+<Device name="u1_c1"><FaultsCovered><DevicePresence>Full</DevicePresence>
+<DeviceOrientation>Full</DeviceOrientation><DeviceCorrect>Full</DeviceCorrect>
+<DeviceFunctional>Full</DeviceFunctional></FaultsCovered>
+<DeviceTCK><Pin name="131"><opensCoverage>Full</opensCoverage></Pin></DeviceTCK>
+<DeviceTMS><Pin name="130"><opensCoverage>Full</opensCoverage></Pin></DeviceTMS>
+<DeviceTDI><Pin name="136"><opensCoverage>Full</opensCoverage></Pin></DeviceTDI>
+<DeviceTDO><Pin name="137"><opensCoverage>Full</opensCoverage></Pin></DeviceTDO>
+<Pin name="3"><node name="NC_4901" /></Pin>
+<Pin name="4"><node name="NC_4902" /></Pin>
+<Pin name="62"><node name="NC_4906" /></Pin>
+<Pin name="104"><node name="NC_4911" /></Pin>
+<Pin name="105"><node name="NC_4912" /></Pin>
+<Pin name="109"><node name="NC_4913" /></Pin>
+<Pin name="119"><node name="NC_4914" /></Pin>
+<Pin name="140"><node name="NC_4916" /></Pin>
+<Pin name="141"><node name="NC_4917" /></Pin>
+</Device>
+<NodePair><Node name="FPGA_QSFP_PWR_EN&lt;33&gt;" /><Node name="FPGA_QSFP_PWR_EN&lt;31&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_QSFP_PWR_EN&lt;33&gt;" /><Node name="QSFP_PWR_FAULT_L&lt;31&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_QSFP_PWR_EN&lt;36&gt;" /><Node name="FPGA_QSFP_PWR_EN&lt;39&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_QSFP_PWR_EN&lt;36&gt;" /><Node name="QSFP_PWR_FAULT_L&lt;36&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_QSFP_PWR_EN&lt;37&gt;" /><Node name="QSFP_PWR_FAULT_L&lt;36&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_SFP_LED_GRN_L&lt;0&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="FPGA_SFP_LED_GRN_L&lt;0&gt;" /><Node name="CPLD_JTAGEN_C3" /></NodePair>
+<NodePair><Node name="FPGA_SFP_LED_GRN_L&lt;0&gt;" /><Node name="FPGA_SFP_TX_DISABLE&lt;0&gt;" />
+</NodePair>
+<NodePair><Node name="FPGA_SFP_LED_YEL_L&lt;0&gt;" /><Node name="CPLD_INIT_N_PU_C3" /></NodePair>
+<NodePair><Node name="FPGA_SFP_RATE_SEL&lt;2&gt;" /><Node name="SFP_RX_LOS_FPGA&lt;2&gt;" />
+</NodePair>
+<NodePair><Node name="NC_4876" /><Node name="QSFP_PWR_FAULT_L&lt;20&gt;" /></NodePair>
+<NodePair><Node name="NC_4876" /><Node name="QSFP_PWR_FAULT_L&lt;18&gt;" /></NodePair>
+<NodePair><Node name="NC_4876" /><Node name="FPGA_QSFP_PWR_EN&lt;18&gt;" /></NodePair>
+<NodePair><Node name="NC_4877" /><Node name="FPGA_QSFP_PWR_EN&lt;20&gt;" /></NodePair>
+<NodePair><Node name="NC_4877" /><Node name="QSFP_PWR_FAULT_L&lt;20&gt;" /></NodePair>
+<NodePair><Node name="NC_4877" /><Node name="QSFP_PWR_FAULT_L&lt;18&gt;" /></NodePair>
+<NodePair><Node name="NC_4881" /><Node name="CPLD4_FPGA_DATA" /></NodePair>
+<NodePair><Node name="NC_4881" /><Node name="QSFP_PWR_FAULT_L&lt;11&gt;" /></NodePair>
+<NodePair><Node name="NC_4886" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4886" /><Node name="QSFP_PWR_FAULT_L&lt;30&gt;" /></NodePair>
+<NodePair><Node name="NC_4887" /><Node name="QSFP_PWR_FAULT_L&lt;30&gt;" /></NodePair>
+<NodePair><Node name="NC_4887" /><Node name="FPGA_QSFP_PWR_EN&lt;30&gt;" /></NodePair>
+<NodePair><Node name="NC_4888" /><Node name="FPGA_QSFP_PWR_EN&lt;0&gt;" /></NodePair>
+<NodePair><Node name="NC_4888" /><Node name="CPLD_INIT_N_PU_C4" /></NodePair>
+<NodePair><Node name="NC_4889" /><Node name="QSFP_PWR_FAULT_L&lt;1&gt;" /></NodePair>
+<NodePair><Node name="NC_4889" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4889" /><Node name="CPLD_JTAGEN_C4" /></NodePair>
+<NodePair><Node name="NC_4889" /><Node name="FPGA_QSFP_PWR_EN&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4891" /><Node name="FPGA_QSFP_PWR_EN&lt;7&gt;" /></NodePair>
+<NodePair><Node name="NC_4891" /><Node name="QSFP_PWR_FAULT_L&lt;7&gt;" /></NodePair>
+<NodePair><Node name="NC_4891" /><Node name="QSFP_PWR_FAULT_L&lt;8&gt;" /></NodePair>
+<NodePair><Node name="NC_4892" /><Node name="QSFP_PWR_FAULT_L&lt;7&gt;" /></NodePair>
+<NodePair><Node name="NC_4892" /><Node name="QSFP_PWR_FAULT_L&lt;8&gt;" /></NodePair>
+<NodePair><Node name="NC_4892" /><Node name="FPGA_QSFP_PWR_EN&lt;8&gt;" /></NodePair>
+<NodePair><Node name="NC_4901" /><Node name="QSFP_LED_YEL_L&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4901" /><Node name="QSFP_INT_L&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4901" /><Node name="QSFP_MOD_ABS&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4902" /><Node name="QSFP_INT_L&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4902" /><Node name="QSFP_MOD_ABS&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4902" /><Node name="QSFP_RST_L&lt;3&gt;" /></NodePair>
+<NodePair><Node name="NC_4906" /><Node name="CPLD1_FPGA_DATA" /></NodePair>
+<NodePair><Node name="NC_4906" /><Node name="QSFP_INT_L&lt;4&gt;" /></NodePair>
+<NodePair><Node name="NC_4911" /><Node name="QSFP_INT_L&lt;10&gt;" /></NodePair>
+<NodePair><Node name="NC_4911" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4912" /><Node name="QSFP_LED_YEL_L&lt;10&gt;" /></NodePair>
+<NodePair><Node name="NC_4912" /><Node name="QSFP_INT_L&lt;10&gt;" /></NodePair>
+<NodePair><Node name="NC_4913" /><Node name="CPLD_INIT_N_PU_C1" /></NodePair>
+<NodePair><Node name="NC_4913" /><Node name="QSFP_RST_L&lt;11&gt;" /></NodePair>
+<NodePair><Node name="NC_4914" /><Node name="QSFP_LPMODE&lt;11&gt;" /></NodePair>
+<NodePair><Node name="NC_4914" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4914" /><Node name="CPLD_JTAGEN_C1" /></NodePair>
+<NodePair><Node name="NC_4914" /><Node name="QSFP_RST_L&lt;12&gt;" /></NodePair>
+<NodePair><Node name="NC_4916" /><Node name="QSFP_LED_GRN_L&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4916" /><Node name="QSFP_LPMODE&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4916" /><Node name="QSFP_INT_L&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4917" /><Node name="QSFP_LPMODE&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4917" /><Node name="QSFP_INT_L&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4917" /><Node name="QSFP_LED_YEL_L&lt;13&gt;" /></NodePair>
+<NodePair><Node name="NC_4918" /><Node name="QSFP_LED_YEL_L&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4918" /><Node name="QSFP_INT_L&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4918" /><Node name="QSFP_MOD_ABS&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4919" /><Node name="QSFP_INT_L&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4919" /><Node name="QSFP_MOD_ABS&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4919" /><Node name="QSFP_RST_L&lt;17&gt;" /></NodePair>
+<NodePair><Node name="NC_4923" /><Node name="CPLD2_FPGA_DATA" /></NodePair>
+<NodePair><Node name="NC_4923" /><Node name="QSFP_INT_L&lt;18&gt;" /></NodePair>
+<NodePair><Node name="NC_4928" /><Node name="QSFP_INT_L&lt;24&gt;" /></NodePair>
+<NodePair><Node name="NC_4928" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4929" /><Node name="QSFP_LED_YEL_L&lt;24&gt;" /></NodePair>
+<NodePair><Node name="NC_4929" /><Node name="QSFP_INT_L&lt;24&gt;" /></NodePair>
+<NodePair><Node name="NC_4930" /><Node name="QSFP_RST_L&lt;25&gt;" /></NodePair>
+<NodePair><Node name="NC_4930" /><Node name="CPLD_INIT_N_PU_C2" /></NodePair>
+<NodePair><Node name="NC_4931" /><Node name="QSFP_LPMODE&lt;25&gt;" /></NodePair>
+<NodePair><Node name="NC_4931" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="NC_4931" /><Node name="QSFP_RST_L&lt;26&gt;" /></NodePair>
+<NodePair><Node name="NC_4931" /><Node name="CPLD_JTAGEN_C2" /></NodePair>
+<NodePair><Node name="NC_4933" /><Node name="QSFP_LED_GRN_L&lt;27&gt;" /></NodePair>
+<NodePair><Node name="NC_4933" /><Node name="QSFP_LPMODE&lt;27&gt;" /></NodePair>
+<NodePair><Node name="NC_4933" /><Node name="QSFP_INT_L&lt;27&gt;" /></NodePair>
+<NodePair><Node name="NC_4934" /><Node name="QSFP_LPMODE&lt;27&gt;" /></NodePair>
+<NodePair><Node name="NC_4934" /><Node name="QSFP_INT_L&lt;27&gt;" /></NodePair>
+<NodePair><Node name="NC_4934" /><Node name="QSFP_LED_YEL_L&lt;27&gt;" /></NodePair>
+<NodePair><Node name="QSFP_INT_L&lt;32&gt;" /><Node name="CPLD3_FPGA_DATA" /></NodePair>
+<NodePair><Node name="QSFP_INT_L&lt;35&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_INT_L&lt;38&gt;" /><Node name="SFP_RX_LOS_FPGA&lt;2&gt;" /></NodePair>
+<NodePair><Node name="QSFP_INT_L&lt;38&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LED_GRN_L&lt;32&gt;" /><Node name="FPGA_CPLD3_RST_L" /></NodePair>
+<NodePair><Node name="QSFP_LED_GRN_L&lt;33&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LED_GRN_L&lt;34&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LED_GRN_L&lt;39&gt;" /><Node name="QSFP_INT_L&lt;39&gt;" /></NodePair>
+<NodePair><Node name="QSFP_LED_YEL_L&lt;32&gt;" /><Node name="CPLD3_FPGA_DATA" /></NodePair>
+<NodePair><Node name="QSFP_LED_YEL_L&lt;33&gt;" /><Node name="CPLD3_FPGA_SPI_MISO" /></NodePair>
+<NodePair><Node name="QSFP_LED_YEL_L&lt;38&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LED_YEL_L&lt;39&gt;" /><Node name="QSFP_MOD_ABS&lt;39&gt;" /></NodePair>
+<NodePair><Node name="QSFP_LED_YEL_L&lt;39&gt;" /><Node name="QSFP_INT_L&lt;39&gt;" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;32&gt;" /><Node name="FPGA_CPLD3_RST_L" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;32&gt;" /><Node name="FPGA_CPLD3_CLK" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;33&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;34&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;36&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;38&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_LPMODE&lt;39&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_MOD_ABS&lt;32&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_MOD_ABS&lt;33&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_MOD_ABS&lt;34&gt;" /><Node name="FPGA_CPLD3_SPI_SCK" /></NodePair>
+<NodePair><Node name="QSFP_MOD_ABS&lt;36&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_PWR_FAULT_L&lt;33&gt;" /><Node name="FPGA_QSFP_PWR_EN&lt;31&gt;" />
+</NodePair>
+<NodePair><Node name="QSFP_PWR_FAULT_L&lt;37&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;32&gt;" /><Node name="FPGA_CPLD3_STROBE" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;32&gt;" /><Node name="FPGA_CPLD3_DATA" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;32&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;33&gt;" /><Node name="FPGA_CPLD3_RST_L" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;33&gt;" /><Node name="FPGA_CPLD3_CLK" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;34&gt;" /><Node name="CPLD3_FPGA_SPI_MISO" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;34&gt;" /><Node name="FPGA_CPLD3_SPI_SCK" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;36&gt;" /><Node name="P3_3VA" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;39&gt;" /><Node name="CPLD_INIT_N_PU_C3" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;39&gt;" /><Node name="QSFP_MOD_ABS&lt;39&gt;" /></NodePair>
+<NodePair><Node name="QSFP_RST_L&lt;39&gt;" /><Node name="QSFP_INT_L&lt;39&gt;" /></NodePair>
+<NodePair><Node name="SFP_MOD_ABS_FPGA&lt;2&gt;" /><Node name="CPLD3_FPGA_DATA" /></NodePair>
+<NodePair><Node name="_D_U5_R0_R23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R0_R23" /><Node name="RT0_GPIO&lt;4&gt;" /></NodePair>
+<NodePair><Node name="_D_U5_R0_R23" /><Node name="TEST_TP15_R0" /></NodePair>
+<NodePair><Node name="_D_U5_R0_T23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R0_T23" /><Node name="TEST_TP15_R0" /></NodePair>
+<NodePair><Node name="_D_U5_R1_R23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R1_R23" /><Node name="RT1_GPIO&lt;4&gt;" /></NodePair>
+<NodePair><Node name="_D_U5_R1_R23" /><Node name="TEST_TP15_R1" /></NodePair>
+<NodePair><Node name="_D_U5_R1_T23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R1_T23" /><Node name="TEST_TP15_R1" /></NodePair>
+<NodePair><Node name="_D_U5_R2_R23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R2_R23" /><Node name="RT2_GPIO&lt;4&gt;" /></NodePair>
+<NodePair><Node name="_D_U5_R2_R23" /><Node name="TEST_TP15_R2" /></NodePair>
+<NodePair><Node name="_D_U5_R2_T23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R2_T23" /><Node name="TEST_TP15_R2" /></NodePair>
+<NodePair><Node name="_D_U5_R3_R23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R3_R23" /><Node name="RT3_GPIO&lt;4&gt;" /></NodePair>
+<NodePair><Node name="_D_U5_R3_R23" /><Node name="TEST_TP15_R3" /></NodePair>
+<NodePair><Node name="_D_U5_R3_T23" /><Node name="P1_8V" /></NodePair>
+<NodePair><Node name="_D_U5_R3_T23" /><Node name="TEST_TP15_R3" /></NodePair>
+</Test>

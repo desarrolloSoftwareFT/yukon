@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852312   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:53 2021
+on failure
+   report parallel devices
+   report "r233 4.70k"
+end on failure
+disconnect all
+connect s to "P3_3V"
+connect i to "P3V3_ALT_VFB"
+jumper 774, re3, wb, ar100m, op
+! "r21_3v3b" test.
+off failure

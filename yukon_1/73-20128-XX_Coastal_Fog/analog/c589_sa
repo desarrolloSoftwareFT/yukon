@@ -1,0 +1,19 @@
+!!!!    2    0    1 1626147616  Vff88                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:01 2021
+on failure
+report parallel devices
+report "c3 22.0u"
+report "c132_sa 100n"
+report "c142_sa 100n"
+report "c151_sa 100n"
+report "c161_sa 100n"
+report "c162_sa 100n"
+report "c163_sa 100n"
+end on failure
+disconnect all
+connect i to "PWR_SA_AVDD12"; b to "PWR_SA_AVDD12"
+connect s to "GND"; a to "GND"
+connect g to "UNNAMED_64_RES_I275_A"
+capacitor 69.6u,30.00,30.04,fr128,re1,ar100m,ed,sa,sb,sm,nocomp
+! "c589_sa" test.
+off failure

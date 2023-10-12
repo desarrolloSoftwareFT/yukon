@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627540169  Vc080                                         
+! IPG: rev 09.20p  Mon Jun 28 12:07:34 2021
+disconnect all
+connect s to "P3P3_QSFPA_HS_Q7"
+connect i to "QSFP_SCL<14>"
+resistor 2.2k,20.00,20.00,re4,wb,ar500m,ed
+! "rn10_q7%pin_1_8" test.

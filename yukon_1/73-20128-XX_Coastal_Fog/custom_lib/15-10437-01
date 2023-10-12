@@ -1,0 +1,221 @@
+!!!!    6    0    1 1324692203  Vebb9                                         
+!     74ls595
+!     8 bit shift register with output latches
+!    revision A.01.00
+! warning "Pullups required to test high impedance output (pin 15)"
+
+sequential
+
+vector cycle  1u
+receive delay 900n
+
+assign   VCC         to pins  16
+assign   GND         to pins  8
+
+assign   Gbar        to pins  13
+assign   RCK         to pins  12
+assign   SCLRbar     to pins  10
+assign   SCK         to pins  11
+assign   SER         to pins  14
+
+assign   Qh_Qa       to pins  7,6,5,4,3,2,1,15
+assign   Qh9         to pins  9
+
+family   LVT
+
+power    VCC,GND
+
+inputs   Gbar, RCK, SCLRbar, SCK, SER
+
+outputs  Qh_Qa, Qh9
+
+set load on pins 15       to pull up
+
+when Gbar is "1" inactive Qh_Qa
+
+trace Qh_Qa, Qh9 to Gbar, RCK, SCLRbar, SCK, SER
+
+disable        Qh_Qa    with  Gbar to "1"
+
+!***************************************************************
+!***************************************************************
+
+vector  Reset
+   set   Gbar     to "0"
+   set   RCK      to "0"
+   set   SCLRbar  to "0"
+   set   SCK      to "0"
+   set   SER      to "0"
+end vector
+
+vector  Keep_Control
+   set   Gbar     to "k"
+   set   RCK      to "k"
+   set   SCLRbar  to "k"
+   set   SCK      to "k"
+   set   SER      to "k"
+end vector
+
+vector  Gbar_high
+   initialize     to Keep_Control
+   set   Gbar     to "1"
+end vector
+
+vector  Clock
+   initialize     to Keep_Control
+   set   RCK      to "t"
+   set   SCK      to "t"
+end vector
+
+vector  SER_high
+   initialize     to Keep_Control
+   set   SER      to "1"
+end vector
+
+vector  SER_low
+   initialize     to Keep_Control
+   set   SER      to "0"
+end vector
+
+vector  SCLRbar_high
+   initialize     to Keep_Control
+   set   SCLRbar  to "1"
+end vector
+
+vector  SCLRbar_low
+   initialize     to Keep_Control
+   set   SCLRbar  to "0"
+end vector
+
+vector  Qh_Qa_00000001
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00000001"
+end vector
+
+vector  Qh_Qa_00000010
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00000010"
+end vector
+
+vector  Qh_Qa_00000100
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00000100"
+end vector
+
+vector  Qh_Qa_00001000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00001000"
+end vector
+
+vector  Qh_Qa_00010000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00010000"
+end vector
+
+vector  Qh_Qa_00100000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00100000"
+end vector
+
+vector  Qh_Qa_01000000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "01000000"
+end vector
+
+vector  Qh_Qa_10000000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "10000000"
+end vector
+
+vector  Qh_Qa_00000000
+   initialize     to Keep_Control
+   set   Qh_Qa    to "00000000"
+end vector
+
+vector  Qh_Qa_11111111
+   initialize     to Keep_Control
+   set   Qh_Qa    to "11111111"
+end vector
+
+vector  Qh_Qa_XXXXXXX1
+   initialize     to Keep_Control
+   set   Qh_Qa    to "XXXXXXX1"
+end vector
+
+vector  Qh9_high
+   initialize     to Keep_Control
+   set   Qh9      to "1"
+end vector
+
+vector  Qh9_low
+   initialize     to Keep_Control
+   set   Qh9      to "0"
+end vector
+
+!***************************************************************
+!***************************************************************
+unit  "test1"
+   execute  Reset
+   execute  SCLRbar_high
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00000000
+
+   execute  SER_high
+   execute  Clock
+   execute  Clock
+
+   execute  SER_low
+   execute  Clock
+   execute  Clock
+
+   execute  Qh_Qa_00000001
+   execute  Qh9_low
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00000010
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00000100
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00001000
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00010000
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00100000
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_01000000
+   execute  Qh9_high
+
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_10000000
+
+   execute  SCLRbar_low
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00000000
+end unit
+
+unit  "Enable (Gbar) test"
+   execute  Reset
+   execute  SCLRbar_high
+   execute  Clock
+   execute  Clock
+   execute  Qh_Qa_00000000
+
+   execute  Gbar_high
+   execute  Qh_Qa_XXXXXXX1
+end unit
+
+!End of test

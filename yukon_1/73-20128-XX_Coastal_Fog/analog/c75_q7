@@ -1,0 +1,12 @@
+!!!!    2    0    1 1692810072   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:57 2021
+on failure
+report parallel devices
+report "r64_q7 2.20k"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_QSFP_PWR_EN<15>"
+capacitor 220n,30.00,35.00,fr1024,re2,ar20.0m,nocomp,ed
+! "c75_q7" test.
+off failure

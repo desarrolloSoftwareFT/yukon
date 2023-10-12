@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852470   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:31 2021
+disconnect all
+connect i to "PD_VREFB8AN0"
+connect s to "GND"
+jumper 6.01, re1, ar200m
+! "r666" test.

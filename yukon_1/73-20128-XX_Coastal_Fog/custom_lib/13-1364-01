@@ -1,0 +1,39 @@
+!!!!   21    2    1 1368605632  V1179                                         
+
+diode  "cr1", 0.8, 0.4
+diode  "cr2", 0.8, 0.4
+diode  "cr3", 0.8, 0.4
+diode  "cr4", 0.8, 0.4
+diode  "cr5", 0.9, 0.5
+diode  "cr6", 0.8, 0.4
+diode  "cr7", 0.8, 0.4
+diode  "cr8", 0.8, 0.4
+
+external pins  1
+   device  "cr1"  pins "A"
+   device  "cr5"  pins "C"
+
+external pins  2
+   device  "cr1"  pins "C"
+   device  "cr2"  pins "C"
+   device  "cr3"  pins "C"
+   device  "cr4"  pins "C"
+
+external pins  3
+   device  "cr4"  pins "A"
+   device  "cr8"  pins "C"
+
+external pins  4
+   device  "cr3"  pins "A"
+   device  "cr7"  pins "C"
+
+external pins  5
+   device  "cr5"  pins "A"
+   device  "cr6"  pins "A"
+   device  "cr7"  pins "A"
+   device  "cr8"  pins "A"
+
+external pins  6
+    device  "cr2"  pins "A"
+    device  "cr6"  pins "C"
+

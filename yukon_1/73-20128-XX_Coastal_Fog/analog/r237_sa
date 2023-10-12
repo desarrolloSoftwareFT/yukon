@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627540321  Va46e                                         
+! IPG: rev 09.20p  Mon Jun 28 12:08:46 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"
+connect i to "TDIE_GPIO4_SA"; b to "TDIE_GPIO4_SA"
+resistor 2k,20.00,20.00,re4,wb,ar500m,sb,ed
+! "r237_sa" test.
+! DUT: nominal 2k, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 2.02k, low 1.98k
+! TEST: high limit 2.023k, low limit 1.980k
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

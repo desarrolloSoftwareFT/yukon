@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852471   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:32 2021
+disconnect all
+connect s to "FPGA_OSC2_SCL"
+connect i to "SRT_FPGA_OSC100M_SCL"
+jumper 6.01, re1, ar200m
+! "r894" test.

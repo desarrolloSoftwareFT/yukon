@@ -1,0 +1,37 @@
+!!!!    2    0    1 1606957585  Vd642                                         
+!# PN"20-0912-01" "20-0912-01 XTR,NCH,BSC028N06LS3 G,60V,10";
+
+test powered analog
+
+ test "FET_ON"
+ test "FET_OFF"
+
+end test
+
+! ***************************************************************************
+
+subtest "FET_OFF"
+ connect s to pins  3
+ connect i to pins  3       ! Drain
+ connect l to pins  1       ! Source
+ connect a to pins  2       ! Gate
+
+ source dcv, am1.8, terminated 50, on
+ auxiliary dcv, am0.0, on
+ detector dcv, expect 3.5
+ measure  2.0,  1.15      ! Measurement taken at Drain
+end subtest
+
+subtest "FET_ON"
+ connect s to pins  3
+ connect i to pins  3       ! Drain
+ connect l to pins  1       ! Source
+ connect a to pins  2       ! Gate
+
+ source dcv, am2.5, terminated 50, on
+ auxiliary dcv, am2.5, on, ico1
+ detector dcv, expect 3.5
+ measure  0.2, -0.2       ! Measurement taken at Drain
+end subtest
+
+

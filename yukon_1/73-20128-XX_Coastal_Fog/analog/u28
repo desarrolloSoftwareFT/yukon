@@ -1,0 +1,51 @@
+!!!!    2    0    1 1624853817  Ve1fb                                         
+! IPG: rev 09.20p  Mon Jun 28 12:16:58 2021
+
+!  156  MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 3, 6
+   nonanalog pins 2,7,8
+
+   test "Enable"
+   test "Out_4"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 3
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_4"
+   connect s to pins 1
+   connect rcva to pins 4
+   connect l to pins 4
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 39.0M       !125M/4
+   measure 39.0M * 1.05, 39.0M * 0.95
+end subtest
+
+subtest  "Out_5"
+   connect s to pins 1
+   connect rcva to pins 5
+   connect l to pins 5
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 19.5M       !156M/8
+   measure 19.5M * 1.05, 19.5M * 0.95
+end subtest
+
+
+
+!
+!  End test
+!

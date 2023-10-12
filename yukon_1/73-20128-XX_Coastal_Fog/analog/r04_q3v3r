@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852463   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
+disconnect all
+connect s to "UNNAMED_62_ACADIAMPPS43_I1_DGNDSENSE"
+connect i to "DGND_SENSE_R_Q3V3R"
+jumper 6.01, re1, ar200m
+! "r04_q3v3r" test.

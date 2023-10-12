@@ -1,0 +1,8 @@
+!!!!    2    0    1 1622529793  Vb34b                                         
+!* VDD_PH_92 TOP Probe removed for power up stable ready
+! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
+disconnect all
+connect s to "VDD_PH_92"
+connect i to "VDD_BOOT_R_92"
+jumper 6.01, re1, ar200m
+! "r4_92_rr" test.

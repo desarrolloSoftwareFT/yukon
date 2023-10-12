@@ -1,0 +1,35 @@
+!!!!    2    0    1 1519643097  V600e                                         
+test powered analog
+power pins "A2","B2","C2"
+power pins "D1"
+nonanalog pins "B1","C1"
+
+ test "VIN"
+ test "VOUT"
+  test "EN"
+end test
+
+subtest "VIN"
+     connect i to pins "A2"
+     connect l to pins "D1"
+
+   detector dcv, expect 3.30
+   measure 3.30 * 1.05, 3.30 * 0.95
+end subtest
+
+
+subtest "VOUT"
+     connect i to pins "A1"
+     connect l to pins "D1"
+
+   detector dcv, expect 2.5
+   measure 2.5 * 1.05, 2.5 * 0.95
+end subtest
+
+subtest "EN"
+     connect i to pins "D2"
+     connect l to pins "D1"
+
+   detector dcv, expect 3.5
+   measure 3.3 * 1.05, 3.3 * 0.95
+end subtest

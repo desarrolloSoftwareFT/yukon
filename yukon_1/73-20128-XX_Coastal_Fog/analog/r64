@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852326   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:07 2021
+on failure
+   report parallel devices
+   report "r23_rr 10.0k"
+end on failure
+disconnect all
+connect s to "PWR_AVDD_RTR_PGOOD"
+connect i to "P3_3VA"
+jumper 4.99k, re4, wb, ar200m, op
+! "r64" test.
+off failure

@@ -1,0 +1,21 @@
+!!!!    2    0    1 1624853601   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:13:22 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+on failure
+   report parallel devices
+   report "c14_adv 1.00u"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "5V_BIAS_ADV"
+zener 5.1, 5.96, 4.45, idc11m, co7.6, ar5.40
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "cr1_adv" test.
+! DUT: nominal 5.1, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 5.355, low 4.845
+! TEST: high limit 5.404, low limit 4.873
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed
+! Bias Current is 10m
+off failure

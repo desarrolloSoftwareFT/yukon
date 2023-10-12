@@ -1,0 +1,26 @@
+!!!!    2    0    1 1451292454  Ved7d                                         
+
+!  32.768kHz
+!  XTAL,32.768kHz,25.0 ppm,SMD
+
+test powered analog
+   nonanalog pins 1
+
+   test "Out"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out"
+   connect rcva to pins 2
+
+   detector frequency, expect 32.768, gate 1
+   measure 32.768 * 1.05, 32.768 * 0.95
+end subtest
+
+
+!
+!  End test
+!

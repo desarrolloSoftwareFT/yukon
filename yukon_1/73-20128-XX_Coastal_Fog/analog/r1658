@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852444   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:05 2021
+on failure
+   report parallel devices
+   report "r1154 2.00k"
+end on failure
+disconnect all
+connect s to "P3_3VA"
+connect i to "PMBUS_SDA"
+jumper 1.66k, re4, wb, ar500m, op
+! "r1658" test.
+off failure

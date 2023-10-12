@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852379   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:00 2021
+disconnect all
+connect s to "P3_3V"
+connect i to "CLKGEN_STATUS0"
+jumper 4.88k, re4, wb, ar200m, op
+! "r194" test.

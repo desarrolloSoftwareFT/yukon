@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852404   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:25 2021
+disconnect all
+connect s to "P3_3V"
+connect i to "JTAG_TCK_CPLD4_3V3"
+jumper 10.0k, re4, wb, ar100m, op
+! "r508" test.

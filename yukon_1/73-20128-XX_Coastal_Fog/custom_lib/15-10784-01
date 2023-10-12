@@ -1,0 +1,122 @@
+!!!!    6    0    1  858382770  Vbb02                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         ICS85304-01
+! Alias:
+! Part Type:         VLSI
+! Description:       1 to 5 Differential Pair Fanout Clock Buffer
+! Manufacturer:      Integrated Circuit Systems
+! Package Style:     20 pin SOP
+! Created:           Dec 14, 2005
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       
+! Cisco Part #:      15-8740-01
+
+sequential
+
+vector cycle 200n
+receive delay 160n
+
+assign VCC  to pins 8
+assign VEE  to pins 5
+
+assign PCLK to pins 6,7
+assign Q1   to pins 3,4
+assign Q0   to pins 1,2
+
+power   VCC,VEE
+inputs  PCLK
+outputs Q1,Q0
+
+family LVT
+
+set ref on pins 3,4  to rh 1.80, rl 1.70
+set ref on pins 1,2  to rh 1.80, rl 1.70
+
+
+vector INIT1
+ set PCLK to "01"
+ set Q1   to "xx"
+ set Q0   to "xx"
+end vector
+
+vector KEEP1
+ set PCLK to "kk"
+ set Q1   to "xx"
+ set Q0   to "xx"
+end vector
+
+vector PCLK_00
+ initialize to KEEP1
+ set PCLK   to "00"
+end vector
+
+vector PCLK_01
+ initialize to KEEP1
+ set PCLK   to "01"
+end vector
+
+vector PCLK_10
+ initialize to KEEP1
+ set PCLK   to "10"
+end vector
+
+vector PCLK_11
+ initialize to KEEP1
+ set PCLK   to "11"
+end vector
+
+vector Q_01
+ initialize to KEEP1
+ set Q1     to "01"
+ set Q0     to "01"
+end vector
+
+vector Q_10
+ initialize to KEEP1
+ set Q1     to "10"
+ set Q0     to "10"
+end vector
+
+! *******************************************************************************
+
+
+unit "Q vs PCLK, Active"
+ execute INIT1
+ repeat 2 times
+  execute PCLK_00
+  execute Q_10
+  execute PCLK_01
+  execute Q_01
+  execute PCLK_10
+  execute Q_10
+  execute PCLK_11
+  execute Q_10
+ end repeat
+end unit
+
+unit "Q vs PCLK, Inactive"
+ execute INIT1
+ repeat 2 times
+  execute PCLK_00
+  execute Q_01
+  execute PCLK_01
+  execute Q_01
+  execute PCLK_10
+  execute Q_01
+  execute PCLK_11
+  execute Q_01
+ end repeat
+end unit
+
+

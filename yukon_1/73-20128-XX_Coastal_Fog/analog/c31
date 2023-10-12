@@ -1,0 +1,13 @@
+!!!!    2    0    1 1632884032   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:19:34 2020
+!* 20pF capacitor, skip it accordding to cisco tolerance guidelines.
+disconnect all
+connect s to "GND"
+connect a to "GND"
+connect i to "FPGA_SA_SYNC_MASTER_1V8"
+connect b to "FPGA_SA_SYNC_MASTER_1V8"
+connect gl to "SRT_FPGA_SA_SYNC_MASTER_1V8"
+!!connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8"
+!connect g to "FPGA_SA_SYNC_SLAVE_1V8"
+capacitor 47p + 100p,50.00,50.00,fr8192,re4,ar20.0m,comp,ed,sm,en,wb,sa,sb,sl
+! "c31" test.

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538279  Vdc4e                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:43 2021
+disconnect all
+connect s to "LM03328_CLK100M_LVPECL_N"
+connect i to "UNNAMED_58_CAP_I606_A"
+capacitor 10n,30.00,30.00,fr8192,re3,wb,ar100m,nocomp,ed
+! "c449" test.

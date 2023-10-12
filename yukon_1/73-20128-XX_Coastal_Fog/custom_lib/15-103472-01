@@ -1,0 +1,231 @@
+!!!!    6    0    1 1607341751  V740d                                         
+! Part Name:         SI5345D-D-GM
+! Alias:
+! Part Type:         VLSI
+! Description:       Clock Muliplier/Regenerator
+! Manufacturer:      Silicon Laboratory
+! Package Style:     64 pin PLCC
+! Created:           Dec 7, 2020
+! Programmer:        FangJi
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:
+! Constraints:
+! Cisco Part #:      15-103472-01
+
+sequential
+
+vector cycle  500n
+receive delay 400n
+
+assign VDD    to pins 32,46,60
+assign VDDA   to pins 13
+assign VDDO   to pins 22,26,29,33,36,40,43,49,52,57
+
+assign GND    to pins 65
+
+assign SCL      to pins 16
+assign SDA      to pins 18
+assign ADDR     to pins 17,19  !A1,A0
+assign I2C_SEL  to pins 39
+
+assign OE       to pins 11
+assign RST      to pins 6
+
+assign IN_SEL1  to pins 4
+assign IN_SEL0  to pins 3
+assign CLK_IN   to pins 14,15
+assign CLK_OUT  to pins 59,58,54,53,51,50,45,44,42,41
+assign CLK_OUT  to pins 38,37,35,34,31,30,28,27,24,23
+
+assign NC     to pins 1,2,5,63,64,61,62,25,48,20,21,55,56
+
+assign NONDIG   to pins 7,8,9,10,12,47
+
+power   VDD,VDDO,VDDA,GND
+inputs  SCL,ADDR,I2C_SEL,OE,RST,IN_SEL1,IN_SEL0,CLK_IN
+outputs CLK_OUT
+bidirectional SDA
+nondigital NC,NONDIG
+
+family LVT
+
+!***************************************************************************
+vector INIT1
+ drive SDA
+ set I2C_SEL to "1"
+ set SDA  to "1"
+ set SCL  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SDA  to "x"
+ set SCL  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SDA  to "k"
+ set SCL  to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+! *************************************************************************
+!  SUB
+! ******************************************************************************
+
+sub START
+ execute SK_21
+ execute D_1
+ execute SK_21
+ execute D_0
+end sub
+
+sub STOP
+ execute SK_21
+ execute D_0
+ execute SK_21
+ execute D_1
+end sub
+
+sub WD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SK_20
+ execute D7
+ execute SK_21
+
+ execute SK_20
+ execute D6
+ execute SK_21
+
+ execute SK_20
+ execute D5
+ execute SK_21
+
+ execute SK_20
+ execute D4
+ execute SK_21
+
+ execute SK_20
+ execute D3
+ execute SK_21
+
+ execute SK_20
+ execute D2
+ execute SK_21
+
+ execute SK_20
+ execute D1
+ execute SK_21
+
+ execute SK_20
+ execute D0
+ execute SK_21
+
+ execute SK_10
+ execute SK_11
+ execute R_0    ! Acknowledge bit
+ execute SK_10
+
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      !NOne Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+! ******************************************************************************
+!  UNITS
+! ******************************************************************************
+
+unit "ACK Test"
+
+ execute INIT1
+ repeat 100 times
+ execute R_1
+ end repeat
+ call START
+ call WD(D_0,D_0,D_1,D_1, D_1,D_0,D_0,D_0)   !Use appropriate slave address
+ call STOP
+ repeat 100 times
+ execute  R_1
+ end repeat
+! call START
+! call WX(D_1,D_1,D_1,D_1, D_1,D_1,D_1,D_0)
+! call STOP
+
+
+end unit
+
+!
+! End of test.
+!
+
+

@@ -1,0 +1,151 @@
+!!!!    6    0    1  591688800   0000                                         
+
+!    7408
+!    AND, 2-Input, Quad
+!    revision A.01.00
+
+combinatorial
+
+assign   VCC       to pins 14
+assign   GND       to pins  7
+
+assign   E1_Inputs to pins  1,2
+assign   E2_Inputs to pins  4,5
+assign   E3_Inputs to pins  9,10
+assign   E4_Inputs to pins  12,13
+
+assign   E1_Output to pins  3
+assign   E2_Output to pins  6
+assign   E3_Output to pins  8
+assign   E4_Output to pins  11
+
+power    VCC, GND
+
+family   TTL
+
+inputs   E1_Inputs,E2_Inputs,E3_Inputs,E4_Inputs
+outputs  E1_Output,E2_Output,E3_Output,E4_Output
+
+trace E1_Output   to E1_Inputs
+trace E2_Output   to E2_Inputs
+trace E3_Output   to E3_Inputs
+trace E4_Output   to E4_Inputs
+
+!***************************************************************************
+!***************************************************************************
+
+!    Each Element tested separately, with a full truth table set of patterns.
+!    Vectors applied in graycode type of sequence to reduce transients.
+
+vector  E1_Input_00
+   set   E1_Inputs   to "00"
+   set   E1_Output   to "0"
+end vector
+
+vector  E1_Input_01
+   set   E1_Inputs   to "01"
+   set   E1_Output   to "0"
+end vector
+
+vector  E1_Input_10
+   set   E1_Inputs   to "10"
+   set   E1_Output   to "0"
+end vector
+
+vector  E1_Input_11
+   set   E1_Inputs   to "11"
+   set   E1_Output   to "1"
+end vector
+
+vector  E2_Input_00
+   set   E2_Inputs   to "00"
+   set   E2_Output   to "0"
+end vector
+
+vector  E2_Input_01
+   set   E2_Inputs   to "01"
+   set   E2_Output   to "0"
+end vector
+
+vector  E2_Input_10
+   set   E2_Inputs   to "10"
+   set   E2_Output   to "0"
+end vector
+
+vector  E2_Input_11
+   set   E2_Inputs   to "11"
+   set   E2_Output   to "1"
+end vector
+
+vector  E3_Input_00
+   set   E3_Inputs   to "00"
+   set   E3_Output   to "0"
+end vector
+
+vector  E3_Input_01
+   set   E3_Inputs   to "01"
+   set   E3_Output   to "0"
+end vector
+
+vector  E3_Input_10
+   set   E3_Inputs   to "10"
+   set   E3_Output   to "0"
+end vector
+
+vector  E3_Input_11
+   set   E3_Inputs   to "11"
+   set   E3_Output   to "1"
+end vector
+
+vector  E4_Input_00
+   set   E4_Inputs   to "00"
+   set   E4_Output   to "0"
+end vector
+
+vector  E4_Input_01
+   set   E4_Inputs   to "01"
+   set   E4_Output   to "0"
+end vector
+
+vector  E4_Input_10
+   set   E4_Inputs   to "10"
+   set   E4_Output   to "0"
+end vector
+
+vector  E4_Input_11
+   set   E4_Inputs   to "11"
+   set   E4_Output   to "1"
+end vector
+
+!***************************************************************************
+!***************************************************************************
+
+unit  "Element number 1"
+   execute  E1_Input_11
+   execute  E1_Input_01
+   execute  E1_Input_00
+   execute  E1_Input_10
+end unit
+
+unit  "Element number 2"
+   execute  E2_Input_11
+   execute  E2_Input_01
+   execute  E2_Input_00
+   execute  E2_Input_10
+end unit
+
+unit  "Element number 3"
+   execute  E3_Input_11
+   execute  E3_Input_01
+   execute  E3_Input_00
+   execute  E3_Input_10
+end unit
+
+unit  "Element number 4"
+   execute  E4_Input_11
+   execute  E4_Input_01
+   execute  E4_Input_00
+   execute  E4_Input_10
+end unit
+
+!    End of Test

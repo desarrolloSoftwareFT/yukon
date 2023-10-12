@@ -1,0 +1,46 @@
+!!!!    2    0    1 1451355000  V231c                                         
+!
+! Cisco Part#:          20-0941-01
+!
+! Note:                 Pin 4     = Gate
+!                       Pin 5     = Drain
+!                       Pin 3,2,1 = Source
+!
+! ***************************************************************************
+
+test powered analog
+nonanalog pins 1,2
+
+
+ test "FET_OFF"
+ test "FET_ON"
+
+end test
+
+! ***************************************************************************
+
+subtest "FET_OFF"
+ connect s to pins  5     ! Drain
+ connect i to pins  5     ! Drain
+ connect l to pins  3     ! Source
+ connect a to pins  4     ! Gate
+
+ source dcv, am1.8, terminated 50, on
+ auxiliary dcv, am0.0, on
+ detector dcv, expect 3.5
+ measure  2.0,  1.15      ! Measurement taken at Drain
+end subtest
+
+subtest "FET_ON"
+ connect s to pins  5     ! Drain
+ connect i to pins  5     ! Drain
+ connect l to pins  3     ! Source
+ connect a to pins  4     ! Gate
+
+ source dcv, am2.5, terminated 50, on
+ auxiliary dcv, am2.5, on, ico1
+ detector dcv, expect 3.5
+ measure  0.2, -0.2       ! Measurement taken at Drain
+end subtest
+
+

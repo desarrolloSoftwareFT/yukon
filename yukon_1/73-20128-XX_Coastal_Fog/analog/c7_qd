@@ -1,0 +1,12 @@
+!!!!    2    0    1 1626507880   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:39 2021
+on failure
+report parallel devices
+report "r785 845"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "UNNAMED_101_RES_I145_B"
+capacitor 10n,35.00,35.00,fr8192,re3,ar20.0m,nocomp,ed,en
+! "c7_qd" is a limited test.
+off failure

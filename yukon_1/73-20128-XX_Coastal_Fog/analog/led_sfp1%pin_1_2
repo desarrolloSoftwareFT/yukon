@@ -1,0 +1,7 @@
+!!!!    2    0    1 1631949358  Vb40b                                         
+! IPG: rev 09.20p  Mon Jun 28 12:13:10 2021
+disconnect all
+connect s to "FPGA_SFP_LED_GRN_L<1>" !SFP_PORT2_YEL_L"
+connect i to "P3_3VA"
+diode 2.60,1.23,idc20m,co4.4,ar2.25,ed,wa20m
+! "led_sfp1%pin_1_2" test.

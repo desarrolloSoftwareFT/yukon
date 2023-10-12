@@ -1,0 +1,7 @@
+!!!!    2    0    1 1684462948   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:03:30 2021
+disconnect all
+connect i to "P3_3VA"
+connect s to "ADOMAIN_PGOOD"
+resistor 10k,25.00,25.00,re3,wb,ar50m,ed,en
+! "r686" test.

@@ -1,0 +1,24 @@
+!!!!    2    0    1 1626158447  V7cf6                                         
+! IPG: rev 09.20p  Mon Jun 28 12:11:44 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "UNNAMED_28_CAP_I6_B"; a to "UNNAMED_28_CAP_I6_B"
+connect i to "UNNAMED_28_RES_I11_B"; b to "UNNAMED_28_RES_I11_B"
+!gg! connect g to "FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "TSEN1_Q3V3R" ! 688983437
+!gg! connect g to "TSEN1_RR" ! 688983437
+!gg! connect g to "TSEN2_Q3V3R" ! 688983437
+!gg! connect g to "TSEN2_RR" ! 688983437
+!gg! connect g to "UNNAMED_2_CAP_I478_A_ADV" ! 688984368
+!gg! connect g to "UNNAMED_64_CAP_I257_A" ! 688985344
+resistor 402,25.00,20.00,re3,wb,ar200m,sa,sb,en,ed
+! "r1359" is a limited test.
+! DUT: nominal 402, plus tol 0.100 %, minus tol 0.100 %
+! DUT: high 402.40, low 401.60
+! TEST: high limit 402.87, low limit 401.37
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

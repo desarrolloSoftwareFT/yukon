@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852465   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:26 2021
+disconnect all
+connect s to "SRT_WDVDD_SENSE_N"
+connect i to "DGND_SENSE_R_QD"
+jumper 6.01, re1, ar200m
+! "r30_qd" test.

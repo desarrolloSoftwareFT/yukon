@@ -1,0 +1,9 @@
+!!!!    2    0    1 1626507984   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:27 2021
+disconnect all
+connect s to "DGND_SENSE_R_QD"; a to "DGND_SENSE_R_QD"
+connect i to "DVDD_SENSE_R_QD"; b to "DVDD_SENSE_R_QD"
+connect g to "GND"; l to "GND"
+capacitor 3.3n,35.00,35.00,fr8192,re4,wb,ar20.0m,sl,sa,ed,en,nocomp
+warning "excessive minus tolerance or low limit."
+! "c8_qd" is a commented test.

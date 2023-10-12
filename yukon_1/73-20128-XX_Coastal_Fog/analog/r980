@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852432   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:53 2021
+on failure
+   report parallel devices
+   report "r20_qa 4.75k"
+end on failure
+disconnect all
+connect s to "P3_3VA"
+connect i to "SA_PMB_AVDD_SDA"
+jumper 3.21k, re4, wb, ar200m, op
+! "r980" test.
+off failure

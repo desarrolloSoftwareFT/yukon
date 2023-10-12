@@ -1,0 +1,30 @@
+!!!!    2    0    1 1451280155  V4331                                         
+test powered analog
+power pins 4,8,11
+nonanalog pins 2,5,6,7,8,9,10
+
+ test "VIN"
+ test "VOUT"
+
+end test
+
+subtest "VIN"
+     connect i to pins 1
+     connect l to pins 8
+
+   detector dcv, expect 3.3
+   measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+
+subtest "VOUT"
+     connect i to pins 3
+     connect l to pins 8
+
+   detector dcv, expect 0.75           !change to fit value
+   measure 0.75 * 1.05, 0.75 * 0.95
+end subtest
+
+
+
+

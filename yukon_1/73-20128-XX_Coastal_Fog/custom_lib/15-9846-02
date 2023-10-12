@@ -1,0 +1,206 @@
+!!!!    6    0    1  849659724  V1765                                         
+!
+!***  All contents copyright 2007 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         MC100EP14
+! Alias:             SY100EP14U,MC100ES6014
+! Part Type:         VLSI
+! Description:       1 to 5 Clock Driver
+! Manufacturer:      On Semiconductor, Micrel, Motorola
+! Package Style:     20 pin SOP
+! Created:           Apr 24, 2007
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    88%. CLK1 and CLK0 may not fully coverered for stuck
+!                         low or high faults because of differential pairs.
+! Constraints:       Test written for VCC connects to 2.5V and VEE to 0V
+! Cisco Part #:      15-7908-01,15-9846-01
+
+sequential
+
+vector cycle  500n
+receive delay 400n
+
+assign VCC  to pins 20,18
+assign VEE  to pins 11
+assign VBB  to pins 15
+
+assign SEL  to pins 12
+assign CLK0 to pins 13,14
+assign CLK1 to pins 16,17
+assign ENB  to pins 19
+assign Q4   to pins 9,10
+assign Q3   to pins 7,8
+assign Q2   to pins 5,6
+assign Q1   to pins 3,4
+assign Q0   to pins 1,2
+
+power   VCC,VEE,VBB
+inputs  SEL,CLK0,CLK1,ENB
+outputs Q4,Q3,Q2,Q1,Q0
+
+disable Q4 with ENB,CLK0,CLK1 to "1tttt" 4 times
+disable Q3 with ENB,CLK0,CLK1 to "1tttt" 4 times
+disable Q2 with ENB,CLK0,CLK1 to "1tttt" 4 times
+disable Q1 with ENB,CLK0,CLK1 to "1tttt" 4 times
+disable Q0 with ENB,CLK0,CLK1 to "1tttt" 4 times
+
+family LVT_2V5
+
+set ref on pins 9,10 to rh 1.6, rl 1.4
+set ref on pins 7,8  to rh 1.6, rl 1.4
+set ref on pins 5,6  to rh 1.6, rl 1.4
+set ref on pins 3,4  to rh 1.6, rl 1.4
+set ref on pins 1,2  to rh 1.6, rl 1.4
+
+vector INIT1
+ set SEL  to "x"
+ set CLK0 to "01"
+ set CLK1 to "01"
+ set ENB  to "0"
+ set Q4   to "xx"
+ set Q3   to "xx"
+ set Q2   to "xx"
+ set Q1   to "xx"
+ set Q0   to "xx"
+end vector
+
+vector KEEP1
+ set SEL  to "k"
+ set CLK0 to "kk"
+ set CLK1 to "kk"
+ set ENB  to "k"
+ set Q4   to "xx"
+ set Q3   to "xx"
+ set Q2   to "xx"
+ set Q1   to "xx"
+ set Q0   to "xx"
+end vector
+
+vector SEL_0
+ initialize to KEEP1
+ set SEL    to "0"
+end vector
+
+vector SEL_1
+ initialize to KEEP1
+ set SEL    to "1"
+end vector
+
+vector ENB_0
+ initialize to KEEP1
+ set ENB    to "0"
+end vector
+
+vector ENB_1
+ initialize to KEEP1
+ set ENB    to "1"
+end vector
+
+vector CLK1_01
+ initialize to KEEP1
+ set CLK1   to "01"
+end vector
+
+vector CLK1_10
+ initialize to KEEP1
+ set CLK1   to "10"
+end vector
+
+vector CLK0_00
+ initialize to KEEP1
+ set CLK0   to "00"
+end vector
+
+vector CLK0_01
+ initialize to KEEP1
+ set CLK0   to "01"
+end vector
+
+vector CLK0_10
+ initialize to KEEP1
+ set CLK0   to "10"
+end vector
+
+vector CLK0_11
+ initialize to KEEP1
+ set CLK0   to "11"
+end vector
+
+vector OUT_01
+ initialize to KEEP1
+ set Q4   to "01"
+ set Q3   to "01"
+ set Q2   to "01"
+ set Q1   to "01"
+ set Q0   to "01"
+end vector
+
+vector OUT_10
+ initialize to KEEP1
+ set Q4   to "10"
+ set Q3   to "10"
+ set Q2   to "10"
+ set Q1   to "10"
+ set Q0   to "10"
+end vector
+
+! ***************************************************************************
+
+unit "Outputs vs CLK1"
+ execute INIT1
+ execute SEL_1
+ repeat 2 times
+  execute CLK1_10
+  execute CLK1_01
+ end repeat
+ execute CLK1_10
+ execute OUT_10
+ execute CLK1_01
+ execute OUT_01
+end unit
+
+unit "ENB test"
+ execute ENB_1
+ repeat 2 times
+  execute CLK1_10
+  execute CLK1_01
+ end repeat
+ execute CLK1_10
+ execute OUT_01
+ execute CLK1_01
+ execute OUT_01
+end unit
+
+unit "Outputs vs CLK0"
+ execute INIT1
+ execute SEL_0
+ repeat 2 times
+  execute CLK0_10
+  execute CLK0_01
+ end repeat
+ execute CLK0_01
+ execute OUT_01
+ execute CLK0_10
+ execute OUT_10
+end unit
+
+unit "ENB test"
+ execute ENB_1
+ repeat 2 times
+  execute CLK0_10
+  execute CLK0_01
+ end repeat
+ execute CLK0_01
+ execute OUT_01
+ execute CLK0_10
+ execute OUT_01
+end unit
+

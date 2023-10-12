@@ -1,0 +1,15 @@
+!!!!    2    0    1 1626157698  Va454                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:39 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "UNNAMED_63_RES_I29_A"; a to "UNNAMED_63_RES_I29_A"
+connect i to "ISENSE_RES_P"; b to "ISENSE_RES_P"
+resistor 1M,30,30,re6,ar1.00,sa,sb,en,ed
+!@warning "excessive plus tolerance or high limit."
+! "r162_im" is a commented test.
+! DUT: nominal 1m, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 1.01m, low 990u
+! TEST: high limit 319.962m, low limit -149.596m
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

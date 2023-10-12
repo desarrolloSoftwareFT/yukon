@@ -1,0 +1,14 @@
+!!!!    2    0    1 1626504688   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:34 2021
+on failure
+report parallel devices
+report "r09_qa 1.00k"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "UNNAMED_7_CAP_I276_B_QA"
+connect g to "P12V"; l to "P12V"
+capacitor 10n,35.00,35.00,fr8192,re4,ar100m,sa,ed,nocomp,en
+warning "device under test appears open or excessive noise is present."
+! "c03_qa" is a commented test.
+off failure

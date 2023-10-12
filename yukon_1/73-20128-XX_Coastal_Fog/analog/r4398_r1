@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852473   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:34 2021
+disconnect all
+connect s to "JTAG_TDI_RT1_1V8"
+connect i to "UNNAMED_11_MT3722_I229_TDIIO_R1"
+jumper 6.01, re1, ar200m
+! "r4398_r1" test.

@@ -1,0 +1,13 @@
+package BRCM_BSCAN_CELLS is
+    use STD_1149_1_1994.all;
+	constant LV_BC_7: CELL_INFO;
+
+end BRCM_BSCAN_CELLS;
+package body BRCM_BSCAN_CELLS is
+    use STD_1149_1_1994.all;
+	constant LV_BC_7: CELL_INFO := 
+	   ((BIDIR_IN, EXTEST,  PI),  (BIDIR_OUT, EXTEST,  PO),
+           (BIDIR_IN, SAMPLE,  PI),  (BIDIR_OUT, SAMPLE,  PI),
+           (BIDIR_IN, INTEST,  X),  (BIDIR_OUT, INTEST,  PI));
+
+end BRCM_BSCAN_CELLS;

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627540507  Vddbe                                         
+! IPG: rev 09.20p  Mon Jun 28 12:09:00 2021
+disconnect all
+connect s to "P3_3VA"
+connect i to "PMBUS_SDA"
+resistor 2k,20.00,20.00,re4,wb,ar500m,ed
+! "r1154" test.

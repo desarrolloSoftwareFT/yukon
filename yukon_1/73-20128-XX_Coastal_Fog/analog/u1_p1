@@ -1,0 +1,16 @@
+!!!!    2    0    1 1279612124  Va29b                                         
+test powered analog
+
+ test "VOUT"
+
+end test
+
+subtest "VOUT"
+   clear connect i to nodes "PWR_SA_P1V8_PVOUT"
+   connect l to ground
+
+   detector dcv, expect 1.8
+   measure 1.8 * 1.07, 1.8 * 0.93
+end subtest
+
+

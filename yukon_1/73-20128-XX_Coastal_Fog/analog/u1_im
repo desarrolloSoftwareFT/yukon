@@ -1,0 +1,29 @@
+!!!!    2    0    1 1682581364   0000                                         
+test powered analog
+
+ test "VOUT_REF_1P65"
+ test "VOUT_REF_1P25"
+
+end test
+
+subtest "VOUT_REF_1P65"
+   clear connect i to nodes "VIN_MON_P"
+   !#connect s to nodes "VIN_MON_N"
+   connect l to pins 8
+
+   !#source dcv, am 1.65, terminated50, ico1, on
+   detector dcv, expect 1.65
+   measure 1.65 * 1.05, 1.65 * 0.93
+end subtest
+
+subtest "VOUT_REF_1P25"
+   clear connect i to nodes "VIN_MON_P"
+   connect s to nodes "VIN_MON_N"
+   connect l to pins 8
+
+   source dcv, am 1.28, terminated50, ico1, on
+   detector dcv, expect 1.25
+   measure 1.25 * 1.05, 1.25 * 0.95
+end subtest
+
+

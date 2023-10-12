@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852327   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:52:08 2021
+disconnect all
+connect s to "CLK100M_IFO1PLL_REFCLK_AC_N_SA"
+connect i to "CLK100M_IFO1PLL_REFCLK_AC_P_SA"
+jumper 10.0k, re4, wb, ar100m, op
+! "r68_sa" test.

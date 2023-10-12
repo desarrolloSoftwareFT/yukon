@@ -1,0 +1,21 @@
+!!!!    2    0    1 1631598538   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:55:20 2021
+on failure
+report parallel devices
+report "c3b_q2 22.0u"
+report "c8b_q2 22.0u"
+report "c9b_q2 22.0u"
+report "c11b_q2 22.0u"
+report "c13b_q2 22.0u"
+report "c148_q2 22.0u"
+report "c2b_q2 100n"
+report "c4b_q2 100n"
+report "c6b_q2 100n"
+report "c7b_q2 100n"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "FLTR_QSFPB_VCC1_Q2"; b to "FLTR_QSFPB_VCC1_Q2"
+capacitor 154.4u,30.00,30.10,fr128,re1,ar200m,ed,sb,nocomp,sm
+! "c1b_q2" test.
+off failure

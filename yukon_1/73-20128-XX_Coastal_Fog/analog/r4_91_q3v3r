@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852463   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
+disconnect all
+connect s to "VDD_PH"
+connect i to "VDD_BOOT_R"
+jumper 6.01, re1, ar200m
+! "r4_91_q3v3r" test.

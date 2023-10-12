@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627539704  V2d5a                                         
+! IPG: rev 09.20p  Mon Jun 28 12:05:29 2021
+on failure
+report parallel devices
+report "c147_q7 220n"
+end on failure
+disconnect all
+connect s to "GND"
+connect i to "FPGA_QSFP_PWR_EN<14>"
+resistor 2.2k,20.00,20.00,re4,wb,ar500m,wa11m,ed
+! "r54_q7" test.
+off failure

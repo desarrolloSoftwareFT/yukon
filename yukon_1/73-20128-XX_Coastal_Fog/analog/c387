@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852297   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:38 2021
+disconnect all
+connect s to "CLK25M_TCXO_FPGA2_AC_P"
+connect i to "CLK25M_TCXO_FPGA2_P"
+jumper 10.0k, re4, wb, ar100m, op
+! "c387" test.

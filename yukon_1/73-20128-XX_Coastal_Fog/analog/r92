@@ -1,0 +1,25 @@
+!!!!    2    0    1 1627539504  V2273                                         
+! IPG: rev 09.20p  Mon Jun 28 12:04:01 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "UNNAMED_60_RES_I373_A"; a to "UNNAMED_60_RES_I373_A"
+connect i to "UNNAMED_60_RES_I373_B"; b to "UNNAMED_60_RES_I373_B"
+connect g to "GND" ! 144686 ! IPG recommended
+!gg! connect g to "FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "TSEN1_Q3V3R" ! 689127124
+!gg! connect g to "TSEN1_RR" ! 689127124
+!gg! connect g to "TSEN2_Q3V3R" ! 689127124
+!gg! connect g to "TSEN2_RR" ! 689127124
+!gg! connect g to "UNNAMED_2_CAP_I478_A_ADV" ! 689128056
+!gg! connect g to "UNNAMED_64_CAP_I257_A" ! 689129031
+resistor 1k,20.00,20.00,re3,wb,ar100m,ed,wa0.155m,sa,sb
+! "r92" test.
+! DUT: nominal 1k, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 1.01k, low 990
+! TEST: high limit 1.011k, low limit 989.60
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

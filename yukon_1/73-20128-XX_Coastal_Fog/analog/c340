@@ -1,0 +1,16 @@
+!!!!    2    0    1 1627538116  Vd34d                                         
+! IPG: rev 09.20p  Mon Jun 28 11:56:02 2021
+on failure
+report parallel devices
+report "c165 100n"
+report "c167 100n"
+report "c314 100n"
+report "c315 100n"
+report "c383 100n"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "P3V3_STBY"; b to "P3V3_STBY"
+capacitor 2.7u,30.00,30.00,fr1024,re1,ar20.0m,sa,sb,ed,nocomp
+! "c340" test.
+off failure

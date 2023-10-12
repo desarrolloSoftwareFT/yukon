@@ -1,0 +1,42 @@
+!!!!   21    2    1 1284499027   0000                                         
+
+diode "cr1", 800m, 200m, nr, pn"13-1311-01"
+diode "cr2", 800m, 200m, nr, pn"13-1311-01"
+diode "cr3", 800m, 200m, nr, pn"13-1311-01"
+diode "cr4", 800m, 200m, nr, pn"13-1311-01"
+diode "cr5", 800m, 200m, nr, pn"13-1311-01"
+diode "cr6", 800m, 200m, nr, pn"13-1311-01"
+diode "cr7", 800m, 200m, nr, pn"13-1311-01"
+diode "cr8", 800m, 200m, nr, pn"13-1311-01"
+diode "cr9", 800m, 200m, nr, pn"13-1311-01"
+
+external pins 1
+   device "cr1" pins "C"
+   device "cr6" pins "A"
+
+external pins 2
+   device "cr1" pins "A"
+   device "cr2" pins "A"
+   device "cr3" pins "A"
+   device "cr4" pins "A"
+   device "cr5" pins "A"
+
+external pins 3
+   device "cr2" pins "C"
+   device "cr7" pins "A"
+
+external pins 4
+   device "cr3" pins "C"
+   device "cr8" pins "A"
+
+external pins 5
+   device "cr5" pins "C"
+   device "cr6" pins "C"
+   device "cr7" pins "C"
+   device "cr8" pins "C"
+   device "cr9" pins "C"
+
+
+external pins 6
+   device "cr4" pins "C"
+   device "cr9" pins "A"

@@ -1,0 +1,9 @@
+!!!!    2    0    1 1626487069   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:45 2021
+disconnect all
+connect s to "GND"
+connect i to "MIFPGA_DCLK"
+connect gl to "SRT_MIFPGA_DCLK"
+!connect g to "P3_3VA"
+resistor 100k,25.00,25.00,re5,ar100m,ed,en,sl,wb
+! "r1241" test.

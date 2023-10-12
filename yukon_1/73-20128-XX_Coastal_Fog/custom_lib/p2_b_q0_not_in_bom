@@ -1,0 +1,20 @@
+!!!!   21    0    1 1541569442  Vf1f8                                         
+
+! 25-0883-02 LED,BICO,R-G,SM,NRES,Pb-FREE,
+! Dual LED
+
+diode "pin_1_3", 2.40, 1.40, nr
+diode "pin_2_4", 2.40, 1.40, nr
+
+external pins 1
+   device "pin_1_3" pins "A"
+
+external pins 2
+   device "pin_2_4" pins "A"
+
+external pins 3
+   device "pin_1_3" pins "C"
+
+external pins 4
+   device "pin_2_4" pins "C"
+

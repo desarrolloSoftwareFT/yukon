@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627465594  V41c6                                         
+! IPG: rev 09.20p  Mon Jun 28 12:12:05 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "SRT_CLK125M_PTP4_N"; b to "SRT_CLK125M_PTP4_N"
+resistor 150,25.00,20.00,re3,wb,ar1.00,sa,sb,en,ed
+! "rn14%pin_2_7" test.
+! DUT: nominal 150, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 157.5, low 142.5
+! TEST: high limit 157.83, low limit 142.35
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

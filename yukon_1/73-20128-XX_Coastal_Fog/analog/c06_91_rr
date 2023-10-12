@@ -1,0 +1,8 @@
+!!!!    2    0    1 1627523689   0000                                         
+!* VDD_BOOT_R_91 top probe removed for power stable ready 
+! IPG: rev 09.20p  Mon Jun 28 11:56:49 2021
+disconnect all
+connect s to "VDD_BOOT_R_91"
+connect i to "VDD_BOOT_91"
+capacitor 470n,20.00,20.00,fr1024,re2,ar50.0m,nocomp,ed
+! "c06_91_rr" test.

@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852380   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:01 2021
+on failure
+   report parallel devices
+   report "r528 2.00k"
+end on failure
+disconnect all
+connect s to "TS_I2C_SDA"
+connect i to "P3_3VA"
+jumper 1.66k, re4, wb, ar500m, op
+! "r199_im" test.
+off failure

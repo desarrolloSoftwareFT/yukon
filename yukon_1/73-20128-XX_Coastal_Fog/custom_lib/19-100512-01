@@ -1,0 +1,50 @@
+!!!!    2    0    1 1536138375  V7808                                         
+
+!  212.5 MHz
+!  High Frequency Clock Oscillator  Single-Output, Enable
+
+test powered analog
+   power pins 3, 6
+   nonanalog pins 2,7,8
+
+   test "Enable"
+   test "Out_4"
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Enable"
+   connect i to pins 1
+   connect l to pins 3
+
+   detector dcv, expect 3.3
+   measure 3.5, 3.1
+end subtest
+
+subtest  "Out_4"
+   connect s to pins 1
+   connect rcva to pins 4
+   connect l to pins 4
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 26.56M      !212.5M/8
+   measure 26.56M * 1.05, 26.56M * 0.95
+end subtest
+
+subtest  "Out_5"
+   connect s to pins 1
+   connect rcva to pins 5
+   connect l to pins 5
+
+   source dcv, am3.3, ico1, on
+   detector frequency, expect 26.56M       !212.5M/8
+   measure 26.56M * 1.05, 26.56M * 0.95
+end subtest
+
+
+
+!
+!  End test
+!

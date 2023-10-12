@@ -1,0 +1,13 @@
+!!!!    2    0    1 1624852299   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:51:40 2021
+on failure
+   report parallel devices
+   report "c41 2.20n"
+   report "q57 q57%q1"
+end on failure
+disconnect all
+connect s to "TEMP_D2_P"
+connect i to "TEMP_D2_N"
+jumper 10.0k, re4, wb, ar100m, op
+! "c2727" test.
+off failure

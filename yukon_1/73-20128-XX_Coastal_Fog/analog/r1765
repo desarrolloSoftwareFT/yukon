@@ -1,0 +1,8 @@
+!!!!    2    0    1 1627521370  V0868                                         
+! IPG: rev 09.20p  Mon Jun 28 12:02:47 2021
+!* Skip the test due to shorted out by U1_SA internal low impedance
+disconnect all
+connect s to "PWR_SA_DVDD"
+connect i to "SRT_WDVDD_SENSE_P"
+resistor 100, 11.00, 6.00, re2, ar100m
+! "r1765" is a limited test.

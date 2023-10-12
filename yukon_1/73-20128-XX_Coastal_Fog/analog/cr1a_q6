@@ -1,0 +1,23 @@
+!!!!    2    0    1 1632879973   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 12:12:26 2021
+on failure
+report parallel devices
+report "c7a_q6 100n"
+report "c8a_q6 22.0u"
+report "c1a_q6 22.0u"
+report "c2a_q6 100n"
+report "c9a_q6 22.0u"
+report "c3a_q6 22.0u"
+report "c4a_q6 100n"
+report "c13a_q6 22.0u"
+report "c5a_q6 22.0u"
+report "c6a_q6 100n"
+report "c11a_q6 22.0u"
+end on failure
+disconnect all
+connect s to "P3P3_QSFPA_HS_Q6"
+connect i to "GND"
+diode 550m,228m,idc15m,co2.8,ar597m,ed
+warning "A 'wait' option may be required to correctly fail a reversed diode"
+! "cr1a_q6" test.
+off failure

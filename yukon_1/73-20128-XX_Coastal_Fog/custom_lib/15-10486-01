@@ -1,0 +1,573 @@
+!!!!    6    0    1 1622863355  V9e21                                         
+! Part Name:         74LVC162244
+! Alias:             SN74LVC162244ADGGR
+! Part Type:         VLSI
+! Description:       CMOS 8 Bit Bus Switch
+! Manufacturer:      Quality Semiconductor, IDT
+! Package Style:     48 pin SOIC, QSOP
+! Created:           May 22, 1998
+! Programmer:        FangJi
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-10486-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC to pins 7,18,31,42
+assign GND to pins 4,10,15,21,28,34,39,45
+
+assign G1EN to pins 1
+assign A1  to pins 47
+assign A2  to pins 46
+assign A3  to pins 44
+assign A4  to pins 43
+assign X1  to pins 2
+assign X2  to pins 3
+assign X3  to pins 5
+assign X4  to pins 6
+
+assign G2EN to pins 48
+assign B1  to pins 41
+assign B2  to pins 40
+assign B3  to pins 38
+assign B4  to pins 37
+assign Y1  to pins 8
+assign Y2  to pins 9
+assign Y3  to pins 11
+assign Y4  to pins 12
+
+assign G3EN to pins 25
+assign C1  to pins 36
+assign C2  to pins 35
+assign C3  to pins 33
+assign C4  to pins 32
+assign R1  to pins 13
+assign R2  to pins 14
+assign R3  to pins 16
+assign R4  to pins 17
+
+assign G4EN to pins 24
+assign D1  to pins 30
+assign D2  to pins 29
+assign D3  to pins 27
+assign D4  to pins 26
+assign Z1  to pins 19
+assign Z2  to pins 20
+assign Z3  to pins 22
+assign Z4  to pins 23
+
+power  VCC,GND
+inputs G1EN,G2EN,G3EN,G4EN
+inputs A1,A2,A3,A4,B1,B2,B3,B4
+inputs C1,C2,C3,C4,D1,D2,D3,D4
+outputs X1,X2,X3,X4,Y1,Y2,Y3,Y4
+outputs R1,R2,R3,R4,Z1,Z2,Z3,Z4
+
+disable X1,X2,X3,X4 with G1EN to "1"
+disable Y1,Y2,Y3,Y4 with G2EN to "1"
+disable R1,R2,R3,R4 with G3EN to "1"
+disable D1,D2,D3,D4 with G4EN to "1"
+
+family LVT
+
+set load on pins 2,3,5,6,8,9,11,12 to pull up
+set load on pins 13,14,16,17,19,20,22,23 to pull up
+
+! ******** A to X ********
+
+vector A1X1_0
+ set G1EN to "0"
+ set A1  to "0"
+ set X1  to "0"
+end vector
+
+vector A1X1_1
+ set G1EN to "0"
+ set A1  to "1"
+ set X1  to "1"
+end vector
+
+vector A1X1_Z
+ set G1EN to "1"
+ set A1  to "0"
+ set X1  to "1"
+end vector
+
+vector A2X2_0
+ set G1EN to "0"
+ set A2  to "0"
+ set X2  to "0"
+end vector
+
+vector A2X2_1
+ set G1EN to "0"
+ set A2  to "1"
+ set X2  to "1"
+end vector
+
+vector A2X2_Z
+ set G1EN to "1"
+ set A2  to "0"
+ set X2  to "1"
+end vector
+
+vector A3X3_0
+ set G1EN to "0"
+ set A3  to "0"
+ set X3  to "0"
+end vector
+
+vector A3X3_1
+ set G1EN to "0"
+ set A3  to "1"
+ set X3  to "1"
+end vector
+
+vector A3X3_Z
+ set G1EN to "1"
+ set A3  to "0"
+ set X3  to "1"
+end vector
+
+vector A4X4_0
+ set G1EN to "0"
+ set A4  to "0"
+ set X4  to "0"
+end vector
+
+vector A4X4_1
+ set G1EN to "0"
+ set A4  to "1"
+ set X4  to "1"
+end vector
+
+vector A4X4_Z
+ set G1EN to "1"
+ set A4  to "0"
+ set X4  to "1"
+end vector
+
+! ******** B to Y ********
+
+vector B1Y1_0
+ set G2EN to "0"
+ set B1  to "0"
+ set Y1  to "0"
+end vector
+
+vector B1Y1_1
+ set G2EN to "0"
+ set B1  to "1"
+ set Y1  to "1"
+end vector
+
+vector B1Y1_Z
+ set G2EN to "1"
+ set B1  to "0"
+ set Y1  to "1"
+end vector
+
+vector B2Y2_0
+ set G2EN to "0"
+ set B2  to "0"
+ set Y2  to "0"
+end vector
+
+vector B2Y2_1
+ set G2EN to "0"
+ set B2  to "1"
+ set Y2  to "1"
+end vector
+
+vector B2Y2_Z
+ set G2EN to "1"
+ set B2  to "0"
+ set Y2  to "1"
+end vector
+
+vector B3Y3_0
+ set G2EN to "0"
+ set B3  to "0"
+ set Y3  to "0"
+end vector
+
+vector B3Y3_1
+ set G2EN to "0"
+ set B3  to "1"
+ set Y3  to "1"
+end vector
+
+vector B3Y3_Z
+ set G2EN to "1"
+ set B3  to "0"
+ set Y3  to "1"
+end vector
+
+vector B4Y4_0
+ set G2EN to "0"
+ set B4  to "0"
+ set Y4  to "0"
+end vector
+
+vector B4Y4_1
+ set G2EN to "0"
+ set B4  to "1"
+ set Y4  to "1"
+end vector
+
+vector B4Y4_Z
+ set G2EN to "1"
+ set B4  to "0"
+ set Y4  to "1"
+end vector
+
+! ******** C to R ********
+
+vector C1R1_0
+ set G3EN to "0"
+ set C1  to "0"
+ set R1  to "0"
+end vector
+
+vector C1R1_1
+ set G3EN to "0"
+ set C1  to "1"
+ set R1  to "1"
+end vector
+
+vector C1R1_Z
+ set G3EN to "1"
+ set C1  to "0"
+ set R1  to "1"
+end vector
+
+vector C2R2_0
+ set G3EN to "0"
+ set C2  to "0"
+ set R2  to "0"
+end vector
+
+vector C2R2_1
+ set G3EN to "0"
+ set C2  to "1"
+ set R2  to "1"
+end vector
+
+vector C2R2_Z
+ set G3EN to "1"
+ set C2  to "0"
+ set R2  to "1"
+end vector
+
+vector C3R3_0
+ set G3EN to "0"
+ set C3  to "0"
+ set R3  to "0"
+end vector
+
+vector C3R3_1
+ set G3EN to "0"
+ set C3  to "1"
+ set R3  to "1"
+end vector
+
+vector C3R3_Z
+ set G3EN to "1"
+ set C3  to "0"
+ set R3  to "1"
+end vector
+
+vector C4R4_0
+ set G3EN to "0"
+ set C4  to "0"
+ set R4  to "0"
+end vector
+
+vector C4R4_1
+ set G3EN to "0"
+ set C4  to "1"
+ set R4  to "1"
+end vector
+
+vector C4R4_Z
+ set G3EN to "1"
+ set C4  to "0"
+ set R4  to "1"
+end vector
+
+! ******** D to Z ********
+
+vector D1Z1_0
+ set G4EN to "0"
+ set D1  to "0"
+ set Z1  to "0"
+end vector
+
+vector D1Z1_1
+ set G4EN to "0"
+ set D1  to "1"
+ set Z1  to "1"
+end vector
+
+vector D1Z1_Z
+ set G4EN to "1"
+ set D1  to "0"
+ set Z1  to "1"
+end vector
+
+vector D2Z2_0
+ set G4EN to "0"
+ set D2  to "0"
+ set Z2  to "0"
+end vector
+
+vector D2Z2_1
+ set G4EN to "0"
+ set D2  to "1"
+ set Z2  to "1"
+end vector
+
+vector D2Z2_Z
+ set G4EN to "1"
+ set D2  to "0"
+ set Z2  to "1"
+end vector
+
+vector D3Z3_0
+ set G4EN to "0"
+ set D3  to "0"
+ set Z3  to "0"
+end vector
+
+vector D3Z3_1
+ set G4EN to "0"
+ set D3  to "1"
+ set Z3  to "1"
+end vector
+
+vector D3Z3_Z
+ set G4EN to "1"
+ set D3  to "0"
+ set Z3  to "1"
+end vector
+
+vector D4Z4_0
+ set G4EN to "0"
+ set D4  to "0"
+ set Z4  to "0"
+end vector
+
+vector D4Z4_1
+ set G4EN to "0"
+ set D4  to "1"
+ set Z4  to "1"
+end vector
+
+vector D4Z4_Z
+ set G4EN to "1"
+ set D4  to "0"
+ set Z4  to "1"
+end vector
+
+! **************************************************************************
+
+unit "A1 to X1, low"
+ execute A1X1_0
+end unit
+
+unit "A1 to X1, high"
+ execute A1X1_1
+end unit
+
+unit "A1 to X1, disabled"
+ execute A1X1_Z
+end unit
+
+unit "A2 to X2, low"
+ execute A2X2_0
+end unit
+
+unit "A2 to X2, high"
+ execute A2X2_1
+end unit
+
+unit "A2 to X2, disabled"
+ execute A2X2_Z
+end unit
+
+unit "A3 to X3, low"
+ execute A3X3_0
+end unit
+
+unit "A3 to X3, high"
+ execute A3X3_1
+end unit
+
+unit "A3 to X3, disabled"
+ execute A3X3_Z
+end unit
+
+unit "A4 to X4, low"
+ execute A4X4_0
+end unit
+
+unit "A4 to X4, high"
+ execute A4X4_1
+end unit
+
+unit "A4 to X4, disabled"
+ execute A4X4_Z
+end unit
+
+unit "B1 to Y1, low"
+ execute B1Y1_0
+end unit
+
+unit "B1 to Y1, high"
+ execute B1Y1_1
+end unit
+
+unit "B1 to Y1, disabled"
+ execute B1Y1_Z
+end unit
+
+unit "B2 to Y2, low"
+ execute B2Y2_0
+end unit
+
+unit "B2 to Y2, high"
+ execute B2Y2_1
+end unit
+
+unit "B2 to Y2, disabled"
+ execute B2Y2_Z
+end unit
+
+unit "B3 to Y3, low"
+ execute B3Y3_0
+end unit
+
+unit "B3 to Y3, high"
+ execute B3Y3_1
+end unit
+
+unit "B3 to Y3, disabled"
+ execute B3Y3_Z
+end unit
+
+unit "B4 to Y4, low"
+ execute B4Y4_0
+end unit
+
+unit "B4 to Y4, high"
+ execute B4Y4_1
+end unit
+
+unit "B4 to Y4, disabled"
+ execute B4Y4_Z
+end unit
+
+unit "C1 to R1, low"
+ execute C1R1_0
+end unit
+
+unit "C1 to R1, high"
+ execute C1R1_1
+end unit
+
+unit "C1 to R1, disabled"
+ execute C1R1_Z
+end unit
+
+unit "C2 to R2, low"
+ execute C2R2_0
+end unit
+
+unit "C2 to R2, high"
+ execute C2R2_1
+end unit
+
+unit "C2 to R2, disabled"
+ execute C2R2_Z
+end unit
+
+unit "C3 to R3, low"
+ execute C3R3_0
+end unit
+
+unit "C3 to R3, high"
+ execute C3R3_1
+end unit
+
+unit "C3 to R3, disabled"
+ execute C3R3_Z
+end unit
+
+unit "C4 to R4, low"
+ execute C4R4_0
+end unit
+
+unit "C4 to R4, high"
+ execute C4R4_1
+end unit
+
+unit "C4 to R4, disabled"
+ execute C4R4_Z
+end unit
+
+unit "D1 to Z1, low"
+ execute D1Z1_0
+end unit
+
+unit "D1 to Z1, high"
+ execute D1Z1_1
+end unit
+
+unit "D1 to Z1, disabled"
+ execute D1Z1_Z
+end unit
+
+unit "D2 to Z2, low"
+ execute D2Z2_0
+end unit
+
+unit "D2 to Z2, high"
+ execute D2Z2_1
+end unit
+
+unit "D2 to Z2, disabled"
+ execute D2Z2_Z
+end unit
+
+unit "D3 to Z3, low"
+ execute D3Z3_0
+end unit
+
+unit "D3 to Z3, high"
+ execute D3Z3_1
+end unit
+
+unit "D3 to Z3, disabled"
+ execute D3Z3_Z
+end unit
+
+unit "D4 to Z4, low"
+ execute D4Z4_0
+end unit
+
+unit "D4 to Z4, high"
+ execute D4Z4_1
+end unit
+
+unit "D4 to Z4, disabled"
+ execute D4Z4_Z
+end unit
+

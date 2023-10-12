@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627540306  V7a3c                                         
+! IPG: rev 09.20p  Mon Jun 28 12:08:41 2021
+disconnect all
+connect s to "LM03328_VDD"
+connect i to "FPGA_OSC_SCL"
+resistor 2k,20.00,20.00,re4,wb,ar500m,ed
+! "r206" test.

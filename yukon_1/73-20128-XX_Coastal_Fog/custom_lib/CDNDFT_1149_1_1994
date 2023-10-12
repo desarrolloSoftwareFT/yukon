@@ -1,0 +1,351 @@
+--  --------------------------------------------------------------------------------
+--  CDNDFT_1149_1_1994      VHDL Package and Package Body in support of the
+--                          CDN DFT-inserted boundary cells.
+--
+-- DESCRIPTION :
+--   This package file defines the cell definitions for the IEEE 1149.1
+--   boundary cells that are supported by CDN DFT Synthesis.
+-- ---------------------------------------------------------------------------------
+-- ReleaseDate=04/11/30 ReleaseTime=17:29:57
+-- ---------------------------------------------------------------------------------
+--  Change History:
+--  02/21/06: foutz   Add BC_CLKIN_NT as a duplicate of BC_CLKIN
+--  10/31/05: bingli: Update for RPCT GSD project
+
+
+package CDNDFT_1149_1_1994 is
+
+use STD_1149_1_1994.all;          -- Get definition of "Cell_Info"
+
+-- Boundary Cell deferred constants (see package body)
+
+  constant BC_IN                     : CELL_INFO;
+  constant BC_CLKIN                  : CELL_INFO;
+  constant BC_CLKIN_NT               : CELL_INFO;
+  constant BC_OUT                    : CELL_INFO;
+  constant BC_BIDIR                  : CELL_INFO;
+  constant BC_ENAB_BIDIR             : CELL_INFO;
+  constant BC_ENAB_OUT3              : CELL_INFO;
+  constant BC_ENAB_NT                : CELL_INFO;
+  constant BC_IN_SIO         : CELL_INFO;        
+  constant BC_IN_NT : CELL_INFO;
+  constant BC_IN_TI : CELL_INFO;
+  constant BC_OUT_NT : CELL_INFO;
+  constant BC_OUT_TI : CELL_INFO;
+  constant BC_OUT_TO : CELL_INFO;
+  constant BC_OUT_TO_OO  : CELL_INFO;
+  constant BC_BIDIR_TI : CELL_INFO;
+  constant BC_BIDIR_TO : CELL_INFO;
+  constant BC_BIDIR_TO_OO : CELL_INFO; 
+	
+
+end CDNDFT_1149_1_1994;
+
+-----------------------------------------------------------------------
+
+package body CDNDFT_1149_1_1994 is
+
+use STD_1149_1_1994.all;
+
+-- CDN DFTS Boundary Cells
+
+-- ********************************************
+-- Func IN and optionally Test IN (Shared Test Pin)
+-- ********************************************
+  constant BC_IN : CELL_INFO :=
+   ((INPUT,    EXTEST,  PI ),
+    (INPUT,    SAMPLE,  PI ),
+    (INPUT,    INTEST,  UPD),  
+    (INTERNAL, EXTEST,  PI ),  --cfb Look at table below.
+    (INTERNAL, SAMPLE,  PI ),
+    (INTERNAL, INTEST,  UPD) );
+
+
+-- BC_IN  is fig-10-14
+-- whose definition is provided below for reference
+-- 
+-- Description for **f10-14**, f10-30, f10-32c, f10-32d, f10-35c
+-- constant BC_2 : CELL_INFO :=
+--  ((INPUT,   EXTEST,  PI),  (OUTPUT2, EXTEST,   UPD),
+--   (INPUT,   SAMPLE,  PI),  (OUTPUT2, SAMPLE,   PI),
+--   (INPUT,   INTEST,  UPD),  -- Intest on output2 not supported
+--   (OUTPUT3, EXTEST,  UPD), (INTERNAL, EXTEST,  PI),
+--   (OUTPUT3, SAMPLE,  PI),  (INTERNAL, SAMPLE,  PI),
+--   (OUTPUT3, INTEST,  PI),  (INTERNAL, INTEST,  UPD),
+--   (CONTROL, EXTEST,  UPD), (CONTROLR, EXTEST, UPD),
+--   (CONTROL, SAMPLE,  PI),  (CONTROLR, SAMPLE,  PI),
+--   (CONTROL, INTEST,  PI),  (CONTROLR, INTEST,  PI) );
+
+
+-- ********************************************
+-- Func Clock In, Test Clock In (Test Pin)
+-- Note: We must support OBSERVE_ONLY, should support INPUT
+-- ********************************************
+  constant BC_CLKIN  : CELL_INFO :=
+   ((CLOCK,        EXTEST,  PI ),
+    (CLOCK,        SAMPLE,  PI ),
+--  (CLOCK,        INTEST,  CAP),    --cfb PI is the only path 
+    (CLOCK,        INTEST,  PI),   
+    (OBSERVE_ONLY, EXTEST,  PI ),
+    (OBSERVE_ONLY, SAMPLE,  PI ),    -- INTEST not supported for OBSERVE_ONLY
+    (INTERNAL,     EXTEST,  PI ),    --cfb Look at table below.
+    (INTERNAL,     SAMPLE,  PI ),    
+    (INTERNAL,     INTEST,  PI ) );
+
+-- BC_CLKIN  is fig-10-17
+-- whose definition is provided below for reference
+-- Description for f10-16, f10-17
+
+-- constant BC_4 : CELL_INFO :=
+--  ((INPUT, EXTEST,  PI),        -- Intest on input not supported
+--   (INPUT, SAMPLE,  PI),
+--   (OBSERVE_ONLY, EXTEST, PI),
+--   (OBSERVE_ONLY, SAMPLE, PI),  -- Intest on observe_only not supported
+--   (CLOCK, EXTEST,  PI),   (INTERNAL, EXTEST,  PI),
+--   (CLOCK, SAMPLE,  PI),   (INTERNAL, SAMPLE,  PI),
+--   (CLOCK, INTEST,  PI),   (INTERNAL, INTEST,  PI) );
+
+
+
+-- ********************************************
+-- Func OUT, Test IN (test pin, shared)
+-- ********************************************
+  constant BC_OUT : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  PI),   --cfb See table: PI is only path
+    (OUTPUT2,  SAMPLE,  PI),
+    (OUTPUT2,  INTEST,  PI),
+    (OUTPUT3,  EXTEST,  PI),
+    (OUTPUT3,  SAMPLE,  PI),
+    (OUTPUT3,  INTEST,  PI),
+    (INTERNAL, EXTEST,  PI),
+    (INTERNAL, SAMPLE,  PI),
+    (INTERNAL, INTEST,  PI) );
+
+-- BC_OUT  is fig-10-29
+-- whose definition is provided below for reference
+
+-- Description for f10-18, **f10-29**, f10-31c, f10-31d, f10-33c, f1041d
+-- constant BC_1 : CELL_INFO :=
+--  ((INPUT,   EXTEST,  PI),  (OUTPUT2,  EXTEST,  PI),
+--   (INPUT,   SAMPLE,  PI),  (OUTPUT2,  SAMPLE,  PI),
+--   (INPUT,   INTEST,  PI),  (OUTPUT2,  INTEST,  PI),
+--   (OUTPUT3, EXTEST,  PI),  (INTERNAL, EXTEST,  PI),
+--   (OUTPUT3, SAMPLE,  PI),  (INTERNAL, SAMPLE,  PI),
+--   (OUTPUT3, INTEST,  PI),  (INTERNAL, INTEST,  PI),
+--   (CONTROL, EXTEST,  PI),  (CONTROLR, EXTEST,  PI),
+--   (CONTROL, SAMPLE,  PI),  (CONTROLR, SAMPLE,  PI),
+--   (CONTROL, INTEST,  PI),  (CONTROLR, INTEST,  PI) );
+
+
+
+-- ********************************************
+-- System Bidirectional, and optionally used as  
+--  Component-Test Output or Test Control Input
+-- ********************************************
+  constant BC_BIDIR : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  UPD),  --cfb again, follow the table.
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ) );
+--  (INTERNAL, EXTEST,  X  ),   --cfb NOT an appropriate use.
+--  (INTERNAL, SAMPLE,  X  ),
+--  (INTERNAL, INTEST,  X  ) );
+
+-- BC_BIDIR is the lower part of fig 10-34 (11-37 in 1994)
+-- whose definition is provided below for reference
+-- Description for f10-34d, self monitor reversible
+-- !! Recommended over cell BC_6 !!
+
+-- constant BC_7 : CELL_INFO :=
+--  ((BIDIR_IN, EXTEST,  PI),  (BIDIR_OUT, EXTEST,  PO),
+--   (BIDIR_IN, SAMPLE,  PI),  (BIDIR_OUT, SAMPLE,  PI),
+--   (BIDIR_IN, INTEST,  UPD), (BIDIR_OUT, INTEST,  PI) );
+
+
+-- ********************************************
+-- System Bidirectional enable cell 
+-- ********************************************
+
+  constant BC_ENAB_BIDIR : CELL_INFO :=
+   ((CONTROL,  EXTEST,  UPD),
+    (CONTROL,  SAMPLE,  PI ),
+    (CONTROL,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  PI ),  --cfb Follow the table.
+    (INTERNAL, SAMPLE,  PI ),
+    (INTERNAL, INTEST,  UPD) );
+
+
+-- BC_ENAB_BIDIR is essentially the upper part of Fig 10-34,
+-- which is a BC_2 cell described above under BC_IN.
+--cfb NOTE: this assumes that the enable is always positive active!
+-- 
+-- Description for **f10-14**, f10-30, f10-32c, f10-32d, f10-35c
+-- constant BC_2 : CELL_INFO :=
+--  ((INPUT,   EXTEST,  PI),  (OUTPUT2, EXTEST,   UPD),
+--   (INPUT,   SAMPLE,  PI),  (OUTPUT2, SAMPLE,   PI),
+--   (INPUT,   INTEST,  UPD),  -- Intest on output2 not supported
+--   (OUTPUT3, EXTEST,  UPD), (INTERNAL, EXTEST,  PI),
+--   (OUTPUT3, SAMPLE,  PI),  (INTERNAL, SAMPLE,  PI),
+--   (OUTPUT3, INTEST,  PI),  (INTERNAL, INTEST,  UPD),
+--   (CONTROL, EXTEST,  UPD), (CONTROLR, EXTEST, UPD),
+--   (CONTROL, SAMPLE,  PI),  (CONTROLR, SAMPLE,  PI),
+--   (CONTROL, INTEST,  PI),  (CONTROLR, INTEST,  PI) );
+
+-- ********************************************
+-- System 3-state enable cell 
+-- ********************************************
+
+
+-- BC_ENAB_OUT3 is essentially the upper part of Fig 10-31
+-- whose definition is provided below for reference
+-- Description for f10-18, f10-29, f10-31c, f10-31d, f10-33c, f1041d
+
+  constant BC_ENAB_OUT3 : CELL_INFO :=
+   ((CONTROL,  EXTEST,  PI),   --cfb Follow the table
+    (CONTROL,  SAMPLE,  PI),
+    (CONTROL,  INTEST,  PI),
+    (INTERNAL, EXTEST,  X ),
+    (INTERNAL, SAMPLE,  X ),
+    (INTERNAL, INTEST,  X ) );
+
+-- constant BC_1 : CELL_INFO :=
+--  ((INPUT,   EXTEST,  PI),  (OUTPUT2,  EXTEST,  PI),
+--   (INPUT,   SAMPLE,  PI),  (OUTPUT2,  SAMPLE,  PI),
+--   (INPUT,   INTEST,  PI),  (OUTPUT2,  INTEST,  PI),
+--   (OUTPUT3, EXTEST,  PI),  (INTERNAL, EXTEST,  PI),
+--   (OUTPUT3, SAMPLE,  PI),  (INTERNAL, SAMPLE,  PI),
+--   (OUTPUT3, INTEST,  PI),  (INTERNAL, INTEST,  PI),
+--   (CONTROL, EXTEST,  PI),  (CONTROLR, EXTEST,  PI),
+--   (CONTROL, SAMPLE,  PI),  (CONTROLR, SAMPLE,  PI),
+--   (CONTROL, INTEST,  PI),  (CONTROLR, INTEST,  PI) );
+
+  constant BC_IN_SIO         : CELL_INFO :=
+   ((INPUT,    EXTEST,  PI ),
+    (INPUT,    SAMPLE,  PI ),
+    (INPUT,    INTEST,  CAP),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );	
+
+  constant BC_IN_NT : CELL_INFO :=
+   ((INPUT,    EXTEST,  PI ),
+    (INPUT,    SAMPLE,  PI ),
+    (INPUT,    INTEST,  CAP),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+	
+  constant BC_IN_TI : CELL_INFO :=
+   ((INPUT,    EXTEST,  PI ),
+    (INPUT,    SAMPLE,  PI ),
+    (INPUT,    INTEST,  CAP),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_OUT_NT : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  PO ),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  PO ),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_OUT_TI : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_OUT_TO : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_OUT_TO_OO  : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+	
+  constant BC_BIDIR_TI : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+
+  constant BC_BIDIR_TO : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_BIDIR_TO_OO : CELL_INFO := 
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+  constant BC_ENAB_NT : CELL_INFO :=
+   ((CONTROL,  EXTEST,  UPD),
+    (CONTROL,  SAMPLE,  PI ),
+    (CONTROL,  INTEST,  PI ),
+    (INTERNAL, EXTEST,  X  ),
+    (INTERNAL, SAMPLE,  X  ),
+    (INTERNAL, INTEST,  X  ) );
+
+-- Added duplicate of BC_CLKIN_NT (Brian 02/21/06)
+-- ********************************************
+-- Func Clock In, No Test
+-- Note: We must support OBSERVE_ONLY, should support INPUT
+-- ********************************************
+  constant BC_CLKIN_NT  : CELL_INFO :=
+   ((CLOCK,        EXTEST,  PI ),
+    (CLOCK,        SAMPLE,  PI ),
+--  (CLOCK,        INTEST,  CAP),    --cfb PI is the only path 
+    (CLOCK,        INTEST,  PI),   
+    (OBSERVE_ONLY, EXTEST,  PI ),
+    (OBSERVE_ONLY, SAMPLE,  PI ),    -- INTEST not supported for OBSERVE_ONLY
+    (INTERNAL,     EXTEST,  PI ),    --cfb Look at table below.
+    (INTERNAL,     SAMPLE,  PI ),    
+    (INTERNAL,     INTEST,  PI ) );
+
+
+end CDNDFT_1149_1_1994;

@@ -1,0 +1,8 @@
+!!!!    2    0    1 1608022132   0000                                         
+! IPG: rev 08.40p  Fri Nov 27 14:35:37 2020
+disconnect all
+connect s to "P12V"
+connect i to "UNNAMED_60_CAP_I475_B"
+connect g to "GND" 
+resistor 30.1k, 20.00, 20.00, re5, wb, ar500m, wa30m, ed, en
+! "r680" test.

@@ -1,0 +1,402 @@
+!!!!    6    0    1 1542697963  V4b4d                                         
+ !!!!    6    0    1 1252915849  V4ef0
+!    Function:
+!    Revision:
+!    Author:
+
+sequential
+
+vector cycle 5000n
+receive delay 4950n
+
+assign SRC_IN_P to pins 2  !clock input
+assign SRC_IN_N to pins 3
+
+assign DIF_6_P to pins 23  !clock output
+assign DIF_6_N to pins 22
+assign DIF_5_P to pins 20
+assign DIF_5_N to pins 19
+assign DIF_2_P to pins 9
+assign DIF_2_N to pins 10
+assign DIF_1_P to pins 6
+assign DIF_1_N to pins 7
+
+assign SCL to pins 13
+assign SDA to pins 14
+assign VDD1 to pins 5,11,18,24
+assign VDDR to pins 1
+assign VDDA to pins 28
+assign GND to pins 4,27
+assign OE_INV to pins 25
+assign OE_1 to pins 8
+assign OE_6 to pins 21
+
+assign DIF_STOP to pins 16
+assign PD_M to pins 15
+assign BYPASS to pins 12
+assign IREF to pins 26
+assign HIGH_BW to pins 17
+
+
+inputs SRC_IN_P,SRC_IN_N,SCL ,OE_INV,OE_1,OE_6
+outputs  DIF_6_P,DIF_6_N,DIF_5_P,DIF_5_N,DIF_2_P,DIF_2_N,DIF_1_P,DIF_1_N
+power  VDD1,VDDR,VDDA,GND
+bidirectional SDA
+nondigital  DIF_STOP,PD_M,BYPASS,IREF,HIGH_BW
+
+family LVT
+
+disable DIF_6_P,DIF_6_N,DIF_5_P,DIF_5_N,DIF_2_P,DIF_2_N,DIF_1_P,DIF_1_N with OE_1 ,OE_6,OE_INV to "001"
+
+set load on groups SDA to pull up
+
+vector INIT1
+ drive SDA
+ set SDA  to "1"
+ set SCL  to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SDA  to "x"
+ set SCL  to "k"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SDA  to "k"
+ set SCL  to "k"
+end vector
+
+vector SCL_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SCL_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SCL_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SCL_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector RD_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector RD_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector RD_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector WD_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector WD_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+
+! ***********************************************************************
+
+sub STRT
+ execute WD_0
+ execute SCL_20
+end sub
+
+sub STOP
+ execute WD_0
+ execute SCL_21
+ execute WD_1
+ repeat 20 times
+  execute SCL_21
+ end repeat
+end sub
+
+sub R_0
+ execute RD_0
+ execute SCL_11
+ execute SCL_10
+end sub
+sub R_0_D
+ execute RD_1
+ execute SCL_11
+ execute SCL_10
+end sub
+sub R_1
+ execute RD_1
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub D_0
+ execute WD_0
+ execute SCL_21
+ execute SCL_10
+end sub
+
+sub D_1
+ execute WD_1
+ execute SCL_21
+ execute SCL_10
+end sub
+
+sub IC_ADDR
+ call D_1    ! Address bit A2, Change to match pin A2 if tied
+ call D_1    ! Address bit A1, Change to match pin A1 if tied
+ call D_0    ! Address bit A0, Change to match pin A0 if tied
+end sub
+
+sub WR_CMD
+ call STRT
+ call D_1
+ call D_1
+ call D_0
+ call D_1
+ call IC_ADDR
+ call D_0      ! Write
+ call R_0
+end sub
+
+sub RD_CMD
+ call STRT
+ call D_1
+ call D_1
+ call D_0
+ call D_1
+ call IC_ADDR
+ call D_1      ! Read
+ call R_0
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SCL_21
+ execute SCL_20
+ execute D6
+ execute SCL_21
+ execute SCL_20
+ execute D5
+ execute SCL_21
+ execute SCL_20
+ execute D4
+ execute SCL_21
+ execute SCL_20
+ execute D3
+ execute SCL_21
+ execute SCL_20
+ execute D2
+ execute SCL_21
+ execute SCL_20
+ execute D1
+ execute SCL_21
+ execute SCL_20
+ execute D0
+ execute SCL_21
+ execute SCL_20
+ execute SCL_10
+ execute RD_0  ! Acknowledge bit
+ execute SCL_11
+ execute SCL_10
+end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SCL_11
+ execute D7
+ execute SCL_10
+ execute SCL_11
+ execute D6
+ execute SCL_10
+ execute SCL_11
+ execute D5
+ execute SCL_10
+ execute SCL_11
+ execute D4
+ execute SCL_10
+ execute SCL_11
+ execute D3
+ execute SCL_10
+ execute SCL_11
+ execute D2
+ execute SCL_10
+ execute SCL_11
+ execute D1
+ execute SCL_10
+ execute SCL_11
+ execute D0
+ execute SCL_10
+ execute WD_0  ! Acknowledge bit
+ execute SCL_21
+ execute SCL_20
+ execute SCL_10
+end sub
+
+! ***********************************************************************
+
+unit "Initialize I2C Bus"
+ execute INIT1
+ repeat 40 times
+  execute SCL_21
+ end repeat
+ execute RD_1
+end unit
+
+
+! ************************ Testing Address Bits *************************
+
+ unit "A = 10"
+  execute RD_1
+  call STRT
+  call D_1
+  call D_1
+  call D_0
+  call D_1
+  call D_1  ! Address bits match
+  call D_0
+  call D_0
+  call D_0
+  call R_0  ! Acknowlege bit active
+  call STOP
+ end unit
+
+unit "A = 10_Dis"
+ execute RD_1
+ call STRT
+ call D_1
+ call D_1
+ call D_0
+ call D_1
+ call D_1  ! Address bits match
+ call D_1
+ call D_0
+ call D_1
+ call R_0_D  ! Acknowlege bit active
+ call STOP
+end unit
+
+!IPG: Unit removed due to conflict in vector A_010
+!IPG: Conflict with pins tied together on node UNNAMED_80_LM75_I73_A1
+!unit "A = 10"
+! execute A_10
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_0  ! Address bits match
+! call D_1
+! call D_0
+! call D_1
+!sc call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+
+!IPG: Unit removed due to conflict in vector A_011
+!IPG: Conflict with pins tied together on node UNNAMED_80_LM75_I73_A1
+!unit "A = 11"
+! execute A_11
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_0  ! Address bits match
+! call D_1
+! call D_1
+! call D_1
+! call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+!
+!!IPG: Unit removed due to conflict in vector A_100
+!!IPG: Conflict with pins tied together on node UNNAMED_80_LM75_I73_A1
+!unit "A = 100"
+! execute A_100
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_1  ! Address bits match
+! call D_0
+! call D_0
+! call D_1
+! call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+
+!IPG: Unit removed due to conflict in vector A_101
+!IPG: Conflict with pins tied together on node UNNAMED_80_LM75_I73_A1
+!unit "A = 101"
+! execute A_101
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_1  ! Address bits match
+! call D_0
+! call D_1
+! call D_1
+! call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+
+!unit "A = 110"
+! execute A_10
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_1  ! Address bits match
+! call D_1
+! call D_0
+! call D_1
+! call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+
+!unit "A = 11"
+! execute A_11
+! execute RD_1
+! call STRT
+! call D_1
+! call D_0
+! call D_0
+! call D_1
+! call D_1  ! Address bits match
+! call D_1
+! call D_1
+! call D_1
+! call R_0  ! Acknowlege bit active
+! call STOP
+!end unit
+!
+
+
+
+
+

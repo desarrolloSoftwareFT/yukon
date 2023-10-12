@@ -1,0 +1,189 @@
+!!!!    6    0    1 1389857234  V6721                                         
+! IPG: rev 07.20p  Sat Apr 13 12:36:12 2013
+
+sequential
+
+vector cycle  10u
+receive delay 9u
+
+set terminators to on
+
+set terminators to on
+assign VCC  to pins 4
+assign GND  to pins 18
+
+assign SCL  to pins 20
+assign SDA  to pins 19
+assign SMBA to pins 21
+assign PGD  to pins 11
+assign Other_Pins to pins 5,6,7,8,9,10,12,13,14,15,16,17,21,22,23,24,25
+assign ADD  to pins 1,2,3
+
+power  VCC, GND
+outputs SMBA,PGD
+bidirectional SDA,Other_Pins
+inputs SCL,ADD
+!nondigital Other_Pins
+
+disable SDA with SCL to "1"
+
+family LVT
+
+set load on groups SDA to pull up
+
+vector KEEP1
+ receive SDA
+ set SCL  to "k"
+ set SDA  to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SCL  to "k"
+ set SDA  to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+vector IDLE1
+ initialize to KEEP2
+ set SDA    to "1"
+ set SCL    to "1"
+end vector
+
+! ***************************************************************************
+
+sub STRT
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute D_1
+ execute D_1
+end sub
+
+sub WR(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      !  with Acknowledge bit active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub WX(D7,D6,D5,D4,D3,D2,D1,D0)  ! Write protocol
+ execute D7                      ! with Acknowledge bit in-active
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1      ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+! ***************************************************************************
+
+unit "Ack Test"
+ repeat 20 times
+  execute IDLE1
+ end repeat
+
+ call STRT                                  ! Start bit
+ call WX(D_0,D_0,D_0,D_1, D_1,D_1,D_1,D_0)  ! Read Command, addr don't match
+ call STOP                                  ! Stop bit
+ repeat 20 times
+  execute IDLE1
+ end repeat
+ call STRT                                  ! Start bit
+ call WR(D_0,D_0,D_0,D_1, D_1,D_0,D_0,D_1)  ! Read Command, addr match
+ call STOP                                  ! Stop bit
+ continue analog
+end unit
+
+

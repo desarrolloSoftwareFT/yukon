@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627466462  Vfac7                                         
+! IPG: rev 09.20p  Mon Jun 28 12:01:55 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "SRT_CLK100M_BUF5_P"; b to "SRT_CLK100M_BUF5_P"
+resistor 150,25.00,20.00,re3,wb,ar1.00,sa,sb,en,ed
+! "r920" is a limited test.
+! DUT: nominal 150, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 151.5, low 148.5
+! TEST: high limit 151.83, low limit 148.35
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

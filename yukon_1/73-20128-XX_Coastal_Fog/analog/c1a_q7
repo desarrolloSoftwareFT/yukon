@@ -1,0 +1,21 @@
+!!!!    2    0    1 1631598426   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:55:11 2021
+on failure
+report parallel devices
+report "c3a_q7 22.0u"
+report "c5a_q7 22.0u"
+report "c8a_q7 22.0u"
+report "c9a_q7 22.0u"
+report "c11a_q7 22.0u"
+report "c13a_q7 22.0u"
+report "c2a_q7 100n"
+report "c4a_q7 100n"
+report "c6a_q7 100n"
+report "c7a_q7 100n"
+end on failure
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "FLTR_QSFPA_VCC1_Q7"; b to "FLTR_QSFPA_VCC1_Q7"
+capacitor 154.4u,30.00,30.10,fr128,re1,ar200m,ed,sb,nocomp,sm
+! "c1a_q7" test.
+off failure

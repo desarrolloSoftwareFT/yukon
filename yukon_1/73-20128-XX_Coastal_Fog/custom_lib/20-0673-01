@@ -1,0 +1,47 @@
+!!!!    2    0    1 1541640464  V4e24                                         
+!
+! Cisco Part#:          20-0673-01
+!
+! Note:                 Pin  1    = Gate
+!                       Pin  3    = Drain
+!                       Pin  2    = Source
+!
+! ***************************************************************************
+
+test powered analog
+
+
+ test "FET_OFF"
+ test "FET_ON"
+
+end test
+
+! ***************************************************************************
+
+subtest "FET_ON"
+ connect s to pins   2    ! Drain
+ connect i to pins   2    ! Drain
+ connect l to pins   3    ! Source
+ connect a to pins   1    ! Gate
+
+ source dcv, am3.8, terminated 5, on,ico1
+ auxiliary dcv, am0.1, on
+ detector dcv, expect 3.5
+ wait 200m
+ measure  0.88, -0.2      ! Measurement taken at Drain
+end subtest
+
+subtest "FET_OFF"
+ connect s to pins   2    ! Drain
+ connect i to pins   2    ! Drain
+ connect l to pins   3    ! Source
+ connect a to pins   1    ! Gate
+
+ source dcv, am3.8, terminated 5, on,ico1
+ auxiliary dcv, am2.5, on, ico1
+ detector dcv, expect 3.5
+ wait 100m
+ measure  4.2, 1.7        ! Measurement taken at Drain
+end subtest
+
+

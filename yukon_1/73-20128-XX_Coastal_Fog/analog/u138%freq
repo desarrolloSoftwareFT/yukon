@@ -1,0 +1,25 @@
+!!!!    2    0    1 1624930325  V8c30                                         
+!* Measured U138 pin22 (thru C972_R3.1) frequency
+test powered analog
+
+   test "Out"
+
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out"
+   clear connect rcva to nodes "CLK_DIV3_OUT"     !"CLK_156M25_REF_AC_P_R3"
+   connect l to ground
+
+   detector frequency, expect 156.25M/16, gate 1
+   measure 156.25M/16 * 1.05, 156.25M/16 * 0.95
+end subtest
+
+
+!
+!  End test
+!
+

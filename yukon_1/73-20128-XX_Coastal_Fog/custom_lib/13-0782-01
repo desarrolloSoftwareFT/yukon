@@ -1,0 +1,13 @@
+!!!!   21    2    1 1389852383  V6cf8                                         
+
+diode "cr", 950m, 400m, nr, pn"13-0782-01"
+
+external pins 1
+   device "cr" pins "A"
+
+external pins 2; noconnect
+
+external pins 3; noconnect
+
+external pins 4
+   device "cr" pins "C"

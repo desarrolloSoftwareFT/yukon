@@ -1,0 +1,1841 @@
+!######################################################
+! Part Name ir35215
+! Cisco PN: xx-xxxxx-xx
+! Tester: Agilent 3070
+! NOTES: change default device desinator
+! TRANSLATED FROM: 17-15549-02_Utopias_QSFPDD.txt
+!######################################################
+
+test digital; Pointer(*)
+vector cycle 2u
+receive delay 1.9u
+
+default device "u1_q3v3r"
+assign SDA to pins 9
+assign SCL to pins 10
+
+assign PROG_EN to pin 34 default "1"
+
+
+family LVT
+
+inputs SCL
+inputs PROG_EN
+bidirectional SDA
+
+!######################################################
+
+vector INIT1
+ drive SDA
+ set SCL   to "1"
+ set SDA   to "1"
+end vector
+
+vector KEEP1
+ receive SDA
+ set SCL   to "k"
+ set SDA   to "x"
+end vector
+
+vector KEEP2
+ drive SDA
+ set SCL   to "k"
+ set SDA   to "k"
+end vector
+
+vector SK_10
+ initialize to KEEP1
+ set SCL    to "0"
+end vector
+
+vector SK_11
+ initialize to KEEP1
+ set SCL    to "1"
+end vector
+
+vector SK_20
+ initialize to KEEP2
+ set SCL    to "0"
+end vector
+
+vector SK_21
+ initialize to KEEP2
+ set SCL    to "1"
+end vector
+
+ vector R_X
+ initialize to KEEP1
+ set SDA    to "x"
+end vector
+
+vector R_0
+ initialize to KEEP1
+ set SDA    to "0"
+end vector
+
+vector R_1
+ initialize to KEEP1
+ set SDA    to "1"
+end vector
+
+vector D_0
+ initialize to KEEP2
+ set SDA    to "0"
+end vector
+
+vector D_1
+ initialize to KEEP2
+ set SDA    to "1"
+end vector
+
+!######################################################
+
+data Write_Pointer to groups SDA
+  values Pointer(0:5)
+end data
+
+data Read_Pointer to groups SDA
+  values Pointer(0:5)
+end data
+
+!######################################################
+
+sub STRT
+ execute D_1
+ execute D_1
+ execute SK_21
+ execute SK_21
+ execute D_0
+ execute D_0
+ execute SK_20
+ execute SK_20
+end sub
+
+sub STOP
+ execute SK_20
+ execute SK_20
+ execute D_0
+ execute D_0
+ execute SK_21
+ execute SK_21
+ execute D_1
+ execute D_1
+end sub
+
+ sub WR(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub RN(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SK_11
+ execute D7
+ execute SK_10
+ execute SK_11
+ execute D6
+ execute SK_10
+ execute SK_11
+ execute D5
+ execute SK_10
+ execute SK_11
+ execute D4
+ execute SK_10
+ execute SK_11
+ execute D3
+ execute SK_10
+ execute SK_11
+ execute D2
+ execute SK_10
+ execute SK_11
+ execute D1
+ execute SK_10
+ execute SK_11
+ execute D0
+ execute SK_10
+ execute D_1    ! no Acknowledge bit
+ execute SK_21
+ execute SK_20
+ execute SK_10
+end sub
+
+sub WR_NACKED(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute D7
+ execute SK_21
+ execute SK_20
+ execute D6
+ execute SK_21
+ execute SK_20
+ execute D5
+ execute SK_21
+ execute SK_20
+ execute D4
+ execute SK_21
+ execute SK_20
+ execute D3
+ execute SK_21
+ execute SK_20
+ execute D2
+ execute SK_21
+ execute SK_20
+ execute D1
+ execute SK_21
+ execute SK_20
+ execute D0
+ execute SK_21
+ execute SK_10
+ execute R_1    ! Nacknowledge bit
+ execute SK_11
+ execute SK_10
+ end sub
+
+sub RD(D7,D6,D5,D4,D3,D2,D1,D0)
+ execute SK_11
+ execute D7
+ execute SK_10
+ execute SK_11
+ execute D6
+ execute SK_10
+ execute SK_11
+ execute D5
+ execute SK_10
+ execute SK_11
+ execute D4
+ execute SK_10
+ execute SK_11
+ execute D3
+ execute SK_10
+ execute SK_11
+ execute D2
+ execute SK_10
+ execute SK_11
+ execute D1
+ execute SK_10
+ execute SK_11
+ execute D0
+ execute SK_10
+ execute SK_21
+ execute D_0    ! Acknowledge bit
+ execute SK_20
+ execute SK_10
+end sub
+
+sub IC_ADDR(ADD7,ADD6,ADD5,ADD4,ADD3,ADD2,ADD1)
+ call STRT
+ execute ADD7
+ execute SK_21
+ execute SK_20
+ execute ADD6
+ execute SK_21
+ execute SK_20
+ execute ADD5
+ execute SK_21
+ execute SK_20
+ execute ADD4
+ execute SK_21
+ execute SK_20
+ execute ADD3
+ execute SK_21
+ execute SK_20
+ execute ADD2
+ execute SK_21
+ execute SK_20
+ execute ADD1
+ execute SK_21
+ execute SK_20
+end sub
+
+sub WR_COM
+ call IC_ADDR(D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ execute D_0    ! Write operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+sub RD_COM
+ call IC_ADDR(D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ execute D_1    ! Read operation
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+end sub
+
+!######################################################
+
+unit "Synchronize I2C Bus"
+ repeat 80 times
+  execute INIT1
+ end repeat
+ execute R_1
+ call STRT
+ call STOP
+ call STRT
+ call STOP
+ call STRT
+ call STOP
+end unit
+
+unit "BEGIN READ PROCEDURE"
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xff reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_0) ! x00 page0
+ call STOP
+ call WR_COM
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_0,D_0) ! x94 reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_1,D_1) ! x03 to unlock I2C Addr
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xff reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_1,D_0) ! x06 page6
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_0) ! x6a reg
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_1) ! x3f data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_1) ! x6b reg
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_0,D_0) ! xf0 data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_0) ! x6c reg
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_0) ! x24 data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_1) ! x6d reg
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_0,D_0) ! xf0 data
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xff reg
+ call WR(D_0,D_0,D_0,D_0,D_1,D_0,D_1,D_0) ! x0A page10
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_0) ! x6a reg
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_1) ! x3f data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_1) ! x6b reg
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_0,D_0) ! xf0 data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_0) ! x6c reg
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_0) ! x24 data
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_1) ! x6d reg
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_0,D_0) ! xf0 data
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xff reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_0) ! x00 page0
+ call STOP
+ call WR_COM
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_1,D_0) ! x96
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_1) ! x41 data
+ execute D_0
+ execute SK_21
+ execute SK_20
+ execute D_0
+ execute SK_21
+ execute SK_20
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_20
+ next Write_Pointer
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_20
+ next Write_Pointer
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_20
+ next Write_Pointer
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_20
+ next Write_Pointer
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_20
+ next Write_Pointer
+ execute SK_20 drive data Write_Pointer
+ execute SK_21
+ execute SK_10
+ execute R_0    ! Acknowledge bit
+ execute SK_11
+ execute SK_10
+ call STOP
+ wait 200m
+
+ call WR_COM
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_1,D_1) ! x97 Reg
+ call STOP
+ call RD_COM
+ call RD(R_1,R_0,R_X,R_X,R_X,R_X,R_X,R_X) ! Reg x97[7]=1 (done)
+ call STOP
+ call WR_COM
+ call WR(D_0,D_1,D_1,D_0,D_0,D_0,D_0,D_0) ! x60 Reg
+ call STOP
+ call RD_COM
+ call RD(R_X,R_X,R_0,R_0,R_0,R_X,R_X,R_X) ! No CRC error
+ call STOP
+end unit
+
+unit "READ USER DATA"
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_0) ! Page0
+ call STOP
+ call WR_COM ! 0020 40 7F 0
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0021 10 7F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0022 87 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0023 E3 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0024 A3 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0025 32 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0026 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0027 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0028 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0029 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 002A 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 002B 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 002C 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 002D A2 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 002E 61 EF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_X,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 002F 06 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 0030 20 7F
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0031 64 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0032 52 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_1,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0033 49 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_1,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0034 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0035 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0036 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0037 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0038 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0039 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 003A 08 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 003B 04 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 003C 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 003D 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 003E 04 7F
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 003F 00 7F
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0040 00 77
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0041 08 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0042 80 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0043 90 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0044 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0045 C0 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0046 80 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0047 00 3F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0048 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0049 80 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004A 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004B 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004C 00 3F
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004D 00 3F
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004E 00 3F
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 004F 00 3F
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0050 00 3F
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0051 00 3F
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0052 00 3F
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0053 00 3F
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0054 AD FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_1,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0055 15 FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_0,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0056 C8 FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0057 00 FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0058 01 FF
+ call WR(D_0,D_1,D_0,D_1,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0059 15 FF
+ call WR(D_0,D_1,D_0,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_0,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 005A 20 FF
+ call WR(D_0,D_1,D_0,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 005B 00 3F
+ call WR(D_0,D_1,D_0,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_0,D_0) ! Page4
+ call STOP
+ call WR_COM ! 0420 60 FF 4
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0421 FF FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0422 1B 3F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_1,R_1,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0423 60 7F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0424 03 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0425 34 3F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_1,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0426 23 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0427 1E FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_1,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 0428 38 7F
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_1,R_1,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0429 03 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 042A 46 CF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_X,R_X,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 042B 3C FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 042C CC FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 042D 79 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_1,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 042E FB FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 042F F0 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0430 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0431 2F FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0432 08 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0433 F1 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0434 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0435 01 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0436 41 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0437 04 1F
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_0,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0438 30 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0439 0F FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 043A E1 F7
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_0,R_X,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 043B 0E FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 043C 78 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 043D 30 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 043E 09 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 043F 32 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0440 14 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0441 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0442 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0443 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0444 60 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0445 00 1F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0446 25 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0447 6A 7F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_1,R_1,R_0,R_1,R_0,R_1,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_1,D_0) ! Page6
+ call STOP
+ call WR_COM ! 0602 80 FF
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0604 17 1F
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_1,R_0,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0620 00 F0
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0640 18 0F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0642 A6 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 0643 01 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0648 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0649 02 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 064E 08 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 064F E8 03
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0650 00 FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0651 00 07
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0666 F4 FF
+ call WR(D_0,D_1,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0667 01 0F
+ call WR(D_0,D_1,D_1,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 066A 20 FF
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 066C 1C FF
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0670 01 3F
+ call WR(D_0,D_1,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0672 00 7F
+ call WR(D_0,D_1,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0680 40 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0681 01 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0682 80 80
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0684 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0685 02 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0686 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0687 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0688 26 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 0689 01 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 068A 80 80
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 068C 3C FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 068D 08 03
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 068E C0 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0694 3B FF
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_1,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0695 08 03
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 069E 7D FF
+ call WR(D_1,D_0,D_0,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_1,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 06A0 80 C0
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 06A2 73 FF
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 06AA F0 FF
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06AB E0 03
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 06AC 80 80
+ call WR(D_1,D_0,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 06B0 01 FF
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 06B1 E0 03
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 06BA 50 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06BB F8 03
+ call WR(D_1,D_0,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 06BC 66 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 06BD 01 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 06BE 00 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06BF 01 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 06C0 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06C2 01 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 06C4 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06C6 00 80
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 06C8 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06CA 01 7F
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 06F5 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06F7 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06F9 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06FB 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 06FD 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_1,D_1) ! Page7
+ call STOP
+ call WR_COM ! 0701 00 FF
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07A2 00 0F
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07A4 00 03
+ call WR(D_1,D_0,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 07AA 00 FF
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07B0 00 07
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07C6 03 03
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_1,R_1)
+ call STOP
+ call WR_COM ! 07CA 00 07
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07CC 00 07
+ call WR(D_1,D_1,D_0,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07E0 C8 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07E4 00 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07E6 20 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 07F2 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_1,D_0,D_0,D_0) ! Page8
+ call STOP
+ call WR_COM ! 0820 60 FF 8
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0821 FF FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0822 1B 3F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_1,R_1,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0823 60 7F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0824 03 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0825 34 3F
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_1,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0826 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0827 00 FF
+ call WR(D_0,D_0,D_1,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0828 28 7F
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_1,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0829 03 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 082A 46 CF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_X,R_X,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 082B 19 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_1,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 082C CC FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 082D 83 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 082E FB FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 082F 80 FF
+ call WR(D_0,D_0,D_1,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0830 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0831 0F FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0832 00 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0833 F1 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0834 60 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0835 4A FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_1,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0836 41 FF
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0837 04 1F
+ call WR(D_0,D_0,D_1,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_0,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0838 40 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0839 0F FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 083A 00 F7
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 083B 08 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 083C 78 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 083D 30 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 083E 09 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 083F 32 FF
+ call WR(D_0,D_0,D_1,D_1,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_1,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0840 D4 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0841 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0842 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0843 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0844 00 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0845 00 1F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0846 A5 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_0,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0847 68 7F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_1,R_1,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_1,D_0,D_1,D_0) ! PageA
+ call STOP
+ call WR_COM ! 0A02 80 FF
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A04 17 1F
+ call WR(D_0,D_0,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_1,R_0,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0A20 00 F0
+ call WR(D_0,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0A40 18 0F
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A42 A6 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_1,R_0,R_0,R_1,R_1,R_0)
+ call STOP
+ call WR_COM ! 0A43 01 FF
+ call WR(D_0,D_1,D_0,D_0,D_0,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0A48 FF FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0A49 FF FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_1,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0A4E 08 FF
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A4F E8 03
+ call WR(D_0,D_1,D_0,D_0,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A50 00 FF
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A51 00 07
+ call WR(D_0,D_1,D_0,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A66 F4 FF
+ call WR(D_0,D_1,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A67 01 0F
+ call WR(D_0,D_1,D_1,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0A6A 20 FF
+ call WR(D_0,D_1,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A6C 1C FF
+ call WR(D_0,D_1,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A70 00 3F
+ call WR(D_0,D_1,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A72 00 7F
+ call WR(D_0,D_1,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A80 67 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_0,R_0,R_1,R_1,R_1)
+ call STOP
+ call WR_COM ! 0A81 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A82 80 80
+ call WR(D_1,D_0,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0A84 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A85 02 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_1,R_0)
+ call STOP
+ call WR_COM ! 0A86 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A87 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A88 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A89 00 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A8A 80 80
+ call WR(D_1,D_0,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0A8C 2D FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_1,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0A8D 08 03
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A8E C0 FF
+ call WR(D_1,D_0,D_0,D_0,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A94 2C FF
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_1,R_0,R_1,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A95 08 03
+ call WR(D_1,D_0,D_0,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0A9E 7D FF
+ call WR(D_1,D_0,D_0,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_1,R_1,R_0,R_1)
+ call STOP
+ call WR_COM ! 0AA0 80 C0
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0AA2 73 FF
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_1,R_1,R_1,R_0,R_0,R_1,R_1)
+ call STOP
+ call WR_COM ! 0AAA F0 FF
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_1,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AAB E0 03
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AAC 80 80
+ call WR(D_1,D_0,D_1,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0AB0 01 FF
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0AB1 E0 03
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ABA 80 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ABB F8 03
+ call WR(D_1,D_0,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ABC 00 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ABD 01 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0ABE C8 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_0,R_0,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ABF 00 FF
+ call WR(D_1,D_0,D_1,D_1,D_1,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AC0 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AC2 01 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0AC4 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AC6 00 80
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_X,R_X,R_X,R_X,R_X,R_X,R_X)
+ call STOP
+ call WR_COM ! 0AC8 00 7F
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0ACA 01 7F
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_0,R_0,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0AF5 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AF7 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_1,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AF9 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AFB 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_0,D_1,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0AFD 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM
+ call WR(D_1,D_1,D_1,D_1,D_1,D_1,D_1,D_1) ! xFF Reg
+ call WR(D_0,D_0,D_0,D_0,D_1,D_0,D_1,D_1) ! PageB
+ call STOP
+ call WR_COM ! 0B01 00 FF
+ call WR(D_0,D_0,D_0,D_0,D_0,D_0,D_0,D_1)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BA2 00 0F
+ call WR(D_1,D_0,D_1,D_0,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BA4 00 03
+ call WR(D_1,D_0,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BAA 00 FF
+ call WR(D_1,D_0,D_1,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BB0 04 07
+ call WR(D_1,D_0,D_1,D_1,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_1,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BC6 03 03
+ call WR(D_1,D_1,D_0,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_X,R_1,R_1)
+ call STOP
+ call WR_COM ! 0BCA 00 07
+ call WR(D_1,D_1,D_0,D_0,D_1,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BCC 00 07
+ call WR(D_1,D_1,D_0,D_0,D_1,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_X,R_X,R_X,R_X,R_X,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BE0 E1 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_0,D_0,D_0)
+ call RD_COM
+ call RN(R_1,R_1,R_1,R_0,R_0,R_0,R_0,R_1)
+ call STOP
+ call WR_COM ! 0BE4 00 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_1,D_0,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BE6 18 FF
+ call WR(D_1,D_1,D_1,D_0,D_0,D_1,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_1,R_1,R_0,R_0,R_0)
+ call STOP
+ call WR_COM ! 0BF2 00 FF
+ call WR(D_1,D_1,D_1,D_1,D_0,D_0,D_1,D_0)
+ call RD_COM
+ call RN(R_0,R_0,R_0,R_0,R_0,R_0,R_0,R_0)
+ call STOP
+end unit

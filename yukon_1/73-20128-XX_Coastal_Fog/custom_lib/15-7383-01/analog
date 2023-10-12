@@ -1,0 +1,138 @@
+!!!!    2    0    1 1347613222  Vbd80                                         
+
+test powered mixed
+
+   test "CLK0_01_Q1"
+   test "CLK0_01_Q2"
+   test "CLK0_01_Q3"
+   test "CLK0_01_Q4"
+   test "CLK0_01_Q5"
+   test "CLK0_01_Q6"
+   test "CLK0_01_Q7"
+   test "CLK0_01_Q8"
+   test "CLK0_01_Q9"
+   test "CLK0_01_Q10"
+   test "CLK0_01_Q11"
+   test "CLK0_01_Q12"
+   test "CLK0_01_Q13"
+   test "CLK0_01_Q14"
+   test "CLK0_01_Q15"
+   continue digital
+
+  
+end test
+
+!###############################################################################
+
+subtest "CLK0_01_Q0"
+  connect i to pins 33
+  connect l to pins 34
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q1"
+  connect i to pins 31
+  connect l to pins 32
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q2"
+  connect i to pins 28
+  connect l to pins 29
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q3"
+  connect i to pins 26
+  connect l to pins 27
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q4"
+  connect i to pins 22
+  connect l to pins 23
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q5"
+  connect i to pins 20
+  connect l to pins 21
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q6"
+  connect i to pins 17
+  connect l to pins 18
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q7"
+  connect i to pins 15
+  connect l to pins 16
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q8"
+  connect i to pins 9
+  connect l to pins 10
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q9"
+  connect i to pins 7
+  connect l to pins 8
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q10"
+  connect i to pins 4
+  connect l to pins 5
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q11"
+  connect i to pins 2
+  connect l to pins 3
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q12"
+  connect i to pins 46
+  connect l to pins 47
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q13"
+  connect i to pins 44
+  connect l to pins 45
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q14"
+  connect i to pins 41
+  connect l to pins 42
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+
+subtest "CLK0_01_Q15"
+  connect i to pins 39
+  connect l to pins 40
+  detector dcv, expect 1
+  measure 1.00, 500m
+end subtest
+

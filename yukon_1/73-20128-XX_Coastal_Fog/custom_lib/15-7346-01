@@ -1,0 +1,726 @@
+!!!!    6    0    1  815360521  V64d6                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         PI5C3257
+! Alias:             PI5L200Q,IDTQS3VH257,74LVC257,QS3257
+! Part Type:         VLSI
+! Description:       Bus Switch Quad 2 to 1 Mux/Demux
+! Manufacturer:      Pericom, IDT, Philips
+! Package Style:     16 pin SOP,SOIC
+! Created:           Jan 19, 1999
+! Updated:           Dec 26, 2001. Added alias and Cisco part number
+! Updated:           Dec 04, 2003. Added alias and Cisco part number
+! Updated:           May 12, 2005. Added alias and Cisco part number
+! Updated:           May 24, 2007. Added alias QS3257.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-1897-01,15-3373-01,15-7346-01,15-7165-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC to pins 16
+assign GND to pins 8
+
+assign EB  to pins 15
+assign SEL to pins 1
+
+assign A0  to pins 2
+assign A1  to pins 3
+assign YA  to pins 4
+
+assign B0  to pins 5
+assign B1  to pins 6
+assign YB  to pins 7
+
+assign C0  to pins 11
+assign C1  to pins 10
+assign YC  to pins 9
+
+assign D0  to pins 14
+assign D1  to pins 13
+assign YD  to pins 12
+
+power  VCC,GND
+inputs EB,SEL
+bidirectional A0,A1,B0,B1,C0,C1,D0,D1
+bidirectional YA,YB,YC,YD
+
+disable A0,A1,B0,B1,C0,C1,D0,D1 with EB to "1"
+disable YA,YB,YC,YD             with EB to "1"
+
+family LVT
+
+set load on groups  A0,A1,B0,B1,C0,C1,D0,D1 to pull up
+set load on groups  YA,YB,YC,YD             to pull up
+
+! ********** Vectors From A0 to YA **********
+
+vector A0YA_0
+ drive A0
+ receive YA
+ set EB  to "0"
+ set SEL to "0"
+ set A0  to "0"
+ set YA  to "0"
+end vector
+
+vector A0YA_1
+ drive A0
+ receive YA
+ set EB  to "0"
+ set SEL to "0"
+ set A0  to "1"
+ set YA  to "1"
+end vector
+
+vector A0YA_Z
+ drive A0
+ receive YA
+ set EB  to "1"
+ set SEL to "0"
+ set A0  to "0"
+ set YA  to "1"
+end vector
+
+! ********** Vectors From A1 to YA **********
+
+vector A1YA_0
+ drive A1
+ receive YA
+ set EB  to "0"
+ set SEL to "1"
+ set A1  to "0"
+ set YA  to "0"
+end vector
+
+vector A1YA_1
+ drive A1
+ receive YA
+ set EB  to "0"
+ set SEL to "1"
+ set A1  to "1"
+ set YA  to "1"
+end vector
+
+vector A1YA_Z
+ drive A1
+ receive YA
+ set EB  to "1"
+ set SEL to "1"
+ set A1  to "0"
+ set YA  to "1"
+end vector
+
+! ********** Vectors From YA to A0 **********
+
+vector YAA0_0
+ drive YA
+ receive A0
+ set EB  to "0"
+ set SEL to "0"
+ set YA  to "0"
+ set A0  to "0"
+end vector
+
+vector YAA0_1
+ drive YA
+ receive A0
+ set EB  to "0"
+ set SEL to "0"
+ set YA  to "1"
+ set A0  to "1"
+end vector
+
+vector YAA0_Z
+ drive YA
+ receive A0
+ set EB  to "1"
+ set SEL to "0"
+ set YA  to "0"
+ set A0  to "1"
+end vector
+
+! ********** Vectors From YA to A1 **********
+
+vector YAA1_0
+ drive YA
+ receive A1
+ set EB  to "0"
+ set SEL to "1"
+ set YA  to "0"
+ set A1  to "0"
+end vector
+
+vector YAA1_1
+ drive YA
+ receive A1
+ set EB  to "0"
+ set SEL to "1"
+ set YA  to "1"
+ set A1  to "1"
+end vector
+
+vector YAA1_Z
+ drive YA
+ receive A1
+ set EB  to "1"
+ set SEL to "1"
+ set YA  to "0"
+ set A1  to "1"
+end vector
+
+! ********** Vectors From B0 to YB **********
+
+vector B0YB_0
+ drive B0
+ receive YB
+ set EB  to "0"
+ set SEL to "0"
+ set B0  to "0"
+ set YB  to "0"
+end vector
+
+vector B0YB_1
+ drive B0
+ receive YB
+ set EB  to "0"
+ set SEL to "0"
+ set B0  to "1"
+ set YB  to "1"
+end vector
+
+vector B0YB_Z
+ drive B0
+ receive YB
+ set EB  to "1"
+ set SEL to "0"
+ set B0  to "0"
+ set YB  to "1"
+end vector
+
+! ********** Vectors From B1 to YB **********
+
+vector B1YB_0
+ drive B1
+ receive YB
+ set EB  to "0"
+ set SEL to "1"
+ set B1  to "0"
+ set YB  to "0"
+end vector
+
+vector B1YB_1
+ drive B1
+ receive YB
+ set EB  to "0"
+ set SEL to "1"
+ set B1  to "1"
+ set YB  to "1"
+end vector
+
+vector B1YB_Z
+ drive B1
+ receive YB
+ set EB  to "1"
+ set SEL to "1"
+ set B1  to "0"
+ set YB  to "1"
+end vector
+
+! ********** Vectors From YB to B0 **********
+
+vector YBB0_0
+ drive YB
+ receive B0
+ set EB  to "0"
+ set SEL to "0"
+ set YB  to "0"
+ set B0  to "0"
+end vector
+
+vector YBB0_1
+ drive YB
+ receive B0
+ set EB  to "0"
+ set SEL to "0"
+ set YB  to "1"
+ set B0  to "1"
+end vector
+
+vector YBB0_Z
+ drive YB
+ receive B0
+ set EB  to "1"
+ set SEL to "0"
+ set YB  to "0"
+ set B0  to "1"
+end vector
+
+! ********** Vectors From YB to B1 **********
+
+vector YBB1_0
+ drive YB
+ receive B1
+ set EB  to "0"
+ set SEL to "1"
+ set YB  to "0"
+ set B1  to "0"
+end vector
+
+vector YBB1_1
+ drive YB
+ receive B1
+ set EB  to "0"
+ set SEL to "1"
+ set YB  to "1"
+ set B1  to "1"
+end vector
+
+vector YBB1_Z
+ drive YB
+ receive B1
+ set EB  to "1"
+ set SEL to "1"
+ set YB  to "0"
+ set B1  to "1"
+end vector
+
+! ********** Vectors From C0 to YC **********
+
+vector C0YC_0
+ drive C0
+ receive YC
+ set EB  to "0"
+ set SEL to "0"
+ set C0  to "0"
+ set YC  to "0"
+end vector
+
+vector C0YC_1
+ drive C0
+ receive YC
+ set EB  to "0"
+ set SEL to "0"
+ set C0  to "1"
+ set YC  to "1"
+end vector
+
+vector C0YC_Z
+ drive C0
+ receive YC
+ set EB  to "1"
+ set SEL to "0"
+ set C0  to "0"
+ set YC  to "1"
+end vector
+
+! ********** Vectors From C1 to YC **********
+
+vector C1YC_0
+ drive C1
+ receive YC
+ set EB  to "0"
+ set SEL to "1"
+ set C1  to "0"
+ set YC  to "0"
+end vector
+
+vector C1YC_1
+ drive C1
+ receive YC
+ set EB  to "0"
+ set SEL to "1"
+ set C1  to "1"
+ set YC  to "1"
+end vector
+
+vector C1YC_Z
+ drive C1
+ receive YC
+ set EB  to "1"
+ set SEL to "1"
+ set C1  to "0"
+ set YC  to "1"
+end vector
+
+! ********** Vectors From YC to C0 **********
+
+vector YCC0_0
+ drive YC
+ receive C0
+ set EB  to "0"
+ set SEL to "0"
+ set YC  to "0"
+ set C0  to "0"
+end vector
+
+vector YCC0_1
+ drive YC
+ receive C0
+ set EB  to "0"
+ set SEL to "0"
+ set YC  to "1"
+ set C0  to "1"
+end vector
+
+vector YCC0_Z
+ drive YC
+ receive C0
+ set EB  to "1"
+ set SEL to "0"
+ set YC  to "0"
+ set C0  to "1"
+end vector
+
+! ********** Vectors From YC to C1 **********
+
+vector YCC1_0
+ drive YC
+ receive C1
+ set EB  to "0"
+ set SEL to "1"
+ set YC  to "0"
+ set C1  to "0"
+end vector
+
+vector YCC1_1
+ drive YC
+ receive C1
+ set EB  to "0"
+ set SEL to "1"
+ set YC  to "1"
+ set C1  to "1"
+end vector
+
+vector YCC1_Z
+ drive YC
+ receive C1
+ set EB  to "1"
+ set SEL to "1"
+ set YC  to "0"
+ set C1  to "1"
+end vector
+
+! ********** Vectors From D0 to YD **********
+
+vector D0YD_0
+ drive D0
+ receive YD
+ set EB  to "0"
+ set SEL to "0"
+ set D0  to "0"
+ set YD  to "0"
+end vector
+
+vector D0YD_1
+ drive D0
+ receive YD
+ set EB  to "0"
+ set SEL to "0"
+ set D0  to "1"
+ set YD  to "1"
+end vector
+
+vector D0YD_Z
+ drive D0
+ receive YD
+ set EB  to "1"
+ set SEL to "0"
+ set D0  to "0"
+ set YD  to "1"
+end vector
+
+! ********** Vectors From D1 to YD **********
+
+vector D1YD_0
+ drive D1
+ receive YD
+ set EB  to "0"
+ set SEL to "1"
+ set D1  to "0"
+ set YD  to "0"
+end vector
+
+vector D1YD_1
+ drive D1
+ receive YD
+ set EB  to "0"
+ set SEL to "1"
+ set D1  to "1"
+ set YD  to "1"
+end vector
+
+vector D1YD_Z
+ drive D1
+ receive YD
+ set EB  to "1"
+ set SEL to "1"
+ set D1  to "0"
+ set YD  to "1"
+end vector
+
+! ********** Vectors From YD to D0 **********
+
+vector YDD0_0
+ drive YD
+ receive D0
+ set EB  to "0"
+ set SEL to "0"
+ set YD  to "0"
+ set D0  to "0"
+end vector
+
+vector YDD0_1
+ drive YD
+ receive D0
+ set EB  to "0"
+ set SEL to "0"
+ set YD  to "1"
+ set D0  to "1"
+end vector
+
+vector YDD0_Z
+ drive YD
+ receive D0
+ set EB  to "1"
+ set SEL to "0"
+ set YD  to "0"
+ set D0  to "1"
+end vector
+
+! ********** Vectors From YD to D1 **********
+
+vector YDD1_0
+ drive YD
+ receive D1
+ set EB  to "0"
+ set SEL to "1"
+ set YD  to "0"
+ set D1  to "0"
+end vector
+
+vector YDD1_1
+ drive YD
+ receive D1
+ set EB  to "0"
+ set SEL to "1"
+ set YD  to "1"
+ set D1  to "1"
+end vector
+
+vector YDD1_Z
+ drive YD
+ receive D1
+ set EB  to "1"
+ set SEL to "1"
+ set YD  to "0"
+ set D1  to "1"
+end vector
+
+! *******************************************
+
+unit "From A0 to YA, Low"
+ execute A0YA_0
+end unit
+
+unit "From A0 to YA, High"
+ execute A0YA_1
+end unit
+
+unit "From A0 to YA, Tristate"
+ execute A0YA_Z
+end unit
+
+unit "From A1 to YA, Low"
+ execute A1YA_0
+end unit
+
+unit "From A1 to YA, High"
+ execute A1YA_1
+end unit
+
+unit "From A1 to YA, Tristate"
+ execute A1YA_Z
+end unit
+
+unit "From YA to A0, Low"
+ execute YAA0_0
+end unit
+
+unit "From YA to A0, High"
+ execute YAA0_1
+end unit
+
+unit "From YA to A0, Tristate"
+ execute YAA0_Z
+end unit
+
+unit "From YA to A1, Low"
+ execute YAA1_0
+end unit
+
+unit "From YA to A1, High"
+ execute YAA1_1
+end unit
+
+unit "From YA to A1, Tristate"
+ execute YAA1_Z
+end unit
+
+unit "From B0 to YB, Low"
+ execute B0YB_0
+end unit
+
+unit "From B0 to YB, High"
+ execute B0YB_1
+end unit
+
+unit "From B0 to YB, Tristate"
+ execute B0YB_Z
+end unit
+
+unit "From B1 to YB, Low"
+ execute B1YB_0
+end unit
+
+unit "From B1 to YB, High"
+ execute B1YB_1
+end unit
+
+unit "From B1 to YB, Tristate"
+ execute B1YB_Z
+end unit
+
+unit "From YB to B0, Low"
+ execute YBB0_0
+end unit
+
+unit "From YB to B0, High"
+ execute YBB0_1
+end unit
+
+unit "From YB to B0, Tristate"
+ execute YBB0_Z
+end unit
+
+unit "From YB to B1, Low"
+ execute YBB1_0
+end unit
+
+unit "From YB to B1, High"
+ execute YBB1_1
+end unit
+
+unit "From YB to B1, Tristate"
+ execute YBB1_Z
+end unit
+
+unit "From C0 to YC, Low"
+ execute C0YC_0
+end unit
+
+unit "From C0 to YC, High"
+ execute C0YC_1
+end unit
+
+unit "From C0 to YC, Tristate"
+ execute C0YC_Z
+end unit
+
+unit "From C1 to YC, Low"
+ execute C1YC_0
+end unit
+
+unit "From C1 to YC, High"
+ execute C1YC_1
+end unit
+
+unit "From C1 to YC, Tristate"
+ execute C1YC_Z
+end unit
+
+unit "From YC to C0, Low"
+ execute YCC0_0
+end unit
+
+unit "From YC to C0, High"
+ execute YCC0_1
+end unit
+
+unit "From YC to C0, Tristate"
+ execute YCC0_Z
+end unit
+
+unit "From YC to C1, Low"
+ execute YCC1_0
+end unit
+
+unit "From YC to C1, High"
+ execute YCC1_1
+end unit
+
+unit "From YC to C1, Tristate"
+ execute YCC1_Z
+end unit
+
+unit "From D0 to YD, Low"
+ execute D0YD_0
+end unit
+
+unit "From D0 to YD, High"
+ execute D0YD_1
+end unit
+
+unit "From D0 to YD, Tristate"
+ execute D0YD_Z
+end unit
+
+unit "From D1 to YD, Low"
+ execute D1YD_0
+end unit
+
+unit "From D1 to YD, High"
+ execute D1YD_1
+end unit
+
+unit "From D1 to YD, Tristate"
+ execute D1YD_Z
+end unit
+
+unit "From YD to D0, Low"
+ execute YDD0_0
+end unit
+
+unit "From YD to D0, High"
+ execute YDD0_1
+end unit
+
+unit "From YD to D0, Tristate"
+ execute YDD0_Z
+end unit
+
+unit "From YD to D1, Low"
+ execute YDD1_0
+end unit
+
+unit "From YD to D1, High"
+ execute YDD1_1
+end unit
+
+unit "From YD to D1, Tristate"
+ execute YDD1_Z
+end unit
+

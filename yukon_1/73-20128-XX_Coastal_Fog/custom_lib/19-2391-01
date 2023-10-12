@@ -1,0 +1,30 @@
+!!!!    2    0    1 1607393979  V7569                                         
+
+!  25 MHz
+!  XTAL
+
+test powered analog
+   nonanalog pins 1,2,4
+
+   test "Out_3"
+
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out_3"
+   connect rcvc to pins 3
+
+   detector frequency, expect 25.0M
+   measure 25.0M * 1.05, 25.0M * 0.95
+
+end subtest
+
+
+
+
+!
+!  End test
+!

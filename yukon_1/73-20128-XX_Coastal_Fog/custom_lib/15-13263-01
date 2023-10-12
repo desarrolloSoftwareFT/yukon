@@ -1,0 +1,30 @@
+!!!!    2    0    1 1451272811  V6bf8                                         
+test powered analog
+power pins 1,2,5
+nonanalog pins 3,4
+
+ test "VIN"
+ test "VOUT"
+
+end test
+
+subtest "VIN"
+     connect i to pins 1
+     connect l to pins 2
+
+   detector dcv, expect 3.3
+   measure 3.3 * 1.05, 3.3 * 0.95
+end subtest
+
+
+subtest "VOUT"
+     connect i to pins 5
+     connect l to pins 2
+
+   detector dcv, expect 1.5           !change to fit value
+   measure 1.5 * 1.05, 1.5 * 0.95
+end subtest
+
+
+
+

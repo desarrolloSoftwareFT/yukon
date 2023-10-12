@@ -1,0 +1,108 @@
+!!!!    6    0    1 1451290393  Vc310                                         
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         853S011BGILF
+! Alias:             ICS853S011BGILF
+! Part Type:         VLSI
+! Description:       1 to 4 Clock Buffer
+! Manufacturer:      IDT, Pericom
+! Package Style:     8 Pins SOP
+! Created:           Jan 02, 2008
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:
+! Cisco Part #:      15-13454-01
+
+sequential
+
+vector cycle 200n
+receive delay 160n
+
+assign VCC   to pins 8
+assign GND   to pins 5
+
+assign CLKI_P  to pins 7
+assign CLKI_N  to pins 6
+assign CLKO_Q0 to pins 1,2
+assign CLKO_Q1 to pins 3,4
+
+
+power   VCC,GND
+inputs  CLKI_P, CLKI_N
+outputs CLKO_Q0, CLKO_Q1
+
+
+family LVT
+
+set load on groups CLKO_Q0, CLKO_Q1 to pull up
+
+!*************************************************************************
+
+vector INIT1
+ set CLKI_P to "1"
+ set CLKI_N to "0"
+ set CLKO_Q0 to "xx"
+ set CLKO_Q1 to "xx"
+end vector
+
+vector KEEP1
+ set CLKI_P to "k"
+ set CLKI_N to "k"
+ set CLKO_Q0 to "xx"
+ set CLKO_Q1 to "xx"
+end vector
+
+vector CLKI_0
+ initialize to KEEP1
+ set CLKI_P   to "0"
+ set CLKI_N   to "1"
+end vector
+
+vector CLKI_1
+ initialize to KEEP1
+ set CLKI_P   to "1"
+ set CLKI_N   to "0"
+end vector
+
+vector CLKO_Q0_0
+ initialize to KEEP1
+ set CLKO_Q0   to "01"
+end vector
+
+vector CLKO_Q0_1
+ initialize to KEEP1
+ set CLKO_Q0   to "10"
+end vector
+
+vector CLKO_Q1_0
+ initialize to KEEP1
+ set CLKO_Q1   to "01"
+end vector
+
+vector CLKO_Q1_1
+ initialize to KEEP1
+ set CLKO_Q1   to "10"
+end vector
+
+! ***************************************************************
+
+unit "Output Test"
+ execute INIT1
+ execute CLKI_0
+ execute CLKO_Q0_0
+ execute CLKO_Q1_0
+ execute CLKI_1
+ execute CLKO_Q0_1
+ execute CLKO_Q1_1
+end unit
+
+

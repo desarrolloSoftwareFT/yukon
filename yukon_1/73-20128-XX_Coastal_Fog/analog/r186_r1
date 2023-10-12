@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852467   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:28 2021
+disconnect all
+connect s to "INTERR_2_R1"
+connect i to "RT1_INTERR2_L_1V8"
+jumper 6.01, re1, ar200m
+! "r186_r1" test.

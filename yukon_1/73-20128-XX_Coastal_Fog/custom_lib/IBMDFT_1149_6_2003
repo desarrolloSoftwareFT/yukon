@@ -1,0 +1,201 @@
+--  --------------------------------------------------------------------------------
+--  IBMDFT_1149_6_2003   1149.6 VHDL Package and Package Body in support of the
+--                       IBM DFT-inserted boundary cells.
+--
+-- DESCRIPTION :
+--   This package file defines the cell definitions for the IEEE 1149.6
+--   boundary cells that are supported by IBM DFT Synthesis.
+--
+-- ---------------------------------------------------------------------------------
+-- ReleaseDate=05/10/10 ReleaseTime=14:32:46
+-- ---------------------------------------------------------------------------------
+--  Change History:
+--  08/04/05 - Initial creation.
+--  10/10/05 - Add support for UPD BSR; add OBSERVE_ONLY/INTERNAL to ACTR description.
+--  11/11/05 - ftsang commented and replaced some lines.
+-- ---------------------------------------------------------------------------------
+
+package IBMDFT_1149_6_2003 is
+
+ --ftsang commented use STD_1149_6_2003.all ;          -- Get definition of "Cell_Info"
+ use STD_1149_1_2001.all ;          -- Get definition of "Cell_Info"
+
+  -- Boundary Cell deferred constants (see package body)
+
+  constant BSR_11496_ACTR                  : CELL_INFO;
+  constant BSR_11496_ACSEL                 : CELL_INFO;
+
+  constant BSR_11496_OUT_NT                : CELL_INFO;
+  constant BSR_11496_OUT_TI                : CELL_INFO;
+  constant BSR_11496_OUT_TO                : CELL_INFO;
+  constant BSR_11496_OUT_TO_OO             : CELL_INFO;
+  constant BSR_11496_BIDIR                 : CELL_INFO;
+  constant BSR_11496_BIDIR_TI              : CELL_INFO;
+  constant BSR_11496_BIDIR_TO              : CELL_INFO;
+  constant BSR_11496_BIDIR_TO_OO           : CELL_INFO;
+
+      -- Observe-only Boundary Scan Cells
+  constant BSR_11496_BIDIR_OBS             : CELL_INFO;
+  constant BSR_11496_BIDIR_TO_OBS          : CELL_INFO;
+  constant BSR_11496_BIDIR_TO_OO_OBS       : CELL_INFO;
+
+      -- IP Boundary Scan Cells
+  constant UPD_BSR_11496_OUT_NT                : CELL_INFO;
+
+end IBMDFT_1149_6_2003;
+
+-----------------------------------------------------------------------
+
+package body IBMDFT_1149_6_2003 is
+
+ --ftsang commented use STD_1149_6_2003.all ;
+ use STD_1149_1_2001.all ;
+
+ -- IBM DFTS Boundary Cells
+       -- Appendix A
+
+
+  constant BSR_11496_ACTR                  : CELL_INFO :=
+   ((INPUT,  EXTEST,  PI ),
+    (INPUT,  SAMPLE,  PI ),
+    (INPUT,  INTEST,  PI ),
+    (OBSERVE_ONLY,  EXTEST,  PI ),
+    (OBSERVE_ONLY,  SAMPLE,  PI ),
+    (OBSERVE_ONLY,  INTEST,  PI ),
+    (INTERNAL,  EXTEST,  X ),
+    (INTERNAL,  SAMPLE,  X ),
+    (INTERNAL,  INTEST,  X ));
+
+--ftsang commented  constant BSR_11496_ACSEL                 : CELL_INFO :=
+--ftsang commented   ((INPUT,  EXTEST,  X ),
+--ftsang commented    (INPUT,  SAMPLE,  X ),
+--ftsang commented    (INPUT,  INTEST,  X ));
+
+
+
+  -- System Output, Not Used as Component-Test Pin
+  constant BSR_11496_OUT_NT                : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  PO ),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  PO ),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ) );
+
+
+  -- System Output, Used as Component-Test Input
+  constant BSR_11496_OUT_TI                : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ) );
+
+
+  -- System Output, Used as Component-Test Output
+  constant BSR_11496_OUT_TO                : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ) );
+
+  constant BSR_11496_OUT_TO_OO             : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ) );
+
+
+  -- System Bidirectional, Not Used as Component-Test Output or Test Control Input
+  constant BSR_11496_BIDIR                 : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ) );
+
+
+  -- System Bidirectional, Used as Test Control Input
+  constant BSR_11496_BIDIR_TI              : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ) );
+
+
+  -- System Bidirectional, Used as Component-Test Output
+  constant BSR_11496_BIDIR_TO              : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ) );
+
+  constant BSR_11496_BIDIR_TO_OO           : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    (BIDIR_OUT,INTEST,  PI ) );
+
+
+      -- Observe-only Boundary Scan Cells
+
+  -- System Bidirectional, Observe-Only, Not Used as Component-Test Output
+  -- INTEST not supported
+  constant BSR_11496_BIDIR_OBS             : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    --ftsang commented(BIDIR_OUT,INTEST,  X ) );
+    (BIDIR_OUT,INTEST,  PI ) );
+
+
+  -- System Bidirectional, Observe-Only, Used as Component-Test Output
+  -- INTEST not supported
+  constant BSR_11496_BIDIR_TO_OBS          : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    --ftsang commented(BIDIR_OUT,INTEST,  X ) );
+    (BIDIR_OUT,INTEST,  PI ) );
+
+  constant BSR_11496_BIDIR_TO_OO_OBS       : CELL_INFO :=
+   ((BIDIR_IN, EXTEST,  PI ),
+    (BIDIR_IN, SAMPLE,  PI ),
+    (BIDIR_IN, INTEST,  X  ),
+    (BIDIR_OUT,EXTEST,  PO ),
+    (BIDIR_OUT,SAMPLE,  PI ),
+    --ftsang commented(BIDIR_OUT,INTEST,  X ) );
+    (BIDIR_OUT,INTEST,  PI ) );
+
+
+
+      -- IP Boundary Scan Cells
+
+  -- System Output, Not Used as Component-Test Pin
+  constant UPD_BSR_11496_OUT_NT                : CELL_INFO :=
+   ((OUTPUT2,  EXTEST,  UPD ),
+    (OUTPUT2,  SAMPLE,  PI ),
+    (OUTPUT2,  INTEST,  PI ),
+    (OUTPUT3,  EXTEST,  UPD ),
+    (OUTPUT3,  SAMPLE,  PI ),
+    (OUTPUT3,  INTEST,  PI ) );
+
+
+
+end IBMDFT_1149_6_2003;

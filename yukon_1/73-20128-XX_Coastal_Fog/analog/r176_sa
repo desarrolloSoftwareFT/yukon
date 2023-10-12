@@ -1,0 +1,24 @@
+!!!!    2    0    1 1626157703  V96bb                                         
+! IPG: rev 09.20p  Mon Jun 28 12:10:46 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "ATPG_MODE_EN_SA"; b to "ATPG_MODE_EN_SA"
+!gg! connect g to "FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_MASTER_1V8" ! 2000000000
+!gg! connect g to "SRT_FPGA_SA_SYNC_SLAVE_1V8" ! 2000000000
+!gg! connect g to "TSEN1_Q3V3R" ! 688982438
+!gg! connect g to "TSEN1_RR" ! 688982438
+!gg! connect g to "TSEN2_Q3V3R" ! 688982438
+!gg! connect g to "TSEN2_RR" ! 688982438
+!gg! connect g to "UNNAMED_2_CAP_I478_A_ADV" ! 688983369
+!gg! connect g to "UNNAMED_64_CAP_I257_A" ! 688984345
+resistor 100,25.00,20.00,re2,ar100m,sa,sb,en,ed
+! "r176_sa" test.
+! DUT: nominal 100, plus tol 5.00 %, minus tol 5.00 %
+! DUT: high 105, low 95
+! TEST: high limit 105.36, low limit 94.811
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed

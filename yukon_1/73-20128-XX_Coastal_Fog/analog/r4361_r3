@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627539165  V99d4                                         
+! IPG: rev 09.20p  Mon Jun 28 12:00:46 2021
+disconnect all
+connect s to "P1_8V"
+connect i to "JTAG_TDI_RT3_1V8"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r4361_r3" test.

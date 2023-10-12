@@ -1,0 +1,758 @@
+!!!!    6    0    1  846554888  V0417                                         
+!
+!***  All contents copyright 2002 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         TC55UBM416AFTN55
+! Alias:             HM62V16100I
+! Part Type:         VLSI
+! Description:       1M X 16 / 2M X 8 Static RAM
+! Manufacturer:      Toshiba, Hatachi
+! Package Style:     48 SOP
+! Created:           Mar 10, 2004
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-8856-01
+
+sequential
+
+vector cycle  500n
+receive delay 400n
+
+assign VCC   to pins 37
+assign GND   to pins 27,46
+
+assign ABUS  to pins 9,16,17,48
+assign ABUS  to pins 1,2,3,4,5,6,7,8
+assign ABUS  to pins 25,24,23,22,21,20,19,18
+assign DBUS  to pins 45,43,41,39,36,34,32,30
+assign DBUS  to pins 44,42,40,38,35,33,31,29
+assign DBUSH to pins 45,43,41,39,36,34,32,30
+assign DBUSL to pins 44,42,40,38,35,33,31,29
+assign BYEB  to pins 47
+assign CS2   to pins 12
+assign CS1B  to pins 26
+assign OEB   to pins 28
+assign WEB   to pins 11
+assign HEB   to pins 14
+assign LEB   to pins 15
+
+assign NC    to pins 10,13
+
+power  VCC,GND
+inputs ABUS,CS2,CS1B,OEB,LEB
+inputs HEB,WEB,BYEB
+bidirectional DBUS,DBUSH,DBUSL
+nondigital NC
+
+format hexadecimal ABUS,DBUS,DBUSH,DBUSL
+
+disable DBUSH,DBUSL with CS2,CS1B,OEB to "011"
+
+family LVT
+
+set load on groups DBUS to pull up
+
+vector INIT1
+ receive DBUS
+ set ABUS to "xxxxx"
+ set DBUS to "xxxx"
+ set BYEB to "x"
+ set CS2  to "1"
+ set CS1B to "0"
+ set OEB  to "1"
+ set WEB  to "1"
+ set LEB  to "0"
+ set HEB  to "0"
+end vector
+
+vector KEEP1
+ receive DBUS
+ set ABUS to "kkkkk"
+ set DBUS to "xxxx"
+ set BYEB to "k"
+ set CS2  to "k"
+ set CS1B to "k"
+ set OEB  to "k"
+ set WEB  to "k"
+ set LEB  to "k"
+ set HEB  to "k"
+end vector
+
+vector KEEP2
+ drive DBUS
+ set BYEB to "k"
+ set ABUS to "kkkkk"
+ set DBUS to "kkkk"
+ set CS2  to "k"
+ set CS1B to "k"
+ set OEB  to "k"
+ set WEB  to "k"
+ set LEB  to "k"
+ set HEB  to "k"
+end vector
+
+vector KEEP1_BYTE
+ receive DBUSL
+ drive DBUSH
+ format binary DBUSH
+ set BYEB  to "k"
+ set ABUS  to "kkkkk"
+ set DBUSH to "kxxxxxxx"  ! D15 = A-1, D14-8 = don't care
+ set DBUSL to "xx"        ! D7-0 = data
+ set CS2   to "k"
+ set CS1B  to "k"
+ set OEB   to "k"
+ set WEB   to "k"
+ set LEB   to "k"
+ set HEB   to "k"
+end vector
+
+vector BYEB_0
+ initialize to KEEP1
+ set BYEB   to "0"
+end vector
+
+vector BYEB_1
+ initialize to KEEP1
+ set BYEB   to "1"
+end vector
+
+vector CS2_0
+ initialize to KEEP1
+ set CS2    to "0"
+end vector
+
+vector CS2_1
+ initialize to KEEP1
+ set CS2    to "1"
+end vector
+
+vector CS1B_0
+ initialize to KEEP1
+ set CS1B   to "0"
+end vector
+
+vector CS1B_1
+ initialize to KEEP1
+ set CS1B   to "1"
+end vector
+
+vector WORD_OEB_0
+ initialize to KEEP1
+ set OEB    to "0"
+end vector
+
+vector WORD_OEB_1
+ initialize to KEEP1
+ set OEB    to "1"
+end vector
+
+vector BYTE_OEB_0
+ initialize to KEEP1_BYTE
+ set OEB    to "0"
+end vector
+
+vector BYTE_OEB_1
+ initialize to KEEP1_BYTE
+ set OEB    to "1"
+end vector
+
+vector A_M1_0
+ initialize to KEEP1_BYTE
+ set DBUSH  to "0xxxxxxx"
+end vector
+
+vector A_M1_1
+ initialize to KEEP1_BYTE
+ set DBUSH  to "1xxxxxxx"
+end vector
+
+vector WEB_0
+ initialize to KEEP2
+ set WEB    to "0"
+end vector
+
+vector WEB_1
+ initialize to KEEP2
+ set WEB    to "1"
+end vector
+
+vector BEB_0
+ initialize to KEEP1
+ set LEB    to "0"
+ set HEB    to "0"
+end vector
+
+vector BEB_1
+ initialize to KEEP1
+ set LEB    to "1"
+ set HEB    to "1"
+end vector
+
+! ****************************************************************************
+
+vector A_00000
+ initialize to KEEP1
+ set ABUS   to "00000"
+end vector
+
+vector A_00001
+ initialize to KEEP1
+ set ABUS   to "00001"
+end vector
+
+vector A_00002
+ initialize to KEEP1
+ set ABUS   to "00002"
+end vector
+
+vector A_00004
+ initialize to KEEP1
+ set ABUS   to "00004"
+end vector
+
+vector A_00008
+ initialize to KEEP1
+ set ABUS   to "00008"
+end vector
+
+vector A_00010
+ initialize to KEEP1
+ set ABUS   to "00010"
+end vector
+
+vector A_00020
+ initialize to KEEP1
+ set ABUS   to "00020"
+end vector
+
+vector A_00040
+ initialize to KEEP1
+ set ABUS   to "00040"
+end vector
+
+vector A_00080
+ initialize to KEEP1
+ set ABUS   to "00080"
+end vector
+
+vector A_00100
+ initialize to KEEP1
+ set ABUS   to "00100"
+end vector
+
+vector A_00200
+ initialize to KEEP1
+ set ABUS   to "00200"
+end vector
+
+vector A_00400
+ initialize to KEEP1
+ set ABUS   to "00400"
+end vector
+
+vector A_00800
+ initialize to KEEP1
+ set ABUS   to "00800"
+end vector
+
+vector A_01000
+ initialize to KEEP1
+ set ABUS   to "01000"
+end vector
+
+vector A_02000
+ initialize to KEEP1
+ set ABUS   to "02000"
+end vector
+
+vector A_04000
+ initialize to KEEP1
+ set ABUS   to "04000"
+end vector
+
+vector A_08000
+ initialize to KEEP1
+ set ABUS   to "08000"
+end vector
+
+vector A_10000
+ initialize to KEEP1
+ set ABUS   to "10000"
+end vector
+
+vector A_20000
+ initialize to KEEP1
+ set ABUS   to "20000"
+end vector
+
+vector A_40000
+ initialize to KEEP1
+ set ABUS   to "40000"
+end vector
+
+vector A_80000
+ initialize to KEEP1
+ set ABUS   to "80000"
+end vector
+
+! ****************************************************************************
+
+vector WD_0000
+ initialize to KEEP2
+ set DBUS   to "0000"
+end vector
+
+vector WD_8000
+ initialize to KEEP2
+ set DBUS   to "8000"
+end vector
+
+vector WD_5555
+ initialize to KEEP2
+ set DBUS   to "5555"
+end vector
+
+vector WD_AAAA
+ initialize to KEEP2
+ set DBUS   to "AAAA"
+end vector
+
+vector WD_F0F0
+ initialize to KEEP2
+ set DBUS   to "F0F0"
+end vector
+
+vector WD_0F0F
+ initialize to KEEP2
+ set DBUS   to "0F0F"
+end vector
+
+vector WD_0101
+ initialize to KEEP2
+ set DBUS   to "0101"
+end vector
+
+vector WD_0202
+ initialize to KEEP2
+ set DBUS   to "0202"
+end vector
+
+vector WD_0404
+ initialize to KEEP2
+ set DBUS   to "0404"
+end vector
+
+vector WD_0808
+ initialize to KEEP2
+ set DBUS   to "0808"
+end vector
+
+vector WD_1010
+ initialize to KEEP2
+ set DBUS   to "1010"
+end vector
+
+vector WD_2020
+ initialize to KEEP2
+ set DBUS   to "2020"
+end vector
+
+vector WD_4040
+ initialize to KEEP2
+ set DBUS   to "4040"
+end vector
+
+vector WD_8080
+ initialize to KEEP2
+ set DBUS   to "8080"
+end vector
+
+vector WD_F00F
+ initialize to KEEP2
+ set DBUS   to "F00F"
+end vector
+
+vector WD_0FF0
+ initialize to KEEP2
+ set DBUS   to "0FF0"
+end vector
+
+vector WD_55AA
+ initialize to KEEP2
+ set DBUS   to "55AA"
+end vector
+
+vector WD_AA55
+ initialize to KEEP2
+ set DBUS   to "AA55"
+end vector
+
+vector WD_5A5A
+ initialize to KEEP2
+ set DBUS   to "5A5A"
+end vector
+
+vector WD_A5A5
+ initialize to KEEP2
+ set DBUS   to "A5A5"
+end vector
+
+! ****************************************************************************
+
+vector RD_FFFF
+ initialize to KEEP1
+ set DBUS   to "FFFF"
+end vector
+
+vector RD_5555
+ initialize to KEEP1
+ set DBUS   to "5555"
+end vector
+
+vector RD_AAAA
+ initialize to KEEP1
+ set DBUS   to "AAAA"
+end vector
+
+vector RD_F0F0
+ initialize to KEEP1
+ set DBUS   to "F0F0"
+end vector
+
+vector RD_0F0F
+ initialize to KEEP1
+ set DBUS   to "0F0F"
+end vector
+
+vector RD_0101
+ initialize to KEEP1
+ set DBUS   to "0101"
+end vector
+
+vector RD_0202
+ initialize to KEEP1
+ set DBUS   to "0202"
+end vector
+
+vector RD_0404
+ initialize to KEEP1
+ set DBUS   to "0404"
+end vector
+
+vector RD_0808
+ initialize to KEEP1
+ set DBUS   to "0808"
+end vector
+
+vector RD_1010
+ initialize to KEEP1
+ set DBUS   to "1010"
+end vector
+
+vector RD_2020
+ initialize to KEEP1
+ set DBUS   to "2020"
+end vector
+
+vector RD_4040
+ initialize to KEEP1
+ set DBUS   to "4040"
+end vector
+
+vector RD_8080
+ initialize to KEEP1
+ set DBUS   to "8080"
+end vector
+
+vector RD_F00F
+ initialize to KEEP1
+ set DBUS   to "F00F"
+end vector
+
+vector RD_0FF0
+ initialize to KEEP1
+ set DBUS   to "0FF0"
+end vector
+
+vector RD_55AA
+ initialize to KEEP1
+ set DBUS   to "55AA"
+end vector
+
+vector RD_AA55
+ initialize to KEEP1
+ set DBUS   to "AA55"
+end vector
+
+vector RD_5A5A
+ initialize to KEEP1
+ set DBUS   to "5A5A"
+end vector
+
+vector RD_A5A5
+ initialize to KEEP1
+ set DBUS   to "A5A5"
+end vector
+
+! ****************************************************************************
+
+vector RB_FF
+ initialize to KEEP1_BYTE
+ set DBUSL  to "FF"
+end vector
+
+vector RB_55
+ initialize to KEEP1_BYTE
+ set DBUSL  to "55"
+end vector
+
+vector RB_AA
+ initialize to KEEP1_BYTE
+ set DBUSL  to "AA"
+end vector
+
+vector RB_F0
+ initialize to KEEP1_BYTE
+ set DBUSL  to "F0"
+end vector
+
+vector RB_0F
+ initialize to KEEP1_BYTE
+ set DBUSL  to "0F"
+end vector
+
+vector RB_01
+ initialize to KEEP1_BYTE
+ set DBUSL  to "01"
+end vector
+
+vector RB_02
+ initialize to KEEP1_BYTE
+ set DBUSL  to "02"
+end vector
+
+vector RB_04
+ initialize to KEEP1_BYTE
+ set DBUSL  to "04"
+end vector
+
+vector RB_08
+ initialize to KEEP1_BYTE
+ set DBUSL  to "08"
+end vector
+
+vector RB_10
+ initialize to KEEP1_BYTE
+ set DBUSL  to "10"
+end vector
+
+vector RB_20
+ initialize to KEEP1_BYTE
+ set DBUSL  to "20"
+end vector
+
+vector RB_40
+ initialize to KEEP1_BYTE
+ set DBUSL  to "40"
+end vector
+
+vector RB_5A
+ initialize to KEEP1_BYTE
+ set DBUSL  to "5A"
+end vector
+
+vector RB_A5
+ initialize to KEEP1_BYTE
+ set DBUSL  to "A5"
+end vector
+
+! ****************************************************************************
+
+sub WR(ADDR,WDATA)   ! Write cycle
+ execute ADDR
+ execute WDATA
+ execute WEB_0
+ execute WEB_1
+end sub
+
+sub RDW(ADDR,RDATA)  ! Word Read cycle
+ execute ADDR
+ execute WORD_OEB_0
+ execute RDATA
+ execute WORD_OEB_1
+end sub
+
+sub RDB(ADDR,ADDR_M1,RDATA)  ! Byte Read cycle
+ execute ADDR
+ execute ADDR_M1
+ execute BYTE_OEB_0
+ execute RDATA
+ execute BYTE_OEB_1
+end sub
+
+! ******************** Pin BYEB = 1, 1M X 16, Word Mode **********************
+
+unit "Write RAM"
+ execute INIT1
+ execute BYEB_1
+ wait 10m
+ call WR(A_00000,WD_5555)
+ call WR(A_00001,WD_AAAA)
+ call WR(A_00002,WD_F0F0)
+ call WR(A_00004,WD_0F0F)
+ call WR(A_00008,WD_0101)
+ call WR(A_00010,WD_0202)
+ call WR(A_00020,WD_0404)
+ call WR(A_00040,WD_0808)
+ call WR(A_00080,WD_1010)
+ call WR(A_00100,WD_2020)
+ call WR(A_00200,WD_4040)
+ call WR(A_00400,WD_8080)
+ call WR(A_00800,WD_F00F)
+ call WR(A_01000,WD_0FF0)
+ call WR(A_02000,WD_55AA)
+ call WR(A_04000,WD_AA55)
+ call WR(A_08000,WD_5A5A)
+ call WR(A_10000,WD_A5A5)
+ call WR(A_20000,WD_A5A5)
+ call WR(A_40000,WD_A5A5)
+ call WR(A_80000,WD_A5A5)
+end unit
+
+unit "Test CS2B stuck High"
+ execute CS2_0
+ call WR(A_00000,WD_0000)
+ execute CS2_1
+end unit
+
+unit "Test CS1B stuck low"
+ execute CS1B_1
+ call WR(A_00000,WD_0000)
+ execute CS1B_0
+end unit
+
+unit "Test UEB and LEB stuck low"
+ execute BEB_1
+ call WR(A_00000,WD_0000)
+ execute BEB_0
+end unit
+
+unit "Read RAM"
+ call RDW(A_00000,RD_5555)
+ call RDW(A_00001,RD_AAAA)
+ call RDW(A_00002,RD_F0F0)
+ call RDW(A_00004,RD_0F0F)
+ call RDW(A_00008,RD_0101)
+ call RDW(A_00010,RD_0202)
+ call RDW(A_00020,RD_0404)
+ call RDW(A_00040,RD_0808)
+ call RDW(A_00080,RD_1010)
+ call RDW(A_00100,RD_2020)
+ call RDW(A_00200,RD_4040)
+ call RDW(A_00400,RD_8080)
+ call RDW(A_00800,RD_F00F)
+ call RDW(A_01000,RD_0FF0)
+ call RDW(A_02000,RD_55AA)
+ call RDW(A_04000,RD_AA55)
+ call RDW(A_08000,RD_5A5A)
+ call RDW(A_10000,RD_A5A5)
+ call RDW(A_20000,RD_A5A5)
+ call RDW(A_40000,RD_A5A5)
+ call RDW(A_40000,RD_A5A5)
+end unit
+
+unit "Test OEB stuck low"
+ execute A_00000
+ execute RD_FFFF
+end unit
+
+! ********************* Pin BYEB = 0, 2M X 8, Byte Mode **********************
+
+unit "Write RAM"
+ execute INIT1
+ execute BYEB_0
+ wait 10m
+ call WR(A_00000,WD_5555)  ! ABUS = $00000, A-1 = 0, Data = $55
+ call WR(A_00000,WD_F0F0)  ! ABUS = $00000, A-1 = 1, Data = $F0
+ call WR(A_00001,WD_55AA)  ! ABUS = $00001, A-1 = 0, Data = $AA
+ call WR(A_00002,WD_0F0F)  ! ABUS = $00002, A-1 = 0, Data = $0F
+ call WR(A_00004,WD_0F0F)  ! ABUS = $00004, A-1 = 0, Data = $0F
+ call WR(A_00008,WD_0101)  ! ABUS = $00008, A-1 = 0, Data = $01
+ call WR(A_00010,WD_0202)  ! ABUS = $00010, A-1 = 0, Data = $02
+ call WR(A_00020,WD_0404)  ! ABUS = $00020, A-1 = 0, Data = $04
+ call WR(A_00040,WD_0808)  ! ABUS = $00040, A-1 = 0, Data = $08
+ call WR(A_00080,WD_1010)  ! ABUS = $00080, A-1 = 0, Data = $10
+ call WR(A_00100,WD_2020)  ! ABUS = $00100, A-1 = 0, Data = $20
+ call WR(A_00200,WD_4040)  ! ABUS = $00200, A-1 = 0, Data = $40
+ call WR(A_00400,WD_5A5A)  ! ABUS = $00400, A-1 = 0, Data = $5A
+ call WR(A_00800,WD_5A5A)  ! ABUS = $00800, A-1 = 0, Data = $5A
+ call WR(A_01000,WD_5A5A)  ! ABUS = $01000, A-1 = 0, Data = $5A
+ call WR(A_02000,WD_5A5A)  ! ABUS = $02000, A-1 = 0, Data = $5A
+ call WR(A_04000,WD_5A5A)  ! ABUS = $04000, A-1 = 0, Data = $5A
+ call WR(A_08000,WD_5A5A)  ! ABUS = $08000, A-1 = 0, Data = $5A
+ call WR(A_10000,WD_5A5A)  ! ABUS = $10000, A-1 = 0, Data = $5A
+ call WR(A_20000,WD_5A5A)  ! ABUS = $20000, A-1 = 0, Data = $5A
+ call WR(A_40000,WD_5A5A)  ! ABUS = $40000, A-1 = 0, Data = $5A
+ call WR(A_80000,WD_5A5A)  ! ABUS = $80000, A-1 = 0, Data = $5A
+end unit
+
+unit "Test CS2B stuck High"
+ execute CS2_0
+ call WR(A_00000,WD_0000)
+ execute CS2_1
+end unit
+
+unit "Test CS1B stuck low"
+ execute CS1B_1
+ call WR(A_00000,WD_0000)
+ execute CS1B_0
+end unit
+
+unit "Test UEB and LEB stuck low"
+ execute BEB_1
+ execute BYEB_1            ! Test in Word mode.
+ call WR(A_00000,WD_0000)  ! UEB and LEB don't care in Byte mode.
+ execute BYEB_0
+ execute BEB_0
+end unit
+
+unit "Read RAM"
+ call RDB(A_00000,A_M1_0,RB_55)
+ call RDB(A_00000,A_M1_1,RB_F0)
+ call RDB(A_00001,A_M1_0,RB_AA)
+ call RDB(A_00002,A_M1_0,RB_0F)
+ call RDB(A_00004,A_M1_0,RB_0F)
+ call RDB(A_00008,A_M1_0,RB_01)
+ call RDB(A_00010,A_M1_0,RB_02)
+ call RDB(A_00020,A_M1_0,RB_04)
+ call RDB(A_00040,A_M1_0,RB_08)
+ call RDB(A_00080,A_M1_0,RB_10)
+ call RDB(A_00100,A_M1_0,RB_20)
+ call RDB(A_00200,A_M1_0,RB_40)
+ call RDB(A_00400,A_M1_0,RB_5A)
+ call RDB(A_00800,A_M1_0,RB_5A)
+ call RDB(A_01000,A_M1_0,RB_5A)
+ call RDB(A_02000,A_M1_0,RB_5A)
+ call RDB(A_04000,A_M1_0,RB_5A)
+ call RDB(A_08000,A_M1_0,RB_5A)
+ call RDB(A_10000,A_M1_0,RB_5A)
+ call RDB(A_20000,A_M1_0,RB_5A)
+ call RDB(A_40000,A_M1_0,RB_5A)
+ call RDB(A_80000,A_M1_0,RB_5A)
+end unit
+
+unit "Test OEB stuck low"
+ execute A_00000
+ execute RB_FF
+end unit
+

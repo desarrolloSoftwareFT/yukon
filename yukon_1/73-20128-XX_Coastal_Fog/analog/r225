@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852391   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:53:12 2021
+disconnect all
+connect s to "GND"
+connect i to "P3V3_PWR_MOD_PRESENT_L"
+jumper 3.09k, re4, wb, ar500m, op
+! "r225" test.

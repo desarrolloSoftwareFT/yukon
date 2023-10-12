@@ -1,0 +1,53 @@
+!!!!    2    0    1 1451394455  V8b58                                         
+
+!
+! Part Name:         SPST Switch
+! Alias:
+! Part Type:         Power On Analog
+! Description:       Switch
+! Manufacturer:
+! Package Style:     4 pin
+! Created:           April 12, 2002
+! Updated:
+! Programmer:        FangJi Zhu
+! Tester:            HP3070
+! Processor:         VPU
+! Cisco Part #:      22-100219-01
+! Dummy Pins:
+!      SOL_P: + Control for the Solenoid;
+!      SOL_N: - Control for the Solenoid;
+!
+
+test powered analog
+
+   nonanalog pins "SOL_N", 1, "A", "C"  !H! Solenoid Controls;
+   power pins     "SOL_P"
+
+   disconnect all
+   connect i to pins 2
+   connect l to pins 3
+
+   test "Switch_OFF"
+   !H! Engage Solenoid Here!
+   test "Switch_ON"
+
+end test
+
+
+subtest "Switch_OFF"
+   Expected_Value = 3.3     !H! After switch is closed;
+   detector dcv, expect Expected_Value
+   wait 5m
+   measure Expected_Value*1.1, Expected_Value*0.9
+end subtest
+
+
+subtest "Switch_ON"
+   Expected_Value = 0.1     !H! After switch is closed;
+   detector dcv, expect Expected_Value
+   wait 5m
+   measure 0.5, -0.5
+end subtest
+
+
+

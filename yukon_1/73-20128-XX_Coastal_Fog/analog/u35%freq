@@ -1,0 +1,25 @@
+!!!!    2    0    1 1624930114  V5475                                         
+!* U35 pin12 Frequency
+
+test powered analog
+
+   test "Out"
+
+end test
+
+!
+!-----------------------------------------------------------------------
+!
+
+subtest  "Out"
+   clear connect rcva to nodes "CLK_DIV1_OUT"        !"SRT_CLK125M_PTP8_P"
+   connect l to ground
+
+   detector frequency, expect 125.0M/16, gate 1
+   measure 125.0M/16 * 1.05, 125.0M/16 * 0.95
+end subtest
+
+
+!
+!  End test
+!

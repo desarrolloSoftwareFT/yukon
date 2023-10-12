@@ -1,0 +1,60 @@
+!!!!    6    0    1 1624853805  Vf231                                         
+! IPG: rev 09.20p  Mon Jun 28 12:16:46 2021
+!74ahc1g08, Single AND Gate
+
+
+combinatorial
+
+default device "u14"
+set terminators to on
+assign VCC to pins *
+assign GND to pins *
+
+assign Inputs  to  pins 1,2
+assign Output to  pins 4
+
+
+family TTL
+
+power VCC,GND
+
+inputs Inputs
+outputs Output
+
+trace Output to Inputs
+
+!*******************************************************************************
+
+
+vector Inputs_00
+set Inputs to "00"
+set Output to "0"
+end vector
+
+vector Inputs_01
+set Inputs to "01"
+set Output to "0"
+end vector
+
+vector Inputs_10
+set Inputs to "10"
+set Output to "0"
+end vector
+
+vector Inputs_11
+set Inputs to "11"
+set Output to "1"
+end vector
+
+!*******************************************************************************
+
+unit
+execute Inputs_00
+execute Inputs_01
+execute Inputs_10
+execute Inputs_11
+end unit
+
+
+!End Test
+

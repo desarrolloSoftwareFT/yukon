@@ -1,0 +1,317 @@
+!!!!    6    0    1 1546045750  V4a92                                         
+!
+!***  All contents copyright 2008 Cisco Systems Inc.
+!***  All rights reserved.
+!***  No portion of this software may be used or reproduced in any form, or
+!***  by any means, without prior written permission from Cisco Systems, Inc.
+!
+! Part Name:         QS3244
+! Alias:             QS32244,74FST3244,74LVC2244,74FCT3244,74LVC244
+! Part Type:         VLSI
+! Description:       CMOS 8 Bit Bus Switch
+! Manufacturer:      Quality Semiconductor, IDT
+! Package Style:     20 pin SOIC, QSOP
+! Created:           May 22, 1998
+! Updated:           Nov 12, 2001. Added alias and Cisco part number.
+! Updated:           Jan 05, 2007. Added alias and Cisco part number.
+! Updated:           May 18, 2007. Added alias and Cisco part number.
+! Updated:           Jan 07, 2008. Added alias and Cisco part number.
+! Programmer:        sama
+! Tester:            HP3070
+! Processor:         VPU
+! Vector Format:     VCL
+! Testjet Testable:  yes
+! JTAG Device:       no
+! Fault coverage:    100%
+! Constraints:       No
+! Cisco Part #:      15-2102-01,15-2526-01,15-3958-01,15-2069-01,15-2811-01
+
+sequential
+
+vector cycle 500n
+receive delay 400n
+
+assign VCC to pins 20
+assign GND to pins 10
+
+assign G1B to pins 1
+assign A1  to pins 2
+assign A2  to pins 4
+assign A3  to pins 6
+assign A4  to pins 8
+assign X1  to pins 18
+assign X2  to pins 16
+assign X3  to pins 14
+assign X4  to pins 12
+
+assign G2B to pins 19
+assign B1  to pins 11
+assign B2  to pins 13
+assign B3  to pins 15
+assign B4  to pins 17
+assign Y1  to pins 9
+assign Y2  to pins 7
+assign Y3  to pins 5
+assign Y4  to pins 3
+
+power  VCC,GND
+inputs G1B,G2B
+inputs  A1,A2,A3,A4,B1,B2,B3,B4
+outputs X1,X2,X3,X4,Y1,Y2,Y3,Y4
+
+disable A1,A2,A3,A4,X1,X2,X3,X4 with G1B to "1"
+disable B1,B2,B3,B4,Y1,Y2,Y3,Y4 with G2B to "1"
+
+family LVT
+
+set load on pins 2,4,6,8,18,16,14,12 to pull up
+set load on pins 11,13,15,17,9,7,5,3 to pull up
+
+! ******** A to X ********
+
+vector A1X1_0
+ set G1B to "0"
+ set A1  to "0"
+ set X1  to "0"
+end vector
+
+vector A1X1_1
+ set G1B to "0"
+ set A1  to "1"
+ set X1  to "1"
+end vector
+
+vector A1X1_Z
+ set G1B to "1"
+ set A1  to "0"
+ set X1  to "1"
+end vector
+
+vector A2X2_0
+ set G1B to "0"
+ set A2  to "0"
+ set X2  to "0"
+end vector
+
+vector A2X2_1
+ set G1B to "0"
+ set A2  to "1"
+ set X2  to "1"
+end vector
+
+vector A2X2_Z
+ set G1B to "1"
+ set A2  to "0"
+ set X2  to "1"
+end vector
+
+vector A3X3_0
+ set G1B to "0"
+ set A3  to "0"
+ set X3  to "0"
+end vector
+
+vector A3X3_1
+ set G1B to "0"
+ set A3  to "1"
+ set X3  to "1"
+end vector
+
+vector A3X3_Z
+ set G1B to "1"
+ set A3  to "0"
+ set X3  to "1"
+end vector
+
+vector A4X4_0
+ set G1B to "0"
+ set A4  to "0"
+ set X4  to "0"
+end vector
+
+vector A4X4_1
+ set G1B to "0"
+ set A4  to "1"
+ set X4  to "1"
+end vector
+
+vector A4X4_Z
+ set G1B to "1"
+ set A4  to "0"
+ set X4  to "1"
+end vector
+
+
+! ******** B to Y ********
+
+vector B1Y1_0
+ set G2B to "0"
+ set B1  to "0"
+ set Y1  to "0"
+end vector
+
+vector B1Y1_1
+ set G2B to "0"
+ set B1  to "1"
+ set Y1  to "1"
+end vector
+
+vector B1Y1_Z
+ set G2B to "1"
+ set B1  to "0"
+ set Y1  to "1"
+end vector
+
+vector B2Y2_0
+ set G2B to "0"
+ set B2  to "0"
+ set Y2  to "0"
+end vector
+
+vector B2Y2_1
+ set G2B to "0"
+ set B2  to "1"
+ set Y2  to "1"
+end vector
+
+vector B2Y2_Z
+ set G2B to "1"
+ set B2  to "0"
+ set Y2  to "1"
+end vector
+
+vector B3Y3_0
+ set G2B to "0"
+ set B3  to "0"
+ set Y3  to "0"
+end vector
+
+vector B3Y3_1
+ set G2B to "0"
+ set B3  to "1"
+ set Y3  to "1"
+end vector
+
+vector B3Y3_Z
+ set G2B to "1"
+ set B3  to "0"
+ set Y3  to "1"
+end vector
+
+vector B4Y4_0
+ set G2B to "0"
+ set B4  to "0"
+ set Y4  to "0"
+end vector
+
+vector B4Y4_1
+ set G2B to "0"
+ set B4  to "1"
+ set Y4  to "1"
+end vector
+
+vector B4Y4_Z
+ set G2B to "1"
+ set B4  to "0"
+ set Y4  to "1"
+end vector
+
+! **************************************************************************
+
+unit "A1 to X1, low"
+ execute A1X1_0
+end unit
+
+unit "A1 to X1, high"
+ execute A1X1_1
+end unit
+
+unit "A1 to X1, disabled"
+ execute A1X1_Z
+end unit
+
+unit "A2 to X2, low"
+ execute A2X2_0
+end unit
+
+unit "A2 to X2, high"
+ execute A2X2_1
+end unit
+
+unit "A2 to X2, disabled"
+ execute A2X2_Z
+end unit
+
+unit "A3 to X3, low"
+ execute A3X3_0
+end unit
+
+unit "A3 to X3, high"
+ execute A3X3_1
+end unit
+
+unit "A3 to X3, disabled"
+ execute A3X3_Z
+end unit
+
+unit "A4 to X4, low"
+ execute A4X4_0
+end unit
+
+unit "A4 to X4, high"
+ execute A4X4_1
+end unit
+
+unit "A4 to X4, disabled"
+ execute A4X4_Z
+end unit
+
+unit "B1 to Y1, low"
+ execute B1Y1_0
+end unit
+
+unit "B1 to Y1, high"
+ execute B1Y1_1
+end unit
+
+unit "B1 to Y1, disabled"
+ execute B1Y1_Z
+end unit
+
+unit "B2 to Y2, low"
+ execute B2Y2_0
+end unit
+
+unit "B2 to Y2, high"
+ execute B2Y2_1
+end unit
+
+unit "B2 to Y2, disabled"
+ execute B2Y2_Z
+end unit
+
+unit "B3 to Y3, low"
+ execute B3Y3_0
+end unit
+
+unit "B3 to Y3, high"
+ execute B3Y3_1
+end unit
+
+unit "B3 to Y3, disabled"
+ execute B3Y3_Z
+end unit
+
+unit "B4 to Y4, low"
+ execute B4Y4_0
+end unit
+
+unit "B4 to Y4, high"
+ execute B4Y4_1
+end unit
+
+unit "B4 to Y4, disabled"
+ execute B4Y4_Z
+end unit
+
+

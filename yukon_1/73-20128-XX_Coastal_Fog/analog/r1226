@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852442   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:03 2021
+on failure
+   report parallel devices
+   report "r25_qd 4.75k"
+end on failure
+disconnect all
+connect s to "PWR_SA_DVDD_PGOOD"
+connect i to "P3_3VA"
+jumper 3.21k, re4, wb, ar200m, op
+! "r1226" test.
+off failure

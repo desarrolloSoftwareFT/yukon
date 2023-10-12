@@ -1,0 +1,12 @@
+!!!!    2    0    1 1627538503  Vcfa8                                         
+! IPG: rev 09.20p  Mon Jun 28 11:57:44 2021
+on failure
+report parallel devices
+report "c23_im 1.20n"
+end on failure
+disconnect all
+connect s to "VIN_RES_MON_P"
+connect i to "VFB"
+resistor 100k,20.00,20.00,re5,wb,ar100m,ed,wa10m
+! "r201_im" test.
+off failure

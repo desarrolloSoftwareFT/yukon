@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627540042  Vdd43                                         
+! IPG: rev 09.20p  Mon Jun 28 12:07:04 2021
+disconnect all
+connect s to "P3P3_QSFPB_HS_Q12"
+connect i to "QSFP_SCL<25>"
+resistor 2.2k,20.00,20.00,re4,wb,ar500m,ed
+! "rn9_q12%pin_1_8" test.

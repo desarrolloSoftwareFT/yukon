@@ -1,0 +1,7 @@
+!!!!    2    0    1 1627538812  V60b0                                         
+! IPG: rev 09.20p  Mon Jun 28 11:59:02 2021
+disconnect all
+connect s to "GND"
+connect i to "SRT_JTAG_TCK_HDR_3V3"
+resistor 4.7k,20.00,20.00,re4,wb,ar200m,ed
+! "r234" test.

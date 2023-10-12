@@ -1,0 +1,12 @@
+!!!!    2    0    1 1624852441   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:02 2021
+on failure
+   report parallel devices
+   report "r401 4.70k"
+end on failure
+disconnect all
+connect s to "PMBUS_ALERT_L"
+connect i to "P3_3VA"
+jumper 3.11k, re4, wb, ar500m, op
+! "r1214" test.
+off failure

@@ -1,0 +1,7 @@
+!!!!    2    0    1 1624852465   0000                                         
+! IPG: rev 09.20p  Mon Jun 28 11:54:26 2021
+disconnect all
+connect s to "P3V3_VCC_3V3B"
+connect i to "CDAC_A0_3V3B"
+jumper 6.01, re1, ar200m
+! "r25_3v3b" test.

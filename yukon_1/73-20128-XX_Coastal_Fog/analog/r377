@@ -1,0 +1,14 @@
+!!!!    2    0    1 1627539541  Vf49f                                         
+! IPG: rev 09.20p  Mon Jun 28 12:04:16 2021
+! Common Lead Resistance 100m, Common Lead Inductance 1.00u
+! Fixture: EXPRESS
+disconnect all
+connect s to "GND"; a to "GND"
+connect i to "RT1_PHYAD1"; b to "RT1_PHYAD1"
+resistor 1k,20.00,20.00,re3,wb,ar100m,ed,sa,sb
+! "r377" test.
+! DUT: nominal 1k, plus tol 1.00 %, minus tol 1.00 %
+! DUT: high 1.01k, low 990
+! TEST: high limit 1.010k, low limit 989.88
+! Tolerance Multiplier 100m
+! Remote Sensing is Allowed
