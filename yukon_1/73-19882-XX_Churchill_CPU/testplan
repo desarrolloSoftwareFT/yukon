@@ -5863,8 +5863,9 @@ sub EEprom_Serial_4k        !SONIC  73-20559-02 A0
   !! NVRAM     ADDRESSDATA      Data description
   !! \/    \/
 
-!! This is dummy data. Provide your your own data.
- EpromData(hti("000000")) = hti("00") !0
+!! This is dummy data. Provide your your own data. MRG
+ EpromData(hti("000000")) = hti("20") !0
+ !EpromData(hti("000000")) = hti("00") !0
  EpromData(hti("000001")) = hti("00") !1
  EpromData(hti("000002")) = hti("04") !2
  EpromData(hti("000003")) = hti("FF") !3
