@@ -1,9 +1,0 @@
-!!!!    2    0    1 1626505624   0000                                         
-! IPG: rev 09.20p  Mon Jun 28 11:57:18 2021
-disconnect all
-connect i to "PWR_HV_DIDT_1V8B"
-connect s to "HV_SNUB_1V8B"
-connect gl to "UNNAMED_1_CAP_I149_A_1V8B"
-!connect g to "PWR_SA_P1V8_PVOUT"
-capacitor 470p,35.00,35.00,fr8192,re5,wb,ar50.0m,comp,ed,en,sl
-! "c09_1v8b" test.

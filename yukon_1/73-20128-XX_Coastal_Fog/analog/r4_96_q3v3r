@@ -1,8 +1,0 @@
-!!!!    2    0    1 1627713848  V8493                                         
-!* VDD_PH_96 TOP Probe removed for power up stable ready
-! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
-disconnect all
-connect s to "VDD_PH_96"
-connect i to "VDD_BOOT_R_96"
-jumper 6.01, re1, ar200m
-! "r4_96_q3v3r" test.

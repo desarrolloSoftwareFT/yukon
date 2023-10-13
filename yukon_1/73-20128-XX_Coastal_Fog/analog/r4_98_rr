@@ -1,8 +1,0 @@
-!!!!    2    0    1 1627713927  V891d                                         
-!* VDD_PH_98 TOP Probe removed for power up stable ready
-! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
-disconnect all
-connect s to "VDD_PH_98"
-connect i to "VDD_BOOT_R_98"
-jumper 6.01, re1, ar200m
-! "r4_98_rr" test.

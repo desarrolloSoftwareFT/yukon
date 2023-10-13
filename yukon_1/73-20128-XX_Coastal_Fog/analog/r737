@@ -1,8 +1,0 @@
-!!!!    2    0    1 1627522136  V0458                                         
-!* CLK100M_PE_CPU_SA1_P too close j3 to probing
-! IPG: rev 08.40p  Fri Nov 27 14:28:22 2020
-disconnect all
-connect s to "CLK100M_PE_MIFPGA_AC_P"; a to "CLK100M_PE_MIFPGA_AC_P"
-connect i to "CLK100M_PE_CPU_SA1_P"; b to "CLK100M_PE_CPU_SA1_P"
-resistor 33, 40.00, 20.00, re2, ar200m, sa, sb, en
-! "r737" is a limited test.

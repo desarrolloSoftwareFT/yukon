@@ -1,9 +1,0 @@
-!!!!    2    0    1  990065614   0000                                         
-on failure
-   report "Check for CT_Q9 presence."
-end on failure
-disconnect all
-connect s to ground
-connect i to "CT_Q9_PRESENCE_SWITCH_PIN_2"
-jumper 15, re1, ar200m
-off failure

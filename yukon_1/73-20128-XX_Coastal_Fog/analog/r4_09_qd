@@ -1,8 +1,0 @@
-!!!!    2    0    1 1627521851  Vf152                                         
-!* vdd_boot_r_09 VDD_PH_09 too close c4_qd to probing
-! IPG: rev 09.20p  Mon Jun 28 11:54:24 2021
-disconnect all
-connect s to "VDD_PH_09"
-connect i to "VDD_BOOT_R_09"
-jumper 6.01, re1, ar200m
-! "r4_09_qd" test.

@@ -1,9 +1,0 @@
-!!!!    2    0    1 1626504764   0000                                         
-! IPG: rev 09.20p  Mon Jun 28 11:56:30 2021
-disconnect all
-connect s to "LV_SNS_N_RA"; a to "LV_SNS_N_RA"
-connect i to "LV_SNS_P_RA"; b to "LV_SNS_P_RA"
-connect g to "GND"; l to "GND"
-capacitor 220p,35.00,35.00,fr8192,re4,ar20.0m,sa,sl,ed,en,comp,wb
-warning "excessive minus tolerance or low limit."
-! "c03_ra" is a commented test.
